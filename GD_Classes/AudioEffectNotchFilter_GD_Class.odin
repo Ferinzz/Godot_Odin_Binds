@@ -1,0 +1,13 @@
+package GD_Classes
+
+import GDW "shared:GDWrapper"
+import "shared:GDWrapper/gdAPI"
+import GDE "shared:GDWrapper/gdAPI/gdextension"
+
+
+AudioEffectNotchFilter :: ^GDW.Object
+
+AudioEffectNotchFilter_MethodBind_List :: struct {
+};
+AudioEffectNotchFilter_Init_ :: proc (AudioEffectNotchFilter_methods: ^AudioEffectNotchFilter_MethodBind_List, loc := #caller_location) {
+};

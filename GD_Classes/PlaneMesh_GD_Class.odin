@@ -1,0 +1,78 @@
+package GD_Classes
+
+import GDW "shared:GDWrapper"
+import "shared:GDWrapper/gdAPI"
+import GDE "shared:GDWrapper/gdAPI/gdextension"
+
+
+PlaneMesh :: ^GDW.Object
+
+PlaneMesh_properties :: struct {
+  size_Vector2 : struct {
+  get_size: proc "c" (p_base: PlaneMesh, r_value: ^GDW.Vector2),
+  set_size: proc "c" (p_base: PlaneMesh, p_value: ^GDW.Vector2),
+  },
+  subdivide_width_Int : struct {
+  get_subdivide_width: proc "c" (p_base: PlaneMesh, r_value: ^GDW.Int),
+  set_subdivide_width: proc "c" (p_base: PlaneMesh, p_value: ^GDW.Int),
+  },
+  subdivide_depth_Int : struct {
+  get_subdivide_depth: proc "c" (p_base: PlaneMesh, r_value: ^GDW.Int),
+  set_subdivide_depth: proc "c" (p_base: PlaneMesh, p_value: ^GDW.Int),
+  },
+  center_offset_Vector3 : struct {
+  get_center_offset: proc "c" (p_base: PlaneMesh, r_value: ^GDW.Vector3),
+  set_center_offset: proc "c" (p_base: PlaneMesh, p_value: ^GDW.Vector3),
+  },
+  orientation_Int : struct {
+  get_orientation: proc "c" (p_base: PlaneMesh, r_value: ^GDW.Int),
+  set_orientation: proc "c" (p_base: PlaneMesh, p_value: ^GDW.Int),
+  },
+};
+
+Orientation_PlaneMesh :: enum i64 {
+  FACE_X = 0,
+  FACE_Y = 1,
+  FACE_Z = 2,
+};
+PlaneMesh_MethodBind_List :: struct {
+  set_size: ^GDW.MethodBind,
+  get_size: ^GDW.MethodBind,
+  set_subdivide_width: ^GDW.MethodBind,
+  get_subdivide_width: ^GDW.MethodBind,
+  set_subdivide_depth: ^GDW.MethodBind,
+  get_subdivide_depth: ^GDW.MethodBind,
+  set_center_offset: ^GDW.MethodBind,
+  get_center_offset: ^GDW.MethodBind,
+  set_orientation: ^GDW.MethodBind,
+  get_orientation: ^GDW.MethodBind,
+};
+PlaneMesh_Init_ :: proc (PlaneMesh_methods: ^PlaneMesh_MethodBind_List, loc := #caller_location) {
+  PlaneMesh_methods.set_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "set_size", 743155724, loc))
+  PlaneMesh_methods.get_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "get_size", 3341600327, loc))
+  PlaneMesh_methods.set_subdivide_width = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "set_subdivide_width", 1286410249, loc))
+  PlaneMesh_methods.get_subdivide_width = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "get_subdivide_width", 3905245786, loc))
+  PlaneMesh_methods.set_subdivide_depth = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "set_subdivide_depth", 1286410249, loc))
+  PlaneMesh_methods.get_subdivide_depth = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "get_subdivide_depth", 3905245786, loc))
+  PlaneMesh_methods.set_center_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "set_center_offset", 3460891852, loc))
+  PlaneMesh_methods.get_center_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "get_center_offset", 3360562783, loc))
+  PlaneMesh_methods.set_orientation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "set_orientation", 2751399687, loc))
+  PlaneMesh_methods.get_orientation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaneMesh, "get_orientation", 3227599250, loc))
+};
+PlaneMesh_init_props :: proc(PlaneMesh_prop: ^PlaneMesh_properties, loc:= #caller_location) {
+
+  PlaneMesh_prop.size_Vector2.get_size = cast(proc "c" (p_base: PlaneMesh, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_size")
+  PlaneMesh_prop.size_Vector2.set_size = cast(proc "c" (p_base: PlaneMesh, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_size")
+
+  PlaneMesh_prop.subdivide_width_Int.get_subdivide_width = cast(proc "c" (p_base: PlaneMesh, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_subdivide_width")
+  PlaneMesh_prop.subdivide_width_Int.set_subdivide_width = cast(proc "c" (p_base: PlaneMesh, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_subdivide_width")
+
+  PlaneMesh_prop.subdivide_depth_Int.get_subdivide_depth = cast(proc "c" (p_base: PlaneMesh, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_subdivide_depth")
+  PlaneMesh_prop.subdivide_depth_Int.set_subdivide_depth = cast(proc "c" (p_base: PlaneMesh, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_subdivide_depth")
+
+  PlaneMesh_prop.center_offset_Vector3.get_center_offset = cast(proc "c" (p_base: PlaneMesh, r_value: ^GDW.Vector3))GDW.Get_Method_Getter(.VECTOR3, "get_center_offset")
+  PlaneMesh_prop.center_offset_Vector3.set_center_offset = cast(proc "c" (p_base: PlaneMesh, p_value: ^GDW.Vector3))GDW.Get_Method_Setter(.VECTOR3, "set_center_offset")
+
+  PlaneMesh_prop.orientation_Int.get_orientation = cast(proc "c" (p_base: PlaneMesh, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_orientation")
+  PlaneMesh_prop.orientation_Int.set_orientation = cast(proc "c" (p_base: PlaneMesh, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_orientation")
+};

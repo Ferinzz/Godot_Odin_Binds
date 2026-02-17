@@ -1,0 +1,13 @@
+package GD_Classes
+
+import GDW "shared:GDWrapper"
+import "shared:GDWrapper/gdAPI"
+import GDE "shared:GDWrapper/gdAPI/gdextension"
+
+
+TextureCubemapRD :: ^GDW.Object
+
+TextureCubemapRD_MethodBind_List :: struct {
+};
+TextureCubemapRD_Init_ :: proc (TextureCubemapRD_methods: ^TextureCubemapRD_MethodBind_List, loc := #caller_location) {
+};

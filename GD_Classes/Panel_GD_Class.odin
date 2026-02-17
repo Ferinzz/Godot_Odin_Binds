@@ -1,0 +1,13 @@
+package GD_Classes
+
+import GDW "shared:GDWrapper"
+import "shared:GDWrapper/gdAPI"
+import GDE "shared:GDWrapper/gdAPI/gdextension"
+
+
+Panel :: ^GDW.Object
+
+Panel_MethodBind_List :: struct {
+};
+Panel_Init_ :: proc (Panel_methods: ^Panel_MethodBind_List, loc := #caller_location) {
+};

@@ -1,0 +1,13 @@
+package GD_Classes
+
+import GDW "shared:GDWrapper"
+import "shared:GDWrapper/gdAPI"
+import GDE "shared:GDWrapper/gdAPI/gdextension"
+
+
+EditorExportPlatformIOS :: ^GDW.Object
+
+EditorExportPlatformIOS_MethodBind_List :: struct {
+};
+EditorExportPlatformIOS_Init_ :: proc (EditorExportPlatformIOS_methods: ^EditorExportPlatformIOS_MethodBind_List, loc := #caller_location) {
+};

@@ -1,0 +1,15 @@
+package GD_Classes
+
+import GDW "shared:GDWrapper"
+import "shared:GDWrapper/gdAPI"
+import GDE "shared:GDWrapper/gdAPI/gdextension"
+
+
+OpenXRSpatialCapabilityConfigurationAnchor :: ^GDW.Object
+
+OpenXRSpatialCapabilityConfigurationAnchor_MethodBind_List :: struct {
+  get_enabled_components: ^GDW.MethodBind,
+};
+OpenXRSpatialCapabilityConfigurationAnchor_Init_ :: proc (OpenXRSpatialCapabilityConfigurationAnchor_methods: ^OpenXRSpatialCapabilityConfigurationAnchor_MethodBind_List, loc := #caller_location) {
+  OpenXRSpatialCapabilityConfigurationAnchor_methods.get_enabled_components = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAnchor, "get_enabled_components", 235988956, loc))
+};

@@ -1,0 +1,28 @@
+package GD_Classes
+
+import GDW "shared:GDWrapper"
+import "shared:GDWrapper/gdAPI"
+import GDE "shared:GDWrapper/gdAPI/gdextension"
+
+
+AnimationNodeSync :: ^GDW.Object
+
+AnimationNodeSync_properties :: struct {
+  sync_Bool : struct {
+  is_using_sync: proc "c" (p_base: AnimationNodeSync, r_value: ^GDW.Bool),
+  set_use_sync: proc "c" (p_base: AnimationNodeSync, p_value: ^GDW.Bool),
+  },
+};
+AnimationNodeSync_MethodBind_List :: struct {
+  set_use_sync: ^GDW.MethodBind,
+  is_using_sync: ^GDW.MethodBind,
+};
+AnimationNodeSync_Init_ :: proc (AnimationNodeSync_methods: ^AnimationNodeSync_MethodBind_List, loc := #caller_location) {
+  AnimationNodeSync_methods.set_use_sync = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeSync, "set_use_sync", 2586408642, loc))
+  AnimationNodeSync_methods.is_using_sync = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeSync, "is_using_sync", 36873697, loc))
+};
+AnimationNodeSync_init_props :: proc(AnimationNodeSync_prop: ^AnimationNodeSync_properties, loc:= #caller_location) {
+
+  AnimationNodeSync_prop.sync_Bool.is_using_sync = cast(proc "c" (p_base: AnimationNodeSync, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_using_sync")
+  AnimationNodeSync_prop.sync_Bool.set_use_sync = cast(proc "c" (p_base: AnimationNodeSync, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_use_sync")
+};
