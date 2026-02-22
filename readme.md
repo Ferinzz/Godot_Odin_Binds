@@ -16,14 +16,14 @@ WARNING! In Godot itself some class structs and enums may have the same names bu
 # Dependency
 [Toxin](https://github.com/Ferinzz/Toxin/tree/testing_new_hierarchy)
 * GDWrapper with gdAPI and gdextension included as children.
-* This library uses GDWrapper imported from the Odin shared folder
+* This library is setup expecting GDWrapper imported from the Odin shared folder
 
 To import a class's bindings 
 1. create the class_Methods_list struct
 2. call class_Init_(&your_class_Methods_list)
 3. if there are arguments, prepare those.
 4. if there is a return, create a return variable for the value
-5. Call your_class_Methods_list.some_method->m_call(self.self, {&arg1, &arg2} &ret_val)
+5. Call your_class_Methods_list.some_method->m_call(class.self, {&arg1, &arg2} &ret_val)
 
 ```
     Classes.Node2D_Init_(&Node2D_Class)
