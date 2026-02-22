@@ -7,6 +7,46 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 CPUParticles3D :: ^GDW.Object
 
+
+CPUParticles3D_DrawOrder :: enum i64 {
+  DRAW_ORDER_INDEX = 0,
+  DRAW_ORDER_LIFETIME = 1,
+  DRAW_ORDER_VIEW_DEPTH = 2,
+};
+
+CPUParticles3D_Parameter :: enum i64 {
+  PARAM_INITIAL_LINEAR_VELOCITY = 0,
+  PARAM_ANGULAR_VELOCITY = 1,
+  PARAM_ORBIT_VELOCITY = 2,
+  PARAM_LINEAR_ACCEL = 3,
+  PARAM_RADIAL_ACCEL = 4,
+  PARAM_TANGENTIAL_ACCEL = 5,
+  PARAM_DAMPING = 6,
+  PARAM_ANGLE = 7,
+  PARAM_SCALE = 8,
+  PARAM_HUE_VARIATION = 9,
+  PARAM_ANIM_SPEED = 10,
+  PARAM_ANIM_OFFSET = 11,
+  PARAM_MAX = 12,
+};
+
+CPUParticles3D_ParticleFlags :: enum i64 {
+  PARTICLE_FLAG_ALIGN_Y_TO_VELOCITY = 0,
+  PARTICLE_FLAG_ROTATE_Y = 1,
+  PARTICLE_FLAG_DISABLE_Z = 2,
+  PARTICLE_FLAG_MAX = 3,
+};
+
+CPUParticles3D_EmissionShape :: enum i64 {
+  EMISSION_SHAPE_POINT = 0,
+  EMISSION_SHAPE_SPHERE = 1,
+  EMISSION_SHAPE_SPHERE_SURFACE = 2,
+  EMISSION_SHAPE_BOX = 3,
+  EMISSION_SHAPE_POINTS = 4,
+  EMISSION_SHAPE_DIRECTED_POINTS = 5,
+  EMISSION_SHAPE_RING = 6,
+  EMISSION_SHAPE_MAX = 7,
+};
 CPUParticles3D_properties :: struct {
   emitting_Bool : struct {
   is_emitting: proc "c" (p_base: CPUParticles3D, r_value: ^GDW.Bool),
@@ -317,229 +357,549 @@ CPUParticles3D_properties :: struct {
     set_param_curve: proc "c" (p_base: CPUParticles3D, p_value: ^Curve),
   },
 };
-
-DrawOrder_CPUParticles3D :: enum i64 {
-  DRAW_ORDER_INDEX = 0,
-  DRAW_ORDER_LIFETIME = 1,
-  DRAW_ORDER_VIEW_DEPTH = 2,
-};
-
-Parameter_CPUParticles3D :: enum i64 {
-  PARAM_INITIAL_LINEAR_VELOCITY = 0,
-  PARAM_ANGULAR_VELOCITY = 1,
-  PARAM_ORBIT_VELOCITY = 2,
-  PARAM_LINEAR_ACCEL = 3,
-  PARAM_RADIAL_ACCEL = 4,
-  PARAM_TANGENTIAL_ACCEL = 5,
-  PARAM_DAMPING = 6,
-  PARAM_ANGLE = 7,
-  PARAM_SCALE = 8,
-  PARAM_HUE_VARIATION = 9,
-  PARAM_ANIM_SPEED = 10,
-  PARAM_ANIM_OFFSET = 11,
-  PARAM_MAX = 12,
-};
-
-ParticleFlags_CPUParticles3D :: enum i64 {
-  PARTICLE_FLAG_ALIGN_Y_TO_VELOCITY = 0,
-  PARTICLE_FLAG_ROTATE_Y = 1,
-  PARTICLE_FLAG_DISABLE_Z = 2,
-  PARTICLE_FLAG_MAX = 3,
-};
-
-EmissionShape_CPUParticles3D :: enum i64 {
-  EMISSION_SHAPE_POINT = 0,
-  EMISSION_SHAPE_SPHERE = 1,
-  EMISSION_SHAPE_SPHERE_SURFACE = 2,
-  EMISSION_SHAPE_BOX = 3,
-  EMISSION_SHAPE_POINTS = 4,
-  EMISSION_SHAPE_DIRECTED_POINTS = 5,
-  EMISSION_SHAPE_RING = 6,
-  EMISSION_SHAPE_MAX = 7,
-};
 CPUParticles3D_MethodBind_List :: struct {
-  set_emitting: ^GDW.MethodBind,
-  set_amount: ^GDW.MethodBind,
-  set_lifetime: ^GDW.MethodBind,
-  set_one_shot: ^GDW.MethodBind,
-  set_pre_process_time: ^GDW.MethodBind,
-  set_explosiveness_ratio: ^GDW.MethodBind,
-  set_randomness_ratio: ^GDW.MethodBind,
-  set_visibility_aabb: ^GDW.MethodBind,
-  set_lifetime_randomness: ^GDW.MethodBind,
-  set_use_local_coordinates: ^GDW.MethodBind,
-  set_fixed_fps: ^GDW.MethodBind,
-  set_fractional_delta: ^GDW.MethodBind,
-  set_speed_scale: ^GDW.MethodBind,
-  is_emitting: ^GDW.MethodBind,
-  get_amount: ^GDW.MethodBind,
-  get_lifetime: ^GDW.MethodBind,
-  get_one_shot: ^GDW.MethodBind,
-  get_pre_process_time: ^GDW.MethodBind,
-  get_explosiveness_ratio: ^GDW.MethodBind,
-  get_randomness_ratio: ^GDW.MethodBind,
-  get_visibility_aabb: ^GDW.MethodBind,
-  get_lifetime_randomness: ^GDW.MethodBind,
-  get_use_local_coordinates: ^GDW.MethodBind,
-  get_fixed_fps: ^GDW.MethodBind,
-  get_fractional_delta: ^GDW.MethodBind,
-  get_speed_scale: ^GDW.MethodBind,
-  set_draw_order: ^GDW.MethodBind,
-  get_draw_order: ^GDW.MethodBind,
-  set_mesh: ^GDW.MethodBind,
-  get_mesh: ^GDW.MethodBind,
-  set_use_fixed_seed: ^GDW.MethodBind,
-  get_use_fixed_seed: ^GDW.MethodBind,
-  set_seed: ^GDW.MethodBind,
-  get_seed: ^GDW.MethodBind,
-  restart: ^GDW.MethodBind,
-  request_particles_process: ^GDW.MethodBind,
-  capture_aabb: ^GDW.MethodBind,
-  set_direction: ^GDW.MethodBind,
-  get_direction: ^GDW.MethodBind,
-  set_spread: ^GDW.MethodBind,
-  get_spread: ^GDW.MethodBind,
-  set_flatness: ^GDW.MethodBind,
-  get_flatness: ^GDW.MethodBind,
-  set_param_min: ^GDW.MethodBind,
-  get_param_min: ^GDW.MethodBind,
-  set_param_max: ^GDW.MethodBind,
-  get_param_max: ^GDW.MethodBind,
-  set_param_curve: ^GDW.MethodBind,
-  get_param_curve: ^GDW.MethodBind,
-  set_color: ^GDW.MethodBind,
-  get_color: ^GDW.MethodBind,
-  set_color_ramp: ^GDW.MethodBind,
-  get_color_ramp: ^GDW.MethodBind,
-  set_color_initial_ramp: ^GDW.MethodBind,
-  get_color_initial_ramp: ^GDW.MethodBind,
-  set_particle_flag: ^GDW.MethodBind,
-  get_particle_flag: ^GDW.MethodBind,
-  set_emission_shape: ^GDW.MethodBind,
-  get_emission_shape: ^GDW.MethodBind,
-  set_emission_sphere_radius: ^GDW.MethodBind,
-  get_emission_sphere_radius: ^GDW.MethodBind,
-  set_emission_box_extents: ^GDW.MethodBind,
-  get_emission_box_extents: ^GDW.MethodBind,
-  set_emission_points: ^GDW.MethodBind,
-  get_emission_points: ^GDW.MethodBind,
-  set_emission_normals: ^GDW.MethodBind,
-  get_emission_normals: ^GDW.MethodBind,
-  set_emission_colors: ^GDW.MethodBind,
-  get_emission_colors: ^GDW.MethodBind,
-  set_emission_ring_axis: ^GDW.MethodBind,
-  get_emission_ring_axis: ^GDW.MethodBind,
-  set_emission_ring_height: ^GDW.MethodBind,
-  get_emission_ring_height: ^GDW.MethodBind,
-  set_emission_ring_radius: ^GDW.MethodBind,
-  get_emission_ring_radius: ^GDW.MethodBind,
-  set_emission_ring_inner_radius: ^GDW.MethodBind,
-  get_emission_ring_inner_radius: ^GDW.MethodBind,
-  set_emission_ring_cone_angle: ^GDW.MethodBind,
-  get_emission_ring_cone_angle: ^GDW.MethodBind,
-  get_gravity: ^GDW.MethodBind,
-  set_gravity: ^GDW.MethodBind,
-  get_split_scale: ^GDW.MethodBind,
-  set_split_scale: ^GDW.MethodBind,
-  get_scale_curve_x: ^GDW.MethodBind,
-  set_scale_curve_x: ^GDW.MethodBind,
-  get_scale_curve_y: ^GDW.MethodBind,
-  set_scale_curve_y: ^GDW.MethodBind,
-  get_scale_curve_z: ^GDW.MethodBind,
-  set_scale_curve_z: ^GDW.MethodBind,
-  convert_from_particles: ^GDW.MethodBind,
-};
+  set_emitting: struct{
+    using _set_emitting: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{emitting: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    set_amount: struct{
+    using _set_amount: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{amount: ^GDW.Int, }, r_ret: rawptr = nil)
+  },
+    set_lifetime: struct{
+    using _set_lifetime: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{secs: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    set_one_shot: struct{
+    using _set_one_shot: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{enable: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    set_pre_process_time: struct{
+    using _set_pre_process_time: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{secs: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    set_explosiveness_ratio: struct{
+    using _set_explosiveness_ratio: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{ratio: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    set_randomness_ratio: struct{
+    using _set_randomness_ratio: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{ratio: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    set_visibility_aabb: struct{
+    using _set_visibility_aabb: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{aabb: ^GDW.AABB, }, r_ret: rawptr = nil)
+  },
+    set_lifetime_randomness: struct{
+    using _set_lifetime_randomness: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{random: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    set_use_local_coordinates: struct{
+    using _set_use_local_coordinates: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{enable: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    set_fixed_fps: struct{
+    using _set_fixed_fps: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{fps: ^GDW.Int, }, r_ret: rawptr = nil)
+  },
+    set_fractional_delta: struct{
+    using _set_fractional_delta: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{enable: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    set_speed_scale: struct{
+    using _set_speed_scale: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{scale: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    is_emitting: struct{
+    using _is_emitting: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+  },
+  get_amount: struct{
+    using _get_amount: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+  },
+  get_lifetime: struct{
+    using _get_lifetime: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  get_one_shot: struct{
+    using _get_one_shot: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+  },
+  get_pre_process_time: struct{
+    using _get_pre_process_time: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  get_explosiveness_ratio: struct{
+    using _get_explosiveness_ratio: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  get_randomness_ratio: struct{
+    using _get_randomness_ratio: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  get_visibility_aabb: struct{
+    using _get_visibility_aabb: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+  },
+  get_lifetime_randomness: struct{
+    using _get_lifetime_randomness: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  get_use_local_coordinates: struct{
+    using _get_use_local_coordinates: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+  },
+  get_fixed_fps: struct{
+    using _get_fixed_fps: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+  },
+  get_fractional_delta: struct{
+    using _get_fractional_delta: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+  },
+  get_speed_scale: struct{
+    using _get_speed_scale: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  set_draw_order: struct{
+    using _set_draw_order: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{order: ^CPUParticles3D_DrawOrder, }, r_ret: rawptr = nil)
+  },
+    get_draw_order: struct{
+    using _get_draw_order: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^CPUParticles3D_DrawOrder)
+  },
+  set_mesh: struct{
+    using _set_mesh: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{mesh: ^Mesh, }, r_ret: rawptr = nil)
+  },
+    get_mesh: struct{
+    using _get_mesh: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+  },
+  set_use_fixed_seed: struct{
+    using _set_use_fixed_seed: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{use_fixed_seed: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    get_use_fixed_seed: struct{
+    using _get_use_fixed_seed: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+  },
+  set_seed: struct{
+    using _set_seed: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{seed: ^GDW.Int, }, r_ret: rawptr = nil)
+  },
+    get_seed: struct{
+    using _get_seed: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+  },
+  restart: struct{
+    using _restart: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{keep_seed: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    request_particles_process: struct{
+    using _request_particles_process: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{process_time: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    capture_aabb: struct{
+    using _capture_aabb: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+  },
+  set_direction: struct{
+    using _set_direction: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{direction: ^GDW.Vector3, }, r_ret: rawptr = nil)
+  },
+    get_direction: struct{
+    using _get_direction: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+  },
+  set_spread: struct{
+    using _set_spread: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{degrees: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_spread: struct{
+    using _get_spread: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  set_flatness: struct{
+    using _set_flatness: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{amount: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_flatness: struct{
+    using _get_flatness: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  set_param_min: struct{
+    using _set_param_min: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{param: ^CPUParticles3D_Parameter, value: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_param_min: struct{
+    using _get_param_min: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{param: ^CPUParticles3D_Parameter, }, r_ret: ^GDW.float)
+  },
+  set_param_max: struct{
+    using _set_param_max: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{param: ^CPUParticles3D_Parameter, value: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_param_max: struct{
+    using _get_param_max: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{param: ^CPUParticles3D_Parameter, }, r_ret: ^GDW.float)
+  },
+  set_param_curve: struct{
+    using _set_param_curve: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{param: ^CPUParticles3D_Parameter, curve: ^Curve, }, r_ret: rawptr = nil)
+  },
+    get_param_curve: struct{
+    using _get_param_curve: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{param: ^CPUParticles3D_Parameter, }, r_ret: ^Curve)
+  },
+  set_color: struct{
+    using _set_color: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{color: ^GDW.Color, }, r_ret: rawptr = nil)
+  },
+    get_color: struct{
+    using _get_color: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+  },
+  set_color_ramp: struct{
+    using _set_color_ramp: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{ramp: ^Gradient, }, r_ret: rawptr = nil)
+  },
+    get_color_ramp: struct{
+    using _get_color_ramp: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Gradient)
+  },
+  set_color_initial_ramp: struct{
+    using _set_color_initial_ramp: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{ramp: ^Gradient, }, r_ret: rawptr = nil)
+  },
+    get_color_initial_ramp: struct{
+    using _get_color_initial_ramp: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Gradient)
+  },
+  set_particle_flag: struct{
+    using _set_particle_flag: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{particle_flag: ^CPUParticles3D_ParticleFlags, enable: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    get_particle_flag: struct{
+    using _get_particle_flag: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{particle_flag: ^CPUParticles3D_ParticleFlags, }, r_ret: ^GDW.Bool)
+  },
+  set_emission_shape: struct{
+    using _set_emission_shape: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{shape: ^CPUParticles3D_EmissionShape, }, r_ret: rawptr = nil)
+  },
+    get_emission_shape: struct{
+    using _get_emission_shape: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^CPUParticles3D_EmissionShape)
+  },
+  set_emission_sphere_radius: struct{
+    using _set_emission_sphere_radius: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{radius: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_emission_sphere_radius: struct{
+    using _get_emission_sphere_radius: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  set_emission_box_extents: struct{
+    using _set_emission_box_extents: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{extents: ^GDW.Vector3, }, r_ret: rawptr = nil)
+  },
+    get_emission_box_extents: struct{
+    using _get_emission_box_extents: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+  },
+  set_emission_points: struct{
+    using _set_emission_points: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{array: ^GDW.PackedVector3Array, }, r_ret: rawptr = nil)
+  },
+    get_emission_points: struct{
+    using _get_emission_points: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+  },
+  set_emission_normals: struct{
+    using _set_emission_normals: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{array: ^GDW.PackedVector3Array, }, r_ret: rawptr = nil)
+  },
+    get_emission_normals: struct{
+    using _get_emission_normals: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+  },
+  set_emission_colors: struct{
+    using _set_emission_colors: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{array: ^GDW.PackedColorArray, }, r_ret: rawptr = nil)
+  },
+    get_emission_colors: struct{
+    using _get_emission_colors: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedColorArray)
+  },
+  set_emission_ring_axis: struct{
+    using _set_emission_ring_axis: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{axis: ^GDW.Vector3, }, r_ret: rawptr = nil)
+  },
+    get_emission_ring_axis: struct{
+    using _get_emission_ring_axis: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+  },
+  set_emission_ring_height: struct{
+    using _set_emission_ring_height: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{height: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_emission_ring_height: struct{
+    using _get_emission_ring_height: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  set_emission_ring_radius: struct{
+    using _set_emission_ring_radius: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{radius: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_emission_ring_radius: struct{
+    using _get_emission_ring_radius: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  set_emission_ring_inner_radius: struct{
+    using _set_emission_ring_inner_radius: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{inner_radius: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_emission_ring_inner_radius: struct{
+    using _get_emission_ring_inner_radius: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  set_emission_ring_cone_angle: struct{
+    using _set_emission_ring_cone_angle: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{cone_angle: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_emission_ring_cone_angle: struct{
+    using _get_emission_ring_cone_angle: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  get_gravity: struct{
+    using _get_gravity: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+  },
+  set_gravity: struct{
+    using _set_gravity: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{accel_vec: ^GDW.Vector3, }, r_ret: rawptr = nil)
+  },
+    get_split_scale: struct{
+    using _get_split_scale: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+  },
+  set_split_scale: struct{
+    using _set_split_scale: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{split_scale: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    get_scale_curve_x: struct{
+    using _get_scale_curve_x: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Curve)
+  },
+  set_scale_curve_x: struct{
+    using _set_scale_curve_x: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{scale_curve: ^Curve, }, r_ret: rawptr = nil)
+  },
+    get_scale_curve_y: struct{
+    using _get_scale_curve_y: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Curve)
+  },
+  set_scale_curve_y: struct{
+    using _set_scale_curve_y: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{scale_curve: ^Curve, }, r_ret: rawptr = nil)
+  },
+    get_scale_curve_z: struct{
+    using _get_scale_curve_z: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Curve)
+  },
+  set_scale_curve_z: struct{
+    using _set_scale_curve_z: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{scale_curve: ^Curve, }, r_ret: rawptr = nil)
+  },
+    convert_from_particles: struct{
+    using _convert_from_particles: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: struct{particles: ^Node, }, r_ret: rawptr = nil)
+  },
+  };
 CPUParticles3D_Init_ :: proc (CPUParticles3D_methods: ^CPUParticles3D_MethodBind_List, loc := #caller_location) {
-  CPUParticles3D_methods.set_emitting = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emitting", 2586408642, loc))
-  CPUParticles3D_methods.set_amount = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_amount", 1286410249, loc))
-  CPUParticles3D_methods.set_lifetime = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_lifetime", 373806689, loc))
-  CPUParticles3D_methods.set_one_shot = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_one_shot", 2586408642, loc))
-  CPUParticles3D_methods.set_pre_process_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_pre_process_time", 373806689, loc))
-  CPUParticles3D_methods.set_explosiveness_ratio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_explosiveness_ratio", 373806689, loc))
-  CPUParticles3D_methods.set_randomness_ratio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_randomness_ratio", 373806689, loc))
-  CPUParticles3D_methods.set_visibility_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_visibility_aabb", 259215842, loc))
-  CPUParticles3D_methods.set_lifetime_randomness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_lifetime_randomness", 373806689, loc))
-  CPUParticles3D_methods.set_use_local_coordinates = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_use_local_coordinates", 2586408642, loc))
-  CPUParticles3D_methods.set_fixed_fps = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_fixed_fps", 1286410249, loc))
-  CPUParticles3D_methods.set_fractional_delta = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_fractional_delta", 2586408642, loc))
-  CPUParticles3D_methods.set_speed_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_speed_scale", 373806689, loc))
-  CPUParticles3D_methods.is_emitting = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "is_emitting", 36873697, loc))
-  CPUParticles3D_methods.get_amount = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_amount", 3905245786, loc))
-  CPUParticles3D_methods.get_lifetime = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_lifetime", 1740695150, loc))
-  CPUParticles3D_methods.get_one_shot = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_one_shot", 36873697, loc))
-  CPUParticles3D_methods.get_pre_process_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_pre_process_time", 1740695150, loc))
-  CPUParticles3D_methods.get_explosiveness_ratio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_explosiveness_ratio", 1740695150, loc))
-  CPUParticles3D_methods.get_randomness_ratio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_randomness_ratio", 1740695150, loc))
-  CPUParticles3D_methods.get_visibility_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_visibility_aabb", 1068685055, loc))
-  CPUParticles3D_methods.get_lifetime_randomness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_lifetime_randomness", 1740695150, loc))
-  CPUParticles3D_methods.get_use_local_coordinates = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_use_local_coordinates", 36873697, loc))
-  CPUParticles3D_methods.get_fixed_fps = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_fixed_fps", 3905245786, loc))
-  CPUParticles3D_methods.get_fractional_delta = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_fractional_delta", 36873697, loc))
-  CPUParticles3D_methods.get_speed_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_speed_scale", 1740695150, loc))
-  CPUParticles3D_methods.set_draw_order = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_draw_order", 1427401774, loc))
-  CPUParticles3D_methods.get_draw_order = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_draw_order", 1321900776, loc))
-  CPUParticles3D_methods.set_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_mesh", 194775623, loc))
-  CPUParticles3D_methods.get_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_mesh", 1808005922, loc))
-  CPUParticles3D_methods.set_use_fixed_seed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_use_fixed_seed", 2586408642, loc))
-  CPUParticles3D_methods.get_use_fixed_seed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_use_fixed_seed", 36873697, loc))
-  CPUParticles3D_methods.set_seed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_seed", 1286410249, loc))
-  CPUParticles3D_methods.get_seed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_seed", 3905245786, loc))
-  CPUParticles3D_methods.restart = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "restart", 107499316, loc))
-  CPUParticles3D_methods.request_particles_process = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "request_particles_process", 373806689, loc))
-  CPUParticles3D_methods.capture_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "capture_aabb", 1068685055, loc))
-  CPUParticles3D_methods.set_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_direction", 3460891852, loc))
-  CPUParticles3D_methods.get_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_direction", 3360562783, loc))
-  CPUParticles3D_methods.set_spread = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_spread", 373806689, loc))
-  CPUParticles3D_methods.get_spread = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_spread", 1740695150, loc))
-  CPUParticles3D_methods.set_flatness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_flatness", 373806689, loc))
-  CPUParticles3D_methods.get_flatness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_flatness", 1740695150, loc))
-  CPUParticles3D_methods.set_param_min = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_param_min", 557936109, loc))
-  CPUParticles3D_methods.get_param_min = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_param_min", 597646162, loc))
-  CPUParticles3D_methods.set_param_max = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_param_max", 557936109, loc))
-  CPUParticles3D_methods.get_param_max = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_param_max", 597646162, loc))
-  CPUParticles3D_methods.set_param_curve = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_param_curve", 4044142537, loc))
-  CPUParticles3D_methods.get_param_curve = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_param_curve", 4132790277, loc))
-  CPUParticles3D_methods.set_color = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_color", 2920490490, loc))
-  CPUParticles3D_methods.get_color = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_color", 3444240500, loc))
-  CPUParticles3D_methods.set_color_ramp = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_color_ramp", 2756054477, loc))
-  CPUParticles3D_methods.get_color_ramp = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_color_ramp", 132272999, loc))
-  CPUParticles3D_methods.set_color_initial_ramp = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_color_initial_ramp", 2756054477, loc))
-  CPUParticles3D_methods.get_color_initial_ramp = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_color_initial_ramp", 132272999, loc))
-  CPUParticles3D_methods.set_particle_flag = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_particle_flag", 3515406498, loc))
-  CPUParticles3D_methods.get_particle_flag = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_particle_flag", 2845201987, loc))
-  CPUParticles3D_methods.set_emission_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_shape", 491823814, loc))
-  CPUParticles3D_methods.get_emission_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_shape", 2961454842, loc))
-  CPUParticles3D_methods.set_emission_sphere_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_sphere_radius", 373806689, loc))
-  CPUParticles3D_methods.get_emission_sphere_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_sphere_radius", 1740695150, loc))
-  CPUParticles3D_methods.set_emission_box_extents = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_box_extents", 3460891852, loc))
-  CPUParticles3D_methods.get_emission_box_extents = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_box_extents", 3360562783, loc))
-  CPUParticles3D_methods.set_emission_points = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_points", 334873810, loc))
-  CPUParticles3D_methods.get_emission_points = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_points", 497664490, loc))
-  CPUParticles3D_methods.set_emission_normals = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_normals", 334873810, loc))
-  CPUParticles3D_methods.get_emission_normals = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_normals", 497664490, loc))
-  CPUParticles3D_methods.set_emission_colors = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_colors", 3546319833, loc))
-  CPUParticles3D_methods.get_emission_colors = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_colors", 1392750486, loc))
-  CPUParticles3D_methods.set_emission_ring_axis = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_axis", 3460891852, loc))
-  CPUParticles3D_methods.get_emission_ring_axis = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_axis", 3360562783, loc))
-  CPUParticles3D_methods.set_emission_ring_height = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_height", 373806689, loc))
-  CPUParticles3D_methods.get_emission_ring_height = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_height", 1740695150, loc))
-  CPUParticles3D_methods.set_emission_ring_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_radius", 373806689, loc))
-  CPUParticles3D_methods.get_emission_ring_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_radius", 1740695150, loc))
-  CPUParticles3D_methods.set_emission_ring_inner_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_inner_radius", 373806689, loc))
-  CPUParticles3D_methods.get_emission_ring_inner_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_inner_radius", 1740695150, loc))
-  CPUParticles3D_methods.set_emission_ring_cone_angle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_cone_angle", 373806689, loc))
-  CPUParticles3D_methods.get_emission_ring_cone_angle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_cone_angle", 1740695150, loc))
-  CPUParticles3D_methods.get_gravity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_gravity", 3360562783, loc))
-  CPUParticles3D_methods.set_gravity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_gravity", 3460891852, loc))
-  CPUParticles3D_methods.get_split_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_split_scale", 2240911060, loc))
-  CPUParticles3D_methods.set_split_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_split_scale", 2586408642, loc))
-  CPUParticles3D_methods.get_scale_curve_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_scale_curve_x", 2460114913, loc))
-  CPUParticles3D_methods.set_scale_curve_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_scale_curve_x", 270443179, loc))
-  CPUParticles3D_methods.get_scale_curve_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_scale_curve_y", 2460114913, loc))
-  CPUParticles3D_methods.set_scale_curve_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_scale_curve_y", 270443179, loc))
-  CPUParticles3D_methods.get_scale_curve_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_scale_curve_z", 2460114913, loc))
-  CPUParticles3D_methods.set_scale_curve_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_scale_curve_z", 270443179, loc))
-  CPUParticles3D_methods.convert_from_particles = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "convert_from_particles", 1078189570, loc))
+  CPUParticles3D_methods.set_emitting._set_emitting = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emitting", 2586408642, loc))
+  CPUParticles3D_methods.set_emitting.m_call = cast(type_of(CPUParticles3D_methods.set_emitting.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_amount._set_amount = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_amount", 1286410249, loc))
+  CPUParticles3D_methods.set_amount.m_call = cast(type_of(CPUParticles3D_methods.set_amount.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_lifetime._set_lifetime = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_lifetime", 373806689, loc))
+  CPUParticles3D_methods.set_lifetime.m_call = cast(type_of(CPUParticles3D_methods.set_lifetime.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_one_shot._set_one_shot = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_one_shot", 2586408642, loc))
+  CPUParticles3D_methods.set_one_shot.m_call = cast(type_of(CPUParticles3D_methods.set_one_shot.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_pre_process_time._set_pre_process_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_pre_process_time", 373806689, loc))
+  CPUParticles3D_methods.set_pre_process_time.m_call = cast(type_of(CPUParticles3D_methods.set_pre_process_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_explosiveness_ratio._set_explosiveness_ratio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_explosiveness_ratio", 373806689, loc))
+  CPUParticles3D_methods.set_explosiveness_ratio.m_call = cast(type_of(CPUParticles3D_methods.set_explosiveness_ratio.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_randomness_ratio._set_randomness_ratio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_randomness_ratio", 373806689, loc))
+  CPUParticles3D_methods.set_randomness_ratio.m_call = cast(type_of(CPUParticles3D_methods.set_randomness_ratio.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_visibility_aabb._set_visibility_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_visibility_aabb", 259215842, loc))
+  CPUParticles3D_methods.set_visibility_aabb.m_call = cast(type_of(CPUParticles3D_methods.set_visibility_aabb.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_lifetime_randomness._set_lifetime_randomness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_lifetime_randomness", 373806689, loc))
+  CPUParticles3D_methods.set_lifetime_randomness.m_call = cast(type_of(CPUParticles3D_methods.set_lifetime_randomness.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_use_local_coordinates._set_use_local_coordinates = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_use_local_coordinates", 2586408642, loc))
+  CPUParticles3D_methods.set_use_local_coordinates.m_call = cast(type_of(CPUParticles3D_methods.set_use_local_coordinates.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_fixed_fps._set_fixed_fps = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_fixed_fps", 1286410249, loc))
+  CPUParticles3D_methods.set_fixed_fps.m_call = cast(type_of(CPUParticles3D_methods.set_fixed_fps.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_fractional_delta._set_fractional_delta = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_fractional_delta", 2586408642, loc))
+  CPUParticles3D_methods.set_fractional_delta.m_call = cast(type_of(CPUParticles3D_methods.set_fractional_delta.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_speed_scale._set_speed_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_speed_scale", 373806689, loc))
+  CPUParticles3D_methods.set_speed_scale.m_call = cast(type_of(CPUParticles3D_methods.set_speed_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.is_emitting._is_emitting = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "is_emitting", 36873697, loc))
+  CPUParticles3D_methods.is_emitting.m_call = cast(type_of(CPUParticles3D_methods.is_emitting.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_amount._get_amount = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_amount", 3905245786, loc))
+  CPUParticles3D_methods.get_amount.m_call = cast(type_of(CPUParticles3D_methods.get_amount.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_lifetime._get_lifetime = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_lifetime", 1740695150, loc))
+  CPUParticles3D_methods.get_lifetime.m_call = cast(type_of(CPUParticles3D_methods.get_lifetime.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_one_shot._get_one_shot = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_one_shot", 36873697, loc))
+  CPUParticles3D_methods.get_one_shot.m_call = cast(type_of(CPUParticles3D_methods.get_one_shot.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_pre_process_time._get_pre_process_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_pre_process_time", 1740695150, loc))
+  CPUParticles3D_methods.get_pre_process_time.m_call = cast(type_of(CPUParticles3D_methods.get_pre_process_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_explosiveness_ratio._get_explosiveness_ratio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_explosiveness_ratio", 1740695150, loc))
+  CPUParticles3D_methods.get_explosiveness_ratio.m_call = cast(type_of(CPUParticles3D_methods.get_explosiveness_ratio.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_randomness_ratio._get_randomness_ratio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_randomness_ratio", 1740695150, loc))
+  CPUParticles3D_methods.get_randomness_ratio.m_call = cast(type_of(CPUParticles3D_methods.get_randomness_ratio.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_visibility_aabb._get_visibility_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_visibility_aabb", 1068685055, loc))
+  CPUParticles3D_methods.get_visibility_aabb.m_call = cast(type_of(CPUParticles3D_methods.get_visibility_aabb.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_lifetime_randomness._get_lifetime_randomness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_lifetime_randomness", 1740695150, loc))
+  CPUParticles3D_methods.get_lifetime_randomness.m_call = cast(type_of(CPUParticles3D_methods.get_lifetime_randomness.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_use_local_coordinates._get_use_local_coordinates = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_use_local_coordinates", 36873697, loc))
+  CPUParticles3D_methods.get_use_local_coordinates.m_call = cast(type_of(CPUParticles3D_methods.get_use_local_coordinates.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_fixed_fps._get_fixed_fps = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_fixed_fps", 3905245786, loc))
+  CPUParticles3D_methods.get_fixed_fps.m_call = cast(type_of(CPUParticles3D_methods.get_fixed_fps.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_fractional_delta._get_fractional_delta = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_fractional_delta", 36873697, loc))
+  CPUParticles3D_methods.get_fractional_delta.m_call = cast(type_of(CPUParticles3D_methods.get_fractional_delta.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_speed_scale._get_speed_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_speed_scale", 1740695150, loc))
+  CPUParticles3D_methods.get_speed_scale.m_call = cast(type_of(CPUParticles3D_methods.get_speed_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_draw_order._set_draw_order = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_draw_order", 1427401774, loc))
+  CPUParticles3D_methods.set_draw_order.m_call = cast(type_of(CPUParticles3D_methods.set_draw_order.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_draw_order._get_draw_order = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_draw_order", 1321900776, loc))
+  CPUParticles3D_methods.get_draw_order.m_call = cast(type_of(CPUParticles3D_methods.get_draw_order.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_mesh._set_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_mesh", 194775623, loc))
+  CPUParticles3D_methods.set_mesh.m_call = cast(type_of(CPUParticles3D_methods.set_mesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_mesh._get_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_mesh", 1808005922, loc))
+  CPUParticles3D_methods.get_mesh.m_call = cast(type_of(CPUParticles3D_methods.get_mesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_use_fixed_seed._set_use_fixed_seed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_use_fixed_seed", 2586408642, loc))
+  CPUParticles3D_methods.set_use_fixed_seed.m_call = cast(type_of(CPUParticles3D_methods.set_use_fixed_seed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_use_fixed_seed._get_use_fixed_seed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_use_fixed_seed", 36873697, loc))
+  CPUParticles3D_methods.get_use_fixed_seed.m_call = cast(type_of(CPUParticles3D_methods.get_use_fixed_seed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_seed._set_seed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_seed", 1286410249, loc))
+  CPUParticles3D_methods.set_seed.m_call = cast(type_of(CPUParticles3D_methods.set_seed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_seed._get_seed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_seed", 3905245786, loc))
+  CPUParticles3D_methods.get_seed.m_call = cast(type_of(CPUParticles3D_methods.get_seed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.restart._restart = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "restart", 107499316, loc))
+  CPUParticles3D_methods.restart.m_call = cast(type_of(CPUParticles3D_methods.restart.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.request_particles_process._request_particles_process = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "request_particles_process", 373806689, loc))
+  CPUParticles3D_methods.request_particles_process.m_call = cast(type_of(CPUParticles3D_methods.request_particles_process.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.capture_aabb._capture_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "capture_aabb", 1068685055, loc))
+  CPUParticles3D_methods.capture_aabb.m_call = cast(type_of(CPUParticles3D_methods.capture_aabb.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_direction._set_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_direction", 3460891852, loc))
+  CPUParticles3D_methods.set_direction.m_call = cast(type_of(CPUParticles3D_methods.set_direction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_direction._get_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_direction", 3360562783, loc))
+  CPUParticles3D_methods.get_direction.m_call = cast(type_of(CPUParticles3D_methods.get_direction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_spread._set_spread = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_spread", 373806689, loc))
+  CPUParticles3D_methods.set_spread.m_call = cast(type_of(CPUParticles3D_methods.set_spread.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_spread._get_spread = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_spread", 1740695150, loc))
+  CPUParticles3D_methods.get_spread.m_call = cast(type_of(CPUParticles3D_methods.get_spread.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_flatness._set_flatness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_flatness", 373806689, loc))
+  CPUParticles3D_methods.set_flatness.m_call = cast(type_of(CPUParticles3D_methods.set_flatness.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_flatness._get_flatness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_flatness", 1740695150, loc))
+  CPUParticles3D_methods.get_flatness.m_call = cast(type_of(CPUParticles3D_methods.get_flatness.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_param_min._set_param_min = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_param_min", 557936109, loc))
+  CPUParticles3D_methods.set_param_min.m_call = cast(type_of(CPUParticles3D_methods.set_param_min.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_param_min._get_param_min = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_param_min", 597646162, loc))
+  CPUParticles3D_methods.get_param_min.m_call = cast(type_of(CPUParticles3D_methods.get_param_min.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_param_max._set_param_max = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_param_max", 557936109, loc))
+  CPUParticles3D_methods.set_param_max.m_call = cast(type_of(CPUParticles3D_methods.set_param_max.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_param_max._get_param_max = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_param_max", 597646162, loc))
+  CPUParticles3D_methods.get_param_max.m_call = cast(type_of(CPUParticles3D_methods.get_param_max.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_param_curve._set_param_curve = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_param_curve", 4044142537, loc))
+  CPUParticles3D_methods.set_param_curve.m_call = cast(type_of(CPUParticles3D_methods.set_param_curve.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_param_curve._get_param_curve = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_param_curve", 4132790277, loc))
+  CPUParticles3D_methods.get_param_curve.m_call = cast(type_of(CPUParticles3D_methods.get_param_curve.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_color._set_color = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_color", 2920490490, loc))
+  CPUParticles3D_methods.set_color.m_call = cast(type_of(CPUParticles3D_methods.set_color.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_color._get_color = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_color", 3444240500, loc))
+  CPUParticles3D_methods.get_color.m_call = cast(type_of(CPUParticles3D_methods.get_color.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_color_ramp._set_color_ramp = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_color_ramp", 2756054477, loc))
+  CPUParticles3D_methods.set_color_ramp.m_call = cast(type_of(CPUParticles3D_methods.set_color_ramp.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_color_ramp._get_color_ramp = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_color_ramp", 132272999, loc))
+  CPUParticles3D_methods.get_color_ramp.m_call = cast(type_of(CPUParticles3D_methods.get_color_ramp.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_color_initial_ramp._set_color_initial_ramp = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_color_initial_ramp", 2756054477, loc))
+  CPUParticles3D_methods.set_color_initial_ramp.m_call = cast(type_of(CPUParticles3D_methods.set_color_initial_ramp.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_color_initial_ramp._get_color_initial_ramp = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_color_initial_ramp", 132272999, loc))
+  CPUParticles3D_methods.get_color_initial_ramp.m_call = cast(type_of(CPUParticles3D_methods.get_color_initial_ramp.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_particle_flag._set_particle_flag = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_particle_flag", 3515406498, loc))
+  CPUParticles3D_methods.set_particle_flag.m_call = cast(type_of(CPUParticles3D_methods.set_particle_flag.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_particle_flag._get_particle_flag = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_particle_flag", 2845201987, loc))
+  CPUParticles3D_methods.get_particle_flag.m_call = cast(type_of(CPUParticles3D_methods.get_particle_flag.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_shape._set_emission_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_shape", 491823814, loc))
+  CPUParticles3D_methods.set_emission_shape.m_call = cast(type_of(CPUParticles3D_methods.set_emission_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_shape._get_emission_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_shape", 2961454842, loc))
+  CPUParticles3D_methods.get_emission_shape.m_call = cast(type_of(CPUParticles3D_methods.get_emission_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_sphere_radius._set_emission_sphere_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_sphere_radius", 373806689, loc))
+  CPUParticles3D_methods.set_emission_sphere_radius.m_call = cast(type_of(CPUParticles3D_methods.set_emission_sphere_radius.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_sphere_radius._get_emission_sphere_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_sphere_radius", 1740695150, loc))
+  CPUParticles3D_methods.get_emission_sphere_radius.m_call = cast(type_of(CPUParticles3D_methods.get_emission_sphere_radius.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_box_extents._set_emission_box_extents = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_box_extents", 3460891852, loc))
+  CPUParticles3D_methods.set_emission_box_extents.m_call = cast(type_of(CPUParticles3D_methods.set_emission_box_extents.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_box_extents._get_emission_box_extents = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_box_extents", 3360562783, loc))
+  CPUParticles3D_methods.get_emission_box_extents.m_call = cast(type_of(CPUParticles3D_methods.get_emission_box_extents.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_points._set_emission_points = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_points", 334873810, loc))
+  CPUParticles3D_methods.set_emission_points.m_call = cast(type_of(CPUParticles3D_methods.set_emission_points.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_points._get_emission_points = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_points", 497664490, loc))
+  CPUParticles3D_methods.get_emission_points.m_call = cast(type_of(CPUParticles3D_methods.get_emission_points.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_normals._set_emission_normals = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_normals", 334873810, loc))
+  CPUParticles3D_methods.set_emission_normals.m_call = cast(type_of(CPUParticles3D_methods.set_emission_normals.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_normals._get_emission_normals = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_normals", 497664490, loc))
+  CPUParticles3D_methods.get_emission_normals.m_call = cast(type_of(CPUParticles3D_methods.get_emission_normals.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_colors._set_emission_colors = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_colors", 3546319833, loc))
+  CPUParticles3D_methods.set_emission_colors.m_call = cast(type_of(CPUParticles3D_methods.set_emission_colors.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_colors._get_emission_colors = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_colors", 1392750486, loc))
+  CPUParticles3D_methods.get_emission_colors.m_call = cast(type_of(CPUParticles3D_methods.get_emission_colors.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_ring_axis._set_emission_ring_axis = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_axis", 3460891852, loc))
+  CPUParticles3D_methods.set_emission_ring_axis.m_call = cast(type_of(CPUParticles3D_methods.set_emission_ring_axis.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_ring_axis._get_emission_ring_axis = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_axis", 3360562783, loc))
+  CPUParticles3D_methods.get_emission_ring_axis.m_call = cast(type_of(CPUParticles3D_methods.get_emission_ring_axis.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_ring_height._set_emission_ring_height = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_height", 373806689, loc))
+  CPUParticles3D_methods.set_emission_ring_height.m_call = cast(type_of(CPUParticles3D_methods.set_emission_ring_height.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_ring_height._get_emission_ring_height = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_height", 1740695150, loc))
+  CPUParticles3D_methods.get_emission_ring_height.m_call = cast(type_of(CPUParticles3D_methods.get_emission_ring_height.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_ring_radius._set_emission_ring_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_radius", 373806689, loc))
+  CPUParticles3D_methods.set_emission_ring_radius.m_call = cast(type_of(CPUParticles3D_methods.set_emission_ring_radius.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_ring_radius._get_emission_ring_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_radius", 1740695150, loc))
+  CPUParticles3D_methods.get_emission_ring_radius.m_call = cast(type_of(CPUParticles3D_methods.get_emission_ring_radius.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_ring_inner_radius._set_emission_ring_inner_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_inner_radius", 373806689, loc))
+  CPUParticles3D_methods.set_emission_ring_inner_radius.m_call = cast(type_of(CPUParticles3D_methods.set_emission_ring_inner_radius.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_ring_inner_radius._get_emission_ring_inner_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_inner_radius", 1740695150, loc))
+  CPUParticles3D_methods.get_emission_ring_inner_radius.m_call = cast(type_of(CPUParticles3D_methods.get_emission_ring_inner_radius.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_emission_ring_cone_angle._set_emission_ring_cone_angle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_emission_ring_cone_angle", 373806689, loc))
+  CPUParticles3D_methods.set_emission_ring_cone_angle.m_call = cast(type_of(CPUParticles3D_methods.set_emission_ring_cone_angle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_emission_ring_cone_angle._get_emission_ring_cone_angle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_emission_ring_cone_angle", 1740695150, loc))
+  CPUParticles3D_methods.get_emission_ring_cone_angle.m_call = cast(type_of(CPUParticles3D_methods.get_emission_ring_cone_angle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_gravity._get_gravity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_gravity", 3360562783, loc))
+  CPUParticles3D_methods.get_gravity.m_call = cast(type_of(CPUParticles3D_methods.get_gravity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_gravity._set_gravity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_gravity", 3460891852, loc))
+  CPUParticles3D_methods.set_gravity.m_call = cast(type_of(CPUParticles3D_methods.set_gravity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_split_scale._get_split_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_split_scale", 2240911060, loc))
+  CPUParticles3D_methods.get_split_scale.m_call = cast(type_of(CPUParticles3D_methods.get_split_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_split_scale._set_split_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_split_scale", 2586408642, loc))
+  CPUParticles3D_methods.set_split_scale.m_call = cast(type_of(CPUParticles3D_methods.set_split_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_scale_curve_x._get_scale_curve_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_scale_curve_x", 2460114913, loc))
+  CPUParticles3D_methods.get_scale_curve_x.m_call = cast(type_of(CPUParticles3D_methods.get_scale_curve_x.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_scale_curve_x._set_scale_curve_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_scale_curve_x", 270443179, loc))
+  CPUParticles3D_methods.set_scale_curve_x.m_call = cast(type_of(CPUParticles3D_methods.set_scale_curve_x.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_scale_curve_y._get_scale_curve_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_scale_curve_y", 2460114913, loc))
+  CPUParticles3D_methods.get_scale_curve_y.m_call = cast(type_of(CPUParticles3D_methods.get_scale_curve_y.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_scale_curve_y._set_scale_curve_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_scale_curve_y", 270443179, loc))
+  CPUParticles3D_methods.set_scale_curve_y.m_call = cast(type_of(CPUParticles3D_methods.set_scale_curve_y.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.get_scale_curve_z._get_scale_curve_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "get_scale_curve_z", 2460114913, loc))
+  CPUParticles3D_methods.get_scale_curve_z.m_call = cast(type_of(CPUParticles3D_methods.get_scale_curve_z.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.set_scale_curve_z._set_scale_curve_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "set_scale_curve_z", 270443179, loc))
+  CPUParticles3D_methods.set_scale_curve_z.m_call = cast(type_of(CPUParticles3D_methods.set_scale_curve_z.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CPUParticles3D_methods.convert_from_particles._convert_from_particles = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CPUParticles3D, "convert_from_particles", 1078189570, loc))
+  CPUParticles3D_methods.convert_from_particles.m_call = cast(type_of(CPUParticles3D_methods.convert_from_particles.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 CPUParticles3D_init_props :: proc(CPUParticles3D_prop: ^CPUParticles3D_properties, loc:= #caller_location) {
 

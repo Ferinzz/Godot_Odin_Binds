@@ -7,26 +7,34 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 VisualShaderNodeParticleAccelerator :: ^GDW.Object
 
+
+VisualShaderNodeParticleAccelerator_Mode :: enum i64 {
+  MODE_LINEAR = 0,
+  MODE_RADIAL = 1,
+  MODE_TANGENTIAL = 2,
+  MODE_MAX = 3,
+};
 VisualShaderNodeParticleAccelerator_properties :: struct {
   mode_Int : struct {
   get_mode: proc "c" (p_base: VisualShaderNodeParticleAccelerator, r_value: ^GDW.Int),
   set_mode: proc "c" (p_base: VisualShaderNodeParticleAccelerator, p_value: ^GDW.Int),
   },
 };
-
-Mode_VisualShaderNodeParticleAccelerator :: enum i64 {
-  MODE_LINEAR = 0,
-  MODE_RADIAL = 1,
-  MODE_TANGENTIAL = 2,
-  MODE_MAX = 3,
-};
 VisualShaderNodeParticleAccelerator_MethodBind_List :: struct {
-  set_mode: ^GDW.MethodBind,
-  get_mode: ^GDW.MethodBind,
+  set_mode: struct{
+    using _set_mode: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleAccelerator, #by_ptr args: struct{mode: ^VisualShaderNodeParticleAccelerator_Mode, }, r_ret: rawptr = nil)
+  },
+    get_mode: struct{
+    using _get_mode: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleAccelerator, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeParticleAccelerator_Mode)
+  },
 };
 VisualShaderNodeParticleAccelerator_Init_ :: proc (VisualShaderNodeParticleAccelerator_methods: ^VisualShaderNodeParticleAccelerator_MethodBind_List, loc := #caller_location) {
-  VisualShaderNodeParticleAccelerator_methods.set_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeParticleAccelerator, "set_mode", 3457585749, loc))
-  VisualShaderNodeParticleAccelerator_methods.get_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeParticleAccelerator, "get_mode", 2660365633, loc))
+  VisualShaderNodeParticleAccelerator_methods.set_mode._set_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeParticleAccelerator, "set_mode", 3457585749, loc))
+  VisualShaderNodeParticleAccelerator_methods.set_mode.m_call = cast(type_of(VisualShaderNodeParticleAccelerator_methods.set_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeParticleAccelerator_methods.get_mode._get_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeParticleAccelerator, "get_mode", 2660365633, loc))
+  VisualShaderNodeParticleAccelerator_methods.get_mode.m_call = cast(type_of(VisualShaderNodeParticleAccelerator_methods.get_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 VisualShaderNodeParticleAccelerator_init_props :: proc(VisualShaderNodeParticleAccelerator_prop: ^VisualShaderNodeParticleAccelerator_properties, loc:= #caller_location) {
 

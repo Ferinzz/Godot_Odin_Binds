@@ -7,14 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 ResourceFormatLoader :: ^GDW.Object
 
-
-CacheMode_ResourceFormatLoader :: enum i64 {
-  CACHE_MODE_IGNORE = 0,
-  CACHE_MODE_REUSE = 1,
-  CACHE_MODE_REPLACE = 2,
-  CACHE_MODE_IGNORE_DEEP = 3,
-  CACHE_MODE_REPLACE_DEEP = 4,
-};
 ResourceFormatLoader_Virtual_Info :: struct {
 
     _get_recognized_extensions: Method_Callback_Compare_Info,
@@ -28,6 +20,14 @@ ResourceFormatLoader_Virtual_Info :: struct {
     _exists: Method_Callback_Compare_Info,
     _get_classes_used: Method_Callback_Compare_Info,
     _load: Method_Callback_Compare_Info,
+};
+
+ResourceFormatLoader_CacheMode :: enum i64 {
+  CACHE_MODE_IGNORE = 0,
+  CACHE_MODE_REUSE = 1,
+  CACHE_MODE_REPLACE = 2,
+  CACHE_MODE_IGNORE_DEEP = 3,
+  CACHE_MODE_REPLACE_DEEP = 4,
 };
 ResourceFormatLoader_MethodBind_List :: struct {
 };

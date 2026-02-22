@@ -16,10 +16,14 @@ EditorResourcePreviewGenerator_Virtual_Info :: struct {
     _can_generate_small_preview: Method_Callback_Compare_Info,
 };
 EditorResourcePreviewGenerator_MethodBind_List :: struct {
-  request_draw_and_wait: ^GDW.MethodBind,
-};
+  request_draw_and_wait: struct{
+    using _request_draw_and_wait: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePreviewGenerator, #by_ptr args: struct{viewport: ^GDW.RID, }, r_ret: rawptr = nil)
+  },
+  };
 EditorResourcePreviewGenerator_Init_ :: proc (EditorResourcePreviewGenerator_methods: ^EditorResourcePreviewGenerator_MethodBind_List, loc := #caller_location) {
-  EditorResourcePreviewGenerator_methods.request_draw_and_wait = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourcePreviewGenerator, "request_draw_and_wait", 145472570, loc))
+  EditorResourcePreviewGenerator_methods.request_draw_and_wait._request_draw_and_wait = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourcePreviewGenerator, "request_draw_and_wait", 145472570, loc))
+  EditorResourcePreviewGenerator_methods.request_draw_and_wait.m_call = cast(type_of(EditorResourcePreviewGenerator_methods.request_draw_and_wait.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 EditorResourcePreviewGenerator_Init_Virtuals_Info :: proc(info: ^EditorResourcePreviewGenerator_Virtual_Info) {

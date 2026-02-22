@@ -8,7 +8,7 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 SliderJoint3D :: ^GDW.Object
 
 
-Param_SliderJoint3D :: enum i64 {
+SliderJoint3D_Param :: enum i64 {
   PARAM_LINEAR_LIMIT_UPPER = 0,
   PARAM_LINEAR_LIMIT_LOWER = 1,
   PARAM_LINEAR_LIMIT_SOFTNESS = 2,
@@ -34,10 +34,18 @@ Param_SliderJoint3D :: enum i64 {
   PARAM_MAX = 22,
 };
 SliderJoint3D_MethodBind_List :: struct {
-  set_param: ^GDW.MethodBind,
-  get_param: ^GDW.MethodBind,
+  set_param: struct{
+    using _set_param: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: SliderJoint3D, #by_ptr args: struct{param: ^SliderJoint3D_Param, value: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_param: struct{
+    using _get_param: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: SliderJoint3D, #by_ptr args: struct{param: ^SliderJoint3D_Param, }, r_ret: ^GDW.float)
+  },
 };
 SliderJoint3D_Init_ :: proc (SliderJoint3D_methods: ^SliderJoint3D_MethodBind_List, loc := #caller_location) {
-  SliderJoint3D_methods.set_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SliderJoint3D, "set_param", 918243683, loc))
-  SliderJoint3D_methods.get_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SliderJoint3D, "get_param", 959925627, loc))
+  SliderJoint3D_methods.set_param._set_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SliderJoint3D, "set_param", 918243683, loc))
+  SliderJoint3D_methods.set_param.m_call = cast(type_of(SliderJoint3D_methods.set_param.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SliderJoint3D_methods.get_param._get_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SliderJoint3D, "get_param", 959925627, loc))
+  SliderJoint3D_methods.get_param.m_call = cast(type_of(SliderJoint3D_methods.get_param.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

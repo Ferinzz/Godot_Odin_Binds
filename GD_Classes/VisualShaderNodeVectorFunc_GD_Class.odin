@@ -7,14 +7,8 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 VisualShaderNodeVectorFunc :: ^GDW.Object
 
-VisualShaderNodeVectorFunc_properties :: struct {
-  function_Int : struct {
-  get_function: proc "c" (p_base: VisualShaderNodeVectorFunc, r_value: ^GDW.Int),
-  set_function: proc "c" (p_base: VisualShaderNodeVectorFunc, p_value: ^GDW.Int),
-  },
-};
 
-Function_VisualShaderNodeVectorFunc :: enum i64 {
+VisualShaderNodeVectorFunc_Function :: enum i64 {
   FUNC_NORMALIZE = 0,
   FUNC_SATURATE = 1,
   FUNC_NEGATE = 2,
@@ -50,13 +44,27 @@ Function_VisualShaderNodeVectorFunc :: enum i64 {
   FUNC_ONEMINUS = 32,
   FUNC_MAX = 33,
 };
+VisualShaderNodeVectorFunc_properties :: struct {
+  function_Int : struct {
+  get_function: proc "c" (p_base: VisualShaderNodeVectorFunc, r_value: ^GDW.Int),
+  set_function: proc "c" (p_base: VisualShaderNodeVectorFunc, p_value: ^GDW.Int),
+  },
+};
 VisualShaderNodeVectorFunc_MethodBind_List :: struct {
-  set_function: ^GDW.MethodBind,
-  get_function: ^GDW.MethodBind,
+  set_function: struct{
+    using _set_function: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVectorFunc, #by_ptr args: struct{func: ^VisualShaderNodeVectorFunc_Function, }, r_ret: rawptr = nil)
+  },
+    get_function: struct{
+    using _get_function: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVectorFunc, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeVectorFunc_Function)
+  },
 };
 VisualShaderNodeVectorFunc_Init_ :: proc (VisualShaderNodeVectorFunc_methods: ^VisualShaderNodeVectorFunc_MethodBind_List, loc := #caller_location) {
-  VisualShaderNodeVectorFunc_methods.set_function = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVectorFunc, "set_function", 629964457, loc))
-  VisualShaderNodeVectorFunc_methods.get_function = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVectorFunc, "get_function", 4047776843, loc))
+  VisualShaderNodeVectorFunc_methods.set_function._set_function = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVectorFunc, "set_function", 629964457, loc))
+  VisualShaderNodeVectorFunc_methods.set_function.m_call = cast(type_of(VisualShaderNodeVectorFunc_methods.set_function.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeVectorFunc_methods.get_function._get_function = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVectorFunc, "get_function", 4047776843, loc))
+  VisualShaderNodeVectorFunc_methods.get_function.m_call = cast(type_of(VisualShaderNodeVectorFunc_methods.get_function.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 VisualShaderNodeVectorFunc_init_props :: proc(VisualShaderNodeVectorFunc_prop: ^VisualShaderNodeVectorFunc_properties, loc:= #caller_location) {
 

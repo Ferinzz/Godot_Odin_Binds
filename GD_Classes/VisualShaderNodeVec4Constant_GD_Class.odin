@@ -18,12 +18,20 @@ VisualShaderNodeVec4Constant_properties :: struct {
   },
 };
 VisualShaderNodeVec4Constant_MethodBind_List :: struct {
-  set_constant: ^GDW.MethodBind,
-  get_constant: ^GDW.MethodBind,
+  set_constant: struct{
+    using _set_constant: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVec4Constant, #by_ptr args: struct{constant: ^GDW.Quaternion, }, r_ret: rawptr = nil)
+  },
+    get_constant: struct{
+    using _get_constant: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVec4Constant, #by_ptr args: i64 = 0, r_ret: ^GDW.Quaternion)
+  },
 };
 VisualShaderNodeVec4Constant_Init_ :: proc (VisualShaderNodeVec4Constant_methods: ^VisualShaderNodeVec4Constant_MethodBind_List, loc := #caller_location) {
-  VisualShaderNodeVec4Constant_methods.set_constant = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVec4Constant, "set_constant", 1727505552, loc))
-  VisualShaderNodeVec4Constant_methods.get_constant = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVec4Constant, "get_constant", 1222331677, loc))
+  VisualShaderNodeVec4Constant_methods.set_constant._set_constant = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVec4Constant, "set_constant", 1727505552, loc))
+  VisualShaderNodeVec4Constant_methods.set_constant.m_call = cast(type_of(VisualShaderNodeVec4Constant_methods.set_constant.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeVec4Constant_methods.get_constant._get_constant = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVec4Constant, "get_constant", 1222331677, loc))
+  VisualShaderNodeVec4Constant_methods.get_constant.m_call = cast(type_of(VisualShaderNodeVec4Constant_methods.get_constant.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 VisualShaderNodeVec4Constant_init_props :: proc(VisualShaderNodeVec4Constant_prop: ^VisualShaderNodeVec4Constant_properties, loc:= #caller_location) {
 

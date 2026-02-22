@@ -14,12 +14,20 @@ TextureLayeredRD_properties :: struct {
   },
 };
 TextureLayeredRD_MethodBind_List :: struct {
-  set_texture_rd_rid: ^GDW.MethodBind,
-  get_texture_rd_rid: ^GDW.MethodBind,
+  set_texture_rd_rid: struct{
+    using _set_texture_rd_rid: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: TextureLayeredRD, #by_ptr args: struct{texture_rd_rid: ^GDW.RID, }, r_ret: rawptr = nil)
+  },
+    get_texture_rd_rid: struct{
+    using _get_texture_rd_rid: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: TextureLayeredRD, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+  },
 };
 TextureLayeredRD_Init_ :: proc (TextureLayeredRD_methods: ^TextureLayeredRD_MethodBind_List, loc := #caller_location) {
-  TextureLayeredRD_methods.set_texture_rd_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayeredRD, "set_texture_rd_rid", 2722037293, loc))
-  TextureLayeredRD_methods.get_texture_rd_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayeredRD, "get_texture_rd_rid", 2944877500, loc))
+  TextureLayeredRD_methods.set_texture_rd_rid._set_texture_rd_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayeredRD, "set_texture_rd_rid", 2722037293, loc))
+  TextureLayeredRD_methods.set_texture_rd_rid.m_call = cast(type_of(TextureLayeredRD_methods.set_texture_rd_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureLayeredRD_methods.get_texture_rd_rid._get_texture_rd_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayeredRD, "get_texture_rd_rid", 2944877500, loc))
+  TextureLayeredRD_methods.get_texture_rd_rid.m_call = cast(type_of(TextureLayeredRD_methods.get_texture_rd_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 TextureLayeredRD_init_props :: proc(TextureLayeredRD_prop: ^TextureLayeredRD_properties, loc:= #caller_location) {
 

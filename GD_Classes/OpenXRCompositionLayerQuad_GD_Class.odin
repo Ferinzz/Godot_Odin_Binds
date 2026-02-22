@@ -14,12 +14,20 @@ OpenXRCompositionLayerQuad_properties :: struct {
   },
 };
 OpenXRCompositionLayerQuad_MethodBind_List :: struct {
-  set_quad_size: ^GDW.MethodBind,
-  get_quad_size: ^GDW.MethodBind,
+  set_quad_size: struct{
+    using _set_quad_size: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerQuad, #by_ptr args: struct{size: ^GDW.Vector2, }, r_ret: rawptr = nil)
+  },
+    get_quad_size: struct{
+    using _get_quad_size: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerQuad, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+  },
 };
 OpenXRCompositionLayerQuad_Init_ :: proc (OpenXRCompositionLayerQuad_methods: ^OpenXRCompositionLayerQuad_MethodBind_List, loc := #caller_location) {
-  OpenXRCompositionLayerQuad_methods.set_quad_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRCompositionLayerQuad, "set_quad_size", 743155724, loc))
-  OpenXRCompositionLayerQuad_methods.get_quad_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRCompositionLayerQuad, "get_quad_size", 3341600327, loc))
+  OpenXRCompositionLayerQuad_methods.set_quad_size._set_quad_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRCompositionLayerQuad, "set_quad_size", 743155724, loc))
+  OpenXRCompositionLayerQuad_methods.set_quad_size.m_call = cast(type_of(OpenXRCompositionLayerQuad_methods.set_quad_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRCompositionLayerQuad_methods.get_quad_size._get_quad_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRCompositionLayerQuad, "get_quad_size", 3341600327, loc))
+  OpenXRCompositionLayerQuad_methods.get_quad_size.m_call = cast(type_of(OpenXRCompositionLayerQuad_methods.get_quad_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 OpenXRCompositionLayerQuad_init_props :: proc(OpenXRCompositionLayerQuad_prop: ^OpenXRCompositionLayerQuad_properties, loc:= #caller_location) {
 

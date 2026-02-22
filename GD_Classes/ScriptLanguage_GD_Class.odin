@@ -8,7 +8,7 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 ScriptLanguage :: ^GDW.Object
 
 
-ScriptNameCasing_ScriptLanguage :: enum i64 {
+ScriptLanguage_ScriptNameCasing :: enum i64 {
   SCRIPT_NAME_CASING_AUTO = 0,
   SCRIPT_NAME_CASING_PASCAL_CASE = 1,
   SCRIPT_NAME_CASING_SNAKE_CASE = 2,

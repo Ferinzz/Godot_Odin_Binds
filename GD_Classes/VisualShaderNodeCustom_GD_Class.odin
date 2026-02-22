@@ -7,16 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 VisualShaderNodeCustom :: ^GDW.Object
 
-VisualShaderNodeCustom_properties :: struct {
-  initialized_Bool : struct {
-  _is_initialized: proc "c" (p_base: VisualShaderNodeCustom, r_value: ^GDW.Bool),
-  _set_initialized: proc "c" (p_base: VisualShaderNodeCustom, p_value: ^GDW.Bool),
-  },
-  properties_gdstring : struct {
-  _get_properties: proc "c" (p_base: VisualShaderNodeCustom, r_value: ^GDW.gdstring),
-  _set_properties: proc "c" (p_base: VisualShaderNodeCustom, p_value: ^GDW.gdstring),
-  },
-};
 VisualShaderNodeCustom_Virtual_Info :: struct {
 
     _get_name: Method_Callback_Compare_Info,
@@ -41,11 +31,25 @@ VisualShaderNodeCustom_Virtual_Info :: struct {
     _is_highend: Method_Callback_Compare_Info,
     _is_available: Method_Callback_Compare_Info,
 };
+VisualShaderNodeCustom_properties :: struct {
+  initialized_Bool : struct {
+  _is_initialized: proc "c" (p_base: VisualShaderNodeCustom, r_value: ^GDW.Bool),
+  _set_initialized: proc "c" (p_base: VisualShaderNodeCustom, p_value: ^GDW.Bool),
+  },
+  properties_gdstring : struct {
+  _get_properties: proc "c" (p_base: VisualShaderNodeCustom, r_value: ^GDW.gdstring),
+  _set_properties: proc "c" (p_base: VisualShaderNodeCustom, p_value: ^GDW.gdstring),
+  },
+};
 VisualShaderNodeCustom_MethodBind_List :: struct {
-  get_option_index: ^GDW.MethodBind,
+  get_option_index: struct{
+    using _get_option_index: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCustom, #by_ptr args: struct{option: ^GDW.Int, }, r_ret: ^GDW.Int)
+  },
 };
 VisualShaderNodeCustom_Init_ :: proc (VisualShaderNodeCustom_methods: ^VisualShaderNodeCustom_MethodBind_List, loc := #caller_location) {
-  VisualShaderNodeCustom_methods.get_option_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeCustom, "get_option_index", 923996154, loc))
+  VisualShaderNodeCustom_methods.get_option_index._get_option_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeCustom, "get_option_index", 923996154, loc))
+  VisualShaderNodeCustom_methods.get_option_index.m_call = cast(type_of(VisualShaderNodeCustom_methods.get_option_index.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 VisualShaderNodeCustom_Init_Virtuals_Info :: proc(info: ^VisualShaderNodeCustom_Virtual_Info) {

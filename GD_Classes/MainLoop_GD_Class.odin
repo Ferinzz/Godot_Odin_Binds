@@ -7,6 +7,13 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 MainLoop :: ^GDW.Object
 
+MainLoop_Virtual_Info :: struct {
+
+    _initialize: Method_Callback_Compare_Info,
+    _physics_process: Method_Callback_Compare_Info,
+    _process: Method_Callback_Compare_Info,
+    _finalize: Method_Callback_Compare_Info,
+};
 MainLoop_Constants :: enum i64 {
   NOTIFICATION_OS_MEMORY_WARNING= 2009,
   NOTIFICATION_TRANSLATION_CHANGED= 2010,
@@ -18,13 +25,6 @@ MainLoop_Constants :: enum i64 {
   NOTIFICATION_APPLICATION_FOCUS_IN= 2016,
   NOTIFICATION_APPLICATION_FOCUS_OUT= 2017,
   NOTIFICATION_TEXT_SERVER_CHANGED= 2018,
-};
-MainLoop_Virtual_Info :: struct {
-
-    _initialize: Method_Callback_Compare_Info,
-    _physics_process: Method_Callback_Compare_Info,
-    _process: Method_Callback_Compare_Info,
-    _finalize: Method_Callback_Compare_Info,
 };
 MainLoop_MethodBind_List :: struct {
 };

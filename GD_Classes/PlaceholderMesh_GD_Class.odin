@@ -14,10 +14,14 @@ PlaceholderMesh_properties :: struct {
   },
 };
 PlaceholderMesh_MethodBind_List :: struct {
-  set_aabb: ^GDW.MethodBind,
-};
+  set_aabb: struct{
+    using _set_aabb: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: PlaceholderMesh, #by_ptr args: struct{aabb: ^GDW.AABB, }, r_ret: rawptr = nil)
+  },
+  };
 PlaceholderMesh_Init_ :: proc (PlaceholderMesh_methods: ^PlaceholderMesh_MethodBind_List, loc := #caller_location) {
-  PlaceholderMesh_methods.set_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaceholderMesh, "set_aabb", 259215842, loc))
+  PlaceholderMesh_methods.set_aabb._set_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PlaceholderMesh, "set_aabb", 259215842, loc))
+  PlaceholderMesh_methods.set_aabb.m_call = cast(type_of(PlaceholderMesh_methods.set_aabb.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 PlaceholderMesh_init_props :: proc(PlaceholderMesh_prop: ^PlaceholderMesh_properties, loc:= #caller_location) {
 

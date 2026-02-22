@@ -7,6 +7,10 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 VisualInstance3D :: ^GDW.Object
 
+VisualInstance3D_Virtual_Info :: struct {
+
+    _get_aabb: Method_Callback_Compare_Info,
+};
 VisualInstance3D_properties :: struct {
   layers_Int : struct {
   get_layer_mask: proc "c" (p_base: VisualInstance3D, r_value: ^GDW.Int),
@@ -21,37 +25,81 @@ VisualInstance3D_properties :: struct {
   set_sorting_use_aabb_center: proc "c" (p_base: VisualInstance3D, p_value: ^GDW.Bool),
   },
 };
-VisualInstance3D_Virtual_Info :: struct {
-
-    _get_aabb: Method_Callback_Compare_Info,
-};
 VisualInstance3D_MethodBind_List :: struct {
-  set_base: ^GDW.MethodBind,
-  get_base: ^GDW.MethodBind,
-  get_instance: ^GDW.MethodBind,
-  set_layer_mask: ^GDW.MethodBind,
-  get_layer_mask: ^GDW.MethodBind,
-  set_layer_mask_value: ^GDW.MethodBind,
-  get_layer_mask_value: ^GDW.MethodBind,
-  set_sorting_offset: ^GDW.MethodBind,
-  get_sorting_offset: ^GDW.MethodBind,
-  set_sorting_use_aabb_center: ^GDW.MethodBind,
-  is_sorting_use_aabb_center: ^GDW.MethodBind,
-  get_aabb: ^GDW.MethodBind,
+  set_base: struct{
+    using _set_base: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: struct{base: ^GDW.RID, }, r_ret: rawptr = nil)
+  },
+    get_base: struct{
+    using _get_base: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+  },
+  get_instance: struct{
+    using _get_instance: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+  },
+  set_layer_mask: struct{
+    using _set_layer_mask: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: struct{mask: ^GDW.Int, }, r_ret: rawptr = nil)
+  },
+    get_layer_mask: struct{
+    using _get_layer_mask: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+  },
+  set_layer_mask_value: struct{
+    using _set_layer_mask_value: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: struct{layer_number: ^GDW.Int, value: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    get_layer_mask_value: struct{
+    using _get_layer_mask_value: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: struct{layer_number: ^GDW.Int, }, r_ret: ^GDW.Bool)
+  },
+  set_sorting_offset: struct{
+    using _set_sorting_offset: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: struct{offset: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_sorting_offset: struct{
+    using _get_sorting_offset: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+  },
+  set_sorting_use_aabb_center: struct{
+    using _set_sorting_use_aabb_center: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: struct{enabled: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    is_sorting_use_aabb_center: struct{
+    using _is_sorting_use_aabb_center: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+  },
+  get_aabb: struct{
+    using _get_aabb: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+  },
 };
 VisualInstance3D_Init_ :: proc (VisualInstance3D_methods: ^VisualInstance3D_MethodBind_List, loc := #caller_location) {
-  VisualInstance3D_methods.set_base = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_base", 2722037293, loc))
-  VisualInstance3D_methods.get_base = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_base", 2944877500, loc))
-  VisualInstance3D_methods.get_instance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_instance", 2944877500, loc))
-  VisualInstance3D_methods.set_layer_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_layer_mask", 1286410249, loc))
-  VisualInstance3D_methods.get_layer_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_layer_mask", 3905245786, loc))
-  VisualInstance3D_methods.set_layer_mask_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_layer_mask_value", 300928843, loc))
-  VisualInstance3D_methods.get_layer_mask_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_layer_mask_value", 1116898809, loc))
-  VisualInstance3D_methods.set_sorting_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_sorting_offset", 373806689, loc))
-  VisualInstance3D_methods.get_sorting_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_sorting_offset", 1740695150, loc))
-  VisualInstance3D_methods.set_sorting_use_aabb_center = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_sorting_use_aabb_center", 2586408642, loc))
-  VisualInstance3D_methods.is_sorting_use_aabb_center = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "is_sorting_use_aabb_center", 36873697, loc))
-  VisualInstance3D_methods.get_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_aabb", 1068685055, loc))
+  VisualInstance3D_methods.set_base._set_base = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_base", 2722037293, loc))
+  VisualInstance3D_methods.set_base.m_call = cast(type_of(VisualInstance3D_methods.set_base.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.get_base._get_base = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_base", 2944877500, loc))
+  VisualInstance3D_methods.get_base.m_call = cast(type_of(VisualInstance3D_methods.get_base.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.get_instance._get_instance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_instance", 2944877500, loc))
+  VisualInstance3D_methods.get_instance.m_call = cast(type_of(VisualInstance3D_methods.get_instance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.set_layer_mask._set_layer_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_layer_mask", 1286410249, loc))
+  VisualInstance3D_methods.set_layer_mask.m_call = cast(type_of(VisualInstance3D_methods.set_layer_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.get_layer_mask._get_layer_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_layer_mask", 3905245786, loc))
+  VisualInstance3D_methods.get_layer_mask.m_call = cast(type_of(VisualInstance3D_methods.get_layer_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.set_layer_mask_value._set_layer_mask_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_layer_mask_value", 300928843, loc))
+  VisualInstance3D_methods.set_layer_mask_value.m_call = cast(type_of(VisualInstance3D_methods.set_layer_mask_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.get_layer_mask_value._get_layer_mask_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_layer_mask_value", 1116898809, loc))
+  VisualInstance3D_methods.get_layer_mask_value.m_call = cast(type_of(VisualInstance3D_methods.get_layer_mask_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.set_sorting_offset._set_sorting_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_sorting_offset", 373806689, loc))
+  VisualInstance3D_methods.set_sorting_offset.m_call = cast(type_of(VisualInstance3D_methods.set_sorting_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.get_sorting_offset._get_sorting_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_sorting_offset", 1740695150, loc))
+  VisualInstance3D_methods.get_sorting_offset.m_call = cast(type_of(VisualInstance3D_methods.get_sorting_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.set_sorting_use_aabb_center._set_sorting_use_aabb_center = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "set_sorting_use_aabb_center", 2586408642, loc))
+  VisualInstance3D_methods.set_sorting_use_aabb_center.m_call = cast(type_of(VisualInstance3D_methods.set_sorting_use_aabb_center.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.is_sorting_use_aabb_center._is_sorting_use_aabb_center = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "is_sorting_use_aabb_center", 36873697, loc))
+  VisualInstance3D_methods.is_sorting_use_aabb_center.m_call = cast(type_of(VisualInstance3D_methods.is_sorting_use_aabb_center.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualInstance3D_methods.get_aabb._get_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualInstance3D, "get_aabb", 1068685055, loc))
+  VisualInstance3D_methods.get_aabb.m_call = cast(type_of(VisualInstance3D_methods.get_aabb.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 VisualInstance3D_Init_Virtuals_Info :: proc(info: ^VisualInstance3D_Virtual_Info) {

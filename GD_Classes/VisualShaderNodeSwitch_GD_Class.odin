@@ -7,14 +7,8 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 VisualShaderNodeSwitch :: ^GDW.Object
 
-VisualShaderNodeSwitch_properties :: struct {
-  op_type_Int : struct {
-  get_op_type: proc "c" (p_base: VisualShaderNodeSwitch, r_value: ^GDW.Int),
-  set_op_type: proc "c" (p_base: VisualShaderNodeSwitch, p_value: ^GDW.Int),
-  },
-};
 
-OpType_VisualShaderNodeSwitch :: enum i64 {
+VisualShaderNodeSwitch_OpType :: enum i64 {
   OP_TYPE_FLOAT = 0,
   OP_TYPE_INT = 1,
   OP_TYPE_UINT = 2,
@@ -25,13 +19,27 @@ OpType_VisualShaderNodeSwitch :: enum i64 {
   OP_TYPE_TRANSFORM = 7,
   OP_TYPE_MAX = 8,
 };
+VisualShaderNodeSwitch_properties :: struct {
+  op_type_Int : struct {
+  get_op_type: proc "c" (p_base: VisualShaderNodeSwitch, r_value: ^GDW.Int),
+  set_op_type: proc "c" (p_base: VisualShaderNodeSwitch, p_value: ^GDW.Int),
+  },
+};
 VisualShaderNodeSwitch_MethodBind_List :: struct {
-  set_op_type: ^GDW.MethodBind,
-  get_op_type: ^GDW.MethodBind,
+  set_op_type: struct{
+    using _set_op_type: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeSwitch, #by_ptr args: struct{type: ^VisualShaderNodeSwitch_OpType, }, r_ret: rawptr = nil)
+  },
+    get_op_type: struct{
+    using _get_op_type: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeSwitch, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeSwitch_OpType)
+  },
 };
 VisualShaderNodeSwitch_Init_ :: proc (VisualShaderNodeSwitch_methods: ^VisualShaderNodeSwitch_MethodBind_List, loc := #caller_location) {
-  VisualShaderNodeSwitch_methods.set_op_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeSwitch, "set_op_type", 510471861, loc))
-  VisualShaderNodeSwitch_methods.get_op_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeSwitch, "get_op_type", 2517845071, loc))
+  VisualShaderNodeSwitch_methods.set_op_type._set_op_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeSwitch, "set_op_type", 510471861, loc))
+  VisualShaderNodeSwitch_methods.set_op_type.m_call = cast(type_of(VisualShaderNodeSwitch_methods.set_op_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeSwitch_methods.get_op_type._get_op_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeSwitch, "get_op_type", 2517845071, loc))
+  VisualShaderNodeSwitch_methods.get_op_type.m_call = cast(type_of(VisualShaderNodeSwitch_methods.get_op_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 VisualShaderNodeSwitch_init_props :: proc(VisualShaderNodeSwitch_prop: ^VisualShaderNodeSwitch_properties, loc:= #caller_location) {
 

@@ -7,14 +7,14 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 ResourceImporter :: ^GDW.Object
 
-
-ImportOrder_ResourceImporter :: enum i64 {
-  IMPORT_ORDER_DEFAULT = 0,
-  IMPORT_ORDER_SCENE = 100,
-};
 ResourceImporter_Virtual_Info :: struct {
 
     _get_build_dependencies: Method_Callback_Compare_Info,
+};
+
+ResourceImporter_ImportOrder :: enum i64 {
+  IMPORT_ORDER_DEFAULT = 0,
+  IMPORT_ORDER_SCENE = 100,
 };
 ResourceImporter_MethodBind_List :: struct {
 };

@@ -17,10 +17,14 @@ MovieWriter_Virtual_Info :: struct {
     _write_end: Method_Callback_Compare_Info,
 };
 MovieWriter_MethodBind_List :: struct {
-  add_writer: ^GDW.MethodBind,
-};
+  add_writer: struct{
+    using _add_writer: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: MovieWriter, #by_ptr args: struct{writer: ^MovieWriter, }, r_ret: rawptr = nil)
+  },
+  };
 MovieWriter_Init_ :: proc (MovieWriter_methods: ^MovieWriter_MethodBind_List, loc := #caller_location) {
-  MovieWriter_methods.add_writer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.MovieWriter, "add_writer", 4023702871, loc))
+  MovieWriter_methods.add_writer._add_writer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.MovieWriter, "add_writer", 4023702871, loc))
+  MovieWriter_methods.add_writer.m_call = cast(type_of(MovieWriter_methods.add_writer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 MovieWriter_Init_Virtuals_Info :: proc(info: ^MovieWriter_Virtual_Info) {

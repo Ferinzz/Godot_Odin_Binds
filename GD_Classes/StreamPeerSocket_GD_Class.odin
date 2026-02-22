@@ -8,19 +8,31 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 StreamPeerSocket :: ^GDW.Object
 
 
-Status_StreamPeerSocket :: enum i64 {
+StreamPeerSocket_Status :: enum i64 {
   STATUS_NONE = 0,
   STATUS_CONNECTING = 1,
   STATUS_CONNECTED = 2,
   STATUS_ERROR = 3,
 };
 StreamPeerSocket_MethodBind_List :: struct {
-  poll: ^GDW.MethodBind,
-  get_status: ^GDW.MethodBind,
-  disconnect_from_host: ^GDW.MethodBind,
-};
+  poll: struct{
+    using _poll: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+  },
+  get_status: struct{
+    using _get_status: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, #by_ptr args: i64 = 0, r_ret: ^StreamPeerSocket_Status)
+  },
+  disconnect_from_host: struct{
+    using _disconnect_from_host: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+  },
+  };
 StreamPeerSocket_Init_ :: proc (StreamPeerSocket_methods: ^StreamPeerSocket_MethodBind_List, loc := #caller_location) {
-  StreamPeerSocket_methods.poll = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerSocket, "poll", 166280745, loc))
-  StreamPeerSocket_methods.get_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerSocket, "get_status", 1156122502, loc))
-  StreamPeerSocket_methods.disconnect_from_host = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerSocket, "disconnect_from_host", 3218959716, loc))
+  StreamPeerSocket_methods.poll._poll = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerSocket, "poll", 166280745, loc))
+  StreamPeerSocket_methods.poll.m_call = cast(type_of(StreamPeerSocket_methods.poll.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerSocket_methods.get_status._get_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerSocket, "get_status", 1156122502, loc))
+  StreamPeerSocket_methods.get_status.m_call = cast(type_of(StreamPeerSocket_methods.get_status.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerSocket_methods.disconnect_from_host._disconnect_from_host = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerSocket, "disconnect_from_host", 3218959716, loc))
+  StreamPeerSocket_methods.disconnect_from_host.m_call = cast(type_of(StreamPeerSocket_methods.disconnect_from_host.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

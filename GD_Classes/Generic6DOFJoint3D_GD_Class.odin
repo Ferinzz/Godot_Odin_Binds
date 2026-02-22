@@ -8,7 +8,7 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 Generic6DOFJoint3D :: ^GDW.Object
 
 
-Param_Generic6DOFJoint3D :: enum i64 {
+Generic6DOFJoint3D_Param :: enum i64 {
   PARAM_LINEAR_LOWER_LIMIT = 0,
   PARAM_LINEAR_UPPER_LIMIT = 1,
   PARAM_LINEAR_LIMIT_SOFTNESS = 2,
@@ -34,7 +34,7 @@ Param_Generic6DOFJoint3D :: enum i64 {
   PARAM_MAX = 22,
 };
 
-Flag_Generic6DOFJoint3D :: enum i64 {
+Generic6DOFJoint3D_Flag :: enum i64 {
   FLAG_ENABLE_LINEAR_LIMIT = 0,
   FLAG_ENABLE_ANGULAR_LIMIT = 1,
   FLAG_ENABLE_LINEAR_SPRING = 3,
@@ -44,30 +44,78 @@ Flag_Generic6DOFJoint3D :: enum i64 {
   FLAG_MAX = 6,
 };
 Generic6DOFJoint3D_MethodBind_List :: struct {
-  set_param_x: ^GDW.MethodBind,
-  get_param_x: ^GDW.MethodBind,
-  set_param_y: ^GDW.MethodBind,
-  get_param_y: ^GDW.MethodBind,
-  set_param_z: ^GDW.MethodBind,
-  get_param_z: ^GDW.MethodBind,
-  set_flag_x: ^GDW.MethodBind,
-  get_flag_x: ^GDW.MethodBind,
-  set_flag_y: ^GDW.MethodBind,
-  get_flag_y: ^GDW.MethodBind,
-  set_flag_z: ^GDW.MethodBind,
-  get_flag_z: ^GDW.MethodBind,
+  set_param_x: struct{
+    using _set_param_x: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{param: ^Generic6DOFJoint3D_Param, value: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_param_x: struct{
+    using _get_param_x: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{param: ^Generic6DOFJoint3D_Param, }, r_ret: ^GDW.float)
+  },
+  set_param_y: struct{
+    using _set_param_y: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{param: ^Generic6DOFJoint3D_Param, value: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_param_y: struct{
+    using _get_param_y: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{param: ^Generic6DOFJoint3D_Param, }, r_ret: ^GDW.float)
+  },
+  set_param_z: struct{
+    using _set_param_z: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{param: ^Generic6DOFJoint3D_Param, value: ^GDW.float, }, r_ret: rawptr = nil)
+  },
+    get_param_z: struct{
+    using _get_param_z: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{param: ^Generic6DOFJoint3D_Param, }, r_ret: ^GDW.float)
+  },
+  set_flag_x: struct{
+    using _set_flag_x: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{flag: ^Generic6DOFJoint3D_Flag, value: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    get_flag_x: struct{
+    using _get_flag_x: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{flag: ^Generic6DOFJoint3D_Flag, }, r_ret: ^GDW.Bool)
+  },
+  set_flag_y: struct{
+    using _set_flag_y: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{flag: ^Generic6DOFJoint3D_Flag, value: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    get_flag_y: struct{
+    using _get_flag_y: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{flag: ^Generic6DOFJoint3D_Flag, }, r_ret: ^GDW.Bool)
+  },
+  set_flag_z: struct{
+    using _set_flag_z: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{flag: ^Generic6DOFJoint3D_Flag, value: ^GDW.Bool, }, r_ret: rawptr = nil)
+  },
+    get_flag_z: struct{
+    using _get_flag_z: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: Generic6DOFJoint3D, #by_ptr args: struct{flag: ^Generic6DOFJoint3D_Flag, }, r_ret: ^GDW.Bool)
+  },
 };
 Generic6DOFJoint3D_Init_ :: proc (Generic6DOFJoint3D_methods: ^Generic6DOFJoint3D_MethodBind_List, loc := #caller_location) {
-  Generic6DOFJoint3D_methods.set_param_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_param_x", 2018184242, loc))
-  Generic6DOFJoint3D_methods.get_param_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_param_x", 2599835054, loc))
-  Generic6DOFJoint3D_methods.set_param_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_param_y", 2018184242, loc))
-  Generic6DOFJoint3D_methods.get_param_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_param_y", 2599835054, loc))
-  Generic6DOFJoint3D_methods.set_param_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_param_z", 2018184242, loc))
-  Generic6DOFJoint3D_methods.get_param_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_param_z", 2599835054, loc))
-  Generic6DOFJoint3D_methods.set_flag_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_flag_x", 2451594564, loc))
-  Generic6DOFJoint3D_methods.get_flag_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_flag_x", 2122427807, loc))
-  Generic6DOFJoint3D_methods.set_flag_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_flag_y", 2451594564, loc))
-  Generic6DOFJoint3D_methods.get_flag_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_flag_y", 2122427807, loc))
-  Generic6DOFJoint3D_methods.set_flag_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_flag_z", 2451594564, loc))
-  Generic6DOFJoint3D_methods.get_flag_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_flag_z", 2122427807, loc))
+  Generic6DOFJoint3D_methods.set_param_x._set_param_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_param_x", 2018184242, loc))
+  Generic6DOFJoint3D_methods.set_param_x.m_call = cast(type_of(Generic6DOFJoint3D_methods.set_param_x.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.get_param_x._get_param_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_param_x", 2599835054, loc))
+  Generic6DOFJoint3D_methods.get_param_x.m_call = cast(type_of(Generic6DOFJoint3D_methods.get_param_x.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.set_param_y._set_param_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_param_y", 2018184242, loc))
+  Generic6DOFJoint3D_methods.set_param_y.m_call = cast(type_of(Generic6DOFJoint3D_methods.set_param_y.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.get_param_y._get_param_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_param_y", 2599835054, loc))
+  Generic6DOFJoint3D_methods.get_param_y.m_call = cast(type_of(Generic6DOFJoint3D_methods.get_param_y.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.set_param_z._set_param_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_param_z", 2018184242, loc))
+  Generic6DOFJoint3D_methods.set_param_z.m_call = cast(type_of(Generic6DOFJoint3D_methods.set_param_z.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.get_param_z._get_param_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_param_z", 2599835054, loc))
+  Generic6DOFJoint3D_methods.get_param_z.m_call = cast(type_of(Generic6DOFJoint3D_methods.get_param_z.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.set_flag_x._set_flag_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_flag_x", 2451594564, loc))
+  Generic6DOFJoint3D_methods.set_flag_x.m_call = cast(type_of(Generic6DOFJoint3D_methods.set_flag_x.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.get_flag_x._get_flag_x = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_flag_x", 2122427807, loc))
+  Generic6DOFJoint3D_methods.get_flag_x.m_call = cast(type_of(Generic6DOFJoint3D_methods.get_flag_x.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.set_flag_y._set_flag_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_flag_y", 2451594564, loc))
+  Generic6DOFJoint3D_methods.set_flag_y.m_call = cast(type_of(Generic6DOFJoint3D_methods.set_flag_y.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.get_flag_y._get_flag_y = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_flag_y", 2122427807, loc))
+  Generic6DOFJoint3D_methods.get_flag_y.m_call = cast(type_of(Generic6DOFJoint3D_methods.get_flag_y.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.set_flag_z._set_flag_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "set_flag_z", 2451594564, loc))
+  Generic6DOFJoint3D_methods.set_flag_z.m_call = cast(type_of(Generic6DOFJoint3D_methods.set_flag_z.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Generic6DOFJoint3D_methods.get_flag_z._get_flag_z = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Generic6DOFJoint3D, "get_flag_z", 2122427807, loc))
+  Generic6DOFJoint3D_methods.get_flag_z.m_call = cast(type_of(Generic6DOFJoint3D_methods.get_flag_z.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

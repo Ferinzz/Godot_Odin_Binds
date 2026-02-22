@@ -7,17 +7,17 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 Logger :: ^GDW.Object
 
-
-ErrorType_Logger :: enum i64 {
-  ERROR_TYPE_ERROR = 0,
-  ERROR_TYPE_WARNING = 1,
-  ERROR_TYPE_SCRIPT = 2,
-  ERROR_TYPE_SHADER = 3,
-};
 Logger_Virtual_Info :: struct {
 
     _log_error: Method_Callback_Compare_Info,
     _log_message: Method_Callback_Compare_Info,
+};
+
+Logger_ErrorType :: enum i64 {
+  ERROR_TYPE_ERROR = 0,
+  ERROR_TYPE_WARNING = 1,
+  ERROR_TYPE_SCRIPT = 2,
+  ERROR_TYPE_SHADER = 3,
 };
 Logger_MethodBind_List :: struct {
 };

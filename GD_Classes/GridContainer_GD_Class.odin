@@ -14,12 +14,20 @@ GridContainer_properties :: struct {
   },
 };
 GridContainer_MethodBind_List :: struct {
-  set_columns: ^GDW.MethodBind,
-  get_columns: ^GDW.MethodBind,
+  set_columns: struct{
+    using _set_columns: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: GridContainer, #by_ptr args: struct{columns: ^GDW.Int, }, r_ret: rawptr = nil)
+  },
+    get_columns: struct{
+    using _get_columns: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: GridContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+  },
 };
 GridContainer_Init_ :: proc (GridContainer_methods: ^GridContainer_MethodBind_List, loc := #caller_location) {
-  GridContainer_methods.set_columns = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GridContainer, "set_columns", 1286410249, loc))
-  GridContainer_methods.get_columns = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GridContainer, "get_columns", 3905245786, loc))
+  GridContainer_methods.set_columns._set_columns = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GridContainer, "set_columns", 1286410249, loc))
+  GridContainer_methods.set_columns.m_call = cast(type_of(GridContainer_methods.set_columns.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GridContainer_methods.get_columns._get_columns = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GridContainer, "get_columns", 3905245786, loc))
+  GridContainer_methods.get_columns.m_call = cast(type_of(GridContainer_methods.get_columns.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 GridContainer_init_props :: proc(GridContainer_prop: ^GridContainer_properties, loc:= #caller_location) {
 

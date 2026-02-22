@@ -24,10 +24,14 @@ VideoStreamPlayback_Virtual_Info :: struct {
     _get_mix_rate: Method_Callback_Compare_Info,
 };
 VideoStreamPlayback_MethodBind_List :: struct {
-  mix_audio: ^GDW.MethodBind,
+  mix_audio: struct{
+    using _mix_audio: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayback, #by_ptr args: struct{num_frames: ^GDW.Int, buffer: ^GDW.PackedFloat32Array, offset: ^GDW.Int, }, r_ret: ^GDW.Int)
+  },
 };
 VideoStreamPlayback_Init_ :: proc (VideoStreamPlayback_methods: ^VideoStreamPlayback_MethodBind_List, loc := #caller_location) {
-  VideoStreamPlayback_methods.mix_audio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VideoStreamPlayback, "mix_audio", 93876830, loc))
+  VideoStreamPlayback_methods.mix_audio._mix_audio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VideoStreamPlayback, "mix_audio", 93876830, loc))
+  VideoStreamPlayback_methods.mix_audio.m_call = cast(type_of(VideoStreamPlayback_methods.mix_audio.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 VideoStreamPlayback_Init_Virtuals_Info :: proc(info: ^VideoStreamPlayback_Virtual_Info) {

@@ -7,27 +7,35 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 VisualShaderNodeTransformVecMult :: ^GDW.Object
 
-VisualShaderNodeTransformVecMult_properties :: struct {
-  operator_Int : struct {
-  get_operator: proc "c" (p_base: VisualShaderNodeTransformVecMult, r_value: ^GDW.Int),
-  set_operator: proc "c" (p_base: VisualShaderNodeTransformVecMult, p_value: ^GDW.Int),
-  },
-};
 
-Operator_VisualShaderNodeTransformVecMult :: enum i64 {
+VisualShaderNodeTransformVecMult_Operator :: enum i64 {
   OP_AxB = 0,
   OP_BxA = 1,
   OP_3x3_AxB = 2,
   OP_3x3_BxA = 3,
   OP_MAX = 4,
 };
+VisualShaderNodeTransformVecMult_properties :: struct {
+  operator_Int : struct {
+  get_operator: proc "c" (p_base: VisualShaderNodeTransformVecMult, r_value: ^GDW.Int),
+  set_operator: proc "c" (p_base: VisualShaderNodeTransformVecMult, p_value: ^GDW.Int),
+  },
+};
 VisualShaderNodeTransformVecMult_MethodBind_List :: struct {
-  set_operator: ^GDW.MethodBind,
-  get_operator: ^GDW.MethodBind,
+  set_operator: struct{
+    using _set_operator: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTransformVecMult, #by_ptr args: struct{op: ^VisualShaderNodeTransformVecMult_Operator, }, r_ret: rawptr = nil)
+  },
+    get_operator: struct{
+    using _get_operator: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTransformVecMult, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeTransformVecMult_Operator)
+  },
 };
 VisualShaderNodeTransformVecMult_Init_ :: proc (VisualShaderNodeTransformVecMult_methods: ^VisualShaderNodeTransformVecMult_MethodBind_List, loc := #caller_location) {
-  VisualShaderNodeTransformVecMult_methods.set_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeTransformVecMult, "set_operator", 1785665912, loc))
-  VisualShaderNodeTransformVecMult_methods.get_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeTransformVecMult, "get_operator", 1622088722, loc))
+  VisualShaderNodeTransformVecMult_methods.set_operator._set_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeTransformVecMult, "set_operator", 1785665912, loc))
+  VisualShaderNodeTransformVecMult_methods.set_operator.m_call = cast(type_of(VisualShaderNodeTransformVecMult_methods.set_operator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeTransformVecMult_methods.get_operator._get_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeTransformVecMult, "get_operator", 1622088722, loc))
+  VisualShaderNodeTransformVecMult_methods.get_operator.m_call = cast(type_of(VisualShaderNodeTransformVecMult_methods.get_operator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 VisualShaderNodeTransformVecMult_init_props :: proc(VisualShaderNodeTransformVecMult_prop: ^VisualShaderNodeTransformVecMult_properties, loc:= #caller_location) {
 

@@ -14,10 +14,14 @@ OpenXRSpatialComponentData_Virtual_Info :: struct {
     _get_structure_data: Method_Callback_Compare_Info,
 };
 OpenXRSpatialComponentData_MethodBind_List :: struct {
-  set_capacity: ^GDW.MethodBind,
-};
+  set_capacity: struct{
+    using _set_capacity: ^GDW.MethodBind,
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialComponentData, #by_ptr args: struct{capacity: ^GDW.Int, }, r_ret: rawptr = nil)
+  },
+  };
 OpenXRSpatialComponentData_Init_ :: proc (OpenXRSpatialComponentData_methods: ^OpenXRSpatialComponentData_MethodBind_List, loc := #caller_location) {
-  OpenXRSpatialComponentData_methods.set_capacity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentData, "set_capacity", 1286410249, loc))
+  OpenXRSpatialComponentData_methods.set_capacity._set_capacity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentData, "set_capacity", 1286410249, loc))
+  OpenXRSpatialComponentData_methods.set_capacity.m_call = cast(type_of(OpenXRSpatialComponentData_methods.set_capacity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 OpenXRSpatialComponentData_Init_Virtuals_Info :: proc(info: ^OpenXRSpatialComponentData_Virtual_Info) {
