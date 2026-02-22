@@ -14,6 +14,7 @@ OpenXRSpatialComponentAnchorList_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialComponentAnchorList_Init_ :: proc (OpenXRSpatialComponentAnchorList_methods: ^OpenXRSpatialComponentAnchorList_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialComponentAnchorList_methods.get_entity_pose._get_entity_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentAnchorList, "get_entity_pose", 1965739696, loc))
-  OpenXRSpatialComponentAnchorList_methods.get_entity_pose.m_call = cast(type_of(OpenXRSpatialComponentAnchorList_methods.get_entity_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentAnchorList_methods.get_entity_pose.m_call = cast(type_of(OpenXRSpatialComponentAnchorList_methods.get_entity_pose.m_call))MB_ptr_call
 };

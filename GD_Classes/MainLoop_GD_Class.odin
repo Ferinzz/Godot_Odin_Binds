@@ -29,6 +29,7 @@ MainLoop_Constants :: enum i64 {
 MainLoop_MethodBind_List :: struct {
 };
 MainLoop_Init_ :: proc (MainLoop_methods: ^MainLoop_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 MainLoop_Init_Virtuals_Info :: proc(info: ^MainLoop_Virtual_Info) {

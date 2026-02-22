@@ -31,16 +31,6 @@ VisualShaderNodeCustom_Virtual_Info :: struct {
     _is_highend: Method_Callback_Compare_Info,
     _is_available: Method_Callback_Compare_Info,
 };
-VisualShaderNodeCustom_properties :: struct {
-  initialized_Bool : struct {
-  _is_initialized: proc "c" (p_base: VisualShaderNodeCustom, r_value: ^GDW.Bool),
-  _set_initialized: proc "c" (p_base: VisualShaderNodeCustom, p_value: ^GDW.Bool),
-  },
-  properties_gdstring : struct {
-  _get_properties: proc "c" (p_base: VisualShaderNodeCustom, r_value: ^GDW.gdstring),
-  _set_properties: proc "c" (p_base: VisualShaderNodeCustom, p_value: ^GDW.gdstring),
-  },
-};
 VisualShaderNodeCustom_MethodBind_List :: struct {
   get_option_index: struct{
     using _get_option_index: ^GDW.MethodBind,
@@ -48,8 +38,9 @@ VisualShaderNodeCustom_MethodBind_List :: struct {
   },
 };
 VisualShaderNodeCustom_Init_ :: proc (VisualShaderNodeCustom_methods: ^VisualShaderNodeCustom_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   VisualShaderNodeCustom_methods.get_option_index._get_option_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeCustom, "get_option_index", 923996154, loc))
-  VisualShaderNodeCustom_methods.get_option_index.m_call = cast(type_of(VisualShaderNodeCustom_methods.get_option_index.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeCustom_methods.get_option_index.m_call = cast(type_of(VisualShaderNodeCustom_methods.get_option_index.m_call))MB_ptr_call
 };
 
 VisualShaderNodeCustom_Init_Virtuals_Info :: proc(info: ^VisualShaderNodeCustom_Virtual_Info) {
@@ -95,12 +86,4 @@ VisualShaderNodeCustom_Init_Virtuals_Info :: proc(info: ^VisualShaderNodeCustom_
     info._is_highend.name = GDW.StringConstruct("_is_highend")
     info._is_available.p_hash = 1932120545
     info._is_available.name = GDW.StringConstruct("_is_available")
-};
-VisualShaderNodeCustom_init_props :: proc(VisualShaderNodeCustom_prop: ^VisualShaderNodeCustom_properties, loc:= #caller_location) {
-
-  VisualShaderNodeCustom_prop.initialized_Bool._is_initialized = cast(proc "c" (p_base: VisualShaderNodeCustom, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "_is_initialized")
-  VisualShaderNodeCustom_prop.initialized_Bool._set_initialized = cast(proc "c" (p_base: VisualShaderNodeCustom, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "_set_initialized")
-
-  VisualShaderNodeCustom_prop.properties_gdstring._get_properties = cast(proc "c" (p_base: VisualShaderNodeCustom, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "_get_properties")
-  VisualShaderNodeCustom_prop.properties_gdstring._set_properties = cast(proc "c" (p_base: VisualShaderNodeCustom, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "_set_properties")
 };

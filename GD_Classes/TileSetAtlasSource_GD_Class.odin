@@ -18,28 +18,6 @@ TileSetAtlasSource_Constants :: enum i64 {
   TRANSFORM_FLIP_V= 8192,
   TRANSFORM_TRANSPOSE= 16384,
 };
-TileSetAtlasSource_properties :: struct {
-  texture_Texture2D : struct {
-    get_texture: proc "c" (p_base: TileSetAtlasSource, r_value: ^Texture2D),
-    set_texture: proc "c" (p_base: TileSetAtlasSource, p_value: ^Texture2D),
-  },
-  margins_Vector2i : struct {
-  get_margins: proc "c" (p_base: TileSetAtlasSource, r_value: ^GDW.Vector2i),
-  set_margins: proc "c" (p_base: TileSetAtlasSource, p_value: ^GDW.Vector2i),
-  },
-  separation_Vector2i : struct {
-  get_separation: proc "c" (p_base: TileSetAtlasSource, r_value: ^GDW.Vector2i),
-  set_separation: proc "c" (p_base: TileSetAtlasSource, p_value: ^GDW.Vector2i),
-  },
-  texture_region_size_Vector2i : struct {
-  get_texture_region_size: proc "c" (p_base: TileSetAtlasSource, r_value: ^GDW.Vector2i),
-  set_texture_region_size: proc "c" (p_base: TileSetAtlasSource, p_value: ^GDW.Vector2i),
-  },
-  use_texture_padding_Bool : struct {
-  get_use_texture_padding: proc "c" (p_base: TileSetAtlasSource, r_value: ^GDW.Bool),
-  set_use_texture_padding: proc "c" (p_base: TileSetAtlasSource, p_value: ^GDW.Bool),
-  },
-};
 TileSetAtlasSource_MethodBind_List :: struct {
   set_texture: struct{
     using _set_texture: ^GDW.MethodBind,
@@ -207,103 +185,87 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
 };
 TileSetAtlasSource_Init_ :: proc (TileSetAtlasSource_methods: ^TileSetAtlasSource_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   TileSetAtlasSource_methods.set_texture._set_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_texture", 4051416890, loc))
-  TileSetAtlasSource_methods.set_texture.m_call = cast(type_of(TileSetAtlasSource_methods.set_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_texture.m_call = cast(type_of(TileSetAtlasSource_methods.set_texture.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_texture._get_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_texture", 3635182373, loc))
-  TileSetAtlasSource_methods.get_texture.m_call = cast(type_of(TileSetAtlasSource_methods.get_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_texture.m_call = cast(type_of(TileSetAtlasSource_methods.get_texture.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_margins._set_margins = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_margins", 1130785943, loc))
-  TileSetAtlasSource_methods.set_margins.m_call = cast(type_of(TileSetAtlasSource_methods.set_margins.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_margins.m_call = cast(type_of(TileSetAtlasSource_methods.set_margins.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_margins._get_margins = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_margins", 3690982128, loc))
-  TileSetAtlasSource_methods.get_margins.m_call = cast(type_of(TileSetAtlasSource_methods.get_margins.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_margins.m_call = cast(type_of(TileSetAtlasSource_methods.get_margins.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_separation._set_separation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_separation", 1130785943, loc))
-  TileSetAtlasSource_methods.set_separation.m_call = cast(type_of(TileSetAtlasSource_methods.set_separation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_separation.m_call = cast(type_of(TileSetAtlasSource_methods.set_separation.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_separation._get_separation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_separation", 3690982128, loc))
-  TileSetAtlasSource_methods.get_separation.m_call = cast(type_of(TileSetAtlasSource_methods.get_separation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_separation.m_call = cast(type_of(TileSetAtlasSource_methods.get_separation.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_texture_region_size._set_texture_region_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_texture_region_size", 1130785943, loc))
-  TileSetAtlasSource_methods.set_texture_region_size.m_call = cast(type_of(TileSetAtlasSource_methods.set_texture_region_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_texture_region_size.m_call = cast(type_of(TileSetAtlasSource_methods.set_texture_region_size.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_texture_region_size._get_texture_region_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_texture_region_size", 3690982128, loc))
-  TileSetAtlasSource_methods.get_texture_region_size.m_call = cast(type_of(TileSetAtlasSource_methods.get_texture_region_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_texture_region_size.m_call = cast(type_of(TileSetAtlasSource_methods.get_texture_region_size.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_use_texture_padding._set_use_texture_padding = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_use_texture_padding", 2586408642, loc))
-  TileSetAtlasSource_methods.set_use_texture_padding.m_call = cast(type_of(TileSetAtlasSource_methods.set_use_texture_padding.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_use_texture_padding.m_call = cast(type_of(TileSetAtlasSource_methods.set_use_texture_padding.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_use_texture_padding._get_use_texture_padding = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_use_texture_padding", 36873697, loc))
-  TileSetAtlasSource_methods.get_use_texture_padding.m_call = cast(type_of(TileSetAtlasSource_methods.get_use_texture_padding.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_use_texture_padding.m_call = cast(type_of(TileSetAtlasSource_methods.get_use_texture_padding.m_call))MB_ptr_call
   TileSetAtlasSource_methods.create_tile._create_tile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "create_tile", 190528769, loc))
-  TileSetAtlasSource_methods.create_tile.m_call = cast(type_of(TileSetAtlasSource_methods.create_tile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.create_tile.m_call = cast(type_of(TileSetAtlasSource_methods.create_tile.m_call))MB_ptr_call
   TileSetAtlasSource_methods.remove_tile._remove_tile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "remove_tile", 1130785943, loc))
-  TileSetAtlasSource_methods.remove_tile.m_call = cast(type_of(TileSetAtlasSource_methods.remove_tile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.remove_tile.m_call = cast(type_of(TileSetAtlasSource_methods.remove_tile.m_call))MB_ptr_call
   TileSetAtlasSource_methods.move_tile_in_atlas._move_tile_in_atlas = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "move_tile_in_atlas", 3870111920, loc))
-  TileSetAtlasSource_methods.move_tile_in_atlas.m_call = cast(type_of(TileSetAtlasSource_methods.move_tile_in_atlas.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.move_tile_in_atlas.m_call = cast(type_of(TileSetAtlasSource_methods.move_tile_in_atlas.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_size_in_atlas._get_tile_size_in_atlas = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_size_in_atlas", 3050897911, loc))
-  TileSetAtlasSource_methods.get_tile_size_in_atlas.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_size_in_atlas.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_size_in_atlas.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_size_in_atlas.m_call))MB_ptr_call
   TileSetAtlasSource_methods.has_room_for_tile._has_room_for_tile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "has_room_for_tile", 3018597268, loc))
-  TileSetAtlasSource_methods.has_room_for_tile.m_call = cast(type_of(TileSetAtlasSource_methods.has_room_for_tile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.has_room_for_tile.m_call = cast(type_of(TileSetAtlasSource_methods.has_room_for_tile.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tiles_to_be_removed_on_change._get_tiles_to_be_removed_on_change = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tiles_to_be_removed_on_change", 1240378054, loc))
-  TileSetAtlasSource_methods.get_tiles_to_be_removed_on_change.m_call = cast(type_of(TileSetAtlasSource_methods.get_tiles_to_be_removed_on_change.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tiles_to_be_removed_on_change.m_call = cast(type_of(TileSetAtlasSource_methods.get_tiles_to_be_removed_on_change.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_at_coords._get_tile_at_coords = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_at_coords", 3050897911, loc))
-  TileSetAtlasSource_methods.get_tile_at_coords.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_at_coords.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_at_coords.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_at_coords.m_call))MB_ptr_call
   TileSetAtlasSource_methods.has_tiles_outside_texture._has_tiles_outside_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "has_tiles_outside_texture", 36873697, loc))
-  TileSetAtlasSource_methods.has_tiles_outside_texture.m_call = cast(type_of(TileSetAtlasSource_methods.has_tiles_outside_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.has_tiles_outside_texture.m_call = cast(type_of(TileSetAtlasSource_methods.has_tiles_outside_texture.m_call))MB_ptr_call
   TileSetAtlasSource_methods.clear_tiles_outside_texture._clear_tiles_outside_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "clear_tiles_outside_texture", 3218959716, loc))
-  TileSetAtlasSource_methods.clear_tiles_outside_texture.m_call = cast(type_of(TileSetAtlasSource_methods.clear_tiles_outside_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.clear_tiles_outside_texture.m_call = cast(type_of(TileSetAtlasSource_methods.clear_tiles_outside_texture.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_tile_animation_columns._set_tile_animation_columns = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_tile_animation_columns", 3200960707, loc))
-  TileSetAtlasSource_methods.set_tile_animation_columns.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_columns.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_tile_animation_columns.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_columns.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_animation_columns._get_tile_animation_columns = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_animation_columns", 2485466453, loc))
-  TileSetAtlasSource_methods.get_tile_animation_columns.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_columns.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_animation_columns.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_columns.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_tile_animation_separation._set_tile_animation_separation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_tile_animation_separation", 1941061099, loc))
-  TileSetAtlasSource_methods.set_tile_animation_separation.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_separation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_tile_animation_separation.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_separation.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_animation_separation._get_tile_animation_separation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_animation_separation", 3050897911, loc))
-  TileSetAtlasSource_methods.get_tile_animation_separation.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_separation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_animation_separation.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_separation.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_tile_animation_speed._set_tile_animation_speed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_tile_animation_speed", 2262553149, loc))
-  TileSetAtlasSource_methods.set_tile_animation_speed.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_speed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_tile_animation_speed.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_speed.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_animation_speed._get_tile_animation_speed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_animation_speed", 719993801, loc))
-  TileSetAtlasSource_methods.get_tile_animation_speed.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_speed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_animation_speed.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_speed.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_tile_animation_mode._set_tile_animation_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_tile_animation_mode", 3192753483, loc))
-  TileSetAtlasSource_methods.set_tile_animation_mode.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_tile_animation_mode.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_mode.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_animation_mode._get_tile_animation_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_animation_mode", 4025349959, loc))
-  TileSetAtlasSource_methods.get_tile_animation_mode.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_animation_mode.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_mode.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_tile_animation_frames_count._set_tile_animation_frames_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_tile_animation_frames_count", 3200960707, loc))
-  TileSetAtlasSource_methods.set_tile_animation_frames_count.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_frames_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_tile_animation_frames_count.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_frames_count.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_animation_frames_count._get_tile_animation_frames_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_animation_frames_count", 2485466453, loc))
-  TileSetAtlasSource_methods.get_tile_animation_frames_count.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_frames_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_animation_frames_count.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_frames_count.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_tile_animation_frame_duration._set_tile_animation_frame_duration = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_tile_animation_frame_duration", 2843487787, loc))
-  TileSetAtlasSource_methods.set_tile_animation_frame_duration.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_frame_duration.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_tile_animation_frame_duration.m_call = cast(type_of(TileSetAtlasSource_methods.set_tile_animation_frame_duration.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_animation_frame_duration._get_tile_animation_frame_duration = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_animation_frame_duration", 1802448425, loc))
-  TileSetAtlasSource_methods.get_tile_animation_frame_duration.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_frame_duration.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_animation_frame_duration.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_frame_duration.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_animation_total_duration._get_tile_animation_total_duration = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_animation_total_duration", 719993801, loc))
-  TileSetAtlasSource_methods.get_tile_animation_total_duration.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_total_duration.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_animation_total_duration.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_animation_total_duration.m_call))MB_ptr_call
   TileSetAtlasSource_methods.create_alternative_tile._create_alternative_tile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "create_alternative_tile", 2226298068, loc))
-  TileSetAtlasSource_methods.create_alternative_tile.m_call = cast(type_of(TileSetAtlasSource_methods.create_alternative_tile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.create_alternative_tile.m_call = cast(type_of(TileSetAtlasSource_methods.create_alternative_tile.m_call))MB_ptr_call
   TileSetAtlasSource_methods.remove_alternative_tile._remove_alternative_tile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "remove_alternative_tile", 3200960707, loc))
-  TileSetAtlasSource_methods.remove_alternative_tile.m_call = cast(type_of(TileSetAtlasSource_methods.remove_alternative_tile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.remove_alternative_tile.m_call = cast(type_of(TileSetAtlasSource_methods.remove_alternative_tile.m_call))MB_ptr_call
   TileSetAtlasSource_methods.set_alternative_tile_id._set_alternative_tile_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "set_alternative_tile_id", 1499785778, loc))
-  TileSetAtlasSource_methods.set_alternative_tile_id.m_call = cast(type_of(TileSetAtlasSource_methods.set_alternative_tile_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.set_alternative_tile_id.m_call = cast(type_of(TileSetAtlasSource_methods.set_alternative_tile_id.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_next_alternative_tile_id._get_next_alternative_tile_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_next_alternative_tile_id", 2485466453, loc))
-  TileSetAtlasSource_methods.get_next_alternative_tile_id.m_call = cast(type_of(TileSetAtlasSource_methods.get_next_alternative_tile_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_next_alternative_tile_id.m_call = cast(type_of(TileSetAtlasSource_methods.get_next_alternative_tile_id.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_data._get_tile_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_data", 3534028207, loc))
-  TileSetAtlasSource_methods.get_tile_data.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_data.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_data.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_data.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_atlas_grid_size._get_atlas_grid_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_atlas_grid_size", 3690982128, loc))
-  TileSetAtlasSource_methods.get_atlas_grid_size.m_call = cast(type_of(TileSetAtlasSource_methods.get_atlas_grid_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_atlas_grid_size.m_call = cast(type_of(TileSetAtlasSource_methods.get_atlas_grid_size.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_tile_texture_region._get_tile_texture_region = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_tile_texture_region", 241857547, loc))
-  TileSetAtlasSource_methods.get_tile_texture_region.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_texture_region.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_tile_texture_region.m_call = cast(type_of(TileSetAtlasSource_methods.get_tile_texture_region.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_runtime_texture._get_runtime_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_runtime_texture", 3635182373, loc))
-  TileSetAtlasSource_methods.get_runtime_texture.m_call = cast(type_of(TileSetAtlasSource_methods.get_runtime_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetAtlasSource_methods.get_runtime_texture.m_call = cast(type_of(TileSetAtlasSource_methods.get_runtime_texture.m_call))MB_ptr_call
   TileSetAtlasSource_methods.get_runtime_tile_texture_region._get_runtime_tile_texture_region = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetAtlasSource, "get_runtime_tile_texture_region", 104874263, loc))
-  TileSetAtlasSource_methods.get_runtime_tile_texture_region.m_call = cast(type_of(TileSetAtlasSource_methods.get_runtime_tile_texture_region.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-TileSetAtlasSource_init_props :: proc(TileSetAtlasSource_prop: ^TileSetAtlasSource_properties, loc:= #caller_location) {
-
-  TileSetAtlasSource_prop.texture_Texture2D.get_texture = cast(proc "c" (p_base: TileSetAtlasSource, r_value: ^Texture2D))GDW.Get_Method_Getter(.OBJECT, "get_texture")
-  TileSetAtlasSource_prop.texture_Texture2D.set_texture = cast(proc "c" (p_base: TileSetAtlasSource, p_value: ^Texture2D))GDW.Get_Method_Setter(.OBJECT, "set_texture")
-
-  TileSetAtlasSource_prop.margins_Vector2i.get_margins = cast(proc "c" (p_base: TileSetAtlasSource, r_value: ^GDW.Vector2i))GDW.Get_Method_Getter(.VECTOR2I, "get_margins")
-  TileSetAtlasSource_prop.margins_Vector2i.set_margins = cast(proc "c" (p_base: TileSetAtlasSource, p_value: ^GDW.Vector2i))GDW.Get_Method_Setter(.VECTOR2I, "set_margins")
-
-  TileSetAtlasSource_prop.separation_Vector2i.get_separation = cast(proc "c" (p_base: TileSetAtlasSource, r_value: ^GDW.Vector2i))GDW.Get_Method_Getter(.VECTOR2I, "get_separation")
-  TileSetAtlasSource_prop.separation_Vector2i.set_separation = cast(proc "c" (p_base: TileSetAtlasSource, p_value: ^GDW.Vector2i))GDW.Get_Method_Setter(.VECTOR2I, "set_separation")
-
-  TileSetAtlasSource_prop.texture_region_size_Vector2i.get_texture_region_size = cast(proc "c" (p_base: TileSetAtlasSource, r_value: ^GDW.Vector2i))GDW.Get_Method_Getter(.VECTOR2I, "get_texture_region_size")
-  TileSetAtlasSource_prop.texture_region_size_Vector2i.set_texture_region_size = cast(proc "c" (p_base: TileSetAtlasSource, p_value: ^GDW.Vector2i))GDW.Get_Method_Setter(.VECTOR2I, "set_texture_region_size")
-
-  TileSetAtlasSource_prop.use_texture_padding_Bool.get_use_texture_padding = cast(proc "c" (p_base: TileSetAtlasSource, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_use_texture_padding")
-  TileSetAtlasSource_prop.use_texture_padding_Bool.set_use_texture_padding = cast(proc "c" (p_base: TileSetAtlasSource, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_use_texture_padding")
+  TileSetAtlasSource_methods.get_runtime_tile_texture_region.m_call = cast(type_of(TileSetAtlasSource_methods.get_runtime_tile_texture_region.m_call))MB_ptr_call
 };

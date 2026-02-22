@@ -18,6 +18,7 @@ ResourceFormatSaver_Virtual_Info :: struct {
 ResourceFormatSaver_MethodBind_List :: struct {
 };
 ResourceFormatSaver_Init_ :: proc (ResourceFormatSaver_methods: ^ResourceFormatSaver_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 ResourceFormatSaver_Init_Virtuals_Info :: proc(info: ^ResourceFormatSaver_Virtual_Info) {

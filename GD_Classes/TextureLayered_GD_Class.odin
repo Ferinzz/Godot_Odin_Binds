@@ -54,20 +54,21 @@ TextureLayered_MethodBind_List :: struct {
   },
 };
 TextureLayered_Init_ :: proc (TextureLayered_methods: ^TextureLayered_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   TextureLayered_methods.get_format._get_format = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayered, "get_format", 3847873762, loc))
-  TextureLayered_methods.get_format.m_call = cast(type_of(TextureLayered_methods.get_format.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureLayered_methods.get_format.m_call = cast(type_of(TextureLayered_methods.get_format.m_call))MB_ptr_call
   TextureLayered_methods.get_layered_type._get_layered_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayered, "get_layered_type", 518123893, loc))
-  TextureLayered_methods.get_layered_type.m_call = cast(type_of(TextureLayered_methods.get_layered_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureLayered_methods.get_layered_type.m_call = cast(type_of(TextureLayered_methods.get_layered_type.m_call))MB_ptr_call
   TextureLayered_methods.get_width._get_width = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayered, "get_width", 3905245786, loc))
-  TextureLayered_methods.get_width.m_call = cast(type_of(TextureLayered_methods.get_width.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureLayered_methods.get_width.m_call = cast(type_of(TextureLayered_methods.get_width.m_call))MB_ptr_call
   TextureLayered_methods.get_height._get_height = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayered, "get_height", 3905245786, loc))
-  TextureLayered_methods.get_height.m_call = cast(type_of(TextureLayered_methods.get_height.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureLayered_methods.get_height.m_call = cast(type_of(TextureLayered_methods.get_height.m_call))MB_ptr_call
   TextureLayered_methods.get_layers._get_layers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayered, "get_layers", 3905245786, loc))
-  TextureLayered_methods.get_layers.m_call = cast(type_of(TextureLayered_methods.get_layers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureLayered_methods.get_layers.m_call = cast(type_of(TextureLayered_methods.get_layers.m_call))MB_ptr_call
   TextureLayered_methods.has_mipmaps._has_mipmaps = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayered, "has_mipmaps", 36873697, loc))
-  TextureLayered_methods.has_mipmaps.m_call = cast(type_of(TextureLayered_methods.has_mipmaps.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureLayered_methods.has_mipmaps.m_call = cast(type_of(TextureLayered_methods.has_mipmaps.m_call))MB_ptr_call
   TextureLayered_methods.get_layer_data._get_layer_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureLayered, "get_layer_data", 3655284255, loc))
-  TextureLayered_methods.get_layer_data.m_call = cast(type_of(TextureLayered_methods.get_layer_data.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureLayered_methods.get_layer_data.m_call = cast(type_of(TextureLayered_methods.get_layer_data.m_call))MB_ptr_call
 };
 
 TextureLayered_Init_Virtuals_Info :: proc(info: ^TextureLayered_Virtual_Info) {

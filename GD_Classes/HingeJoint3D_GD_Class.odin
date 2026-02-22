@@ -44,12 +44,13 @@ HingeJoint3D_MethodBind_List :: struct {
   },
 };
 HingeJoint3D_Init_ :: proc (HingeJoint3D_methods: ^HingeJoint3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   HingeJoint3D_methods.set_param._set_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HingeJoint3D, "set_param", 3082977519, loc))
-  HingeJoint3D_methods.set_param.m_call = cast(type_of(HingeJoint3D_methods.set_param.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HingeJoint3D_methods.set_param.m_call = cast(type_of(HingeJoint3D_methods.set_param.m_call))MB_ptr_call
   HingeJoint3D_methods.get_param._get_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HingeJoint3D, "get_param", 4066002676, loc))
-  HingeJoint3D_methods.get_param.m_call = cast(type_of(HingeJoint3D_methods.get_param.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HingeJoint3D_methods.get_param.m_call = cast(type_of(HingeJoint3D_methods.get_param.m_call))MB_ptr_call
   HingeJoint3D_methods.set_flag._set_flag = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HingeJoint3D, "set_flag", 1083494620, loc))
-  HingeJoint3D_methods.set_flag.m_call = cast(type_of(HingeJoint3D_methods.set_flag.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HingeJoint3D_methods.set_flag.m_call = cast(type_of(HingeJoint3D_methods.set_flag.m_call))MB_ptr_call
   HingeJoint3D_methods.get_flag._get_flag = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HingeJoint3D, "get_flag", 2841369610, loc))
-  HingeJoint3D_methods.get_flag.m_call = cast(type_of(HingeJoint3D_methods.get_flag.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HingeJoint3D_methods.get_flag.m_call = cast(type_of(HingeJoint3D_methods.get_flag.m_call))MB_ptr_call
 };

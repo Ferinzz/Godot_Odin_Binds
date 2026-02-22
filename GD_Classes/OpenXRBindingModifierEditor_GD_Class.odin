@@ -18,8 +18,9 @@ OpenXRBindingModifierEditor_MethodBind_List :: struct {
   },
   };
 OpenXRBindingModifierEditor_Init_ :: proc (OpenXRBindingModifierEditor_methods: ^OpenXRBindingModifierEditor_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRBindingModifierEditor_methods.get_binding_modifier._get_binding_modifier = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRBindingModifierEditor, "get_binding_modifier", 2930765082, loc))
-  OpenXRBindingModifierEditor_methods.get_binding_modifier.m_call = cast(type_of(OpenXRBindingModifierEditor_methods.get_binding_modifier.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRBindingModifierEditor_methods.get_binding_modifier.m_call = cast(type_of(OpenXRBindingModifierEditor_methods.get_binding_modifier.m_call))MB_ptr_call
   OpenXRBindingModifierEditor_methods.setup._setup = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRBindingModifierEditor, "setup", 1284787389, loc))
-  OpenXRBindingModifierEditor_methods.setup.m_call = cast(type_of(OpenXRBindingModifierEditor_methods.setup.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRBindingModifierEditor_methods.setup.m_call = cast(type_of(OpenXRBindingModifierEditor_methods.setup.m_call))MB_ptr_call
 };

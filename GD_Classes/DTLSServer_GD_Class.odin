@@ -18,8 +18,9 @@ DTLSServer_MethodBind_List :: struct {
   },
 };
 DTLSServer_Init_ :: proc (DTLSServer_methods: ^DTLSServer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   DTLSServer_methods.setup._setup = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.DTLSServer, "setup", 1262296096, loc))
-  DTLSServer_methods.setup.m_call = cast(type_of(DTLSServer_methods.setup.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  DTLSServer_methods.setup.m_call = cast(type_of(DTLSServer_methods.setup.m_call))MB_ptr_call
   DTLSServer_methods.take_connection._take_connection = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.DTLSServer, "take_connection", 3946580474, loc))
-  DTLSServer_methods.take_connection.m_call = cast(type_of(DTLSServer_methods.take_connection.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  DTLSServer_methods.take_connection.m_call = cast(type_of(DTLSServer_methods.take_connection.m_call))MB_ptr_call
 };

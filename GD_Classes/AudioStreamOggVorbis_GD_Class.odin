@@ -7,36 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 AudioStreamOggVorbis :: ^GDW.Object
 
-AudioStreamOggVorbis_properties :: struct {
-  packet_sequence_Object : struct {
-  get_packet_sequence: proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Object),
-  set_packet_sequence: proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Object),
-  },
-  bpm_float : struct {
-  get_bpm: proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.float),
-  set_bpm: proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.float),
-  },
-  beat_count_Int : struct {
-  get_beat_count: proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Int),
-  set_beat_count: proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Int),
-  },
-  bar_beats_Int : struct {
-  get_bar_beats: proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Int),
-  set_bar_beats: proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Int),
-  },
-  tags_Dictionary : struct {
-  get_tags: proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Dictionary),
-  set_tags: proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Dictionary),
-  },
-  loop_Bool : struct {
-  has_loop: proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Bool),
-  set_loop: proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Bool),
-  },
-  loop_offset_float : struct {
-  get_loop_offset: proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.float),
-  set_loop_offset: proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.float),
-  },
-};
 AudioStreamOggVorbis_MethodBind_List :: struct {
   load_from_buffer: struct{
     using _load_from_buffer: ^GDW.MethodBind,
@@ -104,59 +74,37 @@ AudioStreamOggVorbis_MethodBind_List :: struct {
   },
 };
 AudioStreamOggVorbis_Init_ :: proc (AudioStreamOggVorbis_methods: ^AudioStreamOggVorbis_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AudioStreamOggVorbis_methods.load_from_buffer._load_from_buffer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "load_from_buffer", 354904730, loc))
-  AudioStreamOggVorbis_methods.load_from_buffer.m_call = cast(type_of(AudioStreamOggVorbis_methods.load_from_buffer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.load_from_buffer.m_call = cast(type_of(AudioStreamOggVorbis_methods.load_from_buffer.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.load_from_file._load_from_file = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "load_from_file", 797568536, loc))
-  AudioStreamOggVorbis_methods.load_from_file.m_call = cast(type_of(AudioStreamOggVorbis_methods.load_from_file.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.load_from_file.m_call = cast(type_of(AudioStreamOggVorbis_methods.load_from_file.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.set_packet_sequence._set_packet_sequence = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "set_packet_sequence", 438882457, loc))
-  AudioStreamOggVorbis_methods.set_packet_sequence.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_packet_sequence.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.set_packet_sequence.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_packet_sequence.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.get_packet_sequence._get_packet_sequence = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "get_packet_sequence", 2801636033, loc))
-  AudioStreamOggVorbis_methods.get_packet_sequence.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_packet_sequence.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.get_packet_sequence.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_packet_sequence.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.set_loop._set_loop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "set_loop", 2586408642, loc))
-  AudioStreamOggVorbis_methods.set_loop.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_loop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.set_loop.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_loop.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.has_loop._has_loop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "has_loop", 36873697, loc))
-  AudioStreamOggVorbis_methods.has_loop.m_call = cast(type_of(AudioStreamOggVorbis_methods.has_loop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.has_loop.m_call = cast(type_of(AudioStreamOggVorbis_methods.has_loop.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.set_loop_offset._set_loop_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "set_loop_offset", 373806689, loc))
-  AudioStreamOggVorbis_methods.set_loop_offset.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_loop_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.set_loop_offset.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_loop_offset.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.get_loop_offset._get_loop_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "get_loop_offset", 1740695150, loc))
-  AudioStreamOggVorbis_methods.get_loop_offset.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_loop_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.get_loop_offset.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_loop_offset.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.set_bpm._set_bpm = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "set_bpm", 373806689, loc))
-  AudioStreamOggVorbis_methods.set_bpm.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_bpm.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.set_bpm.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_bpm.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.get_bpm._get_bpm = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "get_bpm", 1740695150, loc))
-  AudioStreamOggVorbis_methods.get_bpm.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_bpm.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.get_bpm.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_bpm.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.set_beat_count._set_beat_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "set_beat_count", 1286410249, loc))
-  AudioStreamOggVorbis_methods.set_beat_count.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_beat_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.set_beat_count.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_beat_count.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.get_beat_count._get_beat_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "get_beat_count", 3905245786, loc))
-  AudioStreamOggVorbis_methods.get_beat_count.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_beat_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.get_beat_count.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_beat_count.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.set_bar_beats._set_bar_beats = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "set_bar_beats", 1286410249, loc))
-  AudioStreamOggVorbis_methods.set_bar_beats.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_bar_beats.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.set_bar_beats.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_bar_beats.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.get_bar_beats._get_bar_beats = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "get_bar_beats", 3905245786, loc))
-  AudioStreamOggVorbis_methods.get_bar_beats.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_bar_beats.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.get_bar_beats.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_bar_beats.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.set_tags._set_tags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "set_tags", 4155329257, loc))
-  AudioStreamOggVorbis_methods.set_tags.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_tags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamOggVorbis_methods.set_tags.m_call = cast(type_of(AudioStreamOggVorbis_methods.set_tags.m_call))MB_ptr_call
   AudioStreamOggVorbis_methods.get_tags._get_tags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamOggVorbis, "get_tags", 3102165223, loc))
-  AudioStreamOggVorbis_methods.get_tags.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_tags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-AudioStreamOggVorbis_init_props :: proc(AudioStreamOggVorbis_prop: ^AudioStreamOggVorbis_properties, loc:= #caller_location) {
-
-  AudioStreamOggVorbis_prop.packet_sequence_Object.get_packet_sequence = cast(proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Object))GDW.Get_Method_Getter(.OBJECT, "get_packet_sequence")
-  AudioStreamOggVorbis_prop.packet_sequence_Object.set_packet_sequence = cast(proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Object))GDW.Get_Method_Setter(.OBJECT, "set_packet_sequence")
-
-  AudioStreamOggVorbis_prop.bpm_float.get_bpm = cast(proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_bpm")
-  AudioStreamOggVorbis_prop.bpm_float.set_bpm = cast(proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_bpm")
-
-  AudioStreamOggVorbis_prop.beat_count_Int.get_beat_count = cast(proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_beat_count")
-  AudioStreamOggVorbis_prop.beat_count_Int.set_beat_count = cast(proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_beat_count")
-
-  AudioStreamOggVorbis_prop.bar_beats_Int.get_bar_beats = cast(proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_bar_beats")
-  AudioStreamOggVorbis_prop.bar_beats_Int.set_bar_beats = cast(proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_bar_beats")
-
-  AudioStreamOggVorbis_prop.tags_Dictionary.get_tags = cast(proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Dictionary))GDW.Get_Method_Getter(.DICTIONARY, "get_tags")
-  AudioStreamOggVorbis_prop.tags_Dictionary.set_tags = cast(proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Dictionary))GDW.Get_Method_Setter(.DICTIONARY, "set_tags")
-
-  AudioStreamOggVorbis_prop.loop_Bool.has_loop = cast(proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "has_loop")
-  AudioStreamOggVorbis_prop.loop_Bool.set_loop = cast(proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_loop")
-
-  AudioStreamOggVorbis_prop.loop_offset_float.get_loop_offset = cast(proc "c" (p_base: AudioStreamOggVorbis, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_loop_offset")
-  AudioStreamOggVorbis_prop.loop_offset_float.set_loop_offset = cast(proc "c" (p_base: AudioStreamOggVorbis, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_loop_offset")
+  AudioStreamOggVorbis_methods.get_tags.m_call = cast(type_of(AudioStreamOggVorbis_methods.get_tags.m_call))MB_ptr_call
 };

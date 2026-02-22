@@ -44,8 +44,9 @@ SliderJoint3D_MethodBind_List :: struct {
   },
 };
 SliderJoint3D_Init_ :: proc (SliderJoint3D_methods: ^SliderJoint3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   SliderJoint3D_methods.set_param._set_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SliderJoint3D, "set_param", 918243683, loc))
-  SliderJoint3D_methods.set_param.m_call = cast(type_of(SliderJoint3D_methods.set_param.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SliderJoint3D_methods.set_param.m_call = cast(type_of(SliderJoint3D_methods.set_param.m_call))MB_ptr_call
   SliderJoint3D_methods.get_param._get_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SliderJoint3D, "get_param", 959925627, loc))
-  SliderJoint3D_methods.get_param.m_call = cast(type_of(SliderJoint3D_methods.get_param.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SliderJoint3D_methods.get_param.m_call = cast(type_of(SliderJoint3D_methods.get_param.m_call))MB_ptr_call
 };

@@ -65,16 +65,17 @@ XRInterfaceExtension_MethodBind_List :: struct {
   },
 };
 XRInterfaceExtension_Init_ :: proc (XRInterfaceExtension_methods: ^XRInterfaceExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   XRInterfaceExtension_methods.get_color_texture._get_color_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRInterfaceExtension, "get_color_texture", 529393457, loc))
-  XRInterfaceExtension_methods.get_color_texture.m_call = cast(type_of(XRInterfaceExtension_methods.get_color_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRInterfaceExtension_methods.get_color_texture.m_call = cast(type_of(XRInterfaceExtension_methods.get_color_texture.m_call))MB_ptr_call
   XRInterfaceExtension_methods.get_depth_texture._get_depth_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRInterfaceExtension, "get_depth_texture", 529393457, loc))
-  XRInterfaceExtension_methods.get_depth_texture.m_call = cast(type_of(XRInterfaceExtension_methods.get_depth_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRInterfaceExtension_methods.get_depth_texture.m_call = cast(type_of(XRInterfaceExtension_methods.get_depth_texture.m_call))MB_ptr_call
   XRInterfaceExtension_methods.get_velocity_texture._get_velocity_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRInterfaceExtension, "get_velocity_texture", 529393457, loc))
-  XRInterfaceExtension_methods.get_velocity_texture.m_call = cast(type_of(XRInterfaceExtension_methods.get_velocity_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRInterfaceExtension_methods.get_velocity_texture.m_call = cast(type_of(XRInterfaceExtension_methods.get_velocity_texture.m_call))MB_ptr_call
   XRInterfaceExtension_methods.add_blit._add_blit = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRInterfaceExtension, "add_blit", 258596971, loc))
-  XRInterfaceExtension_methods.add_blit.m_call = cast(type_of(XRInterfaceExtension_methods.add_blit.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRInterfaceExtension_methods.add_blit.m_call = cast(type_of(XRInterfaceExtension_methods.add_blit.m_call))MB_ptr_call
   XRInterfaceExtension_methods.get_render_target_texture._get_render_target_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRInterfaceExtension, "get_render_target_texture", 41030802, loc))
-  XRInterfaceExtension_methods.get_render_target_texture.m_call = cast(type_of(XRInterfaceExtension_methods.get_render_target_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRInterfaceExtension_methods.get_render_target_texture.m_call = cast(type_of(XRInterfaceExtension_methods.get_render_target_texture.m_call))MB_ptr_call
 };
 
 XRInterfaceExtension_Init_Virtuals_Info :: proc(info: ^XRInterfaceExtension_Virtual_Info) {

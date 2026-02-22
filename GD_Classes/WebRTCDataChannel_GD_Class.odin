@@ -19,12 +19,6 @@ WebRTCDataChannel_ChannelState :: enum i64 {
   STATE_CLOSING = 2,
   STATE_CLOSED = 3,
 };
-WebRTCDataChannel_properties :: struct {
-  write_mode_Int : struct {
-  get_write_mode: proc "c" (p_base: WebRTCDataChannel, r_value: ^GDW.Int),
-  set_write_mode: proc "c" (p_base: WebRTCDataChannel, p_value: ^GDW.Int),
-  },
-};
 WebRTCDataChannel_MethodBind_List :: struct {
   poll: struct{
     using _poll: ^GDW.MethodBind,
@@ -84,37 +78,33 @@ WebRTCDataChannel_MethodBind_List :: struct {
   },
 };
 WebRTCDataChannel_Init_ :: proc (WebRTCDataChannel_methods: ^WebRTCDataChannel_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   WebRTCDataChannel_methods.poll._poll = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "poll", 166280745, loc))
-  WebRTCDataChannel_methods.poll.m_call = cast(type_of(WebRTCDataChannel_methods.poll.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.poll.m_call = cast(type_of(WebRTCDataChannel_methods.poll.m_call))MB_ptr_call
   WebRTCDataChannel_methods.close._close = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "close", 3218959716, loc))
-  WebRTCDataChannel_methods.close.m_call = cast(type_of(WebRTCDataChannel_methods.close.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.close.m_call = cast(type_of(WebRTCDataChannel_methods.close.m_call))MB_ptr_call
   WebRTCDataChannel_methods.was_string_packet._was_string_packet = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "was_string_packet", 36873697, loc))
-  WebRTCDataChannel_methods.was_string_packet.m_call = cast(type_of(WebRTCDataChannel_methods.was_string_packet.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.was_string_packet.m_call = cast(type_of(WebRTCDataChannel_methods.was_string_packet.m_call))MB_ptr_call
   WebRTCDataChannel_methods.set_write_mode._set_write_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "set_write_mode", 1999768052, loc))
-  WebRTCDataChannel_methods.set_write_mode.m_call = cast(type_of(WebRTCDataChannel_methods.set_write_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.set_write_mode.m_call = cast(type_of(WebRTCDataChannel_methods.set_write_mode.m_call))MB_ptr_call
   WebRTCDataChannel_methods.get_write_mode._get_write_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "get_write_mode", 2848495172, loc))
-  WebRTCDataChannel_methods.get_write_mode.m_call = cast(type_of(WebRTCDataChannel_methods.get_write_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.get_write_mode.m_call = cast(type_of(WebRTCDataChannel_methods.get_write_mode.m_call))MB_ptr_call
   WebRTCDataChannel_methods.get_ready_state._get_ready_state = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "get_ready_state", 3501143017, loc))
-  WebRTCDataChannel_methods.get_ready_state.m_call = cast(type_of(WebRTCDataChannel_methods.get_ready_state.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.get_ready_state.m_call = cast(type_of(WebRTCDataChannel_methods.get_ready_state.m_call))MB_ptr_call
   WebRTCDataChannel_methods.get_label._get_label = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "get_label", 201670096, loc))
-  WebRTCDataChannel_methods.get_label.m_call = cast(type_of(WebRTCDataChannel_methods.get_label.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.get_label.m_call = cast(type_of(WebRTCDataChannel_methods.get_label.m_call))MB_ptr_call
   WebRTCDataChannel_methods.is_ordered._is_ordered = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "is_ordered", 36873697, loc))
-  WebRTCDataChannel_methods.is_ordered.m_call = cast(type_of(WebRTCDataChannel_methods.is_ordered.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.is_ordered.m_call = cast(type_of(WebRTCDataChannel_methods.is_ordered.m_call))MB_ptr_call
   WebRTCDataChannel_methods.get_id._get_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "get_id", 3905245786, loc))
-  WebRTCDataChannel_methods.get_id.m_call = cast(type_of(WebRTCDataChannel_methods.get_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.get_id.m_call = cast(type_of(WebRTCDataChannel_methods.get_id.m_call))MB_ptr_call
   WebRTCDataChannel_methods.get_max_packet_life_time._get_max_packet_life_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "get_max_packet_life_time", 3905245786, loc))
-  WebRTCDataChannel_methods.get_max_packet_life_time.m_call = cast(type_of(WebRTCDataChannel_methods.get_max_packet_life_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.get_max_packet_life_time.m_call = cast(type_of(WebRTCDataChannel_methods.get_max_packet_life_time.m_call))MB_ptr_call
   WebRTCDataChannel_methods.get_max_retransmits._get_max_retransmits = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "get_max_retransmits", 3905245786, loc))
-  WebRTCDataChannel_methods.get_max_retransmits.m_call = cast(type_of(WebRTCDataChannel_methods.get_max_retransmits.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.get_max_retransmits.m_call = cast(type_of(WebRTCDataChannel_methods.get_max_retransmits.m_call))MB_ptr_call
   WebRTCDataChannel_methods.get_protocol._get_protocol = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "get_protocol", 201670096, loc))
-  WebRTCDataChannel_methods.get_protocol.m_call = cast(type_of(WebRTCDataChannel_methods.get_protocol.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.get_protocol.m_call = cast(type_of(WebRTCDataChannel_methods.get_protocol.m_call))MB_ptr_call
   WebRTCDataChannel_methods.is_negotiated._is_negotiated = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "is_negotiated", 36873697, loc))
-  WebRTCDataChannel_methods.is_negotiated.m_call = cast(type_of(WebRTCDataChannel_methods.is_negotiated.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCDataChannel_methods.is_negotiated.m_call = cast(type_of(WebRTCDataChannel_methods.is_negotiated.m_call))MB_ptr_call
   WebRTCDataChannel_methods.get_buffered_amount._get_buffered_amount = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCDataChannel, "get_buffered_amount", 3905245786, loc))
-  WebRTCDataChannel_methods.get_buffered_amount.m_call = cast(type_of(WebRTCDataChannel_methods.get_buffered_amount.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-WebRTCDataChannel_init_props :: proc(WebRTCDataChannel_prop: ^WebRTCDataChannel_properties, loc:= #caller_location) {
-
-  WebRTCDataChannel_prop.write_mode_Int.get_write_mode = cast(proc "c" (p_base: WebRTCDataChannel, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_write_mode")
-  WebRTCDataChannel_prop.write_mode_Int.set_write_mode = cast(proc "c" (p_base: WebRTCDataChannel, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_write_mode")
+  WebRTCDataChannel_methods.get_buffered_amount.m_call = cast(type_of(WebRTCDataChannel_methods.get_buffered_amount.m_call))MB_ptr_call
 };

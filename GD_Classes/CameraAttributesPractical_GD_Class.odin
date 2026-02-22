@@ -7,44 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 CameraAttributesPractical :: ^GDW.Object
 
-CameraAttributesPractical_properties :: struct {
-  dof_blur_far_enabled_Bool : struct {
-  is_dof_blur_far_enabled: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.Bool),
-  set_dof_blur_far_enabled: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.Bool),
-  },
-  dof_blur_far_distance_float : struct {
-  get_dof_blur_far_distance: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float),
-  set_dof_blur_far_distance: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float),
-  },
-  dof_blur_far_transition_float : struct {
-  get_dof_blur_far_transition: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float),
-  set_dof_blur_far_transition: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float),
-  },
-  dof_blur_near_enabled_Bool : struct {
-  is_dof_blur_near_enabled: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.Bool),
-  set_dof_blur_near_enabled: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.Bool),
-  },
-  dof_blur_near_distance_float : struct {
-  get_dof_blur_near_distance: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float),
-  set_dof_blur_near_distance: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float),
-  },
-  dof_blur_near_transition_float : struct {
-  get_dof_blur_near_transition: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float),
-  set_dof_blur_near_transition: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float),
-  },
-  dof_blur_amount_float : struct {
-  get_dof_blur_amount: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float),
-  set_dof_blur_amount: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float),
-  },
-  auto_exposure_min_sensitivity_float : struct {
-  get_auto_exposure_min_sensitivity: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float),
-  set_auto_exposure_min_sensitivity: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float),
-  },
-  auto_exposure_max_sensitivity_float : struct {
-  get_auto_exposure_max_sensitivity: proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float),
-  set_auto_exposure_max_sensitivity: proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float),
-  },
-};
 CameraAttributesPractical_MethodBind_List :: struct {
   set_dof_blur_far_enabled: struct{
     using _set_dof_blur_far_enabled: ^GDW.MethodBind,
@@ -120,69 +82,41 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
 };
 CameraAttributesPractical_Init_ :: proc (CameraAttributesPractical_methods: ^CameraAttributesPractical_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   CameraAttributesPractical_methods.set_dof_blur_far_enabled._set_dof_blur_far_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_dof_blur_far_enabled", 2586408642, loc))
-  CameraAttributesPractical_methods.set_dof_blur_far_enabled.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_far_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_dof_blur_far_enabled.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_far_enabled.m_call))MB_ptr_call
   CameraAttributesPractical_methods.is_dof_blur_far_enabled._is_dof_blur_far_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "is_dof_blur_far_enabled", 36873697, loc))
-  CameraAttributesPractical_methods.is_dof_blur_far_enabled.m_call = cast(type_of(CameraAttributesPractical_methods.is_dof_blur_far_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.is_dof_blur_far_enabled.m_call = cast(type_of(CameraAttributesPractical_methods.is_dof_blur_far_enabled.m_call))MB_ptr_call
   CameraAttributesPractical_methods.set_dof_blur_far_distance._set_dof_blur_far_distance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_dof_blur_far_distance", 373806689, loc))
-  CameraAttributesPractical_methods.set_dof_blur_far_distance.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_far_distance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_dof_blur_far_distance.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_far_distance.m_call))MB_ptr_call
   CameraAttributesPractical_methods.get_dof_blur_far_distance._get_dof_blur_far_distance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "get_dof_blur_far_distance", 1740695150, loc))
-  CameraAttributesPractical_methods.get_dof_blur_far_distance.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_far_distance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.get_dof_blur_far_distance.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_far_distance.m_call))MB_ptr_call
   CameraAttributesPractical_methods.set_dof_blur_far_transition._set_dof_blur_far_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_dof_blur_far_transition", 373806689, loc))
-  CameraAttributesPractical_methods.set_dof_blur_far_transition.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_far_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_dof_blur_far_transition.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_far_transition.m_call))MB_ptr_call
   CameraAttributesPractical_methods.get_dof_blur_far_transition._get_dof_blur_far_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "get_dof_blur_far_transition", 1740695150, loc))
-  CameraAttributesPractical_methods.get_dof_blur_far_transition.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_far_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.get_dof_blur_far_transition.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_far_transition.m_call))MB_ptr_call
   CameraAttributesPractical_methods.set_dof_blur_near_enabled._set_dof_blur_near_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_dof_blur_near_enabled", 2586408642, loc))
-  CameraAttributesPractical_methods.set_dof_blur_near_enabled.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_near_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_dof_blur_near_enabled.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_near_enabled.m_call))MB_ptr_call
   CameraAttributesPractical_methods.is_dof_blur_near_enabled._is_dof_blur_near_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "is_dof_blur_near_enabled", 36873697, loc))
-  CameraAttributesPractical_methods.is_dof_blur_near_enabled.m_call = cast(type_of(CameraAttributesPractical_methods.is_dof_blur_near_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.is_dof_blur_near_enabled.m_call = cast(type_of(CameraAttributesPractical_methods.is_dof_blur_near_enabled.m_call))MB_ptr_call
   CameraAttributesPractical_methods.set_dof_blur_near_distance._set_dof_blur_near_distance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_dof_blur_near_distance", 373806689, loc))
-  CameraAttributesPractical_methods.set_dof_blur_near_distance.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_near_distance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_dof_blur_near_distance.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_near_distance.m_call))MB_ptr_call
   CameraAttributesPractical_methods.get_dof_blur_near_distance._get_dof_blur_near_distance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "get_dof_blur_near_distance", 1740695150, loc))
-  CameraAttributesPractical_methods.get_dof_blur_near_distance.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_near_distance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.get_dof_blur_near_distance.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_near_distance.m_call))MB_ptr_call
   CameraAttributesPractical_methods.set_dof_blur_near_transition._set_dof_blur_near_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_dof_blur_near_transition", 373806689, loc))
-  CameraAttributesPractical_methods.set_dof_blur_near_transition.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_near_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_dof_blur_near_transition.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_near_transition.m_call))MB_ptr_call
   CameraAttributesPractical_methods.get_dof_blur_near_transition._get_dof_blur_near_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "get_dof_blur_near_transition", 1740695150, loc))
-  CameraAttributesPractical_methods.get_dof_blur_near_transition.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_near_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.get_dof_blur_near_transition.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_near_transition.m_call))MB_ptr_call
   CameraAttributesPractical_methods.set_dof_blur_amount._set_dof_blur_amount = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_dof_blur_amount", 373806689, loc))
-  CameraAttributesPractical_methods.set_dof_blur_amount.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_amount.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_dof_blur_amount.m_call = cast(type_of(CameraAttributesPractical_methods.set_dof_blur_amount.m_call))MB_ptr_call
   CameraAttributesPractical_methods.get_dof_blur_amount._get_dof_blur_amount = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "get_dof_blur_amount", 1740695150, loc))
-  CameraAttributesPractical_methods.get_dof_blur_amount.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_amount.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.get_dof_blur_amount.m_call = cast(type_of(CameraAttributesPractical_methods.get_dof_blur_amount.m_call))MB_ptr_call
   CameraAttributesPractical_methods.set_auto_exposure_max_sensitivity._set_auto_exposure_max_sensitivity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_auto_exposure_max_sensitivity", 373806689, loc))
-  CameraAttributesPractical_methods.set_auto_exposure_max_sensitivity.m_call = cast(type_of(CameraAttributesPractical_methods.set_auto_exposure_max_sensitivity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_auto_exposure_max_sensitivity.m_call = cast(type_of(CameraAttributesPractical_methods.set_auto_exposure_max_sensitivity.m_call))MB_ptr_call
   CameraAttributesPractical_methods.get_auto_exposure_max_sensitivity._get_auto_exposure_max_sensitivity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "get_auto_exposure_max_sensitivity", 1740695150, loc))
-  CameraAttributesPractical_methods.get_auto_exposure_max_sensitivity.m_call = cast(type_of(CameraAttributesPractical_methods.get_auto_exposure_max_sensitivity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.get_auto_exposure_max_sensitivity.m_call = cast(type_of(CameraAttributesPractical_methods.get_auto_exposure_max_sensitivity.m_call))MB_ptr_call
   CameraAttributesPractical_methods.set_auto_exposure_min_sensitivity._set_auto_exposure_min_sensitivity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "set_auto_exposure_min_sensitivity", 373806689, loc))
-  CameraAttributesPractical_methods.set_auto_exposure_min_sensitivity.m_call = cast(type_of(CameraAttributesPractical_methods.set_auto_exposure_min_sensitivity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CameraAttributesPractical_methods.set_auto_exposure_min_sensitivity.m_call = cast(type_of(CameraAttributesPractical_methods.set_auto_exposure_min_sensitivity.m_call))MB_ptr_call
   CameraAttributesPractical_methods.get_auto_exposure_min_sensitivity._get_auto_exposure_min_sensitivity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CameraAttributesPractical, "get_auto_exposure_min_sensitivity", 1740695150, loc))
-  CameraAttributesPractical_methods.get_auto_exposure_min_sensitivity.m_call = cast(type_of(CameraAttributesPractical_methods.get_auto_exposure_min_sensitivity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-CameraAttributesPractical_init_props :: proc(CameraAttributesPractical_prop: ^CameraAttributesPractical_properties, loc:= #caller_location) {
-
-  CameraAttributesPractical_prop.dof_blur_far_enabled_Bool.is_dof_blur_far_enabled = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_dof_blur_far_enabled")
-  CameraAttributesPractical_prop.dof_blur_far_enabled_Bool.set_dof_blur_far_enabled = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_dof_blur_far_enabled")
-
-  CameraAttributesPractical_prop.dof_blur_far_distance_float.get_dof_blur_far_distance = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_dof_blur_far_distance")
-  CameraAttributesPractical_prop.dof_blur_far_distance_float.set_dof_blur_far_distance = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_dof_blur_far_distance")
-
-  CameraAttributesPractical_prop.dof_blur_far_transition_float.get_dof_blur_far_transition = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_dof_blur_far_transition")
-  CameraAttributesPractical_prop.dof_blur_far_transition_float.set_dof_blur_far_transition = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_dof_blur_far_transition")
-
-  CameraAttributesPractical_prop.dof_blur_near_enabled_Bool.is_dof_blur_near_enabled = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_dof_blur_near_enabled")
-  CameraAttributesPractical_prop.dof_blur_near_enabled_Bool.set_dof_blur_near_enabled = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_dof_blur_near_enabled")
-
-  CameraAttributesPractical_prop.dof_blur_near_distance_float.get_dof_blur_near_distance = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_dof_blur_near_distance")
-  CameraAttributesPractical_prop.dof_blur_near_distance_float.set_dof_blur_near_distance = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_dof_blur_near_distance")
-
-  CameraAttributesPractical_prop.dof_blur_near_transition_float.get_dof_blur_near_transition = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_dof_blur_near_transition")
-  CameraAttributesPractical_prop.dof_blur_near_transition_float.set_dof_blur_near_transition = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_dof_blur_near_transition")
-
-  CameraAttributesPractical_prop.dof_blur_amount_float.get_dof_blur_amount = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_dof_blur_amount")
-  CameraAttributesPractical_prop.dof_blur_amount_float.set_dof_blur_amount = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_dof_blur_amount")
-
-  CameraAttributesPractical_prop.auto_exposure_min_sensitivity_float.get_auto_exposure_min_sensitivity = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_auto_exposure_min_sensitivity")
-  CameraAttributesPractical_prop.auto_exposure_min_sensitivity_float.set_auto_exposure_min_sensitivity = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_auto_exposure_min_sensitivity")
-
-  CameraAttributesPractical_prop.auto_exposure_max_sensitivity_float.get_auto_exposure_max_sensitivity = cast(proc "c" (p_base: CameraAttributesPractical, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_auto_exposure_max_sensitivity")
-  CameraAttributesPractical_prop.auto_exposure_max_sensitivity_float.set_auto_exposure_max_sensitivity = cast(proc "c" (p_base: CameraAttributesPractical, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_auto_exposure_max_sensitivity")
+  CameraAttributesPractical_methods.get_auto_exposure_min_sensitivity.m_call = cast(type_of(CameraAttributesPractical_methods.get_auto_exposure_min_sensitivity.m_call))MB_ptr_call
 };

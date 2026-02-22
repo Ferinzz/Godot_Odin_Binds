@@ -10,4 +10,5 @@ EditorSceneFormatImporterBlend :: ^GDW.Object
 EditorSceneFormatImporterBlend_MethodBind_List :: struct {
 };
 EditorSceneFormatImporterBlend_Init_ :: proc (EditorSceneFormatImporterBlend_methods: ^EditorSceneFormatImporterBlend_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

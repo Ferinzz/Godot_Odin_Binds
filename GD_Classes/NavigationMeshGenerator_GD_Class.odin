@@ -26,12 +26,13 @@ NavigationMeshGenerator_MethodBind_List :: struct {
   },
   };
 NavigationMeshGenerator_Init_ :: proc (NavigationMeshGenerator_methods: ^NavigationMeshGenerator_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   NavigationMeshGenerator_methods.bake._bake = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.NavigationMeshGenerator, "bake", 1401173477, loc))
-  NavigationMeshGenerator_methods.bake.m_call = cast(type_of(NavigationMeshGenerator_methods.bake.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  NavigationMeshGenerator_methods.bake.m_call = cast(type_of(NavigationMeshGenerator_methods.bake.m_call))MB_ptr_call
   NavigationMeshGenerator_methods.clear._clear = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.NavigationMeshGenerator, "clear", 2923361153, loc))
-  NavigationMeshGenerator_methods.clear.m_call = cast(type_of(NavigationMeshGenerator_methods.clear.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  NavigationMeshGenerator_methods.clear.m_call = cast(type_of(NavigationMeshGenerator_methods.clear.m_call))MB_ptr_call
   NavigationMeshGenerator_methods.parse_source_geometry_data._parse_source_geometry_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.NavigationMeshGenerator, "parse_source_geometry_data", 3172802542, loc))
-  NavigationMeshGenerator_methods.parse_source_geometry_data.m_call = cast(type_of(NavigationMeshGenerator_methods.parse_source_geometry_data.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  NavigationMeshGenerator_methods.parse_source_geometry_data.m_call = cast(type_of(NavigationMeshGenerator_methods.parse_source_geometry_data.m_call))MB_ptr_call
   NavigationMeshGenerator_methods.bake_from_source_geometry_data._bake_from_source_geometry_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.NavigationMeshGenerator, "bake_from_source_geometry_data", 1286748856, loc))
-  NavigationMeshGenerator_methods.bake_from_source_geometry_data.m_call = cast(type_of(NavigationMeshGenerator_methods.bake_from_source_geometry_data.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  NavigationMeshGenerator_methods.bake_from_source_geometry_data.m_call = cast(type_of(NavigationMeshGenerator_methods.bake_from_source_geometry_data.m_call))MB_ptr_call
 };

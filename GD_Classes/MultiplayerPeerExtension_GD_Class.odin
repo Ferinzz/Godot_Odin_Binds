@@ -36,6 +36,7 @@ MultiplayerPeerExtension_Virtual_Info :: struct {
 MultiplayerPeerExtension_MethodBind_List :: struct {
 };
 MultiplayerPeerExtension_Init_ :: proc (MultiplayerPeerExtension_methods: ^MultiplayerPeerExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 MultiplayerPeerExtension_Init_Virtuals_Info :: proc(info: ^MultiplayerPeerExtension_Virtual_Info) {

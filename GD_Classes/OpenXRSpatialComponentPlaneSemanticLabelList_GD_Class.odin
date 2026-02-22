@@ -22,6 +22,7 @@ OpenXRSpatialComponentPlaneSemanticLabelList_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialComponentPlaneSemanticLabelList_Init_ :: proc (OpenXRSpatialComponentPlaneSemanticLabelList_methods: ^OpenXRSpatialComponentPlaneSemanticLabelList_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialComponentPlaneSemanticLabelList_methods.get_plane_semantic_label._get_plane_semantic_label = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentPlaneSemanticLabelList, "get_plane_semantic_label", 1889332427, loc))
-  OpenXRSpatialComponentPlaneSemanticLabelList_methods.get_plane_semantic_label.m_call = cast(type_of(OpenXRSpatialComponentPlaneSemanticLabelList_methods.get_plane_semantic_label.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentPlaneSemanticLabelList_methods.get_plane_semantic_label.m_call = cast(type_of(OpenXRSpatialComponentPlaneSemanticLabelList_methods.get_plane_semantic_label.m_call))MB_ptr_call
 };

@@ -68,30 +68,31 @@ SceneReplicationConfig_MethodBind_List :: struct {
   },
   };
 SceneReplicationConfig_Init_ :: proc (SceneReplicationConfig_methods: ^SceneReplicationConfig_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   SceneReplicationConfig_methods.get_properties._get_properties = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "get_properties", 3995934104, loc))
-  SceneReplicationConfig_methods.get_properties.m_call = cast(type_of(SceneReplicationConfig_methods.get_properties.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.get_properties.m_call = cast(type_of(SceneReplicationConfig_methods.get_properties.m_call))MB_ptr_call
   SceneReplicationConfig_methods.add_property._add_property = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "add_property", 4094619021, loc))
-  SceneReplicationConfig_methods.add_property.m_call = cast(type_of(SceneReplicationConfig_methods.add_property.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.add_property.m_call = cast(type_of(SceneReplicationConfig_methods.add_property.m_call))MB_ptr_call
   SceneReplicationConfig_methods.has_property._has_property = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "has_property", 861721659, loc))
-  SceneReplicationConfig_methods.has_property.m_call = cast(type_of(SceneReplicationConfig_methods.has_property.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.has_property.m_call = cast(type_of(SceneReplicationConfig_methods.has_property.m_call))MB_ptr_call
   SceneReplicationConfig_methods.remove_property._remove_property = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "remove_property", 1348162250, loc))
-  SceneReplicationConfig_methods.remove_property.m_call = cast(type_of(SceneReplicationConfig_methods.remove_property.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.remove_property.m_call = cast(type_of(SceneReplicationConfig_methods.remove_property.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_get_index._property_get_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_get_index", 1382022557, loc))
-  SceneReplicationConfig_methods.property_get_index.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_index.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_get_index.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_index.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_get_spawn._property_get_spawn = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_get_spawn", 3456846888, loc))
-  SceneReplicationConfig_methods.property_get_spawn.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_spawn.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_get_spawn.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_spawn.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_set_spawn._property_set_spawn = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_set_spawn", 3868023870, loc))
-  SceneReplicationConfig_methods.property_set_spawn.m_call = cast(type_of(SceneReplicationConfig_methods.property_set_spawn.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_set_spawn.m_call = cast(type_of(SceneReplicationConfig_methods.property_set_spawn.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_get_replication_mode._property_get_replication_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_get_replication_mode", 2870606336, loc))
-  SceneReplicationConfig_methods.property_get_replication_mode.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_replication_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_get_replication_mode.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_replication_mode.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_set_replication_mode._property_set_replication_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_set_replication_mode", 3200083865, loc))
-  SceneReplicationConfig_methods.property_set_replication_mode.m_call = cast(type_of(SceneReplicationConfig_methods.property_set_replication_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_set_replication_mode.m_call = cast(type_of(SceneReplicationConfig_methods.property_set_replication_mode.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_get_sync._property_get_sync = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_get_sync", 3456846888, loc))
-  SceneReplicationConfig_methods.property_get_sync.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_sync.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_get_sync.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_sync.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_set_sync._property_set_sync = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_set_sync", 3868023870, loc))
-  SceneReplicationConfig_methods.property_set_sync.m_call = cast(type_of(SceneReplicationConfig_methods.property_set_sync.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_set_sync.m_call = cast(type_of(SceneReplicationConfig_methods.property_set_sync.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_get_watch._property_get_watch = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_get_watch", 3456846888, loc))
-  SceneReplicationConfig_methods.property_get_watch.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_watch.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_get_watch.m_call = cast(type_of(SceneReplicationConfig_methods.property_get_watch.m_call))MB_ptr_call
   SceneReplicationConfig_methods.property_set_watch._property_set_watch = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SceneReplicationConfig, "property_set_watch", 3868023870, loc))
-  SceneReplicationConfig_methods.property_set_watch.m_call = cast(type_of(SceneReplicationConfig_methods.property_set_watch.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SceneReplicationConfig_methods.property_set_watch.m_call = cast(type_of(SceneReplicationConfig_methods.property_set_watch.m_call))MB_ptr_call
 };

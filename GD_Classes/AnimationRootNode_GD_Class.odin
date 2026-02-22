@@ -10,4 +10,5 @@ AnimationRootNode :: ^GDW.Object
 AnimationRootNode_MethodBind_List :: struct {
 };
 AnimationRootNode_Init_ :: proc (AnimationRootNode_methods: ^AnimationRootNode_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

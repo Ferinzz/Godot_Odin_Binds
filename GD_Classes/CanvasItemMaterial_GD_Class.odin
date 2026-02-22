@@ -21,32 +21,6 @@ CanvasItemMaterial_LightMode :: enum i64 {
   LIGHT_MODE_UNSHADED = 1,
   LIGHT_MODE_LIGHT_ONLY = 2,
 };
-CanvasItemMaterial_properties :: struct {
-  blend_mode_Int : struct {
-  get_blend_mode: proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Int),
-  set_blend_mode: proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Int),
-  },
-  light_mode_Int : struct {
-  get_light_mode: proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Int),
-  set_light_mode: proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Int),
-  },
-  particles_animation_Bool : struct {
-  get_particles_animation: proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Bool),
-  set_particles_animation: proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Bool),
-  },
-  particles_anim_h_frames_Int : struct {
-  get_particles_anim_h_frames: proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Int),
-  set_particles_anim_h_frames: proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Int),
-  },
-  particles_anim_v_frames_Int : struct {
-  get_particles_anim_v_frames: proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Int),
-  set_particles_anim_v_frames: proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Int),
-  },
-  particles_anim_loop_Bool : struct {
-  get_particles_anim_loop: proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Bool),
-  set_particles_anim_loop: proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Bool),
-  },
-};
 CanvasItemMaterial_MethodBind_List :: struct {
   set_blend_mode: struct{
     using _set_blend_mode: ^GDW.MethodBind,
@@ -98,48 +72,29 @@ CanvasItemMaterial_MethodBind_List :: struct {
   },
 };
 CanvasItemMaterial_Init_ :: proc (CanvasItemMaterial_methods: ^CanvasItemMaterial_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   CanvasItemMaterial_methods.set_blend_mode._set_blend_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "set_blend_mode", 1786054936, loc))
-  CanvasItemMaterial_methods.set_blend_mode.m_call = cast(type_of(CanvasItemMaterial_methods.set_blend_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.set_blend_mode.m_call = cast(type_of(CanvasItemMaterial_methods.set_blend_mode.m_call))MB_ptr_call
   CanvasItemMaterial_methods.get_blend_mode._get_blend_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "get_blend_mode", 3318684035, loc))
-  CanvasItemMaterial_methods.get_blend_mode.m_call = cast(type_of(CanvasItemMaterial_methods.get_blend_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.get_blend_mode.m_call = cast(type_of(CanvasItemMaterial_methods.get_blend_mode.m_call))MB_ptr_call
   CanvasItemMaterial_methods.set_light_mode._set_light_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "set_light_mode", 628074070, loc))
-  CanvasItemMaterial_methods.set_light_mode.m_call = cast(type_of(CanvasItemMaterial_methods.set_light_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.set_light_mode.m_call = cast(type_of(CanvasItemMaterial_methods.set_light_mode.m_call))MB_ptr_call
   CanvasItemMaterial_methods.get_light_mode._get_light_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "get_light_mode", 3863292382, loc))
-  CanvasItemMaterial_methods.get_light_mode.m_call = cast(type_of(CanvasItemMaterial_methods.get_light_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.get_light_mode.m_call = cast(type_of(CanvasItemMaterial_methods.get_light_mode.m_call))MB_ptr_call
   CanvasItemMaterial_methods.set_particles_animation._set_particles_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "set_particles_animation", 2586408642, loc))
-  CanvasItemMaterial_methods.set_particles_animation.m_call = cast(type_of(CanvasItemMaterial_methods.set_particles_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.set_particles_animation.m_call = cast(type_of(CanvasItemMaterial_methods.set_particles_animation.m_call))MB_ptr_call
   CanvasItemMaterial_methods.get_particles_animation._get_particles_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "get_particles_animation", 36873697, loc))
-  CanvasItemMaterial_methods.get_particles_animation.m_call = cast(type_of(CanvasItemMaterial_methods.get_particles_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.get_particles_animation.m_call = cast(type_of(CanvasItemMaterial_methods.get_particles_animation.m_call))MB_ptr_call
   CanvasItemMaterial_methods.set_particles_anim_h_frames._set_particles_anim_h_frames = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "set_particles_anim_h_frames", 1286410249, loc))
-  CanvasItemMaterial_methods.set_particles_anim_h_frames.m_call = cast(type_of(CanvasItemMaterial_methods.set_particles_anim_h_frames.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.set_particles_anim_h_frames.m_call = cast(type_of(CanvasItemMaterial_methods.set_particles_anim_h_frames.m_call))MB_ptr_call
   CanvasItemMaterial_methods.get_particles_anim_h_frames._get_particles_anim_h_frames = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "get_particles_anim_h_frames", 3905245786, loc))
-  CanvasItemMaterial_methods.get_particles_anim_h_frames.m_call = cast(type_of(CanvasItemMaterial_methods.get_particles_anim_h_frames.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.get_particles_anim_h_frames.m_call = cast(type_of(CanvasItemMaterial_methods.get_particles_anim_h_frames.m_call))MB_ptr_call
   CanvasItemMaterial_methods.set_particles_anim_v_frames._set_particles_anim_v_frames = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "set_particles_anim_v_frames", 1286410249, loc))
-  CanvasItemMaterial_methods.set_particles_anim_v_frames.m_call = cast(type_of(CanvasItemMaterial_methods.set_particles_anim_v_frames.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.set_particles_anim_v_frames.m_call = cast(type_of(CanvasItemMaterial_methods.set_particles_anim_v_frames.m_call))MB_ptr_call
   CanvasItemMaterial_methods.get_particles_anim_v_frames._get_particles_anim_v_frames = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "get_particles_anim_v_frames", 3905245786, loc))
-  CanvasItemMaterial_methods.get_particles_anim_v_frames.m_call = cast(type_of(CanvasItemMaterial_methods.get_particles_anim_v_frames.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.get_particles_anim_v_frames.m_call = cast(type_of(CanvasItemMaterial_methods.get_particles_anim_v_frames.m_call))MB_ptr_call
   CanvasItemMaterial_methods.set_particles_anim_loop._set_particles_anim_loop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "set_particles_anim_loop", 2586408642, loc))
-  CanvasItemMaterial_methods.set_particles_anim_loop.m_call = cast(type_of(CanvasItemMaterial_methods.set_particles_anim_loop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItemMaterial_methods.set_particles_anim_loop.m_call = cast(type_of(CanvasItemMaterial_methods.set_particles_anim_loop.m_call))MB_ptr_call
   CanvasItemMaterial_methods.get_particles_anim_loop._get_particles_anim_loop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItemMaterial, "get_particles_anim_loop", 36873697, loc))
-  CanvasItemMaterial_methods.get_particles_anim_loop.m_call = cast(type_of(CanvasItemMaterial_methods.get_particles_anim_loop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-CanvasItemMaterial_init_props :: proc(CanvasItemMaterial_prop: ^CanvasItemMaterial_properties, loc:= #caller_location) {
-
-  CanvasItemMaterial_prop.blend_mode_Int.get_blend_mode = cast(proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_blend_mode")
-  CanvasItemMaterial_prop.blend_mode_Int.set_blend_mode = cast(proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_blend_mode")
-
-  CanvasItemMaterial_prop.light_mode_Int.get_light_mode = cast(proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_light_mode")
-  CanvasItemMaterial_prop.light_mode_Int.set_light_mode = cast(proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_light_mode")
-
-  CanvasItemMaterial_prop.particles_animation_Bool.get_particles_animation = cast(proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_particles_animation")
-  CanvasItemMaterial_prop.particles_animation_Bool.set_particles_animation = cast(proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_particles_animation")
-
-  CanvasItemMaterial_prop.particles_anim_h_frames_Int.get_particles_anim_h_frames = cast(proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_particles_anim_h_frames")
-  CanvasItemMaterial_prop.particles_anim_h_frames_Int.set_particles_anim_h_frames = cast(proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_particles_anim_h_frames")
-
-  CanvasItemMaterial_prop.particles_anim_v_frames_Int.get_particles_anim_v_frames = cast(proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_particles_anim_v_frames")
-  CanvasItemMaterial_prop.particles_anim_v_frames_Int.set_particles_anim_v_frames = cast(proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_particles_anim_v_frames")
-
-  CanvasItemMaterial_prop.particles_anim_loop_Bool.get_particles_anim_loop = cast(proc "c" (p_base: CanvasItemMaterial, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_particles_anim_loop")
-  CanvasItemMaterial_prop.particles_anim_loop_Bool.set_particles_anim_loop = cast(proc "c" (p_base: CanvasItemMaterial, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_particles_anim_loop")
+  CanvasItemMaterial_methods.get_particles_anim_loop.m_call = cast(type_of(CanvasItemMaterial_methods.get_particles_anim_loop.m_call))MB_ptr_call
 };

@@ -7,16 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 RDUniform :: ^GDW.Object
 
-RDUniform_properties :: struct {
-  uniform_type_Int : struct {
-  get_uniform_type: proc "c" (p_base: RDUniform, r_value: ^GDW.Int),
-  set_uniform_type: proc "c" (p_base: RDUniform, p_value: ^GDW.Int),
-  },
-  binding_Int : struct {
-  get_binding: proc "c" (p_base: RDUniform, r_value: ^GDW.Int),
-  set_binding: proc "c" (p_base: RDUniform, p_value: ^GDW.Int),
-  },
-};
 RDUniform_MethodBind_List :: struct {
   set_uniform_type: struct{
     using _set_uniform_type: ^GDW.MethodBind,
@@ -48,26 +38,19 @@ RDUniform_MethodBind_List :: struct {
   },
 };
 RDUniform_Init_ :: proc (RDUniform_methods: ^RDUniform_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   RDUniform_methods.set_uniform_type._set_uniform_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RDUniform, "set_uniform_type", 1664894931, loc))
-  RDUniform_methods.set_uniform_type.m_call = cast(type_of(RDUniform_methods.set_uniform_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RDUniform_methods.set_uniform_type.m_call = cast(type_of(RDUniform_methods.set_uniform_type.m_call))MB_ptr_call
   RDUniform_methods.get_uniform_type._get_uniform_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RDUniform, "get_uniform_type", 475470040, loc))
-  RDUniform_methods.get_uniform_type.m_call = cast(type_of(RDUniform_methods.get_uniform_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RDUniform_methods.get_uniform_type.m_call = cast(type_of(RDUniform_methods.get_uniform_type.m_call))MB_ptr_call
   RDUniform_methods.set_binding._set_binding = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RDUniform, "set_binding", 1286410249, loc))
-  RDUniform_methods.set_binding.m_call = cast(type_of(RDUniform_methods.set_binding.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RDUniform_methods.set_binding.m_call = cast(type_of(RDUniform_methods.set_binding.m_call))MB_ptr_call
   RDUniform_methods.get_binding._get_binding = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RDUniform, "get_binding", 3905245786, loc))
-  RDUniform_methods.get_binding.m_call = cast(type_of(RDUniform_methods.get_binding.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RDUniform_methods.get_binding.m_call = cast(type_of(RDUniform_methods.get_binding.m_call))MB_ptr_call
   RDUniform_methods.add_id._add_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RDUniform, "add_id", 2722037293, loc))
-  RDUniform_methods.add_id.m_call = cast(type_of(RDUniform_methods.add_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RDUniform_methods.add_id.m_call = cast(type_of(RDUniform_methods.add_id.m_call))MB_ptr_call
   RDUniform_methods.clear_ids._clear_ids = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RDUniform, "clear_ids", 3218959716, loc))
-  RDUniform_methods.clear_ids.m_call = cast(type_of(RDUniform_methods.clear_ids.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RDUniform_methods.clear_ids.m_call = cast(type_of(RDUniform_methods.clear_ids.m_call))MB_ptr_call
   RDUniform_methods.get_ids._get_ids = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RDUniform, "get_ids", 3995934104, loc))
-  RDUniform_methods.get_ids.m_call = cast(type_of(RDUniform_methods.get_ids.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-RDUniform_init_props :: proc(RDUniform_prop: ^RDUniform_properties, loc:= #caller_location) {
-
-  RDUniform_prop.uniform_type_Int.get_uniform_type = cast(proc "c" (p_base: RDUniform, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_uniform_type")
-  RDUniform_prop.uniform_type_Int.set_uniform_type = cast(proc "c" (p_base: RDUniform, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_uniform_type")
-
-  RDUniform_prop.binding_Int.get_binding = cast(proc "c" (p_base: RDUniform, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_binding")
-  RDUniform_prop.binding_Int.set_binding = cast(proc "c" (p_base: RDUniform, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_binding")
+  RDUniform_methods.get_ids.m_call = cast(type_of(RDUniform_methods.get_ids.m_call))MB_ptr_call
 };

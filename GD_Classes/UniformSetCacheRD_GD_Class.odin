@@ -14,6 +14,7 @@ UniformSetCacheRD_MethodBind_List :: struct {
   },
 };
 UniformSetCacheRD_Init_ :: proc (UniformSetCacheRD_methods: ^UniformSetCacheRD_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   UniformSetCacheRD_methods.get_cache._get_cache = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UniformSetCacheRD, "get_cache", 658571723, loc))
-  UniformSetCacheRD_methods.get_cache.m_call = cast(type_of(UniformSetCacheRD_methods.get_cache.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UniformSetCacheRD_methods.get_cache.m_call = cast(type_of(UniformSetCacheRD_methods.get_cache.m_call))MB_ptr_call
 };

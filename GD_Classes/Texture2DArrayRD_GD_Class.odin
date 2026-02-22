@@ -10,4 +10,5 @@ Texture2DArrayRD :: ^GDW.Object
 Texture2DArrayRD_MethodBind_List :: struct {
 };
 Texture2DArrayRD_Init_ :: proc (Texture2DArrayRD_methods: ^Texture2DArrayRD_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

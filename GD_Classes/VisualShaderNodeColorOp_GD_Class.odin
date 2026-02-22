@@ -20,12 +20,6 @@ VisualShaderNodeColorOp_Operator :: enum i64 {
   OP_HARD_LIGHT = 8,
   OP_MAX = 9,
 };
-VisualShaderNodeColorOp_properties :: struct {
-  operator_Int : struct {
-  get_operator: proc "c" (p_base: VisualShaderNodeColorOp, r_value: ^GDW.Int),
-  set_operator: proc "c" (p_base: VisualShaderNodeColorOp, p_value: ^GDW.Int),
-  },
-};
 VisualShaderNodeColorOp_MethodBind_List :: struct {
   set_operator: struct{
     using _set_operator: ^GDW.MethodBind,
@@ -37,13 +31,9 @@ VisualShaderNodeColorOp_MethodBind_List :: struct {
   },
 };
 VisualShaderNodeColorOp_Init_ :: proc (VisualShaderNodeColorOp_methods: ^VisualShaderNodeColorOp_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   VisualShaderNodeColorOp_methods.set_operator._set_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeColorOp, "set_operator", 4260370673, loc))
-  VisualShaderNodeColorOp_methods.set_operator.m_call = cast(type_of(VisualShaderNodeColorOp_methods.set_operator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeColorOp_methods.set_operator.m_call = cast(type_of(VisualShaderNodeColorOp_methods.set_operator.m_call))MB_ptr_call
   VisualShaderNodeColorOp_methods.get_operator._get_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeColorOp, "get_operator", 1950956529, loc))
-  VisualShaderNodeColorOp_methods.get_operator.m_call = cast(type_of(VisualShaderNodeColorOp_methods.get_operator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-VisualShaderNodeColorOp_init_props :: proc(VisualShaderNodeColorOp_prop: ^VisualShaderNodeColorOp_properties, loc:= #caller_location) {
-
-  VisualShaderNodeColorOp_prop.operator_Int.get_operator = cast(proc "c" (p_base: VisualShaderNodeColorOp, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_operator")
-  VisualShaderNodeColorOp_prop.operator_Int.set_operator = cast(proc "c" (p_base: VisualShaderNodeColorOp, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_operator")
+  VisualShaderNodeColorOp_methods.get_operator.m_call = cast(type_of(VisualShaderNodeColorOp_methods.get_operator.m_call))MB_ptr_call
 };

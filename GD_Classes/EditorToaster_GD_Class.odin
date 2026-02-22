@@ -20,6 +20,7 @@ EditorToaster_MethodBind_List :: struct {
   },
   };
 EditorToaster_Init_ :: proc (EditorToaster_methods: ^EditorToaster_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorToaster_methods.push_toast._push_toast = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorToaster, "push_toast", 1813923476, loc))
-  EditorToaster_methods.push_toast.m_call = cast(type_of(EditorToaster_methods.push_toast.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorToaster_methods.push_toast.m_call = cast(type_of(EditorToaster_methods.push_toast.m_call))MB_ptr_call
 };

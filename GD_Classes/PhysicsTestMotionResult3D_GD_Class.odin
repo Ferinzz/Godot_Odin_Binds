@@ -66,32 +66,33 @@ PhysicsTestMotionResult3D_MethodBind_List :: struct {
   },
 };
 PhysicsTestMotionResult3D_Init_ :: proc (PhysicsTestMotionResult3D_methods: ^PhysicsTestMotionResult3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PhysicsTestMotionResult3D_methods.get_travel._get_travel = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_travel", 3360562783, loc))
-  PhysicsTestMotionResult3D_methods.get_travel.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_travel.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_travel.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_travel.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_remainder._get_remainder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_remainder", 3360562783, loc))
-  PhysicsTestMotionResult3D_methods.get_remainder.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_remainder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_remainder.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_remainder.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collision_safe_fraction._get_collision_safe_fraction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collision_safe_fraction", 1740695150, loc))
-  PhysicsTestMotionResult3D_methods.get_collision_safe_fraction.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_safe_fraction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collision_safe_fraction.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_safe_fraction.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collision_unsafe_fraction._get_collision_unsafe_fraction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collision_unsafe_fraction", 1740695150, loc))
-  PhysicsTestMotionResult3D_methods.get_collision_unsafe_fraction.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_unsafe_fraction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collision_unsafe_fraction.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_unsafe_fraction.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collision_count._get_collision_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collision_count", 3905245786, loc))
-  PhysicsTestMotionResult3D_methods.get_collision_count.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collision_count.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_count.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collision_point._get_collision_point = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collision_point", 1914908202, loc))
-  PhysicsTestMotionResult3D_methods.get_collision_point.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_point.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collision_point.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_point.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collision_normal._get_collision_normal = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collision_normal", 1914908202, loc))
-  PhysicsTestMotionResult3D_methods.get_collision_normal.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_normal.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collision_normal.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_normal.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collider_velocity._get_collider_velocity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collider_velocity", 1914908202, loc))
-  PhysicsTestMotionResult3D_methods.get_collider_velocity.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider_velocity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collider_velocity.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider_velocity.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collider_id._get_collider_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collider_id", 1591665591, loc))
-  PhysicsTestMotionResult3D_methods.get_collider_id.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collider_id.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider_id.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collider_rid._get_collider_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collider_rid", 1231817359, loc))
-  PhysicsTestMotionResult3D_methods.get_collider_rid.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collider_rid.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider_rid.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collider._get_collider = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collider", 2639523548, loc))
-  PhysicsTestMotionResult3D_methods.get_collider.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collider.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collider_shape._get_collider_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collider_shape", 1591665591, loc))
-  PhysicsTestMotionResult3D_methods.get_collider_shape.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collider_shape.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collider_shape.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collision_local_shape._get_collision_local_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collision_local_shape", 1591665591, loc))
-  PhysicsTestMotionResult3D_methods.get_collision_local_shape.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_local_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collision_local_shape.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_local_shape.m_call))MB_ptr_call
   PhysicsTestMotionResult3D_methods.get_collision_depth._get_collision_depth = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsTestMotionResult3D, "get_collision_depth", 218038398, loc))
-  PhysicsTestMotionResult3D_methods.get_collision_depth.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_depth.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsTestMotionResult3D_methods.get_collision_depth.m_call = cast(type_of(PhysicsTestMotionResult3D_methods.get_collision_depth.m_call))MB_ptr_call
 };

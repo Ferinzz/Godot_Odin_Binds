@@ -34,16 +34,17 @@ TileSetSource_MethodBind_List :: struct {
   },
 };
 TileSetSource_Init_ :: proc (TileSetSource_methods: ^TileSetSource_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   TileSetSource_methods.get_tiles_count._get_tiles_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetSource, "get_tiles_count", 3905245786, loc))
-  TileSetSource_methods.get_tiles_count.m_call = cast(type_of(TileSetSource_methods.get_tiles_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetSource_methods.get_tiles_count.m_call = cast(type_of(TileSetSource_methods.get_tiles_count.m_call))MB_ptr_call
   TileSetSource_methods.get_tile_id._get_tile_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetSource, "get_tile_id", 880721226, loc))
-  TileSetSource_methods.get_tile_id.m_call = cast(type_of(TileSetSource_methods.get_tile_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetSource_methods.get_tile_id.m_call = cast(type_of(TileSetSource_methods.get_tile_id.m_call))MB_ptr_call
   TileSetSource_methods.has_tile._has_tile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetSource, "has_tile", 3900751641, loc))
-  TileSetSource_methods.has_tile.m_call = cast(type_of(TileSetSource_methods.has_tile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetSource_methods.has_tile.m_call = cast(type_of(TileSetSource_methods.has_tile.m_call))MB_ptr_call
   TileSetSource_methods.get_alternative_tiles_count._get_alternative_tiles_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetSource, "get_alternative_tiles_count", 2485466453, loc))
-  TileSetSource_methods.get_alternative_tiles_count.m_call = cast(type_of(TileSetSource_methods.get_alternative_tiles_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetSource_methods.get_alternative_tiles_count.m_call = cast(type_of(TileSetSource_methods.get_alternative_tiles_count.m_call))MB_ptr_call
   TileSetSource_methods.get_alternative_tile_id._get_alternative_tile_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetSource, "get_alternative_tile_id", 89881719, loc))
-  TileSetSource_methods.get_alternative_tile_id.m_call = cast(type_of(TileSetSource_methods.get_alternative_tile_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetSource_methods.get_alternative_tile_id.m_call = cast(type_of(TileSetSource_methods.get_alternative_tile_id.m_call))MB_ptr_call
   TileSetSource_methods.has_alternative_tile._has_alternative_tile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TileSetSource, "has_alternative_tile", 1073731340, loc))
-  TileSetSource_methods.has_alternative_tile.m_call = cast(type_of(TileSetSource_methods.has_alternative_tile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TileSetSource_methods.has_alternative_tile.m_call = cast(type_of(TileSetSource_methods.has_alternative_tile.m_call))MB_ptr_call
 };

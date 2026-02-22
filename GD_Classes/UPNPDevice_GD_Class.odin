@@ -20,32 +20,6 @@ UPNPDevice_IGDStatus :: enum i64 {
   IGD_STATUS_MALLOC_ERROR = 8,
   IGD_STATUS_UNKNOWN_ERROR = 9,
 };
-UPNPDevice_properties :: struct {
-  description_url_gdstring : struct {
-  get_description_url: proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring),
-  set_description_url: proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring),
-  },
-  service_type_gdstring : struct {
-  get_service_type: proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring),
-  set_service_type: proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring),
-  },
-  igd_control_url_gdstring : struct {
-  get_igd_control_url: proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring),
-  set_igd_control_url: proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring),
-  },
-  igd_service_type_gdstring : struct {
-  get_igd_service_type: proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring),
-  set_igd_service_type: proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring),
-  },
-  igd_our_addr_gdstring : struct {
-  get_igd_our_addr: proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring),
-  set_igd_our_addr: proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring),
-  },
-  igd_status_Int : struct {
-  get_igd_status: proc "c" (p_base: UPNPDevice, r_value: ^GDW.Int),
-  set_igd_status: proc "c" (p_base: UPNPDevice, p_value: ^GDW.Int),
-  },
-};
 UPNPDevice_MethodBind_List :: struct {
   is_valid_gateway: struct{
     using _is_valid_gateway: ^GDW.MethodBind,
@@ -113,56 +87,37 @@ UPNPDevice_MethodBind_List :: struct {
   },
 };
 UPNPDevice_Init_ :: proc (UPNPDevice_methods: ^UPNPDevice_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   UPNPDevice_methods.is_valid_gateway._is_valid_gateway = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "is_valid_gateway", 36873697, loc))
-  UPNPDevice_methods.is_valid_gateway.m_call = cast(type_of(UPNPDevice_methods.is_valid_gateway.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.is_valid_gateway.m_call = cast(type_of(UPNPDevice_methods.is_valid_gateway.m_call))MB_ptr_call
   UPNPDevice_methods.query_external_address._query_external_address = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "query_external_address", 201670096, loc))
-  UPNPDevice_methods.query_external_address.m_call = cast(type_of(UPNPDevice_methods.query_external_address.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.query_external_address.m_call = cast(type_of(UPNPDevice_methods.query_external_address.m_call))MB_ptr_call
   UPNPDevice_methods.add_port_mapping._add_port_mapping = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "add_port_mapping", 818314583, loc))
-  UPNPDevice_methods.add_port_mapping.m_call = cast(type_of(UPNPDevice_methods.add_port_mapping.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.add_port_mapping.m_call = cast(type_of(UPNPDevice_methods.add_port_mapping.m_call))MB_ptr_call
   UPNPDevice_methods.delete_port_mapping._delete_port_mapping = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "delete_port_mapping", 3444187325, loc))
-  UPNPDevice_methods.delete_port_mapping.m_call = cast(type_of(UPNPDevice_methods.delete_port_mapping.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.delete_port_mapping.m_call = cast(type_of(UPNPDevice_methods.delete_port_mapping.m_call))MB_ptr_call
   UPNPDevice_methods.set_description_url._set_description_url = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "set_description_url", 83702148, loc))
-  UPNPDevice_methods.set_description_url.m_call = cast(type_of(UPNPDevice_methods.set_description_url.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.set_description_url.m_call = cast(type_of(UPNPDevice_methods.set_description_url.m_call))MB_ptr_call
   UPNPDevice_methods.get_description_url._get_description_url = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "get_description_url", 201670096, loc))
-  UPNPDevice_methods.get_description_url.m_call = cast(type_of(UPNPDevice_methods.get_description_url.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.get_description_url.m_call = cast(type_of(UPNPDevice_methods.get_description_url.m_call))MB_ptr_call
   UPNPDevice_methods.set_service_type._set_service_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "set_service_type", 83702148, loc))
-  UPNPDevice_methods.set_service_type.m_call = cast(type_of(UPNPDevice_methods.set_service_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.set_service_type.m_call = cast(type_of(UPNPDevice_methods.set_service_type.m_call))MB_ptr_call
   UPNPDevice_methods.get_service_type._get_service_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "get_service_type", 201670096, loc))
-  UPNPDevice_methods.get_service_type.m_call = cast(type_of(UPNPDevice_methods.get_service_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.get_service_type.m_call = cast(type_of(UPNPDevice_methods.get_service_type.m_call))MB_ptr_call
   UPNPDevice_methods.set_igd_control_url._set_igd_control_url = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "set_igd_control_url", 83702148, loc))
-  UPNPDevice_methods.set_igd_control_url.m_call = cast(type_of(UPNPDevice_methods.set_igd_control_url.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.set_igd_control_url.m_call = cast(type_of(UPNPDevice_methods.set_igd_control_url.m_call))MB_ptr_call
   UPNPDevice_methods.get_igd_control_url._get_igd_control_url = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "get_igd_control_url", 201670096, loc))
-  UPNPDevice_methods.get_igd_control_url.m_call = cast(type_of(UPNPDevice_methods.get_igd_control_url.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.get_igd_control_url.m_call = cast(type_of(UPNPDevice_methods.get_igd_control_url.m_call))MB_ptr_call
   UPNPDevice_methods.set_igd_service_type._set_igd_service_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "set_igd_service_type", 83702148, loc))
-  UPNPDevice_methods.set_igd_service_type.m_call = cast(type_of(UPNPDevice_methods.set_igd_service_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.set_igd_service_type.m_call = cast(type_of(UPNPDevice_methods.set_igd_service_type.m_call))MB_ptr_call
   UPNPDevice_methods.get_igd_service_type._get_igd_service_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "get_igd_service_type", 201670096, loc))
-  UPNPDevice_methods.get_igd_service_type.m_call = cast(type_of(UPNPDevice_methods.get_igd_service_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.get_igd_service_type.m_call = cast(type_of(UPNPDevice_methods.get_igd_service_type.m_call))MB_ptr_call
   UPNPDevice_methods.set_igd_our_addr._set_igd_our_addr = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "set_igd_our_addr", 83702148, loc))
-  UPNPDevice_methods.set_igd_our_addr.m_call = cast(type_of(UPNPDevice_methods.set_igd_our_addr.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.set_igd_our_addr.m_call = cast(type_of(UPNPDevice_methods.set_igd_our_addr.m_call))MB_ptr_call
   UPNPDevice_methods.get_igd_our_addr._get_igd_our_addr = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "get_igd_our_addr", 201670096, loc))
-  UPNPDevice_methods.get_igd_our_addr.m_call = cast(type_of(UPNPDevice_methods.get_igd_our_addr.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.get_igd_our_addr.m_call = cast(type_of(UPNPDevice_methods.get_igd_our_addr.m_call))MB_ptr_call
   UPNPDevice_methods.set_igd_status._set_igd_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "set_igd_status", 519504122, loc))
-  UPNPDevice_methods.set_igd_status.m_call = cast(type_of(UPNPDevice_methods.set_igd_status.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNPDevice_methods.set_igd_status.m_call = cast(type_of(UPNPDevice_methods.set_igd_status.m_call))MB_ptr_call
   UPNPDevice_methods.get_igd_status._get_igd_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNPDevice, "get_igd_status", 180887011, loc))
-  UPNPDevice_methods.get_igd_status.m_call = cast(type_of(UPNPDevice_methods.get_igd_status.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-UPNPDevice_init_props :: proc(UPNPDevice_prop: ^UPNPDevice_properties, loc:= #caller_location) {
-
-  UPNPDevice_prop.description_url_gdstring.get_description_url = cast(proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_description_url")
-  UPNPDevice_prop.description_url_gdstring.set_description_url = cast(proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_description_url")
-
-  UPNPDevice_prop.service_type_gdstring.get_service_type = cast(proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_service_type")
-  UPNPDevice_prop.service_type_gdstring.set_service_type = cast(proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_service_type")
-
-  UPNPDevice_prop.igd_control_url_gdstring.get_igd_control_url = cast(proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_igd_control_url")
-  UPNPDevice_prop.igd_control_url_gdstring.set_igd_control_url = cast(proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_igd_control_url")
-
-  UPNPDevice_prop.igd_service_type_gdstring.get_igd_service_type = cast(proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_igd_service_type")
-  UPNPDevice_prop.igd_service_type_gdstring.set_igd_service_type = cast(proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_igd_service_type")
-
-  UPNPDevice_prop.igd_our_addr_gdstring.get_igd_our_addr = cast(proc "c" (p_base: UPNPDevice, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_igd_our_addr")
-  UPNPDevice_prop.igd_our_addr_gdstring.set_igd_our_addr = cast(proc "c" (p_base: UPNPDevice, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_igd_our_addr")
-
-  UPNPDevice_prop.igd_status_Int.get_igd_status = cast(proc "c" (p_base: UPNPDevice, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_igd_status")
-  UPNPDevice_prop.igd_status_Int.set_igd_status = cast(proc "c" (p_base: UPNPDevice, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_igd_status")
+  UPNPDevice_methods.get_igd_status.m_call = cast(type_of(UPNPDevice_methods.get_igd_status.m_call))MB_ptr_call
 };

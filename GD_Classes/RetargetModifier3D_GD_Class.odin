@@ -15,20 +15,6 @@ RetargetModifier3D_TransformFlag :: enum i64 {
   TRANSFORM_FLAG_SCALE,
   TRANSFORM_FLAG_ALL,
 };
-RetargetModifier3D_properties :: struct {
-  profile_SkeletonProfile : struct {
-    get_profile: proc "c" (p_base: RetargetModifier3D, r_value: ^SkeletonProfile),
-    set_profile: proc "c" (p_base: RetargetModifier3D, p_value: ^SkeletonProfile),
-  },
-  use_global_pose_Bool : struct {
-  is_using_global_pose: proc "c" (p_base: RetargetModifier3D, r_value: ^GDW.Bool),
-  set_use_global_pose: proc "c" (p_base: RetargetModifier3D, p_value: ^GDW.Bool),
-  },
-  enable_Int : struct {
-  get_enable_flags: proc "c" (p_base: RetargetModifier3D, r_value: ^GDW.Int),
-  set_enable_flags: proc "c" (p_base: RetargetModifier3D, p_value: ^GDW.Int),
-  },
-};
 RetargetModifier3D_MethodBind_List :: struct {
   set_profile: struct{
     using _set_profile: ^GDW.MethodBind,
@@ -80,39 +66,29 @@ RetargetModifier3D_MethodBind_List :: struct {
   },
 };
 RetargetModifier3D_Init_ :: proc (RetargetModifier3D_methods: ^RetargetModifier3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   RetargetModifier3D_methods.set_profile._set_profile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "set_profile", 3870374136, loc))
-  RetargetModifier3D_methods.set_profile.m_call = cast(type_of(RetargetModifier3D_methods.set_profile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.set_profile.m_call = cast(type_of(RetargetModifier3D_methods.set_profile.m_call))MB_ptr_call
   RetargetModifier3D_methods.get_profile._get_profile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "get_profile", 4291782652, loc))
-  RetargetModifier3D_methods.get_profile.m_call = cast(type_of(RetargetModifier3D_methods.get_profile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.get_profile.m_call = cast(type_of(RetargetModifier3D_methods.get_profile.m_call))MB_ptr_call
   RetargetModifier3D_methods.set_use_global_pose._set_use_global_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "set_use_global_pose", 2586408642, loc))
-  RetargetModifier3D_methods.set_use_global_pose.m_call = cast(type_of(RetargetModifier3D_methods.set_use_global_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.set_use_global_pose.m_call = cast(type_of(RetargetModifier3D_methods.set_use_global_pose.m_call))MB_ptr_call
   RetargetModifier3D_methods.is_using_global_pose._is_using_global_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "is_using_global_pose", 36873697, loc))
-  RetargetModifier3D_methods.is_using_global_pose.m_call = cast(type_of(RetargetModifier3D_methods.is_using_global_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.is_using_global_pose.m_call = cast(type_of(RetargetModifier3D_methods.is_using_global_pose.m_call))MB_ptr_call
   RetargetModifier3D_methods.set_enable_flags._set_enable_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "set_enable_flags", 2687954213, loc))
-  RetargetModifier3D_methods.set_enable_flags.m_call = cast(type_of(RetargetModifier3D_methods.set_enable_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.set_enable_flags.m_call = cast(type_of(RetargetModifier3D_methods.set_enable_flags.m_call))MB_ptr_call
   RetargetModifier3D_methods.get_enable_flags._get_enable_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "get_enable_flags", 358995420, loc))
-  RetargetModifier3D_methods.get_enable_flags.m_call = cast(type_of(RetargetModifier3D_methods.get_enable_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.get_enable_flags.m_call = cast(type_of(RetargetModifier3D_methods.get_enable_flags.m_call))MB_ptr_call
   RetargetModifier3D_methods.set_position_enabled._set_position_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "set_position_enabled", 2586408642, loc))
-  RetargetModifier3D_methods.set_position_enabled.m_call = cast(type_of(RetargetModifier3D_methods.set_position_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.set_position_enabled.m_call = cast(type_of(RetargetModifier3D_methods.set_position_enabled.m_call))MB_ptr_call
   RetargetModifier3D_methods.is_position_enabled._is_position_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "is_position_enabled", 36873697, loc))
-  RetargetModifier3D_methods.is_position_enabled.m_call = cast(type_of(RetargetModifier3D_methods.is_position_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.is_position_enabled.m_call = cast(type_of(RetargetModifier3D_methods.is_position_enabled.m_call))MB_ptr_call
   RetargetModifier3D_methods.set_rotation_enabled._set_rotation_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "set_rotation_enabled", 2586408642, loc))
-  RetargetModifier3D_methods.set_rotation_enabled.m_call = cast(type_of(RetargetModifier3D_methods.set_rotation_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.set_rotation_enabled.m_call = cast(type_of(RetargetModifier3D_methods.set_rotation_enabled.m_call))MB_ptr_call
   RetargetModifier3D_methods.is_rotation_enabled._is_rotation_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "is_rotation_enabled", 36873697, loc))
-  RetargetModifier3D_methods.is_rotation_enabled.m_call = cast(type_of(RetargetModifier3D_methods.is_rotation_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.is_rotation_enabled.m_call = cast(type_of(RetargetModifier3D_methods.is_rotation_enabled.m_call))MB_ptr_call
   RetargetModifier3D_methods.set_scale_enabled._set_scale_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "set_scale_enabled", 2586408642, loc))
-  RetargetModifier3D_methods.set_scale_enabled.m_call = cast(type_of(RetargetModifier3D_methods.set_scale_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RetargetModifier3D_methods.set_scale_enabled.m_call = cast(type_of(RetargetModifier3D_methods.set_scale_enabled.m_call))MB_ptr_call
   RetargetModifier3D_methods.is_scale_enabled._is_scale_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RetargetModifier3D, "is_scale_enabled", 36873697, loc))
-  RetargetModifier3D_methods.is_scale_enabled.m_call = cast(type_of(RetargetModifier3D_methods.is_scale_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-RetargetModifier3D_init_props :: proc(RetargetModifier3D_prop: ^RetargetModifier3D_properties, loc:= #caller_location) {
-
-  RetargetModifier3D_prop.profile_SkeletonProfile.get_profile = cast(proc "c" (p_base: RetargetModifier3D, r_value: ^SkeletonProfile))GDW.Get_Method_Getter(.OBJECT, "get_profile")
-  RetargetModifier3D_prop.profile_SkeletonProfile.set_profile = cast(proc "c" (p_base: RetargetModifier3D, p_value: ^SkeletonProfile))GDW.Get_Method_Setter(.OBJECT, "set_profile")
-
-  RetargetModifier3D_prop.use_global_pose_Bool.is_using_global_pose = cast(proc "c" (p_base: RetargetModifier3D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_using_global_pose")
-  RetargetModifier3D_prop.use_global_pose_Bool.set_use_global_pose = cast(proc "c" (p_base: RetargetModifier3D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_use_global_pose")
-
-  RetargetModifier3D_prop.enable_Int.get_enable_flags = cast(proc "c" (p_base: RetargetModifier3D, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_enable_flags")
-  RetargetModifier3D_prop.enable_Int.set_enable_flags = cast(proc "c" (p_base: RetargetModifier3D, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_enable_flags")
+  RetargetModifier3D_methods.is_scale_enabled.m_call = cast(type_of(RetargetModifier3D_methods.is_scale_enabled.m_call))MB_ptr_call
 };

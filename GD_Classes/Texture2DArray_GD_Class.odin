@@ -14,6 +14,7 @@ Texture2DArray_MethodBind_List :: struct {
   },
 };
 Texture2DArray_Init_ :: proc (Texture2DArray_methods: ^Texture2DArray_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Texture2DArray_methods.create_placeholder._create_placeholder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2DArray, "create_placeholder", 121922552, loc))
-  Texture2DArray_methods.create_placeholder.m_call = cast(type_of(Texture2DArray_methods.create_placeholder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2DArray_methods.create_placeholder.m_call = cast(type_of(Texture2DArray_methods.create_placeholder.m_call))MB_ptr_call
 };

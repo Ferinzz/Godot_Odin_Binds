@@ -51,16 +51,17 @@ EditorNode3DGizmoPlugin_MethodBind_List :: struct {
   },
 };
 EditorNode3DGizmoPlugin_Init_ :: proc (EditorNode3DGizmoPlugin_methods: ^EditorNode3DGizmoPlugin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorNode3DGizmoPlugin_methods.create_material._create_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmoPlugin, "create_material", 3486012546, loc))
-  EditorNode3DGizmoPlugin_methods.create_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.create_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmoPlugin_methods.create_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.create_material.m_call))MB_ptr_call
   EditorNode3DGizmoPlugin_methods.create_icon_material._create_icon_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmoPlugin, "create_icon_material", 3804976916, loc))
-  EditorNode3DGizmoPlugin_methods.create_icon_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.create_icon_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmoPlugin_methods.create_icon_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.create_icon_material.m_call))MB_ptr_call
   EditorNode3DGizmoPlugin_methods.create_handle_material._create_handle_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmoPlugin, "create_handle_material", 2486475223, loc))
-  EditorNode3DGizmoPlugin_methods.create_handle_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.create_handle_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmoPlugin_methods.create_handle_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.create_handle_material.m_call))MB_ptr_call
   EditorNode3DGizmoPlugin_methods.add_material._add_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmoPlugin, "add_material", 1374068695, loc))
-  EditorNode3DGizmoPlugin_methods.add_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.add_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmoPlugin_methods.add_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.add_material.m_call))MB_ptr_call
   EditorNode3DGizmoPlugin_methods.get_material._get_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmoPlugin, "get_material", 974464017, loc))
-  EditorNode3DGizmoPlugin_methods.get_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.get_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmoPlugin_methods.get_material.m_call = cast(type_of(EditorNode3DGizmoPlugin_methods.get_material.m_call))MB_ptr_call
 };
 
 EditorNode3DGizmoPlugin_Init_Virtuals_Info :: proc(info: ^EditorNode3DGizmoPlugin_Virtual_Info) {

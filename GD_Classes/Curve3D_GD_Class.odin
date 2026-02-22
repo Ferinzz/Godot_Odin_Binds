@@ -7,24 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 Curve3D :: ^GDW.Object
 
-Curve3D_properties :: struct {
-  closed_Bool : struct {
-  is_closed: proc "c" (p_base: Curve3D, r_value: ^GDW.Bool),
-  set_closed: proc "c" (p_base: Curve3D, p_value: ^GDW.Bool),
-  },
-  bake_interval_float : struct {
-  get_bake_interval: proc "c" (p_base: Curve3D, r_value: ^GDW.float),
-  set_bake_interval: proc "c" (p_base: Curve3D, p_value: ^GDW.float),
-  },
-  point_count_Int : struct {
-  get_point_count: proc "c" (p_base: Curve3D, r_value: ^GDW.Int),
-  set_point_count: proc "c" (p_base: Curve3D, p_value: ^GDW.Int),
-  },
-  up_vector_enabled_Bool : struct {
-  is_up_vector_enabled: proc "c" (p_base: Curve3D, r_value: ^GDW.Bool),
-  set_up_vector_enabled: proc "c" (p_base: Curve3D, p_value: ^GDW.Bool),
-  },
-};
 Curve3D_MethodBind_List :: struct {
   get_point_count: struct{
     using _get_point_count: ^GDW.MethodBind,
@@ -156,82 +138,69 @@ Curve3D_MethodBind_List :: struct {
   },
 };
 Curve3D_Init_ :: proc (Curve3D_methods: ^Curve3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Curve3D_methods.get_point_count._get_point_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_point_count", 3905245786, loc))
-  Curve3D_methods.get_point_count.m_call = cast(type_of(Curve3D_methods.get_point_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_point_count.m_call = cast(type_of(Curve3D_methods.get_point_count.m_call))MB_ptr_call
   Curve3D_methods.set_point_count._set_point_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "set_point_count", 1286410249, loc))
-  Curve3D_methods.set_point_count.m_call = cast(type_of(Curve3D_methods.set_point_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.set_point_count.m_call = cast(type_of(Curve3D_methods.set_point_count.m_call))MB_ptr_call
   Curve3D_methods.add_point._add_point = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "add_point", 2931053748, loc))
-  Curve3D_methods.add_point.m_call = cast(type_of(Curve3D_methods.add_point.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.add_point.m_call = cast(type_of(Curve3D_methods.add_point.m_call))MB_ptr_call
   Curve3D_methods.set_point_position._set_point_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "set_point_position", 1530502735, loc))
-  Curve3D_methods.set_point_position.m_call = cast(type_of(Curve3D_methods.set_point_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.set_point_position.m_call = cast(type_of(Curve3D_methods.set_point_position.m_call))MB_ptr_call
   Curve3D_methods.get_point_position._get_point_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_point_position", 711720468, loc))
-  Curve3D_methods.get_point_position.m_call = cast(type_of(Curve3D_methods.get_point_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_point_position.m_call = cast(type_of(Curve3D_methods.get_point_position.m_call))MB_ptr_call
   Curve3D_methods.set_point_tilt._set_point_tilt = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "set_point_tilt", 1602489585, loc))
-  Curve3D_methods.set_point_tilt.m_call = cast(type_of(Curve3D_methods.set_point_tilt.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.set_point_tilt.m_call = cast(type_of(Curve3D_methods.set_point_tilt.m_call))MB_ptr_call
   Curve3D_methods.get_point_tilt._get_point_tilt = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_point_tilt", 2339986948, loc))
-  Curve3D_methods.get_point_tilt.m_call = cast(type_of(Curve3D_methods.get_point_tilt.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_point_tilt.m_call = cast(type_of(Curve3D_methods.get_point_tilt.m_call))MB_ptr_call
   Curve3D_methods.set_point_in._set_point_in = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "set_point_in", 1530502735, loc))
-  Curve3D_methods.set_point_in.m_call = cast(type_of(Curve3D_methods.set_point_in.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.set_point_in.m_call = cast(type_of(Curve3D_methods.set_point_in.m_call))MB_ptr_call
   Curve3D_methods.get_point_in._get_point_in = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_point_in", 711720468, loc))
-  Curve3D_methods.get_point_in.m_call = cast(type_of(Curve3D_methods.get_point_in.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_point_in.m_call = cast(type_of(Curve3D_methods.get_point_in.m_call))MB_ptr_call
   Curve3D_methods.set_point_out._set_point_out = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "set_point_out", 1530502735, loc))
-  Curve3D_methods.set_point_out.m_call = cast(type_of(Curve3D_methods.set_point_out.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.set_point_out.m_call = cast(type_of(Curve3D_methods.set_point_out.m_call))MB_ptr_call
   Curve3D_methods.get_point_out._get_point_out = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_point_out", 711720468, loc))
-  Curve3D_methods.get_point_out.m_call = cast(type_of(Curve3D_methods.get_point_out.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_point_out.m_call = cast(type_of(Curve3D_methods.get_point_out.m_call))MB_ptr_call
   Curve3D_methods.remove_point._remove_point = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "remove_point", 1286410249, loc))
-  Curve3D_methods.remove_point.m_call = cast(type_of(Curve3D_methods.remove_point.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.remove_point.m_call = cast(type_of(Curve3D_methods.remove_point.m_call))MB_ptr_call
   Curve3D_methods.clear_points._clear_points = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "clear_points", 3218959716, loc))
-  Curve3D_methods.clear_points.m_call = cast(type_of(Curve3D_methods.clear_points.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.clear_points.m_call = cast(type_of(Curve3D_methods.clear_points.m_call))MB_ptr_call
   Curve3D_methods.sample._sample = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "sample", 3285246857, loc))
-  Curve3D_methods.sample.m_call = cast(type_of(Curve3D_methods.sample.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.sample.m_call = cast(type_of(Curve3D_methods.sample.m_call))MB_ptr_call
   Curve3D_methods.samplef._samplef = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "samplef", 2553580215, loc))
-  Curve3D_methods.samplef.m_call = cast(type_of(Curve3D_methods.samplef.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.samplef.m_call = cast(type_of(Curve3D_methods.samplef.m_call))MB_ptr_call
   Curve3D_methods.set_closed._set_closed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "set_closed", 2586408642, loc))
-  Curve3D_methods.set_closed.m_call = cast(type_of(Curve3D_methods.set_closed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.set_closed.m_call = cast(type_of(Curve3D_methods.set_closed.m_call))MB_ptr_call
   Curve3D_methods.is_closed._is_closed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "is_closed", 36873697, loc))
-  Curve3D_methods.is_closed.m_call = cast(type_of(Curve3D_methods.is_closed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.is_closed.m_call = cast(type_of(Curve3D_methods.is_closed.m_call))MB_ptr_call
   Curve3D_methods.set_bake_interval._set_bake_interval = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "set_bake_interval", 373806689, loc))
-  Curve3D_methods.set_bake_interval.m_call = cast(type_of(Curve3D_methods.set_bake_interval.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.set_bake_interval.m_call = cast(type_of(Curve3D_methods.set_bake_interval.m_call))MB_ptr_call
   Curve3D_methods.get_bake_interval._get_bake_interval = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_bake_interval", 1740695150, loc))
-  Curve3D_methods.get_bake_interval.m_call = cast(type_of(Curve3D_methods.get_bake_interval.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_bake_interval.m_call = cast(type_of(Curve3D_methods.get_bake_interval.m_call))MB_ptr_call
   Curve3D_methods.set_up_vector_enabled._set_up_vector_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "set_up_vector_enabled", 2586408642, loc))
-  Curve3D_methods.set_up_vector_enabled.m_call = cast(type_of(Curve3D_methods.set_up_vector_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.set_up_vector_enabled.m_call = cast(type_of(Curve3D_methods.set_up_vector_enabled.m_call))MB_ptr_call
   Curve3D_methods.is_up_vector_enabled._is_up_vector_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "is_up_vector_enabled", 36873697, loc))
-  Curve3D_methods.is_up_vector_enabled.m_call = cast(type_of(Curve3D_methods.is_up_vector_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.is_up_vector_enabled.m_call = cast(type_of(Curve3D_methods.is_up_vector_enabled.m_call))MB_ptr_call
   Curve3D_methods.get_baked_length._get_baked_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_baked_length", 1740695150, loc))
-  Curve3D_methods.get_baked_length.m_call = cast(type_of(Curve3D_methods.get_baked_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_baked_length.m_call = cast(type_of(Curve3D_methods.get_baked_length.m_call))MB_ptr_call
   Curve3D_methods.sample_baked._sample_baked = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "sample_baked", 1350085894, loc))
-  Curve3D_methods.sample_baked.m_call = cast(type_of(Curve3D_methods.sample_baked.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.sample_baked.m_call = cast(type_of(Curve3D_methods.sample_baked.m_call))MB_ptr_call
   Curve3D_methods.sample_baked_with_rotation._sample_baked_with_rotation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "sample_baked_with_rotation", 1939359131, loc))
-  Curve3D_methods.sample_baked_with_rotation.m_call = cast(type_of(Curve3D_methods.sample_baked_with_rotation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.sample_baked_with_rotation.m_call = cast(type_of(Curve3D_methods.sample_baked_with_rotation.m_call))MB_ptr_call
   Curve3D_methods.sample_baked_up_vector._sample_baked_up_vector = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "sample_baked_up_vector", 1362627031, loc))
-  Curve3D_methods.sample_baked_up_vector.m_call = cast(type_of(Curve3D_methods.sample_baked_up_vector.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.sample_baked_up_vector.m_call = cast(type_of(Curve3D_methods.sample_baked_up_vector.m_call))MB_ptr_call
   Curve3D_methods.get_baked_points._get_baked_points = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_baked_points", 497664490, loc))
-  Curve3D_methods.get_baked_points.m_call = cast(type_of(Curve3D_methods.get_baked_points.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_baked_points.m_call = cast(type_of(Curve3D_methods.get_baked_points.m_call))MB_ptr_call
   Curve3D_methods.get_baked_tilts._get_baked_tilts = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_baked_tilts", 675695659, loc))
-  Curve3D_methods.get_baked_tilts.m_call = cast(type_of(Curve3D_methods.get_baked_tilts.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_baked_tilts.m_call = cast(type_of(Curve3D_methods.get_baked_tilts.m_call))MB_ptr_call
   Curve3D_methods.get_baked_up_vectors._get_baked_up_vectors = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_baked_up_vectors", 497664490, loc))
-  Curve3D_methods.get_baked_up_vectors.m_call = cast(type_of(Curve3D_methods.get_baked_up_vectors.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_baked_up_vectors.m_call = cast(type_of(Curve3D_methods.get_baked_up_vectors.m_call))MB_ptr_call
   Curve3D_methods.get_closest_point._get_closest_point = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_closest_point", 192990374, loc))
-  Curve3D_methods.get_closest_point.m_call = cast(type_of(Curve3D_methods.get_closest_point.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_closest_point.m_call = cast(type_of(Curve3D_methods.get_closest_point.m_call))MB_ptr_call
   Curve3D_methods.get_closest_offset._get_closest_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "get_closest_offset", 1109078154, loc))
-  Curve3D_methods.get_closest_offset.m_call = cast(type_of(Curve3D_methods.get_closest_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.get_closest_offset.m_call = cast(type_of(Curve3D_methods.get_closest_offset.m_call))MB_ptr_call
   Curve3D_methods.tessellate._tessellate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "tessellate", 1519759391, loc))
-  Curve3D_methods.tessellate.m_call = cast(type_of(Curve3D_methods.tessellate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Curve3D_methods.tessellate.m_call = cast(type_of(Curve3D_methods.tessellate.m_call))MB_ptr_call
   Curve3D_methods.tessellate_even_length._tessellate_even_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Curve3D, "tessellate_even_length", 133237049, loc))
-  Curve3D_methods.tessellate_even_length.m_call = cast(type_of(Curve3D_methods.tessellate_even_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-Curve3D_init_props :: proc(Curve3D_prop: ^Curve3D_properties, loc:= #caller_location) {
-
-  Curve3D_prop.closed_Bool.is_closed = cast(proc "c" (p_base: Curve3D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_closed")
-  Curve3D_prop.closed_Bool.set_closed = cast(proc "c" (p_base: Curve3D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_closed")
-
-  Curve3D_prop.bake_interval_float.get_bake_interval = cast(proc "c" (p_base: Curve3D, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_bake_interval")
-  Curve3D_prop.bake_interval_float.set_bake_interval = cast(proc "c" (p_base: Curve3D, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_bake_interval")
-
-  Curve3D_prop.point_count_Int.get_point_count = cast(proc "c" (p_base: Curve3D, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_point_count")
-  Curve3D_prop.point_count_Int.set_point_count = cast(proc "c" (p_base: Curve3D, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_point_count")
-
-  Curve3D_prop.up_vector_enabled_Bool.is_up_vector_enabled = cast(proc "c" (p_base: Curve3D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_up_vector_enabled")
-  Curve3D_prop.up_vector_enabled_Bool.set_up_vector_enabled = cast(proc "c" (p_base: Curve3D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_up_vector_enabled")
+  Curve3D_methods.tessellate_even_length.m_call = cast(type_of(Curve3D_methods.tessellate_even_length.m_call))MB_ptr_call
 };

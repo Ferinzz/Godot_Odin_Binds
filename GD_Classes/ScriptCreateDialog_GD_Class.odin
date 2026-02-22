@@ -14,6 +14,7 @@ ScriptCreateDialog_MethodBind_List :: struct {
   },
   };
 ScriptCreateDialog_Init_ :: proc (ScriptCreateDialog_methods: ^ScriptCreateDialog_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   ScriptCreateDialog_methods.config._config = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ScriptCreateDialog, "config", 869314288, loc))
-  ScriptCreateDialog_methods.config.m_call = cast(type_of(ScriptCreateDialog_methods.config.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ScriptCreateDialog_methods.config.m_call = cast(type_of(ScriptCreateDialog_methods.config.m_call))MB_ptr_call
 };

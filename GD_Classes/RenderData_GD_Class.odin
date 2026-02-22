@@ -26,12 +26,13 @@ RenderData_MethodBind_List :: struct {
   },
 };
 RenderData_Init_ :: proc (RenderData_methods: ^RenderData_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   RenderData_methods.get_render_scene_buffers._get_render_scene_buffers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RenderData, "get_render_scene_buffers", 2793216201, loc))
-  RenderData_methods.get_render_scene_buffers.m_call = cast(type_of(RenderData_methods.get_render_scene_buffers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RenderData_methods.get_render_scene_buffers.m_call = cast(type_of(RenderData_methods.get_render_scene_buffers.m_call))MB_ptr_call
   RenderData_methods.get_render_scene_data._get_render_scene_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RenderData, "get_render_scene_data", 1288715698, loc))
-  RenderData_methods.get_render_scene_data.m_call = cast(type_of(RenderData_methods.get_render_scene_data.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RenderData_methods.get_render_scene_data.m_call = cast(type_of(RenderData_methods.get_render_scene_data.m_call))MB_ptr_call
   RenderData_methods.get_environment._get_environment = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RenderData, "get_environment", 2944877500, loc))
-  RenderData_methods.get_environment.m_call = cast(type_of(RenderData_methods.get_environment.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RenderData_methods.get_environment.m_call = cast(type_of(RenderData_methods.get_environment.m_call))MB_ptr_call
   RenderData_methods.get_camera_attributes._get_camera_attributes = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RenderData, "get_camera_attributes", 2944877500, loc))
-  RenderData_methods.get_camera_attributes.m_call = cast(type_of(RenderData_methods.get_camera_attributes.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RenderData_methods.get_camera_attributes.m_call = cast(type_of(RenderData_methods.get_camera_attributes.m_call))MB_ptr_call
 };

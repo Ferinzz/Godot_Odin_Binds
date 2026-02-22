@@ -10,4 +10,5 @@ VisualShaderNodeSDFRaymarch :: ^GDW.Object
 VisualShaderNodeSDFRaymarch_MethodBind_List :: struct {
 };
 VisualShaderNodeSDFRaymarch_Init_ :: proc (VisualShaderNodeSDFRaymarch_methods: ^VisualShaderNodeSDFRaymarch_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

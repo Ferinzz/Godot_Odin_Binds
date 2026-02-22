@@ -22,6 +22,7 @@ Logger_ErrorType :: enum i64 {
 Logger_MethodBind_List :: struct {
 };
 Logger_Init_ :: proc (Logger_methods: ^Logger_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 Logger_Init_Virtuals_Info :: proc(info: ^Logger_Virtual_Info) {

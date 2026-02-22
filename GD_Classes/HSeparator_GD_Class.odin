@@ -10,4 +10,5 @@ HSeparator :: ^GDW.Object
 HSeparator_MethodBind_List :: struct {
 };
 HSeparator_Init_ :: proc (HSeparator_methods: ^HSeparator_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

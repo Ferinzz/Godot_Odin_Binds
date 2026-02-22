@@ -46,16 +46,17 @@ ResourceSaver_MethodBind_List :: struct {
   },
 };
 ResourceSaver_Init_ :: proc (ResourceSaver_methods: ^ResourceSaver_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   ResourceSaver_methods.save._save = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ResourceSaver, "save", 2983274697, loc))
-  ResourceSaver_methods.save.m_call = cast(type_of(ResourceSaver_methods.save.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ResourceSaver_methods.save.m_call = cast(type_of(ResourceSaver_methods.save.m_call))MB_ptr_call
   ResourceSaver_methods.set_uid._set_uid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ResourceSaver, "set_uid", 993915709, loc))
-  ResourceSaver_methods.set_uid.m_call = cast(type_of(ResourceSaver_methods.set_uid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ResourceSaver_methods.set_uid.m_call = cast(type_of(ResourceSaver_methods.set_uid.m_call))MB_ptr_call
   ResourceSaver_methods.get_recognized_extensions._get_recognized_extensions = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ResourceSaver, "get_recognized_extensions", 4223597960, loc))
-  ResourceSaver_methods.get_recognized_extensions.m_call = cast(type_of(ResourceSaver_methods.get_recognized_extensions.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ResourceSaver_methods.get_recognized_extensions.m_call = cast(type_of(ResourceSaver_methods.get_recognized_extensions.m_call))MB_ptr_call
   ResourceSaver_methods.add_resource_format_saver._add_resource_format_saver = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ResourceSaver, "add_resource_format_saver", 362894272, loc))
-  ResourceSaver_methods.add_resource_format_saver.m_call = cast(type_of(ResourceSaver_methods.add_resource_format_saver.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ResourceSaver_methods.add_resource_format_saver.m_call = cast(type_of(ResourceSaver_methods.add_resource_format_saver.m_call))MB_ptr_call
   ResourceSaver_methods.remove_resource_format_saver._remove_resource_format_saver = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ResourceSaver, "remove_resource_format_saver", 3373026878, loc))
-  ResourceSaver_methods.remove_resource_format_saver.m_call = cast(type_of(ResourceSaver_methods.remove_resource_format_saver.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ResourceSaver_methods.remove_resource_format_saver.m_call = cast(type_of(ResourceSaver_methods.remove_resource_format_saver.m_call))MB_ptr_call
   ResourceSaver_methods.get_resource_id_for_path._get_resource_id_for_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ResourceSaver, "get_resource_id_for_path", 150756522, loc))
-  ResourceSaver_methods.get_resource_id_for_path.m_call = cast(type_of(ResourceSaver_methods.get_resource_id_for_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ResourceSaver_methods.get_resource_id_for_path.m_call = cast(type_of(ResourceSaver_methods.get_resource_id_for_path.m_call))MB_ptr_call
 };

@@ -28,12 +28,13 @@ PhysicsServer3DRenderingServerHandler_MethodBind_List :: struct {
   },
   };
 PhysicsServer3DRenderingServerHandler_Init_ :: proc (PhysicsServer3DRenderingServerHandler_methods: ^PhysicsServer3DRenderingServerHandler_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PhysicsServer3DRenderingServerHandler_methods.set_vertex._set_vertex = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsServer3DRenderingServerHandler, "set_vertex", 1530502735, loc))
-  PhysicsServer3DRenderingServerHandler_methods.set_vertex.m_call = cast(type_of(PhysicsServer3DRenderingServerHandler_methods.set_vertex.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsServer3DRenderingServerHandler_methods.set_vertex.m_call = cast(type_of(PhysicsServer3DRenderingServerHandler_methods.set_vertex.m_call))MB_ptr_call
   PhysicsServer3DRenderingServerHandler_methods.set_normal._set_normal = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsServer3DRenderingServerHandler, "set_normal", 1530502735, loc))
-  PhysicsServer3DRenderingServerHandler_methods.set_normal.m_call = cast(type_of(PhysicsServer3DRenderingServerHandler_methods.set_normal.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsServer3DRenderingServerHandler_methods.set_normal.m_call = cast(type_of(PhysicsServer3DRenderingServerHandler_methods.set_normal.m_call))MB_ptr_call
   PhysicsServer3DRenderingServerHandler_methods.set_aabb._set_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsServer3DRenderingServerHandler, "set_aabb", 259215842, loc))
-  PhysicsServer3DRenderingServerHandler_methods.set_aabb.m_call = cast(type_of(PhysicsServer3DRenderingServerHandler_methods.set_aabb.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsServer3DRenderingServerHandler_methods.set_aabb.m_call = cast(type_of(PhysicsServer3DRenderingServerHandler_methods.set_aabb.m_call))MB_ptr_call
 };
 
 PhysicsServer3DRenderingServerHandler_Init_Virtuals_Info :: proc(info: ^PhysicsServer3DRenderingServerHandler_Virtual_Info) {

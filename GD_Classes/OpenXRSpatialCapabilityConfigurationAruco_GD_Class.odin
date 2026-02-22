@@ -26,12 +26,6 @@ OpenXRSpatialCapabilityConfigurationAruco_ArucoDict :: enum i64 {
   ARUCO_DICT_7X7_250 = 15,
   ARUCO_DICT_7X7_1000 = 16,
 };
-OpenXRSpatialCapabilityConfigurationAruco_properties :: struct {
-  aruco_dict_Int : struct {
-  get_aruco_dict: proc "c" (p_base: OpenXRSpatialCapabilityConfigurationAruco, r_value: ^GDW.Int),
-  set_aruco_dict: proc "c" (p_base: OpenXRSpatialCapabilityConfigurationAruco, p_value: ^GDW.Int),
-  },
-};
 OpenXRSpatialCapabilityConfigurationAruco_MethodBind_List :: struct {
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
@@ -47,15 +41,11 @@ OpenXRSpatialCapabilityConfigurationAruco_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialCapabilityConfigurationAruco_Init_ :: proc (OpenXRSpatialCapabilityConfigurationAruco_methods: ^OpenXRSpatialCapabilityConfigurationAruco_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components._get_enabled_components = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "get_enabled_components", 235988956, loc))
-  OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components.m_call))MB_ptr_call
   OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict._set_aruco_dict = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "set_aruco_dict", 2268055963, loc))
-  OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict.m_call))MB_ptr_call
   OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict._get_aruco_dict = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "get_aruco_dict", 1080386209, loc))
-  OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-OpenXRSpatialCapabilityConfigurationAruco_init_props :: proc(OpenXRSpatialCapabilityConfigurationAruco_prop: ^OpenXRSpatialCapabilityConfigurationAruco_properties, loc:= #caller_location) {
-
-  OpenXRSpatialCapabilityConfigurationAruco_prop.aruco_dict_Int.get_aruco_dict = cast(proc "c" (p_base: OpenXRSpatialCapabilityConfigurationAruco, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_aruco_dict")
-  OpenXRSpatialCapabilityConfigurationAruco_prop.aruco_dict_Int.set_aruco_dict = cast(proc "c" (p_base: OpenXRSpatialCapabilityConfigurationAruco, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_aruco_dict")
+  OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict.m_call))MB_ptr_call
 };

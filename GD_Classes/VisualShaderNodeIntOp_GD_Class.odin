@@ -23,12 +23,6 @@ VisualShaderNodeIntOp_Operator :: enum i64 {
   OP_BITWISE_RIGHT_SHIFT = 11,
   OP_ENUM_SIZE = 12,
 };
-VisualShaderNodeIntOp_properties :: struct {
-  operator_Int : struct {
-  get_operator: proc "c" (p_base: VisualShaderNodeIntOp, r_value: ^GDW.Int),
-  set_operator: proc "c" (p_base: VisualShaderNodeIntOp, p_value: ^GDW.Int),
-  },
-};
 VisualShaderNodeIntOp_MethodBind_List :: struct {
   set_operator: struct{
     using _set_operator: ^GDW.MethodBind,
@@ -40,13 +34,9 @@ VisualShaderNodeIntOp_MethodBind_List :: struct {
   },
 };
 VisualShaderNodeIntOp_Init_ :: proc (VisualShaderNodeIntOp_methods: ^VisualShaderNodeIntOp_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   VisualShaderNodeIntOp_methods.set_operator._set_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeIntOp, "set_operator", 1677909323, loc))
-  VisualShaderNodeIntOp_methods.set_operator.m_call = cast(type_of(VisualShaderNodeIntOp_methods.set_operator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeIntOp_methods.set_operator.m_call = cast(type_of(VisualShaderNodeIntOp_methods.set_operator.m_call))MB_ptr_call
   VisualShaderNodeIntOp_methods.get_operator._get_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeIntOp, "get_operator", 1236987913, loc))
-  VisualShaderNodeIntOp_methods.get_operator.m_call = cast(type_of(VisualShaderNodeIntOp_methods.get_operator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-VisualShaderNodeIntOp_init_props :: proc(VisualShaderNodeIntOp_prop: ^VisualShaderNodeIntOp_properties, loc:= #caller_location) {
-
-  VisualShaderNodeIntOp_prop.operator_Int.get_operator = cast(proc "c" (p_base: VisualShaderNodeIntOp, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_operator")
-  VisualShaderNodeIntOp_prop.operator_Int.set_operator = cast(proc "c" (p_base: VisualShaderNodeIntOp, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_operator")
+  VisualShaderNodeIntOp_methods.get_operator.m_call = cast(type_of(VisualShaderNodeIntOp_methods.get_operator.m_call))MB_ptr_call
 };

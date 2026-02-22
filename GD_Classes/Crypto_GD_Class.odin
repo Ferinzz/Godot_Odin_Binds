@@ -46,22 +46,23 @@ Crypto_MethodBind_List :: struct {
   },
 };
 Crypto_Init_ :: proc (Crypto_methods: ^Crypto_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Crypto_methods.generate_random_bytes._generate_random_bytes = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "generate_random_bytes", 47165747, loc))
-  Crypto_methods.generate_random_bytes.m_call = cast(type_of(Crypto_methods.generate_random_bytes.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.generate_random_bytes.m_call = cast(type_of(Crypto_methods.generate_random_bytes.m_call))MB_ptr_call
   Crypto_methods.generate_rsa._generate_rsa = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "generate_rsa", 1237515462, loc))
-  Crypto_methods.generate_rsa.m_call = cast(type_of(Crypto_methods.generate_rsa.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.generate_rsa.m_call = cast(type_of(Crypto_methods.generate_rsa.m_call))MB_ptr_call
   Crypto_methods.generate_self_signed_certificate._generate_self_signed_certificate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "generate_self_signed_certificate", 492266173, loc))
-  Crypto_methods.generate_self_signed_certificate.m_call = cast(type_of(Crypto_methods.generate_self_signed_certificate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.generate_self_signed_certificate.m_call = cast(type_of(Crypto_methods.generate_self_signed_certificate.m_call))MB_ptr_call
   Crypto_methods.sign._sign = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "sign", 1673662703, loc))
-  Crypto_methods.sign.m_call = cast(type_of(Crypto_methods.sign.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.sign.m_call = cast(type_of(Crypto_methods.sign.m_call))MB_ptr_call
   Crypto_methods.verify._verify = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "verify", 2805902225, loc))
-  Crypto_methods.verify.m_call = cast(type_of(Crypto_methods.verify.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.verify.m_call = cast(type_of(Crypto_methods.verify.m_call))MB_ptr_call
   Crypto_methods.encrypt._encrypt = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "encrypt", 2361793670, loc))
-  Crypto_methods.encrypt.m_call = cast(type_of(Crypto_methods.encrypt.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.encrypt.m_call = cast(type_of(Crypto_methods.encrypt.m_call))MB_ptr_call
   Crypto_methods.decrypt._decrypt = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "decrypt", 2361793670, loc))
-  Crypto_methods.decrypt.m_call = cast(type_of(Crypto_methods.decrypt.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.decrypt.m_call = cast(type_of(Crypto_methods.decrypt.m_call))MB_ptr_call
   Crypto_methods.hmac_digest._hmac_digest = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "hmac_digest", 2368951203, loc))
-  Crypto_methods.hmac_digest.m_call = cast(type_of(Crypto_methods.hmac_digest.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.hmac_digest.m_call = cast(type_of(Crypto_methods.hmac_digest.m_call))MB_ptr_call
   Crypto_methods.constant_time_compare._constant_time_compare = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Crypto, "constant_time_compare", 1024142237, loc))
-  Crypto_methods.constant_time_compare.m_call = cast(type_of(Crypto_methods.constant_time_compare.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Crypto_methods.constant_time_compare.m_call = cast(type_of(Crypto_methods.constant_time_compare.m_call))MB_ptr_call
 };

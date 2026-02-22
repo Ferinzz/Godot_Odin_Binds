@@ -54,26 +54,27 @@ Skin_MethodBind_List :: struct {
   },
   };
 Skin_Init_ :: proc (Skin_methods: ^Skin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Skin_methods.set_bind_count._set_bind_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "set_bind_count", 1286410249, loc))
-  Skin_methods.set_bind_count.m_call = cast(type_of(Skin_methods.set_bind_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.set_bind_count.m_call = cast(type_of(Skin_methods.set_bind_count.m_call))MB_ptr_call
   Skin_methods.get_bind_count._get_bind_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "get_bind_count", 3905245786, loc))
-  Skin_methods.get_bind_count.m_call = cast(type_of(Skin_methods.get_bind_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.get_bind_count.m_call = cast(type_of(Skin_methods.get_bind_count.m_call))MB_ptr_call
   Skin_methods.add_bind._add_bind = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "add_bind", 3616898986, loc))
-  Skin_methods.add_bind.m_call = cast(type_of(Skin_methods.add_bind.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.add_bind.m_call = cast(type_of(Skin_methods.add_bind.m_call))MB_ptr_call
   Skin_methods.add_named_bind._add_named_bind = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "add_named_bind", 3154712474, loc))
-  Skin_methods.add_named_bind.m_call = cast(type_of(Skin_methods.add_named_bind.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.add_named_bind.m_call = cast(type_of(Skin_methods.add_named_bind.m_call))MB_ptr_call
   Skin_methods.set_bind_pose._set_bind_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "set_bind_pose", 3616898986, loc))
-  Skin_methods.set_bind_pose.m_call = cast(type_of(Skin_methods.set_bind_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.set_bind_pose.m_call = cast(type_of(Skin_methods.set_bind_pose.m_call))MB_ptr_call
   Skin_methods.get_bind_pose._get_bind_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "get_bind_pose", 1965739696, loc))
-  Skin_methods.get_bind_pose.m_call = cast(type_of(Skin_methods.get_bind_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.get_bind_pose.m_call = cast(type_of(Skin_methods.get_bind_pose.m_call))MB_ptr_call
   Skin_methods.set_bind_name._set_bind_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "set_bind_name", 3780747571, loc))
-  Skin_methods.set_bind_name.m_call = cast(type_of(Skin_methods.set_bind_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.set_bind_name.m_call = cast(type_of(Skin_methods.set_bind_name.m_call))MB_ptr_call
   Skin_methods.get_bind_name._get_bind_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "get_bind_name", 659327637, loc))
-  Skin_methods.get_bind_name.m_call = cast(type_of(Skin_methods.get_bind_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.get_bind_name.m_call = cast(type_of(Skin_methods.get_bind_name.m_call))MB_ptr_call
   Skin_methods.set_bind_bone._set_bind_bone = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "set_bind_bone", 3937882851, loc))
-  Skin_methods.set_bind_bone.m_call = cast(type_of(Skin_methods.set_bind_bone.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.set_bind_bone.m_call = cast(type_of(Skin_methods.set_bind_bone.m_call))MB_ptr_call
   Skin_methods.get_bind_bone._get_bind_bone = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "get_bind_bone", 923996154, loc))
-  Skin_methods.get_bind_bone.m_call = cast(type_of(Skin_methods.get_bind_bone.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.get_bind_bone.m_call = cast(type_of(Skin_methods.get_bind_bone.m_call))MB_ptr_call
   Skin_methods.clear_binds._clear_binds = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skin, "clear_binds", 3218959716, loc))
-  Skin_methods.clear_binds.m_call = cast(type_of(Skin_methods.clear_binds.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skin_methods.clear_binds.m_call = cast(type_of(Skin_methods.clear_binds.m_call))MB_ptr_call
 };

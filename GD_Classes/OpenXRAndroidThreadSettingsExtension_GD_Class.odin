@@ -21,6 +21,7 @@ OpenXRAndroidThreadSettingsExtension_MethodBind_List :: struct {
   },
 };
 OpenXRAndroidThreadSettingsExtension_Init_ :: proc (OpenXRAndroidThreadSettingsExtension_methods: ^OpenXRAndroidThreadSettingsExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRAndroidThreadSettingsExtension_methods.set_application_thread_type._set_application_thread_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRAndroidThreadSettingsExtension, "set_application_thread_type", 1558751158, loc))
-  OpenXRAndroidThreadSettingsExtension_methods.set_application_thread_type.m_call = cast(type_of(OpenXRAndroidThreadSettingsExtension_methods.set_application_thread_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRAndroidThreadSettingsExtension_methods.set_application_thread_type.m_call = cast(type_of(OpenXRAndroidThreadSettingsExtension_methods.set_application_thread_type.m_call))MB_ptr_call
 };

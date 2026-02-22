@@ -10,4 +10,5 @@ MarginContainer :: ^GDW.Object
 MarginContainer_MethodBind_List :: struct {
 };
 MarginContainer_Init_ :: proc (MarginContainer_methods: ^MarginContainer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

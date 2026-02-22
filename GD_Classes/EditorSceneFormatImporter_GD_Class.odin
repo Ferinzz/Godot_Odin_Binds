@@ -34,10 +34,11 @@ EditorSceneFormatImporter_MethodBind_List :: struct {
   },
   };
 EditorSceneFormatImporter_Init_ :: proc (EditorSceneFormatImporter_methods: ^EditorSceneFormatImporter_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorSceneFormatImporter_methods.add_import_option._add_import_option = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorSceneFormatImporter, "add_import_option", 402577236, loc))
-  EditorSceneFormatImporter_methods.add_import_option.m_call = cast(type_of(EditorSceneFormatImporter_methods.add_import_option.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorSceneFormatImporter_methods.add_import_option.m_call = cast(type_of(EditorSceneFormatImporter_methods.add_import_option.m_call))MB_ptr_call
   EditorSceneFormatImporter_methods.add_import_option_advanced._add_import_option_advanced = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorSceneFormatImporter, "add_import_option_advanced", 3674075649, loc))
-  EditorSceneFormatImporter_methods.add_import_option_advanced.m_call = cast(type_of(EditorSceneFormatImporter_methods.add_import_option_advanced.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorSceneFormatImporter_methods.add_import_option_advanced.m_call = cast(type_of(EditorSceneFormatImporter_methods.add_import_option_advanced.m_call))MB_ptr_call
 };
 
 EditorSceneFormatImporter_Init_Virtuals_Info :: proc(info: ^EditorSceneFormatImporter_Virtual_Info) {

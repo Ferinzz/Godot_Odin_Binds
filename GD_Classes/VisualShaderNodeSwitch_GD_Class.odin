@@ -19,12 +19,6 @@ VisualShaderNodeSwitch_OpType :: enum i64 {
   OP_TYPE_TRANSFORM = 7,
   OP_TYPE_MAX = 8,
 };
-VisualShaderNodeSwitch_properties :: struct {
-  op_type_Int : struct {
-  get_op_type: proc "c" (p_base: VisualShaderNodeSwitch, r_value: ^GDW.Int),
-  set_op_type: proc "c" (p_base: VisualShaderNodeSwitch, p_value: ^GDW.Int),
-  },
-};
 VisualShaderNodeSwitch_MethodBind_List :: struct {
   set_op_type: struct{
     using _set_op_type: ^GDW.MethodBind,
@@ -36,13 +30,9 @@ VisualShaderNodeSwitch_MethodBind_List :: struct {
   },
 };
 VisualShaderNodeSwitch_Init_ :: proc (VisualShaderNodeSwitch_methods: ^VisualShaderNodeSwitch_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   VisualShaderNodeSwitch_methods.set_op_type._set_op_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeSwitch, "set_op_type", 510471861, loc))
-  VisualShaderNodeSwitch_methods.set_op_type.m_call = cast(type_of(VisualShaderNodeSwitch_methods.set_op_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeSwitch_methods.set_op_type.m_call = cast(type_of(VisualShaderNodeSwitch_methods.set_op_type.m_call))MB_ptr_call
   VisualShaderNodeSwitch_methods.get_op_type._get_op_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeSwitch, "get_op_type", 2517845071, loc))
-  VisualShaderNodeSwitch_methods.get_op_type.m_call = cast(type_of(VisualShaderNodeSwitch_methods.get_op_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-VisualShaderNodeSwitch_init_props :: proc(VisualShaderNodeSwitch_prop: ^VisualShaderNodeSwitch_properties, loc:= #caller_location) {
-
-  VisualShaderNodeSwitch_prop.op_type_Int.get_op_type = cast(proc "c" (p_base: VisualShaderNodeSwitch, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_op_type")
-  VisualShaderNodeSwitch_prop.op_type_Int.set_op_type = cast(proc "c" (p_base: VisualShaderNodeSwitch, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_op_type")
+  VisualShaderNodeSwitch_methods.get_op_type.m_call = cast(type_of(VisualShaderNodeSwitch_methods.get_op_type.m_call))MB_ptr_call
 };

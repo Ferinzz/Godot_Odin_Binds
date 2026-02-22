@@ -10,4 +10,5 @@ AudioStreamPlaybackSynchronized :: ^GDW.Object
 AudioStreamPlaybackSynchronized_MethodBind_List :: struct {
 };
 AudioStreamPlaybackSynchronized_Init_ :: proc (AudioStreamPlaybackSynchronized_methods: ^AudioStreamPlaybackSynchronized_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

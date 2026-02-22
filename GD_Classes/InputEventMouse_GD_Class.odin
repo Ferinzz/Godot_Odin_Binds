@@ -7,20 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 InputEventMouse :: ^GDW.Object
 
-InputEventMouse_properties :: struct {
-  button_mask_Int : struct {
-  get_button_mask: proc "c" (p_base: InputEventMouse, r_value: ^GDW.Int),
-  set_button_mask: proc "c" (p_base: InputEventMouse, p_value: ^GDW.Int),
-  },
-  position_Vector2 : struct {
-  get_position: proc "c" (p_base: InputEventMouse, r_value: ^GDW.Vector2),
-  set_position: proc "c" (p_base: InputEventMouse, p_value: ^GDW.Vector2),
-  },
-  global_position_Vector2 : struct {
-  get_global_position: proc "c" (p_base: InputEventMouse, r_value: ^GDW.Vector2),
-  set_global_position: proc "c" (p_base: InputEventMouse, p_value: ^GDW.Vector2),
-  },
-};
 InputEventMouse_MethodBind_List :: struct {
   set_button_mask: struct{
     using _set_button_mask: ^GDW.MethodBind,
@@ -48,27 +34,17 @@ InputEventMouse_MethodBind_List :: struct {
   },
 };
 InputEventMouse_Init_ :: proc (InputEventMouse_methods: ^InputEventMouse_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   InputEventMouse_methods.set_button_mask._set_button_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.InputEventMouse, "set_button_mask", 3950145251, loc))
-  InputEventMouse_methods.set_button_mask.m_call = cast(type_of(InputEventMouse_methods.set_button_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  InputEventMouse_methods.set_button_mask.m_call = cast(type_of(InputEventMouse_methods.set_button_mask.m_call))MB_ptr_call
   InputEventMouse_methods.get_button_mask._get_button_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.InputEventMouse, "get_button_mask", 2512161324, loc))
-  InputEventMouse_methods.get_button_mask.m_call = cast(type_of(InputEventMouse_methods.get_button_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  InputEventMouse_methods.get_button_mask.m_call = cast(type_of(InputEventMouse_methods.get_button_mask.m_call))MB_ptr_call
   InputEventMouse_methods.set_position._set_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.InputEventMouse, "set_position", 743155724, loc))
-  InputEventMouse_methods.set_position.m_call = cast(type_of(InputEventMouse_methods.set_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  InputEventMouse_methods.set_position.m_call = cast(type_of(InputEventMouse_methods.set_position.m_call))MB_ptr_call
   InputEventMouse_methods.get_position._get_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.InputEventMouse, "get_position", 3341600327, loc))
-  InputEventMouse_methods.get_position.m_call = cast(type_of(InputEventMouse_methods.get_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  InputEventMouse_methods.get_position.m_call = cast(type_of(InputEventMouse_methods.get_position.m_call))MB_ptr_call
   InputEventMouse_methods.set_global_position._set_global_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.InputEventMouse, "set_global_position", 743155724, loc))
-  InputEventMouse_methods.set_global_position.m_call = cast(type_of(InputEventMouse_methods.set_global_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  InputEventMouse_methods.set_global_position.m_call = cast(type_of(InputEventMouse_methods.set_global_position.m_call))MB_ptr_call
   InputEventMouse_methods.get_global_position._get_global_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.InputEventMouse, "get_global_position", 3341600327, loc))
-  InputEventMouse_methods.get_global_position.m_call = cast(type_of(InputEventMouse_methods.get_global_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-InputEventMouse_init_props :: proc(InputEventMouse_prop: ^InputEventMouse_properties, loc:= #caller_location) {
-
-  InputEventMouse_prop.button_mask_Int.get_button_mask = cast(proc "c" (p_base: InputEventMouse, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_button_mask")
-  InputEventMouse_prop.button_mask_Int.set_button_mask = cast(proc "c" (p_base: InputEventMouse, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_button_mask")
-
-  InputEventMouse_prop.position_Vector2.get_position = cast(proc "c" (p_base: InputEventMouse, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_position")
-  InputEventMouse_prop.position_Vector2.set_position = cast(proc "c" (p_base: InputEventMouse, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_position")
-
-  InputEventMouse_prop.global_position_Vector2.get_global_position = cast(proc "c" (p_base: InputEventMouse, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_global_position")
-  InputEventMouse_prop.global_position_Vector2.set_global_position = cast(proc "c" (p_base: InputEventMouse, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_global_position")
+  InputEventMouse_methods.get_global_position.m_call = cast(type_of(InputEventMouse_methods.get_global_position.m_call))MB_ptr_call
 };

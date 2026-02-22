@@ -7,12 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 StreamPeerBuffer :: ^GDW.Object
 
-StreamPeerBuffer_properties :: struct {
-  data_array_PackedByteArray : struct {
-  get_data_array: proc "c" (p_base: StreamPeerBuffer, r_value: ^GDW.PackedByteArray),
-  set_data_array: proc "c" (p_base: StreamPeerBuffer, p_value: ^GDW.PackedByteArray),
-  },
-};
 StreamPeerBuffer_MethodBind_List :: struct {
   seek: struct{
     using _seek: ^GDW.MethodBind,
@@ -48,25 +42,21 @@ StreamPeerBuffer_MethodBind_List :: struct {
   },
 };
 StreamPeerBuffer_Init_ :: proc (StreamPeerBuffer_methods: ^StreamPeerBuffer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   StreamPeerBuffer_methods.seek._seek = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerBuffer, "seek", 1286410249, loc))
-  StreamPeerBuffer_methods.seek.m_call = cast(type_of(StreamPeerBuffer_methods.seek.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerBuffer_methods.seek.m_call = cast(type_of(StreamPeerBuffer_methods.seek.m_call))MB_ptr_call
   StreamPeerBuffer_methods.get_size._get_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerBuffer, "get_size", 3905245786, loc))
-  StreamPeerBuffer_methods.get_size.m_call = cast(type_of(StreamPeerBuffer_methods.get_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerBuffer_methods.get_size.m_call = cast(type_of(StreamPeerBuffer_methods.get_size.m_call))MB_ptr_call
   StreamPeerBuffer_methods.get_position._get_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerBuffer, "get_position", 3905245786, loc))
-  StreamPeerBuffer_methods.get_position.m_call = cast(type_of(StreamPeerBuffer_methods.get_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerBuffer_methods.get_position.m_call = cast(type_of(StreamPeerBuffer_methods.get_position.m_call))MB_ptr_call
   StreamPeerBuffer_methods.resize._resize = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerBuffer, "resize", 1286410249, loc))
-  StreamPeerBuffer_methods.resize.m_call = cast(type_of(StreamPeerBuffer_methods.resize.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerBuffer_methods.resize.m_call = cast(type_of(StreamPeerBuffer_methods.resize.m_call))MB_ptr_call
   StreamPeerBuffer_methods.set_data_array._set_data_array = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerBuffer, "set_data_array", 2971499966, loc))
-  StreamPeerBuffer_methods.set_data_array.m_call = cast(type_of(StreamPeerBuffer_methods.set_data_array.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerBuffer_methods.set_data_array.m_call = cast(type_of(StreamPeerBuffer_methods.set_data_array.m_call))MB_ptr_call
   StreamPeerBuffer_methods.get_data_array._get_data_array = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerBuffer, "get_data_array", 2362200018, loc))
-  StreamPeerBuffer_methods.get_data_array.m_call = cast(type_of(StreamPeerBuffer_methods.get_data_array.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerBuffer_methods.get_data_array.m_call = cast(type_of(StreamPeerBuffer_methods.get_data_array.m_call))MB_ptr_call
   StreamPeerBuffer_methods.clear._clear = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerBuffer, "clear", 3218959716, loc))
-  StreamPeerBuffer_methods.clear.m_call = cast(type_of(StreamPeerBuffer_methods.clear.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerBuffer_methods.clear.m_call = cast(type_of(StreamPeerBuffer_methods.clear.m_call))MB_ptr_call
   StreamPeerBuffer_methods.duplicate._duplicate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerBuffer, "duplicate", 2474064677, loc))
-  StreamPeerBuffer_methods.duplicate.m_call = cast(type_of(StreamPeerBuffer_methods.duplicate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-StreamPeerBuffer_init_props :: proc(StreamPeerBuffer_prop: ^StreamPeerBuffer_properties, loc:= #caller_location) {
-
-  StreamPeerBuffer_prop.data_array_PackedByteArray.get_data_array = cast(proc "c" (p_base: StreamPeerBuffer, r_value: ^GDW.PackedByteArray))GDW.Get_Method_Getter(.PACKED_BYTE_ARRAY, "get_data_array")
-  StreamPeerBuffer_prop.data_array_PackedByteArray.set_data_array = cast(proc "c" (p_base: StreamPeerBuffer, p_value: ^GDW.PackedByteArray))GDW.Get_Method_Setter(.PACKED_BYTE_ARRAY, "set_data_array")
+  StreamPeerBuffer_methods.duplicate.m_call = cast(type_of(StreamPeerBuffer_methods.duplicate.m_call))MB_ptr_call
 };

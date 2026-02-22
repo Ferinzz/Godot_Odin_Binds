@@ -14,6 +14,7 @@ RichTextEffect_Virtual_Info :: struct {
 RichTextEffect_MethodBind_List :: struct {
 };
 RichTextEffect_Init_ :: proc (RichTextEffect_methods: ^RichTextEffect_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 RichTextEffect_Init_Virtuals_Info :: proc(info: ^RichTextEffect_Virtual_Info) {

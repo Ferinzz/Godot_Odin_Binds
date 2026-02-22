@@ -11,12 +11,6 @@ OpenXRStructureBase_Virtual_Info :: struct {
 
     _get_header: Method_Callback_Compare_Info,
 };
-OpenXRStructureBase_properties :: struct {
-  next_OpenXRStructureBase : struct {
-    get_next: proc "c" (p_base: OpenXRStructureBase, r_value: ^OpenXRStructureBase),
-    set_next: proc "c" (p_base: OpenXRStructureBase, p_value: ^OpenXRStructureBase),
-  },
-};
 OpenXRStructureBase_MethodBind_List :: struct {
   get_structure_type: struct{
     using _get_structure_type: ^GDW.MethodBind,
@@ -32,20 +26,16 @@ OpenXRStructureBase_MethodBind_List :: struct {
   },
 };
 OpenXRStructureBase_Init_ :: proc (OpenXRStructureBase_methods: ^OpenXRStructureBase_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRStructureBase_methods.get_structure_type._get_structure_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRStructureBase, "get_structure_type", 2455072627, loc))
-  OpenXRStructureBase_methods.get_structure_type.m_call = cast(type_of(OpenXRStructureBase_methods.get_structure_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRStructureBase_methods.get_structure_type.m_call = cast(type_of(OpenXRStructureBase_methods.get_structure_type.m_call))MB_ptr_call
   OpenXRStructureBase_methods.set_next._set_next = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRStructureBase, "set_next", 334698771, loc))
-  OpenXRStructureBase_methods.set_next.m_call = cast(type_of(OpenXRStructureBase_methods.set_next.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRStructureBase_methods.set_next.m_call = cast(type_of(OpenXRStructureBase_methods.set_next.m_call))MB_ptr_call
   OpenXRStructureBase_methods.get_next._get_next = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRStructureBase, "get_next", 2798796760, loc))
-  OpenXRStructureBase_methods.get_next.m_call = cast(type_of(OpenXRStructureBase_methods.get_next.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRStructureBase_methods.get_next.m_call = cast(type_of(OpenXRStructureBase_methods.get_next.m_call))MB_ptr_call
 };
 
 OpenXRStructureBase_Init_Virtuals_Info :: proc(info: ^OpenXRStructureBase_Virtual_Info) {
     info._get_header.p_hash = 3744713108
     info._get_header.name = GDW.StringConstruct("_get_header")
-};
-OpenXRStructureBase_init_props :: proc(OpenXRStructureBase_prop: ^OpenXRStructureBase_properties, loc:= #caller_location) {
-
-  OpenXRStructureBase_prop.next_OpenXRStructureBase.get_next = cast(proc "c" (p_base: OpenXRStructureBase, r_value: ^OpenXRStructureBase))GDW.Get_Method_Getter(.OBJECT, "get_next")
-  OpenXRStructureBase_prop.next_OpenXRStructureBase.set_next = cast(proc "c" (p_base: OpenXRStructureBase, p_value: ^OpenXRStructureBase))GDW.Get_Method_Setter(.OBJECT, "set_next")
 };

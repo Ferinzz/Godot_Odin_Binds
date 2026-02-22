@@ -14,6 +14,7 @@ OpenXRSpatialCapabilityConfigurationAnchor_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialCapabilityConfigurationAnchor_Init_ :: proc (OpenXRSpatialCapabilityConfigurationAnchor_methods: ^OpenXRSpatialCapabilityConfigurationAnchor_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialCapabilityConfigurationAnchor_methods.get_enabled_components._get_enabled_components = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAnchor, "get_enabled_components", 235988956, loc))
-  OpenXRSpatialCapabilityConfigurationAnchor_methods.get_enabled_components.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAnchor_methods.get_enabled_components.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialCapabilityConfigurationAnchor_methods.get_enabled_components.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAnchor_methods.get_enabled_components.m_call))MB_ptr_call
 };

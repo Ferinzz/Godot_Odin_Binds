@@ -18,8 +18,9 @@ Occluder3D_MethodBind_List :: struct {
   },
 };
 Occluder3D_Init_ :: proc (Occluder3D_methods: ^Occluder3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Occluder3D_methods.get_vertices._get_vertices = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Occluder3D, "get_vertices", 497664490, loc))
-  Occluder3D_methods.get_vertices.m_call = cast(type_of(Occluder3D_methods.get_vertices.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Occluder3D_methods.get_vertices.m_call = cast(type_of(Occluder3D_methods.get_vertices.m_call))MB_ptr_call
   Occluder3D_methods.get_indices._get_indices = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Occluder3D, "get_indices", 1930428628, loc))
-  Occluder3D_methods.get_indices.m_call = cast(type_of(Occluder3D_methods.get_indices.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Occluder3D_methods.get_indices.m_call = cast(type_of(Occluder3D_methods.get_indices.m_call))MB_ptr_call
 };

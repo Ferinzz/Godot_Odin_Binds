@@ -22,10 +22,11 @@ StreamPeerUDS_MethodBind_List :: struct {
   },
 };
 StreamPeerUDS_Init_ :: proc (StreamPeerUDS_methods: ^StreamPeerUDS_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   StreamPeerUDS_methods.bind._bind = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerUDS, "bind", 166001499, loc))
-  StreamPeerUDS_methods.bind.m_call = cast(type_of(StreamPeerUDS_methods.bind.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerUDS_methods.bind.m_call = cast(type_of(StreamPeerUDS_methods.bind.m_call))MB_ptr_call
   StreamPeerUDS_methods.connect_to_host._connect_to_host = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerUDS, "connect_to_host", 166001499, loc))
-  StreamPeerUDS_methods.connect_to_host.m_call = cast(type_of(StreamPeerUDS_methods.connect_to_host.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerUDS_methods.connect_to_host.m_call = cast(type_of(StreamPeerUDS_methods.connect_to_host.m_call))MB_ptr_call
   StreamPeerUDS_methods.get_connected_path._get_connected_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerUDS, "get_connected_path", 201670096, loc))
-  StreamPeerUDS_methods.get_connected_path.m_call = cast(type_of(StreamPeerUDS_methods.get_connected_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerUDS_methods.get_connected_path.m_call = cast(type_of(StreamPeerUDS_methods.get_connected_path.m_call))MB_ptr_call
 };

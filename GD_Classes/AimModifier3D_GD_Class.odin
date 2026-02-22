@@ -7,12 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 AimModifier3D :: ^GDW.Object
 
-AimModifier3D_properties :: struct {
-  setting_count_Int : struct {
-  get_setting_count: proc "c" (p_base: AimModifier3D, r_value: ^GDW.Int),
-  set_setting_count: proc "c" (p_base: AimModifier3D, p_value: ^GDW.Int),
-  },
-};
 AimModifier3D_MethodBind_List :: struct {
   set_forward_axis: struct{
     using _set_forward_axis: ^GDW.MethodBind,
@@ -56,29 +50,25 @@ AimModifier3D_MethodBind_List :: struct {
   },
 };
 AimModifier3D_Init_ :: proc (AimModifier3D_methods: ^AimModifier3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AimModifier3D_methods.set_forward_axis._set_forward_axis = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "set_forward_axis", 2496831085, loc))
-  AimModifier3D_methods.set_forward_axis.m_call = cast(type_of(AimModifier3D_methods.set_forward_axis.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.set_forward_axis.m_call = cast(type_of(AimModifier3D_methods.set_forward_axis.m_call))MB_ptr_call
   AimModifier3D_methods.get_forward_axis._get_forward_axis = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "get_forward_axis", 3949866735, loc))
-  AimModifier3D_methods.get_forward_axis.m_call = cast(type_of(AimModifier3D_methods.get_forward_axis.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.get_forward_axis.m_call = cast(type_of(AimModifier3D_methods.get_forward_axis.m_call))MB_ptr_call
   AimModifier3D_methods.set_use_euler._set_use_euler = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "set_use_euler", 300928843, loc))
-  AimModifier3D_methods.set_use_euler.m_call = cast(type_of(AimModifier3D_methods.set_use_euler.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.set_use_euler.m_call = cast(type_of(AimModifier3D_methods.set_use_euler.m_call))MB_ptr_call
   AimModifier3D_methods.is_using_euler._is_using_euler = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "is_using_euler", 1116898809, loc))
-  AimModifier3D_methods.is_using_euler.m_call = cast(type_of(AimModifier3D_methods.is_using_euler.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.is_using_euler.m_call = cast(type_of(AimModifier3D_methods.is_using_euler.m_call))MB_ptr_call
   AimModifier3D_methods.set_primary_rotation_axis._set_primary_rotation_axis = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "set_primary_rotation_axis", 776736805, loc))
-  AimModifier3D_methods.set_primary_rotation_axis.m_call = cast(type_of(AimModifier3D_methods.set_primary_rotation_axis.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.set_primary_rotation_axis.m_call = cast(type_of(AimModifier3D_methods.set_primary_rotation_axis.m_call))MB_ptr_call
   AimModifier3D_methods.get_primary_rotation_axis._get_primary_rotation_axis = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "get_primary_rotation_axis", 4131134770, loc))
-  AimModifier3D_methods.get_primary_rotation_axis.m_call = cast(type_of(AimModifier3D_methods.get_primary_rotation_axis.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.get_primary_rotation_axis.m_call = cast(type_of(AimModifier3D_methods.get_primary_rotation_axis.m_call))MB_ptr_call
   AimModifier3D_methods.set_use_secondary_rotation._set_use_secondary_rotation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "set_use_secondary_rotation", 300928843, loc))
-  AimModifier3D_methods.set_use_secondary_rotation.m_call = cast(type_of(AimModifier3D_methods.set_use_secondary_rotation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.set_use_secondary_rotation.m_call = cast(type_of(AimModifier3D_methods.set_use_secondary_rotation.m_call))MB_ptr_call
   AimModifier3D_methods.is_using_secondary_rotation._is_using_secondary_rotation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "is_using_secondary_rotation", 1116898809, loc))
-  AimModifier3D_methods.is_using_secondary_rotation.m_call = cast(type_of(AimModifier3D_methods.is_using_secondary_rotation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.is_using_secondary_rotation.m_call = cast(type_of(AimModifier3D_methods.is_using_secondary_rotation.m_call))MB_ptr_call
   AimModifier3D_methods.set_relative._set_relative = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "set_relative", 300928843, loc))
-  AimModifier3D_methods.set_relative.m_call = cast(type_of(AimModifier3D_methods.set_relative.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AimModifier3D_methods.set_relative.m_call = cast(type_of(AimModifier3D_methods.set_relative.m_call))MB_ptr_call
   AimModifier3D_methods.is_relative._is_relative = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AimModifier3D, "is_relative", 1116898809, loc))
-  AimModifier3D_methods.is_relative.m_call = cast(type_of(AimModifier3D_methods.is_relative.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-AimModifier3D_init_props :: proc(AimModifier3D_prop: ^AimModifier3D_properties, loc:= #caller_location) {
-
-  AimModifier3D_prop.setting_count_Int.get_setting_count = cast(proc "c" (p_base: AimModifier3D, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_setting_count")
-  AimModifier3D_prop.setting_count_Int.set_setting_count = cast(proc "c" (p_base: AimModifier3D, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_setting_count")
+  AimModifier3D_methods.is_relative.m_call = cast(type_of(AimModifier3D_methods.is_relative.m_call))MB_ptr_call
 };

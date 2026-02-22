@@ -7,48 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 AnimatedSprite2D :: ^GDW.Object
 
-AnimatedSprite2D_properties :: struct {
-  sprite_frames_SpriteFrames : struct {
-    get_sprite_frames: proc "c" (p_base: AnimatedSprite2D, r_value: ^SpriteFrames),
-    set_sprite_frames: proc "c" (p_base: AnimatedSprite2D, p_value: ^SpriteFrames),
-  },
-  animation_StringName : struct {
-  get_animation: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.StringName),
-  set_animation: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.StringName),
-  },
-  autoplay_StringName : struct {
-  get_autoplay: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.StringName),
-  set_autoplay: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.StringName),
-  },
-  frame_Int : struct {
-  get_frame: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Int),
-  set_frame: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Int),
-  },
-  frame_progress_float : struct {
-  get_frame_progress: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.float),
-  set_frame_progress: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.float),
-  },
-  speed_scale_float : struct {
-  get_speed_scale: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.float),
-  set_speed_scale: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.float),
-  },
-  centered_Bool : struct {
-  is_centered: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Bool),
-  set_centered: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Bool),
-  },
-  offset_Vector2 : struct {
-  get_offset: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Vector2),
-  set_offset: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Vector2),
-  },
-  flip_h_Bool : struct {
-  is_flipped_h: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Bool),
-  set_flip_h: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Bool),
-  },
-  flip_v_Bool : struct {
-  is_flipped_v: proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Bool),
-  set_flip_v: proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Bool),
-  },
-};
 AnimatedSprite2D_MethodBind_List :: struct {
   set_sprite_frames: struct{
     using _set_sprite_frames: ^GDW.MethodBind,
@@ -160,90 +118,59 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
 };
 AnimatedSprite2D_Init_ :: proc (AnimatedSprite2D_methods: ^AnimatedSprite2D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AnimatedSprite2D_methods.set_sprite_frames._set_sprite_frames = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_sprite_frames", 905781144, loc))
-  AnimatedSprite2D_methods.set_sprite_frames.m_call = cast(type_of(AnimatedSprite2D_methods.set_sprite_frames.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_sprite_frames.m_call = cast(type_of(AnimatedSprite2D_methods.set_sprite_frames.m_call))MB_ptr_call
   AnimatedSprite2D_methods.get_sprite_frames._get_sprite_frames = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "get_sprite_frames", 3804851214, loc))
-  AnimatedSprite2D_methods.get_sprite_frames.m_call = cast(type_of(AnimatedSprite2D_methods.get_sprite_frames.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.get_sprite_frames.m_call = cast(type_of(AnimatedSprite2D_methods.get_sprite_frames.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_animation._set_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_animation", 3304788590, loc))
-  AnimatedSprite2D_methods.set_animation.m_call = cast(type_of(AnimatedSprite2D_methods.set_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_animation.m_call = cast(type_of(AnimatedSprite2D_methods.set_animation.m_call))MB_ptr_call
   AnimatedSprite2D_methods.get_animation._get_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "get_animation", 2002593661, loc))
-  AnimatedSprite2D_methods.get_animation.m_call = cast(type_of(AnimatedSprite2D_methods.get_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.get_animation.m_call = cast(type_of(AnimatedSprite2D_methods.get_animation.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_autoplay._set_autoplay = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_autoplay", 83702148, loc))
-  AnimatedSprite2D_methods.set_autoplay.m_call = cast(type_of(AnimatedSprite2D_methods.set_autoplay.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_autoplay.m_call = cast(type_of(AnimatedSprite2D_methods.set_autoplay.m_call))MB_ptr_call
   AnimatedSprite2D_methods.get_autoplay._get_autoplay = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "get_autoplay", 201670096, loc))
-  AnimatedSprite2D_methods.get_autoplay.m_call = cast(type_of(AnimatedSprite2D_methods.get_autoplay.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.get_autoplay.m_call = cast(type_of(AnimatedSprite2D_methods.get_autoplay.m_call))MB_ptr_call
   AnimatedSprite2D_methods.is_playing._is_playing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "is_playing", 36873697, loc))
-  AnimatedSprite2D_methods.is_playing.m_call = cast(type_of(AnimatedSprite2D_methods.is_playing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.is_playing.m_call = cast(type_of(AnimatedSprite2D_methods.is_playing.m_call))MB_ptr_call
   AnimatedSprite2D_methods.play._play = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "play", 3269405555, loc))
-  AnimatedSprite2D_methods.play.m_call = cast(type_of(AnimatedSprite2D_methods.play.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.play.m_call = cast(type_of(AnimatedSprite2D_methods.play.m_call))MB_ptr_call
   AnimatedSprite2D_methods.play_backwards._play_backwards = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "play_backwards", 3323268493, loc))
-  AnimatedSprite2D_methods.play_backwards.m_call = cast(type_of(AnimatedSprite2D_methods.play_backwards.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.play_backwards.m_call = cast(type_of(AnimatedSprite2D_methods.play_backwards.m_call))MB_ptr_call
   AnimatedSprite2D_methods.pause._pause = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "pause", 3218959716, loc))
-  AnimatedSprite2D_methods.pause.m_call = cast(type_of(AnimatedSprite2D_methods.pause.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.pause.m_call = cast(type_of(AnimatedSprite2D_methods.pause.m_call))MB_ptr_call
   AnimatedSprite2D_methods.stop._stop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "stop", 3218959716, loc))
-  AnimatedSprite2D_methods.stop.m_call = cast(type_of(AnimatedSprite2D_methods.stop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.stop.m_call = cast(type_of(AnimatedSprite2D_methods.stop.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_centered._set_centered = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_centered", 2586408642, loc))
-  AnimatedSprite2D_methods.set_centered.m_call = cast(type_of(AnimatedSprite2D_methods.set_centered.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_centered.m_call = cast(type_of(AnimatedSprite2D_methods.set_centered.m_call))MB_ptr_call
   AnimatedSprite2D_methods.is_centered._is_centered = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "is_centered", 36873697, loc))
-  AnimatedSprite2D_methods.is_centered.m_call = cast(type_of(AnimatedSprite2D_methods.is_centered.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.is_centered.m_call = cast(type_of(AnimatedSprite2D_methods.is_centered.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_offset._set_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_offset", 743155724, loc))
-  AnimatedSprite2D_methods.set_offset.m_call = cast(type_of(AnimatedSprite2D_methods.set_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_offset.m_call = cast(type_of(AnimatedSprite2D_methods.set_offset.m_call))MB_ptr_call
   AnimatedSprite2D_methods.get_offset._get_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "get_offset", 3341600327, loc))
-  AnimatedSprite2D_methods.get_offset.m_call = cast(type_of(AnimatedSprite2D_methods.get_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.get_offset.m_call = cast(type_of(AnimatedSprite2D_methods.get_offset.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_flip_h._set_flip_h = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_flip_h", 2586408642, loc))
-  AnimatedSprite2D_methods.set_flip_h.m_call = cast(type_of(AnimatedSprite2D_methods.set_flip_h.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_flip_h.m_call = cast(type_of(AnimatedSprite2D_methods.set_flip_h.m_call))MB_ptr_call
   AnimatedSprite2D_methods.is_flipped_h._is_flipped_h = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "is_flipped_h", 36873697, loc))
-  AnimatedSprite2D_methods.is_flipped_h.m_call = cast(type_of(AnimatedSprite2D_methods.is_flipped_h.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.is_flipped_h.m_call = cast(type_of(AnimatedSprite2D_methods.is_flipped_h.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_flip_v._set_flip_v = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_flip_v", 2586408642, loc))
-  AnimatedSprite2D_methods.set_flip_v.m_call = cast(type_of(AnimatedSprite2D_methods.set_flip_v.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_flip_v.m_call = cast(type_of(AnimatedSprite2D_methods.set_flip_v.m_call))MB_ptr_call
   AnimatedSprite2D_methods.is_flipped_v._is_flipped_v = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "is_flipped_v", 36873697, loc))
-  AnimatedSprite2D_methods.is_flipped_v.m_call = cast(type_of(AnimatedSprite2D_methods.is_flipped_v.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.is_flipped_v.m_call = cast(type_of(AnimatedSprite2D_methods.is_flipped_v.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_frame._set_frame = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_frame", 1286410249, loc))
-  AnimatedSprite2D_methods.set_frame.m_call = cast(type_of(AnimatedSprite2D_methods.set_frame.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_frame.m_call = cast(type_of(AnimatedSprite2D_methods.set_frame.m_call))MB_ptr_call
   AnimatedSprite2D_methods.get_frame._get_frame = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "get_frame", 3905245786, loc))
-  AnimatedSprite2D_methods.get_frame.m_call = cast(type_of(AnimatedSprite2D_methods.get_frame.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.get_frame.m_call = cast(type_of(AnimatedSprite2D_methods.get_frame.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_frame_progress._set_frame_progress = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_frame_progress", 373806689, loc))
-  AnimatedSprite2D_methods.set_frame_progress.m_call = cast(type_of(AnimatedSprite2D_methods.set_frame_progress.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_frame_progress.m_call = cast(type_of(AnimatedSprite2D_methods.set_frame_progress.m_call))MB_ptr_call
   AnimatedSprite2D_methods.get_frame_progress._get_frame_progress = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "get_frame_progress", 1740695150, loc))
-  AnimatedSprite2D_methods.get_frame_progress.m_call = cast(type_of(AnimatedSprite2D_methods.get_frame_progress.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.get_frame_progress.m_call = cast(type_of(AnimatedSprite2D_methods.get_frame_progress.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_frame_and_progress._set_frame_and_progress = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_frame_and_progress", 1602489585, loc))
-  AnimatedSprite2D_methods.set_frame_and_progress.m_call = cast(type_of(AnimatedSprite2D_methods.set_frame_and_progress.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_frame_and_progress.m_call = cast(type_of(AnimatedSprite2D_methods.set_frame_and_progress.m_call))MB_ptr_call
   AnimatedSprite2D_methods.set_speed_scale._set_speed_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "set_speed_scale", 373806689, loc))
-  AnimatedSprite2D_methods.set_speed_scale.m_call = cast(type_of(AnimatedSprite2D_methods.set_speed_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.set_speed_scale.m_call = cast(type_of(AnimatedSprite2D_methods.set_speed_scale.m_call))MB_ptr_call
   AnimatedSprite2D_methods.get_speed_scale._get_speed_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "get_speed_scale", 1740695150, loc))
-  AnimatedSprite2D_methods.get_speed_scale.m_call = cast(type_of(AnimatedSprite2D_methods.get_speed_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimatedSprite2D_methods.get_speed_scale.m_call = cast(type_of(AnimatedSprite2D_methods.get_speed_scale.m_call))MB_ptr_call
   AnimatedSprite2D_methods.get_playing_speed._get_playing_speed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimatedSprite2D, "get_playing_speed", 1740695150, loc))
-  AnimatedSprite2D_methods.get_playing_speed.m_call = cast(type_of(AnimatedSprite2D_methods.get_playing_speed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-AnimatedSprite2D_init_props :: proc(AnimatedSprite2D_prop: ^AnimatedSprite2D_properties, loc:= #caller_location) {
-
-  AnimatedSprite2D_prop.sprite_frames_SpriteFrames.get_sprite_frames = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^SpriteFrames))GDW.Get_Method_Getter(.OBJECT, "get_sprite_frames")
-  AnimatedSprite2D_prop.sprite_frames_SpriteFrames.set_sprite_frames = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^SpriteFrames))GDW.Get_Method_Setter(.OBJECT, "set_sprite_frames")
-
-  AnimatedSprite2D_prop.animation_StringName.get_animation = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.StringName))GDW.Get_Method_Getter(.STRING_NAME, "get_animation")
-  AnimatedSprite2D_prop.animation_StringName.set_animation = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.StringName))GDW.Get_Method_Setter(.STRING_NAME, "set_animation")
-
-  AnimatedSprite2D_prop.autoplay_StringName.get_autoplay = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.StringName))GDW.Get_Method_Getter(.STRING_NAME, "get_autoplay")
-  AnimatedSprite2D_prop.autoplay_StringName.set_autoplay = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.StringName))GDW.Get_Method_Setter(.STRING_NAME, "set_autoplay")
-
-  AnimatedSprite2D_prop.frame_Int.get_frame = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_frame")
-  AnimatedSprite2D_prop.frame_Int.set_frame = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_frame")
-
-  AnimatedSprite2D_prop.frame_progress_float.get_frame_progress = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_frame_progress")
-  AnimatedSprite2D_prop.frame_progress_float.set_frame_progress = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_frame_progress")
-
-  AnimatedSprite2D_prop.speed_scale_float.get_speed_scale = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_speed_scale")
-  AnimatedSprite2D_prop.speed_scale_float.set_speed_scale = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_speed_scale")
-
-  AnimatedSprite2D_prop.centered_Bool.is_centered = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_centered")
-  AnimatedSprite2D_prop.centered_Bool.set_centered = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_centered")
-
-  AnimatedSprite2D_prop.offset_Vector2.get_offset = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_offset")
-  AnimatedSprite2D_prop.offset_Vector2.set_offset = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_offset")
-
-  AnimatedSprite2D_prop.flip_h_Bool.is_flipped_h = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_flipped_h")
-  AnimatedSprite2D_prop.flip_h_Bool.set_flip_h = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_flip_h")
-
-  AnimatedSprite2D_prop.flip_v_Bool.is_flipped_v = cast(proc "c" (p_base: AnimatedSprite2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_flipped_v")
-  AnimatedSprite2D_prop.flip_v_Bool.set_flip_v = cast(proc "c" (p_base: AnimatedSprite2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_flip_v")
+  AnimatedSprite2D_methods.get_playing_speed.m_call = cast(type_of(AnimatedSprite2D_methods.get_playing_speed.m_call))MB_ptr_call
 };

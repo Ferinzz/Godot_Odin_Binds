@@ -19,8 +19,9 @@ AudioStreamPlaybackResampled_MethodBind_List :: struct {
   },
   };
 AudioStreamPlaybackResampled_Init_ :: proc (AudioStreamPlaybackResampled_methods: ^AudioStreamPlaybackResampled_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AudioStreamPlaybackResampled_methods.begin_resample._begin_resample = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlaybackResampled, "begin_resample", 3218959716, loc))
-  AudioStreamPlaybackResampled_methods.begin_resample.m_call = cast(type_of(AudioStreamPlaybackResampled_methods.begin_resample.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlaybackResampled_methods.begin_resample.m_call = cast(type_of(AudioStreamPlaybackResampled_methods.begin_resample.m_call))MB_ptr_call
 };
 
 AudioStreamPlaybackResampled_Init_Virtuals_Info :: proc(info: ^AudioStreamPlaybackResampled_Virtual_Info) {

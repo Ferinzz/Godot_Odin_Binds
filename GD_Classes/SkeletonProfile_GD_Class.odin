@@ -13,24 +13,6 @@ SkeletonProfile_TailDirection :: enum i64 {
   TAIL_DIRECTION_SPECIFIC_CHILD = 1,
   TAIL_DIRECTION_END = 2,
 };
-SkeletonProfile_properties :: struct {
-  root_bone_StringName : struct {
-  get_root_bone: proc "c" (p_base: SkeletonProfile, r_value: ^GDW.StringName),
-  set_root_bone: proc "c" (p_base: SkeletonProfile, p_value: ^GDW.StringName),
-  },
-  scale_base_bone_StringName : struct {
-  get_scale_base_bone: proc "c" (p_base: SkeletonProfile, r_value: ^GDW.StringName),
-  set_scale_base_bone: proc "c" (p_base: SkeletonProfile, p_value: ^GDW.StringName),
-  },
-  group_size_Int : struct {
-  get_group_size: proc "c" (p_base: SkeletonProfile, r_value: ^GDW.Int),
-  set_group_size: proc "c" (p_base: SkeletonProfile, p_value: ^GDW.Int),
-  },
-  bone_size_Int : struct {
-  get_bone_size: proc "c" (p_base: SkeletonProfile, r_value: ^GDW.Int),
-  set_bone_size: proc "c" (p_base: SkeletonProfile, p_value: ^GDW.Int),
-  },
-};
 SkeletonProfile_MethodBind_List :: struct {
   set_root_bone: struct{
     using _set_root_bone: ^GDW.MethodBind,
@@ -150,76 +132,63 @@ SkeletonProfile_MethodBind_List :: struct {
   },
   };
 SkeletonProfile_Init_ :: proc (SkeletonProfile_methods: ^SkeletonProfile_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   SkeletonProfile_methods.set_root_bone._set_root_bone = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_root_bone", 3304788590, loc))
-  SkeletonProfile_methods.set_root_bone.m_call = cast(type_of(SkeletonProfile_methods.set_root_bone.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_root_bone.m_call = cast(type_of(SkeletonProfile_methods.set_root_bone.m_call))MB_ptr_call
   SkeletonProfile_methods.get_root_bone._get_root_bone = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_root_bone", 2737447660, loc))
-  SkeletonProfile_methods.get_root_bone.m_call = cast(type_of(SkeletonProfile_methods.get_root_bone.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_root_bone.m_call = cast(type_of(SkeletonProfile_methods.get_root_bone.m_call))MB_ptr_call
   SkeletonProfile_methods.set_scale_base_bone._set_scale_base_bone = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_scale_base_bone", 3304788590, loc))
-  SkeletonProfile_methods.set_scale_base_bone.m_call = cast(type_of(SkeletonProfile_methods.set_scale_base_bone.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_scale_base_bone.m_call = cast(type_of(SkeletonProfile_methods.set_scale_base_bone.m_call))MB_ptr_call
   SkeletonProfile_methods.get_scale_base_bone._get_scale_base_bone = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_scale_base_bone", 2737447660, loc))
-  SkeletonProfile_methods.get_scale_base_bone.m_call = cast(type_of(SkeletonProfile_methods.get_scale_base_bone.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_scale_base_bone.m_call = cast(type_of(SkeletonProfile_methods.get_scale_base_bone.m_call))MB_ptr_call
   SkeletonProfile_methods.set_group_size._set_group_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_group_size", 1286410249, loc))
-  SkeletonProfile_methods.set_group_size.m_call = cast(type_of(SkeletonProfile_methods.set_group_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_group_size.m_call = cast(type_of(SkeletonProfile_methods.set_group_size.m_call))MB_ptr_call
   SkeletonProfile_methods.get_group_size._get_group_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_group_size", 2455072627, loc))
-  SkeletonProfile_methods.get_group_size.m_call = cast(type_of(SkeletonProfile_methods.get_group_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_group_size.m_call = cast(type_of(SkeletonProfile_methods.get_group_size.m_call))MB_ptr_call
   SkeletonProfile_methods.get_group_name._get_group_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_group_name", 659327637, loc))
-  SkeletonProfile_methods.get_group_name.m_call = cast(type_of(SkeletonProfile_methods.get_group_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_group_name.m_call = cast(type_of(SkeletonProfile_methods.get_group_name.m_call))MB_ptr_call
   SkeletonProfile_methods.set_group_name._set_group_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_group_name", 3780747571, loc))
-  SkeletonProfile_methods.set_group_name.m_call = cast(type_of(SkeletonProfile_methods.set_group_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_group_name.m_call = cast(type_of(SkeletonProfile_methods.set_group_name.m_call))MB_ptr_call
   SkeletonProfile_methods.get_texture._get_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_texture", 3536238170, loc))
-  SkeletonProfile_methods.get_texture.m_call = cast(type_of(SkeletonProfile_methods.get_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_texture.m_call = cast(type_of(SkeletonProfile_methods.get_texture.m_call))MB_ptr_call
   SkeletonProfile_methods.set_texture._set_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_texture", 666127730, loc))
-  SkeletonProfile_methods.set_texture.m_call = cast(type_of(SkeletonProfile_methods.set_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_texture.m_call = cast(type_of(SkeletonProfile_methods.set_texture.m_call))MB_ptr_call
   SkeletonProfile_methods.set_bone_size._set_bone_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_bone_size", 1286410249, loc))
-  SkeletonProfile_methods.set_bone_size.m_call = cast(type_of(SkeletonProfile_methods.set_bone_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_bone_size.m_call = cast(type_of(SkeletonProfile_methods.set_bone_size.m_call))MB_ptr_call
   SkeletonProfile_methods.get_bone_size._get_bone_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_bone_size", 2455072627, loc))
-  SkeletonProfile_methods.get_bone_size.m_call = cast(type_of(SkeletonProfile_methods.get_bone_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_bone_size.m_call = cast(type_of(SkeletonProfile_methods.get_bone_size.m_call))MB_ptr_call
   SkeletonProfile_methods.find_bone._find_bone = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "find_bone", 2458036349, loc))
-  SkeletonProfile_methods.find_bone.m_call = cast(type_of(SkeletonProfile_methods.find_bone.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.find_bone.m_call = cast(type_of(SkeletonProfile_methods.find_bone.m_call))MB_ptr_call
   SkeletonProfile_methods.get_bone_name._get_bone_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_bone_name", 659327637, loc))
-  SkeletonProfile_methods.get_bone_name.m_call = cast(type_of(SkeletonProfile_methods.get_bone_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_bone_name.m_call = cast(type_of(SkeletonProfile_methods.get_bone_name.m_call))MB_ptr_call
   SkeletonProfile_methods.set_bone_name._set_bone_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_bone_name", 3780747571, loc))
-  SkeletonProfile_methods.set_bone_name.m_call = cast(type_of(SkeletonProfile_methods.set_bone_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_bone_name.m_call = cast(type_of(SkeletonProfile_methods.set_bone_name.m_call))MB_ptr_call
   SkeletonProfile_methods.get_bone_parent._get_bone_parent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_bone_parent", 659327637, loc))
-  SkeletonProfile_methods.get_bone_parent.m_call = cast(type_of(SkeletonProfile_methods.get_bone_parent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_bone_parent.m_call = cast(type_of(SkeletonProfile_methods.get_bone_parent.m_call))MB_ptr_call
   SkeletonProfile_methods.set_bone_parent._set_bone_parent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_bone_parent", 3780747571, loc))
-  SkeletonProfile_methods.set_bone_parent.m_call = cast(type_of(SkeletonProfile_methods.set_bone_parent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_bone_parent.m_call = cast(type_of(SkeletonProfile_methods.set_bone_parent.m_call))MB_ptr_call
   SkeletonProfile_methods.get_tail_direction._get_tail_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_tail_direction", 2675997574, loc))
-  SkeletonProfile_methods.get_tail_direction.m_call = cast(type_of(SkeletonProfile_methods.get_tail_direction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_tail_direction.m_call = cast(type_of(SkeletonProfile_methods.get_tail_direction.m_call))MB_ptr_call
   SkeletonProfile_methods.set_tail_direction._set_tail_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_tail_direction", 1231951015, loc))
-  SkeletonProfile_methods.set_tail_direction.m_call = cast(type_of(SkeletonProfile_methods.set_tail_direction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_tail_direction.m_call = cast(type_of(SkeletonProfile_methods.set_tail_direction.m_call))MB_ptr_call
   SkeletonProfile_methods.get_bone_tail._get_bone_tail = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_bone_tail", 659327637, loc))
-  SkeletonProfile_methods.get_bone_tail.m_call = cast(type_of(SkeletonProfile_methods.get_bone_tail.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_bone_tail.m_call = cast(type_of(SkeletonProfile_methods.get_bone_tail.m_call))MB_ptr_call
   SkeletonProfile_methods.set_bone_tail._set_bone_tail = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_bone_tail", 3780747571, loc))
-  SkeletonProfile_methods.set_bone_tail.m_call = cast(type_of(SkeletonProfile_methods.set_bone_tail.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_bone_tail.m_call = cast(type_of(SkeletonProfile_methods.set_bone_tail.m_call))MB_ptr_call
   SkeletonProfile_methods.get_reference_pose._get_reference_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_reference_pose", 1965739696, loc))
-  SkeletonProfile_methods.get_reference_pose.m_call = cast(type_of(SkeletonProfile_methods.get_reference_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_reference_pose.m_call = cast(type_of(SkeletonProfile_methods.get_reference_pose.m_call))MB_ptr_call
   SkeletonProfile_methods.set_reference_pose._set_reference_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_reference_pose", 3616898986, loc))
-  SkeletonProfile_methods.set_reference_pose.m_call = cast(type_of(SkeletonProfile_methods.set_reference_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_reference_pose.m_call = cast(type_of(SkeletonProfile_methods.set_reference_pose.m_call))MB_ptr_call
   SkeletonProfile_methods.get_handle_offset._get_handle_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_handle_offset", 2299179447, loc))
-  SkeletonProfile_methods.get_handle_offset.m_call = cast(type_of(SkeletonProfile_methods.get_handle_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_handle_offset.m_call = cast(type_of(SkeletonProfile_methods.get_handle_offset.m_call))MB_ptr_call
   SkeletonProfile_methods.set_handle_offset._set_handle_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_handle_offset", 163021252, loc))
-  SkeletonProfile_methods.set_handle_offset.m_call = cast(type_of(SkeletonProfile_methods.set_handle_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_handle_offset.m_call = cast(type_of(SkeletonProfile_methods.set_handle_offset.m_call))MB_ptr_call
   SkeletonProfile_methods.get_group._get_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "get_group", 659327637, loc))
-  SkeletonProfile_methods.get_group.m_call = cast(type_of(SkeletonProfile_methods.get_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.get_group.m_call = cast(type_of(SkeletonProfile_methods.get_group.m_call))MB_ptr_call
   SkeletonProfile_methods.set_group._set_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_group", 3780747571, loc))
-  SkeletonProfile_methods.set_group.m_call = cast(type_of(SkeletonProfile_methods.set_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.set_group.m_call = cast(type_of(SkeletonProfile_methods.set_group.m_call))MB_ptr_call
   SkeletonProfile_methods.is_required._is_required = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "is_required", 1116898809, loc))
-  SkeletonProfile_methods.is_required.m_call = cast(type_of(SkeletonProfile_methods.is_required.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkeletonProfile_methods.is_required.m_call = cast(type_of(SkeletonProfile_methods.is_required.m_call))MB_ptr_call
   SkeletonProfile_methods.set_required._set_required = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkeletonProfile, "set_required", 300928843, loc))
-  SkeletonProfile_methods.set_required.m_call = cast(type_of(SkeletonProfile_methods.set_required.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-SkeletonProfile_init_props :: proc(SkeletonProfile_prop: ^SkeletonProfile_properties, loc:= #caller_location) {
-
-  SkeletonProfile_prop.root_bone_StringName.get_root_bone = cast(proc "c" (p_base: SkeletonProfile, r_value: ^GDW.StringName))GDW.Get_Method_Getter(.STRING_NAME, "get_root_bone")
-  SkeletonProfile_prop.root_bone_StringName.set_root_bone = cast(proc "c" (p_base: SkeletonProfile, p_value: ^GDW.StringName))GDW.Get_Method_Setter(.STRING_NAME, "set_root_bone")
-
-  SkeletonProfile_prop.scale_base_bone_StringName.get_scale_base_bone = cast(proc "c" (p_base: SkeletonProfile, r_value: ^GDW.StringName))GDW.Get_Method_Getter(.STRING_NAME, "get_scale_base_bone")
-  SkeletonProfile_prop.scale_base_bone_StringName.set_scale_base_bone = cast(proc "c" (p_base: SkeletonProfile, p_value: ^GDW.StringName))GDW.Get_Method_Setter(.STRING_NAME, "set_scale_base_bone")
-
-  SkeletonProfile_prop.group_size_Int.get_group_size = cast(proc "c" (p_base: SkeletonProfile, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_group_size")
-  SkeletonProfile_prop.group_size_Int.set_group_size = cast(proc "c" (p_base: SkeletonProfile, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_group_size")
-
-  SkeletonProfile_prop.bone_size_Int.get_bone_size = cast(proc "c" (p_base: SkeletonProfile, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_bone_size")
-  SkeletonProfile_prop.bone_size_Int.set_bone_size = cast(proc "c" (p_base: SkeletonProfile, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_bone_size")
+  SkeletonProfile_methods.set_required.m_call = cast(type_of(SkeletonProfile_methods.set_required.m_call))MB_ptr_call
 };

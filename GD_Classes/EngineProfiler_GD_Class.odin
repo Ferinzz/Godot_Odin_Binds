@@ -16,6 +16,7 @@ EngineProfiler_Virtual_Info :: struct {
 EngineProfiler_MethodBind_List :: struct {
 };
 EngineProfiler_Init_ :: proc (EngineProfiler_methods: ^EngineProfiler_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 EngineProfiler_Init_Virtuals_Info :: proc(info: ^EngineProfiler_Virtual_Info) {

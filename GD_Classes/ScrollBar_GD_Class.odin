@@ -7,12 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 ScrollBar :: ^GDW.Object
 
-ScrollBar_properties :: struct {
-  custom_step_float : struct {
-  get_custom_step: proc "c" (p_base: ScrollBar, r_value: ^GDW.float),
-  set_custom_step: proc "c" (p_base: ScrollBar, p_value: ^GDW.float),
-  },
-};
 ScrollBar_MethodBind_List :: struct {
   set_custom_step: struct{
     using _set_custom_step: ^GDW.MethodBind,
@@ -24,13 +18,9 @@ ScrollBar_MethodBind_List :: struct {
   },
 };
 ScrollBar_Init_ :: proc (ScrollBar_methods: ^ScrollBar_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   ScrollBar_methods.set_custom_step._set_custom_step = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ScrollBar, "set_custom_step", 373806689, loc))
-  ScrollBar_methods.set_custom_step.m_call = cast(type_of(ScrollBar_methods.set_custom_step.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ScrollBar_methods.set_custom_step.m_call = cast(type_of(ScrollBar_methods.set_custom_step.m_call))MB_ptr_call
   ScrollBar_methods.get_custom_step._get_custom_step = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ScrollBar, "get_custom_step", 1740695150, loc))
-  ScrollBar_methods.get_custom_step.m_call = cast(type_of(ScrollBar_methods.get_custom_step.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-ScrollBar_init_props :: proc(ScrollBar_prop: ^ScrollBar_properties, loc:= #caller_location) {
-
-  ScrollBar_prop.custom_step_float.get_custom_step = cast(proc "c" (p_base: ScrollBar, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_custom_step")
-  ScrollBar_prop.custom_step_float.set_custom_step = cast(proc "c" (p_base: ScrollBar, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_custom_step")
+  ScrollBar_methods.get_custom_step.m_call = cast(type_of(ScrollBar_methods.get_custom_step.m_call))MB_ptr_call
 };

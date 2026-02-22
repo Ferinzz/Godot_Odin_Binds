@@ -18,8 +18,9 @@ OpenXRSpatialComponentMesh3DList_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialComponentMesh3DList_Init_ :: proc (OpenXRSpatialComponentMesh3DList_methods: ^OpenXRSpatialComponentMesh3DList_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialComponentMesh3DList_methods.get_transform._get_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentMesh3DList, "get_transform", 1965739696, loc))
-  OpenXRSpatialComponentMesh3DList_methods.get_transform.m_call = cast(type_of(OpenXRSpatialComponentMesh3DList_methods.get_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentMesh3DList_methods.get_transform.m_call = cast(type_of(OpenXRSpatialComponentMesh3DList_methods.get_transform.m_call))MB_ptr_call
   OpenXRSpatialComponentMesh3DList_methods.get_mesh._get_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentMesh3DList, "get_mesh", 1576363275, loc))
-  OpenXRSpatialComponentMesh3DList_methods.get_mesh.m_call = cast(type_of(OpenXRSpatialComponentMesh3DList_methods.get_mesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentMesh3DList_methods.get_mesh.m_call = cast(type_of(OpenXRSpatialComponentMesh3DList_methods.get_mesh.m_call))MB_ptr_call
 };

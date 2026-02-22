@@ -18,8 +18,9 @@ ImageTextureLayered_MethodBind_List :: struct {
   },
   };
 ImageTextureLayered_Init_ :: proc (ImageTextureLayered_methods: ^ImageTextureLayered_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   ImageTextureLayered_methods.create_from_images._create_from_images = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ImageTextureLayered, "create_from_images", 2785773503, loc))
-  ImageTextureLayered_methods.create_from_images.m_call = cast(type_of(ImageTextureLayered_methods.create_from_images.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ImageTextureLayered_methods.create_from_images.m_call = cast(type_of(ImageTextureLayered_methods.create_from_images.m_call))MB_ptr_call
   ImageTextureLayered_methods.update_layer._update_layer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ImageTextureLayered, "update_layer", 3331733361, loc))
-  ImageTextureLayered_methods.update_layer.m_call = cast(type_of(ImageTextureLayered_methods.update_layer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ImageTextureLayered_methods.update_layer.m_call = cast(type_of(ImageTextureLayered_methods.update_layer.m_call))MB_ptr_call
 };

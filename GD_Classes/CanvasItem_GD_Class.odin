@@ -46,72 +46,6 @@ CanvasItem_Constants :: enum i64 {
   NOTIFICATION_EXIT_CANVAS= 33,
   NOTIFICATION_WORLD_2D_CHANGED= 36,
 };
-CanvasItem_properties :: struct {
-  visible_Bool : struct {
-  is_visible: proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool),
-  set_visible: proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool),
-  },
-  modulate_Color : struct {
-  get_modulate: proc "c" (p_base: CanvasItem, r_value: ^GDW.Color),
-  set_modulate: proc "c" (p_base: CanvasItem, p_value: ^GDW.Color),
-  },
-  self_modulate_Color : struct {
-  get_self_modulate: proc "c" (p_base: CanvasItem, r_value: ^GDW.Color),
-  set_self_modulate: proc "c" (p_base: CanvasItem, p_value: ^GDW.Color),
-  },
-  show_behind_parent_Bool : struct {
-  is_draw_behind_parent_enabled: proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool),
-  set_draw_behind_parent: proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool),
-  },
-  top_level_Bool : struct {
-  is_set_as_top_level: proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool),
-  set_as_top_level: proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool),
-  },
-  clip_children_Int : struct {
-  get_clip_children_mode: proc "c" (p_base: CanvasItem, r_value: ^GDW.Int),
-  set_clip_children_mode: proc "c" (p_base: CanvasItem, p_value: ^GDW.Int),
-  },
-  light_mask_Int : struct {
-  get_light_mask: proc "c" (p_base: CanvasItem, r_value: ^GDW.Int),
-  set_light_mask: proc "c" (p_base: CanvasItem, p_value: ^GDW.Int),
-  },
-  visibility_layer_Int : struct {
-  get_visibility_layer: proc "c" (p_base: CanvasItem, r_value: ^GDW.Int),
-  set_visibility_layer: proc "c" (p_base: CanvasItem, p_value: ^GDW.Int),
-  },
-  z_index_Int : struct {
-  get_z_index: proc "c" (p_base: CanvasItem, r_value: ^GDW.Int),
-  set_z_index: proc "c" (p_base: CanvasItem, p_value: ^GDW.Int),
-  },
-  z_as_relative_Bool : struct {
-  is_z_relative: proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool),
-  set_z_as_relative: proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool),
-  },
-  y_sort_enabled_Bool : struct {
-  is_y_sort_enabled: proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool),
-  set_y_sort_enabled: proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool),
-  },
-  texture_filter_Int : struct {
-  get_texture_filter: proc "c" (p_base: CanvasItem, r_value: ^GDW.Int),
-  set_texture_filter: proc "c" (p_base: CanvasItem, p_value: ^GDW.Int),
-  },
-  texture_repeat_Int : struct {
-  get_texture_repeat: proc "c" (p_base: CanvasItem, r_value: ^GDW.Int),
-  set_texture_repeat: proc "c" (p_base: CanvasItem, p_value: ^GDW.Int),
-  },
-  material_CanvasItemMaterial : struct {
-    get_material: proc "c" (p_base: CanvasItem, r_value: ^CanvasItemMaterial),
-    set_material: proc "c" (p_base: CanvasItem, p_value: ^CanvasItemMaterial),
-  },
-  material_ShaderMaterial : struct {
-    get_material: proc "c" (p_base: CanvasItem, r_value: ^ShaderMaterial),
-    set_material: proc "c" (p_base: CanvasItem, p_value: ^ShaderMaterial),
-  },
-  use_parent_material_Bool : struct {
-  get_use_parent_material: proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool),
-  set_use_parent_material: proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool),
-  },
-};
 CanvasItem_MethodBind_List :: struct {
   get_canvas_item: struct{
     using _get_canvas_item: ^GDW.MethodBind,
@@ -479,241 +413,192 @@ CanvasItem_MethodBind_List :: struct {
   },
 };
 CanvasItem_Init_ :: proc (CanvasItem_methods: ^CanvasItem_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   CanvasItem_methods.get_canvas_item._get_canvas_item = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_canvas_item", 2944877500, loc))
-  CanvasItem_methods.get_canvas_item.m_call = cast(type_of(CanvasItem_methods.get_canvas_item.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_canvas_item.m_call = cast(type_of(CanvasItem_methods.get_canvas_item.m_call))MB_ptr_call
   CanvasItem_methods.set_visible._set_visible = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_visible", 2586408642, loc))
-  CanvasItem_methods.set_visible.m_call = cast(type_of(CanvasItem_methods.set_visible.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_visible.m_call = cast(type_of(CanvasItem_methods.set_visible.m_call))MB_ptr_call
   CanvasItem_methods.is_visible._is_visible = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "is_visible", 36873697, loc))
-  CanvasItem_methods.is_visible.m_call = cast(type_of(CanvasItem_methods.is_visible.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.is_visible.m_call = cast(type_of(CanvasItem_methods.is_visible.m_call))MB_ptr_call
   CanvasItem_methods.is_visible_in_tree._is_visible_in_tree = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "is_visible_in_tree", 36873697, loc))
-  CanvasItem_methods.is_visible_in_tree.m_call = cast(type_of(CanvasItem_methods.is_visible_in_tree.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.is_visible_in_tree.m_call = cast(type_of(CanvasItem_methods.is_visible_in_tree.m_call))MB_ptr_call
   CanvasItem_methods.show._show = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "show", 3218959716, loc))
-  CanvasItem_methods.show.m_call = cast(type_of(CanvasItem_methods.show.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.show.m_call = cast(type_of(CanvasItem_methods.show.m_call))MB_ptr_call
   CanvasItem_methods.hide._hide = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "hide", 3218959716, loc))
-  CanvasItem_methods.hide.m_call = cast(type_of(CanvasItem_methods.hide.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.hide.m_call = cast(type_of(CanvasItem_methods.hide.m_call))MB_ptr_call
   CanvasItem_methods.queue_redraw._queue_redraw = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "queue_redraw", 3218959716, loc))
-  CanvasItem_methods.queue_redraw.m_call = cast(type_of(CanvasItem_methods.queue_redraw.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.queue_redraw.m_call = cast(type_of(CanvasItem_methods.queue_redraw.m_call))MB_ptr_call
   CanvasItem_methods.move_to_front._move_to_front = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "move_to_front", 3218959716, loc))
-  CanvasItem_methods.move_to_front.m_call = cast(type_of(CanvasItem_methods.move_to_front.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.move_to_front.m_call = cast(type_of(CanvasItem_methods.move_to_front.m_call))MB_ptr_call
   CanvasItem_methods.set_as_top_level._set_as_top_level = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_as_top_level", 2586408642, loc))
-  CanvasItem_methods.set_as_top_level.m_call = cast(type_of(CanvasItem_methods.set_as_top_level.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_as_top_level.m_call = cast(type_of(CanvasItem_methods.set_as_top_level.m_call))MB_ptr_call
   CanvasItem_methods.is_set_as_top_level._is_set_as_top_level = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "is_set_as_top_level", 36873697, loc))
-  CanvasItem_methods.is_set_as_top_level.m_call = cast(type_of(CanvasItem_methods.is_set_as_top_level.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.is_set_as_top_level.m_call = cast(type_of(CanvasItem_methods.is_set_as_top_level.m_call))MB_ptr_call
   CanvasItem_methods.set_light_mask._set_light_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_light_mask", 1286410249, loc))
-  CanvasItem_methods.set_light_mask.m_call = cast(type_of(CanvasItem_methods.set_light_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_light_mask.m_call = cast(type_of(CanvasItem_methods.set_light_mask.m_call))MB_ptr_call
   CanvasItem_methods.get_light_mask._get_light_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_light_mask", 3905245786, loc))
-  CanvasItem_methods.get_light_mask.m_call = cast(type_of(CanvasItem_methods.get_light_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_light_mask.m_call = cast(type_of(CanvasItem_methods.get_light_mask.m_call))MB_ptr_call
   CanvasItem_methods.set_modulate._set_modulate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_modulate", 2920490490, loc))
-  CanvasItem_methods.set_modulate.m_call = cast(type_of(CanvasItem_methods.set_modulate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_modulate.m_call = cast(type_of(CanvasItem_methods.set_modulate.m_call))MB_ptr_call
   CanvasItem_methods.get_modulate._get_modulate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_modulate", 3444240500, loc))
-  CanvasItem_methods.get_modulate.m_call = cast(type_of(CanvasItem_methods.get_modulate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_modulate.m_call = cast(type_of(CanvasItem_methods.get_modulate.m_call))MB_ptr_call
   CanvasItem_methods.set_self_modulate._set_self_modulate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_self_modulate", 2920490490, loc))
-  CanvasItem_methods.set_self_modulate.m_call = cast(type_of(CanvasItem_methods.set_self_modulate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_self_modulate.m_call = cast(type_of(CanvasItem_methods.set_self_modulate.m_call))MB_ptr_call
   CanvasItem_methods.get_self_modulate._get_self_modulate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_self_modulate", 3444240500, loc))
-  CanvasItem_methods.get_self_modulate.m_call = cast(type_of(CanvasItem_methods.get_self_modulate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_self_modulate.m_call = cast(type_of(CanvasItem_methods.get_self_modulate.m_call))MB_ptr_call
   CanvasItem_methods.set_z_index._set_z_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_z_index", 1286410249, loc))
-  CanvasItem_methods.set_z_index.m_call = cast(type_of(CanvasItem_methods.set_z_index.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_z_index.m_call = cast(type_of(CanvasItem_methods.set_z_index.m_call))MB_ptr_call
   CanvasItem_methods.get_z_index._get_z_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_z_index", 3905245786, loc))
-  CanvasItem_methods.get_z_index.m_call = cast(type_of(CanvasItem_methods.get_z_index.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_z_index.m_call = cast(type_of(CanvasItem_methods.get_z_index.m_call))MB_ptr_call
   CanvasItem_methods.set_z_as_relative._set_z_as_relative = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_z_as_relative", 2586408642, loc))
-  CanvasItem_methods.set_z_as_relative.m_call = cast(type_of(CanvasItem_methods.set_z_as_relative.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_z_as_relative.m_call = cast(type_of(CanvasItem_methods.set_z_as_relative.m_call))MB_ptr_call
   CanvasItem_methods.is_z_relative._is_z_relative = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "is_z_relative", 36873697, loc))
-  CanvasItem_methods.is_z_relative.m_call = cast(type_of(CanvasItem_methods.is_z_relative.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.is_z_relative.m_call = cast(type_of(CanvasItem_methods.is_z_relative.m_call))MB_ptr_call
   CanvasItem_methods.set_y_sort_enabled._set_y_sort_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_y_sort_enabled", 2586408642, loc))
-  CanvasItem_methods.set_y_sort_enabled.m_call = cast(type_of(CanvasItem_methods.set_y_sort_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_y_sort_enabled.m_call = cast(type_of(CanvasItem_methods.set_y_sort_enabled.m_call))MB_ptr_call
   CanvasItem_methods.is_y_sort_enabled._is_y_sort_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "is_y_sort_enabled", 36873697, loc))
-  CanvasItem_methods.is_y_sort_enabled.m_call = cast(type_of(CanvasItem_methods.is_y_sort_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.is_y_sort_enabled.m_call = cast(type_of(CanvasItem_methods.is_y_sort_enabled.m_call))MB_ptr_call
   CanvasItem_methods.set_draw_behind_parent._set_draw_behind_parent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_draw_behind_parent", 2586408642, loc))
-  CanvasItem_methods.set_draw_behind_parent.m_call = cast(type_of(CanvasItem_methods.set_draw_behind_parent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_draw_behind_parent.m_call = cast(type_of(CanvasItem_methods.set_draw_behind_parent.m_call))MB_ptr_call
   CanvasItem_methods.is_draw_behind_parent_enabled._is_draw_behind_parent_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "is_draw_behind_parent_enabled", 36873697, loc))
-  CanvasItem_methods.is_draw_behind_parent_enabled.m_call = cast(type_of(CanvasItem_methods.is_draw_behind_parent_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.is_draw_behind_parent_enabled.m_call = cast(type_of(CanvasItem_methods.is_draw_behind_parent_enabled.m_call))MB_ptr_call
   CanvasItem_methods.draw_line._draw_line = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_line", 1562330099, loc))
-  CanvasItem_methods.draw_line.m_call = cast(type_of(CanvasItem_methods.draw_line.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_line.m_call = cast(type_of(CanvasItem_methods.draw_line.m_call))MB_ptr_call
   CanvasItem_methods.draw_dashed_line._draw_dashed_line = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_dashed_line", 3653831622, loc))
-  CanvasItem_methods.draw_dashed_line.m_call = cast(type_of(CanvasItem_methods.draw_dashed_line.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_dashed_line.m_call = cast(type_of(CanvasItem_methods.draw_dashed_line.m_call))MB_ptr_call
   CanvasItem_methods.draw_polyline._draw_polyline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_polyline", 3797364428, loc))
-  CanvasItem_methods.draw_polyline.m_call = cast(type_of(CanvasItem_methods.draw_polyline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_polyline.m_call = cast(type_of(CanvasItem_methods.draw_polyline.m_call))MB_ptr_call
   CanvasItem_methods.draw_polyline_colors._draw_polyline_colors = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_polyline_colors", 2311979562, loc))
-  CanvasItem_methods.draw_polyline_colors.m_call = cast(type_of(CanvasItem_methods.draw_polyline_colors.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_polyline_colors.m_call = cast(type_of(CanvasItem_methods.draw_polyline_colors.m_call))MB_ptr_call
   CanvasItem_methods.draw_ellipse_arc._draw_ellipse_arc = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_ellipse_arc", 936174114, loc))
-  CanvasItem_methods.draw_ellipse_arc.m_call = cast(type_of(CanvasItem_methods.draw_ellipse_arc.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_ellipse_arc.m_call = cast(type_of(CanvasItem_methods.draw_ellipse_arc.m_call))MB_ptr_call
   CanvasItem_methods.draw_arc._draw_arc = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_arc", 4140652635, loc))
-  CanvasItem_methods.draw_arc.m_call = cast(type_of(CanvasItem_methods.draw_arc.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_arc.m_call = cast(type_of(CanvasItem_methods.draw_arc.m_call))MB_ptr_call
   CanvasItem_methods.draw_multiline._draw_multiline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_multiline", 3797364428, loc))
-  CanvasItem_methods.draw_multiline.m_call = cast(type_of(CanvasItem_methods.draw_multiline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_multiline.m_call = cast(type_of(CanvasItem_methods.draw_multiline.m_call))MB_ptr_call
   CanvasItem_methods.draw_multiline_colors._draw_multiline_colors = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_multiline_colors", 2311979562, loc))
-  CanvasItem_methods.draw_multiline_colors.m_call = cast(type_of(CanvasItem_methods.draw_multiline_colors.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_multiline_colors.m_call = cast(type_of(CanvasItem_methods.draw_multiline_colors.m_call))MB_ptr_call
   CanvasItem_methods.draw_rect._draw_rect = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_rect", 2773573813, loc))
-  CanvasItem_methods.draw_rect.m_call = cast(type_of(CanvasItem_methods.draw_rect.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_rect.m_call = cast(type_of(CanvasItem_methods.draw_rect.m_call))MB_ptr_call
   CanvasItem_methods.draw_circle._draw_circle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_circle", 3153026596, loc))
-  CanvasItem_methods.draw_circle.m_call = cast(type_of(CanvasItem_methods.draw_circle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_circle.m_call = cast(type_of(CanvasItem_methods.draw_circle.m_call))MB_ptr_call
   CanvasItem_methods.draw_ellipse._draw_ellipse = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_ellipse", 3790774806, loc))
-  CanvasItem_methods.draw_ellipse.m_call = cast(type_of(CanvasItem_methods.draw_ellipse.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_ellipse.m_call = cast(type_of(CanvasItem_methods.draw_ellipse.m_call))MB_ptr_call
   CanvasItem_methods.draw_texture._draw_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_texture", 520200117, loc))
-  CanvasItem_methods.draw_texture.m_call = cast(type_of(CanvasItem_methods.draw_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_texture.m_call = cast(type_of(CanvasItem_methods.draw_texture.m_call))MB_ptr_call
   CanvasItem_methods.draw_texture_rect._draw_texture_rect = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_texture_rect", 3832805018, loc))
-  CanvasItem_methods.draw_texture_rect.m_call = cast(type_of(CanvasItem_methods.draw_texture_rect.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_texture_rect.m_call = cast(type_of(CanvasItem_methods.draw_texture_rect.m_call))MB_ptr_call
   CanvasItem_methods.draw_texture_rect_region._draw_texture_rect_region = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_texture_rect_region", 3883821411, loc))
-  CanvasItem_methods.draw_texture_rect_region.m_call = cast(type_of(CanvasItem_methods.draw_texture_rect_region.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_texture_rect_region.m_call = cast(type_of(CanvasItem_methods.draw_texture_rect_region.m_call))MB_ptr_call
   CanvasItem_methods.draw_msdf_texture_rect_region._draw_msdf_texture_rect_region = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_msdf_texture_rect_region", 4219163252, loc))
-  CanvasItem_methods.draw_msdf_texture_rect_region.m_call = cast(type_of(CanvasItem_methods.draw_msdf_texture_rect_region.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_msdf_texture_rect_region.m_call = cast(type_of(CanvasItem_methods.draw_msdf_texture_rect_region.m_call))MB_ptr_call
   CanvasItem_methods.draw_lcd_texture_rect_region._draw_lcd_texture_rect_region = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_lcd_texture_rect_region", 3212350954, loc))
-  CanvasItem_methods.draw_lcd_texture_rect_region.m_call = cast(type_of(CanvasItem_methods.draw_lcd_texture_rect_region.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_lcd_texture_rect_region.m_call = cast(type_of(CanvasItem_methods.draw_lcd_texture_rect_region.m_call))MB_ptr_call
   CanvasItem_methods.draw_style_box._draw_style_box = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_style_box", 388176283, loc))
-  CanvasItem_methods.draw_style_box.m_call = cast(type_of(CanvasItem_methods.draw_style_box.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_style_box.m_call = cast(type_of(CanvasItem_methods.draw_style_box.m_call))MB_ptr_call
   CanvasItem_methods.draw_primitive._draw_primitive = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_primitive", 3288481815, loc))
-  CanvasItem_methods.draw_primitive.m_call = cast(type_of(CanvasItem_methods.draw_primitive.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_primitive.m_call = cast(type_of(CanvasItem_methods.draw_primitive.m_call))MB_ptr_call
   CanvasItem_methods.draw_polygon._draw_polygon = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_polygon", 974537912, loc))
-  CanvasItem_methods.draw_polygon.m_call = cast(type_of(CanvasItem_methods.draw_polygon.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_polygon.m_call = cast(type_of(CanvasItem_methods.draw_polygon.m_call))MB_ptr_call
   CanvasItem_methods.draw_colored_polygon._draw_colored_polygon = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_colored_polygon", 15245644, loc))
-  CanvasItem_methods.draw_colored_polygon.m_call = cast(type_of(CanvasItem_methods.draw_colored_polygon.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_colored_polygon.m_call = cast(type_of(CanvasItem_methods.draw_colored_polygon.m_call))MB_ptr_call
   CanvasItem_methods.draw_string._draw_string = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_string", 719605945, loc))
-  CanvasItem_methods.draw_string.m_call = cast(type_of(CanvasItem_methods.draw_string.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_string.m_call = cast(type_of(CanvasItem_methods.draw_string.m_call))MB_ptr_call
   CanvasItem_methods.draw_multiline_string._draw_multiline_string = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_multiline_string", 2341488182, loc))
-  CanvasItem_methods.draw_multiline_string.m_call = cast(type_of(CanvasItem_methods.draw_multiline_string.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_multiline_string.m_call = cast(type_of(CanvasItem_methods.draw_multiline_string.m_call))MB_ptr_call
   CanvasItem_methods.draw_string_outline._draw_string_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_string_outline", 707403449, loc))
-  CanvasItem_methods.draw_string_outline.m_call = cast(type_of(CanvasItem_methods.draw_string_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_string_outline.m_call = cast(type_of(CanvasItem_methods.draw_string_outline.m_call))MB_ptr_call
   CanvasItem_methods.draw_multiline_string_outline._draw_multiline_string_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_multiline_string_outline", 3050414441, loc))
-  CanvasItem_methods.draw_multiline_string_outline.m_call = cast(type_of(CanvasItem_methods.draw_multiline_string_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_multiline_string_outline.m_call = cast(type_of(CanvasItem_methods.draw_multiline_string_outline.m_call))MB_ptr_call
   CanvasItem_methods.draw_char._draw_char = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_char", 1336210142, loc))
-  CanvasItem_methods.draw_char.m_call = cast(type_of(CanvasItem_methods.draw_char.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_char.m_call = cast(type_of(CanvasItem_methods.draw_char.m_call))MB_ptr_call
   CanvasItem_methods.draw_char_outline._draw_char_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_char_outline", 1846384149, loc))
-  CanvasItem_methods.draw_char_outline.m_call = cast(type_of(CanvasItem_methods.draw_char_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_char_outline.m_call = cast(type_of(CanvasItem_methods.draw_char_outline.m_call))MB_ptr_call
   CanvasItem_methods.draw_mesh._draw_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_mesh", 153818295, loc))
-  CanvasItem_methods.draw_mesh.m_call = cast(type_of(CanvasItem_methods.draw_mesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_mesh.m_call = cast(type_of(CanvasItem_methods.draw_mesh.m_call))MB_ptr_call
   CanvasItem_methods.draw_multimesh._draw_multimesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_multimesh", 937992368, loc))
-  CanvasItem_methods.draw_multimesh.m_call = cast(type_of(CanvasItem_methods.draw_multimesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_multimesh.m_call = cast(type_of(CanvasItem_methods.draw_multimesh.m_call))MB_ptr_call
   CanvasItem_methods.draw_set_transform._draw_set_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_set_transform", 288975085, loc))
-  CanvasItem_methods.draw_set_transform.m_call = cast(type_of(CanvasItem_methods.draw_set_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_set_transform.m_call = cast(type_of(CanvasItem_methods.draw_set_transform.m_call))MB_ptr_call
   CanvasItem_methods.draw_set_transform_matrix._draw_set_transform_matrix = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_set_transform_matrix", 2761652528, loc))
-  CanvasItem_methods.draw_set_transform_matrix.m_call = cast(type_of(CanvasItem_methods.draw_set_transform_matrix.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_set_transform_matrix.m_call = cast(type_of(CanvasItem_methods.draw_set_transform_matrix.m_call))MB_ptr_call
   CanvasItem_methods.draw_animation_slice._draw_animation_slice = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_animation_slice", 3112831842, loc))
-  CanvasItem_methods.draw_animation_slice.m_call = cast(type_of(CanvasItem_methods.draw_animation_slice.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_animation_slice.m_call = cast(type_of(CanvasItem_methods.draw_animation_slice.m_call))MB_ptr_call
   CanvasItem_methods.draw_end_animation._draw_end_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "draw_end_animation", 3218959716, loc))
-  CanvasItem_methods.draw_end_animation.m_call = cast(type_of(CanvasItem_methods.draw_end_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.draw_end_animation.m_call = cast(type_of(CanvasItem_methods.draw_end_animation.m_call))MB_ptr_call
   CanvasItem_methods.get_transform._get_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_transform", 3814499831, loc))
-  CanvasItem_methods.get_transform.m_call = cast(type_of(CanvasItem_methods.get_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_transform.m_call = cast(type_of(CanvasItem_methods.get_transform.m_call))MB_ptr_call
   CanvasItem_methods.get_global_transform._get_global_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_global_transform", 3814499831, loc))
-  CanvasItem_methods.get_global_transform.m_call = cast(type_of(CanvasItem_methods.get_global_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_global_transform.m_call = cast(type_of(CanvasItem_methods.get_global_transform.m_call))MB_ptr_call
   CanvasItem_methods.get_global_transform_with_canvas._get_global_transform_with_canvas = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_global_transform_with_canvas", 3814499831, loc))
-  CanvasItem_methods.get_global_transform_with_canvas.m_call = cast(type_of(CanvasItem_methods.get_global_transform_with_canvas.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_global_transform_with_canvas.m_call = cast(type_of(CanvasItem_methods.get_global_transform_with_canvas.m_call))MB_ptr_call
   CanvasItem_methods.get_viewport_transform._get_viewport_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_viewport_transform", 3814499831, loc))
-  CanvasItem_methods.get_viewport_transform.m_call = cast(type_of(CanvasItem_methods.get_viewport_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_viewport_transform.m_call = cast(type_of(CanvasItem_methods.get_viewport_transform.m_call))MB_ptr_call
   CanvasItem_methods.get_viewport_rect._get_viewport_rect = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_viewport_rect", 1639390495, loc))
-  CanvasItem_methods.get_viewport_rect.m_call = cast(type_of(CanvasItem_methods.get_viewport_rect.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_viewport_rect.m_call = cast(type_of(CanvasItem_methods.get_viewport_rect.m_call))MB_ptr_call
   CanvasItem_methods.get_canvas_transform._get_canvas_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_canvas_transform", 3814499831, loc))
-  CanvasItem_methods.get_canvas_transform.m_call = cast(type_of(CanvasItem_methods.get_canvas_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_canvas_transform.m_call = cast(type_of(CanvasItem_methods.get_canvas_transform.m_call))MB_ptr_call
   CanvasItem_methods.get_screen_transform._get_screen_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_screen_transform", 3814499831, loc))
-  CanvasItem_methods.get_screen_transform.m_call = cast(type_of(CanvasItem_methods.get_screen_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_screen_transform.m_call = cast(type_of(CanvasItem_methods.get_screen_transform.m_call))MB_ptr_call
   CanvasItem_methods.get_local_mouse_position._get_local_mouse_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_local_mouse_position", 3341600327, loc))
-  CanvasItem_methods.get_local_mouse_position.m_call = cast(type_of(CanvasItem_methods.get_local_mouse_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_local_mouse_position.m_call = cast(type_of(CanvasItem_methods.get_local_mouse_position.m_call))MB_ptr_call
   CanvasItem_methods.get_global_mouse_position._get_global_mouse_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_global_mouse_position", 3341600327, loc))
-  CanvasItem_methods.get_global_mouse_position.m_call = cast(type_of(CanvasItem_methods.get_global_mouse_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_global_mouse_position.m_call = cast(type_of(CanvasItem_methods.get_global_mouse_position.m_call))MB_ptr_call
   CanvasItem_methods.get_canvas._get_canvas = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_canvas", 2944877500, loc))
-  CanvasItem_methods.get_canvas.m_call = cast(type_of(CanvasItem_methods.get_canvas.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_canvas.m_call = cast(type_of(CanvasItem_methods.get_canvas.m_call))MB_ptr_call
   CanvasItem_methods.get_canvas_layer_node._get_canvas_layer_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_canvas_layer_node", 2602762519, loc))
-  CanvasItem_methods.get_canvas_layer_node.m_call = cast(type_of(CanvasItem_methods.get_canvas_layer_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_canvas_layer_node.m_call = cast(type_of(CanvasItem_methods.get_canvas_layer_node.m_call))MB_ptr_call
   CanvasItem_methods.get_world_2d._get_world_2d = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_world_2d", 2339128592, loc))
-  CanvasItem_methods.get_world_2d.m_call = cast(type_of(CanvasItem_methods.get_world_2d.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_world_2d.m_call = cast(type_of(CanvasItem_methods.get_world_2d.m_call))MB_ptr_call
   CanvasItem_methods.set_material._set_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_material", 2757459619, loc))
-  CanvasItem_methods.set_material.m_call = cast(type_of(CanvasItem_methods.set_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_material.m_call = cast(type_of(CanvasItem_methods.set_material.m_call))MB_ptr_call
   CanvasItem_methods.get_material._get_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_material", 5934680, loc))
-  CanvasItem_methods.get_material.m_call = cast(type_of(CanvasItem_methods.get_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_material.m_call = cast(type_of(CanvasItem_methods.get_material.m_call))MB_ptr_call
   CanvasItem_methods.set_instance_shader_parameter._set_instance_shader_parameter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_instance_shader_parameter", 3776071444, loc))
-  CanvasItem_methods.set_instance_shader_parameter.m_call = cast(type_of(CanvasItem_methods.set_instance_shader_parameter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_instance_shader_parameter.m_call = cast(type_of(CanvasItem_methods.set_instance_shader_parameter.m_call))MB_ptr_call
   CanvasItem_methods.get_instance_shader_parameter._get_instance_shader_parameter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_instance_shader_parameter", 2760726917, loc))
-  CanvasItem_methods.get_instance_shader_parameter.m_call = cast(type_of(CanvasItem_methods.get_instance_shader_parameter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_instance_shader_parameter.m_call = cast(type_of(CanvasItem_methods.get_instance_shader_parameter.m_call))MB_ptr_call
   CanvasItem_methods.set_use_parent_material._set_use_parent_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_use_parent_material", 2586408642, loc))
-  CanvasItem_methods.set_use_parent_material.m_call = cast(type_of(CanvasItem_methods.set_use_parent_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_use_parent_material.m_call = cast(type_of(CanvasItem_methods.set_use_parent_material.m_call))MB_ptr_call
   CanvasItem_methods.get_use_parent_material._get_use_parent_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_use_parent_material", 36873697, loc))
-  CanvasItem_methods.get_use_parent_material.m_call = cast(type_of(CanvasItem_methods.get_use_parent_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_use_parent_material.m_call = cast(type_of(CanvasItem_methods.get_use_parent_material.m_call))MB_ptr_call
   CanvasItem_methods.set_notify_local_transform._set_notify_local_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_notify_local_transform", 2586408642, loc))
-  CanvasItem_methods.set_notify_local_transform.m_call = cast(type_of(CanvasItem_methods.set_notify_local_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_notify_local_transform.m_call = cast(type_of(CanvasItem_methods.set_notify_local_transform.m_call))MB_ptr_call
   CanvasItem_methods.is_local_transform_notification_enabled._is_local_transform_notification_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "is_local_transform_notification_enabled", 36873697, loc))
-  CanvasItem_methods.is_local_transform_notification_enabled.m_call = cast(type_of(CanvasItem_methods.is_local_transform_notification_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.is_local_transform_notification_enabled.m_call = cast(type_of(CanvasItem_methods.is_local_transform_notification_enabled.m_call))MB_ptr_call
   CanvasItem_methods.set_notify_transform._set_notify_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_notify_transform", 2586408642, loc))
-  CanvasItem_methods.set_notify_transform.m_call = cast(type_of(CanvasItem_methods.set_notify_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_notify_transform.m_call = cast(type_of(CanvasItem_methods.set_notify_transform.m_call))MB_ptr_call
   CanvasItem_methods.is_transform_notification_enabled._is_transform_notification_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "is_transform_notification_enabled", 36873697, loc))
-  CanvasItem_methods.is_transform_notification_enabled.m_call = cast(type_of(CanvasItem_methods.is_transform_notification_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.is_transform_notification_enabled.m_call = cast(type_of(CanvasItem_methods.is_transform_notification_enabled.m_call))MB_ptr_call
   CanvasItem_methods.force_update_transform._force_update_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "force_update_transform", 3218959716, loc))
-  CanvasItem_methods.force_update_transform.m_call = cast(type_of(CanvasItem_methods.force_update_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.force_update_transform.m_call = cast(type_of(CanvasItem_methods.force_update_transform.m_call))MB_ptr_call
   CanvasItem_methods.make_canvas_position_local._make_canvas_position_local = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "make_canvas_position_local", 2656412154, loc))
-  CanvasItem_methods.make_canvas_position_local.m_call = cast(type_of(CanvasItem_methods.make_canvas_position_local.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.make_canvas_position_local.m_call = cast(type_of(CanvasItem_methods.make_canvas_position_local.m_call))MB_ptr_call
   CanvasItem_methods.make_input_local._make_input_local = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "make_input_local", 811130057, loc))
-  CanvasItem_methods.make_input_local.m_call = cast(type_of(CanvasItem_methods.make_input_local.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.make_input_local.m_call = cast(type_of(CanvasItem_methods.make_input_local.m_call))MB_ptr_call
   CanvasItem_methods.set_visibility_layer._set_visibility_layer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_visibility_layer", 1286410249, loc))
-  CanvasItem_methods.set_visibility_layer.m_call = cast(type_of(CanvasItem_methods.set_visibility_layer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_visibility_layer.m_call = cast(type_of(CanvasItem_methods.set_visibility_layer.m_call))MB_ptr_call
   CanvasItem_methods.get_visibility_layer._get_visibility_layer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_visibility_layer", 3905245786, loc))
-  CanvasItem_methods.get_visibility_layer.m_call = cast(type_of(CanvasItem_methods.get_visibility_layer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_visibility_layer.m_call = cast(type_of(CanvasItem_methods.get_visibility_layer.m_call))MB_ptr_call
   CanvasItem_methods.set_visibility_layer_bit._set_visibility_layer_bit = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_visibility_layer_bit", 300928843, loc))
-  CanvasItem_methods.set_visibility_layer_bit.m_call = cast(type_of(CanvasItem_methods.set_visibility_layer_bit.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_visibility_layer_bit.m_call = cast(type_of(CanvasItem_methods.set_visibility_layer_bit.m_call))MB_ptr_call
   CanvasItem_methods.get_visibility_layer_bit._get_visibility_layer_bit = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_visibility_layer_bit", 1116898809, loc))
-  CanvasItem_methods.get_visibility_layer_bit.m_call = cast(type_of(CanvasItem_methods.get_visibility_layer_bit.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_visibility_layer_bit.m_call = cast(type_of(CanvasItem_methods.get_visibility_layer_bit.m_call))MB_ptr_call
   CanvasItem_methods.set_texture_filter._set_texture_filter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_texture_filter", 1037999706, loc))
-  CanvasItem_methods.set_texture_filter.m_call = cast(type_of(CanvasItem_methods.set_texture_filter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_texture_filter.m_call = cast(type_of(CanvasItem_methods.set_texture_filter.m_call))MB_ptr_call
   CanvasItem_methods.get_texture_filter._get_texture_filter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_texture_filter", 121960042, loc))
-  CanvasItem_methods.get_texture_filter.m_call = cast(type_of(CanvasItem_methods.get_texture_filter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_texture_filter.m_call = cast(type_of(CanvasItem_methods.get_texture_filter.m_call))MB_ptr_call
   CanvasItem_methods.set_texture_repeat._set_texture_repeat = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_texture_repeat", 1716472974, loc))
-  CanvasItem_methods.set_texture_repeat.m_call = cast(type_of(CanvasItem_methods.set_texture_repeat.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_texture_repeat.m_call = cast(type_of(CanvasItem_methods.set_texture_repeat.m_call))MB_ptr_call
   CanvasItem_methods.get_texture_repeat._get_texture_repeat = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_texture_repeat", 2667158319, loc))
-  CanvasItem_methods.get_texture_repeat.m_call = cast(type_of(CanvasItem_methods.get_texture_repeat.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_texture_repeat.m_call = cast(type_of(CanvasItem_methods.get_texture_repeat.m_call))MB_ptr_call
   CanvasItem_methods.set_clip_children_mode._set_clip_children_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "set_clip_children_mode", 1319393776, loc))
-  CanvasItem_methods.set_clip_children_mode.m_call = cast(type_of(CanvasItem_methods.set_clip_children_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.set_clip_children_mode.m_call = cast(type_of(CanvasItem_methods.set_clip_children_mode.m_call))MB_ptr_call
   CanvasItem_methods.get_clip_children_mode._get_clip_children_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CanvasItem, "get_clip_children_mode", 3581808349, loc))
-  CanvasItem_methods.get_clip_children_mode.m_call = cast(type_of(CanvasItem_methods.get_clip_children_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CanvasItem_methods.get_clip_children_mode.m_call = cast(type_of(CanvasItem_methods.get_clip_children_mode.m_call))MB_ptr_call
 };
 
 CanvasItem_Init_Virtuals_Info :: proc(info: ^CanvasItem_Virtual_Info) {
     info._draw.p_hash = 3218959716
     info._draw.name = GDW.StringConstruct("_draw")
-};
-CanvasItem_init_props :: proc(CanvasItem_prop: ^CanvasItem_properties, loc:= #caller_location) {
-
-  CanvasItem_prop.visible_Bool.is_visible = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_visible")
-  CanvasItem_prop.visible_Bool.set_visible = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_visible")
-
-  CanvasItem_prop.modulate_Color.get_modulate = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Color))GDW.Get_Method_Getter(.COLOR, "get_modulate")
-  CanvasItem_prop.modulate_Color.set_modulate = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Color))GDW.Get_Method_Setter(.COLOR, "set_modulate")
-
-  CanvasItem_prop.self_modulate_Color.get_self_modulate = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Color))GDW.Get_Method_Getter(.COLOR, "get_self_modulate")
-  CanvasItem_prop.self_modulate_Color.set_self_modulate = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Color))GDW.Get_Method_Setter(.COLOR, "set_self_modulate")
-
-  CanvasItem_prop.show_behind_parent_Bool.is_draw_behind_parent_enabled = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_draw_behind_parent_enabled")
-  CanvasItem_prop.show_behind_parent_Bool.set_draw_behind_parent = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_draw_behind_parent")
-
-  CanvasItem_prop.top_level_Bool.is_set_as_top_level = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_set_as_top_level")
-  CanvasItem_prop.top_level_Bool.set_as_top_level = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_as_top_level")
-
-  CanvasItem_prop.clip_children_Int.get_clip_children_mode = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_clip_children_mode")
-  CanvasItem_prop.clip_children_Int.set_clip_children_mode = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_clip_children_mode")
-
-  CanvasItem_prop.light_mask_Int.get_light_mask = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_light_mask")
-  CanvasItem_prop.light_mask_Int.set_light_mask = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_light_mask")
-
-  CanvasItem_prop.visibility_layer_Int.get_visibility_layer = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_visibility_layer")
-  CanvasItem_prop.visibility_layer_Int.set_visibility_layer = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_visibility_layer")
-
-  CanvasItem_prop.z_index_Int.get_z_index = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_z_index")
-  CanvasItem_prop.z_index_Int.set_z_index = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_z_index")
-
-  CanvasItem_prop.z_as_relative_Bool.is_z_relative = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_z_relative")
-  CanvasItem_prop.z_as_relative_Bool.set_z_as_relative = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_z_as_relative")
-
-  CanvasItem_prop.y_sort_enabled_Bool.is_y_sort_enabled = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_y_sort_enabled")
-  CanvasItem_prop.y_sort_enabled_Bool.set_y_sort_enabled = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_y_sort_enabled")
-
-  CanvasItem_prop.texture_filter_Int.get_texture_filter = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_texture_filter")
-  CanvasItem_prop.texture_filter_Int.set_texture_filter = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_texture_filter")
-
-  CanvasItem_prop.texture_repeat_Int.get_texture_repeat = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_texture_repeat")
-  CanvasItem_prop.texture_repeat_Int.set_texture_repeat = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_texture_repeat")
-
-  CanvasItem_prop.material_CanvasItemMaterial.get_material = cast(proc "c" (p_base: CanvasItem, r_value: ^CanvasItemMaterial))GDW.Get_Method_Getter(.OBJECT, "get_material")
-  CanvasItem_prop.material_CanvasItemMaterial.set_material = cast(proc "c" (p_base: CanvasItem, p_value: ^CanvasItemMaterial))GDW.Get_Method_Setter(.OBJECT, "set_material")
-
-  CanvasItem_prop.material_ShaderMaterial.get_material = cast(proc "c" (p_base: CanvasItem, r_value: ^ShaderMaterial))GDW.Get_Method_Getter(.OBJECT, "get_material")
-  CanvasItem_prop.material_ShaderMaterial.set_material = cast(proc "c" (p_base: CanvasItem, p_value: ^ShaderMaterial))GDW.Get_Method_Setter(.OBJECT, "set_material")
-
-  CanvasItem_prop.use_parent_material_Bool.get_use_parent_material = cast(proc "c" (p_base: CanvasItem, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_use_parent_material")
-  CanvasItem_prop.use_parent_material_Bool.set_use_parent_material = cast(proc "c" (p_base: CanvasItem, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_use_parent_material")
 };

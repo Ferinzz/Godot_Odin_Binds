@@ -36,14 +36,15 @@ OpenXRFutureResult_MethodBind_List :: struct {
   },
 };
 OpenXRFutureResult_Init_ :: proc (OpenXRFutureResult_methods: ^OpenXRFutureResult_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRFutureResult_methods.get_status._get_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "get_status", 2023607463, loc))
-  OpenXRFutureResult_methods.get_status.m_call = cast(type_of(OpenXRFutureResult_methods.get_status.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRFutureResult_methods.get_status.m_call = cast(type_of(OpenXRFutureResult_methods.get_status.m_call))MB_ptr_call
   OpenXRFutureResult_methods.get_future._get_future = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "get_future", 3905245786, loc))
-  OpenXRFutureResult_methods.get_future.m_call = cast(type_of(OpenXRFutureResult_methods.get_future.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRFutureResult_methods.get_future.m_call = cast(type_of(OpenXRFutureResult_methods.get_future.m_call))MB_ptr_call
   OpenXRFutureResult_methods.cancel_future._cancel_future = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "cancel_future", 3218959716, loc))
-  OpenXRFutureResult_methods.cancel_future.m_call = cast(type_of(OpenXRFutureResult_methods.cancel_future.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRFutureResult_methods.cancel_future.m_call = cast(type_of(OpenXRFutureResult_methods.cancel_future.m_call))MB_ptr_call
   OpenXRFutureResult_methods.set_result_value._set_result_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "set_result_value", 1114965689, loc))
-  OpenXRFutureResult_methods.set_result_value.m_call = cast(type_of(OpenXRFutureResult_methods.set_result_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRFutureResult_methods.set_result_value.m_call = cast(type_of(OpenXRFutureResult_methods.set_result_value.m_call))MB_ptr_call
   OpenXRFutureResult_methods.get_result_value._get_result_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "get_result_value", 1214101251, loc))
-  OpenXRFutureResult_methods.get_result_value.m_call = cast(type_of(OpenXRFutureResult_methods.get_result_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRFutureResult_methods.get_result_value.m_call = cast(type_of(OpenXRFutureResult_methods.get_result_value.m_call))MB_ptr_call
 };

@@ -42,20 +42,21 @@ TextServerManager_MethodBind_List :: struct {
   },
 };
 TextServerManager_Init_ :: proc (TextServerManager_methods: ^TextServerManager_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   TextServerManager_methods.add_interface._add_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextServerManager, "add_interface", 1799689403, loc))
-  TextServerManager_methods.add_interface.m_call = cast(type_of(TextServerManager_methods.add_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextServerManager_methods.add_interface.m_call = cast(type_of(TextServerManager_methods.add_interface.m_call))MB_ptr_call
   TextServerManager_methods.get_interface_count._get_interface_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextServerManager, "get_interface_count", 3905245786, loc))
-  TextServerManager_methods.get_interface_count.m_call = cast(type_of(TextServerManager_methods.get_interface_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextServerManager_methods.get_interface_count.m_call = cast(type_of(TextServerManager_methods.get_interface_count.m_call))MB_ptr_call
   TextServerManager_methods.remove_interface._remove_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextServerManager, "remove_interface", 1799689403, loc))
-  TextServerManager_methods.remove_interface.m_call = cast(type_of(TextServerManager_methods.remove_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextServerManager_methods.remove_interface.m_call = cast(type_of(TextServerManager_methods.remove_interface.m_call))MB_ptr_call
   TextServerManager_methods.get_interface._get_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextServerManager, "get_interface", 1672475555, loc))
-  TextServerManager_methods.get_interface.m_call = cast(type_of(TextServerManager_methods.get_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextServerManager_methods.get_interface.m_call = cast(type_of(TextServerManager_methods.get_interface.m_call))MB_ptr_call
   TextServerManager_methods.get_interfaces._get_interfaces = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextServerManager, "get_interfaces", 3995934104, loc))
-  TextServerManager_methods.get_interfaces.m_call = cast(type_of(TextServerManager_methods.get_interfaces.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextServerManager_methods.get_interfaces.m_call = cast(type_of(TextServerManager_methods.get_interfaces.m_call))MB_ptr_call
   TextServerManager_methods.find_interface._find_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextServerManager, "find_interface", 2240905781, loc))
-  TextServerManager_methods.find_interface.m_call = cast(type_of(TextServerManager_methods.find_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextServerManager_methods.find_interface.m_call = cast(type_of(TextServerManager_methods.find_interface.m_call))MB_ptr_call
   TextServerManager_methods.set_primary_interface._set_primary_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextServerManager, "set_primary_interface", 1799689403, loc))
-  TextServerManager_methods.set_primary_interface.m_call = cast(type_of(TextServerManager_methods.set_primary_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextServerManager_methods.set_primary_interface.m_call = cast(type_of(TextServerManager_methods.set_primary_interface.m_call))MB_ptr_call
   TextServerManager_methods.get_primary_interface._get_primary_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextServerManager, "get_primary_interface", 905850878, loc))
-  TextServerManager_methods.get_primary_interface.m_call = cast(type_of(TextServerManager_methods.get_primary_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextServerManager_methods.get_primary_interface.m_call = cast(type_of(TextServerManager_methods.get_primary_interface.m_call))MB_ptr_call
 };

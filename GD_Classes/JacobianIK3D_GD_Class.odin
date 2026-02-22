@@ -10,4 +10,5 @@ JacobianIK3D :: ^GDW.Object
 JacobianIK3D_MethodBind_List :: struct {
 };
 JacobianIK3D_Init_ :: proc (JacobianIK3D_methods: ^JacobianIK3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

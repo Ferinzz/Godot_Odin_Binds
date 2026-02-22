@@ -10,4 +10,5 @@ AudioEffectNotchFilter :: ^GDW.Object
 AudioEffectNotchFilter_MethodBind_List :: struct {
 };
 AudioEffectNotchFilter_Init_ :: proc (AudioEffectNotchFilter_methods: ^AudioEffectNotchFilter_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

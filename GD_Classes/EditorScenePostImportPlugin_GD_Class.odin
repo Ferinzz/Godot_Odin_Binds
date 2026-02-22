@@ -44,12 +44,13 @@ EditorScenePostImportPlugin_MethodBind_List :: struct {
   },
   };
 EditorScenePostImportPlugin_Init_ :: proc (EditorScenePostImportPlugin_methods: ^EditorScenePostImportPlugin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorScenePostImportPlugin_methods.get_option_value._get_option_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorScenePostImportPlugin, "get_option_value", 2760726917, loc))
-  EditorScenePostImportPlugin_methods.get_option_value.m_call = cast(type_of(EditorScenePostImportPlugin_methods.get_option_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorScenePostImportPlugin_methods.get_option_value.m_call = cast(type_of(EditorScenePostImportPlugin_methods.get_option_value.m_call))MB_ptr_call
   EditorScenePostImportPlugin_methods.add_import_option._add_import_option = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorScenePostImportPlugin, "add_import_option", 402577236, loc))
-  EditorScenePostImportPlugin_methods.add_import_option.m_call = cast(type_of(EditorScenePostImportPlugin_methods.add_import_option.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorScenePostImportPlugin_methods.add_import_option.m_call = cast(type_of(EditorScenePostImportPlugin_methods.add_import_option.m_call))MB_ptr_call
   EditorScenePostImportPlugin_methods.add_import_option_advanced._add_import_option_advanced = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorScenePostImportPlugin, "add_import_option_advanced", 3674075649, loc))
-  EditorScenePostImportPlugin_methods.add_import_option_advanced.m_call = cast(type_of(EditorScenePostImportPlugin_methods.add_import_option_advanced.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorScenePostImportPlugin_methods.add_import_option_advanced.m_call = cast(type_of(EditorScenePostImportPlugin_methods.add_import_option_advanced.m_call))MB_ptr_call
 };
 
 EditorScenePostImportPlugin_Init_Virtuals_Info :: proc(info: ^EditorScenePostImportPlugin_Virtual_Info) {

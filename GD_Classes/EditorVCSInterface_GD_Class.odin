@@ -83,22 +83,23 @@ EditorVCSInterface_MethodBind_List :: struct {
   },
   };
 EditorVCSInterface_Init_ :: proc (EditorVCSInterface_methods: ^EditorVCSInterface_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorVCSInterface_methods.create_diff_line._create_diff_line = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorVCSInterface, "create_diff_line", 2901184053, loc))
-  EditorVCSInterface_methods.create_diff_line.m_call = cast(type_of(EditorVCSInterface_methods.create_diff_line.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorVCSInterface_methods.create_diff_line.m_call = cast(type_of(EditorVCSInterface_methods.create_diff_line.m_call))MB_ptr_call
   EditorVCSInterface_methods.create_diff_hunk._create_diff_hunk = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorVCSInterface, "create_diff_hunk", 3784842090, loc))
-  EditorVCSInterface_methods.create_diff_hunk.m_call = cast(type_of(EditorVCSInterface_methods.create_diff_hunk.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorVCSInterface_methods.create_diff_hunk.m_call = cast(type_of(EditorVCSInterface_methods.create_diff_hunk.m_call))MB_ptr_call
   EditorVCSInterface_methods.create_diff_file._create_diff_file = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorVCSInterface, "create_diff_file", 2723227684, loc))
-  EditorVCSInterface_methods.create_diff_file.m_call = cast(type_of(EditorVCSInterface_methods.create_diff_file.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorVCSInterface_methods.create_diff_file.m_call = cast(type_of(EditorVCSInterface_methods.create_diff_file.m_call))MB_ptr_call
   EditorVCSInterface_methods.create_commit._create_commit = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorVCSInterface, "create_commit", 1075983584, loc))
-  EditorVCSInterface_methods.create_commit.m_call = cast(type_of(EditorVCSInterface_methods.create_commit.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorVCSInterface_methods.create_commit.m_call = cast(type_of(EditorVCSInterface_methods.create_commit.m_call))MB_ptr_call
   EditorVCSInterface_methods.create_status_file._create_status_file = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorVCSInterface, "create_status_file", 1083471673, loc))
-  EditorVCSInterface_methods.create_status_file.m_call = cast(type_of(EditorVCSInterface_methods.create_status_file.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorVCSInterface_methods.create_status_file.m_call = cast(type_of(EditorVCSInterface_methods.create_status_file.m_call))MB_ptr_call
   EditorVCSInterface_methods.add_diff_hunks_into_diff_file._add_diff_hunks_into_diff_file = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorVCSInterface, "add_diff_hunks_into_diff_file", 4015243225, loc))
-  EditorVCSInterface_methods.add_diff_hunks_into_diff_file.m_call = cast(type_of(EditorVCSInterface_methods.add_diff_hunks_into_diff_file.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorVCSInterface_methods.add_diff_hunks_into_diff_file.m_call = cast(type_of(EditorVCSInterface_methods.add_diff_hunks_into_diff_file.m_call))MB_ptr_call
   EditorVCSInterface_methods.add_line_diffs_into_diff_hunk._add_line_diffs_into_diff_hunk = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorVCSInterface, "add_line_diffs_into_diff_hunk", 4015243225, loc))
-  EditorVCSInterface_methods.add_line_diffs_into_diff_hunk.m_call = cast(type_of(EditorVCSInterface_methods.add_line_diffs_into_diff_hunk.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorVCSInterface_methods.add_line_diffs_into_diff_hunk.m_call = cast(type_of(EditorVCSInterface_methods.add_line_diffs_into_diff_hunk.m_call))MB_ptr_call
   EditorVCSInterface_methods.popup_error._popup_error = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorVCSInterface, "popup_error", 83702148, loc))
-  EditorVCSInterface_methods.popup_error.m_call = cast(type_of(EditorVCSInterface_methods.popup_error.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorVCSInterface_methods.popup_error.m_call = cast(type_of(EditorVCSInterface_methods.popup_error.m_call))MB_ptr_call
 };
 
 EditorVCSInterface_Init_Virtuals_Info :: proc(info: ^EditorVCSInterface_Virtual_Info) {

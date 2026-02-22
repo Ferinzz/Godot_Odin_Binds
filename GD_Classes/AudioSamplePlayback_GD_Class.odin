@@ -10,4 +10,5 @@ AudioSamplePlayback :: ^GDW.Object
 AudioSamplePlayback_MethodBind_List :: struct {
 };
 AudioSamplePlayback_Init_ :: proc (AudioSamplePlayback_methods: ^AudioSamplePlayback_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

@@ -26,12 +26,13 @@ OpenXRSpatialMarkerTrackingCapability_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialMarkerTrackingCapability_Init_ :: proc (OpenXRSpatialMarkerTrackingCapability_methods: ^OpenXRSpatialMarkerTrackingCapability_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialMarkerTrackingCapability_methods.is_qrcode_supported._is_qrcode_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialMarkerTrackingCapability, "is_qrcode_supported", 2240911060, loc))
-  OpenXRSpatialMarkerTrackingCapability_methods.is_qrcode_supported.m_call = cast(type_of(OpenXRSpatialMarkerTrackingCapability_methods.is_qrcode_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialMarkerTrackingCapability_methods.is_qrcode_supported.m_call = cast(type_of(OpenXRSpatialMarkerTrackingCapability_methods.is_qrcode_supported.m_call))MB_ptr_call
   OpenXRSpatialMarkerTrackingCapability_methods.is_micro_qrcode_supported._is_micro_qrcode_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialMarkerTrackingCapability, "is_micro_qrcode_supported", 2240911060, loc))
-  OpenXRSpatialMarkerTrackingCapability_methods.is_micro_qrcode_supported.m_call = cast(type_of(OpenXRSpatialMarkerTrackingCapability_methods.is_micro_qrcode_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialMarkerTrackingCapability_methods.is_micro_qrcode_supported.m_call = cast(type_of(OpenXRSpatialMarkerTrackingCapability_methods.is_micro_qrcode_supported.m_call))MB_ptr_call
   OpenXRSpatialMarkerTrackingCapability_methods.is_aruco_supported._is_aruco_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialMarkerTrackingCapability, "is_aruco_supported", 2240911060, loc))
-  OpenXRSpatialMarkerTrackingCapability_methods.is_aruco_supported.m_call = cast(type_of(OpenXRSpatialMarkerTrackingCapability_methods.is_aruco_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialMarkerTrackingCapability_methods.is_aruco_supported.m_call = cast(type_of(OpenXRSpatialMarkerTrackingCapability_methods.is_aruco_supported.m_call))MB_ptr_call
   OpenXRSpatialMarkerTrackingCapability_methods.is_april_tag_supported._is_april_tag_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialMarkerTrackingCapability, "is_april_tag_supported", 2240911060, loc))
-  OpenXRSpatialMarkerTrackingCapability_methods.is_april_tag_supported.m_call = cast(type_of(OpenXRSpatialMarkerTrackingCapability_methods.is_april_tag_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialMarkerTrackingCapability_methods.is_april_tag_supported.m_call = cast(type_of(OpenXRSpatialMarkerTrackingCapability_methods.is_april_tag_supported.m_call))MB_ptr_call
 };

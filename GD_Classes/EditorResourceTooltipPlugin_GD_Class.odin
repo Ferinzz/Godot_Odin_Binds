@@ -19,8 +19,9 @@ EditorResourceTooltipPlugin_MethodBind_List :: struct {
   },
   };
 EditorResourceTooltipPlugin_Init_ :: proc (EditorResourceTooltipPlugin_methods: ^EditorResourceTooltipPlugin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorResourceTooltipPlugin_methods.request_thumbnail._request_thumbnail = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourceTooltipPlugin, "request_thumbnail", 3245519720, loc))
-  EditorResourceTooltipPlugin_methods.request_thumbnail.m_call = cast(type_of(EditorResourceTooltipPlugin_methods.request_thumbnail.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorResourceTooltipPlugin_methods.request_thumbnail.m_call = cast(type_of(EditorResourceTooltipPlugin_methods.request_thumbnail.m_call))MB_ptr_call
 };
 
 EditorResourceTooltipPlugin_Init_Virtuals_Info :: proc(info: ^EditorResourceTooltipPlugin_Virtual_Info) {

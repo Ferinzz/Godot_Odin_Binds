@@ -14,24 +14,6 @@ StyleBox_Virtual_Info :: struct {
     _get_minimum_size: Method_Callback_Compare_Info,
     _test_mask: Method_Callback_Compare_Info,
 };
-StyleBox_properties :: struct {
-  content_margin_left_float : struct {
-  get_content_margin: proc "c" (p_base: StyleBox, r_value: ^GDW.float),
-  set_content_margin: proc "c" (p_base: StyleBox, p_value: ^GDW.float),
-  },
-  content_margin_top_float : struct {
-  get_content_margin: proc "c" (p_base: StyleBox, r_value: ^GDW.float),
-  set_content_margin: proc "c" (p_base: StyleBox, p_value: ^GDW.float),
-  },
-  content_margin_right_float : struct {
-  get_content_margin: proc "c" (p_base: StyleBox, r_value: ^GDW.float),
-  set_content_margin: proc "c" (p_base: StyleBox, p_value: ^GDW.float),
-  },
-  content_margin_bottom_float : struct {
-  get_content_margin: proc "c" (p_base: StyleBox, r_value: ^GDW.float),
-  set_content_margin: proc "c" (p_base: StyleBox, p_value: ^GDW.float),
-  },
-};
 StyleBox_MethodBind_List :: struct {
   get_minimum_size: struct{
     using _get_minimum_size: ^GDW.MethodBind,
@@ -71,24 +53,25 @@ StyleBox_MethodBind_List :: struct {
   },
 };
 StyleBox_Init_ :: proc (StyleBox_methods: ^StyleBox_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   StyleBox_methods.get_minimum_size._get_minimum_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "get_minimum_size", 3341600327, loc))
-  StyleBox_methods.get_minimum_size.m_call = cast(type_of(StyleBox_methods.get_minimum_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.get_minimum_size.m_call = cast(type_of(StyleBox_methods.get_minimum_size.m_call))MB_ptr_call
   StyleBox_methods.set_content_margin._set_content_margin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "set_content_margin", 4290182280, loc))
-  StyleBox_methods.set_content_margin.m_call = cast(type_of(StyleBox_methods.set_content_margin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.set_content_margin.m_call = cast(type_of(StyleBox_methods.set_content_margin.m_call))MB_ptr_call
   StyleBox_methods.set_content_margin_all._set_content_margin_all = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "set_content_margin_all", 373806689, loc))
-  StyleBox_methods.set_content_margin_all.m_call = cast(type_of(StyleBox_methods.set_content_margin_all.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.set_content_margin_all.m_call = cast(type_of(StyleBox_methods.set_content_margin_all.m_call))MB_ptr_call
   StyleBox_methods.get_content_margin._get_content_margin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "get_content_margin", 2869120046, loc))
-  StyleBox_methods.get_content_margin.m_call = cast(type_of(StyleBox_methods.get_content_margin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.get_content_margin.m_call = cast(type_of(StyleBox_methods.get_content_margin.m_call))MB_ptr_call
   StyleBox_methods.get_margin._get_margin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "get_margin", 2869120046, loc))
-  StyleBox_methods.get_margin.m_call = cast(type_of(StyleBox_methods.get_margin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.get_margin.m_call = cast(type_of(StyleBox_methods.get_margin.m_call))MB_ptr_call
   StyleBox_methods.get_offset._get_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "get_offset", 3341600327, loc))
-  StyleBox_methods.get_offset.m_call = cast(type_of(StyleBox_methods.get_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.get_offset.m_call = cast(type_of(StyleBox_methods.get_offset.m_call))MB_ptr_call
   StyleBox_methods.draw._draw = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "draw", 2275962004, loc))
-  StyleBox_methods.draw.m_call = cast(type_of(StyleBox_methods.draw.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.draw.m_call = cast(type_of(StyleBox_methods.draw.m_call))MB_ptr_call
   StyleBox_methods.get_current_item_drawn._get_current_item_drawn = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "get_current_item_drawn", 3213695180, loc))
-  StyleBox_methods.get_current_item_drawn.m_call = cast(type_of(StyleBox_methods.get_current_item_drawn.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.get_current_item_drawn.m_call = cast(type_of(StyleBox_methods.get_current_item_drawn.m_call))MB_ptr_call
   StyleBox_methods.test_mask._test_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StyleBox, "test_mask", 3735564539, loc))
-  StyleBox_methods.test_mask.m_call = cast(type_of(StyleBox_methods.test_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StyleBox_methods.test_mask.m_call = cast(type_of(StyleBox_methods.test_mask.m_call))MB_ptr_call
 };
 
 StyleBox_Init_Virtuals_Info :: proc(info: ^StyleBox_Virtual_Info) {
@@ -100,18 +83,4 @@ StyleBox_Init_Virtuals_Info :: proc(info: ^StyleBox_Virtual_Info) {
     info._get_minimum_size.name = GDW.StringConstruct("_get_minimum_size")
     info._test_mask.p_hash = 3735564539
     info._test_mask.name = GDW.StringConstruct("_test_mask")
-};
-StyleBox_init_props :: proc(StyleBox_prop: ^StyleBox_properties, loc:= #caller_location) {
-
-  StyleBox_prop.content_margin_left_float.get_content_margin = cast(proc "c" (p_base: StyleBox, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_content_margin")
-  StyleBox_prop.content_margin_left_float.set_content_margin = cast(proc "c" (p_base: StyleBox, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_content_margin")
-
-  StyleBox_prop.content_margin_top_float.get_content_margin = cast(proc "c" (p_base: StyleBox, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_content_margin")
-  StyleBox_prop.content_margin_top_float.set_content_margin = cast(proc "c" (p_base: StyleBox, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_content_margin")
-
-  StyleBox_prop.content_margin_right_float.get_content_margin = cast(proc "c" (p_base: StyleBox, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_content_margin")
-  StyleBox_prop.content_margin_right_float.set_content_margin = cast(proc "c" (p_base: StyleBox, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_content_margin")
-
-  StyleBox_prop.content_margin_bottom_float.get_content_margin = cast(proc "c" (p_base: StyleBox, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_content_margin")
-  StyleBox_prop.content_margin_bottom_float.set_content_margin = cast(proc "c" (p_base: StyleBox, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_content_margin")
 };

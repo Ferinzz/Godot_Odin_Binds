@@ -30,14 +30,15 @@ EditorResourcePreview_MethodBind_List :: struct {
   },
   };
 EditorResourcePreview_Init_ :: proc (EditorResourcePreview_methods: ^EditorResourcePreview_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorResourcePreview_methods.queue_resource_preview._queue_resource_preview = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourcePreview, "queue_resource_preview", 233177534, loc))
-  EditorResourcePreview_methods.queue_resource_preview.m_call = cast(type_of(EditorResourcePreview_methods.queue_resource_preview.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorResourcePreview_methods.queue_resource_preview.m_call = cast(type_of(EditorResourcePreview_methods.queue_resource_preview.m_call))MB_ptr_call
   EditorResourcePreview_methods.queue_edited_resource_preview._queue_edited_resource_preview = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourcePreview, "queue_edited_resource_preview", 1608376650, loc))
-  EditorResourcePreview_methods.queue_edited_resource_preview.m_call = cast(type_of(EditorResourcePreview_methods.queue_edited_resource_preview.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorResourcePreview_methods.queue_edited_resource_preview.m_call = cast(type_of(EditorResourcePreview_methods.queue_edited_resource_preview.m_call))MB_ptr_call
   EditorResourcePreview_methods.add_preview_generator._add_preview_generator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourcePreview, "add_preview_generator", 332288124, loc))
-  EditorResourcePreview_methods.add_preview_generator.m_call = cast(type_of(EditorResourcePreview_methods.add_preview_generator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorResourcePreview_methods.add_preview_generator.m_call = cast(type_of(EditorResourcePreview_methods.add_preview_generator.m_call))MB_ptr_call
   EditorResourcePreview_methods.remove_preview_generator._remove_preview_generator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourcePreview, "remove_preview_generator", 332288124, loc))
-  EditorResourcePreview_methods.remove_preview_generator.m_call = cast(type_of(EditorResourcePreview_methods.remove_preview_generator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorResourcePreview_methods.remove_preview_generator.m_call = cast(type_of(EditorResourcePreview_methods.remove_preview_generator.m_call))MB_ptr_call
   EditorResourcePreview_methods.check_for_invalidation._check_for_invalidation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourcePreview, "check_for_invalidation", 83702148, loc))
-  EditorResourcePreview_methods.check_for_invalidation.m_call = cast(type_of(EditorResourcePreview_methods.check_for_invalidation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorResourcePreview_methods.check_for_invalidation.m_call = cast(type_of(EditorResourcePreview_methods.check_for_invalidation.m_call))MB_ptr_call
 };

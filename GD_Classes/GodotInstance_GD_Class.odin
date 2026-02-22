@@ -38,18 +38,19 @@ GodotInstance_MethodBind_List :: struct {
   },
   };
 GodotInstance_Init_ :: proc (GodotInstance_methods: ^GodotInstance_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   GodotInstance_methods.start._start = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GodotInstance, "start", 2240911060, loc))
-  GodotInstance_methods.start.m_call = cast(type_of(GodotInstance_methods.start.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GodotInstance_methods.start.m_call = cast(type_of(GodotInstance_methods.start.m_call))MB_ptr_call
   GodotInstance_methods.is_started._is_started = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GodotInstance, "is_started", 2240911060, loc))
-  GodotInstance_methods.is_started.m_call = cast(type_of(GodotInstance_methods.is_started.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GodotInstance_methods.is_started.m_call = cast(type_of(GodotInstance_methods.is_started.m_call))MB_ptr_call
   GodotInstance_methods.iteration._iteration = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GodotInstance, "iteration", 2240911060, loc))
-  GodotInstance_methods.iteration.m_call = cast(type_of(GodotInstance_methods.iteration.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GodotInstance_methods.iteration.m_call = cast(type_of(GodotInstance_methods.iteration.m_call))MB_ptr_call
   GodotInstance_methods.focus_in._focus_in = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GodotInstance, "focus_in", 3218959716, loc))
-  GodotInstance_methods.focus_in.m_call = cast(type_of(GodotInstance_methods.focus_in.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GodotInstance_methods.focus_in.m_call = cast(type_of(GodotInstance_methods.focus_in.m_call))MB_ptr_call
   GodotInstance_methods.focus_out._focus_out = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GodotInstance, "focus_out", 3218959716, loc))
-  GodotInstance_methods.focus_out.m_call = cast(type_of(GodotInstance_methods.focus_out.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GodotInstance_methods.focus_out.m_call = cast(type_of(GodotInstance_methods.focus_out.m_call))MB_ptr_call
   GodotInstance_methods.pause._pause = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GodotInstance, "pause", 3218959716, loc))
-  GodotInstance_methods.pause.m_call = cast(type_of(GodotInstance_methods.pause.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GodotInstance_methods.pause.m_call = cast(type_of(GodotInstance_methods.pause.m_call))MB_ptr_call
   GodotInstance_methods.resume._resume = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GodotInstance, "resume", 3218959716, loc))
-  GodotInstance_methods.resume.m_call = cast(type_of(GodotInstance_methods.resume.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GodotInstance_methods.resume.m_call = cast(type_of(GodotInstance_methods.resume.m_call))MB_ptr_call
 };

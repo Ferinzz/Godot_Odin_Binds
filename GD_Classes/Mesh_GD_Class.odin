@@ -97,12 +97,6 @@ Mesh_BlendShapeMode :: enum i64 {
   BLEND_SHAPE_MODE_NORMALIZED = 0,
   BLEND_SHAPE_MODE_RELATIVE = 1,
 };
-Mesh_properties :: struct {
-  lightmap_size_hint_Vector2i : struct {
-  get_lightmap_size_hint: proc "c" (p_base: Mesh, r_value: ^GDW.Vector2i),
-  set_lightmap_size_hint: proc "c" (p_base: Mesh, p_value: ^GDW.Vector2i),
-  },
-};
 Mesh_MethodBind_List :: struct {
   set_lightmap_size_hint: struct{
     using _set_lightmap_size_hint: ^GDW.MethodBind,
@@ -162,34 +156,35 @@ Mesh_MethodBind_List :: struct {
   },
 };
 Mesh_Init_ :: proc (Mesh_methods: ^Mesh_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Mesh_methods.set_lightmap_size_hint._set_lightmap_size_hint = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "set_lightmap_size_hint", 1130785943, loc))
-  Mesh_methods.set_lightmap_size_hint.m_call = cast(type_of(Mesh_methods.set_lightmap_size_hint.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.set_lightmap_size_hint.m_call = cast(type_of(Mesh_methods.set_lightmap_size_hint.m_call))MB_ptr_call
   Mesh_methods.get_lightmap_size_hint._get_lightmap_size_hint = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "get_lightmap_size_hint", 3690982128, loc))
-  Mesh_methods.get_lightmap_size_hint.m_call = cast(type_of(Mesh_methods.get_lightmap_size_hint.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.get_lightmap_size_hint.m_call = cast(type_of(Mesh_methods.get_lightmap_size_hint.m_call))MB_ptr_call
   Mesh_methods.get_aabb._get_aabb = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "get_aabb", 1068685055, loc))
-  Mesh_methods.get_aabb.m_call = cast(type_of(Mesh_methods.get_aabb.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.get_aabb.m_call = cast(type_of(Mesh_methods.get_aabb.m_call))MB_ptr_call
   Mesh_methods.get_faces._get_faces = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "get_faces", 497664490, loc))
-  Mesh_methods.get_faces.m_call = cast(type_of(Mesh_methods.get_faces.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.get_faces.m_call = cast(type_of(Mesh_methods.get_faces.m_call))MB_ptr_call
   Mesh_methods.get_surface_count._get_surface_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "get_surface_count", 3905245786, loc))
-  Mesh_methods.get_surface_count.m_call = cast(type_of(Mesh_methods.get_surface_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.get_surface_count.m_call = cast(type_of(Mesh_methods.get_surface_count.m_call))MB_ptr_call
   Mesh_methods.surface_get_arrays._surface_get_arrays = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "surface_get_arrays", 663333327, loc))
-  Mesh_methods.surface_get_arrays.m_call = cast(type_of(Mesh_methods.surface_get_arrays.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.surface_get_arrays.m_call = cast(type_of(Mesh_methods.surface_get_arrays.m_call))MB_ptr_call
   Mesh_methods.surface_get_blend_shape_arrays._surface_get_blend_shape_arrays = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "surface_get_blend_shape_arrays", 663333327, loc))
-  Mesh_methods.surface_get_blend_shape_arrays.m_call = cast(type_of(Mesh_methods.surface_get_blend_shape_arrays.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.surface_get_blend_shape_arrays.m_call = cast(type_of(Mesh_methods.surface_get_blend_shape_arrays.m_call))MB_ptr_call
   Mesh_methods.surface_set_material._surface_set_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "surface_set_material", 3671737478, loc))
-  Mesh_methods.surface_set_material.m_call = cast(type_of(Mesh_methods.surface_set_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.surface_set_material.m_call = cast(type_of(Mesh_methods.surface_set_material.m_call))MB_ptr_call
   Mesh_methods.surface_get_material._surface_get_material = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "surface_get_material", 2897466400, loc))
-  Mesh_methods.surface_get_material.m_call = cast(type_of(Mesh_methods.surface_get_material.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.surface_get_material.m_call = cast(type_of(Mesh_methods.surface_get_material.m_call))MB_ptr_call
   Mesh_methods.create_placeholder._create_placeholder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "create_placeholder", 121922552, loc))
-  Mesh_methods.create_placeholder.m_call = cast(type_of(Mesh_methods.create_placeholder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.create_placeholder.m_call = cast(type_of(Mesh_methods.create_placeholder.m_call))MB_ptr_call
   Mesh_methods.create_trimesh_shape._create_trimesh_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "create_trimesh_shape", 4160111210, loc))
-  Mesh_methods.create_trimesh_shape.m_call = cast(type_of(Mesh_methods.create_trimesh_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.create_trimesh_shape.m_call = cast(type_of(Mesh_methods.create_trimesh_shape.m_call))MB_ptr_call
   Mesh_methods.create_convex_shape._create_convex_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "create_convex_shape", 2529984628, loc))
-  Mesh_methods.create_convex_shape.m_call = cast(type_of(Mesh_methods.create_convex_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.create_convex_shape.m_call = cast(type_of(Mesh_methods.create_convex_shape.m_call))MB_ptr_call
   Mesh_methods.create_outline._create_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "create_outline", 1208642001, loc))
-  Mesh_methods.create_outline.m_call = cast(type_of(Mesh_methods.create_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.create_outline.m_call = cast(type_of(Mesh_methods.create_outline.m_call))MB_ptr_call
   Mesh_methods.generate_triangle_mesh._generate_triangle_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Mesh, "generate_triangle_mesh", 3476533166, loc))
-  Mesh_methods.generate_triangle_mesh.m_call = cast(type_of(Mesh_methods.generate_triangle_mesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Mesh_methods.generate_triangle_mesh.m_call = cast(type_of(Mesh_methods.generate_triangle_mesh.m_call))MB_ptr_call
 };
 
 Mesh_Init_Virtuals_Info :: proc(info: ^Mesh_Virtual_Info) {
@@ -221,9 +216,4 @@ Mesh_Init_Virtuals_Info :: proc(info: ^Mesh_Virtual_Info) {
     info._set_blend_shape_name.name = GDW.StringConstruct("_set_blend_shape_name")
     info._get_aabb.p_hash = 1068685055
     info._get_aabb.name = GDW.StringConstruct("_get_aabb")
-};
-Mesh_init_props :: proc(Mesh_prop: ^Mesh_properties, loc:= #caller_location) {
-
-  Mesh_prop.lightmap_size_hint_Vector2i.get_lightmap_size_hint = cast(proc "c" (p_base: Mesh, r_value: ^GDW.Vector2i))GDW.Get_Method_Getter(.VECTOR2I, "get_lightmap_size_hint")
-  Mesh_prop.lightmap_size_hint_Vector2i.set_lightmap_size_hint = cast(proc "c" (p_base: Mesh, p_value: ^GDW.Vector2i))GDW.Get_Method_Setter(.VECTOR2I, "set_lightmap_size_hint")
 };

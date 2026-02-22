@@ -18,8 +18,9 @@ OpenXRSpatialComponentBounded2DList_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialComponentBounded2DList_Init_ :: proc (OpenXRSpatialComponentBounded2DList_methods: ^OpenXRSpatialComponentBounded2DList_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialComponentBounded2DList_methods.get_center_pose._get_center_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentBounded2DList, "get_center_pose", 1965739696, loc))
-  OpenXRSpatialComponentBounded2DList_methods.get_center_pose.m_call = cast(type_of(OpenXRSpatialComponentBounded2DList_methods.get_center_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentBounded2DList_methods.get_center_pose.m_call = cast(type_of(OpenXRSpatialComponentBounded2DList_methods.get_center_pose.m_call))MB_ptr_call
   OpenXRSpatialComponentBounded2DList_methods.get_size._get_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentBounded2DList, "get_size", 2299179447, loc))
-  OpenXRSpatialComponentBounded2DList_methods.get_size.m_call = cast(type_of(OpenXRSpatialComponentBounded2DList_methods.get_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentBounded2DList_methods.get_size.m_call = cast(type_of(OpenXRSpatialComponentBounded2DList_methods.get_size.m_call))MB_ptr_call
 };

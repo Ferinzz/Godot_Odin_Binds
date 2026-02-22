@@ -19,6 +19,7 @@ RenderSceneDataExtension_Virtual_Info :: struct {
 RenderSceneDataExtension_MethodBind_List :: struct {
 };
 RenderSceneDataExtension_Init_ :: proc (RenderSceneDataExtension_methods: ^RenderSceneDataExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 RenderSceneDataExtension_Init_Virtuals_Info :: proc(info: ^RenderSceneDataExtension_Virtual_Info) {

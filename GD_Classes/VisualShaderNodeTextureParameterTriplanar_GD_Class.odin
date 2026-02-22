@@ -10,4 +10,5 @@ VisualShaderNodeTextureParameterTriplanar :: ^GDW.Object
 VisualShaderNodeTextureParameterTriplanar_MethodBind_List :: struct {
 };
 VisualShaderNodeTextureParameterTriplanar_Init_ :: proc (VisualShaderNodeTextureParameterTriplanar_methods: ^VisualShaderNodeTextureParameterTriplanar_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

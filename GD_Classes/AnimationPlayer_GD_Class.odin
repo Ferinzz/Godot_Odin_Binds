@@ -18,54 +18,6 @@ AnimationPlayer_AnimationMethodCallMode :: enum i64 {
   ANIMATION_METHOD_CALL_DEFERRED = 0,
   ANIMATION_METHOD_CALL_IMMEDIATE = 1,
 };
-AnimationPlayer_properties :: struct {
-  current_animation_StringName : struct {
-  get_current_animation: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.StringName),
-  set_current_animation: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.StringName),
-  },
-  assigned_animation_StringName : struct {
-  get_assigned_animation: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.StringName),
-  set_assigned_animation: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.StringName),
-  },
-  autoplay_StringName : struct {
-  get_autoplay: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.StringName),
-  set_autoplay: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.StringName),
-  },
-  current_animation_length_float : struct {
-  get_current_animation_length: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float),
-  },
-  current_animation_position_float : struct {
-  get_current_animation_position: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float),
-  },
-  playback_auto_capture_Bool : struct {
-  is_auto_capture: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.Bool),
-  set_auto_capture: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.Bool),
-  },
-  playback_auto_capture_duration_float : struct {
-  get_auto_capture_duration: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float),
-  set_auto_capture_duration: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.float),
-  },
-  playback_auto_capture_transition_type_Int : struct {
-  get_auto_capture_transition_type: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.Int),
-  set_auto_capture_transition_type: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.Int),
-  },
-  playback_auto_capture_ease_type_Int : struct {
-  get_auto_capture_ease_type: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.Int),
-  set_auto_capture_ease_type: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.Int),
-  },
-  playback_default_blend_time_float : struct {
-  get_default_blend_time: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float),
-  set_default_blend_time: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.float),
-  },
-  speed_scale_float : struct {
-  get_speed_scale: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float),
-  set_speed_scale: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.float),
-  },
-  movie_quit_on_finish_Bool : struct {
-  is_movie_quit_on_finish_enabled: proc "c" (p_base: AnimationPlayer, r_value: ^GDW.Bool),
-  set_movie_quit_on_finish_enabled: proc "c" (p_base: AnimationPlayer, p_value: ^GDW.Bool),
-  },
-};
 AnimationPlayer_MethodBind_List :: struct {
   animation_set_next: struct{
     using _animation_set_next: ^GDW.MethodBind,
@@ -285,148 +237,113 @@ AnimationPlayer_MethodBind_List :: struct {
   },
 };
 AnimationPlayer_Init_ :: proc (AnimationPlayer_methods: ^AnimationPlayer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AnimationPlayer_methods.animation_set_next._animation_set_next = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "animation_set_next", 3740211285, loc))
-  AnimationPlayer_methods.animation_set_next.m_call = cast(type_of(AnimationPlayer_methods.animation_set_next.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.animation_set_next.m_call = cast(type_of(AnimationPlayer_methods.animation_set_next.m_call))MB_ptr_call
   AnimationPlayer_methods.animation_get_next._animation_get_next = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "animation_get_next", 1965194235, loc))
-  AnimationPlayer_methods.animation_get_next.m_call = cast(type_of(AnimationPlayer_methods.animation_get_next.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.animation_get_next.m_call = cast(type_of(AnimationPlayer_methods.animation_get_next.m_call))MB_ptr_call
   AnimationPlayer_methods.set_blend_time._set_blend_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_blend_time", 3231131886, loc))
-  AnimationPlayer_methods.set_blend_time.m_call = cast(type_of(AnimationPlayer_methods.set_blend_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_blend_time.m_call = cast(type_of(AnimationPlayer_methods.set_blend_time.m_call))MB_ptr_call
   AnimationPlayer_methods.get_blend_time._get_blend_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_blend_time", 1958752504, loc))
-  AnimationPlayer_methods.get_blend_time.m_call = cast(type_of(AnimationPlayer_methods.get_blend_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_blend_time.m_call = cast(type_of(AnimationPlayer_methods.get_blend_time.m_call))MB_ptr_call
   AnimationPlayer_methods.set_default_blend_time._set_default_blend_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_default_blend_time", 373806689, loc))
-  AnimationPlayer_methods.set_default_blend_time.m_call = cast(type_of(AnimationPlayer_methods.set_default_blend_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_default_blend_time.m_call = cast(type_of(AnimationPlayer_methods.set_default_blend_time.m_call))MB_ptr_call
   AnimationPlayer_methods.get_default_blend_time._get_default_blend_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_default_blend_time", 1740695150, loc))
-  AnimationPlayer_methods.get_default_blend_time.m_call = cast(type_of(AnimationPlayer_methods.get_default_blend_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_default_blend_time.m_call = cast(type_of(AnimationPlayer_methods.get_default_blend_time.m_call))MB_ptr_call
   AnimationPlayer_methods.set_auto_capture._set_auto_capture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_auto_capture", 2586408642, loc))
-  AnimationPlayer_methods.set_auto_capture.m_call = cast(type_of(AnimationPlayer_methods.set_auto_capture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_auto_capture.m_call = cast(type_of(AnimationPlayer_methods.set_auto_capture.m_call))MB_ptr_call
   AnimationPlayer_methods.is_auto_capture._is_auto_capture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "is_auto_capture", 36873697, loc))
-  AnimationPlayer_methods.is_auto_capture.m_call = cast(type_of(AnimationPlayer_methods.is_auto_capture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.is_auto_capture.m_call = cast(type_of(AnimationPlayer_methods.is_auto_capture.m_call))MB_ptr_call
   AnimationPlayer_methods.set_auto_capture_duration._set_auto_capture_duration = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_auto_capture_duration", 373806689, loc))
-  AnimationPlayer_methods.set_auto_capture_duration.m_call = cast(type_of(AnimationPlayer_methods.set_auto_capture_duration.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_auto_capture_duration.m_call = cast(type_of(AnimationPlayer_methods.set_auto_capture_duration.m_call))MB_ptr_call
   AnimationPlayer_methods.get_auto_capture_duration._get_auto_capture_duration = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_auto_capture_duration", 1740695150, loc))
-  AnimationPlayer_methods.get_auto_capture_duration.m_call = cast(type_of(AnimationPlayer_methods.get_auto_capture_duration.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_auto_capture_duration.m_call = cast(type_of(AnimationPlayer_methods.get_auto_capture_duration.m_call))MB_ptr_call
   AnimationPlayer_methods.set_auto_capture_transition_type._set_auto_capture_transition_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_auto_capture_transition_type", 1058637742, loc))
-  AnimationPlayer_methods.set_auto_capture_transition_type.m_call = cast(type_of(AnimationPlayer_methods.set_auto_capture_transition_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_auto_capture_transition_type.m_call = cast(type_of(AnimationPlayer_methods.set_auto_capture_transition_type.m_call))MB_ptr_call
   AnimationPlayer_methods.get_auto_capture_transition_type._get_auto_capture_transition_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_auto_capture_transition_type", 3842314528, loc))
-  AnimationPlayer_methods.get_auto_capture_transition_type.m_call = cast(type_of(AnimationPlayer_methods.get_auto_capture_transition_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_auto_capture_transition_type.m_call = cast(type_of(AnimationPlayer_methods.get_auto_capture_transition_type.m_call))MB_ptr_call
   AnimationPlayer_methods.set_auto_capture_ease_type._set_auto_capture_ease_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_auto_capture_ease_type", 1208105857, loc))
-  AnimationPlayer_methods.set_auto_capture_ease_type.m_call = cast(type_of(AnimationPlayer_methods.set_auto_capture_ease_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_auto_capture_ease_type.m_call = cast(type_of(AnimationPlayer_methods.set_auto_capture_ease_type.m_call))MB_ptr_call
   AnimationPlayer_methods.get_auto_capture_ease_type._get_auto_capture_ease_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_auto_capture_ease_type", 631880200, loc))
-  AnimationPlayer_methods.get_auto_capture_ease_type.m_call = cast(type_of(AnimationPlayer_methods.get_auto_capture_ease_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_auto_capture_ease_type.m_call = cast(type_of(AnimationPlayer_methods.get_auto_capture_ease_type.m_call))MB_ptr_call
   AnimationPlayer_methods.play._play = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "play", 3118260607, loc))
-  AnimationPlayer_methods.play.m_call = cast(type_of(AnimationPlayer_methods.play.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.play.m_call = cast(type_of(AnimationPlayer_methods.play.m_call))MB_ptr_call
   AnimationPlayer_methods.play_section_with_markers._play_section_with_markers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "play_section_with_markers", 1421431412, loc))
-  AnimationPlayer_methods.play_section_with_markers.m_call = cast(type_of(AnimationPlayer_methods.play_section_with_markers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.play_section_with_markers.m_call = cast(type_of(AnimationPlayer_methods.play_section_with_markers.m_call))MB_ptr_call
   AnimationPlayer_methods.play_section._play_section = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "play_section", 284774635, loc))
-  AnimationPlayer_methods.play_section.m_call = cast(type_of(AnimationPlayer_methods.play_section.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.play_section.m_call = cast(type_of(AnimationPlayer_methods.play_section.m_call))MB_ptr_call
   AnimationPlayer_methods.play_backwards._play_backwards = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "play_backwards", 2787282401, loc))
-  AnimationPlayer_methods.play_backwards.m_call = cast(type_of(AnimationPlayer_methods.play_backwards.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.play_backwards.m_call = cast(type_of(AnimationPlayer_methods.play_backwards.m_call))MB_ptr_call
   AnimationPlayer_methods.play_section_with_markers_backwards._play_section_with_markers_backwards = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "play_section_with_markers_backwards", 910195100, loc))
-  AnimationPlayer_methods.play_section_with_markers_backwards.m_call = cast(type_of(AnimationPlayer_methods.play_section_with_markers_backwards.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.play_section_with_markers_backwards.m_call = cast(type_of(AnimationPlayer_methods.play_section_with_markers_backwards.m_call))MB_ptr_call
   AnimationPlayer_methods.play_section_backwards._play_section_backwards = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "play_section_backwards", 831955981, loc))
-  AnimationPlayer_methods.play_section_backwards.m_call = cast(type_of(AnimationPlayer_methods.play_section_backwards.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.play_section_backwards.m_call = cast(type_of(AnimationPlayer_methods.play_section_backwards.m_call))MB_ptr_call
   AnimationPlayer_methods.play_with_capture._play_with_capture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "play_with_capture", 1572969103, loc))
-  AnimationPlayer_methods.play_with_capture.m_call = cast(type_of(AnimationPlayer_methods.play_with_capture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.play_with_capture.m_call = cast(type_of(AnimationPlayer_methods.play_with_capture.m_call))MB_ptr_call
   AnimationPlayer_methods.pause._pause = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "pause", 3218959716, loc))
-  AnimationPlayer_methods.pause.m_call = cast(type_of(AnimationPlayer_methods.pause.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.pause.m_call = cast(type_of(AnimationPlayer_methods.pause.m_call))MB_ptr_call
   AnimationPlayer_methods.stop._stop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "stop", 107499316, loc))
-  AnimationPlayer_methods.stop.m_call = cast(type_of(AnimationPlayer_methods.stop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.stop.m_call = cast(type_of(AnimationPlayer_methods.stop.m_call))MB_ptr_call
   AnimationPlayer_methods.is_playing._is_playing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "is_playing", 36873697, loc))
-  AnimationPlayer_methods.is_playing.m_call = cast(type_of(AnimationPlayer_methods.is_playing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.is_playing.m_call = cast(type_of(AnimationPlayer_methods.is_playing.m_call))MB_ptr_call
   AnimationPlayer_methods.is_animation_active._is_animation_active = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "is_animation_active", 36873697, loc))
-  AnimationPlayer_methods.is_animation_active.m_call = cast(type_of(AnimationPlayer_methods.is_animation_active.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.is_animation_active.m_call = cast(type_of(AnimationPlayer_methods.is_animation_active.m_call))MB_ptr_call
   AnimationPlayer_methods.set_current_animation._set_current_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_current_animation", 3304788590, loc))
-  AnimationPlayer_methods.set_current_animation.m_call = cast(type_of(AnimationPlayer_methods.set_current_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_current_animation.m_call = cast(type_of(AnimationPlayer_methods.set_current_animation.m_call))MB_ptr_call
   AnimationPlayer_methods.get_current_animation._get_current_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_current_animation", 2002593661, loc))
-  AnimationPlayer_methods.get_current_animation.m_call = cast(type_of(AnimationPlayer_methods.get_current_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_current_animation.m_call = cast(type_of(AnimationPlayer_methods.get_current_animation.m_call))MB_ptr_call
   AnimationPlayer_methods.set_assigned_animation._set_assigned_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_assigned_animation", 3304788590, loc))
-  AnimationPlayer_methods.set_assigned_animation.m_call = cast(type_of(AnimationPlayer_methods.set_assigned_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_assigned_animation.m_call = cast(type_of(AnimationPlayer_methods.set_assigned_animation.m_call))MB_ptr_call
   AnimationPlayer_methods.get_assigned_animation._get_assigned_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_assigned_animation", 2002593661, loc))
-  AnimationPlayer_methods.get_assigned_animation.m_call = cast(type_of(AnimationPlayer_methods.get_assigned_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_assigned_animation.m_call = cast(type_of(AnimationPlayer_methods.get_assigned_animation.m_call))MB_ptr_call
   AnimationPlayer_methods.queue._queue = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "queue", 3304788590, loc))
-  AnimationPlayer_methods.queue.m_call = cast(type_of(AnimationPlayer_methods.queue.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.queue.m_call = cast(type_of(AnimationPlayer_methods.queue.m_call))MB_ptr_call
   AnimationPlayer_methods.get_queue._get_queue = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_queue", 2915620761, loc))
-  AnimationPlayer_methods.get_queue.m_call = cast(type_of(AnimationPlayer_methods.get_queue.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_queue.m_call = cast(type_of(AnimationPlayer_methods.get_queue.m_call))MB_ptr_call
   AnimationPlayer_methods.clear_queue._clear_queue = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "clear_queue", 3218959716, loc))
-  AnimationPlayer_methods.clear_queue.m_call = cast(type_of(AnimationPlayer_methods.clear_queue.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.clear_queue.m_call = cast(type_of(AnimationPlayer_methods.clear_queue.m_call))MB_ptr_call
   AnimationPlayer_methods.set_speed_scale._set_speed_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_speed_scale", 373806689, loc))
-  AnimationPlayer_methods.set_speed_scale.m_call = cast(type_of(AnimationPlayer_methods.set_speed_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_speed_scale.m_call = cast(type_of(AnimationPlayer_methods.set_speed_scale.m_call))MB_ptr_call
   AnimationPlayer_methods.get_speed_scale._get_speed_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_speed_scale", 1740695150, loc))
-  AnimationPlayer_methods.get_speed_scale.m_call = cast(type_of(AnimationPlayer_methods.get_speed_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_speed_scale.m_call = cast(type_of(AnimationPlayer_methods.get_speed_scale.m_call))MB_ptr_call
   AnimationPlayer_methods.get_playing_speed._get_playing_speed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_playing_speed", 1740695150, loc))
-  AnimationPlayer_methods.get_playing_speed.m_call = cast(type_of(AnimationPlayer_methods.get_playing_speed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_playing_speed.m_call = cast(type_of(AnimationPlayer_methods.get_playing_speed.m_call))MB_ptr_call
   AnimationPlayer_methods.set_autoplay._set_autoplay = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_autoplay", 3304788590, loc))
-  AnimationPlayer_methods.set_autoplay.m_call = cast(type_of(AnimationPlayer_methods.set_autoplay.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_autoplay.m_call = cast(type_of(AnimationPlayer_methods.set_autoplay.m_call))MB_ptr_call
   AnimationPlayer_methods.get_autoplay._get_autoplay = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_autoplay", 2002593661, loc))
-  AnimationPlayer_methods.get_autoplay.m_call = cast(type_of(AnimationPlayer_methods.get_autoplay.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_autoplay.m_call = cast(type_of(AnimationPlayer_methods.get_autoplay.m_call))MB_ptr_call
   AnimationPlayer_methods.set_movie_quit_on_finish_enabled._set_movie_quit_on_finish_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_movie_quit_on_finish_enabled", 2586408642, loc))
-  AnimationPlayer_methods.set_movie_quit_on_finish_enabled.m_call = cast(type_of(AnimationPlayer_methods.set_movie_quit_on_finish_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_movie_quit_on_finish_enabled.m_call = cast(type_of(AnimationPlayer_methods.set_movie_quit_on_finish_enabled.m_call))MB_ptr_call
   AnimationPlayer_methods.is_movie_quit_on_finish_enabled._is_movie_quit_on_finish_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "is_movie_quit_on_finish_enabled", 36873697, loc))
-  AnimationPlayer_methods.is_movie_quit_on_finish_enabled.m_call = cast(type_of(AnimationPlayer_methods.is_movie_quit_on_finish_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.is_movie_quit_on_finish_enabled.m_call = cast(type_of(AnimationPlayer_methods.is_movie_quit_on_finish_enabled.m_call))MB_ptr_call
   AnimationPlayer_methods.get_current_animation_position._get_current_animation_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_current_animation_position", 1740695150, loc))
-  AnimationPlayer_methods.get_current_animation_position.m_call = cast(type_of(AnimationPlayer_methods.get_current_animation_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_current_animation_position.m_call = cast(type_of(AnimationPlayer_methods.get_current_animation_position.m_call))MB_ptr_call
   AnimationPlayer_methods.get_current_animation_length._get_current_animation_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_current_animation_length", 1740695150, loc))
-  AnimationPlayer_methods.get_current_animation_length.m_call = cast(type_of(AnimationPlayer_methods.get_current_animation_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_current_animation_length.m_call = cast(type_of(AnimationPlayer_methods.get_current_animation_length.m_call))MB_ptr_call
   AnimationPlayer_methods.set_section_with_markers._set_section_with_markers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_section_with_markers", 794792241, loc))
-  AnimationPlayer_methods.set_section_with_markers.m_call = cast(type_of(AnimationPlayer_methods.set_section_with_markers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_section_with_markers.m_call = cast(type_of(AnimationPlayer_methods.set_section_with_markers.m_call))MB_ptr_call
   AnimationPlayer_methods.set_section._set_section = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_section", 3749779719, loc))
-  AnimationPlayer_methods.set_section.m_call = cast(type_of(AnimationPlayer_methods.set_section.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_section.m_call = cast(type_of(AnimationPlayer_methods.set_section.m_call))MB_ptr_call
   AnimationPlayer_methods.reset_section._reset_section = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "reset_section", 3218959716, loc))
-  AnimationPlayer_methods.reset_section.m_call = cast(type_of(AnimationPlayer_methods.reset_section.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.reset_section.m_call = cast(type_of(AnimationPlayer_methods.reset_section.m_call))MB_ptr_call
   AnimationPlayer_methods.get_section_start_time._get_section_start_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_section_start_time", 1740695150, loc))
-  AnimationPlayer_methods.get_section_start_time.m_call = cast(type_of(AnimationPlayer_methods.get_section_start_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_section_start_time.m_call = cast(type_of(AnimationPlayer_methods.get_section_start_time.m_call))MB_ptr_call
   AnimationPlayer_methods.get_section_end_time._get_section_end_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_section_end_time", 1740695150, loc))
-  AnimationPlayer_methods.get_section_end_time.m_call = cast(type_of(AnimationPlayer_methods.get_section_end_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_section_end_time.m_call = cast(type_of(AnimationPlayer_methods.get_section_end_time.m_call))MB_ptr_call
   AnimationPlayer_methods.has_section._has_section = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "has_section", 36873697, loc))
-  AnimationPlayer_methods.has_section.m_call = cast(type_of(AnimationPlayer_methods.has_section.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.has_section.m_call = cast(type_of(AnimationPlayer_methods.has_section.m_call))MB_ptr_call
   AnimationPlayer_methods.seek._seek = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "seek", 1807872683, loc))
-  AnimationPlayer_methods.seek.m_call = cast(type_of(AnimationPlayer_methods.seek.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.seek.m_call = cast(type_of(AnimationPlayer_methods.seek.m_call))MB_ptr_call
   AnimationPlayer_methods.set_process_callback._set_process_callback = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_process_callback", 1663839457, loc))
-  AnimationPlayer_methods.set_process_callback.m_call = cast(type_of(AnimationPlayer_methods.set_process_callback.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_process_callback.m_call = cast(type_of(AnimationPlayer_methods.set_process_callback.m_call))MB_ptr_call
   AnimationPlayer_methods.get_process_callback._get_process_callback = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_process_callback", 4207496604, loc))
-  AnimationPlayer_methods.get_process_callback.m_call = cast(type_of(AnimationPlayer_methods.get_process_callback.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_process_callback.m_call = cast(type_of(AnimationPlayer_methods.get_process_callback.m_call))MB_ptr_call
   AnimationPlayer_methods.set_method_call_mode._set_method_call_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_method_call_mode", 3413514846, loc))
-  AnimationPlayer_methods.set_method_call_mode.m_call = cast(type_of(AnimationPlayer_methods.set_method_call_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_method_call_mode.m_call = cast(type_of(AnimationPlayer_methods.set_method_call_mode.m_call))MB_ptr_call
   AnimationPlayer_methods.get_method_call_mode._get_method_call_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_method_call_mode", 3583380054, loc))
-  AnimationPlayer_methods.get_method_call_mode.m_call = cast(type_of(AnimationPlayer_methods.get_method_call_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.get_method_call_mode.m_call = cast(type_of(AnimationPlayer_methods.get_method_call_mode.m_call))MB_ptr_call
   AnimationPlayer_methods.set_root._set_root = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "set_root", 1348162250, loc))
-  AnimationPlayer_methods.set_root.m_call = cast(type_of(AnimationPlayer_methods.set_root.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationPlayer_methods.set_root.m_call = cast(type_of(AnimationPlayer_methods.set_root.m_call))MB_ptr_call
   AnimationPlayer_methods.get_root._get_root = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationPlayer, "get_root", 4075236667, loc))
-  AnimationPlayer_methods.get_root.m_call = cast(type_of(AnimationPlayer_methods.get_root.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-AnimationPlayer_init_props :: proc(AnimationPlayer_prop: ^AnimationPlayer_properties, loc:= #caller_location) {
-
-  AnimationPlayer_prop.current_animation_StringName.get_current_animation = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.StringName))GDW.Get_Method_Getter(.STRING_NAME, "get_current_animation")
-  AnimationPlayer_prop.current_animation_StringName.set_current_animation = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.StringName))GDW.Get_Method_Setter(.STRING_NAME, "set_current_animation")
-
-  AnimationPlayer_prop.assigned_animation_StringName.get_assigned_animation = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.StringName))GDW.Get_Method_Getter(.STRING_NAME, "get_assigned_animation")
-  AnimationPlayer_prop.assigned_animation_StringName.set_assigned_animation = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.StringName))GDW.Get_Method_Setter(.STRING_NAME, "set_assigned_animation")
-
-  AnimationPlayer_prop.autoplay_StringName.get_autoplay = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.StringName))GDW.Get_Method_Getter(.STRING_NAME, "get_autoplay")
-  AnimationPlayer_prop.autoplay_StringName.set_autoplay = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.StringName))GDW.Get_Method_Setter(.STRING_NAME, "set_autoplay")
-
-  AnimationPlayer_prop.current_animation_length_float.get_current_animation_length = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_current_animation_length")
-
-  AnimationPlayer_prop.current_animation_position_float.get_current_animation_position = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_current_animation_position")
-
-  AnimationPlayer_prop.playback_auto_capture_Bool.is_auto_capture = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_auto_capture")
-  AnimationPlayer_prop.playback_auto_capture_Bool.set_auto_capture = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_auto_capture")
-
-  AnimationPlayer_prop.playback_auto_capture_duration_float.get_auto_capture_duration = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_auto_capture_duration")
-  AnimationPlayer_prop.playback_auto_capture_duration_float.set_auto_capture_duration = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_auto_capture_duration")
-
-  AnimationPlayer_prop.playback_auto_capture_transition_type_Int.get_auto_capture_transition_type = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_auto_capture_transition_type")
-  AnimationPlayer_prop.playback_auto_capture_transition_type_Int.set_auto_capture_transition_type = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_auto_capture_transition_type")
-
-  AnimationPlayer_prop.playback_auto_capture_ease_type_Int.get_auto_capture_ease_type = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_auto_capture_ease_type")
-  AnimationPlayer_prop.playback_auto_capture_ease_type_Int.set_auto_capture_ease_type = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_auto_capture_ease_type")
-
-  AnimationPlayer_prop.playback_default_blend_time_float.get_default_blend_time = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_default_blend_time")
-  AnimationPlayer_prop.playback_default_blend_time_float.set_default_blend_time = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_default_blend_time")
-
-  AnimationPlayer_prop.speed_scale_float.get_speed_scale = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_speed_scale")
-  AnimationPlayer_prop.speed_scale_float.set_speed_scale = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_speed_scale")
-
-  AnimationPlayer_prop.movie_quit_on_finish_Bool.is_movie_quit_on_finish_enabled = cast(proc "c" (p_base: AnimationPlayer, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_movie_quit_on_finish_enabled")
-  AnimationPlayer_prop.movie_quit_on_finish_Bool.set_movie_quit_on_finish_enabled = cast(proc "c" (p_base: AnimationPlayer, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_movie_quit_on_finish_enabled")
+  AnimationPlayer_methods.get_root.m_call = cast(type_of(AnimationPlayer_methods.get_root.m_call))MB_ptr_call
 };

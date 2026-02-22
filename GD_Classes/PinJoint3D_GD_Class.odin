@@ -24,8 +24,9 @@ PinJoint3D_MethodBind_List :: struct {
   },
 };
 PinJoint3D_Init_ :: proc (PinJoint3D_methods: ^PinJoint3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PinJoint3D_methods.set_param._set_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PinJoint3D, "set_param", 2059913726, loc))
-  PinJoint3D_methods.set_param.m_call = cast(type_of(PinJoint3D_methods.set_param.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PinJoint3D_methods.set_param.m_call = cast(type_of(PinJoint3D_methods.set_param.m_call))MB_ptr_call
   PinJoint3D_methods.get_param._get_param = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PinJoint3D, "get_param", 1758438771, loc))
-  PinJoint3D_methods.get_param.m_call = cast(type_of(PinJoint3D_methods.get_param.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PinJoint3D_methods.get_param.m_call = cast(type_of(PinJoint3D_methods.get_param.m_call))MB_ptr_call
 };

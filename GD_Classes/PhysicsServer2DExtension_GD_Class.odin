@@ -159,10 +159,11 @@ PhysicsServer2DExtension_MethodBind_List :: struct {
   },
 };
 PhysicsServer2DExtension_Init_ :: proc (PhysicsServer2DExtension_methods: ^PhysicsServer2DExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PhysicsServer2DExtension_methods.body_test_motion_is_excluding_body._body_test_motion_is_excluding_body = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsServer2DExtension, "body_test_motion_is_excluding_body", 4155700596, loc))
-  PhysicsServer2DExtension_methods.body_test_motion_is_excluding_body.m_call = cast(type_of(PhysicsServer2DExtension_methods.body_test_motion_is_excluding_body.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsServer2DExtension_methods.body_test_motion_is_excluding_body.m_call = cast(type_of(PhysicsServer2DExtension_methods.body_test_motion_is_excluding_body.m_call))MB_ptr_call
   PhysicsServer2DExtension_methods.body_test_motion_is_excluding_object._body_test_motion_is_excluding_object = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsServer2DExtension, "body_test_motion_is_excluding_object", 1116898809, loc))
-  PhysicsServer2DExtension_methods.body_test_motion_is_excluding_object.m_call = cast(type_of(PhysicsServer2DExtension_methods.body_test_motion_is_excluding_object.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsServer2DExtension_methods.body_test_motion_is_excluding_object.m_call = cast(type_of(PhysicsServer2DExtension_methods.body_test_motion_is_excluding_object.m_call))MB_ptr_call
 };
 
 PhysicsServer2DExtension_Init_Virtuals_Info :: proc(info: ^PhysicsServer2DExtension_Virtual_Info) {

@@ -10,4 +10,5 @@ ResourceImporterTexture :: ^GDW.Object
 ResourceImporterTexture_MethodBind_List :: struct {
 };
 ResourceImporterTexture_Init_ :: proc (ResourceImporterTexture_methods: ^ResourceImporterTexture_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

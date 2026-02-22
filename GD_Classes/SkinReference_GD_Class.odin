@@ -18,8 +18,9 @@ SkinReference_MethodBind_List :: struct {
   },
 };
 SkinReference_Init_ :: proc (SkinReference_methods: ^SkinReference_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   SkinReference_methods.get_skeleton._get_skeleton = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkinReference, "get_skeleton", 2944877500, loc))
-  SkinReference_methods.get_skeleton.m_call = cast(type_of(SkinReference_methods.get_skeleton.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkinReference_methods.get_skeleton.m_call = cast(type_of(SkinReference_methods.get_skeleton.m_call))MB_ptr_call
   SkinReference_methods.get_skin._get_skin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SkinReference, "get_skin", 2074563878, loc))
-  SkinReference_methods.get_skin.m_call = cast(type_of(SkinReference_methods.get_skin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SkinReference_methods.get_skin.m_call = cast(type_of(SkinReference_methods.get_skin.m_call))MB_ptr_call
 };

@@ -20,8 +20,9 @@ OpenXRSpatialComponentData_MethodBind_List :: struct {
   },
   };
 OpenXRSpatialComponentData_Init_ :: proc (OpenXRSpatialComponentData_methods: ^OpenXRSpatialComponentData_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialComponentData_methods.set_capacity._set_capacity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentData, "set_capacity", 1286410249, loc))
-  OpenXRSpatialComponentData_methods.set_capacity.m_call = cast(type_of(OpenXRSpatialComponentData_methods.set_capacity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentData_methods.set_capacity.m_call = cast(type_of(OpenXRSpatialComponentData_methods.set_capacity.m_call))MB_ptr_call
 };
 
 OpenXRSpatialComponentData_Init_Virtuals_Info :: proc(info: ^OpenXRSpatialComponentData_Virtual_Info) {

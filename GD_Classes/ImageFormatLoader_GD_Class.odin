@@ -17,4 +17,5 @@ ImageFormatLoader_LoaderFlags :: enum i64 {
 ImageFormatLoader_MethodBind_List :: struct {
 };
 ImageFormatLoader_Init_ :: proc (ImageFormatLoader_methods: ^ImageFormatLoader_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

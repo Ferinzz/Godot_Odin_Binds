@@ -10,4 +10,5 @@ Texture :: ^GDW.Object
 Texture_MethodBind_List :: struct {
 };
 Texture_Init_ :: proc (Texture_methods: ^Texture_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

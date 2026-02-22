@@ -109,6 +109,7 @@ ScriptLanguageExtension_CodeCompletionKind :: enum i64 {
 ScriptLanguageExtension_MethodBind_List :: struct {
 };
 ScriptLanguageExtension_Init_ :: proc (ScriptLanguageExtension_methods: ^ScriptLanguageExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 ScriptLanguageExtension_Init_Virtuals_Info :: proc(info: ^ScriptLanguageExtension_Virtual_Info) {

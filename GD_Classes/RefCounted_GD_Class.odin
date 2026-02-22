@@ -26,12 +26,13 @@ RefCounted_MethodBind_List :: struct {
   },
 };
 RefCounted_Init_ :: proc (RefCounted_methods: ^RefCounted_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   RefCounted_methods.init_ref._init_ref = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RefCounted, "init_ref", 2240911060, loc))
-  RefCounted_methods.init_ref.m_call = cast(type_of(RefCounted_methods.init_ref.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RefCounted_methods.init_ref.m_call = cast(type_of(RefCounted_methods.init_ref.m_call))MB_ptr_call
   RefCounted_methods.reference._reference = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RefCounted, "reference", 2240911060, loc))
-  RefCounted_methods.reference.m_call = cast(type_of(RefCounted_methods.reference.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RefCounted_methods.reference.m_call = cast(type_of(RefCounted_methods.reference.m_call))MB_ptr_call
   RefCounted_methods.unreference._unreference = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RefCounted, "unreference", 2240911060, loc))
-  RefCounted_methods.unreference.m_call = cast(type_of(RefCounted_methods.unreference.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RefCounted_methods.unreference.m_call = cast(type_of(RefCounted_methods.unreference.m_call))MB_ptr_call
   RefCounted_methods.get_reference_count._get_reference_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RefCounted, "get_reference_count", 3905245786, loc))
-  RefCounted_methods.get_reference_count.m_call = cast(type_of(RefCounted_methods.get_reference_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RefCounted_methods.get_reference_count.m_call = cast(type_of(RefCounted_methods.get_reference_count.m_call))MB_ptr_call
 };

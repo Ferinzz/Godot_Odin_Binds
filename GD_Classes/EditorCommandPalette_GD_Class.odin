@@ -18,8 +18,9 @@ EditorCommandPalette_MethodBind_List :: struct {
   },
   };
 EditorCommandPalette_Init_ :: proc (EditorCommandPalette_methods: ^EditorCommandPalette_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorCommandPalette_methods.add_command._add_command = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorCommandPalette, "add_command", 864043298, loc))
-  EditorCommandPalette_methods.add_command.m_call = cast(type_of(EditorCommandPalette_methods.add_command.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorCommandPalette_methods.add_command.m_call = cast(type_of(EditorCommandPalette_methods.add_command.m_call))MB_ptr_call
   EditorCommandPalette_methods.remove_command._remove_command = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorCommandPalette, "remove_command", 83702148, loc))
-  EditorCommandPalette_methods.remove_command.m_call = cast(type_of(EditorCommandPalette_methods.remove_command.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorCommandPalette_methods.remove_command.m_call = cast(type_of(EditorCommandPalette_methods.remove_command.m_call))MB_ptr_call
 };

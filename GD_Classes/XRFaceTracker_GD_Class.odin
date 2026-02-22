@@ -154,12 +154,6 @@ XRFaceTracker_BlendShapeEntry :: enum i64 {
   FT_MOUTH_PRESS = 142,
   FT_MAX = 143,
 };
-XRFaceTracker_properties :: struct {
-  blend_shapes_PackedFloat32Array : struct {
-  get_blend_shapes: proc "c" (p_base: XRFaceTracker, r_value: ^GDW.PackedFloat32Array),
-  set_blend_shapes: proc "c" (p_base: XRFaceTracker, p_value: ^GDW.PackedFloat32Array),
-  },
-};
 XRFaceTracker_MethodBind_List :: struct {
   get_blend_shape: struct{
     using _get_blend_shape: ^GDW.MethodBind,
@@ -179,17 +173,13 @@ XRFaceTracker_MethodBind_List :: struct {
   },
   };
 XRFaceTracker_Init_ :: proc (XRFaceTracker_methods: ^XRFaceTracker_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   XRFaceTracker_methods.get_blend_shape._get_blend_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRFaceTracker, "get_blend_shape", 330010046, loc))
-  XRFaceTracker_methods.get_blend_shape.m_call = cast(type_of(XRFaceTracker_methods.get_blend_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRFaceTracker_methods.get_blend_shape.m_call = cast(type_of(XRFaceTracker_methods.get_blend_shape.m_call))MB_ptr_call
   XRFaceTracker_methods.set_blend_shape._set_blend_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRFaceTracker, "set_blend_shape", 2352588791, loc))
-  XRFaceTracker_methods.set_blend_shape.m_call = cast(type_of(XRFaceTracker_methods.set_blend_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRFaceTracker_methods.set_blend_shape.m_call = cast(type_of(XRFaceTracker_methods.set_blend_shape.m_call))MB_ptr_call
   XRFaceTracker_methods.get_blend_shapes._get_blend_shapes = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRFaceTracker, "get_blend_shapes", 675695659, loc))
-  XRFaceTracker_methods.get_blend_shapes.m_call = cast(type_of(XRFaceTracker_methods.get_blend_shapes.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRFaceTracker_methods.get_blend_shapes.m_call = cast(type_of(XRFaceTracker_methods.get_blend_shapes.m_call))MB_ptr_call
   XRFaceTracker_methods.set_blend_shapes._set_blend_shapes = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRFaceTracker, "set_blend_shapes", 2899603908, loc))
-  XRFaceTracker_methods.set_blend_shapes.m_call = cast(type_of(XRFaceTracker_methods.set_blend_shapes.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-XRFaceTracker_init_props :: proc(XRFaceTracker_prop: ^XRFaceTracker_properties, loc:= #caller_location) {
-
-  XRFaceTracker_prop.blend_shapes_PackedFloat32Array.get_blend_shapes = cast(proc "c" (p_base: XRFaceTracker, r_value: ^GDW.PackedFloat32Array))GDW.Get_Method_Getter(.PACKED_FLOAT32_ARRAY, "get_blend_shapes")
-  XRFaceTracker_prop.blend_shapes_PackedFloat32Array.set_blend_shapes = cast(proc "c" (p_base: XRFaceTracker, p_value: ^GDW.PackedFloat32Array))GDW.Get_Method_Setter(.PACKED_FLOAT32_ARRAY, "set_blend_shapes")
+  XRFaceTracker_methods.set_blend_shapes.m_call = cast(type_of(XRFaceTracker_methods.set_blend_shapes.m_call))MB_ptr_call
 };

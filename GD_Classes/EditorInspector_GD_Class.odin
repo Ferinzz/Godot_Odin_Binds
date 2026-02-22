@@ -26,12 +26,13 @@ EditorInspector_MethodBind_List :: struct {
   },
 };
 EditorInspector_Init_ :: proc (EditorInspector_methods: ^EditorInspector_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorInspector_methods.edit._edit = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorInspector, "edit", 3975164845, loc))
-  EditorInspector_methods.edit.m_call = cast(type_of(EditorInspector_methods.edit.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorInspector_methods.edit.m_call = cast(type_of(EditorInspector_methods.edit.m_call))MB_ptr_call
   EditorInspector_methods.get_selected_path._get_selected_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorInspector, "get_selected_path", 201670096, loc))
-  EditorInspector_methods.get_selected_path.m_call = cast(type_of(EditorInspector_methods.get_selected_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorInspector_methods.get_selected_path.m_call = cast(type_of(EditorInspector_methods.get_selected_path.m_call))MB_ptr_call
   EditorInspector_methods.get_edited_object._get_edited_object = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorInspector, "get_edited_object", 2050059866, loc))
-  EditorInspector_methods.get_edited_object.m_call = cast(type_of(EditorInspector_methods.get_edited_object.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorInspector_methods.get_edited_object.m_call = cast(type_of(EditorInspector_methods.get_edited_object.m_call))MB_ptr_call
   EditorInspector_methods.instantiate_property_editor._instantiate_property_editor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorInspector, "instantiate_property_editor", 1429914152, loc))
-  EditorInspector_methods.instantiate_property_editor.m_call = cast(type_of(EditorInspector_methods.instantiate_property_editor.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorInspector_methods.instantiate_property_editor.m_call = cast(type_of(EditorInspector_methods.instantiate_property_editor.m_call))MB_ptr_call
 };

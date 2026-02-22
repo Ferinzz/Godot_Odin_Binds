@@ -10,4 +10,5 @@ ResourceImporterDynamicFont :: ^GDW.Object
 ResourceImporterDynamicFont_MethodBind_List :: struct {
 };
 ResourceImporterDynamicFont_Init_ :: proc (ResourceImporterDynamicFont_methods: ^ResourceImporterDynamicFont_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

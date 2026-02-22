@@ -31,12 +31,13 @@ EditorInspectorPlugin_MethodBind_List :: struct {
   },
   };
 EditorInspectorPlugin_Init_ :: proc (EditorInspectorPlugin_methods: ^EditorInspectorPlugin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorInspectorPlugin_methods.add_custom_control._add_custom_control = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorInspectorPlugin, "add_custom_control", 1496901182, loc))
-  EditorInspectorPlugin_methods.add_custom_control.m_call = cast(type_of(EditorInspectorPlugin_methods.add_custom_control.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorInspectorPlugin_methods.add_custom_control.m_call = cast(type_of(EditorInspectorPlugin_methods.add_custom_control.m_call))MB_ptr_call
   EditorInspectorPlugin_methods.add_property_editor._add_property_editor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorInspectorPlugin, "add_property_editor", 2042698479, loc))
-  EditorInspectorPlugin_methods.add_property_editor.m_call = cast(type_of(EditorInspectorPlugin_methods.add_property_editor.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorInspectorPlugin_methods.add_property_editor.m_call = cast(type_of(EditorInspectorPlugin_methods.add_property_editor.m_call))MB_ptr_call
   EditorInspectorPlugin_methods.add_property_editor_for_multiple_properties._add_property_editor_for_multiple_properties = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorInspectorPlugin, "add_property_editor_for_multiple_properties", 788598683, loc))
-  EditorInspectorPlugin_methods.add_property_editor_for_multiple_properties.m_call = cast(type_of(EditorInspectorPlugin_methods.add_property_editor_for_multiple_properties.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorInspectorPlugin_methods.add_property_editor_for_multiple_properties.m_call = cast(type_of(EditorInspectorPlugin_methods.add_property_editor_for_multiple_properties.m_call))MB_ptr_call
 };
 
 EditorInspectorPlugin_Init_Virtuals_Info :: proc(info: ^EditorInspectorPlugin_Virtual_Info) {

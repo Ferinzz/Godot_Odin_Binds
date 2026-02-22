@@ -16,6 +16,7 @@ EditorSyntaxHighlighter_Virtual_Info :: struct {
 EditorSyntaxHighlighter_MethodBind_List :: struct {
 };
 EditorSyntaxHighlighter_Init_ :: proc (EditorSyntaxHighlighter_methods: ^EditorSyntaxHighlighter_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 EditorSyntaxHighlighter_Init_Virtuals_Info :: proc(info: ^EditorSyntaxHighlighter_Virtual_Info) {

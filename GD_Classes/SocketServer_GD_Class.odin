@@ -26,12 +26,13 @@ SocketServer_MethodBind_List :: struct {
   },
 };
 SocketServer_Init_ :: proc (SocketServer_methods: ^SocketServer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   SocketServer_methods.is_connection_available._is_connection_available = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SocketServer, "is_connection_available", 36873697, loc))
-  SocketServer_methods.is_connection_available.m_call = cast(type_of(SocketServer_methods.is_connection_available.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SocketServer_methods.is_connection_available.m_call = cast(type_of(SocketServer_methods.is_connection_available.m_call))MB_ptr_call
   SocketServer_methods.is_listening._is_listening = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SocketServer, "is_listening", 36873697, loc))
-  SocketServer_methods.is_listening.m_call = cast(type_of(SocketServer_methods.is_listening.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SocketServer_methods.is_listening.m_call = cast(type_of(SocketServer_methods.is_listening.m_call))MB_ptr_call
   SocketServer_methods.stop._stop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SocketServer, "stop", 3218959716, loc))
-  SocketServer_methods.stop.m_call = cast(type_of(SocketServer_methods.stop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SocketServer_methods.stop.m_call = cast(type_of(SocketServer_methods.stop.m_call))MB_ptr_call
   SocketServer_methods.take_socket_connection._take_socket_connection = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SocketServer, "take_socket_connection", 1883962599, loc))
-  SocketServer_methods.take_socket_connection.m_call = cast(type_of(SocketServer_methods.take_socket_connection.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SocketServer_methods.take_socket_connection.m_call = cast(type_of(SocketServer_methods.take_socket_connection.m_call))MB_ptr_call
 };

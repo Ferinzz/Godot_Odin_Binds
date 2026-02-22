@@ -42,20 +42,21 @@ Skeleton2D_MethodBind_List :: struct {
   },
 };
 Skeleton2D_Init_ :: proc (Skeleton2D_methods: ^Skeleton2D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Skeleton2D_methods.get_bone_count._get_bone_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skeleton2D, "get_bone_count", 3905245786, loc))
-  Skeleton2D_methods.get_bone_count.m_call = cast(type_of(Skeleton2D_methods.get_bone_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skeleton2D_methods.get_bone_count.m_call = cast(type_of(Skeleton2D_methods.get_bone_count.m_call))MB_ptr_call
   Skeleton2D_methods.get_bone._get_bone = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skeleton2D, "get_bone", 2556267111, loc))
-  Skeleton2D_methods.get_bone.m_call = cast(type_of(Skeleton2D_methods.get_bone.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skeleton2D_methods.get_bone.m_call = cast(type_of(Skeleton2D_methods.get_bone.m_call))MB_ptr_call
   Skeleton2D_methods.get_skeleton._get_skeleton = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skeleton2D, "get_skeleton", 2944877500, loc))
-  Skeleton2D_methods.get_skeleton.m_call = cast(type_of(Skeleton2D_methods.get_skeleton.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skeleton2D_methods.get_skeleton.m_call = cast(type_of(Skeleton2D_methods.get_skeleton.m_call))MB_ptr_call
   Skeleton2D_methods.set_modification_stack._set_modification_stack = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skeleton2D, "set_modification_stack", 3907307132, loc))
-  Skeleton2D_methods.set_modification_stack.m_call = cast(type_of(Skeleton2D_methods.set_modification_stack.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skeleton2D_methods.set_modification_stack.m_call = cast(type_of(Skeleton2D_methods.set_modification_stack.m_call))MB_ptr_call
   Skeleton2D_methods.get_modification_stack._get_modification_stack = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skeleton2D, "get_modification_stack", 2107508396, loc))
-  Skeleton2D_methods.get_modification_stack.m_call = cast(type_of(Skeleton2D_methods.get_modification_stack.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skeleton2D_methods.get_modification_stack.m_call = cast(type_of(Skeleton2D_methods.get_modification_stack.m_call))MB_ptr_call
   Skeleton2D_methods.execute_modifications._execute_modifications = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skeleton2D, "execute_modifications", 1005356550, loc))
-  Skeleton2D_methods.execute_modifications.m_call = cast(type_of(Skeleton2D_methods.execute_modifications.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skeleton2D_methods.execute_modifications.m_call = cast(type_of(Skeleton2D_methods.execute_modifications.m_call))MB_ptr_call
   Skeleton2D_methods.set_bone_local_pose_override._set_bone_local_pose_override = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skeleton2D, "set_bone_local_pose_override", 555457532, loc))
-  Skeleton2D_methods.set_bone_local_pose_override.m_call = cast(type_of(Skeleton2D_methods.set_bone_local_pose_override.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skeleton2D_methods.set_bone_local_pose_override.m_call = cast(type_of(Skeleton2D_methods.set_bone_local_pose_override.m_call))MB_ptr_call
   Skeleton2D_methods.get_bone_local_pose_override._get_bone_local_pose_override = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Skeleton2D, "get_bone_local_pose_override", 2995540667, loc))
-  Skeleton2D_methods.get_bone_local_pose_override.m_call = cast(type_of(Skeleton2D_methods.get_bone_local_pose_override.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Skeleton2D_methods.get_bone_local_pose_override.m_call = cast(type_of(Skeleton2D_methods.get_bone_local_pose_override.m_call))MB_ptr_call
 };

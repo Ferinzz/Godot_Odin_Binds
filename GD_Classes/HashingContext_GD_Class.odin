@@ -28,10 +28,11 @@ HashingContext_MethodBind_List :: struct {
   },
 };
 HashingContext_Init_ :: proc (HashingContext_methods: ^HashingContext_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   HashingContext_methods.start._start = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HashingContext, "start", 3940338335, loc))
-  HashingContext_methods.start.m_call = cast(type_of(HashingContext_methods.start.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HashingContext_methods.start.m_call = cast(type_of(HashingContext_methods.start.m_call))MB_ptr_call
   HashingContext_methods.update._update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HashingContext, "update", 680677267, loc))
-  HashingContext_methods.update.m_call = cast(type_of(HashingContext_methods.update.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HashingContext_methods.update.m_call = cast(type_of(HashingContext_methods.update.m_call))MB_ptr_call
   HashingContext_methods.finish._finish = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HashingContext, "finish", 2115431945, loc))
-  HashingContext_methods.finish.m_call = cast(type_of(HashingContext_methods.finish.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HashingContext_methods.finish.m_call = cast(type_of(HashingContext_methods.finish.m_call))MB_ptr_call
 };

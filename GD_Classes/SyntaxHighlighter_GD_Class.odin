@@ -32,14 +32,15 @@ SyntaxHighlighter_MethodBind_List :: struct {
   },
 };
 SyntaxHighlighter_Init_ :: proc (SyntaxHighlighter_methods: ^SyntaxHighlighter_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   SyntaxHighlighter_methods.get_line_syntax_highlighting._get_line_syntax_highlighting = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SyntaxHighlighter, "get_line_syntax_highlighting", 3554694381, loc))
-  SyntaxHighlighter_methods.get_line_syntax_highlighting.m_call = cast(type_of(SyntaxHighlighter_methods.get_line_syntax_highlighting.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SyntaxHighlighter_methods.get_line_syntax_highlighting.m_call = cast(type_of(SyntaxHighlighter_methods.get_line_syntax_highlighting.m_call))MB_ptr_call
   SyntaxHighlighter_methods.update_cache._update_cache = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SyntaxHighlighter, "update_cache", 3218959716, loc))
-  SyntaxHighlighter_methods.update_cache.m_call = cast(type_of(SyntaxHighlighter_methods.update_cache.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SyntaxHighlighter_methods.update_cache.m_call = cast(type_of(SyntaxHighlighter_methods.update_cache.m_call))MB_ptr_call
   SyntaxHighlighter_methods.clear_highlighting_cache._clear_highlighting_cache = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SyntaxHighlighter, "clear_highlighting_cache", 3218959716, loc))
-  SyntaxHighlighter_methods.clear_highlighting_cache.m_call = cast(type_of(SyntaxHighlighter_methods.clear_highlighting_cache.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SyntaxHighlighter_methods.clear_highlighting_cache.m_call = cast(type_of(SyntaxHighlighter_methods.clear_highlighting_cache.m_call))MB_ptr_call
   SyntaxHighlighter_methods.get_text_edit._get_text_edit = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SyntaxHighlighter, "get_text_edit", 1893027089, loc))
-  SyntaxHighlighter_methods.get_text_edit.m_call = cast(type_of(SyntaxHighlighter_methods.get_text_edit.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SyntaxHighlighter_methods.get_text_edit.m_call = cast(type_of(SyntaxHighlighter_methods.get_text_edit.m_call))MB_ptr_call
 };
 
 SyntaxHighlighter_Init_Virtuals_Info :: proc(info: ^SyntaxHighlighter_Virtual_Info) {

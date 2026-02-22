@@ -66,32 +66,33 @@ KinematicCollision3D_MethodBind_List :: struct {
   },
 };
 KinematicCollision3D_Init_ :: proc (KinematicCollision3D_methods: ^KinematicCollision3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   KinematicCollision3D_methods.get_travel._get_travel = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_travel", 3360562783, loc))
-  KinematicCollision3D_methods.get_travel.m_call = cast(type_of(KinematicCollision3D_methods.get_travel.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_travel.m_call = cast(type_of(KinematicCollision3D_methods.get_travel.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_remainder._get_remainder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_remainder", 3360562783, loc))
-  KinematicCollision3D_methods.get_remainder.m_call = cast(type_of(KinematicCollision3D_methods.get_remainder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_remainder.m_call = cast(type_of(KinematicCollision3D_methods.get_remainder.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_depth._get_depth = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_depth", 1740695150, loc))
-  KinematicCollision3D_methods.get_depth.m_call = cast(type_of(KinematicCollision3D_methods.get_depth.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_depth.m_call = cast(type_of(KinematicCollision3D_methods.get_depth.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_collision_count._get_collision_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_collision_count", 3905245786, loc))
-  KinematicCollision3D_methods.get_collision_count.m_call = cast(type_of(KinematicCollision3D_methods.get_collision_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_collision_count.m_call = cast(type_of(KinematicCollision3D_methods.get_collision_count.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_position._get_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_position", 1914908202, loc))
-  KinematicCollision3D_methods.get_position.m_call = cast(type_of(KinematicCollision3D_methods.get_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_position.m_call = cast(type_of(KinematicCollision3D_methods.get_position.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_normal._get_normal = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_normal", 1914908202, loc))
-  KinematicCollision3D_methods.get_normal.m_call = cast(type_of(KinematicCollision3D_methods.get_normal.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_normal.m_call = cast(type_of(KinematicCollision3D_methods.get_normal.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_angle._get_angle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_angle", 1242741860, loc))
-  KinematicCollision3D_methods.get_angle.m_call = cast(type_of(KinematicCollision3D_methods.get_angle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_angle.m_call = cast(type_of(KinematicCollision3D_methods.get_angle.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_local_shape._get_local_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_local_shape", 2639523548, loc))
-  KinematicCollision3D_methods.get_local_shape.m_call = cast(type_of(KinematicCollision3D_methods.get_local_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_local_shape.m_call = cast(type_of(KinematicCollision3D_methods.get_local_shape.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_collider._get_collider = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_collider", 2639523548, loc))
-  KinematicCollision3D_methods.get_collider.m_call = cast(type_of(KinematicCollision3D_methods.get_collider.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_collider.m_call = cast(type_of(KinematicCollision3D_methods.get_collider.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_collider_id._get_collider_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_collider_id", 1591665591, loc))
-  KinematicCollision3D_methods.get_collider_id.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_collider_id.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_id.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_collider_rid._get_collider_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_collider_rid", 1231817359, loc))
-  KinematicCollision3D_methods.get_collider_rid.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_collider_rid.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_rid.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_collider_shape._get_collider_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_collider_shape", 2639523548, loc))
-  KinematicCollision3D_methods.get_collider_shape.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_collider_shape.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_shape.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_collider_shape_index._get_collider_shape_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_collider_shape_index", 1591665591, loc))
-  KinematicCollision3D_methods.get_collider_shape_index.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_shape_index.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_collider_shape_index.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_shape_index.m_call))MB_ptr_call
   KinematicCollision3D_methods.get_collider_velocity._get_collider_velocity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.KinematicCollision3D, "get_collider_velocity", 1914908202, loc))
-  KinematicCollision3D_methods.get_collider_velocity.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_velocity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  KinematicCollision3D_methods.get_collider_velocity.m_call = cast(type_of(KinematicCollision3D_methods.get_collider_velocity.m_call))MB_ptr_call
 };

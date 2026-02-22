@@ -26,12 +26,13 @@ JavaClass_MethodBind_List :: struct {
   },
 };
 JavaClass_Init_ :: proc (JavaClass_methods: ^JavaClass_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   JavaClass_methods.get_java_class_name._get_java_class_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JavaClass, "get_java_class_name", 201670096, loc))
-  JavaClass_methods.get_java_class_name.m_call = cast(type_of(JavaClass_methods.get_java_class_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JavaClass_methods.get_java_class_name.m_call = cast(type_of(JavaClass_methods.get_java_class_name.m_call))MB_ptr_call
   JavaClass_methods.get_java_method_list._get_java_method_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JavaClass, "get_java_method_list", 3995934104, loc))
-  JavaClass_methods.get_java_method_list.m_call = cast(type_of(JavaClass_methods.get_java_method_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JavaClass_methods.get_java_method_list.m_call = cast(type_of(JavaClass_methods.get_java_method_list.m_call))MB_ptr_call
   JavaClass_methods.get_java_parent_class._get_java_parent_class = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JavaClass, "get_java_parent_class", 541536347, loc))
-  JavaClass_methods.get_java_parent_class.m_call = cast(type_of(JavaClass_methods.get_java_parent_class.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JavaClass_methods.get_java_parent_class.m_call = cast(type_of(JavaClass_methods.get_java_parent_class.m_call))MB_ptr_call
   JavaClass_methods.has_java_method._has_java_method = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JavaClass, "has_java_method", 2619796661, loc))
-  JavaClass_methods.has_java_method.m_call = cast(type_of(JavaClass_methods.has_java_method.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JavaClass_methods.has_java_method.m_call = cast(type_of(JavaClass_methods.has_java_method.m_call))MB_ptr_call
 };

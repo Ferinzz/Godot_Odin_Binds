@@ -18,8 +18,9 @@ PackedDataContainer_MethodBind_List :: struct {
   },
 };
 PackedDataContainer_Init_ :: proc (PackedDataContainer_methods: ^PackedDataContainer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PackedDataContainer_methods.pack._pack = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PackedDataContainer, "pack", 966674026, loc))
-  PackedDataContainer_methods.pack.m_call = cast(type_of(PackedDataContainer_methods.pack.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PackedDataContainer_methods.pack.m_call = cast(type_of(PackedDataContainer_methods.pack.m_call))MB_ptr_call
   PackedDataContainer_methods.size._size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PackedDataContainer, "size", 3905245786, loc))
-  PackedDataContainer_methods.size.m_call = cast(type_of(PackedDataContainer_methods.size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PackedDataContainer_methods.size.m_call = cast(type_of(PackedDataContainer_methods.size.m_call))MB_ptr_call
 };

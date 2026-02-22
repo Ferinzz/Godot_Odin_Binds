@@ -7,36 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 RayCast2D :: ^GDW.Object
 
-RayCast2D_properties :: struct {
-  enabled_Bool : struct {
-  is_enabled: proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool),
-  set_enabled: proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool),
-  },
-  exclude_parent_Bool : struct {
-  get_exclude_parent_body: proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool),
-  set_exclude_parent_body: proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool),
-  },
-  target_position_Vector2 : struct {
-  get_target_position: proc "c" (p_base: RayCast2D, r_value: ^GDW.Vector2),
-  set_target_position: proc "c" (p_base: RayCast2D, p_value: ^GDW.Vector2),
-  },
-  collision_mask_Int : struct {
-  get_collision_mask: proc "c" (p_base: RayCast2D, r_value: ^GDW.Int),
-  set_collision_mask: proc "c" (p_base: RayCast2D, p_value: ^GDW.Int),
-  },
-  hit_from_inside_Bool : struct {
-  is_hit_from_inside_enabled: proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool),
-  set_hit_from_inside: proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool),
-  },
-  collide_with_areas_Bool : struct {
-  is_collide_with_areas_enabled: proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool),
-  set_collide_with_areas: proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool),
-  },
-  collide_with_bodies_Bool : struct {
-  is_collide_with_bodies_enabled: proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool),
-  set_collide_with_bodies: proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool),
-  },
-};
 RayCast2D_MethodBind_List :: struct {
   set_enabled: struct{
     using _set_enabled: ^GDW.MethodBind,
@@ -152,83 +122,61 @@ RayCast2D_MethodBind_List :: struct {
   },
 };
 RayCast2D_Init_ :: proc (RayCast2D_methods: ^RayCast2D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   RayCast2D_methods.set_enabled._set_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "set_enabled", 2586408642, loc))
-  RayCast2D_methods.set_enabled.m_call = cast(type_of(RayCast2D_methods.set_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.set_enabled.m_call = cast(type_of(RayCast2D_methods.set_enabled.m_call))MB_ptr_call
   RayCast2D_methods.is_enabled._is_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "is_enabled", 36873697, loc))
-  RayCast2D_methods.is_enabled.m_call = cast(type_of(RayCast2D_methods.is_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.is_enabled.m_call = cast(type_of(RayCast2D_methods.is_enabled.m_call))MB_ptr_call
   RayCast2D_methods.set_target_position._set_target_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "set_target_position", 743155724, loc))
-  RayCast2D_methods.set_target_position.m_call = cast(type_of(RayCast2D_methods.set_target_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.set_target_position.m_call = cast(type_of(RayCast2D_methods.set_target_position.m_call))MB_ptr_call
   RayCast2D_methods.get_target_position._get_target_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_target_position", 3341600327, loc))
-  RayCast2D_methods.get_target_position.m_call = cast(type_of(RayCast2D_methods.get_target_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_target_position.m_call = cast(type_of(RayCast2D_methods.get_target_position.m_call))MB_ptr_call
   RayCast2D_methods.is_colliding._is_colliding = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "is_colliding", 36873697, loc))
-  RayCast2D_methods.is_colliding.m_call = cast(type_of(RayCast2D_methods.is_colliding.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.is_colliding.m_call = cast(type_of(RayCast2D_methods.is_colliding.m_call))MB_ptr_call
   RayCast2D_methods.force_raycast_update._force_raycast_update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "force_raycast_update", 3218959716, loc))
-  RayCast2D_methods.force_raycast_update.m_call = cast(type_of(RayCast2D_methods.force_raycast_update.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.force_raycast_update.m_call = cast(type_of(RayCast2D_methods.force_raycast_update.m_call))MB_ptr_call
   RayCast2D_methods.get_collider._get_collider = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_collider", 1981248198, loc))
-  RayCast2D_methods.get_collider.m_call = cast(type_of(RayCast2D_methods.get_collider.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_collider.m_call = cast(type_of(RayCast2D_methods.get_collider.m_call))MB_ptr_call
   RayCast2D_methods.get_collider_rid._get_collider_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_collider_rid", 2944877500, loc))
-  RayCast2D_methods.get_collider_rid.m_call = cast(type_of(RayCast2D_methods.get_collider_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_collider_rid.m_call = cast(type_of(RayCast2D_methods.get_collider_rid.m_call))MB_ptr_call
   RayCast2D_methods.get_collider_shape._get_collider_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_collider_shape", 3905245786, loc))
-  RayCast2D_methods.get_collider_shape.m_call = cast(type_of(RayCast2D_methods.get_collider_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_collider_shape.m_call = cast(type_of(RayCast2D_methods.get_collider_shape.m_call))MB_ptr_call
   RayCast2D_methods.get_collision_point._get_collision_point = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_collision_point", 3341600327, loc))
-  RayCast2D_methods.get_collision_point.m_call = cast(type_of(RayCast2D_methods.get_collision_point.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_collision_point.m_call = cast(type_of(RayCast2D_methods.get_collision_point.m_call))MB_ptr_call
   RayCast2D_methods.get_collision_normal._get_collision_normal = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_collision_normal", 3341600327, loc))
-  RayCast2D_methods.get_collision_normal.m_call = cast(type_of(RayCast2D_methods.get_collision_normal.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_collision_normal.m_call = cast(type_of(RayCast2D_methods.get_collision_normal.m_call))MB_ptr_call
   RayCast2D_methods.add_exception_rid._add_exception_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "add_exception_rid", 2722037293, loc))
-  RayCast2D_methods.add_exception_rid.m_call = cast(type_of(RayCast2D_methods.add_exception_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.add_exception_rid.m_call = cast(type_of(RayCast2D_methods.add_exception_rid.m_call))MB_ptr_call
   RayCast2D_methods.add_exception._add_exception = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "add_exception", 3090941106, loc))
-  RayCast2D_methods.add_exception.m_call = cast(type_of(RayCast2D_methods.add_exception.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.add_exception.m_call = cast(type_of(RayCast2D_methods.add_exception.m_call))MB_ptr_call
   RayCast2D_methods.remove_exception_rid._remove_exception_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "remove_exception_rid", 2722037293, loc))
-  RayCast2D_methods.remove_exception_rid.m_call = cast(type_of(RayCast2D_methods.remove_exception_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.remove_exception_rid.m_call = cast(type_of(RayCast2D_methods.remove_exception_rid.m_call))MB_ptr_call
   RayCast2D_methods.remove_exception._remove_exception = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "remove_exception", 3090941106, loc))
-  RayCast2D_methods.remove_exception.m_call = cast(type_of(RayCast2D_methods.remove_exception.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.remove_exception.m_call = cast(type_of(RayCast2D_methods.remove_exception.m_call))MB_ptr_call
   RayCast2D_methods.clear_exceptions._clear_exceptions = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "clear_exceptions", 3218959716, loc))
-  RayCast2D_methods.clear_exceptions.m_call = cast(type_of(RayCast2D_methods.clear_exceptions.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.clear_exceptions.m_call = cast(type_of(RayCast2D_methods.clear_exceptions.m_call))MB_ptr_call
   RayCast2D_methods.set_collision_mask._set_collision_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "set_collision_mask", 1286410249, loc))
-  RayCast2D_methods.set_collision_mask.m_call = cast(type_of(RayCast2D_methods.set_collision_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.set_collision_mask.m_call = cast(type_of(RayCast2D_methods.set_collision_mask.m_call))MB_ptr_call
   RayCast2D_methods.get_collision_mask._get_collision_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_collision_mask", 3905245786, loc))
-  RayCast2D_methods.get_collision_mask.m_call = cast(type_of(RayCast2D_methods.get_collision_mask.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_collision_mask.m_call = cast(type_of(RayCast2D_methods.get_collision_mask.m_call))MB_ptr_call
   RayCast2D_methods.set_collision_mask_value._set_collision_mask_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "set_collision_mask_value", 300928843, loc))
-  RayCast2D_methods.set_collision_mask_value.m_call = cast(type_of(RayCast2D_methods.set_collision_mask_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.set_collision_mask_value.m_call = cast(type_of(RayCast2D_methods.set_collision_mask_value.m_call))MB_ptr_call
   RayCast2D_methods.get_collision_mask_value._get_collision_mask_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_collision_mask_value", 1116898809, loc))
-  RayCast2D_methods.get_collision_mask_value.m_call = cast(type_of(RayCast2D_methods.get_collision_mask_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_collision_mask_value.m_call = cast(type_of(RayCast2D_methods.get_collision_mask_value.m_call))MB_ptr_call
   RayCast2D_methods.set_exclude_parent_body._set_exclude_parent_body = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "set_exclude_parent_body", 2586408642, loc))
-  RayCast2D_methods.set_exclude_parent_body.m_call = cast(type_of(RayCast2D_methods.set_exclude_parent_body.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.set_exclude_parent_body.m_call = cast(type_of(RayCast2D_methods.set_exclude_parent_body.m_call))MB_ptr_call
   RayCast2D_methods.get_exclude_parent_body._get_exclude_parent_body = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "get_exclude_parent_body", 36873697, loc))
-  RayCast2D_methods.get_exclude_parent_body.m_call = cast(type_of(RayCast2D_methods.get_exclude_parent_body.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.get_exclude_parent_body.m_call = cast(type_of(RayCast2D_methods.get_exclude_parent_body.m_call))MB_ptr_call
   RayCast2D_methods.set_collide_with_areas._set_collide_with_areas = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "set_collide_with_areas", 2586408642, loc))
-  RayCast2D_methods.set_collide_with_areas.m_call = cast(type_of(RayCast2D_methods.set_collide_with_areas.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.set_collide_with_areas.m_call = cast(type_of(RayCast2D_methods.set_collide_with_areas.m_call))MB_ptr_call
   RayCast2D_methods.is_collide_with_areas_enabled._is_collide_with_areas_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "is_collide_with_areas_enabled", 36873697, loc))
-  RayCast2D_methods.is_collide_with_areas_enabled.m_call = cast(type_of(RayCast2D_methods.is_collide_with_areas_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.is_collide_with_areas_enabled.m_call = cast(type_of(RayCast2D_methods.is_collide_with_areas_enabled.m_call))MB_ptr_call
   RayCast2D_methods.set_collide_with_bodies._set_collide_with_bodies = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "set_collide_with_bodies", 2586408642, loc))
-  RayCast2D_methods.set_collide_with_bodies.m_call = cast(type_of(RayCast2D_methods.set_collide_with_bodies.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.set_collide_with_bodies.m_call = cast(type_of(RayCast2D_methods.set_collide_with_bodies.m_call))MB_ptr_call
   RayCast2D_methods.is_collide_with_bodies_enabled._is_collide_with_bodies_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "is_collide_with_bodies_enabled", 36873697, loc))
-  RayCast2D_methods.is_collide_with_bodies_enabled.m_call = cast(type_of(RayCast2D_methods.is_collide_with_bodies_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.is_collide_with_bodies_enabled.m_call = cast(type_of(RayCast2D_methods.is_collide_with_bodies_enabled.m_call))MB_ptr_call
   RayCast2D_methods.set_hit_from_inside._set_hit_from_inside = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "set_hit_from_inside", 2586408642, loc))
-  RayCast2D_methods.set_hit_from_inside.m_call = cast(type_of(RayCast2D_methods.set_hit_from_inside.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  RayCast2D_methods.set_hit_from_inside.m_call = cast(type_of(RayCast2D_methods.set_hit_from_inside.m_call))MB_ptr_call
   RayCast2D_methods.is_hit_from_inside_enabled._is_hit_from_inside_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.RayCast2D, "is_hit_from_inside_enabled", 36873697, loc))
-  RayCast2D_methods.is_hit_from_inside_enabled.m_call = cast(type_of(RayCast2D_methods.is_hit_from_inside_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-RayCast2D_init_props :: proc(RayCast2D_prop: ^RayCast2D_properties, loc:= #caller_location) {
-
-  RayCast2D_prop.enabled_Bool.is_enabled = cast(proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_enabled")
-  RayCast2D_prop.enabled_Bool.set_enabled = cast(proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_enabled")
-
-  RayCast2D_prop.exclude_parent_Bool.get_exclude_parent_body = cast(proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_exclude_parent_body")
-  RayCast2D_prop.exclude_parent_Bool.set_exclude_parent_body = cast(proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_exclude_parent_body")
-
-  RayCast2D_prop.target_position_Vector2.get_target_position = cast(proc "c" (p_base: RayCast2D, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_target_position")
-  RayCast2D_prop.target_position_Vector2.set_target_position = cast(proc "c" (p_base: RayCast2D, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_target_position")
-
-  RayCast2D_prop.collision_mask_Int.get_collision_mask = cast(proc "c" (p_base: RayCast2D, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_collision_mask")
-  RayCast2D_prop.collision_mask_Int.set_collision_mask = cast(proc "c" (p_base: RayCast2D, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_collision_mask")
-
-  RayCast2D_prop.hit_from_inside_Bool.is_hit_from_inside_enabled = cast(proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_hit_from_inside_enabled")
-  RayCast2D_prop.hit_from_inside_Bool.set_hit_from_inside = cast(proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_hit_from_inside")
-
-  RayCast2D_prop.collide_with_areas_Bool.is_collide_with_areas_enabled = cast(proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_collide_with_areas_enabled")
-  RayCast2D_prop.collide_with_areas_Bool.set_collide_with_areas = cast(proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_collide_with_areas")
-
-  RayCast2D_prop.collide_with_bodies_Bool.is_collide_with_bodies_enabled = cast(proc "c" (p_base: RayCast2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_collide_with_bodies_enabled")
-  RayCast2D_prop.collide_with_bodies_Bool.set_collide_with_bodies = cast(proc "c" (p_base: RayCast2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_collide_with_bodies")
+  RayCast2D_methods.is_hit_from_inside_enabled.m_call = cast(type_of(RayCast2D_methods.is_hit_from_inside_enabled.m_call))MB_ptr_call
 };

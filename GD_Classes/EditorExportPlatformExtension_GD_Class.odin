@@ -60,14 +60,15 @@ EditorExportPlatformExtension_MethodBind_List :: struct {
   },
 };
 EditorExportPlatformExtension_Init_ :: proc (EditorExportPlatformExtension_methods: ^EditorExportPlatformExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorExportPlatformExtension_methods.set_config_error._set_config_error = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorExportPlatformExtension, "set_config_error", 3089850668, loc))
-  EditorExportPlatformExtension_methods.set_config_error.m_call = cast(type_of(EditorExportPlatformExtension_methods.set_config_error.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorExportPlatformExtension_methods.set_config_error.m_call = cast(type_of(EditorExportPlatformExtension_methods.set_config_error.m_call))MB_ptr_call
   EditorExportPlatformExtension_methods.get_config_error._get_config_error = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorExportPlatformExtension, "get_config_error", 201670096, loc))
-  EditorExportPlatformExtension_methods.get_config_error.m_call = cast(type_of(EditorExportPlatformExtension_methods.get_config_error.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorExportPlatformExtension_methods.get_config_error.m_call = cast(type_of(EditorExportPlatformExtension_methods.get_config_error.m_call))MB_ptr_call
   EditorExportPlatformExtension_methods.set_config_missing_templates._set_config_missing_templates = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorExportPlatformExtension, "set_config_missing_templates", 1695273946, loc))
-  EditorExportPlatformExtension_methods.set_config_missing_templates.m_call = cast(type_of(EditorExportPlatformExtension_methods.set_config_missing_templates.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorExportPlatformExtension_methods.set_config_missing_templates.m_call = cast(type_of(EditorExportPlatformExtension_methods.set_config_missing_templates.m_call))MB_ptr_call
   EditorExportPlatformExtension_methods.get_config_missing_templates._get_config_missing_templates = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorExportPlatformExtension, "get_config_missing_templates", 36873697, loc))
-  EditorExportPlatformExtension_methods.get_config_missing_templates.m_call = cast(type_of(EditorExportPlatformExtension_methods.get_config_missing_templates.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorExportPlatformExtension_methods.get_config_missing_templates.m_call = cast(type_of(EditorExportPlatformExtension_methods.get_config_missing_templates.m_call))MB_ptr_call
 };
 
 EditorExportPlatformExtension_Init_Virtuals_Info :: proc(info: ^EditorExportPlatformExtension_Virtual_Info) {

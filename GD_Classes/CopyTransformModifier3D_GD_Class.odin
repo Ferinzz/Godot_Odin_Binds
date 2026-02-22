@@ -23,12 +23,6 @@ CopyTransformModifier3D_AxisFlag :: enum i64 {
   AXIS_FLAG_Z,
   AXIS_FLAG_ALL,
 };
-CopyTransformModifier3D_properties :: struct {
-  setting_count_Int : struct {
-  get_setting_count: proc "c" (p_base: CopyTransformModifier3D, r_value: ^GDW.Int),
-  set_setting_count: proc "c" (p_base: CopyTransformModifier3D, p_value: ^GDW.Int),
-  },
-};
 CopyTransformModifier3D_MethodBind_List :: struct {
   set_copy_flags: struct{
     using _set_copy_flags: ^GDW.MethodBind,
@@ -144,65 +138,61 @@ CopyTransformModifier3D_MethodBind_List :: struct {
   },
 };
 CopyTransformModifier3D_Init_ :: proc (CopyTransformModifier3D_methods: ^CopyTransformModifier3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   CopyTransformModifier3D_methods.set_copy_flags._set_copy_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_copy_flags", 2252507859, loc))
-  CopyTransformModifier3D_methods.set_copy_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.set_copy_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_copy_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.set_copy_flags.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.get_copy_flags._get_copy_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "get_copy_flags", 1685185931, loc))
-  CopyTransformModifier3D_methods.get_copy_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.get_copy_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.get_copy_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.get_copy_flags.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_axis_flags._set_axis_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_axis_flags", 2044211897, loc))
-  CopyTransformModifier3D_methods.set_axis_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_axis_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_flags.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.get_axis_flags._get_axis_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "get_axis_flags", 992162046, loc))
-  CopyTransformModifier3D_methods.get_axis_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.get_axis_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.get_axis_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.get_axis_flags.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_invert_flags._set_invert_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_invert_flags", 2044211897, loc))
-  CopyTransformModifier3D_methods.set_invert_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.set_invert_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_invert_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.set_invert_flags.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.get_invert_flags._get_invert_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "get_invert_flags", 992162046, loc))
-  CopyTransformModifier3D_methods.get_invert_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.get_invert_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.get_invert_flags.m_call = cast(type_of(CopyTransformModifier3D_methods.get_invert_flags.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_copy_position._set_copy_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_copy_position", 300928843, loc))
-  CopyTransformModifier3D_methods.set_copy_position.m_call = cast(type_of(CopyTransformModifier3D_methods.set_copy_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_copy_position.m_call = cast(type_of(CopyTransformModifier3D_methods.set_copy_position.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_position_copying._is_position_copying = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_position_copying", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_position_copying.m_call = cast(type_of(CopyTransformModifier3D_methods.is_position_copying.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_position_copying.m_call = cast(type_of(CopyTransformModifier3D_methods.is_position_copying.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_copy_rotation._set_copy_rotation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_copy_rotation", 300928843, loc))
-  CopyTransformModifier3D_methods.set_copy_rotation.m_call = cast(type_of(CopyTransformModifier3D_methods.set_copy_rotation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_copy_rotation.m_call = cast(type_of(CopyTransformModifier3D_methods.set_copy_rotation.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_rotation_copying._is_rotation_copying = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_rotation_copying", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_rotation_copying.m_call = cast(type_of(CopyTransformModifier3D_methods.is_rotation_copying.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_rotation_copying.m_call = cast(type_of(CopyTransformModifier3D_methods.is_rotation_copying.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_copy_scale._set_copy_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_copy_scale", 300928843, loc))
-  CopyTransformModifier3D_methods.set_copy_scale.m_call = cast(type_of(CopyTransformModifier3D_methods.set_copy_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_copy_scale.m_call = cast(type_of(CopyTransformModifier3D_methods.set_copy_scale.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_scale_copying._is_scale_copying = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_scale_copying", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_scale_copying.m_call = cast(type_of(CopyTransformModifier3D_methods.is_scale_copying.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_scale_copying.m_call = cast(type_of(CopyTransformModifier3D_methods.is_scale_copying.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_axis_x_enabled._set_axis_x_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_axis_x_enabled", 300928843, loc))
-  CopyTransformModifier3D_methods.set_axis_x_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_x_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_axis_x_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_x_enabled.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_axis_x_enabled._is_axis_x_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_axis_x_enabled", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_axis_x_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_x_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_axis_x_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_x_enabled.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_axis_y_enabled._set_axis_y_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_axis_y_enabled", 300928843, loc))
-  CopyTransformModifier3D_methods.set_axis_y_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_y_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_axis_y_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_y_enabled.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_axis_y_enabled._is_axis_y_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_axis_y_enabled", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_axis_y_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_y_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_axis_y_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_y_enabled.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_axis_z_enabled._set_axis_z_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_axis_z_enabled", 300928843, loc))
-  CopyTransformModifier3D_methods.set_axis_z_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_z_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_axis_z_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_z_enabled.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_axis_z_enabled._is_axis_z_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_axis_z_enabled", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_axis_z_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_z_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_axis_z_enabled.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_z_enabled.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_axis_x_inverted._set_axis_x_inverted = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_axis_x_inverted", 300928843, loc))
-  CopyTransformModifier3D_methods.set_axis_x_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_x_inverted.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_axis_x_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_x_inverted.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_axis_x_inverted._is_axis_x_inverted = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_axis_x_inverted", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_axis_x_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_x_inverted.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_axis_x_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_x_inverted.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_axis_y_inverted._set_axis_y_inverted = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_axis_y_inverted", 300928843, loc))
-  CopyTransformModifier3D_methods.set_axis_y_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_y_inverted.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_axis_y_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_y_inverted.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_axis_y_inverted._is_axis_y_inverted = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_axis_y_inverted", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_axis_y_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_y_inverted.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_axis_y_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_y_inverted.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_axis_z_inverted._set_axis_z_inverted = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_axis_z_inverted", 300928843, loc))
-  CopyTransformModifier3D_methods.set_axis_z_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_z_inverted.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_axis_z_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.set_axis_z_inverted.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_axis_z_inverted._is_axis_z_inverted = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_axis_z_inverted", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_axis_z_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_z_inverted.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_axis_z_inverted.m_call = cast(type_of(CopyTransformModifier3D_methods.is_axis_z_inverted.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_relative._set_relative = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_relative", 300928843, loc))
-  CopyTransformModifier3D_methods.set_relative.m_call = cast(type_of(CopyTransformModifier3D_methods.set_relative.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_relative.m_call = cast(type_of(CopyTransformModifier3D_methods.set_relative.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_relative._is_relative = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_relative", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_relative.m_call = cast(type_of(CopyTransformModifier3D_methods.is_relative.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.is_relative.m_call = cast(type_of(CopyTransformModifier3D_methods.is_relative.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.set_additive._set_additive = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "set_additive", 300928843, loc))
-  CopyTransformModifier3D_methods.set_additive.m_call = cast(type_of(CopyTransformModifier3D_methods.set_additive.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CopyTransformModifier3D_methods.set_additive.m_call = cast(type_of(CopyTransformModifier3D_methods.set_additive.m_call))MB_ptr_call
   CopyTransformModifier3D_methods.is_additive._is_additive = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CopyTransformModifier3D, "is_additive", 1116898809, loc))
-  CopyTransformModifier3D_methods.is_additive.m_call = cast(type_of(CopyTransformModifier3D_methods.is_additive.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-CopyTransformModifier3D_init_props :: proc(CopyTransformModifier3D_prop: ^CopyTransformModifier3D_properties, loc:= #caller_location) {
-
-  CopyTransformModifier3D_prop.setting_count_Int.get_setting_count = cast(proc "c" (p_base: CopyTransformModifier3D, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_setting_count")
-  CopyTransformModifier3D_prop.setting_count_Int.set_setting_count = cast(proc "c" (p_base: CopyTransformModifier3D, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_setting_count")
+  CopyTransformModifier3D_methods.is_additive.m_call = cast(type_of(CopyTransformModifier3D_methods.is_additive.m_call))MB_ptr_call
 };

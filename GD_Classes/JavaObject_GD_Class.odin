@@ -18,8 +18,9 @@ JavaObject_MethodBind_List :: struct {
   },
 };
 JavaObject_Init_ :: proc (JavaObject_methods: ^JavaObject_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   JavaObject_methods.get_java_class._get_java_class = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JavaObject, "get_java_class", 541536347, loc))
-  JavaObject_methods.get_java_class.m_call = cast(type_of(JavaObject_methods.get_java_class.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JavaObject_methods.get_java_class.m_call = cast(type_of(JavaObject_methods.get_java_class.m_call))MB_ptr_call
   JavaObject_methods.has_java_method._has_java_method = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JavaObject, "has_java_method", 2619796661, loc))
-  JavaObject_methods.has_java_method.m_call = cast(type_of(JavaObject_methods.has_java_method.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JavaObject_methods.has_java_method.m_call = cast(type_of(JavaObject_methods.has_java_method.m_call))MB_ptr_call
 };

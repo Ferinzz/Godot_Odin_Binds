@@ -14,20 +14,6 @@ OpenXRAction_ActionType :: enum i64 {
   OPENXR_ACTION_VECTOR2 = 2,
   OPENXR_ACTION_POSE = 3,
 };
-OpenXRAction_properties :: struct {
-  localized_name_gdstring : struct {
-  get_localized_name: proc "c" (p_base: OpenXRAction, r_value: ^GDW.gdstring),
-  set_localized_name: proc "c" (p_base: OpenXRAction, p_value: ^GDW.gdstring),
-  },
-  action_type_Int : struct {
-  get_action_type: proc "c" (p_base: OpenXRAction, r_value: ^GDW.Int),
-  set_action_type: proc "c" (p_base: OpenXRAction, p_value: ^GDW.Int),
-  },
-  toplevel_paths_PackedStringArray : struct {
-  get_toplevel_paths: proc "c" (p_base: OpenXRAction, r_value: ^GDW.PackedStringArray),
-  set_toplevel_paths: proc "c" (p_base: OpenXRAction, p_value: ^GDW.PackedStringArray),
-  },
-};
 OpenXRAction_MethodBind_List :: struct {
   set_localized_name: struct{
     using _set_localized_name: ^GDW.MethodBind,
@@ -55,27 +41,17 @@ OpenXRAction_MethodBind_List :: struct {
   },
 };
 OpenXRAction_Init_ :: proc (OpenXRAction_methods: ^OpenXRAction_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRAction_methods.set_localized_name._set_localized_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRAction, "set_localized_name", 83702148, loc))
-  OpenXRAction_methods.set_localized_name.m_call = cast(type_of(OpenXRAction_methods.set_localized_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRAction_methods.set_localized_name.m_call = cast(type_of(OpenXRAction_methods.set_localized_name.m_call))MB_ptr_call
   OpenXRAction_methods.get_localized_name._get_localized_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRAction, "get_localized_name", 201670096, loc))
-  OpenXRAction_methods.get_localized_name.m_call = cast(type_of(OpenXRAction_methods.get_localized_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRAction_methods.get_localized_name.m_call = cast(type_of(OpenXRAction_methods.get_localized_name.m_call))MB_ptr_call
   OpenXRAction_methods.set_action_type._set_action_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRAction, "set_action_type", 1675238366, loc))
-  OpenXRAction_methods.set_action_type.m_call = cast(type_of(OpenXRAction_methods.set_action_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRAction_methods.set_action_type.m_call = cast(type_of(OpenXRAction_methods.set_action_type.m_call))MB_ptr_call
   OpenXRAction_methods.get_action_type._get_action_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRAction, "get_action_type", 3536542431, loc))
-  OpenXRAction_methods.get_action_type.m_call = cast(type_of(OpenXRAction_methods.get_action_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRAction_methods.get_action_type.m_call = cast(type_of(OpenXRAction_methods.get_action_type.m_call))MB_ptr_call
   OpenXRAction_methods.set_toplevel_paths._set_toplevel_paths = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRAction, "set_toplevel_paths", 4015028928, loc))
-  OpenXRAction_methods.set_toplevel_paths.m_call = cast(type_of(OpenXRAction_methods.set_toplevel_paths.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRAction_methods.set_toplevel_paths.m_call = cast(type_of(OpenXRAction_methods.set_toplevel_paths.m_call))MB_ptr_call
   OpenXRAction_methods.get_toplevel_paths._get_toplevel_paths = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRAction, "get_toplevel_paths", 1139954409, loc))
-  OpenXRAction_methods.get_toplevel_paths.m_call = cast(type_of(OpenXRAction_methods.get_toplevel_paths.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-OpenXRAction_init_props :: proc(OpenXRAction_prop: ^OpenXRAction_properties, loc:= #caller_location) {
-
-  OpenXRAction_prop.localized_name_gdstring.get_localized_name = cast(proc "c" (p_base: OpenXRAction, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_localized_name")
-  OpenXRAction_prop.localized_name_gdstring.set_localized_name = cast(proc "c" (p_base: OpenXRAction, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_localized_name")
-
-  OpenXRAction_prop.action_type_Int.get_action_type = cast(proc "c" (p_base: OpenXRAction, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_action_type")
-  OpenXRAction_prop.action_type_Int.set_action_type = cast(proc "c" (p_base: OpenXRAction, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_action_type")
-
-  OpenXRAction_prop.toplevel_paths_PackedStringArray.get_toplevel_paths = cast(proc "c" (p_base: OpenXRAction, r_value: ^GDW.PackedStringArray))GDW.Get_Method_Getter(.PACKED_STRING_ARRAY, "get_toplevel_paths")
-  OpenXRAction_prop.toplevel_paths_PackedStringArray.set_toplevel_paths = cast(proc "c" (p_base: OpenXRAction, p_value: ^GDW.PackedStringArray))GDW.Get_Method_Setter(.PACKED_STRING_ARRAY, "set_toplevel_paths")
+  OpenXRAction_methods.get_toplevel_paths.m_call = cast(type_of(OpenXRAction_methods.get_toplevel_paths.m_call))MB_ptr_call
 };

@@ -30,14 +30,15 @@ XRController3D_MethodBind_List :: struct {
   },
 };
 XRController3D_Init_ :: proc (XRController3D_methods: ^XRController3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   XRController3D_methods.is_button_pressed._is_button_pressed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRController3D, "is_button_pressed", 2619796661, loc))
-  XRController3D_methods.is_button_pressed.m_call = cast(type_of(XRController3D_methods.is_button_pressed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRController3D_methods.is_button_pressed.m_call = cast(type_of(XRController3D_methods.is_button_pressed.m_call))MB_ptr_call
   XRController3D_methods.get_input._get_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRController3D, "get_input", 2760726917, loc))
-  XRController3D_methods.get_input.m_call = cast(type_of(XRController3D_methods.get_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRController3D_methods.get_input.m_call = cast(type_of(XRController3D_methods.get_input.m_call))MB_ptr_call
   XRController3D_methods.get_float._get_float = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRController3D, "get_float", 2349060816, loc))
-  XRController3D_methods.get_float.m_call = cast(type_of(XRController3D_methods.get_float.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRController3D_methods.get_float.m_call = cast(type_of(XRController3D_methods.get_float.m_call))MB_ptr_call
   XRController3D_methods.get_vector2._get_vector2 = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRController3D, "get_vector2", 3100822709, loc))
-  XRController3D_methods.get_vector2.m_call = cast(type_of(XRController3D_methods.get_vector2.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRController3D_methods.get_vector2.m_call = cast(type_of(XRController3D_methods.get_vector2.m_call))MB_ptr_call
   XRController3D_methods.get_tracker_hand._get_tracker_hand = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRController3D, "get_tracker_hand", 4181770860, loc))
-  XRController3D_methods.get_tracker_hand.m_call = cast(type_of(XRController3D_methods.get_tracker_hand.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRController3D_methods.get_tracker_hand.m_call = cast(type_of(XRController3D_methods.get_tracker_hand.m_call))MB_ptr_call
 };

@@ -15,6 +15,7 @@ AudioEffectInstance_Virtual_Info :: struct {
 AudioEffectInstance_MethodBind_List :: struct {
 };
 AudioEffectInstance_Init_ :: proc (AudioEffectInstance_methods: ^AudioEffectInstance_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 AudioEffectInstance_Init_Virtuals_Info :: proc(info: ^AudioEffectInstance_Virtual_Info) {

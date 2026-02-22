@@ -97,20 +97,6 @@ HTTPClient_ResponseCode :: enum i64 {
   RESPONSE_NOT_EXTENDED = 510,
   RESPONSE_NETWORK_AUTH_REQUIRED = 511,
 };
-HTTPClient_properties :: struct {
-  blocking_mode_enabled_Bool : struct {
-  is_blocking_mode_enabled: proc "c" (p_base: HTTPClient, r_value: ^GDW.Bool),
-  set_blocking_mode: proc "c" (p_base: HTTPClient, p_value: ^GDW.Bool),
-  },
-  connection_StreamPeer : struct {
-    get_connection: proc "c" (p_base: HTTPClient, r_value: ^StreamPeer),
-    set_connection: proc "c" (p_base: HTTPClient, p_value: ^StreamPeer),
-  },
-  read_chunk_size_Int : struct {
-  get_read_chunk_size: proc "c" (p_base: HTTPClient, r_value: ^GDW.Int),
-  set_read_chunk_size: proc "c" (p_base: HTTPClient, p_value: ^GDW.Int),
-  },
-};
 HTTPClient_MethodBind_List :: struct {
   connect_to_host: struct{
     using _connect_to_host: ^GDW.MethodBind,
@@ -202,59 +188,49 @@ HTTPClient_MethodBind_List :: struct {
   },
 };
 HTTPClient_Init_ :: proc (HTTPClient_methods: ^HTTPClient_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   HTTPClient_methods.connect_to_host._connect_to_host = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "connect_to_host", 504540374, loc))
-  HTTPClient_methods.connect_to_host.m_call = cast(type_of(HTTPClient_methods.connect_to_host.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.connect_to_host.m_call = cast(type_of(HTTPClient_methods.connect_to_host.m_call))MB_ptr_call
   HTTPClient_methods.set_connection._set_connection = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "set_connection", 3281897016, loc))
-  HTTPClient_methods.set_connection.m_call = cast(type_of(HTTPClient_methods.set_connection.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.set_connection.m_call = cast(type_of(HTTPClient_methods.set_connection.m_call))MB_ptr_call
   HTTPClient_methods.get_connection._get_connection = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "get_connection", 2741655269, loc))
-  HTTPClient_methods.get_connection.m_call = cast(type_of(HTTPClient_methods.get_connection.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.get_connection.m_call = cast(type_of(HTTPClient_methods.get_connection.m_call))MB_ptr_call
   HTTPClient_methods.request_raw._request_raw = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "request_raw", 540161961, loc))
-  HTTPClient_methods.request_raw.m_call = cast(type_of(HTTPClient_methods.request_raw.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.request_raw.m_call = cast(type_of(HTTPClient_methods.request_raw.m_call))MB_ptr_call
   HTTPClient_methods.request._request = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "request", 3778990155, loc))
-  HTTPClient_methods.request.m_call = cast(type_of(HTTPClient_methods.request.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.request.m_call = cast(type_of(HTTPClient_methods.request.m_call))MB_ptr_call
   HTTPClient_methods.close._close = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "close", 3218959716, loc))
-  HTTPClient_methods.close.m_call = cast(type_of(HTTPClient_methods.close.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.close.m_call = cast(type_of(HTTPClient_methods.close.m_call))MB_ptr_call
   HTTPClient_methods.has_response._has_response = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "has_response", 36873697, loc))
-  HTTPClient_methods.has_response.m_call = cast(type_of(HTTPClient_methods.has_response.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.has_response.m_call = cast(type_of(HTTPClient_methods.has_response.m_call))MB_ptr_call
   HTTPClient_methods.is_response_chunked._is_response_chunked = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "is_response_chunked", 36873697, loc))
-  HTTPClient_methods.is_response_chunked.m_call = cast(type_of(HTTPClient_methods.is_response_chunked.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.is_response_chunked.m_call = cast(type_of(HTTPClient_methods.is_response_chunked.m_call))MB_ptr_call
   HTTPClient_methods.get_response_code._get_response_code = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "get_response_code", 3905245786, loc))
-  HTTPClient_methods.get_response_code.m_call = cast(type_of(HTTPClient_methods.get_response_code.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.get_response_code.m_call = cast(type_of(HTTPClient_methods.get_response_code.m_call))MB_ptr_call
   HTTPClient_methods.get_response_headers._get_response_headers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "get_response_headers", 2981934095, loc))
-  HTTPClient_methods.get_response_headers.m_call = cast(type_of(HTTPClient_methods.get_response_headers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.get_response_headers.m_call = cast(type_of(HTTPClient_methods.get_response_headers.m_call))MB_ptr_call
   HTTPClient_methods.get_response_headers_as_dictionary._get_response_headers_as_dictionary = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "get_response_headers_as_dictionary", 2382534195, loc))
-  HTTPClient_methods.get_response_headers_as_dictionary.m_call = cast(type_of(HTTPClient_methods.get_response_headers_as_dictionary.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.get_response_headers_as_dictionary.m_call = cast(type_of(HTTPClient_methods.get_response_headers_as_dictionary.m_call))MB_ptr_call
   HTTPClient_methods.get_response_body_length._get_response_body_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "get_response_body_length", 3905245786, loc))
-  HTTPClient_methods.get_response_body_length.m_call = cast(type_of(HTTPClient_methods.get_response_body_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.get_response_body_length.m_call = cast(type_of(HTTPClient_methods.get_response_body_length.m_call))MB_ptr_call
   HTTPClient_methods.read_response_body_chunk._read_response_body_chunk = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "read_response_body_chunk", 2115431945, loc))
-  HTTPClient_methods.read_response_body_chunk.m_call = cast(type_of(HTTPClient_methods.read_response_body_chunk.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.read_response_body_chunk.m_call = cast(type_of(HTTPClient_methods.read_response_body_chunk.m_call))MB_ptr_call
   HTTPClient_methods.set_read_chunk_size._set_read_chunk_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "set_read_chunk_size", 1286410249, loc))
-  HTTPClient_methods.set_read_chunk_size.m_call = cast(type_of(HTTPClient_methods.set_read_chunk_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.set_read_chunk_size.m_call = cast(type_of(HTTPClient_methods.set_read_chunk_size.m_call))MB_ptr_call
   HTTPClient_methods.get_read_chunk_size._get_read_chunk_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "get_read_chunk_size", 3905245786, loc))
-  HTTPClient_methods.get_read_chunk_size.m_call = cast(type_of(HTTPClient_methods.get_read_chunk_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.get_read_chunk_size.m_call = cast(type_of(HTTPClient_methods.get_read_chunk_size.m_call))MB_ptr_call
   HTTPClient_methods.set_blocking_mode._set_blocking_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "set_blocking_mode", 2586408642, loc))
-  HTTPClient_methods.set_blocking_mode.m_call = cast(type_of(HTTPClient_methods.set_blocking_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.set_blocking_mode.m_call = cast(type_of(HTTPClient_methods.set_blocking_mode.m_call))MB_ptr_call
   HTTPClient_methods.is_blocking_mode_enabled._is_blocking_mode_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "is_blocking_mode_enabled", 36873697, loc))
-  HTTPClient_methods.is_blocking_mode_enabled.m_call = cast(type_of(HTTPClient_methods.is_blocking_mode_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.is_blocking_mode_enabled.m_call = cast(type_of(HTTPClient_methods.is_blocking_mode_enabled.m_call))MB_ptr_call
   HTTPClient_methods.get_status._get_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "get_status", 1426656811, loc))
-  HTTPClient_methods.get_status.m_call = cast(type_of(HTTPClient_methods.get_status.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.get_status.m_call = cast(type_of(HTTPClient_methods.get_status.m_call))MB_ptr_call
   HTTPClient_methods.poll._poll = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "poll", 166280745, loc))
-  HTTPClient_methods.poll.m_call = cast(type_of(HTTPClient_methods.poll.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.poll.m_call = cast(type_of(HTTPClient_methods.poll.m_call))MB_ptr_call
   HTTPClient_methods.set_http_proxy._set_http_proxy = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "set_http_proxy", 2956805083, loc))
-  HTTPClient_methods.set_http_proxy.m_call = cast(type_of(HTTPClient_methods.set_http_proxy.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.set_http_proxy.m_call = cast(type_of(HTTPClient_methods.set_http_proxy.m_call))MB_ptr_call
   HTTPClient_methods.set_https_proxy._set_https_proxy = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "set_https_proxy", 2956805083, loc))
-  HTTPClient_methods.set_https_proxy.m_call = cast(type_of(HTTPClient_methods.set_https_proxy.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HTTPClient_methods.set_https_proxy.m_call = cast(type_of(HTTPClient_methods.set_https_proxy.m_call))MB_ptr_call
   HTTPClient_methods.query_string_from_dict._query_string_from_dict = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HTTPClient, "query_string_from_dict", 2538086567, loc))
-  HTTPClient_methods.query_string_from_dict.m_call = cast(type_of(HTTPClient_methods.query_string_from_dict.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-HTTPClient_init_props :: proc(HTTPClient_prop: ^HTTPClient_properties, loc:= #caller_location) {
-
-  HTTPClient_prop.blocking_mode_enabled_Bool.is_blocking_mode_enabled = cast(proc "c" (p_base: HTTPClient, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_blocking_mode_enabled")
-  HTTPClient_prop.blocking_mode_enabled_Bool.set_blocking_mode = cast(proc "c" (p_base: HTTPClient, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_blocking_mode")
-
-  HTTPClient_prop.connection_StreamPeer.get_connection = cast(proc "c" (p_base: HTTPClient, r_value: ^StreamPeer))GDW.Get_Method_Getter(.OBJECT, "get_connection")
-  HTTPClient_prop.connection_StreamPeer.set_connection = cast(proc "c" (p_base: HTTPClient, p_value: ^StreamPeer))GDW.Get_Method_Setter(.OBJECT, "set_connection")
-
-  HTTPClient_prop.read_chunk_size_Int.get_read_chunk_size = cast(proc "c" (p_base: HTTPClient, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_read_chunk_size")
-  HTTPClient_prop.read_chunk_size_Int.set_read_chunk_size = cast(proc "c" (p_base: HTTPClient, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_read_chunk_size")
+  HTTPClient_methods.query_string_from_dict.m_call = cast(type_of(HTTPClient_methods.query_string_from_dict.m_call))MB_ptr_call
 };

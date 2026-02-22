@@ -42,20 +42,21 @@ WebRTCMultiplayerPeer_MethodBind_List :: struct {
   },
 };
 WebRTCMultiplayerPeer_Init_ :: proc (WebRTCMultiplayerPeer_methods: ^WebRTCMultiplayerPeer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   WebRTCMultiplayerPeer_methods.create_server._create_server = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCMultiplayerPeer, "create_server", 2865356025, loc))
-  WebRTCMultiplayerPeer_methods.create_server.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.create_server.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCMultiplayerPeer_methods.create_server.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.create_server.m_call))MB_ptr_call
   WebRTCMultiplayerPeer_methods.create_client._create_client = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCMultiplayerPeer, "create_client", 2641732907, loc))
-  WebRTCMultiplayerPeer_methods.create_client.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.create_client.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCMultiplayerPeer_methods.create_client.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.create_client.m_call))MB_ptr_call
   WebRTCMultiplayerPeer_methods.create_mesh._create_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCMultiplayerPeer, "create_mesh", 2641732907, loc))
-  WebRTCMultiplayerPeer_methods.create_mesh.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.create_mesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCMultiplayerPeer_methods.create_mesh.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.create_mesh.m_call))MB_ptr_call
   WebRTCMultiplayerPeer_methods.add_peer._add_peer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCMultiplayerPeer, "add_peer", 4078953270, loc))
-  WebRTCMultiplayerPeer_methods.add_peer.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.add_peer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCMultiplayerPeer_methods.add_peer.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.add_peer.m_call))MB_ptr_call
   WebRTCMultiplayerPeer_methods.remove_peer._remove_peer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCMultiplayerPeer, "remove_peer", 1286410249, loc))
-  WebRTCMultiplayerPeer_methods.remove_peer.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.remove_peer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCMultiplayerPeer_methods.remove_peer.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.remove_peer.m_call))MB_ptr_call
   WebRTCMultiplayerPeer_methods.has_peer._has_peer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCMultiplayerPeer, "has_peer", 3067735520, loc))
-  WebRTCMultiplayerPeer_methods.has_peer.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.has_peer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCMultiplayerPeer_methods.has_peer.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.has_peer.m_call))MB_ptr_call
   WebRTCMultiplayerPeer_methods.get_peer._get_peer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCMultiplayerPeer, "get_peer", 3554694381, loc))
-  WebRTCMultiplayerPeer_methods.get_peer.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.get_peer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCMultiplayerPeer_methods.get_peer.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.get_peer.m_call))MB_ptr_call
   WebRTCMultiplayerPeer_methods.get_peers._get_peers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WebRTCMultiplayerPeer, "get_peers", 2382534195, loc))
-  WebRTCMultiplayerPeer_methods.get_peers.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.get_peers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WebRTCMultiplayerPeer_methods.get_peers.m_call = cast(type_of(WebRTCMultiplayerPeer_methods.get_peers.m_call))MB_ptr_call
 };

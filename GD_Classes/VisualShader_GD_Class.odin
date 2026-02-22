@@ -43,12 +43,6 @@ VisualShader_Constants :: enum i64 {
   NODE_ID_INVALID= -1,
   NODE_ID_OUTPUT= 0,
 };
-VisualShader_properties :: struct {
-  graph_offset_Vector2 : struct {
-  get_graph_offset: proc "c" (p_base: VisualShader, r_value: ^GDW.Vector2),
-  set_graph_offset: proc "c" (p_base: VisualShader, p_value: ^GDW.Vector2),
-  },
-};
 VisualShader_MethodBind_List :: struct {
   set_mode: struct{
     using _set_mode: ^GDW.MethodBind,
@@ -140,53 +134,49 @@ VisualShader_MethodBind_List :: struct {
   },
 };
 VisualShader_Init_ :: proc (VisualShader_methods: ^VisualShader_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   VisualShader_methods.set_mode._set_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "set_mode", 3978014962, loc))
-  VisualShader_methods.set_mode.m_call = cast(type_of(VisualShader_methods.set_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.set_mode.m_call = cast(type_of(VisualShader_methods.set_mode.m_call))MB_ptr_call
   VisualShader_methods.add_node._add_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "add_node", 1560769431, loc))
-  VisualShader_methods.add_node.m_call = cast(type_of(VisualShader_methods.add_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.add_node.m_call = cast(type_of(VisualShader_methods.add_node.m_call))MB_ptr_call
   VisualShader_methods.get_node._get_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "get_node", 3784670312, loc))
-  VisualShader_methods.get_node.m_call = cast(type_of(VisualShader_methods.get_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.get_node.m_call = cast(type_of(VisualShader_methods.get_node.m_call))MB_ptr_call
   VisualShader_methods.set_node_position._set_node_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "set_node_position", 2726660721, loc))
-  VisualShader_methods.set_node_position.m_call = cast(type_of(VisualShader_methods.set_node_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.set_node_position.m_call = cast(type_of(VisualShader_methods.set_node_position.m_call))MB_ptr_call
   VisualShader_methods.get_node_position._get_node_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "get_node_position", 2175036082, loc))
-  VisualShader_methods.get_node_position.m_call = cast(type_of(VisualShader_methods.get_node_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.get_node_position.m_call = cast(type_of(VisualShader_methods.get_node_position.m_call))MB_ptr_call
   VisualShader_methods.get_node_list._get_node_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "get_node_list", 2370592410, loc))
-  VisualShader_methods.get_node_list.m_call = cast(type_of(VisualShader_methods.get_node_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.get_node_list.m_call = cast(type_of(VisualShader_methods.get_node_list.m_call))MB_ptr_call
   VisualShader_methods.get_valid_node_id._get_valid_node_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "get_valid_node_id", 629467342, loc))
-  VisualShader_methods.get_valid_node_id.m_call = cast(type_of(VisualShader_methods.get_valid_node_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.get_valid_node_id.m_call = cast(type_of(VisualShader_methods.get_valid_node_id.m_call))MB_ptr_call
   VisualShader_methods.remove_node._remove_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "remove_node", 844050912, loc))
-  VisualShader_methods.remove_node.m_call = cast(type_of(VisualShader_methods.remove_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.remove_node.m_call = cast(type_of(VisualShader_methods.remove_node.m_call))MB_ptr_call
   VisualShader_methods.replace_node._replace_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "replace_node", 3144735253, loc))
-  VisualShader_methods.replace_node.m_call = cast(type_of(VisualShader_methods.replace_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.replace_node.m_call = cast(type_of(VisualShader_methods.replace_node.m_call))MB_ptr_call
   VisualShader_methods.is_node_connection._is_node_connection = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "is_node_connection", 3922381898, loc))
-  VisualShader_methods.is_node_connection.m_call = cast(type_of(VisualShader_methods.is_node_connection.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.is_node_connection.m_call = cast(type_of(VisualShader_methods.is_node_connection.m_call))MB_ptr_call
   VisualShader_methods.can_connect_nodes._can_connect_nodes = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "can_connect_nodes", 3922381898, loc))
-  VisualShader_methods.can_connect_nodes.m_call = cast(type_of(VisualShader_methods.can_connect_nodes.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.can_connect_nodes.m_call = cast(type_of(VisualShader_methods.can_connect_nodes.m_call))MB_ptr_call
   VisualShader_methods.connect_nodes._connect_nodes = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "connect_nodes", 3081049573, loc))
-  VisualShader_methods.connect_nodes.m_call = cast(type_of(VisualShader_methods.connect_nodes.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.connect_nodes.m_call = cast(type_of(VisualShader_methods.connect_nodes.m_call))MB_ptr_call
   VisualShader_methods.disconnect_nodes._disconnect_nodes = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "disconnect_nodes", 2268060358, loc))
-  VisualShader_methods.disconnect_nodes.m_call = cast(type_of(VisualShader_methods.disconnect_nodes.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.disconnect_nodes.m_call = cast(type_of(VisualShader_methods.disconnect_nodes.m_call))MB_ptr_call
   VisualShader_methods.connect_nodes_forced._connect_nodes_forced = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "connect_nodes_forced", 2268060358, loc))
-  VisualShader_methods.connect_nodes_forced.m_call = cast(type_of(VisualShader_methods.connect_nodes_forced.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.connect_nodes_forced.m_call = cast(type_of(VisualShader_methods.connect_nodes_forced.m_call))MB_ptr_call
   VisualShader_methods.get_node_connections._get_node_connections = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "get_node_connections", 1441964831, loc))
-  VisualShader_methods.get_node_connections.m_call = cast(type_of(VisualShader_methods.get_node_connections.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.get_node_connections.m_call = cast(type_of(VisualShader_methods.get_node_connections.m_call))MB_ptr_call
   VisualShader_methods.attach_node_to_frame._attach_node_to_frame = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "attach_node_to_frame", 2479945279, loc))
-  VisualShader_methods.attach_node_to_frame.m_call = cast(type_of(VisualShader_methods.attach_node_to_frame.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.attach_node_to_frame.m_call = cast(type_of(VisualShader_methods.attach_node_to_frame.m_call))MB_ptr_call
   VisualShader_methods.detach_node_from_frame._detach_node_from_frame = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "detach_node_from_frame", 844050912, loc))
-  VisualShader_methods.detach_node_from_frame.m_call = cast(type_of(VisualShader_methods.detach_node_from_frame.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.detach_node_from_frame.m_call = cast(type_of(VisualShader_methods.detach_node_from_frame.m_call))MB_ptr_call
   VisualShader_methods.add_varying._add_varying = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "add_varying", 2084110726, loc))
-  VisualShader_methods.add_varying.m_call = cast(type_of(VisualShader_methods.add_varying.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.add_varying.m_call = cast(type_of(VisualShader_methods.add_varying.m_call))MB_ptr_call
   VisualShader_methods.remove_varying._remove_varying = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "remove_varying", 83702148, loc))
-  VisualShader_methods.remove_varying.m_call = cast(type_of(VisualShader_methods.remove_varying.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.remove_varying.m_call = cast(type_of(VisualShader_methods.remove_varying.m_call))MB_ptr_call
   VisualShader_methods.has_varying._has_varying = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "has_varying", 3927539163, loc))
-  VisualShader_methods.has_varying.m_call = cast(type_of(VisualShader_methods.has_varying.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.has_varying.m_call = cast(type_of(VisualShader_methods.has_varying.m_call))MB_ptr_call
   VisualShader_methods.set_graph_offset._set_graph_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "set_graph_offset", 743155724, loc))
-  VisualShader_methods.set_graph_offset.m_call = cast(type_of(VisualShader_methods.set_graph_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShader_methods.set_graph_offset.m_call = cast(type_of(VisualShader_methods.set_graph_offset.m_call))MB_ptr_call
   VisualShader_methods.get_graph_offset._get_graph_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShader, "get_graph_offset", 3341600327, loc))
-  VisualShader_methods.get_graph_offset.m_call = cast(type_of(VisualShader_methods.get_graph_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-VisualShader_init_props :: proc(VisualShader_prop: ^VisualShader_properties, loc:= #caller_location) {
-
-  VisualShader_prop.graph_offset_Vector2.get_graph_offset = cast(proc "c" (p_base: VisualShader, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_graph_offset")
-  VisualShader_prop.graph_offset_Vector2.set_graph_offset = cast(proc "c" (p_base: VisualShader, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_graph_offset")
+  VisualShader_methods.get_graph_offset.m_call = cast(type_of(VisualShader_methods.get_graph_offset.m_call))MB_ptr_call
 };

@@ -23,8 +23,9 @@ PhysicsDirectSpaceState2DExtension_MethodBind_List :: struct {
   },
 };
 PhysicsDirectSpaceState2DExtension_Init_ :: proc (PhysicsDirectSpaceState2DExtension_methods: ^PhysicsDirectSpaceState2DExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PhysicsDirectSpaceState2DExtension_methods.is_body_excluded_from_query._is_body_excluded_from_query = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsDirectSpaceState2DExtension, "is_body_excluded_from_query", 4155700596, loc))
-  PhysicsDirectSpaceState2DExtension_methods.is_body_excluded_from_query.m_call = cast(type_of(PhysicsDirectSpaceState2DExtension_methods.is_body_excluded_from_query.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsDirectSpaceState2DExtension_methods.is_body_excluded_from_query.m_call = cast(type_of(PhysicsDirectSpaceState2DExtension_methods.is_body_excluded_from_query.m_call))MB_ptr_call
 };
 
 PhysicsDirectSpaceState2DExtension_Init_Virtuals_Info :: proc(info: ^PhysicsDirectSpaceState2DExtension_Virtual_Info) {

@@ -18,8 +18,9 @@ UDSServer_MethodBind_List :: struct {
   },
 };
 UDSServer_Init_ :: proc (UDSServer_methods: ^UDSServer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   UDSServer_methods.listen._listen = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UDSServer, "listen", 166001499, loc))
-  UDSServer_methods.listen.m_call = cast(type_of(UDSServer_methods.listen.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UDSServer_methods.listen.m_call = cast(type_of(UDSServer_methods.listen.m_call))MB_ptr_call
   UDSServer_methods.take_connection._take_connection = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UDSServer, "take_connection", 1623851112, loc))
-  UDSServer_methods.take_connection.m_call = cast(type_of(UDSServer_methods.take_connection.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UDSServer_methods.take_connection.m_call = cast(type_of(UDSServer_methods.take_connection.m_call))MB_ptr_call
 };

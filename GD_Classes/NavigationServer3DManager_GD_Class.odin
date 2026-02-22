@@ -18,8 +18,9 @@ NavigationServer3DManager_MethodBind_List :: struct {
   },
   };
 NavigationServer3DManager_Init_ :: proc (NavigationServer3DManager_methods: ^NavigationServer3DManager_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   NavigationServer3DManager_methods.register_server._register_server = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.NavigationServer3DManager, "register_server", 2137474292, loc))
-  NavigationServer3DManager_methods.register_server.m_call = cast(type_of(NavigationServer3DManager_methods.register_server.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  NavigationServer3DManager_methods.register_server.m_call = cast(type_of(NavigationServer3DManager_methods.register_server.m_call))MB_ptr_call
   NavigationServer3DManager_methods.set_default_server._set_default_server = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.NavigationServer3DManager, "set_default_server", 2956805083, loc))
-  NavigationServer3DManager_methods.set_default_server.m_call = cast(type_of(NavigationServer3DManager_methods.set_default_server.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  NavigationServer3DManager_methods.set_default_server.m_call = cast(type_of(NavigationServer3DManager_methods.set_default_server.m_call))MB_ptr_call
 };

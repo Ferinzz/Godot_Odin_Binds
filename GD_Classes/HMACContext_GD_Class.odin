@@ -22,10 +22,11 @@ HMACContext_MethodBind_List :: struct {
   },
 };
 HMACContext_Init_ :: proc (HMACContext_methods: ^HMACContext_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   HMACContext_methods.start._start = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HMACContext, "start", 3537364598, loc))
-  HMACContext_methods.start.m_call = cast(type_of(HMACContext_methods.start.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HMACContext_methods.start.m_call = cast(type_of(HMACContext_methods.start.m_call))MB_ptr_call
   HMACContext_methods.update._update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HMACContext, "update", 680677267, loc))
-  HMACContext_methods.update.m_call = cast(type_of(HMACContext_methods.update.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HMACContext_methods.update.m_call = cast(type_of(HMACContext_methods.update.m_call))MB_ptr_call
   HMACContext_methods.finish._finish = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.HMACContext, "finish", 2115431945, loc))
-  HMACContext_methods.finish.m_call = cast(type_of(HMACContext_methods.finish.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  HMACContext_methods.finish.m_call = cast(type_of(HMACContext_methods.finish.m_call))MB_ptr_call
 };

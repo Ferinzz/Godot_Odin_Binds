@@ -254,6 +254,7 @@ TextServerExtension_Virtual_Info :: struct {
 TextServerExtension_MethodBind_List :: struct {
 };
 TextServerExtension_Init_ :: proc (TextServerExtension_methods: ^TextServerExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 TextServerExtension_Init_Virtuals_Info :: proc(info: ^TextServerExtension_Virtual_Info) {

@@ -10,4 +10,5 @@ AnimationNodeSub2 :: ^GDW.Object
 AnimationNodeSub2_MethodBind_List :: struct {
 };
 AnimationNodeSub2_Init_ :: proc (AnimationNodeSub2_methods: ^AnimationNodeSub2_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

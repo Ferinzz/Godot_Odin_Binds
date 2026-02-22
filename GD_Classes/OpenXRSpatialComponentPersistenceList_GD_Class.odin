@@ -18,8 +18,9 @@ OpenXRSpatialComponentPersistenceList_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialComponentPersistenceList_Init_ :: proc (OpenXRSpatialComponentPersistenceList_methods: ^OpenXRSpatialComponentPersistenceList_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialComponentPersistenceList_methods.get_persistent_uuid._get_persistent_uuid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentPersistenceList, "get_persistent_uuid", 844755477, loc))
-  OpenXRSpatialComponentPersistenceList_methods.get_persistent_uuid.m_call = cast(type_of(OpenXRSpatialComponentPersistenceList_methods.get_persistent_uuid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentPersistenceList_methods.get_persistent_uuid.m_call = cast(type_of(OpenXRSpatialComponentPersistenceList_methods.get_persistent_uuid.m_call))MB_ptr_call
   OpenXRSpatialComponentPersistenceList_methods.get_persistent_state._get_persistent_state = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentPersistenceList, "get_persistent_state", 923996154, loc))
-  OpenXRSpatialComponentPersistenceList_methods.get_persistent_state.m_call = cast(type_of(OpenXRSpatialComponentPersistenceList_methods.get_persistent_state.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentPersistenceList_methods.get_persistent_state.m_call = cast(type_of(OpenXRSpatialComponentPersistenceList_methods.get_persistent_state.m_call))MB_ptr_call
 };

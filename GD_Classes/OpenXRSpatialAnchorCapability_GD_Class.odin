@@ -55,24 +55,25 @@ OpenXRSpatialAnchorCapability_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialAnchorCapability_Init_ :: proc (OpenXRSpatialAnchorCapability_methods: ^OpenXRSpatialAnchorCapability_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialAnchorCapability_methods.is_spatial_anchor_supported._is_spatial_anchor_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "is_spatial_anchor_supported", 2240911060, loc))
-  OpenXRSpatialAnchorCapability_methods.is_spatial_anchor_supported.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.is_spatial_anchor_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.is_spatial_anchor_supported.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.is_spatial_anchor_supported.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.is_spatial_persistence_supported._is_spatial_persistence_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "is_spatial_persistence_supported", 2240911060, loc))
-  OpenXRSpatialAnchorCapability_methods.is_spatial_persistence_supported.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.is_spatial_persistence_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.is_spatial_persistence_supported.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.is_spatial_persistence_supported.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.is_persistence_scope_supported._is_persistence_scope_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "is_persistence_scope_supported", 3651771626, loc))
-  OpenXRSpatialAnchorCapability_methods.is_persistence_scope_supported.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.is_persistence_scope_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.is_persistence_scope_supported.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.is_persistence_scope_supported.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.create_persistence_context._create_persistence_context = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "create_persistence_context", 856276630, loc))
-  OpenXRSpatialAnchorCapability_methods.create_persistence_context.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.create_persistence_context.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.create_persistence_context.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.create_persistence_context.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.get_persistence_context_handle._get_persistence_context_handle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "get_persistence_context_handle", 2198884583, loc))
-  OpenXRSpatialAnchorCapability_methods.get_persistence_context_handle.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.get_persistence_context_handle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.get_persistence_context_handle.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.get_persistence_context_handle.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.free_persistence_context._free_persistence_context = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "free_persistence_context", 2722037293, loc))
-  OpenXRSpatialAnchorCapability_methods.free_persistence_context.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.free_persistence_context.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.free_persistence_context.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.free_persistence_context.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.create_new_anchor._create_new_anchor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "create_new_anchor", 607100373, loc))
-  OpenXRSpatialAnchorCapability_methods.create_new_anchor.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.create_new_anchor.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.create_new_anchor.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.create_new_anchor.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.remove_anchor._remove_anchor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "remove_anchor", 3579451518, loc))
-  OpenXRSpatialAnchorCapability_methods.remove_anchor.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.remove_anchor.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.remove_anchor.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.remove_anchor.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.persist_anchor._persist_anchor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "persist_anchor", 4244202513, loc))
-  OpenXRSpatialAnchorCapability_methods.persist_anchor.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.persist_anchor.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.persist_anchor.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.persist_anchor.m_call))MB_ptr_call
   OpenXRSpatialAnchorCapability_methods.unpersist_anchor._unpersist_anchor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialAnchorCapability, "unpersist_anchor", 4244202513, loc))
-  OpenXRSpatialAnchorCapability_methods.unpersist_anchor.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.unpersist_anchor.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialAnchorCapability_methods.unpersist_anchor.m_call = cast(type_of(OpenXRSpatialAnchorCapability_methods.unpersist_anchor.m_call))MB_ptr_call
 };

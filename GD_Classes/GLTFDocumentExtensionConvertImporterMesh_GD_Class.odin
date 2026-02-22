@@ -10,4 +10,5 @@ GLTFDocumentExtensionConvertImporterMesh :: ^GDW.Object
 GLTFDocumentExtensionConvertImporterMesh_MethodBind_List :: struct {
 };
 GLTFDocumentExtensionConvertImporterMesh_Init_ :: proc (GLTFDocumentExtensionConvertImporterMesh_methods: ^GLTFDocumentExtensionConvertImporterMesh_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

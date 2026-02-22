@@ -39,20 +39,6 @@ UPNP_UPNPResult :: enum i64 {
   UPNP_RESULT_NO_DEVICES = 27,
   UPNP_RESULT_UNKNOWN_ERROR = 28,
 };
-UPNP_properties :: struct {
-  discover_multicast_if_gdstring : struct {
-  get_discover_multicast_if: proc "c" (p_base: UPNP, r_value: ^GDW.gdstring),
-  set_discover_multicast_if: proc "c" (p_base: UPNP, p_value: ^GDW.gdstring),
-  },
-  discover_local_port_Int : struct {
-  get_discover_local_port: proc "c" (p_base: UPNP, r_value: ^GDW.Int),
-  set_discover_local_port: proc "c" (p_base: UPNP, p_value: ^GDW.Int),
-  },
-  discover_ipv6_Bool : struct {
-  is_discover_ipv6: proc "c" (p_base: UPNP, r_value: ^GDW.Bool),
-  set_discover_ipv6: proc "c" (p_base: UPNP, p_value: ^GDW.Bool),
-  },
-};
 UPNP_MethodBind_List :: struct {
   get_device_count: struct{
     using _get_device_count: ^GDW.MethodBind,
@@ -124,49 +110,39 @@ UPNP_MethodBind_List :: struct {
   },
 };
 UPNP_Init_ :: proc (UPNP_methods: ^UPNP_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   UPNP_methods.get_device_count._get_device_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "get_device_count", 3905245786, loc))
-  UPNP_methods.get_device_count.m_call = cast(type_of(UPNP_methods.get_device_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.get_device_count.m_call = cast(type_of(UPNP_methods.get_device_count.m_call))MB_ptr_call
   UPNP_methods.get_device._get_device = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "get_device", 2193290270, loc))
-  UPNP_methods.get_device.m_call = cast(type_of(UPNP_methods.get_device.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.get_device.m_call = cast(type_of(UPNP_methods.get_device.m_call))MB_ptr_call
   UPNP_methods.add_device._add_device = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "add_device", 986715920, loc))
-  UPNP_methods.add_device.m_call = cast(type_of(UPNP_methods.add_device.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.add_device.m_call = cast(type_of(UPNP_methods.add_device.m_call))MB_ptr_call
   UPNP_methods.set_device._set_device = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "set_device", 3015133723, loc))
-  UPNP_methods.set_device.m_call = cast(type_of(UPNP_methods.set_device.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.set_device.m_call = cast(type_of(UPNP_methods.set_device.m_call))MB_ptr_call
   UPNP_methods.remove_device._remove_device = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "remove_device", 1286410249, loc))
-  UPNP_methods.remove_device.m_call = cast(type_of(UPNP_methods.remove_device.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.remove_device.m_call = cast(type_of(UPNP_methods.remove_device.m_call))MB_ptr_call
   UPNP_methods.clear_devices._clear_devices = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "clear_devices", 3218959716, loc))
-  UPNP_methods.clear_devices.m_call = cast(type_of(UPNP_methods.clear_devices.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.clear_devices.m_call = cast(type_of(UPNP_methods.clear_devices.m_call))MB_ptr_call
   UPNP_methods.get_gateway._get_gateway = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "get_gateway", 2276800779, loc))
-  UPNP_methods.get_gateway.m_call = cast(type_of(UPNP_methods.get_gateway.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.get_gateway.m_call = cast(type_of(UPNP_methods.get_gateway.m_call))MB_ptr_call
   UPNP_methods.discover._discover = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "discover", 1575334765, loc))
-  UPNP_methods.discover.m_call = cast(type_of(UPNP_methods.discover.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.discover.m_call = cast(type_of(UPNP_methods.discover.m_call))MB_ptr_call
   UPNP_methods.query_external_address._query_external_address = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "query_external_address", 201670096, loc))
-  UPNP_methods.query_external_address.m_call = cast(type_of(UPNP_methods.query_external_address.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.query_external_address.m_call = cast(type_of(UPNP_methods.query_external_address.m_call))MB_ptr_call
   UPNP_methods.add_port_mapping._add_port_mapping = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "add_port_mapping", 818314583, loc))
-  UPNP_methods.add_port_mapping.m_call = cast(type_of(UPNP_methods.add_port_mapping.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.add_port_mapping.m_call = cast(type_of(UPNP_methods.add_port_mapping.m_call))MB_ptr_call
   UPNP_methods.delete_port_mapping._delete_port_mapping = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "delete_port_mapping", 3444187325, loc))
-  UPNP_methods.delete_port_mapping.m_call = cast(type_of(UPNP_methods.delete_port_mapping.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.delete_port_mapping.m_call = cast(type_of(UPNP_methods.delete_port_mapping.m_call))MB_ptr_call
   UPNP_methods.set_discover_multicast_if._set_discover_multicast_if = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "set_discover_multicast_if", 83702148, loc))
-  UPNP_methods.set_discover_multicast_if.m_call = cast(type_of(UPNP_methods.set_discover_multicast_if.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.set_discover_multicast_if.m_call = cast(type_of(UPNP_methods.set_discover_multicast_if.m_call))MB_ptr_call
   UPNP_methods.get_discover_multicast_if._get_discover_multicast_if = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "get_discover_multicast_if", 201670096, loc))
-  UPNP_methods.get_discover_multicast_if.m_call = cast(type_of(UPNP_methods.get_discover_multicast_if.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.get_discover_multicast_if.m_call = cast(type_of(UPNP_methods.get_discover_multicast_if.m_call))MB_ptr_call
   UPNP_methods.set_discover_local_port._set_discover_local_port = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "set_discover_local_port", 1286410249, loc))
-  UPNP_methods.set_discover_local_port.m_call = cast(type_of(UPNP_methods.set_discover_local_port.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.set_discover_local_port.m_call = cast(type_of(UPNP_methods.set_discover_local_port.m_call))MB_ptr_call
   UPNP_methods.get_discover_local_port._get_discover_local_port = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "get_discover_local_port", 3905245786, loc))
-  UPNP_methods.get_discover_local_port.m_call = cast(type_of(UPNP_methods.get_discover_local_port.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.get_discover_local_port.m_call = cast(type_of(UPNP_methods.get_discover_local_port.m_call))MB_ptr_call
   UPNP_methods.set_discover_ipv6._set_discover_ipv6 = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "set_discover_ipv6", 2586408642, loc))
-  UPNP_methods.set_discover_ipv6.m_call = cast(type_of(UPNP_methods.set_discover_ipv6.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  UPNP_methods.set_discover_ipv6.m_call = cast(type_of(UPNP_methods.set_discover_ipv6.m_call))MB_ptr_call
   UPNP_methods.is_discover_ipv6._is_discover_ipv6 = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.UPNP, "is_discover_ipv6", 36873697, loc))
-  UPNP_methods.is_discover_ipv6.m_call = cast(type_of(UPNP_methods.is_discover_ipv6.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-UPNP_init_props :: proc(UPNP_prop: ^UPNP_properties, loc:= #caller_location) {
-
-  UPNP_prop.discover_multicast_if_gdstring.get_discover_multicast_if = cast(proc "c" (p_base: UPNP, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_discover_multicast_if")
-  UPNP_prop.discover_multicast_if_gdstring.set_discover_multicast_if = cast(proc "c" (p_base: UPNP, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_discover_multicast_if")
-
-  UPNP_prop.discover_local_port_Int.get_discover_local_port = cast(proc "c" (p_base: UPNP, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_discover_local_port")
-  UPNP_prop.discover_local_port_Int.set_discover_local_port = cast(proc "c" (p_base: UPNP, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_discover_local_port")
-
-  UPNP_prop.discover_ipv6_Bool.is_discover_ipv6 = cast(proc "c" (p_base: UPNP, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_discover_ipv6")
-  UPNP_prop.discover_ipv6_Bool.set_discover_ipv6 = cast(proc "c" (p_base: UPNP, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_discover_ipv6")
+  UPNP_methods.is_discover_ipv6.m_call = cast(type_of(UPNP_methods.is_discover_ipv6.m_call))MB_ptr_call
 };

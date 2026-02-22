@@ -16,6 +16,7 @@ EditorResourceConversionPlugin_Virtual_Info :: struct {
 EditorResourceConversionPlugin_MethodBind_List :: struct {
 };
 EditorResourceConversionPlugin_Init_ :: proc (EditorResourceConversionPlugin_methods: ^EditorResourceConversionPlugin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 EditorResourceConversionPlugin_Init_Virtuals_Info :: proc(info: ^EditorResourceConversionPlugin_Virtual_Info) {

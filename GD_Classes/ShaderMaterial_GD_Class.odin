@@ -7,12 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 ShaderMaterial :: ^GDW.Object
 
-ShaderMaterial_properties :: struct {
-  shader_Shader : struct {
-    get_shader: proc "c" (p_base: ShaderMaterial, r_value: ^Shader),
-    set_shader: proc "c" (p_base: ShaderMaterial, p_value: ^Shader),
-  },
-};
 ShaderMaterial_MethodBind_List :: struct {
   set_shader: struct{
     using _set_shader: ^GDW.MethodBind,
@@ -32,17 +26,13 @@ ShaderMaterial_MethodBind_List :: struct {
   },
 };
 ShaderMaterial_Init_ :: proc (ShaderMaterial_methods: ^ShaderMaterial_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   ShaderMaterial_methods.set_shader._set_shader = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ShaderMaterial, "set_shader", 3341921675, loc))
-  ShaderMaterial_methods.set_shader.m_call = cast(type_of(ShaderMaterial_methods.set_shader.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ShaderMaterial_methods.set_shader.m_call = cast(type_of(ShaderMaterial_methods.set_shader.m_call))MB_ptr_call
   ShaderMaterial_methods.get_shader._get_shader = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ShaderMaterial, "get_shader", 2078273437, loc))
-  ShaderMaterial_methods.get_shader.m_call = cast(type_of(ShaderMaterial_methods.get_shader.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ShaderMaterial_methods.get_shader.m_call = cast(type_of(ShaderMaterial_methods.get_shader.m_call))MB_ptr_call
   ShaderMaterial_methods.set_shader_parameter._set_shader_parameter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ShaderMaterial, "set_shader_parameter", 3776071444, loc))
-  ShaderMaterial_methods.set_shader_parameter.m_call = cast(type_of(ShaderMaterial_methods.set_shader_parameter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  ShaderMaterial_methods.set_shader_parameter.m_call = cast(type_of(ShaderMaterial_methods.set_shader_parameter.m_call))MB_ptr_call
   ShaderMaterial_methods.get_shader_parameter._get_shader_parameter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ShaderMaterial, "get_shader_parameter", 2760726917, loc))
-  ShaderMaterial_methods.get_shader_parameter.m_call = cast(type_of(ShaderMaterial_methods.get_shader_parameter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-ShaderMaterial_init_props :: proc(ShaderMaterial_prop: ^ShaderMaterial_properties, loc:= #caller_location) {
-
-  ShaderMaterial_prop.shader_Shader.get_shader = cast(proc "c" (p_base: ShaderMaterial, r_value: ^Shader))GDW.Get_Method_Getter(.OBJECT, "get_shader")
-  ShaderMaterial_prop.shader_Shader.set_shader = cast(proc "c" (p_base: ShaderMaterial, p_value: ^Shader))GDW.Get_Method_Setter(.OBJECT, "set_shader")
+  ShaderMaterial_methods.get_shader_parameter.m_call = cast(type_of(ShaderMaterial_methods.get_shader_parameter.m_call))MB_ptr_call
 };

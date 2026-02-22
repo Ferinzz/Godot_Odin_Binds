@@ -36,16 +36,6 @@ AudioStreamInteractive_AutoAdvanceMode :: enum i64 {
 AudioStreamInteractive_Constants :: enum i64 {
   CLIP_ANY= -1,
 };
-AudioStreamInteractive_properties :: struct {
-  clip_count_Int : struct {
-  get_clip_count: proc "c" (p_base: AudioStreamInteractive, r_value: ^GDW.Int),
-  set_clip_count: proc "c" (p_base: AudioStreamInteractive, p_value: ^GDW.Int),
-  },
-  initial_clip_Int : struct {
-  get_initial_clip: proc "c" (p_base: AudioStreamInteractive, r_value: ^GDW.Int),
-  set_initial_clip: proc "c" (p_base: AudioStreamInteractive, p_value: ^GDW.Int),
-  },
-};
 AudioStreamInteractive_MethodBind_List :: struct {
   set_clip_count: struct{
     using _set_clip_count: ^GDW.MethodBind,
@@ -141,58 +131,51 @@ AudioStreamInteractive_MethodBind_List :: struct {
   },
 };
 AudioStreamInteractive_Init_ :: proc (AudioStreamInteractive_methods: ^AudioStreamInteractive_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AudioStreamInteractive_methods.set_clip_count._set_clip_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "set_clip_count", 1286410249, loc))
-  AudioStreamInteractive_methods.set_clip_count.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.set_clip_count.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_count.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_clip_count._get_clip_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_clip_count", 3905245786, loc))
-  AudioStreamInteractive_methods.get_clip_count.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_clip_count.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_count.m_call))MB_ptr_call
   AudioStreamInteractive_methods.set_initial_clip._set_initial_clip = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "set_initial_clip", 1286410249, loc))
-  AudioStreamInteractive_methods.set_initial_clip.m_call = cast(type_of(AudioStreamInteractive_methods.set_initial_clip.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.set_initial_clip.m_call = cast(type_of(AudioStreamInteractive_methods.set_initial_clip.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_initial_clip._get_initial_clip = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_initial_clip", 3905245786, loc))
-  AudioStreamInteractive_methods.get_initial_clip.m_call = cast(type_of(AudioStreamInteractive_methods.get_initial_clip.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_initial_clip.m_call = cast(type_of(AudioStreamInteractive_methods.get_initial_clip.m_call))MB_ptr_call
   AudioStreamInteractive_methods.set_clip_name._set_clip_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "set_clip_name", 3780747571, loc))
-  AudioStreamInteractive_methods.set_clip_name.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.set_clip_name.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_name.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_clip_name._get_clip_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_clip_name", 659327637, loc))
-  AudioStreamInteractive_methods.get_clip_name.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_clip_name.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_name.m_call))MB_ptr_call
   AudioStreamInteractive_methods.set_clip_stream._set_clip_stream = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "set_clip_stream", 111075094, loc))
-  AudioStreamInteractive_methods.set_clip_stream.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_stream.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.set_clip_stream.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_stream.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_clip_stream._get_clip_stream = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_clip_stream", 2739380747, loc))
-  AudioStreamInteractive_methods.get_clip_stream.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_stream.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_clip_stream.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_stream.m_call))MB_ptr_call
   AudioStreamInteractive_methods.set_clip_auto_advance._set_clip_auto_advance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "set_clip_auto_advance", 57217598, loc))
-  AudioStreamInteractive_methods.set_clip_auto_advance.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_auto_advance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.set_clip_auto_advance.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_auto_advance.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_clip_auto_advance._get_clip_auto_advance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_clip_auto_advance", 1778634807, loc))
-  AudioStreamInteractive_methods.get_clip_auto_advance.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_auto_advance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_clip_auto_advance.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_auto_advance.m_call))MB_ptr_call
   AudioStreamInteractive_methods.set_clip_auto_advance_next_clip._set_clip_auto_advance_next_clip = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "set_clip_auto_advance_next_clip", 3937882851, loc))
-  AudioStreamInteractive_methods.set_clip_auto_advance_next_clip.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_auto_advance_next_clip.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.set_clip_auto_advance_next_clip.m_call = cast(type_of(AudioStreamInteractive_methods.set_clip_auto_advance_next_clip.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_clip_auto_advance_next_clip._get_clip_auto_advance_next_clip = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_clip_auto_advance_next_clip", 923996154, loc))
-  AudioStreamInteractive_methods.get_clip_auto_advance_next_clip.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_auto_advance_next_clip.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_clip_auto_advance_next_clip.m_call = cast(type_of(AudioStreamInteractive_methods.get_clip_auto_advance_next_clip.m_call))MB_ptr_call
   AudioStreamInteractive_methods.add_transition._add_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "add_transition", 1630280552, loc))
-  AudioStreamInteractive_methods.add_transition.m_call = cast(type_of(AudioStreamInteractive_methods.add_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.add_transition.m_call = cast(type_of(AudioStreamInteractive_methods.add_transition.m_call))MB_ptr_call
   AudioStreamInteractive_methods.has_transition._has_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "has_transition", 2522259332, loc))
-  AudioStreamInteractive_methods.has_transition.m_call = cast(type_of(AudioStreamInteractive_methods.has_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.has_transition.m_call = cast(type_of(AudioStreamInteractive_methods.has_transition.m_call))MB_ptr_call
   AudioStreamInteractive_methods.erase_transition._erase_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "erase_transition", 3937882851, loc))
-  AudioStreamInteractive_methods.erase_transition.m_call = cast(type_of(AudioStreamInteractive_methods.erase_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.erase_transition.m_call = cast(type_of(AudioStreamInteractive_methods.erase_transition.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_transition_list._get_transition_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_transition_list", 1930428628, loc))
-  AudioStreamInteractive_methods.get_transition_list.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_transition_list.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_list.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_transition_from_time._get_transition_from_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_transition_from_time", 3453338158, loc))
-  AudioStreamInteractive_methods.get_transition_from_time.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_from_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_transition_from_time.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_from_time.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_transition_to_time._get_transition_to_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_transition_to_time", 1369651373, loc))
-  AudioStreamInteractive_methods.get_transition_to_time.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_to_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_transition_to_time.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_to_time.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_transition_fade_mode._get_transition_fade_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_transition_fade_mode", 4065396087, loc))
-  AudioStreamInteractive_methods.get_transition_fade_mode.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_fade_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_transition_fade_mode.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_fade_mode.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_transition_fade_beats._get_transition_fade_beats = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_transition_fade_beats", 3085491603, loc))
-  AudioStreamInteractive_methods.get_transition_fade_beats.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_fade_beats.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_transition_fade_beats.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_fade_beats.m_call))MB_ptr_call
   AudioStreamInteractive_methods.is_transition_using_filler_clip._is_transition_using_filler_clip = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "is_transition_using_filler_clip", 2522259332, loc))
-  AudioStreamInteractive_methods.is_transition_using_filler_clip.m_call = cast(type_of(AudioStreamInteractive_methods.is_transition_using_filler_clip.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.is_transition_using_filler_clip.m_call = cast(type_of(AudioStreamInteractive_methods.is_transition_using_filler_clip.m_call))MB_ptr_call
   AudioStreamInteractive_methods.get_transition_filler_clip._get_transition_filler_clip = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "get_transition_filler_clip", 3175239445, loc))
-  AudioStreamInteractive_methods.get_transition_filler_clip.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_filler_clip.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamInteractive_methods.get_transition_filler_clip.m_call = cast(type_of(AudioStreamInteractive_methods.get_transition_filler_clip.m_call))MB_ptr_call
   AudioStreamInteractive_methods.is_transition_holding_previous._is_transition_holding_previous = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamInteractive, "is_transition_holding_previous", 2522259332, loc))
-  AudioStreamInteractive_methods.is_transition_holding_previous.m_call = cast(type_of(AudioStreamInteractive_methods.is_transition_holding_previous.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-AudioStreamInteractive_init_props :: proc(AudioStreamInteractive_prop: ^AudioStreamInteractive_properties, loc:= #caller_location) {
-
-  AudioStreamInteractive_prop.clip_count_Int.get_clip_count = cast(proc "c" (p_base: AudioStreamInteractive, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_clip_count")
-  AudioStreamInteractive_prop.clip_count_Int.set_clip_count = cast(proc "c" (p_base: AudioStreamInteractive, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_clip_count")
-
-  AudioStreamInteractive_prop.initial_clip_Int.get_initial_clip = cast(proc "c" (p_base: AudioStreamInteractive, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_initial_clip")
-  AudioStreamInteractive_prop.initial_clip_Int.set_initial_clip = cast(proc "c" (p_base: AudioStreamInteractive, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_initial_clip")
+  AudioStreamInteractive_methods.is_transition_holding_previous.m_call = cast(type_of(AudioStreamInteractive_methods.is_transition_holding_previous.m_call))MB_ptr_call
 };

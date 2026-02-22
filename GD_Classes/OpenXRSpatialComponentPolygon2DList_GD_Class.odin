@@ -18,8 +18,9 @@ OpenXRSpatialComponentPolygon2DList_MethodBind_List :: struct {
   },
 };
 OpenXRSpatialComponentPolygon2DList_Init_ :: proc (OpenXRSpatialComponentPolygon2DList_methods: ^OpenXRSpatialComponentPolygon2DList_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialComponentPolygon2DList_methods.get_transform._get_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentPolygon2DList, "get_transform", 1965739696, loc))
-  OpenXRSpatialComponentPolygon2DList_methods.get_transform.m_call = cast(type_of(OpenXRSpatialComponentPolygon2DList_methods.get_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentPolygon2DList_methods.get_transform.m_call = cast(type_of(OpenXRSpatialComponentPolygon2DList_methods.get_transform.m_call))MB_ptr_call
   OpenXRSpatialComponentPolygon2DList_methods.get_vertices._get_vertices = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialComponentPolygon2DList, "get_vertices", 110850971, loc))
-  OpenXRSpatialComponentPolygon2DList_methods.get_vertices.m_call = cast(type_of(OpenXRSpatialComponentPolygon2DList_methods.get_vertices.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialComponentPolygon2DList_methods.get_vertices.m_call = cast(type_of(OpenXRSpatialComponentPolygon2DList_methods.get_vertices.m_call))MB_ptr_call
 };

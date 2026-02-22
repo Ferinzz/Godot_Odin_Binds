@@ -51,23 +51,6 @@ Animation_FindMode :: enum i64 {
   FIND_MODE_APPROX = 1,
   FIND_MODE_EXACT = 2,
 };
-Animation_properties :: struct {
-  length_float : struct {
-  get_length: proc "c" (p_base: Animation, r_value: ^GDW.float),
-  set_length: proc "c" (p_base: Animation, p_value: ^GDW.float),
-  },
-  loop_mode_Int : struct {
-  get_loop_mode: proc "c" (p_base: Animation, r_value: ^GDW.Int),
-  set_loop_mode: proc "c" (p_base: Animation, p_value: ^GDW.Int),
-  },
-  step_float : struct {
-  get_step: proc "c" (p_base: Animation, r_value: ^GDW.float),
-  set_step: proc "c" (p_base: Animation, p_value: ^GDW.float),
-  },
-  capture_included_Bool : struct {
-  is_capture_included: proc "c" (p_base: Animation, r_value: ^GDW.Bool),
-  },
-};
 Animation_MethodBind_List :: struct {
   add_track: struct{
     using _add_track: ^GDW.MethodBind,
@@ -411,187 +394,175 @@ Animation_MethodBind_List :: struct {
   },
 };
 Animation_Init_ :: proc (Animation_methods: ^Animation_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Animation_methods.add_track._add_track = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "add_track", 3843682357, loc))
-  Animation_methods.add_track.m_call = cast(type_of(Animation_methods.add_track.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.add_track.m_call = cast(type_of(Animation_methods.add_track.m_call))MB_ptr_call
   Animation_methods.remove_track._remove_track = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "remove_track", 1286410249, loc))
-  Animation_methods.remove_track.m_call = cast(type_of(Animation_methods.remove_track.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.remove_track.m_call = cast(type_of(Animation_methods.remove_track.m_call))MB_ptr_call
   Animation_methods.get_track_count._get_track_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_track_count", 3905245786, loc))
-  Animation_methods.get_track_count.m_call = cast(type_of(Animation_methods.get_track_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_track_count.m_call = cast(type_of(Animation_methods.get_track_count.m_call))MB_ptr_call
   Animation_methods.track_get_type._track_get_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_get_type", 3445944217, loc))
-  Animation_methods.track_get_type.m_call = cast(type_of(Animation_methods.track_get_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_get_type.m_call = cast(type_of(Animation_methods.track_get_type.m_call))MB_ptr_call
   Animation_methods.track_get_path._track_get_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_get_path", 408788394, loc))
-  Animation_methods.track_get_path.m_call = cast(type_of(Animation_methods.track_get_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_get_path.m_call = cast(type_of(Animation_methods.track_get_path.m_call))MB_ptr_call
   Animation_methods.track_set_path._track_set_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_set_path", 2761262315, loc))
-  Animation_methods.track_set_path.m_call = cast(type_of(Animation_methods.track_set_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_set_path.m_call = cast(type_of(Animation_methods.track_set_path.m_call))MB_ptr_call
   Animation_methods.find_track._find_track = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "find_track", 245376003, loc))
-  Animation_methods.find_track.m_call = cast(type_of(Animation_methods.find_track.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.find_track.m_call = cast(type_of(Animation_methods.find_track.m_call))MB_ptr_call
   Animation_methods.track_move_up._track_move_up = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_move_up", 1286410249, loc))
-  Animation_methods.track_move_up.m_call = cast(type_of(Animation_methods.track_move_up.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_move_up.m_call = cast(type_of(Animation_methods.track_move_up.m_call))MB_ptr_call
   Animation_methods.track_move_down._track_move_down = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_move_down", 1286410249, loc))
-  Animation_methods.track_move_down.m_call = cast(type_of(Animation_methods.track_move_down.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_move_down.m_call = cast(type_of(Animation_methods.track_move_down.m_call))MB_ptr_call
   Animation_methods.track_move_to._track_move_to = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_move_to", 3937882851, loc))
-  Animation_methods.track_move_to.m_call = cast(type_of(Animation_methods.track_move_to.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_move_to.m_call = cast(type_of(Animation_methods.track_move_to.m_call))MB_ptr_call
   Animation_methods.track_swap._track_swap = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_swap", 3937882851, loc))
-  Animation_methods.track_swap.m_call = cast(type_of(Animation_methods.track_swap.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_swap.m_call = cast(type_of(Animation_methods.track_swap.m_call))MB_ptr_call
   Animation_methods.track_set_imported._track_set_imported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_set_imported", 300928843, loc))
-  Animation_methods.track_set_imported.m_call = cast(type_of(Animation_methods.track_set_imported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_set_imported.m_call = cast(type_of(Animation_methods.track_set_imported.m_call))MB_ptr_call
   Animation_methods.track_is_imported._track_is_imported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_is_imported", 1116898809, loc))
-  Animation_methods.track_is_imported.m_call = cast(type_of(Animation_methods.track_is_imported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_is_imported.m_call = cast(type_of(Animation_methods.track_is_imported.m_call))MB_ptr_call
   Animation_methods.track_set_enabled._track_set_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_set_enabled", 300928843, loc))
-  Animation_methods.track_set_enabled.m_call = cast(type_of(Animation_methods.track_set_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_set_enabled.m_call = cast(type_of(Animation_methods.track_set_enabled.m_call))MB_ptr_call
   Animation_methods.track_is_enabled._track_is_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_is_enabled", 1116898809, loc))
-  Animation_methods.track_is_enabled.m_call = cast(type_of(Animation_methods.track_is_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_is_enabled.m_call = cast(type_of(Animation_methods.track_is_enabled.m_call))MB_ptr_call
   Animation_methods.position_track_insert_key._position_track_insert_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "position_track_insert_key", 2540608232, loc))
-  Animation_methods.position_track_insert_key.m_call = cast(type_of(Animation_methods.position_track_insert_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.position_track_insert_key.m_call = cast(type_of(Animation_methods.position_track_insert_key.m_call))MB_ptr_call
   Animation_methods.rotation_track_insert_key._rotation_track_insert_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "rotation_track_insert_key", 4165004800, loc))
-  Animation_methods.rotation_track_insert_key.m_call = cast(type_of(Animation_methods.rotation_track_insert_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.rotation_track_insert_key.m_call = cast(type_of(Animation_methods.rotation_track_insert_key.m_call))MB_ptr_call
   Animation_methods.scale_track_insert_key._scale_track_insert_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "scale_track_insert_key", 2540608232, loc))
-  Animation_methods.scale_track_insert_key.m_call = cast(type_of(Animation_methods.scale_track_insert_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.scale_track_insert_key.m_call = cast(type_of(Animation_methods.scale_track_insert_key.m_call))MB_ptr_call
   Animation_methods.blend_shape_track_insert_key._blend_shape_track_insert_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "blend_shape_track_insert_key", 1534913637, loc))
-  Animation_methods.blend_shape_track_insert_key.m_call = cast(type_of(Animation_methods.blend_shape_track_insert_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.blend_shape_track_insert_key.m_call = cast(type_of(Animation_methods.blend_shape_track_insert_key.m_call))MB_ptr_call
   Animation_methods.position_track_interpolate._position_track_interpolate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "position_track_interpolate", 3530011197, loc))
-  Animation_methods.position_track_interpolate.m_call = cast(type_of(Animation_methods.position_track_interpolate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.position_track_interpolate.m_call = cast(type_of(Animation_methods.position_track_interpolate.m_call))MB_ptr_call
   Animation_methods.rotation_track_interpolate._rotation_track_interpolate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "rotation_track_interpolate", 2915876792, loc))
-  Animation_methods.rotation_track_interpolate.m_call = cast(type_of(Animation_methods.rotation_track_interpolate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.rotation_track_interpolate.m_call = cast(type_of(Animation_methods.rotation_track_interpolate.m_call))MB_ptr_call
   Animation_methods.scale_track_interpolate._scale_track_interpolate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "scale_track_interpolate", 3530011197, loc))
-  Animation_methods.scale_track_interpolate.m_call = cast(type_of(Animation_methods.scale_track_interpolate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.scale_track_interpolate.m_call = cast(type_of(Animation_methods.scale_track_interpolate.m_call))MB_ptr_call
   Animation_methods.blend_shape_track_interpolate._blend_shape_track_interpolate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "blend_shape_track_interpolate", 2482365182, loc))
-  Animation_methods.blend_shape_track_interpolate.m_call = cast(type_of(Animation_methods.blend_shape_track_interpolate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.blend_shape_track_interpolate.m_call = cast(type_of(Animation_methods.blend_shape_track_interpolate.m_call))MB_ptr_call
   Animation_methods.track_insert_key._track_insert_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_insert_key", 808952278, loc))
-  Animation_methods.track_insert_key.m_call = cast(type_of(Animation_methods.track_insert_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_insert_key.m_call = cast(type_of(Animation_methods.track_insert_key.m_call))MB_ptr_call
   Animation_methods.track_remove_key._track_remove_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_remove_key", 3937882851, loc))
-  Animation_methods.track_remove_key.m_call = cast(type_of(Animation_methods.track_remove_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_remove_key.m_call = cast(type_of(Animation_methods.track_remove_key.m_call))MB_ptr_call
   Animation_methods.track_remove_key_at_time._track_remove_key_at_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_remove_key_at_time", 1602489585, loc))
-  Animation_methods.track_remove_key_at_time.m_call = cast(type_of(Animation_methods.track_remove_key_at_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_remove_key_at_time.m_call = cast(type_of(Animation_methods.track_remove_key_at_time.m_call))MB_ptr_call
   Animation_methods.track_set_key_value._track_set_key_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_set_key_value", 2060538656, loc))
-  Animation_methods.track_set_key_value.m_call = cast(type_of(Animation_methods.track_set_key_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_set_key_value.m_call = cast(type_of(Animation_methods.track_set_key_value.m_call))MB_ptr_call
   Animation_methods.track_set_key_transition._track_set_key_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_set_key_transition", 3506521499, loc))
-  Animation_methods.track_set_key_transition.m_call = cast(type_of(Animation_methods.track_set_key_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_set_key_transition.m_call = cast(type_of(Animation_methods.track_set_key_transition.m_call))MB_ptr_call
   Animation_methods.track_set_key_time._track_set_key_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_set_key_time", 3506521499, loc))
-  Animation_methods.track_set_key_time.m_call = cast(type_of(Animation_methods.track_set_key_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_set_key_time.m_call = cast(type_of(Animation_methods.track_set_key_time.m_call))MB_ptr_call
   Animation_methods.track_get_key_transition._track_get_key_transition = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_get_key_transition", 3085491603, loc))
-  Animation_methods.track_get_key_transition.m_call = cast(type_of(Animation_methods.track_get_key_transition.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_get_key_transition.m_call = cast(type_of(Animation_methods.track_get_key_transition.m_call))MB_ptr_call
   Animation_methods.track_get_key_count._track_get_key_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_get_key_count", 923996154, loc))
-  Animation_methods.track_get_key_count.m_call = cast(type_of(Animation_methods.track_get_key_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_get_key_count.m_call = cast(type_of(Animation_methods.track_get_key_count.m_call))MB_ptr_call
   Animation_methods.track_get_key_value._track_get_key_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_get_key_value", 678354945, loc))
-  Animation_methods.track_get_key_value.m_call = cast(type_of(Animation_methods.track_get_key_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_get_key_value.m_call = cast(type_of(Animation_methods.track_get_key_value.m_call))MB_ptr_call
   Animation_methods.track_get_key_time._track_get_key_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_get_key_time", 3085491603, loc))
-  Animation_methods.track_get_key_time.m_call = cast(type_of(Animation_methods.track_get_key_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_get_key_time.m_call = cast(type_of(Animation_methods.track_get_key_time.m_call))MB_ptr_call
   Animation_methods.track_find_key._track_find_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_find_key", 4230953007, loc))
-  Animation_methods.track_find_key.m_call = cast(type_of(Animation_methods.track_find_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_find_key.m_call = cast(type_of(Animation_methods.track_find_key.m_call))MB_ptr_call
   Animation_methods.track_set_interpolation_type._track_set_interpolation_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_set_interpolation_type", 4112932513, loc))
-  Animation_methods.track_set_interpolation_type.m_call = cast(type_of(Animation_methods.track_set_interpolation_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_set_interpolation_type.m_call = cast(type_of(Animation_methods.track_set_interpolation_type.m_call))MB_ptr_call
   Animation_methods.track_get_interpolation_type._track_get_interpolation_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_get_interpolation_type", 1530756894, loc))
-  Animation_methods.track_get_interpolation_type.m_call = cast(type_of(Animation_methods.track_get_interpolation_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_get_interpolation_type.m_call = cast(type_of(Animation_methods.track_get_interpolation_type.m_call))MB_ptr_call
   Animation_methods.track_set_interpolation_loop_wrap._track_set_interpolation_loop_wrap = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_set_interpolation_loop_wrap", 300928843, loc))
-  Animation_methods.track_set_interpolation_loop_wrap.m_call = cast(type_of(Animation_methods.track_set_interpolation_loop_wrap.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_set_interpolation_loop_wrap.m_call = cast(type_of(Animation_methods.track_set_interpolation_loop_wrap.m_call))MB_ptr_call
   Animation_methods.track_get_interpolation_loop_wrap._track_get_interpolation_loop_wrap = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_get_interpolation_loop_wrap", 1116898809, loc))
-  Animation_methods.track_get_interpolation_loop_wrap.m_call = cast(type_of(Animation_methods.track_get_interpolation_loop_wrap.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_get_interpolation_loop_wrap.m_call = cast(type_of(Animation_methods.track_get_interpolation_loop_wrap.m_call))MB_ptr_call
   Animation_methods.track_is_compressed._track_is_compressed = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "track_is_compressed", 1116898809, loc))
-  Animation_methods.track_is_compressed.m_call = cast(type_of(Animation_methods.track_is_compressed.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.track_is_compressed.m_call = cast(type_of(Animation_methods.track_is_compressed.m_call))MB_ptr_call
   Animation_methods.value_track_set_update_mode._value_track_set_update_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "value_track_set_update_mode", 2854058312, loc))
-  Animation_methods.value_track_set_update_mode.m_call = cast(type_of(Animation_methods.value_track_set_update_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.value_track_set_update_mode.m_call = cast(type_of(Animation_methods.value_track_set_update_mode.m_call))MB_ptr_call
   Animation_methods.value_track_get_update_mode._value_track_get_update_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "value_track_get_update_mode", 1440326473, loc))
-  Animation_methods.value_track_get_update_mode.m_call = cast(type_of(Animation_methods.value_track_get_update_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.value_track_get_update_mode.m_call = cast(type_of(Animation_methods.value_track_get_update_mode.m_call))MB_ptr_call
   Animation_methods.value_track_interpolate._value_track_interpolate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "value_track_interpolate", 747269075, loc))
-  Animation_methods.value_track_interpolate.m_call = cast(type_of(Animation_methods.value_track_interpolate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.value_track_interpolate.m_call = cast(type_of(Animation_methods.value_track_interpolate.m_call))MB_ptr_call
   Animation_methods.method_track_get_name._method_track_get_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "method_track_get_name", 351665558, loc))
-  Animation_methods.method_track_get_name.m_call = cast(type_of(Animation_methods.method_track_get_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.method_track_get_name.m_call = cast(type_of(Animation_methods.method_track_get_name.m_call))MB_ptr_call
   Animation_methods.method_track_get_params._method_track_get_params = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "method_track_get_params", 2345056839, loc))
-  Animation_methods.method_track_get_params.m_call = cast(type_of(Animation_methods.method_track_get_params.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.method_track_get_params.m_call = cast(type_of(Animation_methods.method_track_get_params.m_call))MB_ptr_call
   Animation_methods.bezier_track_insert_key._bezier_track_insert_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "bezier_track_insert_key", 3656773645, loc))
-  Animation_methods.bezier_track_insert_key.m_call = cast(type_of(Animation_methods.bezier_track_insert_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.bezier_track_insert_key.m_call = cast(type_of(Animation_methods.bezier_track_insert_key.m_call))MB_ptr_call
   Animation_methods.bezier_track_set_key_value._bezier_track_set_key_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "bezier_track_set_key_value", 3506521499, loc))
-  Animation_methods.bezier_track_set_key_value.m_call = cast(type_of(Animation_methods.bezier_track_set_key_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.bezier_track_set_key_value.m_call = cast(type_of(Animation_methods.bezier_track_set_key_value.m_call))MB_ptr_call
   Animation_methods.bezier_track_set_key_in_handle._bezier_track_set_key_in_handle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "bezier_track_set_key_in_handle", 1719223284, loc))
-  Animation_methods.bezier_track_set_key_in_handle.m_call = cast(type_of(Animation_methods.bezier_track_set_key_in_handle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.bezier_track_set_key_in_handle.m_call = cast(type_of(Animation_methods.bezier_track_set_key_in_handle.m_call))MB_ptr_call
   Animation_methods.bezier_track_set_key_out_handle._bezier_track_set_key_out_handle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "bezier_track_set_key_out_handle", 1719223284, loc))
-  Animation_methods.bezier_track_set_key_out_handle.m_call = cast(type_of(Animation_methods.bezier_track_set_key_out_handle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.bezier_track_set_key_out_handle.m_call = cast(type_of(Animation_methods.bezier_track_set_key_out_handle.m_call))MB_ptr_call
   Animation_methods.bezier_track_get_key_value._bezier_track_get_key_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "bezier_track_get_key_value", 3085491603, loc))
-  Animation_methods.bezier_track_get_key_value.m_call = cast(type_of(Animation_methods.bezier_track_get_key_value.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.bezier_track_get_key_value.m_call = cast(type_of(Animation_methods.bezier_track_get_key_value.m_call))MB_ptr_call
   Animation_methods.bezier_track_get_key_in_handle._bezier_track_get_key_in_handle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "bezier_track_get_key_in_handle", 3016396712, loc))
-  Animation_methods.bezier_track_get_key_in_handle.m_call = cast(type_of(Animation_methods.bezier_track_get_key_in_handle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.bezier_track_get_key_in_handle.m_call = cast(type_of(Animation_methods.bezier_track_get_key_in_handle.m_call))MB_ptr_call
   Animation_methods.bezier_track_get_key_out_handle._bezier_track_get_key_out_handle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "bezier_track_get_key_out_handle", 3016396712, loc))
-  Animation_methods.bezier_track_get_key_out_handle.m_call = cast(type_of(Animation_methods.bezier_track_get_key_out_handle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.bezier_track_get_key_out_handle.m_call = cast(type_of(Animation_methods.bezier_track_get_key_out_handle.m_call))MB_ptr_call
   Animation_methods.bezier_track_interpolate._bezier_track_interpolate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "bezier_track_interpolate", 1900462983, loc))
-  Animation_methods.bezier_track_interpolate.m_call = cast(type_of(Animation_methods.bezier_track_interpolate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.bezier_track_interpolate.m_call = cast(type_of(Animation_methods.bezier_track_interpolate.m_call))MB_ptr_call
   Animation_methods.audio_track_insert_key._audio_track_insert_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_insert_key", 4021027286, loc))
-  Animation_methods.audio_track_insert_key.m_call = cast(type_of(Animation_methods.audio_track_insert_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_insert_key.m_call = cast(type_of(Animation_methods.audio_track_insert_key.m_call))MB_ptr_call
   Animation_methods.audio_track_set_key_stream._audio_track_set_key_stream = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_set_key_stream", 3886397084, loc))
-  Animation_methods.audio_track_set_key_stream.m_call = cast(type_of(Animation_methods.audio_track_set_key_stream.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_set_key_stream.m_call = cast(type_of(Animation_methods.audio_track_set_key_stream.m_call))MB_ptr_call
   Animation_methods.audio_track_set_key_start_offset._audio_track_set_key_start_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_set_key_start_offset", 3506521499, loc))
-  Animation_methods.audio_track_set_key_start_offset.m_call = cast(type_of(Animation_methods.audio_track_set_key_start_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_set_key_start_offset.m_call = cast(type_of(Animation_methods.audio_track_set_key_start_offset.m_call))MB_ptr_call
   Animation_methods.audio_track_set_key_end_offset._audio_track_set_key_end_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_set_key_end_offset", 3506521499, loc))
-  Animation_methods.audio_track_set_key_end_offset.m_call = cast(type_of(Animation_methods.audio_track_set_key_end_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_set_key_end_offset.m_call = cast(type_of(Animation_methods.audio_track_set_key_end_offset.m_call))MB_ptr_call
   Animation_methods.audio_track_get_key_stream._audio_track_get_key_stream = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_get_key_stream", 635277205, loc))
-  Animation_methods.audio_track_get_key_stream.m_call = cast(type_of(Animation_methods.audio_track_get_key_stream.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_get_key_stream.m_call = cast(type_of(Animation_methods.audio_track_get_key_stream.m_call))MB_ptr_call
   Animation_methods.audio_track_get_key_start_offset._audio_track_get_key_start_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_get_key_start_offset", 3085491603, loc))
-  Animation_methods.audio_track_get_key_start_offset.m_call = cast(type_of(Animation_methods.audio_track_get_key_start_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_get_key_start_offset.m_call = cast(type_of(Animation_methods.audio_track_get_key_start_offset.m_call))MB_ptr_call
   Animation_methods.audio_track_get_key_end_offset._audio_track_get_key_end_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_get_key_end_offset", 3085491603, loc))
-  Animation_methods.audio_track_get_key_end_offset.m_call = cast(type_of(Animation_methods.audio_track_get_key_end_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_get_key_end_offset.m_call = cast(type_of(Animation_methods.audio_track_get_key_end_offset.m_call))MB_ptr_call
   Animation_methods.audio_track_set_use_blend._audio_track_set_use_blend = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_set_use_blend", 300928843, loc))
-  Animation_methods.audio_track_set_use_blend.m_call = cast(type_of(Animation_methods.audio_track_set_use_blend.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_set_use_blend.m_call = cast(type_of(Animation_methods.audio_track_set_use_blend.m_call))MB_ptr_call
   Animation_methods.audio_track_is_use_blend._audio_track_is_use_blend = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "audio_track_is_use_blend", 1116898809, loc))
-  Animation_methods.audio_track_is_use_blend.m_call = cast(type_of(Animation_methods.audio_track_is_use_blend.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.audio_track_is_use_blend.m_call = cast(type_of(Animation_methods.audio_track_is_use_blend.m_call))MB_ptr_call
   Animation_methods.animation_track_insert_key._animation_track_insert_key = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "animation_track_insert_key", 158676774, loc))
-  Animation_methods.animation_track_insert_key.m_call = cast(type_of(Animation_methods.animation_track_insert_key.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.animation_track_insert_key.m_call = cast(type_of(Animation_methods.animation_track_insert_key.m_call))MB_ptr_call
   Animation_methods.animation_track_set_key_animation._animation_track_set_key_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "animation_track_set_key_animation", 117615382, loc))
-  Animation_methods.animation_track_set_key_animation.m_call = cast(type_of(Animation_methods.animation_track_set_key_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.animation_track_set_key_animation.m_call = cast(type_of(Animation_methods.animation_track_set_key_animation.m_call))MB_ptr_call
   Animation_methods.animation_track_get_key_animation._animation_track_get_key_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "animation_track_get_key_animation", 351665558, loc))
-  Animation_methods.animation_track_get_key_animation.m_call = cast(type_of(Animation_methods.animation_track_get_key_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.animation_track_get_key_animation.m_call = cast(type_of(Animation_methods.animation_track_get_key_animation.m_call))MB_ptr_call
   Animation_methods.add_marker._add_marker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "add_marker", 4135858297, loc))
-  Animation_methods.add_marker.m_call = cast(type_of(Animation_methods.add_marker.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.add_marker.m_call = cast(type_of(Animation_methods.add_marker.m_call))MB_ptr_call
   Animation_methods.remove_marker._remove_marker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "remove_marker", 3304788590, loc))
-  Animation_methods.remove_marker.m_call = cast(type_of(Animation_methods.remove_marker.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.remove_marker.m_call = cast(type_of(Animation_methods.remove_marker.m_call))MB_ptr_call
   Animation_methods.has_marker._has_marker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "has_marker", 2619796661, loc))
-  Animation_methods.has_marker.m_call = cast(type_of(Animation_methods.has_marker.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.has_marker.m_call = cast(type_of(Animation_methods.has_marker.m_call))MB_ptr_call
   Animation_methods.get_marker_at_time._get_marker_at_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_marker_at_time", 4079494655, loc))
-  Animation_methods.get_marker_at_time.m_call = cast(type_of(Animation_methods.get_marker_at_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_marker_at_time.m_call = cast(type_of(Animation_methods.get_marker_at_time.m_call))MB_ptr_call
   Animation_methods.get_next_marker._get_next_marker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_next_marker", 4079494655, loc))
-  Animation_methods.get_next_marker.m_call = cast(type_of(Animation_methods.get_next_marker.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_next_marker.m_call = cast(type_of(Animation_methods.get_next_marker.m_call))MB_ptr_call
   Animation_methods.get_prev_marker._get_prev_marker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_prev_marker", 4079494655, loc))
-  Animation_methods.get_prev_marker.m_call = cast(type_of(Animation_methods.get_prev_marker.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_prev_marker.m_call = cast(type_of(Animation_methods.get_prev_marker.m_call))MB_ptr_call
   Animation_methods.get_marker_time._get_marker_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_marker_time", 2349060816, loc))
-  Animation_methods.get_marker_time.m_call = cast(type_of(Animation_methods.get_marker_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_marker_time.m_call = cast(type_of(Animation_methods.get_marker_time.m_call))MB_ptr_call
   Animation_methods.get_marker_names._get_marker_names = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_marker_names", 1139954409, loc))
-  Animation_methods.get_marker_names.m_call = cast(type_of(Animation_methods.get_marker_names.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_marker_names.m_call = cast(type_of(Animation_methods.get_marker_names.m_call))MB_ptr_call
   Animation_methods.get_marker_color._get_marker_color = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_marker_color", 3742943038, loc))
-  Animation_methods.get_marker_color.m_call = cast(type_of(Animation_methods.get_marker_color.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_marker_color.m_call = cast(type_of(Animation_methods.get_marker_color.m_call))MB_ptr_call
   Animation_methods.set_marker_color._set_marker_color = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "set_marker_color", 4260178595, loc))
-  Animation_methods.set_marker_color.m_call = cast(type_of(Animation_methods.set_marker_color.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.set_marker_color.m_call = cast(type_of(Animation_methods.set_marker_color.m_call))MB_ptr_call
   Animation_methods.set_length._set_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "set_length", 373806689, loc))
-  Animation_methods.set_length.m_call = cast(type_of(Animation_methods.set_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.set_length.m_call = cast(type_of(Animation_methods.set_length.m_call))MB_ptr_call
   Animation_methods.get_length._get_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_length", 1740695150, loc))
-  Animation_methods.get_length.m_call = cast(type_of(Animation_methods.get_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_length.m_call = cast(type_of(Animation_methods.get_length.m_call))MB_ptr_call
   Animation_methods.set_loop_mode._set_loop_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "set_loop_mode", 3155355575, loc))
-  Animation_methods.set_loop_mode.m_call = cast(type_of(Animation_methods.set_loop_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.set_loop_mode.m_call = cast(type_of(Animation_methods.set_loop_mode.m_call))MB_ptr_call
   Animation_methods.get_loop_mode._get_loop_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_loop_mode", 1988889481, loc))
-  Animation_methods.get_loop_mode.m_call = cast(type_of(Animation_methods.get_loop_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_loop_mode.m_call = cast(type_of(Animation_methods.get_loop_mode.m_call))MB_ptr_call
   Animation_methods.set_step._set_step = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "set_step", 373806689, loc))
-  Animation_methods.set_step.m_call = cast(type_of(Animation_methods.set_step.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.set_step.m_call = cast(type_of(Animation_methods.set_step.m_call))MB_ptr_call
   Animation_methods.get_step._get_step = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "get_step", 1740695150, loc))
-  Animation_methods.get_step.m_call = cast(type_of(Animation_methods.get_step.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.get_step.m_call = cast(type_of(Animation_methods.get_step.m_call))MB_ptr_call
   Animation_methods.clear._clear = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "clear", 3218959716, loc))
-  Animation_methods.clear.m_call = cast(type_of(Animation_methods.clear.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.clear.m_call = cast(type_of(Animation_methods.clear.m_call))MB_ptr_call
   Animation_methods.copy_track._copy_track = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "copy_track", 148001024, loc))
-  Animation_methods.copy_track.m_call = cast(type_of(Animation_methods.copy_track.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.copy_track.m_call = cast(type_of(Animation_methods.copy_track.m_call))MB_ptr_call
   Animation_methods.optimize._optimize = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "optimize", 3303583852, loc))
-  Animation_methods.optimize.m_call = cast(type_of(Animation_methods.optimize.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.optimize.m_call = cast(type_of(Animation_methods.optimize.m_call))MB_ptr_call
   Animation_methods.compress._compress = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "compress", 3608408117, loc))
-  Animation_methods.compress.m_call = cast(type_of(Animation_methods.compress.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Animation_methods.compress.m_call = cast(type_of(Animation_methods.compress.m_call))MB_ptr_call
   Animation_methods.is_capture_included._is_capture_included = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Animation, "is_capture_included", 36873697, loc))
-  Animation_methods.is_capture_included.m_call = cast(type_of(Animation_methods.is_capture_included.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-Animation_init_props :: proc(Animation_prop: ^Animation_properties, loc:= #caller_location) {
-
-  Animation_prop.length_float.get_length = cast(proc "c" (p_base: Animation, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_length")
-  Animation_prop.length_float.set_length = cast(proc "c" (p_base: Animation, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_length")
-
-  Animation_prop.loop_mode_Int.get_loop_mode = cast(proc "c" (p_base: Animation, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_loop_mode")
-  Animation_prop.loop_mode_Int.set_loop_mode = cast(proc "c" (p_base: Animation, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_loop_mode")
-
-  Animation_prop.step_float.get_step = cast(proc "c" (p_base: Animation, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_step")
-  Animation_prop.step_float.set_step = cast(proc "c" (p_base: Animation, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_step")
-
-  Animation_prop.capture_included_Bool.is_capture_included = cast(proc "c" (p_base: Animation, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_capture_included")
+  Animation_methods.is_capture_included.m_call = cast(type_of(Animation_methods.is_capture_included.m_call))MB_ptr_call
 };

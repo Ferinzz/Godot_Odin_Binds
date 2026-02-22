@@ -10,4 +10,5 @@ AudioStreamMicrophone :: ^GDW.Object
 AudioStreamMicrophone_MethodBind_List :: struct {
 };
 AudioStreamMicrophone_Init_ :: proc (AudioStreamMicrophone_methods: ^AudioStreamMicrophone_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

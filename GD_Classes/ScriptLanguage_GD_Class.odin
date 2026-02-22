@@ -18,4 +18,5 @@ ScriptLanguage_ScriptNameCasing :: enum i64 {
 ScriptLanguage_MethodBind_List :: struct {
 };
 ScriptLanguage_Init_ :: proc (ScriptLanguage_methods: ^ScriptLanguage_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

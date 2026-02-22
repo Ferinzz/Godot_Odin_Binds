@@ -30,14 +30,15 @@ OpenXRInteractionProfileMetadata_MethodBind_List :: struct {
   },
   };
 OpenXRInteractionProfileMetadata_Init_ :: proc (OpenXRInteractionProfileMetadata_methods: ^OpenXRInteractionProfileMetadata_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRInteractionProfileMetadata_methods.register_profile_rename._register_profile_rename = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRInteractionProfileMetadata, "register_profile_rename", 3186203200, loc))
-  OpenXRInteractionProfileMetadata_methods.register_profile_rename.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_profile_rename.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRInteractionProfileMetadata_methods.register_profile_rename.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_profile_rename.m_call))MB_ptr_call
   OpenXRInteractionProfileMetadata_methods.register_path_rename._register_path_rename = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRInteractionProfileMetadata, "register_path_rename", 3186203200, loc))
-  OpenXRInteractionProfileMetadata_methods.register_path_rename.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_path_rename.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRInteractionProfileMetadata_methods.register_path_rename.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_path_rename.m_call))MB_ptr_call
   OpenXRInteractionProfileMetadata_methods.register_top_level_path._register_top_level_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRInteractionProfileMetadata, "register_top_level_path", 254767734, loc))
-  OpenXRInteractionProfileMetadata_methods.register_top_level_path.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_top_level_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRInteractionProfileMetadata_methods.register_top_level_path.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_top_level_path.m_call))MB_ptr_call
   OpenXRInteractionProfileMetadata_methods.register_interaction_profile._register_interaction_profile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRInteractionProfileMetadata, "register_interaction_profile", 254767734, loc))
-  OpenXRInteractionProfileMetadata_methods.register_interaction_profile.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_interaction_profile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRInteractionProfileMetadata_methods.register_interaction_profile.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_interaction_profile.m_call))MB_ptr_call
   OpenXRInteractionProfileMetadata_methods.register_io_path._register_io_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRInteractionProfileMetadata, "register_io_path", 3443511926, loc))
-  OpenXRInteractionProfileMetadata_methods.register_io_path.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_io_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRInteractionProfileMetadata_methods.register_io_path.m_call = cast(type_of(OpenXRInteractionProfileMetadata_methods.register_io_path.m_call))MB_ptr_call
 };

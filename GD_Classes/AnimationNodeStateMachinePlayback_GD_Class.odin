@@ -66,32 +66,33 @@ AnimationNodeStateMachinePlayback_MethodBind_List :: struct {
   },
 };
 AnimationNodeStateMachinePlayback_Init_ :: proc (AnimationNodeStateMachinePlayback_methods: ^AnimationNodeStateMachinePlayback_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AnimationNodeStateMachinePlayback_methods.travel._travel = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "travel", 3823612587, loc))
-  AnimationNodeStateMachinePlayback_methods.travel.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.travel.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.travel.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.travel.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.start._start = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "start", 3823612587, loc))
-  AnimationNodeStateMachinePlayback_methods.start.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.start.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.start.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.start.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.next._next = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "next", 3218959716, loc))
-  AnimationNodeStateMachinePlayback_methods.next.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.next.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.next.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.next.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.stop._stop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "stop", 3218959716, loc))
-  AnimationNodeStateMachinePlayback_methods.stop.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.stop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.stop.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.stop.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.is_playing._is_playing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "is_playing", 36873697, loc))
-  AnimationNodeStateMachinePlayback_methods.is_playing.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.is_playing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.is_playing.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.is_playing.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_current_node._get_current_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_current_node", 2002593661, loc))
-  AnimationNodeStateMachinePlayback_methods.get_current_node.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_current_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_current_node.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_current_node.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_current_play_position._get_current_play_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_current_play_position", 1740695150, loc))
-  AnimationNodeStateMachinePlayback_methods.get_current_play_position.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_current_play_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_current_play_position.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_current_play_position.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_current_length._get_current_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_current_length", 1740695150, loc))
-  AnimationNodeStateMachinePlayback_methods.get_current_length.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_current_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_current_length.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_current_length.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_fading_from_node._get_fading_from_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_fading_from_node", 2002593661, loc))
-  AnimationNodeStateMachinePlayback_methods.get_fading_from_node.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_from_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_fading_from_node.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_from_node.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_fading_from_play_position._get_fading_from_play_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_fading_from_play_position", 1740695150, loc))
-  AnimationNodeStateMachinePlayback_methods.get_fading_from_play_position.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_from_play_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_fading_from_play_position.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_from_play_position.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_fading_from_length._get_fading_from_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_fading_from_length", 1740695150, loc))
-  AnimationNodeStateMachinePlayback_methods.get_fading_from_length.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_from_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_fading_from_length.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_from_length.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_fading_position._get_fading_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_fading_position", 1740695150, loc))
-  AnimationNodeStateMachinePlayback_methods.get_fading_position.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_fading_position.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_position.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_fading_length._get_fading_length = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_fading_length", 1740695150, loc))
-  AnimationNodeStateMachinePlayback_methods.get_fading_length.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_length.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_fading_length.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_fading_length.m_call))MB_ptr_call
   AnimationNodeStateMachinePlayback_methods.get_travel_path._get_travel_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeStateMachinePlayback, "get_travel_path", 3995934104, loc))
-  AnimationNodeStateMachinePlayback_methods.get_travel_path.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_travel_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNodeStateMachinePlayback_methods.get_travel_path.m_call = cast(type_of(AnimationNodeStateMachinePlayback_methods.get_travel_path.m_call))MB_ptr_call
 };

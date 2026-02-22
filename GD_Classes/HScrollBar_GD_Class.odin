@@ -10,4 +10,5 @@ HScrollBar :: ^GDW.Object
 HScrollBar_MethodBind_List :: struct {
 };
 HScrollBar_Init_ :: proc (HScrollBar_methods: ^HScrollBar_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

@@ -22,8 +22,9 @@ EditorResourcePreviewGenerator_MethodBind_List :: struct {
   },
   };
 EditorResourcePreviewGenerator_Init_ :: proc (EditorResourcePreviewGenerator_methods: ^EditorResourcePreviewGenerator_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorResourcePreviewGenerator_methods.request_draw_and_wait._request_draw_and_wait = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorResourcePreviewGenerator, "request_draw_and_wait", 145472570, loc))
-  EditorResourcePreviewGenerator_methods.request_draw_and_wait.m_call = cast(type_of(EditorResourcePreviewGenerator_methods.request_draw_and_wait.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorResourcePreviewGenerator_methods.request_draw_and_wait.m_call = cast(type_of(EditorResourcePreviewGenerator_methods.request_draw_and_wait.m_call))MB_ptr_call
 };
 
 EditorResourcePreviewGenerator_Init_Virtuals_Info :: proc(info: ^EditorResourcePreviewGenerator_Virtual_Info) {

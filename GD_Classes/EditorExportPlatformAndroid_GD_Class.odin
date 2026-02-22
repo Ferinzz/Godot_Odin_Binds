@@ -10,4 +10,5 @@ EditorExportPlatformAndroid :: ^GDW.Object
 EditorExportPlatformAndroid_MethodBind_List :: struct {
 };
 EditorExportPlatformAndroid_Init_ :: proc (EditorExportPlatformAndroid_methods: ^EditorExportPlatformAndroid_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

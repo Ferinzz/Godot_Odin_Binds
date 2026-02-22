@@ -14,6 +14,7 @@ FramebufferCacheRD_MethodBind_List :: struct {
   },
 };
 FramebufferCacheRD_Init_ :: proc (FramebufferCacheRD_methods: ^FramebufferCacheRD_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   FramebufferCacheRD_methods.get_cache_multipass._get_cache_multipass = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FramebufferCacheRD, "get_cache_multipass", 3437881813, loc))
-  FramebufferCacheRD_methods.get_cache_multipass.m_call = cast(type_of(FramebufferCacheRD_methods.get_cache_multipass.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FramebufferCacheRD_methods.get_cache_multipass.m_call = cast(type_of(FramebufferCacheRD_methods.get_cache_multipass.m_call))MB_ptr_call
 };

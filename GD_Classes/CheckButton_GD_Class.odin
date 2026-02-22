@@ -10,4 +10,5 @@ CheckButton :: ^GDW.Object
 CheckButton_MethodBind_List :: struct {
 };
 CheckButton_Init_ :: proc (CheckButton_methods: ^CheckButton_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

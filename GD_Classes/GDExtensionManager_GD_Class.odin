@@ -46,18 +46,19 @@ GDExtensionManager_MethodBind_List :: struct {
   },
 };
 GDExtensionManager_Init_ :: proc (GDExtensionManager_methods: ^GDExtensionManager_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   GDExtensionManager_methods.load_extension._load_extension = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GDExtensionManager, "load_extension", 4024158731, loc))
-  GDExtensionManager_methods.load_extension.m_call = cast(type_of(GDExtensionManager_methods.load_extension.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GDExtensionManager_methods.load_extension.m_call = cast(type_of(GDExtensionManager_methods.load_extension.m_call))MB_ptr_call
   GDExtensionManager_methods.load_extension_from_function._load_extension_from_function = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GDExtensionManager, "load_extension_from_function", 1565094761, loc))
-  GDExtensionManager_methods.load_extension_from_function.m_call = cast(type_of(GDExtensionManager_methods.load_extension_from_function.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GDExtensionManager_methods.load_extension_from_function.m_call = cast(type_of(GDExtensionManager_methods.load_extension_from_function.m_call))MB_ptr_call
   GDExtensionManager_methods.reload_extension._reload_extension = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GDExtensionManager, "reload_extension", 4024158731, loc))
-  GDExtensionManager_methods.reload_extension.m_call = cast(type_of(GDExtensionManager_methods.reload_extension.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GDExtensionManager_methods.reload_extension.m_call = cast(type_of(GDExtensionManager_methods.reload_extension.m_call))MB_ptr_call
   GDExtensionManager_methods.unload_extension._unload_extension = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GDExtensionManager, "unload_extension", 4024158731, loc))
-  GDExtensionManager_methods.unload_extension.m_call = cast(type_of(GDExtensionManager_methods.unload_extension.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GDExtensionManager_methods.unload_extension.m_call = cast(type_of(GDExtensionManager_methods.unload_extension.m_call))MB_ptr_call
   GDExtensionManager_methods.is_extension_loaded._is_extension_loaded = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GDExtensionManager, "is_extension_loaded", 3927539163, loc))
-  GDExtensionManager_methods.is_extension_loaded.m_call = cast(type_of(GDExtensionManager_methods.is_extension_loaded.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GDExtensionManager_methods.is_extension_loaded.m_call = cast(type_of(GDExtensionManager_methods.is_extension_loaded.m_call))MB_ptr_call
   GDExtensionManager_methods.get_loaded_extensions._get_loaded_extensions = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GDExtensionManager, "get_loaded_extensions", 1139954409, loc))
-  GDExtensionManager_methods.get_loaded_extensions.m_call = cast(type_of(GDExtensionManager_methods.get_loaded_extensions.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GDExtensionManager_methods.get_loaded_extensions.m_call = cast(type_of(GDExtensionManager_methods.get_loaded_extensions.m_call))MB_ptr_call
   GDExtensionManager_methods.get_extension._get_extension = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GDExtensionManager, "get_extension", 49743343, loc))
-  GDExtensionManager_methods.get_extension.m_call = cast(type_of(GDExtensionManager_methods.get_extension.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GDExtensionManager_methods.get_extension.m_call = cast(type_of(GDExtensionManager_methods.get_extension.m_call))MB_ptr_call
 };

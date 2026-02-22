@@ -30,14 +30,15 @@ PhysicalBoneSimulator3D_MethodBind_List :: struct {
   },
   };
 PhysicalBoneSimulator3D_Init_ :: proc (PhysicalBoneSimulator3D_methods: ^PhysicalBoneSimulator3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PhysicalBoneSimulator3D_methods.is_simulating_physics._is_simulating_physics = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicalBoneSimulator3D, "is_simulating_physics", 36873697, loc))
-  PhysicalBoneSimulator3D_methods.is_simulating_physics.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.is_simulating_physics.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicalBoneSimulator3D_methods.is_simulating_physics.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.is_simulating_physics.m_call))MB_ptr_call
   PhysicalBoneSimulator3D_methods.physical_bones_stop_simulation._physical_bones_stop_simulation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicalBoneSimulator3D, "physical_bones_stop_simulation", 3218959716, loc))
-  PhysicalBoneSimulator3D_methods.physical_bones_stop_simulation.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.physical_bones_stop_simulation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicalBoneSimulator3D_methods.physical_bones_stop_simulation.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.physical_bones_stop_simulation.m_call))MB_ptr_call
   PhysicalBoneSimulator3D_methods.physical_bones_start_simulation._physical_bones_start_simulation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicalBoneSimulator3D, "physical_bones_start_simulation", 2787316981, loc))
-  PhysicalBoneSimulator3D_methods.physical_bones_start_simulation.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.physical_bones_start_simulation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicalBoneSimulator3D_methods.physical_bones_start_simulation.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.physical_bones_start_simulation.m_call))MB_ptr_call
   PhysicalBoneSimulator3D_methods.physical_bones_add_collision_exception._physical_bones_add_collision_exception = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicalBoneSimulator3D, "physical_bones_add_collision_exception", 2722037293, loc))
-  PhysicalBoneSimulator3D_methods.physical_bones_add_collision_exception.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.physical_bones_add_collision_exception.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicalBoneSimulator3D_methods.physical_bones_add_collision_exception.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.physical_bones_add_collision_exception.m_call))MB_ptr_call
   PhysicalBoneSimulator3D_methods.physical_bones_remove_collision_exception._physical_bones_remove_collision_exception = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicalBoneSimulator3D, "physical_bones_remove_collision_exception", 2722037293, loc))
-  PhysicalBoneSimulator3D_methods.physical_bones_remove_collision_exception.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.physical_bones_remove_collision_exception.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicalBoneSimulator3D_methods.physical_bones_remove_collision_exception.m_call = cast(type_of(PhysicalBoneSimulator3D_methods.physical_bones_remove_collision_exception.m_call))MB_ptr_call
 };

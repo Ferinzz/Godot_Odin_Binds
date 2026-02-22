@@ -31,28 +31,6 @@ OpenXRHand_BoneUpdate :: enum i64 {
   BONE_UPDATE_ROTATION_ONLY = 1,
   BONE_UPDATE_MAX = 2,
 };
-OpenXRHand_properties :: struct {
-  hand_Int : struct {
-  get_hand: proc "c" (p_base: OpenXRHand, r_value: ^GDW.Int),
-  set_hand: proc "c" (p_base: OpenXRHand, p_value: ^GDW.Int),
-  },
-  motion_range_Int : struct {
-  get_motion_range: proc "c" (p_base: OpenXRHand, r_value: ^GDW.Int),
-  set_motion_range: proc "c" (p_base: OpenXRHand, p_value: ^GDW.Int),
-  },
-  hand_skeleton_NodePath : struct {
-  get_hand_skeleton: proc "c" (p_base: OpenXRHand, r_value: ^GDW.NodePath),
-  set_hand_skeleton: proc "c" (p_base: OpenXRHand, p_value: ^GDW.NodePath),
-  },
-  skeleton_rig_Int : struct {
-  get_skeleton_rig: proc "c" (p_base: OpenXRHand, r_value: ^GDW.Int),
-  set_skeleton_rig: proc "c" (p_base: OpenXRHand, p_value: ^GDW.Int),
-  },
-  bone_update_Int : struct {
-  get_bone_update: proc "c" (p_base: OpenXRHand, r_value: ^GDW.Int),
-  set_bone_update: proc "c" (p_base: OpenXRHand, p_value: ^GDW.Int),
-  },
-};
 OpenXRHand_MethodBind_List :: struct {
   set_hand: struct{
     using _set_hand: ^GDW.MethodBind,
@@ -96,41 +74,25 @@ OpenXRHand_MethodBind_List :: struct {
   },
 };
 OpenXRHand_Init_ :: proc (OpenXRHand_methods: ^OpenXRHand_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRHand_methods.set_hand._set_hand = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "set_hand", 1849328560, loc))
-  OpenXRHand_methods.set_hand.m_call = cast(type_of(OpenXRHand_methods.set_hand.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.set_hand.m_call = cast(type_of(OpenXRHand_methods.set_hand.m_call))MB_ptr_call
   OpenXRHand_methods.get_hand._get_hand = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "get_hand", 2850644561, loc))
-  OpenXRHand_methods.get_hand.m_call = cast(type_of(OpenXRHand_methods.get_hand.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.get_hand.m_call = cast(type_of(OpenXRHand_methods.get_hand.m_call))MB_ptr_call
   OpenXRHand_methods.set_hand_skeleton._set_hand_skeleton = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "set_hand_skeleton", 1348162250, loc))
-  OpenXRHand_methods.set_hand_skeleton.m_call = cast(type_of(OpenXRHand_methods.set_hand_skeleton.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.set_hand_skeleton.m_call = cast(type_of(OpenXRHand_methods.set_hand_skeleton.m_call))MB_ptr_call
   OpenXRHand_methods.get_hand_skeleton._get_hand_skeleton = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "get_hand_skeleton", 4075236667, loc))
-  OpenXRHand_methods.get_hand_skeleton.m_call = cast(type_of(OpenXRHand_methods.get_hand_skeleton.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.get_hand_skeleton.m_call = cast(type_of(OpenXRHand_methods.get_hand_skeleton.m_call))MB_ptr_call
   OpenXRHand_methods.set_motion_range._set_motion_range = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "set_motion_range", 3326516003, loc))
-  OpenXRHand_methods.set_motion_range.m_call = cast(type_of(OpenXRHand_methods.set_motion_range.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.set_motion_range.m_call = cast(type_of(OpenXRHand_methods.set_motion_range.m_call))MB_ptr_call
   OpenXRHand_methods.get_motion_range._get_motion_range = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "get_motion_range", 2191822314, loc))
-  OpenXRHand_methods.get_motion_range.m_call = cast(type_of(OpenXRHand_methods.get_motion_range.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.get_motion_range.m_call = cast(type_of(OpenXRHand_methods.get_motion_range.m_call))MB_ptr_call
   OpenXRHand_methods.set_skeleton_rig._set_skeleton_rig = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "set_skeleton_rig", 1528072213, loc))
-  OpenXRHand_methods.set_skeleton_rig.m_call = cast(type_of(OpenXRHand_methods.set_skeleton_rig.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.set_skeleton_rig.m_call = cast(type_of(OpenXRHand_methods.set_skeleton_rig.m_call))MB_ptr_call
   OpenXRHand_methods.get_skeleton_rig._get_skeleton_rig = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "get_skeleton_rig", 968409338, loc))
-  OpenXRHand_methods.get_skeleton_rig.m_call = cast(type_of(OpenXRHand_methods.get_skeleton_rig.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.get_skeleton_rig.m_call = cast(type_of(OpenXRHand_methods.get_skeleton_rig.m_call))MB_ptr_call
   OpenXRHand_methods.set_bone_update._set_bone_update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "set_bone_update", 3144625444, loc))
-  OpenXRHand_methods.set_bone_update.m_call = cast(type_of(OpenXRHand_methods.set_bone_update.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRHand_methods.set_bone_update.m_call = cast(type_of(OpenXRHand_methods.set_bone_update.m_call))MB_ptr_call
   OpenXRHand_methods.get_bone_update._get_bone_update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRHand, "get_bone_update", 1310695248, loc))
-  OpenXRHand_methods.get_bone_update.m_call = cast(type_of(OpenXRHand_methods.get_bone_update.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-OpenXRHand_init_props :: proc(OpenXRHand_prop: ^OpenXRHand_properties, loc:= #caller_location) {
-
-  OpenXRHand_prop.hand_Int.get_hand = cast(proc "c" (p_base: OpenXRHand, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_hand")
-  OpenXRHand_prop.hand_Int.set_hand = cast(proc "c" (p_base: OpenXRHand, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_hand")
-
-  OpenXRHand_prop.motion_range_Int.get_motion_range = cast(proc "c" (p_base: OpenXRHand, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_motion_range")
-  OpenXRHand_prop.motion_range_Int.set_motion_range = cast(proc "c" (p_base: OpenXRHand, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_motion_range")
-
-  OpenXRHand_prop.hand_skeleton_NodePath.get_hand_skeleton = cast(proc "c" (p_base: OpenXRHand, r_value: ^GDW.NodePath))GDW.Get_Method_Getter(.NODE_PATH, "get_hand_skeleton")
-  OpenXRHand_prop.hand_skeleton_NodePath.set_hand_skeleton = cast(proc "c" (p_base: OpenXRHand, p_value: ^GDW.NodePath))GDW.Get_Method_Setter(.NODE_PATH, "set_hand_skeleton")
-
-  OpenXRHand_prop.skeleton_rig_Int.get_skeleton_rig = cast(proc "c" (p_base: OpenXRHand, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_skeleton_rig")
-  OpenXRHand_prop.skeleton_rig_Int.set_skeleton_rig = cast(proc "c" (p_base: OpenXRHand, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_skeleton_rig")
-
-  OpenXRHand_prop.bone_update_Int.get_bone_update = cast(proc "c" (p_base: OpenXRHand, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_bone_update")
-  OpenXRHand_prop.bone_update_Int.set_bone_update = cast(proc "c" (p_base: OpenXRHand, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_bone_update")
+  OpenXRHand_methods.get_bone_update.m_call = cast(type_of(OpenXRHand_methods.get_bone_update.m_call))MB_ptr_call
 };

@@ -15,6 +15,7 @@ EditorTranslationParserPlugin_Virtual_Info :: struct {
 EditorTranslationParserPlugin_MethodBind_List :: struct {
 };
 EditorTranslationParserPlugin_Init_ :: proc (EditorTranslationParserPlugin_methods: ^EditorTranslationParserPlugin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 EditorTranslationParserPlugin_Init_Virtuals_Info :: proc(info: ^EditorTranslationParserPlugin_Virtual_Info) {

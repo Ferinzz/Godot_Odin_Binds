@@ -38,18 +38,19 @@ PropertyTweener_MethodBind_List :: struct {
   },
 };
 PropertyTweener_Init_ :: proc (PropertyTweener_methods: ^PropertyTweener_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PropertyTweener_methods.from._from = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PropertyTweener, "from", 4190193059, loc))
-  PropertyTweener_methods.from.m_call = cast(type_of(PropertyTweener_methods.from.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PropertyTweener_methods.from.m_call = cast(type_of(PropertyTweener_methods.from.m_call))MB_ptr_call
   PropertyTweener_methods.from_current._from_current = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PropertyTweener, "from_current", 4279177709, loc))
-  PropertyTweener_methods.from_current.m_call = cast(type_of(PropertyTweener_methods.from_current.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PropertyTweener_methods.from_current.m_call = cast(type_of(PropertyTweener_methods.from_current.m_call))MB_ptr_call
   PropertyTweener_methods.as_relative._as_relative = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PropertyTweener, "as_relative", 4279177709, loc))
-  PropertyTweener_methods.as_relative.m_call = cast(type_of(PropertyTweener_methods.as_relative.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PropertyTweener_methods.as_relative.m_call = cast(type_of(PropertyTweener_methods.as_relative.m_call))MB_ptr_call
   PropertyTweener_methods.set_trans._set_trans = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PropertyTweener, "set_trans", 1899107404, loc))
-  PropertyTweener_methods.set_trans.m_call = cast(type_of(PropertyTweener_methods.set_trans.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PropertyTweener_methods.set_trans.m_call = cast(type_of(PropertyTweener_methods.set_trans.m_call))MB_ptr_call
   PropertyTweener_methods.set_ease._set_ease = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PropertyTweener, "set_ease", 1080455622, loc))
-  PropertyTweener_methods.set_ease.m_call = cast(type_of(PropertyTweener_methods.set_ease.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PropertyTweener_methods.set_ease.m_call = cast(type_of(PropertyTweener_methods.set_ease.m_call))MB_ptr_call
   PropertyTweener_methods.set_custom_interpolator._set_custom_interpolator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PropertyTweener, "set_custom_interpolator", 3174170268, loc))
-  PropertyTweener_methods.set_custom_interpolator.m_call = cast(type_of(PropertyTweener_methods.set_custom_interpolator.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PropertyTweener_methods.set_custom_interpolator.m_call = cast(type_of(PropertyTweener_methods.set_custom_interpolator.m_call))MB_ptr_call
   PropertyTweener_methods.set_delay._set_delay = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PropertyTweener, "set_delay", 2171559331, loc))
-  PropertyTweener_methods.set_delay.m_call = cast(type_of(PropertyTweener_methods.set_delay.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PropertyTweener_methods.set_delay.m_call = cast(type_of(PropertyTweener_methods.set_delay.m_call))MB_ptr_call
 };

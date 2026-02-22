@@ -10,4 +10,5 @@ EditorExportPlatformIOS :: ^GDW.Object
 EditorExportPlatformIOS_MethodBind_List :: struct {
 };
 EditorExportPlatformIOS_Init_ :: proc (EditorExportPlatformIOS_methods: ^EditorExportPlatformIOS_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

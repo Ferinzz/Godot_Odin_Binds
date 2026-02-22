@@ -18,8 +18,9 @@ OpenXRSpatialContextPersistenceConfig_MethodBind_List :: struct {
   },
   };
 OpenXRSpatialContextPersistenceConfig_Init_ :: proc (OpenXRSpatialContextPersistenceConfig_methods: ^OpenXRSpatialContextPersistenceConfig_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRSpatialContextPersistenceConfig_methods.add_persistence_context._add_persistence_context = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialContextPersistenceConfig, "add_persistence_context", 2722037293, loc))
-  OpenXRSpatialContextPersistenceConfig_methods.add_persistence_context.m_call = cast(type_of(OpenXRSpatialContextPersistenceConfig_methods.add_persistence_context.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialContextPersistenceConfig_methods.add_persistence_context.m_call = cast(type_of(OpenXRSpatialContextPersistenceConfig_methods.add_persistence_context.m_call))MB_ptr_call
   OpenXRSpatialContextPersistenceConfig_methods.remove_persistence_context._remove_persistence_context = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialContextPersistenceConfig, "remove_persistence_context", 2722037293, loc))
-  OpenXRSpatialContextPersistenceConfig_methods.remove_persistence_context.m_call = cast(type_of(OpenXRSpatialContextPersistenceConfig_methods.remove_persistence_context.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRSpatialContextPersistenceConfig_methods.remove_persistence_context.m_call = cast(type_of(OpenXRSpatialContextPersistenceConfig_methods.remove_persistence_context.m_call))MB_ptr_call
 };

@@ -38,96 +38,6 @@ FileDialog_Customization :: enum i64 {
   CUSTOMIZATION_OVERWRITE_WARNING = 7,
   CUSTOMIZATION_DELETE = 8,
 };
-FileDialog_properties :: struct {
-  mode_overrides_title_Bool : struct {
-  is_mode_overriding_title: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_mode_overrides_title: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  file_mode_Int : struct {
-  get_file_mode: proc "c" (p_base: FileDialog, r_value: ^GDW.Int),
-  set_file_mode: proc "c" (p_base: FileDialog, p_value: ^GDW.Int),
-  },
-  display_mode_Int : struct {
-  get_display_mode: proc "c" (p_base: FileDialog, r_value: ^GDW.Int),
-  set_display_mode: proc "c" (p_base: FileDialog, p_value: ^GDW.Int),
-  },
-  access_Int : struct {
-  get_access: proc "c" (p_base: FileDialog, r_value: ^GDW.Int),
-  set_access: proc "c" (p_base: FileDialog, p_value: ^GDW.Int),
-  },
-  root_subfolder_gdstring : struct {
-  get_root_subfolder: proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring),
-  set_root_subfolder: proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring),
-  },
-  filters_PackedStringArray : struct {
-  get_filters: proc "c" (p_base: FileDialog, r_value: ^GDW.PackedStringArray),
-  set_filters: proc "c" (p_base: FileDialog, p_value: ^GDW.PackedStringArray),
-  },
-  filename_filter_gdstring : struct {
-  get_filename_filter: proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring),
-  set_filename_filter: proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring),
-  },
-  show_hidden_files_Bool : struct {
-  is_showing_hidden_files: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_show_hidden_files: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  use_native_dialog_Bool : struct {
-  get_use_native_dialog: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_use_native_dialog: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  option_count_Int : struct {
-  get_option_count: proc "c" (p_base: FileDialog, r_value: ^GDW.Int),
-  set_option_count: proc "c" (p_base: FileDialog, p_value: ^GDW.Int),
-  },
-  hidden_files_toggle_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  file_filter_toggle_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  file_sort_options_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  folder_creation_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  favorites_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  recent_list_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  layout_toggle_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  overwrite_warning_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  deleting_enabled_Bool : struct {
-  is_customization_flag_enabled: proc "c" (p_base: FileDialog, r_value: ^GDW.Bool),
-  set_customization_flag_enabled: proc "c" (p_base: FileDialog, p_value: ^GDW.Bool),
-  },
-  current_dir_gdstring : struct {
-  get_current_dir: proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring),
-  set_current_dir: proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring),
-  },
-  current_file_gdstring : struct {
-  get_current_file: proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring),
-  set_current_file: proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring),
-  },
-  current_path_gdstring : struct {
-  get_current_path: proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring),
-  set_current_path: proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring),
-  },
-};
 FileDialog_MethodBind_List :: struct {
   clear_filters: struct{
     using _clear_filters: ^GDW.MethodBind,
@@ -331,172 +241,105 @@ FileDialog_MethodBind_List :: struct {
   },
   };
 FileDialog_Init_ :: proc (FileDialog_methods: ^FileDialog_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   FileDialog_methods.clear_filters._clear_filters = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "clear_filters", 3218959716, loc))
-  FileDialog_methods.clear_filters.m_call = cast(type_of(FileDialog_methods.clear_filters.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.clear_filters.m_call = cast(type_of(FileDialog_methods.clear_filters.m_call))MB_ptr_call
   FileDialog_methods.add_filter._add_filter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "add_filter", 914921954, loc))
-  FileDialog_methods.add_filter.m_call = cast(type_of(FileDialog_methods.add_filter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.add_filter.m_call = cast(type_of(FileDialog_methods.add_filter.m_call))MB_ptr_call
   FileDialog_methods.set_filters._set_filters = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_filters", 4015028928, loc))
-  FileDialog_methods.set_filters.m_call = cast(type_of(FileDialog_methods.set_filters.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_filters.m_call = cast(type_of(FileDialog_methods.set_filters.m_call))MB_ptr_call
   FileDialog_methods.get_filters._get_filters = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_filters", 1139954409, loc))
-  FileDialog_methods.get_filters.m_call = cast(type_of(FileDialog_methods.get_filters.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_filters.m_call = cast(type_of(FileDialog_methods.get_filters.m_call))MB_ptr_call
   FileDialog_methods.clear_filename_filter._clear_filename_filter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "clear_filename_filter", 3218959716, loc))
-  FileDialog_methods.clear_filename_filter.m_call = cast(type_of(FileDialog_methods.clear_filename_filter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.clear_filename_filter.m_call = cast(type_of(FileDialog_methods.clear_filename_filter.m_call))MB_ptr_call
   FileDialog_methods.set_filename_filter._set_filename_filter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_filename_filter", 83702148, loc))
-  FileDialog_methods.set_filename_filter.m_call = cast(type_of(FileDialog_methods.set_filename_filter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_filename_filter.m_call = cast(type_of(FileDialog_methods.set_filename_filter.m_call))MB_ptr_call
   FileDialog_methods.get_filename_filter._get_filename_filter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_filename_filter", 201670096, loc))
-  FileDialog_methods.get_filename_filter.m_call = cast(type_of(FileDialog_methods.get_filename_filter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_filename_filter.m_call = cast(type_of(FileDialog_methods.get_filename_filter.m_call))MB_ptr_call
   FileDialog_methods.get_option_name._get_option_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_option_name", 844755477, loc))
-  FileDialog_methods.get_option_name.m_call = cast(type_of(FileDialog_methods.get_option_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_option_name.m_call = cast(type_of(FileDialog_methods.get_option_name.m_call))MB_ptr_call
   FileDialog_methods.get_option_values._get_option_values = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_option_values", 647634434, loc))
-  FileDialog_methods.get_option_values.m_call = cast(type_of(FileDialog_methods.get_option_values.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_option_values.m_call = cast(type_of(FileDialog_methods.get_option_values.m_call))MB_ptr_call
   FileDialog_methods.get_option_default._get_option_default = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_option_default", 923996154, loc))
-  FileDialog_methods.get_option_default.m_call = cast(type_of(FileDialog_methods.get_option_default.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_option_default.m_call = cast(type_of(FileDialog_methods.get_option_default.m_call))MB_ptr_call
   FileDialog_methods.set_option_name._set_option_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_option_name", 501894301, loc))
-  FileDialog_methods.set_option_name.m_call = cast(type_of(FileDialog_methods.set_option_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_option_name.m_call = cast(type_of(FileDialog_methods.set_option_name.m_call))MB_ptr_call
   FileDialog_methods.set_option_values._set_option_values = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_option_values", 3353661094, loc))
-  FileDialog_methods.set_option_values.m_call = cast(type_of(FileDialog_methods.set_option_values.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_option_values.m_call = cast(type_of(FileDialog_methods.set_option_values.m_call))MB_ptr_call
   FileDialog_methods.set_option_default._set_option_default = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_option_default", 3937882851, loc))
-  FileDialog_methods.set_option_default.m_call = cast(type_of(FileDialog_methods.set_option_default.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_option_default.m_call = cast(type_of(FileDialog_methods.set_option_default.m_call))MB_ptr_call
   FileDialog_methods.set_option_count._set_option_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_option_count", 1286410249, loc))
-  FileDialog_methods.set_option_count.m_call = cast(type_of(FileDialog_methods.set_option_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_option_count.m_call = cast(type_of(FileDialog_methods.set_option_count.m_call))MB_ptr_call
   FileDialog_methods.get_option_count._get_option_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_option_count", 3905245786, loc))
-  FileDialog_methods.get_option_count.m_call = cast(type_of(FileDialog_methods.get_option_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_option_count.m_call = cast(type_of(FileDialog_methods.get_option_count.m_call))MB_ptr_call
   FileDialog_methods.add_option._add_option = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "add_option", 149592325, loc))
-  FileDialog_methods.add_option.m_call = cast(type_of(FileDialog_methods.add_option.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.add_option.m_call = cast(type_of(FileDialog_methods.add_option.m_call))MB_ptr_call
   FileDialog_methods.get_selected_options._get_selected_options = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_selected_options", 3102165223, loc))
-  FileDialog_methods.get_selected_options.m_call = cast(type_of(FileDialog_methods.get_selected_options.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_selected_options.m_call = cast(type_of(FileDialog_methods.get_selected_options.m_call))MB_ptr_call
   FileDialog_methods.get_current_dir._get_current_dir = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_current_dir", 201670096, loc))
-  FileDialog_methods.get_current_dir.m_call = cast(type_of(FileDialog_methods.get_current_dir.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_current_dir.m_call = cast(type_of(FileDialog_methods.get_current_dir.m_call))MB_ptr_call
   FileDialog_methods.get_current_file._get_current_file = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_current_file", 201670096, loc))
-  FileDialog_methods.get_current_file.m_call = cast(type_of(FileDialog_methods.get_current_file.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_current_file.m_call = cast(type_of(FileDialog_methods.get_current_file.m_call))MB_ptr_call
   FileDialog_methods.get_current_path._get_current_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_current_path", 201670096, loc))
-  FileDialog_methods.get_current_path.m_call = cast(type_of(FileDialog_methods.get_current_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_current_path.m_call = cast(type_of(FileDialog_methods.get_current_path.m_call))MB_ptr_call
   FileDialog_methods.set_current_dir._set_current_dir = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_current_dir", 83702148, loc))
-  FileDialog_methods.set_current_dir.m_call = cast(type_of(FileDialog_methods.set_current_dir.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_current_dir.m_call = cast(type_of(FileDialog_methods.set_current_dir.m_call))MB_ptr_call
   FileDialog_methods.set_current_file._set_current_file = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_current_file", 83702148, loc))
-  FileDialog_methods.set_current_file.m_call = cast(type_of(FileDialog_methods.set_current_file.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_current_file.m_call = cast(type_of(FileDialog_methods.set_current_file.m_call))MB_ptr_call
   FileDialog_methods.set_current_path._set_current_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_current_path", 83702148, loc))
-  FileDialog_methods.set_current_path.m_call = cast(type_of(FileDialog_methods.set_current_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_current_path.m_call = cast(type_of(FileDialog_methods.set_current_path.m_call))MB_ptr_call
   FileDialog_methods.set_mode_overrides_title._set_mode_overrides_title = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_mode_overrides_title", 2586408642, loc))
-  FileDialog_methods.set_mode_overrides_title.m_call = cast(type_of(FileDialog_methods.set_mode_overrides_title.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_mode_overrides_title.m_call = cast(type_of(FileDialog_methods.set_mode_overrides_title.m_call))MB_ptr_call
   FileDialog_methods.is_mode_overriding_title._is_mode_overriding_title = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "is_mode_overriding_title", 36873697, loc))
-  FileDialog_methods.is_mode_overriding_title.m_call = cast(type_of(FileDialog_methods.is_mode_overriding_title.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.is_mode_overriding_title.m_call = cast(type_of(FileDialog_methods.is_mode_overriding_title.m_call))MB_ptr_call
   FileDialog_methods.set_file_mode._set_file_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_file_mode", 3654936397, loc))
-  FileDialog_methods.set_file_mode.m_call = cast(type_of(FileDialog_methods.set_file_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_file_mode.m_call = cast(type_of(FileDialog_methods.set_file_mode.m_call))MB_ptr_call
   FileDialog_methods.get_file_mode._get_file_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_file_mode", 4074825319, loc))
-  FileDialog_methods.get_file_mode.m_call = cast(type_of(FileDialog_methods.get_file_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_file_mode.m_call = cast(type_of(FileDialog_methods.get_file_mode.m_call))MB_ptr_call
   FileDialog_methods.set_display_mode._set_display_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_display_mode", 2692197101, loc))
-  FileDialog_methods.set_display_mode.m_call = cast(type_of(FileDialog_methods.set_display_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_display_mode.m_call = cast(type_of(FileDialog_methods.set_display_mode.m_call))MB_ptr_call
   FileDialog_methods.get_display_mode._get_display_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_display_mode", 1092104624, loc))
-  FileDialog_methods.get_display_mode.m_call = cast(type_of(FileDialog_methods.get_display_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_display_mode.m_call = cast(type_of(FileDialog_methods.get_display_mode.m_call))MB_ptr_call
   FileDialog_methods.get_vbox._get_vbox = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_vbox", 915758477, loc))
-  FileDialog_methods.get_vbox.m_call = cast(type_of(FileDialog_methods.get_vbox.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_vbox.m_call = cast(type_of(FileDialog_methods.get_vbox.m_call))MB_ptr_call
   FileDialog_methods.get_line_edit._get_line_edit = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_line_edit", 4071694264, loc))
-  FileDialog_methods.get_line_edit.m_call = cast(type_of(FileDialog_methods.get_line_edit.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_line_edit.m_call = cast(type_of(FileDialog_methods.get_line_edit.m_call))MB_ptr_call
   FileDialog_methods.set_access._set_access = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_access", 4104413466, loc))
-  FileDialog_methods.set_access.m_call = cast(type_of(FileDialog_methods.set_access.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_access.m_call = cast(type_of(FileDialog_methods.set_access.m_call))MB_ptr_call
   FileDialog_methods.get_access._get_access = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_access", 3344081076, loc))
-  FileDialog_methods.get_access.m_call = cast(type_of(FileDialog_methods.get_access.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_access.m_call = cast(type_of(FileDialog_methods.get_access.m_call))MB_ptr_call
   FileDialog_methods.set_root_subfolder._set_root_subfolder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_root_subfolder", 83702148, loc))
-  FileDialog_methods.set_root_subfolder.m_call = cast(type_of(FileDialog_methods.set_root_subfolder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_root_subfolder.m_call = cast(type_of(FileDialog_methods.set_root_subfolder.m_call))MB_ptr_call
   FileDialog_methods.get_root_subfolder._get_root_subfolder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_root_subfolder", 201670096, loc))
-  FileDialog_methods.get_root_subfolder.m_call = cast(type_of(FileDialog_methods.get_root_subfolder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_root_subfolder.m_call = cast(type_of(FileDialog_methods.get_root_subfolder.m_call))MB_ptr_call
   FileDialog_methods.set_show_hidden_files._set_show_hidden_files = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_show_hidden_files", 2586408642, loc))
-  FileDialog_methods.set_show_hidden_files.m_call = cast(type_of(FileDialog_methods.set_show_hidden_files.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_show_hidden_files.m_call = cast(type_of(FileDialog_methods.set_show_hidden_files.m_call))MB_ptr_call
   FileDialog_methods.is_showing_hidden_files._is_showing_hidden_files = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "is_showing_hidden_files", 36873697, loc))
-  FileDialog_methods.is_showing_hidden_files.m_call = cast(type_of(FileDialog_methods.is_showing_hidden_files.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.is_showing_hidden_files.m_call = cast(type_of(FileDialog_methods.is_showing_hidden_files.m_call))MB_ptr_call
   FileDialog_methods.set_use_native_dialog._set_use_native_dialog = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_use_native_dialog", 2586408642, loc))
-  FileDialog_methods.set_use_native_dialog.m_call = cast(type_of(FileDialog_methods.set_use_native_dialog.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_use_native_dialog.m_call = cast(type_of(FileDialog_methods.set_use_native_dialog.m_call))MB_ptr_call
   FileDialog_methods.get_use_native_dialog._get_use_native_dialog = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_use_native_dialog", 36873697, loc))
-  FileDialog_methods.get_use_native_dialog.m_call = cast(type_of(FileDialog_methods.get_use_native_dialog.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_use_native_dialog.m_call = cast(type_of(FileDialog_methods.get_use_native_dialog.m_call))MB_ptr_call
   FileDialog_methods.set_customization_flag_enabled._set_customization_flag_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_customization_flag_enabled", 3849177100, loc))
-  FileDialog_methods.set_customization_flag_enabled.m_call = cast(type_of(FileDialog_methods.set_customization_flag_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_customization_flag_enabled.m_call = cast(type_of(FileDialog_methods.set_customization_flag_enabled.m_call))MB_ptr_call
   FileDialog_methods.is_customization_flag_enabled._is_customization_flag_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "is_customization_flag_enabled", 3722277863, loc))
-  FileDialog_methods.is_customization_flag_enabled.m_call = cast(type_of(FileDialog_methods.is_customization_flag_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.is_customization_flag_enabled.m_call = cast(type_of(FileDialog_methods.is_customization_flag_enabled.m_call))MB_ptr_call
   FileDialog_methods.deselect_all._deselect_all = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "deselect_all", 3218959716, loc))
-  FileDialog_methods.deselect_all.m_call = cast(type_of(FileDialog_methods.deselect_all.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.deselect_all.m_call = cast(type_of(FileDialog_methods.deselect_all.m_call))MB_ptr_call
   FileDialog_methods.set_favorite_list._set_favorite_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_favorite_list", 4015028928, loc))
-  FileDialog_methods.set_favorite_list.m_call = cast(type_of(FileDialog_methods.set_favorite_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_favorite_list.m_call = cast(type_of(FileDialog_methods.set_favorite_list.m_call))MB_ptr_call
   FileDialog_methods.get_favorite_list._get_favorite_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_favorite_list", 2981934095, loc))
-  FileDialog_methods.get_favorite_list.m_call = cast(type_of(FileDialog_methods.get_favorite_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_favorite_list.m_call = cast(type_of(FileDialog_methods.get_favorite_list.m_call))MB_ptr_call
   FileDialog_methods.set_recent_list._set_recent_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_recent_list", 4015028928, loc))
-  FileDialog_methods.set_recent_list.m_call = cast(type_of(FileDialog_methods.set_recent_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_recent_list.m_call = cast(type_of(FileDialog_methods.set_recent_list.m_call))MB_ptr_call
   FileDialog_methods.get_recent_list._get_recent_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "get_recent_list", 2981934095, loc))
-  FileDialog_methods.get_recent_list.m_call = cast(type_of(FileDialog_methods.get_recent_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.get_recent_list.m_call = cast(type_of(FileDialog_methods.get_recent_list.m_call))MB_ptr_call
   FileDialog_methods.set_get_icon_callback._set_get_icon_callback = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_get_icon_callback", 1611583062, loc))
-  FileDialog_methods.set_get_icon_callback.m_call = cast(type_of(FileDialog_methods.set_get_icon_callback.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_get_icon_callback.m_call = cast(type_of(FileDialog_methods.set_get_icon_callback.m_call))MB_ptr_call
   FileDialog_methods.set_get_thumbnail_callback._set_get_thumbnail_callback = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "set_get_thumbnail_callback", 1611583062, loc))
-  FileDialog_methods.set_get_thumbnail_callback.m_call = cast(type_of(FileDialog_methods.set_get_thumbnail_callback.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.set_get_thumbnail_callback.m_call = cast(type_of(FileDialog_methods.set_get_thumbnail_callback.m_call))MB_ptr_call
   FileDialog_methods.popup_file_dialog._popup_file_dialog = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "popup_file_dialog", 3218959716, loc))
-  FileDialog_methods.popup_file_dialog.m_call = cast(type_of(FileDialog_methods.popup_file_dialog.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  FileDialog_methods.popup_file_dialog.m_call = cast(type_of(FileDialog_methods.popup_file_dialog.m_call))MB_ptr_call
   FileDialog_methods.invalidate._invalidate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.FileDialog, "invalidate", 3218959716, loc))
-  FileDialog_methods.invalidate.m_call = cast(type_of(FileDialog_methods.invalidate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-FileDialog_init_props :: proc(FileDialog_prop: ^FileDialog_properties, loc:= #caller_location) {
-
-  FileDialog_prop.mode_overrides_title_Bool.is_mode_overriding_title = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_mode_overriding_title")
-  FileDialog_prop.mode_overrides_title_Bool.set_mode_overrides_title = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_mode_overrides_title")
-
-  FileDialog_prop.file_mode_Int.get_file_mode = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_file_mode")
-  FileDialog_prop.file_mode_Int.set_file_mode = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_file_mode")
-
-  FileDialog_prop.display_mode_Int.get_display_mode = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_display_mode")
-  FileDialog_prop.display_mode_Int.set_display_mode = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_display_mode")
-
-  FileDialog_prop.access_Int.get_access = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_access")
-  FileDialog_prop.access_Int.set_access = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_access")
-
-  FileDialog_prop.root_subfolder_gdstring.get_root_subfolder = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_root_subfolder")
-  FileDialog_prop.root_subfolder_gdstring.set_root_subfolder = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_root_subfolder")
-
-  FileDialog_prop.filters_PackedStringArray.get_filters = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.PackedStringArray))GDW.Get_Method_Getter(.PACKED_STRING_ARRAY, "get_filters")
-  FileDialog_prop.filters_PackedStringArray.set_filters = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.PackedStringArray))GDW.Get_Method_Setter(.PACKED_STRING_ARRAY, "set_filters")
-
-  FileDialog_prop.filename_filter_gdstring.get_filename_filter = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_filename_filter")
-  FileDialog_prop.filename_filter_gdstring.set_filename_filter = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_filename_filter")
-
-  FileDialog_prop.show_hidden_files_Bool.is_showing_hidden_files = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_showing_hidden_files")
-  FileDialog_prop.show_hidden_files_Bool.set_show_hidden_files = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_show_hidden_files")
-
-  FileDialog_prop.use_native_dialog_Bool.get_use_native_dialog = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_use_native_dialog")
-  FileDialog_prop.use_native_dialog_Bool.set_use_native_dialog = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_use_native_dialog")
-
-  FileDialog_prop.option_count_Int.get_option_count = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_option_count")
-  FileDialog_prop.option_count_Int.set_option_count = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_option_count")
-
-  FileDialog_prop.hidden_files_toggle_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.hidden_files_toggle_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.file_filter_toggle_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.file_filter_toggle_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.file_sort_options_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.file_sort_options_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.folder_creation_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.folder_creation_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.favorites_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.favorites_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.recent_list_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.recent_list_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.layout_toggle_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.layout_toggle_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.overwrite_warning_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.overwrite_warning_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.deleting_enabled_Bool.is_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_customization_flag_enabled")
-  FileDialog_prop.deleting_enabled_Bool.set_customization_flag_enabled = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_customization_flag_enabled")
-
-  FileDialog_prop.current_dir_gdstring.get_current_dir = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_current_dir")
-  FileDialog_prop.current_dir_gdstring.set_current_dir = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_current_dir")
-
-  FileDialog_prop.current_file_gdstring.get_current_file = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_current_file")
-  FileDialog_prop.current_file_gdstring.set_current_file = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_current_file")
-
-  FileDialog_prop.current_path_gdstring.get_current_path = cast(proc "c" (p_base: FileDialog, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_current_path")
-  FileDialog_prop.current_path_gdstring.set_current_path = cast(proc "c" (p_base: FileDialog, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_current_path")
+  FileDialog_methods.invalidate.m_call = cast(type_of(FileDialog_methods.invalidate.m_call))MB_ptr_call
 };

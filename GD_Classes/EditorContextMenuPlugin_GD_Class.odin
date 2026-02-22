@@ -40,14 +40,15 @@ EditorContextMenuPlugin_MethodBind_List :: struct {
   },
   };
 EditorContextMenuPlugin_Init_ :: proc (EditorContextMenuPlugin_methods: ^EditorContextMenuPlugin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorContextMenuPlugin_methods.add_menu_shortcut._add_menu_shortcut = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorContextMenuPlugin, "add_menu_shortcut", 851596305, loc))
-  EditorContextMenuPlugin_methods.add_menu_shortcut.m_call = cast(type_of(EditorContextMenuPlugin_methods.add_menu_shortcut.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorContextMenuPlugin_methods.add_menu_shortcut.m_call = cast(type_of(EditorContextMenuPlugin_methods.add_menu_shortcut.m_call))MB_ptr_call
   EditorContextMenuPlugin_methods.add_context_menu_item._add_context_menu_item = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorContextMenuPlugin, "add_context_menu_item", 2748336951, loc))
-  EditorContextMenuPlugin_methods.add_context_menu_item.m_call = cast(type_of(EditorContextMenuPlugin_methods.add_context_menu_item.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorContextMenuPlugin_methods.add_context_menu_item.m_call = cast(type_of(EditorContextMenuPlugin_methods.add_context_menu_item.m_call))MB_ptr_call
   EditorContextMenuPlugin_methods.add_context_menu_item_from_shortcut._add_context_menu_item_from_shortcut = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorContextMenuPlugin, "add_context_menu_item_from_shortcut", 3799546916, loc))
-  EditorContextMenuPlugin_methods.add_context_menu_item_from_shortcut.m_call = cast(type_of(EditorContextMenuPlugin_methods.add_context_menu_item_from_shortcut.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorContextMenuPlugin_methods.add_context_menu_item_from_shortcut.m_call = cast(type_of(EditorContextMenuPlugin_methods.add_context_menu_item_from_shortcut.m_call))MB_ptr_call
   EditorContextMenuPlugin_methods.add_context_submenu_item._add_context_submenu_item = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorContextMenuPlugin, "add_context_submenu_item", 1994674995, loc))
-  EditorContextMenuPlugin_methods.add_context_submenu_item.m_call = cast(type_of(EditorContextMenuPlugin_methods.add_context_submenu_item.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorContextMenuPlugin_methods.add_context_submenu_item.m_call = cast(type_of(EditorContextMenuPlugin_methods.add_context_submenu_item.m_call))MB_ptr_call
 };
 
 EditorContextMenuPlugin_Init_Virtuals_Info :: proc(info: ^EditorContextMenuPlugin_Virtual_Info) {

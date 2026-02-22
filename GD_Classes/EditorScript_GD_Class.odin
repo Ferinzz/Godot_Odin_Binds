@@ -26,12 +26,13 @@ EditorScript_MethodBind_List :: struct {
   },
 };
 EditorScript_Init_ :: proc (EditorScript_methods: ^EditorScript_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorScript_methods.add_root_node._add_root_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorScript, "add_root_node", 1078189570, loc))
-  EditorScript_methods.add_root_node.m_call = cast(type_of(EditorScript_methods.add_root_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorScript_methods.add_root_node.m_call = cast(type_of(EditorScript_methods.add_root_node.m_call))MB_ptr_call
   EditorScript_methods.get_scene._get_scene = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorScript, "get_scene", 3160264692, loc))
-  EditorScript_methods.get_scene.m_call = cast(type_of(EditorScript_methods.get_scene.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorScript_methods.get_scene.m_call = cast(type_of(EditorScript_methods.get_scene.m_call))MB_ptr_call
   EditorScript_methods.get_editor_interface._get_editor_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorScript, "get_editor_interface", 1976662476, loc))
-  EditorScript_methods.get_editor_interface.m_call = cast(type_of(EditorScript_methods.get_editor_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorScript_methods.get_editor_interface.m_call = cast(type_of(EditorScript_methods.get_editor_interface.m_call))MB_ptr_call
 };
 
 EditorScript_Init_Virtuals_Info :: proc(info: ^EditorScript_Virtual_Info) {

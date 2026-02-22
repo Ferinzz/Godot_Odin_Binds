@@ -17,6 +17,7 @@ PacketPeerExtension_Virtual_Info :: struct {
 PacketPeerExtension_MethodBind_List :: struct {
 };
 PacketPeerExtension_Init_ :: proc (PacketPeerExtension_methods: ^PacketPeerExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 PacketPeerExtension_Init_Virtuals_Info :: proc(info: ^PacketPeerExtension_Virtual_Info) {

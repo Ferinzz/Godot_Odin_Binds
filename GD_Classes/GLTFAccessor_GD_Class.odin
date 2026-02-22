@@ -32,68 +32,6 @@ GLTFAccessor_GLTFComponentType :: enum i64 {
   COMPONENT_TYPE_SIGNED_LONG = 5134,
   COMPONENT_TYPE_UNSIGNED_LONG = 5135,
 };
-GLTFAccessor_properties :: struct {
-  buffer_view_Int : struct {
-  get_buffer_view: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_buffer_view: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  byte_offset_Int : struct {
-  get_byte_offset: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_byte_offset: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  component_type_Int : struct {
-  get_component_type: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_component_type: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  normalized_Bool : struct {
-  get_normalized: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Bool),
-  set_normalized: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Bool),
-  },
-  count_Int : struct {
-  get_count: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_count: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  accessor_type_Int : struct {
-  get_accessor_type: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_accessor_type: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  type_Int : struct {
-  get_type: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_type: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  min_PackedFloat64Array : struct {
-  get_min: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.PackedFloat64Array),
-  set_min: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.PackedFloat64Array),
-  },
-  max_PackedFloat64Array : struct {
-  get_max: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.PackedFloat64Array),
-  set_max: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.PackedFloat64Array),
-  },
-  sparse_count_Int : struct {
-  get_sparse_count: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_sparse_count: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  sparse_indices_buffer_view_Int : struct {
-  get_sparse_indices_buffer_view: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_sparse_indices_buffer_view: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  sparse_indices_byte_offset_Int : struct {
-  get_sparse_indices_byte_offset: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_sparse_indices_byte_offset: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  sparse_indices_component_type_Int : struct {
-  get_sparse_indices_component_type: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_sparse_indices_component_type: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  sparse_values_buffer_view_Int : struct {
-  get_sparse_values_buffer_view: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_sparse_values_buffer_view: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-  sparse_values_byte_offset_Int : struct {
-  get_sparse_values_byte_offset: proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int),
-  set_sparse_values_byte_offset: proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int),
-  },
-};
 GLTFAccessor_MethodBind_List :: struct {
   from_dictionary: struct{
     using _from_dictionary: ^GDW.MethodBind,
@@ -225,115 +163,69 @@ GLTFAccessor_MethodBind_List :: struct {
   },
   };
 GLTFAccessor_Init_ :: proc (GLTFAccessor_methods: ^GLTFAccessor_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   GLTFAccessor_methods.from_dictionary._from_dictionary = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "from_dictionary", 3495091019, loc))
-  GLTFAccessor_methods.from_dictionary.m_call = cast(type_of(GLTFAccessor_methods.from_dictionary.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.from_dictionary.m_call = cast(type_of(GLTFAccessor_methods.from_dictionary.m_call))MB_ptr_call
   GLTFAccessor_methods.to_dictionary._to_dictionary = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "to_dictionary", 3102165223, loc))
-  GLTFAccessor_methods.to_dictionary.m_call = cast(type_of(GLTFAccessor_methods.to_dictionary.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.to_dictionary.m_call = cast(type_of(GLTFAccessor_methods.to_dictionary.m_call))MB_ptr_call
   GLTFAccessor_methods.get_buffer_view._get_buffer_view = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_buffer_view", 3905245786, loc))
-  GLTFAccessor_methods.get_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.get_buffer_view.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.get_buffer_view.m_call))MB_ptr_call
   GLTFAccessor_methods.set_buffer_view._set_buffer_view = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_buffer_view", 1286410249, loc))
-  GLTFAccessor_methods.set_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.set_buffer_view.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.set_buffer_view.m_call))MB_ptr_call
   GLTFAccessor_methods.get_byte_offset._get_byte_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_byte_offset", 3905245786, loc))
-  GLTFAccessor_methods.get_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.get_byte_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.get_byte_offset.m_call))MB_ptr_call
   GLTFAccessor_methods.set_byte_offset._set_byte_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_byte_offset", 1286410249, loc))
-  GLTFAccessor_methods.set_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.set_byte_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.set_byte_offset.m_call))MB_ptr_call
   GLTFAccessor_methods.get_component_type._get_component_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_component_type", 852227802, loc))
-  GLTFAccessor_methods.get_component_type.m_call = cast(type_of(GLTFAccessor_methods.get_component_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_component_type.m_call = cast(type_of(GLTFAccessor_methods.get_component_type.m_call))MB_ptr_call
   GLTFAccessor_methods.set_component_type._set_component_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_component_type", 1780020221, loc))
-  GLTFAccessor_methods.set_component_type.m_call = cast(type_of(GLTFAccessor_methods.set_component_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_component_type.m_call = cast(type_of(GLTFAccessor_methods.set_component_type.m_call))MB_ptr_call
   GLTFAccessor_methods.get_normalized._get_normalized = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_normalized", 36873697, loc))
-  GLTFAccessor_methods.get_normalized.m_call = cast(type_of(GLTFAccessor_methods.get_normalized.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_normalized.m_call = cast(type_of(GLTFAccessor_methods.get_normalized.m_call))MB_ptr_call
   GLTFAccessor_methods.set_normalized._set_normalized = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_normalized", 2586408642, loc))
-  GLTFAccessor_methods.set_normalized.m_call = cast(type_of(GLTFAccessor_methods.set_normalized.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_normalized.m_call = cast(type_of(GLTFAccessor_methods.set_normalized.m_call))MB_ptr_call
   GLTFAccessor_methods.get_count._get_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_count", 3905245786, loc))
-  GLTFAccessor_methods.get_count.m_call = cast(type_of(GLTFAccessor_methods.get_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_count.m_call = cast(type_of(GLTFAccessor_methods.get_count.m_call))MB_ptr_call
   GLTFAccessor_methods.set_count._set_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_count", 1286410249, loc))
-  GLTFAccessor_methods.set_count.m_call = cast(type_of(GLTFAccessor_methods.set_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_count.m_call = cast(type_of(GLTFAccessor_methods.set_count.m_call))MB_ptr_call
   GLTFAccessor_methods.get_accessor_type._get_accessor_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_accessor_type", 1998183368, loc))
-  GLTFAccessor_methods.get_accessor_type.m_call = cast(type_of(GLTFAccessor_methods.get_accessor_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_accessor_type.m_call = cast(type_of(GLTFAccessor_methods.get_accessor_type.m_call))MB_ptr_call
   GLTFAccessor_methods.set_accessor_type._set_accessor_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_accessor_type", 2347728198, loc))
-  GLTFAccessor_methods.set_accessor_type.m_call = cast(type_of(GLTFAccessor_methods.set_accessor_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_accessor_type.m_call = cast(type_of(GLTFAccessor_methods.set_accessor_type.m_call))MB_ptr_call
   GLTFAccessor_methods.get_type._get_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_type", 3905245786, loc))
-  GLTFAccessor_methods.get_type.m_call = cast(type_of(GLTFAccessor_methods.get_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_type.m_call = cast(type_of(GLTFAccessor_methods.get_type.m_call))MB_ptr_call
   GLTFAccessor_methods.set_type._set_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_type", 1286410249, loc))
-  GLTFAccessor_methods.set_type.m_call = cast(type_of(GLTFAccessor_methods.set_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_type.m_call = cast(type_of(GLTFAccessor_methods.set_type.m_call))MB_ptr_call
   GLTFAccessor_methods.get_min._get_min = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_min", 547233126, loc))
-  GLTFAccessor_methods.get_min.m_call = cast(type_of(GLTFAccessor_methods.get_min.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_min.m_call = cast(type_of(GLTFAccessor_methods.get_min.m_call))MB_ptr_call
   GLTFAccessor_methods.set_min._set_min = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_min", 2576592201, loc))
-  GLTFAccessor_methods.set_min.m_call = cast(type_of(GLTFAccessor_methods.set_min.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_min.m_call = cast(type_of(GLTFAccessor_methods.set_min.m_call))MB_ptr_call
   GLTFAccessor_methods.get_max._get_max = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_max", 547233126, loc))
-  GLTFAccessor_methods.get_max.m_call = cast(type_of(GLTFAccessor_methods.get_max.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_max.m_call = cast(type_of(GLTFAccessor_methods.get_max.m_call))MB_ptr_call
   GLTFAccessor_methods.set_max._set_max = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_max", 2576592201, loc))
-  GLTFAccessor_methods.set_max.m_call = cast(type_of(GLTFAccessor_methods.set_max.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_max.m_call = cast(type_of(GLTFAccessor_methods.set_max.m_call))MB_ptr_call
   GLTFAccessor_methods.get_sparse_count._get_sparse_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_sparse_count", 3905245786, loc))
-  GLTFAccessor_methods.get_sparse_count.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_sparse_count.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_count.m_call))MB_ptr_call
   GLTFAccessor_methods.set_sparse_count._set_sparse_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_sparse_count", 1286410249, loc))
-  GLTFAccessor_methods.set_sparse_count.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_sparse_count.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_count.m_call))MB_ptr_call
   GLTFAccessor_methods.get_sparse_indices_buffer_view._get_sparse_indices_buffer_view = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_sparse_indices_buffer_view", 3905245786, loc))
-  GLTFAccessor_methods.get_sparse_indices_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_indices_buffer_view.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_sparse_indices_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_indices_buffer_view.m_call))MB_ptr_call
   GLTFAccessor_methods.set_sparse_indices_buffer_view._set_sparse_indices_buffer_view = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_sparse_indices_buffer_view", 1286410249, loc))
-  GLTFAccessor_methods.set_sparse_indices_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_indices_buffer_view.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_sparse_indices_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_indices_buffer_view.m_call))MB_ptr_call
   GLTFAccessor_methods.get_sparse_indices_byte_offset._get_sparse_indices_byte_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_sparse_indices_byte_offset", 3905245786, loc))
-  GLTFAccessor_methods.get_sparse_indices_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_indices_byte_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_sparse_indices_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_indices_byte_offset.m_call))MB_ptr_call
   GLTFAccessor_methods.set_sparse_indices_byte_offset._set_sparse_indices_byte_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_sparse_indices_byte_offset", 1286410249, loc))
-  GLTFAccessor_methods.set_sparse_indices_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_indices_byte_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_sparse_indices_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_indices_byte_offset.m_call))MB_ptr_call
   GLTFAccessor_methods.get_sparse_indices_component_type._get_sparse_indices_component_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_sparse_indices_component_type", 852227802, loc))
-  GLTFAccessor_methods.get_sparse_indices_component_type.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_indices_component_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_sparse_indices_component_type.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_indices_component_type.m_call))MB_ptr_call
   GLTFAccessor_methods.set_sparse_indices_component_type._set_sparse_indices_component_type = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_sparse_indices_component_type", 1780020221, loc))
-  GLTFAccessor_methods.set_sparse_indices_component_type.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_indices_component_type.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_sparse_indices_component_type.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_indices_component_type.m_call))MB_ptr_call
   GLTFAccessor_methods.get_sparse_values_buffer_view._get_sparse_values_buffer_view = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_sparse_values_buffer_view", 3905245786, loc))
-  GLTFAccessor_methods.get_sparse_values_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_values_buffer_view.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_sparse_values_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_values_buffer_view.m_call))MB_ptr_call
   GLTFAccessor_methods.set_sparse_values_buffer_view._set_sparse_values_buffer_view = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_sparse_values_buffer_view", 1286410249, loc))
-  GLTFAccessor_methods.set_sparse_values_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_values_buffer_view.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.set_sparse_values_buffer_view.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_values_buffer_view.m_call))MB_ptr_call
   GLTFAccessor_methods.get_sparse_values_byte_offset._get_sparse_values_byte_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "get_sparse_values_byte_offset", 3905245786, loc))
-  GLTFAccessor_methods.get_sparse_values_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_values_byte_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  GLTFAccessor_methods.get_sparse_values_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.get_sparse_values_byte_offset.m_call))MB_ptr_call
   GLTFAccessor_methods.set_sparse_values_byte_offset._set_sparse_values_byte_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.GLTFAccessor, "set_sparse_values_byte_offset", 1286410249, loc))
-  GLTFAccessor_methods.set_sparse_values_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_values_byte_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-GLTFAccessor_init_props :: proc(GLTFAccessor_prop: ^GLTFAccessor_properties, loc:= #caller_location) {
-
-  GLTFAccessor_prop.buffer_view_Int.get_buffer_view = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_buffer_view")
-  GLTFAccessor_prop.buffer_view_Int.set_buffer_view = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_buffer_view")
-
-  GLTFAccessor_prop.byte_offset_Int.get_byte_offset = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_byte_offset")
-  GLTFAccessor_prop.byte_offset_Int.set_byte_offset = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_byte_offset")
-
-  GLTFAccessor_prop.component_type_Int.get_component_type = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_component_type")
-  GLTFAccessor_prop.component_type_Int.set_component_type = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_component_type")
-
-  GLTFAccessor_prop.normalized_Bool.get_normalized = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_normalized")
-  GLTFAccessor_prop.normalized_Bool.set_normalized = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_normalized")
-
-  GLTFAccessor_prop.count_Int.get_count = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_count")
-  GLTFAccessor_prop.count_Int.set_count = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_count")
-
-  GLTFAccessor_prop.accessor_type_Int.get_accessor_type = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_accessor_type")
-  GLTFAccessor_prop.accessor_type_Int.set_accessor_type = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_accessor_type")
-
-  GLTFAccessor_prop.type_Int.get_type = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_type")
-  GLTFAccessor_prop.type_Int.set_type = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_type")
-
-  GLTFAccessor_prop.min_PackedFloat64Array.get_min = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.PackedFloat64Array))GDW.Get_Method_Getter(.PACKED_FLOAT64_ARRAY, "get_min")
-  GLTFAccessor_prop.min_PackedFloat64Array.set_min = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.PackedFloat64Array))GDW.Get_Method_Setter(.PACKED_FLOAT64_ARRAY, "set_min")
-
-  GLTFAccessor_prop.max_PackedFloat64Array.get_max = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.PackedFloat64Array))GDW.Get_Method_Getter(.PACKED_FLOAT64_ARRAY, "get_max")
-  GLTFAccessor_prop.max_PackedFloat64Array.set_max = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.PackedFloat64Array))GDW.Get_Method_Setter(.PACKED_FLOAT64_ARRAY, "set_max")
-
-  GLTFAccessor_prop.sparse_count_Int.get_sparse_count = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_sparse_count")
-  GLTFAccessor_prop.sparse_count_Int.set_sparse_count = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_sparse_count")
-
-  GLTFAccessor_prop.sparse_indices_buffer_view_Int.get_sparse_indices_buffer_view = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_sparse_indices_buffer_view")
-  GLTFAccessor_prop.sparse_indices_buffer_view_Int.set_sparse_indices_buffer_view = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_sparse_indices_buffer_view")
-
-  GLTFAccessor_prop.sparse_indices_byte_offset_Int.get_sparse_indices_byte_offset = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_sparse_indices_byte_offset")
-  GLTFAccessor_prop.sparse_indices_byte_offset_Int.set_sparse_indices_byte_offset = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_sparse_indices_byte_offset")
-
-  GLTFAccessor_prop.sparse_indices_component_type_Int.get_sparse_indices_component_type = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_sparse_indices_component_type")
-  GLTFAccessor_prop.sparse_indices_component_type_Int.set_sparse_indices_component_type = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_sparse_indices_component_type")
-
-  GLTFAccessor_prop.sparse_values_buffer_view_Int.get_sparse_values_buffer_view = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_sparse_values_buffer_view")
-  GLTFAccessor_prop.sparse_values_buffer_view_Int.set_sparse_values_buffer_view = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_sparse_values_buffer_view")
-
-  GLTFAccessor_prop.sparse_values_byte_offset_Int.get_sparse_values_byte_offset = cast(proc "c" (p_base: GLTFAccessor, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_sparse_values_byte_offset")
-  GLTFAccessor_prop.sparse_values_byte_offset_Int.set_sparse_values_byte_offset = cast(proc "c" (p_base: GLTFAccessor, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_sparse_values_byte_offset")
+  GLTFAccessor_methods.set_sparse_values_byte_offset.m_call = cast(type_of(GLTFAccessor_methods.set_sparse_values_byte_offset.m_call))MB_ptr_call
 };

@@ -7,60 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 TextParagraph :: ^GDW.Object
 
-TextParagraph_properties :: struct {
-  direction_Int : struct {
-  get_direction: proc "c" (p_base: TextParagraph, r_value: ^GDW.Int),
-  set_direction: proc "c" (p_base: TextParagraph, p_value: ^GDW.Int),
-  },
-  custom_punctuation_gdstring : struct {
-  get_custom_punctuation: proc "c" (p_base: TextParagraph, r_value: ^GDW.gdstring),
-  set_custom_punctuation: proc "c" (p_base: TextParagraph, p_value: ^GDW.gdstring),
-  },
-  orientation_Int : struct {
-  get_orientation: proc "c" (p_base: TextParagraph, r_value: ^GDW.Int),
-  set_orientation: proc "c" (p_base: TextParagraph, p_value: ^GDW.Int),
-  },
-  preserve_invalid_Bool : struct {
-  get_preserve_invalid: proc "c" (p_base: TextParagraph, r_value: ^GDW.Bool),
-  set_preserve_invalid: proc "c" (p_base: TextParagraph, p_value: ^GDW.Bool),
-  },
-  preserve_control_Bool : struct {
-  get_preserve_control: proc "c" (p_base: TextParagraph, r_value: ^GDW.Bool),
-  set_preserve_control: proc "c" (p_base: TextParagraph, p_value: ^GDW.Bool),
-  },
-  alignment_Int : struct {
-  get_alignment: proc "c" (p_base: TextParagraph, r_value: ^GDW.Int),
-  set_alignment: proc "c" (p_base: TextParagraph, p_value: ^GDW.Int),
-  },
-  break_flags_Int : struct {
-  get_break_flags: proc "c" (p_base: TextParagraph, r_value: ^GDW.Int),
-  set_break_flags: proc "c" (p_base: TextParagraph, p_value: ^GDW.Int),
-  },
-  justification_flags_Int : struct {
-  get_justification_flags: proc "c" (p_base: TextParagraph, r_value: ^GDW.Int),
-  set_justification_flags: proc "c" (p_base: TextParagraph, p_value: ^GDW.Int),
-  },
-  text_overrun_behavior_Int : struct {
-  get_text_overrun_behavior: proc "c" (p_base: TextParagraph, r_value: ^GDW.Int),
-  set_text_overrun_behavior: proc "c" (p_base: TextParagraph, p_value: ^GDW.Int),
-  },
-  ellipsis_char_gdstring : struct {
-  get_ellipsis_char: proc "c" (p_base: TextParagraph, r_value: ^GDW.gdstring),
-  set_ellipsis_char: proc "c" (p_base: TextParagraph, p_value: ^GDW.gdstring),
-  },
-  width_float : struct {
-  get_width: proc "c" (p_base: TextParagraph, r_value: ^GDW.float),
-  set_width: proc "c" (p_base: TextParagraph, p_value: ^GDW.float),
-  },
-  max_lines_visible_Int : struct {
-  get_max_lines_visible: proc "c" (p_base: TextParagraph, r_value: ^GDW.Int),
-  set_max_lines_visible: proc "c" (p_base: TextParagraph, p_value: ^GDW.Int),
-  },
-  line_spacing_float : struct {
-  get_line_spacing: proc "c" (p_base: TextParagraph, r_value: ^GDW.float),
-  set_line_spacing: proc "c" (p_base: TextParagraph, p_value: ^GDW.float),
-  },
-};
 TextParagraph_MethodBind_List :: struct {
   clear: struct{
     using _clear: ^GDW.MethodBind,
@@ -312,169 +258,129 @@ TextParagraph_MethodBind_List :: struct {
   },
 };
 TextParagraph_Init_ :: proc (TextParagraph_methods: ^TextParagraph_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   TextParagraph_methods.clear._clear = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "clear", 3218959716, loc))
-  TextParagraph_methods.clear.m_call = cast(type_of(TextParagraph_methods.clear.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.clear.m_call = cast(type_of(TextParagraph_methods.clear.m_call))MB_ptr_call
   TextParagraph_methods.duplicate._duplicate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "duplicate", 3607706709, loc))
-  TextParagraph_methods.duplicate.m_call = cast(type_of(TextParagraph_methods.duplicate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.duplicate.m_call = cast(type_of(TextParagraph_methods.duplicate.m_call))MB_ptr_call
   TextParagraph_methods.set_direction._set_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_direction", 1418190634, loc))
-  TextParagraph_methods.set_direction.m_call = cast(type_of(TextParagraph_methods.set_direction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_direction.m_call = cast(type_of(TextParagraph_methods.set_direction.m_call))MB_ptr_call
   TextParagraph_methods.get_direction._get_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_direction", 2516697328, loc))
-  TextParagraph_methods.get_direction.m_call = cast(type_of(TextParagraph_methods.get_direction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_direction.m_call = cast(type_of(TextParagraph_methods.get_direction.m_call))MB_ptr_call
   TextParagraph_methods.get_inferred_direction._get_inferred_direction = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_inferred_direction", 2516697328, loc))
-  TextParagraph_methods.get_inferred_direction.m_call = cast(type_of(TextParagraph_methods.get_inferred_direction.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_inferred_direction.m_call = cast(type_of(TextParagraph_methods.get_inferred_direction.m_call))MB_ptr_call
   TextParagraph_methods.set_custom_punctuation._set_custom_punctuation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_custom_punctuation", 83702148, loc))
-  TextParagraph_methods.set_custom_punctuation.m_call = cast(type_of(TextParagraph_methods.set_custom_punctuation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_custom_punctuation.m_call = cast(type_of(TextParagraph_methods.set_custom_punctuation.m_call))MB_ptr_call
   TextParagraph_methods.get_custom_punctuation._get_custom_punctuation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_custom_punctuation", 201670096, loc))
-  TextParagraph_methods.get_custom_punctuation.m_call = cast(type_of(TextParagraph_methods.get_custom_punctuation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_custom_punctuation.m_call = cast(type_of(TextParagraph_methods.get_custom_punctuation.m_call))MB_ptr_call
   TextParagraph_methods.set_orientation._set_orientation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_orientation", 42823726, loc))
-  TextParagraph_methods.set_orientation.m_call = cast(type_of(TextParagraph_methods.set_orientation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_orientation.m_call = cast(type_of(TextParagraph_methods.set_orientation.m_call))MB_ptr_call
   TextParagraph_methods.get_orientation._get_orientation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_orientation", 175768116, loc))
-  TextParagraph_methods.get_orientation.m_call = cast(type_of(TextParagraph_methods.get_orientation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_orientation.m_call = cast(type_of(TextParagraph_methods.get_orientation.m_call))MB_ptr_call
   TextParagraph_methods.set_preserve_invalid._set_preserve_invalid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_preserve_invalid", 2586408642, loc))
-  TextParagraph_methods.set_preserve_invalid.m_call = cast(type_of(TextParagraph_methods.set_preserve_invalid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_preserve_invalid.m_call = cast(type_of(TextParagraph_methods.set_preserve_invalid.m_call))MB_ptr_call
   TextParagraph_methods.get_preserve_invalid._get_preserve_invalid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_preserve_invalid", 36873697, loc))
-  TextParagraph_methods.get_preserve_invalid.m_call = cast(type_of(TextParagraph_methods.get_preserve_invalid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_preserve_invalid.m_call = cast(type_of(TextParagraph_methods.get_preserve_invalid.m_call))MB_ptr_call
   TextParagraph_methods.set_preserve_control._set_preserve_control = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_preserve_control", 2586408642, loc))
-  TextParagraph_methods.set_preserve_control.m_call = cast(type_of(TextParagraph_methods.set_preserve_control.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_preserve_control.m_call = cast(type_of(TextParagraph_methods.set_preserve_control.m_call))MB_ptr_call
   TextParagraph_methods.get_preserve_control._get_preserve_control = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_preserve_control", 36873697, loc))
-  TextParagraph_methods.get_preserve_control.m_call = cast(type_of(TextParagraph_methods.get_preserve_control.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_preserve_control.m_call = cast(type_of(TextParagraph_methods.get_preserve_control.m_call))MB_ptr_call
   TextParagraph_methods.set_bidi_override._set_bidi_override = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_bidi_override", 381264803, loc))
-  TextParagraph_methods.set_bidi_override.m_call = cast(type_of(TextParagraph_methods.set_bidi_override.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_bidi_override.m_call = cast(type_of(TextParagraph_methods.set_bidi_override.m_call))MB_ptr_call
   TextParagraph_methods.set_dropcap._set_dropcap = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_dropcap", 2498990330, loc))
-  TextParagraph_methods.set_dropcap.m_call = cast(type_of(TextParagraph_methods.set_dropcap.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_dropcap.m_call = cast(type_of(TextParagraph_methods.set_dropcap.m_call))MB_ptr_call
   TextParagraph_methods.clear_dropcap._clear_dropcap = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "clear_dropcap", 3218959716, loc))
-  TextParagraph_methods.clear_dropcap.m_call = cast(type_of(TextParagraph_methods.clear_dropcap.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.clear_dropcap.m_call = cast(type_of(TextParagraph_methods.clear_dropcap.m_call))MB_ptr_call
   TextParagraph_methods.add_string._add_string = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "add_string", 621426851, loc))
-  TextParagraph_methods.add_string.m_call = cast(type_of(TextParagraph_methods.add_string.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.add_string.m_call = cast(type_of(TextParagraph_methods.add_string.m_call))MB_ptr_call
   TextParagraph_methods.add_object._add_object = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "add_object", 1316529304, loc))
-  TextParagraph_methods.add_object.m_call = cast(type_of(TextParagraph_methods.add_object.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.add_object.m_call = cast(type_of(TextParagraph_methods.add_object.m_call))MB_ptr_call
   TextParagraph_methods.resize_object._resize_object = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "resize_object", 2095776372, loc))
-  TextParagraph_methods.resize_object.m_call = cast(type_of(TextParagraph_methods.resize_object.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.resize_object.m_call = cast(type_of(TextParagraph_methods.resize_object.m_call))MB_ptr_call
   TextParagraph_methods.has_object._has_object = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "has_object", 77467830, loc))
-  TextParagraph_methods.has_object.m_call = cast(type_of(TextParagraph_methods.has_object.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.has_object.m_call = cast(type_of(TextParagraph_methods.has_object.m_call))MB_ptr_call
   TextParagraph_methods.set_alignment._set_alignment = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_alignment", 2312603777, loc))
-  TextParagraph_methods.set_alignment.m_call = cast(type_of(TextParagraph_methods.set_alignment.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_alignment.m_call = cast(type_of(TextParagraph_methods.set_alignment.m_call))MB_ptr_call
   TextParagraph_methods.get_alignment._get_alignment = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_alignment", 341400642, loc))
-  TextParagraph_methods.get_alignment.m_call = cast(type_of(TextParagraph_methods.get_alignment.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_alignment.m_call = cast(type_of(TextParagraph_methods.get_alignment.m_call))MB_ptr_call
   TextParagraph_methods.tab_align._tab_align = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "tab_align", 2899603908, loc))
-  TextParagraph_methods.tab_align.m_call = cast(type_of(TextParagraph_methods.tab_align.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.tab_align.m_call = cast(type_of(TextParagraph_methods.tab_align.m_call))MB_ptr_call
   TextParagraph_methods.set_break_flags._set_break_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_break_flags", 2809697122, loc))
-  TextParagraph_methods.set_break_flags.m_call = cast(type_of(TextParagraph_methods.set_break_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_break_flags.m_call = cast(type_of(TextParagraph_methods.set_break_flags.m_call))MB_ptr_call
   TextParagraph_methods.get_break_flags._get_break_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_break_flags", 2340632602, loc))
-  TextParagraph_methods.get_break_flags.m_call = cast(type_of(TextParagraph_methods.get_break_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_break_flags.m_call = cast(type_of(TextParagraph_methods.get_break_flags.m_call))MB_ptr_call
   TextParagraph_methods.set_justification_flags._set_justification_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_justification_flags", 2877345813, loc))
-  TextParagraph_methods.set_justification_flags.m_call = cast(type_of(TextParagraph_methods.set_justification_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_justification_flags.m_call = cast(type_of(TextParagraph_methods.set_justification_flags.m_call))MB_ptr_call
   TextParagraph_methods.get_justification_flags._get_justification_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_justification_flags", 1583363614, loc))
-  TextParagraph_methods.get_justification_flags.m_call = cast(type_of(TextParagraph_methods.get_justification_flags.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_justification_flags.m_call = cast(type_of(TextParagraph_methods.get_justification_flags.m_call))MB_ptr_call
   TextParagraph_methods.set_text_overrun_behavior._set_text_overrun_behavior = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_text_overrun_behavior", 1008890932, loc))
-  TextParagraph_methods.set_text_overrun_behavior.m_call = cast(type_of(TextParagraph_methods.set_text_overrun_behavior.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_text_overrun_behavior.m_call = cast(type_of(TextParagraph_methods.set_text_overrun_behavior.m_call))MB_ptr_call
   TextParagraph_methods.get_text_overrun_behavior._get_text_overrun_behavior = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_text_overrun_behavior", 3779142101, loc))
-  TextParagraph_methods.get_text_overrun_behavior.m_call = cast(type_of(TextParagraph_methods.get_text_overrun_behavior.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_text_overrun_behavior.m_call = cast(type_of(TextParagraph_methods.get_text_overrun_behavior.m_call))MB_ptr_call
   TextParagraph_methods.set_ellipsis_char._set_ellipsis_char = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_ellipsis_char", 83702148, loc))
-  TextParagraph_methods.set_ellipsis_char.m_call = cast(type_of(TextParagraph_methods.set_ellipsis_char.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_ellipsis_char.m_call = cast(type_of(TextParagraph_methods.set_ellipsis_char.m_call))MB_ptr_call
   TextParagraph_methods.get_ellipsis_char._get_ellipsis_char = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_ellipsis_char", 201670096, loc))
-  TextParagraph_methods.get_ellipsis_char.m_call = cast(type_of(TextParagraph_methods.get_ellipsis_char.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_ellipsis_char.m_call = cast(type_of(TextParagraph_methods.get_ellipsis_char.m_call))MB_ptr_call
   TextParagraph_methods.set_width._set_width = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_width", 373806689, loc))
-  TextParagraph_methods.set_width.m_call = cast(type_of(TextParagraph_methods.set_width.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_width.m_call = cast(type_of(TextParagraph_methods.set_width.m_call))MB_ptr_call
   TextParagraph_methods.get_width._get_width = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_width", 1740695150, loc))
-  TextParagraph_methods.get_width.m_call = cast(type_of(TextParagraph_methods.get_width.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_width.m_call = cast(type_of(TextParagraph_methods.get_width.m_call))MB_ptr_call
   TextParagraph_methods.get_non_wrapped_size._get_non_wrapped_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_non_wrapped_size", 3341600327, loc))
-  TextParagraph_methods.get_non_wrapped_size.m_call = cast(type_of(TextParagraph_methods.get_non_wrapped_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_non_wrapped_size.m_call = cast(type_of(TextParagraph_methods.get_non_wrapped_size.m_call))MB_ptr_call
   TextParagraph_methods.get_size._get_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_size", 3341600327, loc))
-  TextParagraph_methods.get_size.m_call = cast(type_of(TextParagraph_methods.get_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_size.m_call = cast(type_of(TextParagraph_methods.get_size.m_call))MB_ptr_call
   TextParagraph_methods.get_rid._get_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_rid", 2944877500, loc))
-  TextParagraph_methods.get_rid.m_call = cast(type_of(TextParagraph_methods.get_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_rid.m_call = cast(type_of(TextParagraph_methods.get_rid.m_call))MB_ptr_call
   TextParagraph_methods.get_line_rid._get_line_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_rid", 495598643, loc))
-  TextParagraph_methods.get_line_rid.m_call = cast(type_of(TextParagraph_methods.get_line_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_rid.m_call = cast(type_of(TextParagraph_methods.get_line_rid.m_call))MB_ptr_call
   TextParagraph_methods.get_dropcap_rid._get_dropcap_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_dropcap_rid", 2944877500, loc))
-  TextParagraph_methods.get_dropcap_rid.m_call = cast(type_of(TextParagraph_methods.get_dropcap_rid.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_dropcap_rid.m_call = cast(type_of(TextParagraph_methods.get_dropcap_rid.m_call))MB_ptr_call
   TextParagraph_methods.get_range._get_range = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_range", 3690982128, loc))
-  TextParagraph_methods.get_range.m_call = cast(type_of(TextParagraph_methods.get_range.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_range.m_call = cast(type_of(TextParagraph_methods.get_range.m_call))MB_ptr_call
   TextParagraph_methods.get_line_count._get_line_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_count", 3905245786, loc))
-  TextParagraph_methods.get_line_count.m_call = cast(type_of(TextParagraph_methods.get_line_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_count.m_call = cast(type_of(TextParagraph_methods.get_line_count.m_call))MB_ptr_call
   TextParagraph_methods.set_max_lines_visible._set_max_lines_visible = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_max_lines_visible", 1286410249, loc))
-  TextParagraph_methods.set_max_lines_visible.m_call = cast(type_of(TextParagraph_methods.set_max_lines_visible.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_max_lines_visible.m_call = cast(type_of(TextParagraph_methods.set_max_lines_visible.m_call))MB_ptr_call
   TextParagraph_methods.get_max_lines_visible._get_max_lines_visible = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_max_lines_visible", 3905245786, loc))
-  TextParagraph_methods.get_max_lines_visible.m_call = cast(type_of(TextParagraph_methods.get_max_lines_visible.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_max_lines_visible.m_call = cast(type_of(TextParagraph_methods.get_max_lines_visible.m_call))MB_ptr_call
   TextParagraph_methods.set_line_spacing._set_line_spacing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "set_line_spacing", 373806689, loc))
-  TextParagraph_methods.set_line_spacing.m_call = cast(type_of(TextParagraph_methods.set_line_spacing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.set_line_spacing.m_call = cast(type_of(TextParagraph_methods.set_line_spacing.m_call))MB_ptr_call
   TextParagraph_methods.get_line_spacing._get_line_spacing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_spacing", 1740695150, loc))
-  TextParagraph_methods.get_line_spacing.m_call = cast(type_of(TextParagraph_methods.get_line_spacing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_spacing.m_call = cast(type_of(TextParagraph_methods.get_line_spacing.m_call))MB_ptr_call
   TextParagraph_methods.get_line_objects._get_line_objects = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_objects", 663333327, loc))
-  TextParagraph_methods.get_line_objects.m_call = cast(type_of(TextParagraph_methods.get_line_objects.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_objects.m_call = cast(type_of(TextParagraph_methods.get_line_objects.m_call))MB_ptr_call
   TextParagraph_methods.get_line_object_rect._get_line_object_rect = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_object_rect", 204315017, loc))
-  TextParagraph_methods.get_line_object_rect.m_call = cast(type_of(TextParagraph_methods.get_line_object_rect.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_object_rect.m_call = cast(type_of(TextParagraph_methods.get_line_object_rect.m_call))MB_ptr_call
   TextParagraph_methods.get_line_size._get_line_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_size", 2299179447, loc))
-  TextParagraph_methods.get_line_size.m_call = cast(type_of(TextParagraph_methods.get_line_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_size.m_call = cast(type_of(TextParagraph_methods.get_line_size.m_call))MB_ptr_call
   TextParagraph_methods.get_line_range._get_line_range = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_range", 880721226, loc))
-  TextParagraph_methods.get_line_range.m_call = cast(type_of(TextParagraph_methods.get_line_range.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_range.m_call = cast(type_of(TextParagraph_methods.get_line_range.m_call))MB_ptr_call
   TextParagraph_methods.get_line_ascent._get_line_ascent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_ascent", 2339986948, loc))
-  TextParagraph_methods.get_line_ascent.m_call = cast(type_of(TextParagraph_methods.get_line_ascent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_ascent.m_call = cast(type_of(TextParagraph_methods.get_line_ascent.m_call))MB_ptr_call
   TextParagraph_methods.get_line_descent._get_line_descent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_descent", 2339986948, loc))
-  TextParagraph_methods.get_line_descent.m_call = cast(type_of(TextParagraph_methods.get_line_descent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_descent.m_call = cast(type_of(TextParagraph_methods.get_line_descent.m_call))MB_ptr_call
   TextParagraph_methods.get_line_width._get_line_width = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_width", 2339986948, loc))
-  TextParagraph_methods.get_line_width.m_call = cast(type_of(TextParagraph_methods.get_line_width.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_width.m_call = cast(type_of(TextParagraph_methods.get_line_width.m_call))MB_ptr_call
   TextParagraph_methods.get_line_underline_position._get_line_underline_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_underline_position", 2339986948, loc))
-  TextParagraph_methods.get_line_underline_position.m_call = cast(type_of(TextParagraph_methods.get_line_underline_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_underline_position.m_call = cast(type_of(TextParagraph_methods.get_line_underline_position.m_call))MB_ptr_call
   TextParagraph_methods.get_line_underline_thickness._get_line_underline_thickness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_line_underline_thickness", 2339986948, loc))
-  TextParagraph_methods.get_line_underline_thickness.m_call = cast(type_of(TextParagraph_methods.get_line_underline_thickness.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_line_underline_thickness.m_call = cast(type_of(TextParagraph_methods.get_line_underline_thickness.m_call))MB_ptr_call
   TextParagraph_methods.get_dropcap_size._get_dropcap_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_dropcap_size", 3341600327, loc))
-  TextParagraph_methods.get_dropcap_size.m_call = cast(type_of(TextParagraph_methods.get_dropcap_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_dropcap_size.m_call = cast(type_of(TextParagraph_methods.get_dropcap_size.m_call))MB_ptr_call
   TextParagraph_methods.get_dropcap_lines._get_dropcap_lines = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "get_dropcap_lines", 3905245786, loc))
-  TextParagraph_methods.get_dropcap_lines.m_call = cast(type_of(TextParagraph_methods.get_dropcap_lines.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.get_dropcap_lines.m_call = cast(type_of(TextParagraph_methods.get_dropcap_lines.m_call))MB_ptr_call
   TextParagraph_methods.draw._draw = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "draw", 1492808103, loc))
-  TextParagraph_methods.draw.m_call = cast(type_of(TextParagraph_methods.draw.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.draw.m_call = cast(type_of(TextParagraph_methods.draw.m_call))MB_ptr_call
   TextParagraph_methods.draw_outline._draw_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "draw_outline", 3820500590, loc))
-  TextParagraph_methods.draw_outline.m_call = cast(type_of(TextParagraph_methods.draw_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.draw_outline.m_call = cast(type_of(TextParagraph_methods.draw_outline.m_call))MB_ptr_call
   TextParagraph_methods.draw_line._draw_line = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "draw_line", 828033758, loc))
-  TextParagraph_methods.draw_line.m_call = cast(type_of(TextParagraph_methods.draw_line.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.draw_line.m_call = cast(type_of(TextParagraph_methods.draw_line.m_call))MB_ptr_call
   TextParagraph_methods.draw_line_outline._draw_line_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "draw_line_outline", 2822696703, loc))
-  TextParagraph_methods.draw_line_outline.m_call = cast(type_of(TextParagraph_methods.draw_line_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.draw_line_outline.m_call = cast(type_of(TextParagraph_methods.draw_line_outline.m_call))MB_ptr_call
   TextParagraph_methods.draw_dropcap._draw_dropcap = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "draw_dropcap", 3625105422, loc))
-  TextParagraph_methods.draw_dropcap.m_call = cast(type_of(TextParagraph_methods.draw_dropcap.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.draw_dropcap.m_call = cast(type_of(TextParagraph_methods.draw_dropcap.m_call))MB_ptr_call
   TextParagraph_methods.draw_dropcap_outline._draw_dropcap_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "draw_dropcap_outline", 2592177763, loc))
-  TextParagraph_methods.draw_dropcap_outline.m_call = cast(type_of(TextParagraph_methods.draw_dropcap_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextParagraph_methods.draw_dropcap_outline.m_call = cast(type_of(TextParagraph_methods.draw_dropcap_outline.m_call))MB_ptr_call
   TextParagraph_methods.hit_test._hit_test = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextParagraph, "hit_test", 3820158470, loc))
-  TextParagraph_methods.hit_test.m_call = cast(type_of(TextParagraph_methods.hit_test.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-TextParagraph_init_props :: proc(TextParagraph_prop: ^TextParagraph_properties, loc:= #caller_location) {
-
-  TextParagraph_prop.direction_Int.get_direction = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_direction")
-  TextParagraph_prop.direction_Int.set_direction = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_direction")
-
-  TextParagraph_prop.custom_punctuation_gdstring.get_custom_punctuation = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_custom_punctuation")
-  TextParagraph_prop.custom_punctuation_gdstring.set_custom_punctuation = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_custom_punctuation")
-
-  TextParagraph_prop.orientation_Int.get_orientation = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_orientation")
-  TextParagraph_prop.orientation_Int.set_orientation = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_orientation")
-
-  TextParagraph_prop.preserve_invalid_Bool.get_preserve_invalid = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_preserve_invalid")
-  TextParagraph_prop.preserve_invalid_Bool.set_preserve_invalid = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_preserve_invalid")
-
-  TextParagraph_prop.preserve_control_Bool.get_preserve_control = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_preserve_control")
-  TextParagraph_prop.preserve_control_Bool.set_preserve_control = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_preserve_control")
-
-  TextParagraph_prop.alignment_Int.get_alignment = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_alignment")
-  TextParagraph_prop.alignment_Int.set_alignment = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_alignment")
-
-  TextParagraph_prop.break_flags_Int.get_break_flags = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_break_flags")
-  TextParagraph_prop.break_flags_Int.set_break_flags = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_break_flags")
-
-  TextParagraph_prop.justification_flags_Int.get_justification_flags = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_justification_flags")
-  TextParagraph_prop.justification_flags_Int.set_justification_flags = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_justification_flags")
-
-  TextParagraph_prop.text_overrun_behavior_Int.get_text_overrun_behavior = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_text_overrun_behavior")
-  TextParagraph_prop.text_overrun_behavior_Int.set_text_overrun_behavior = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_text_overrun_behavior")
-
-  TextParagraph_prop.ellipsis_char_gdstring.get_ellipsis_char = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_ellipsis_char")
-  TextParagraph_prop.ellipsis_char_gdstring.set_ellipsis_char = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_ellipsis_char")
-
-  TextParagraph_prop.width_float.get_width = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_width")
-  TextParagraph_prop.width_float.set_width = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_width")
-
-  TextParagraph_prop.max_lines_visible_Int.get_max_lines_visible = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_max_lines_visible")
-  TextParagraph_prop.max_lines_visible_Int.set_max_lines_visible = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_max_lines_visible")
-
-  TextParagraph_prop.line_spacing_float.get_line_spacing = cast(proc "c" (p_base: TextParagraph, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_line_spacing")
-  TextParagraph_prop.line_spacing_float.set_line_spacing = cast(proc "c" (p_base: TextParagraph, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_line_spacing")
+  TextParagraph_methods.hit_test.m_call = cast(type_of(TextParagraph_methods.hit_test.m_call))MB_ptr_call
 };

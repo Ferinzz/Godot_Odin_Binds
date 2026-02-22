@@ -14,6 +14,7 @@ WeakRef_MethodBind_List :: struct {
   },
 };
 WeakRef_Init_ :: proc (WeakRef_methods: ^WeakRef_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   WeakRef_methods.get_ref._get_ref = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.WeakRef, "get_ref", 1214101251, loc))
-  WeakRef_methods.get_ref.m_call = cast(type_of(WeakRef_methods.get_ref.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  WeakRef_methods.get_ref.m_call = cast(type_of(WeakRef_methods.get_ref.m_call))MB_ptr_call
 };

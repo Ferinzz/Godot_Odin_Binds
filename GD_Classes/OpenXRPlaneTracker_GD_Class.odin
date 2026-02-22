@@ -7,20 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 OpenXRPlaneTracker :: ^GDW.Object
 
-OpenXRPlaneTracker_properties :: struct {
-  bounds_size_Int : struct {
-  get_bounds_size: proc "c" (p_base: OpenXRPlaneTracker, r_value: ^GDW.Int),
-  set_bounds_size: proc "c" (p_base: OpenXRPlaneTracker, p_value: ^GDW.Int),
-  },
-  plane_alignment_Int : struct {
-  get_plane_alignment: proc "c" (p_base: OpenXRPlaneTracker, r_value: ^GDW.Int),
-  set_plane_alignment: proc "c" (p_base: OpenXRPlaneTracker, p_value: ^GDW.Int),
-  },
-  plane_label_gdstring : struct {
-  get_plane_label: proc "c" (p_base: OpenXRPlaneTracker, r_value: ^GDW.gdstring),
-  set_plane_label: proc "c" (p_base: OpenXRPlaneTracker, p_value: ^GDW.gdstring),
-  },
-};
 OpenXRPlaneTracker_MethodBind_List :: struct {
   set_bounds_size: struct{
     using _set_bounds_size: ^GDW.MethodBind,
@@ -68,37 +54,27 @@ OpenXRPlaneTracker_MethodBind_List :: struct {
   },
 };
 OpenXRPlaneTracker_Init_ :: proc (OpenXRPlaneTracker_methods: ^OpenXRPlaneTracker_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   OpenXRPlaneTracker_methods.set_bounds_size._set_bounds_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "set_bounds_size", 743155724, loc))
-  OpenXRPlaneTracker_methods.set_bounds_size.m_call = cast(type_of(OpenXRPlaneTracker_methods.set_bounds_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.set_bounds_size.m_call = cast(type_of(OpenXRPlaneTracker_methods.set_bounds_size.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.get_bounds_size._get_bounds_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "get_bounds_size", 3341600327, loc))
-  OpenXRPlaneTracker_methods.get_bounds_size.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_bounds_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.get_bounds_size.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_bounds_size.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.set_plane_alignment._set_plane_alignment = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "set_plane_alignment", 1214382230, loc))
-  OpenXRPlaneTracker_methods.set_plane_alignment.m_call = cast(type_of(OpenXRPlaneTracker_methods.set_plane_alignment.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.set_plane_alignment.m_call = cast(type_of(OpenXRPlaneTracker_methods.set_plane_alignment.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.get_plane_alignment._get_plane_alignment = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "get_plane_alignment", 845541441, loc))
-  OpenXRPlaneTracker_methods.get_plane_alignment.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_plane_alignment.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.get_plane_alignment.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_plane_alignment.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.set_plane_label._set_plane_label = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "set_plane_label", 83702148, loc))
-  OpenXRPlaneTracker_methods.set_plane_label.m_call = cast(type_of(OpenXRPlaneTracker_methods.set_plane_label.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.set_plane_label.m_call = cast(type_of(OpenXRPlaneTracker_methods.set_plane_label.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.get_plane_label._get_plane_label = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "get_plane_label", 201670096, loc))
-  OpenXRPlaneTracker_methods.get_plane_label.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_plane_label.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.get_plane_label.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_plane_label.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.set_mesh_data._set_mesh_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "set_mesh_data", 1877193149, loc))
-  OpenXRPlaneTracker_methods.set_mesh_data.m_call = cast(type_of(OpenXRPlaneTracker_methods.set_mesh_data.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.set_mesh_data.m_call = cast(type_of(OpenXRPlaneTracker_methods.set_mesh_data.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.clear_mesh_data._clear_mesh_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "clear_mesh_data", 3218959716, loc))
-  OpenXRPlaneTracker_methods.clear_mesh_data.m_call = cast(type_of(OpenXRPlaneTracker_methods.clear_mesh_data.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.clear_mesh_data.m_call = cast(type_of(OpenXRPlaneTracker_methods.clear_mesh_data.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.get_mesh_offset._get_mesh_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "get_mesh_offset", 3229777777, loc))
-  OpenXRPlaneTracker_methods.get_mesh_offset.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_mesh_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.get_mesh_offset.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_mesh_offset.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.get_mesh._get_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "get_mesh", 4081188045, loc))
-  OpenXRPlaneTracker_methods.get_mesh.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_mesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  OpenXRPlaneTracker_methods.get_mesh.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_mesh.m_call))MB_ptr_call
   OpenXRPlaneTracker_methods.get_shape._get_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRPlaneTracker, "get_shape", 3358509884, loc))
-  OpenXRPlaneTracker_methods.get_shape.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-OpenXRPlaneTracker_init_props :: proc(OpenXRPlaneTracker_prop: ^OpenXRPlaneTracker_properties, loc:= #caller_location) {
-
-  OpenXRPlaneTracker_prop.bounds_size_Int.get_bounds_size = cast(proc "c" (p_base: OpenXRPlaneTracker, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_bounds_size")
-  OpenXRPlaneTracker_prop.bounds_size_Int.set_bounds_size = cast(proc "c" (p_base: OpenXRPlaneTracker, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_bounds_size")
-
-  OpenXRPlaneTracker_prop.plane_alignment_Int.get_plane_alignment = cast(proc "c" (p_base: OpenXRPlaneTracker, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_plane_alignment")
-  OpenXRPlaneTracker_prop.plane_alignment_Int.set_plane_alignment = cast(proc "c" (p_base: OpenXRPlaneTracker, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_plane_alignment")
-
-  OpenXRPlaneTracker_prop.plane_label_gdstring.get_plane_label = cast(proc "c" (p_base: OpenXRPlaneTracker, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_plane_label")
-  OpenXRPlaneTracker_prop.plane_label_gdstring.set_plane_label = cast(proc "c" (p_base: OpenXRPlaneTracker, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_plane_label")
+  OpenXRPlaneTracker_methods.get_shape.m_call = cast(type_of(OpenXRPlaneTracker_methods.get_shape.m_call))MB_ptr_call
 };

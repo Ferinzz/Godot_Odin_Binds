@@ -31,8 +31,9 @@ EditorImportPlugin_MethodBind_List :: struct {
   },
 };
 EditorImportPlugin_Init_ :: proc (EditorImportPlugin_methods: ^EditorImportPlugin_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorImportPlugin_methods.append_import_external_resource._append_import_external_resource = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorImportPlugin, "append_import_external_resource", 320493106, loc))
-  EditorImportPlugin_methods.append_import_external_resource.m_call = cast(type_of(EditorImportPlugin_methods.append_import_external_resource.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorImportPlugin_methods.append_import_external_resource.m_call = cast(type_of(EditorImportPlugin_methods.append_import_external_resource.m_call))MB_ptr_call
 };
 
 EditorImportPlugin_Init_Virtuals_Info :: proc(info: ^EditorImportPlugin_Virtual_Info) {

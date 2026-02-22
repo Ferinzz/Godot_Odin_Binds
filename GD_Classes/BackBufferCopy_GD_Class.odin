@@ -13,16 +13,6 @@ BackBufferCopy_CopyMode :: enum i64 {
   COPY_MODE_RECT = 1,
   COPY_MODE_VIEWPORT = 2,
 };
-BackBufferCopy_properties :: struct {
-  copy_mode_Int : struct {
-  get_copy_mode: proc "c" (p_base: BackBufferCopy, r_value: ^GDW.Int),
-  set_copy_mode: proc "c" (p_base: BackBufferCopy, p_value: ^GDW.Int),
-  },
-  rect_Rect2 : struct {
-  get_rect: proc "c" (p_base: BackBufferCopy, r_value: ^GDW.Rect2),
-  set_rect: proc "c" (p_base: BackBufferCopy, p_value: ^GDW.Rect2),
-  },
-};
 BackBufferCopy_MethodBind_List :: struct {
   set_rect: struct{
     using _set_rect: ^GDW.MethodBind,
@@ -42,20 +32,13 @@ BackBufferCopy_MethodBind_List :: struct {
   },
 };
 BackBufferCopy_Init_ :: proc (BackBufferCopy_methods: ^BackBufferCopy_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   BackBufferCopy_methods.set_rect._set_rect = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.BackBufferCopy, "set_rect", 2046264180, loc))
-  BackBufferCopy_methods.set_rect.m_call = cast(type_of(BackBufferCopy_methods.set_rect.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  BackBufferCopy_methods.set_rect.m_call = cast(type_of(BackBufferCopy_methods.set_rect.m_call))MB_ptr_call
   BackBufferCopy_methods.get_rect._get_rect = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.BackBufferCopy, "get_rect", 1639390495, loc))
-  BackBufferCopy_methods.get_rect.m_call = cast(type_of(BackBufferCopy_methods.get_rect.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  BackBufferCopy_methods.get_rect.m_call = cast(type_of(BackBufferCopy_methods.get_rect.m_call))MB_ptr_call
   BackBufferCopy_methods.set_copy_mode._set_copy_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.BackBufferCopy, "set_copy_mode", 1713538590, loc))
-  BackBufferCopy_methods.set_copy_mode.m_call = cast(type_of(BackBufferCopy_methods.set_copy_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  BackBufferCopy_methods.set_copy_mode.m_call = cast(type_of(BackBufferCopy_methods.set_copy_mode.m_call))MB_ptr_call
   BackBufferCopy_methods.get_copy_mode._get_copy_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.BackBufferCopy, "get_copy_mode", 3271169440, loc))
-  BackBufferCopy_methods.get_copy_mode.m_call = cast(type_of(BackBufferCopy_methods.get_copy_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-BackBufferCopy_init_props :: proc(BackBufferCopy_prop: ^BackBufferCopy_properties, loc:= #caller_location) {
-
-  BackBufferCopy_prop.copy_mode_Int.get_copy_mode = cast(proc "c" (p_base: BackBufferCopy, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_copy_mode")
-  BackBufferCopy_prop.copy_mode_Int.set_copy_mode = cast(proc "c" (p_base: BackBufferCopy, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_copy_mode")
-
-  BackBufferCopy_prop.rect_Rect2.get_rect = cast(proc "c" (p_base: BackBufferCopy, r_value: ^GDW.Rect2))GDW.Get_Method_Getter(.RECT2, "get_rect")
-  BackBufferCopy_prop.rect_Rect2.set_rect = cast(proc "c" (p_base: BackBufferCopy, p_value: ^GDW.Rect2))GDW.Get_Method_Setter(.RECT2, "set_rect")
+  BackBufferCopy_methods.get_copy_mode.m_call = cast(type_of(BackBufferCopy_methods.get_copy_mode.m_call))MB_ptr_call
 };

@@ -44,12 +44,6 @@ VisualShaderNodeVectorFunc_Function :: enum i64 {
   FUNC_ONEMINUS = 32,
   FUNC_MAX = 33,
 };
-VisualShaderNodeVectorFunc_properties :: struct {
-  function_Int : struct {
-  get_function: proc "c" (p_base: VisualShaderNodeVectorFunc, r_value: ^GDW.Int),
-  set_function: proc "c" (p_base: VisualShaderNodeVectorFunc, p_value: ^GDW.Int),
-  },
-};
 VisualShaderNodeVectorFunc_MethodBind_List :: struct {
   set_function: struct{
     using _set_function: ^GDW.MethodBind,
@@ -61,13 +55,9 @@ VisualShaderNodeVectorFunc_MethodBind_List :: struct {
   },
 };
 VisualShaderNodeVectorFunc_Init_ :: proc (VisualShaderNodeVectorFunc_methods: ^VisualShaderNodeVectorFunc_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   VisualShaderNodeVectorFunc_methods.set_function._set_function = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVectorFunc, "set_function", 629964457, loc))
-  VisualShaderNodeVectorFunc_methods.set_function.m_call = cast(type_of(VisualShaderNodeVectorFunc_methods.set_function.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  VisualShaderNodeVectorFunc_methods.set_function.m_call = cast(type_of(VisualShaderNodeVectorFunc_methods.set_function.m_call))MB_ptr_call
   VisualShaderNodeVectorFunc_methods.get_function._get_function = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeVectorFunc, "get_function", 4047776843, loc))
-  VisualShaderNodeVectorFunc_methods.get_function.m_call = cast(type_of(VisualShaderNodeVectorFunc_methods.get_function.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-VisualShaderNodeVectorFunc_init_props :: proc(VisualShaderNodeVectorFunc_prop: ^VisualShaderNodeVectorFunc_properties, loc:= #caller_location) {
-
-  VisualShaderNodeVectorFunc_prop.function_Int.get_function = cast(proc "c" (p_base: VisualShaderNodeVectorFunc, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_function")
-  VisualShaderNodeVectorFunc_prop.function_Int.set_function = cast(proc "c" (p_base: VisualShaderNodeVectorFunc, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_function")
+  VisualShaderNodeVectorFunc_methods.get_function.m_call = cast(type_of(VisualShaderNodeVectorFunc_methods.get_function.m_call))MB_ptr_call
 };

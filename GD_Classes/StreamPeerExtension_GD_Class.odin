@@ -18,6 +18,7 @@ StreamPeerExtension_Virtual_Info :: struct {
 StreamPeerExtension_MethodBind_List :: struct {
 };
 StreamPeerExtension_Init_ :: proc (StreamPeerExtension_methods: ^StreamPeerExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 StreamPeerExtension_Init_Virtuals_Info :: proc(info: ^StreamPeerExtension_Virtual_Info) {

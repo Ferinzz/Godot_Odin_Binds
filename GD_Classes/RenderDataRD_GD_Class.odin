@@ -10,4 +10,5 @@ RenderDataRD :: ^GDW.Object
 RenderDataRD_MethodBind_List :: struct {
 };
 RenderDataRD_Init_ :: proc (RenderDataRD_methods: ^RenderDataRD_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };

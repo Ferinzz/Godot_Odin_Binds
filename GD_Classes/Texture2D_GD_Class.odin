@@ -56,24 +56,25 @@ Texture2D_MethodBind_List :: struct {
   },
 };
 Texture2D_Init_ :: proc (Texture2D_methods: ^Texture2D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Texture2D_methods.get_width._get_width = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "get_width", 3905245786, loc))
-  Texture2D_methods.get_width.m_call = cast(type_of(Texture2D_methods.get_width.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.get_width.m_call = cast(type_of(Texture2D_methods.get_width.m_call))MB_ptr_call
   Texture2D_methods.get_height._get_height = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "get_height", 3905245786, loc))
-  Texture2D_methods.get_height.m_call = cast(type_of(Texture2D_methods.get_height.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.get_height.m_call = cast(type_of(Texture2D_methods.get_height.m_call))MB_ptr_call
   Texture2D_methods.get_size._get_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "get_size", 3341600327, loc))
-  Texture2D_methods.get_size.m_call = cast(type_of(Texture2D_methods.get_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.get_size.m_call = cast(type_of(Texture2D_methods.get_size.m_call))MB_ptr_call
   Texture2D_methods.has_alpha._has_alpha = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "has_alpha", 36873697, loc))
-  Texture2D_methods.has_alpha.m_call = cast(type_of(Texture2D_methods.has_alpha.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.has_alpha.m_call = cast(type_of(Texture2D_methods.has_alpha.m_call))MB_ptr_call
   Texture2D_methods.draw._draw = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "draw", 2729649137, loc))
-  Texture2D_methods.draw.m_call = cast(type_of(Texture2D_methods.draw.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.draw.m_call = cast(type_of(Texture2D_methods.draw.m_call))MB_ptr_call
   Texture2D_methods.draw_rect._draw_rect = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "draw_rect", 3499451691, loc))
-  Texture2D_methods.draw_rect.m_call = cast(type_of(Texture2D_methods.draw_rect.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.draw_rect.m_call = cast(type_of(Texture2D_methods.draw_rect.m_call))MB_ptr_call
   Texture2D_methods.draw_rect_region._draw_rect_region = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "draw_rect_region", 2963678660, loc))
-  Texture2D_methods.draw_rect_region.m_call = cast(type_of(Texture2D_methods.draw_rect_region.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.draw_rect_region.m_call = cast(type_of(Texture2D_methods.draw_rect_region.m_call))MB_ptr_call
   Texture2D_methods.get_image._get_image = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "get_image", 4190603485, loc))
-  Texture2D_methods.get_image.m_call = cast(type_of(Texture2D_methods.get_image.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.get_image.m_call = cast(type_of(Texture2D_methods.get_image.m_call))MB_ptr_call
   Texture2D_methods.create_placeholder._create_placeholder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Texture2D, "create_placeholder", 121922552, loc))
-  Texture2D_methods.create_placeholder.m_call = cast(type_of(Texture2D_methods.create_placeholder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Texture2D_methods.create_placeholder.m_call = cast(type_of(Texture2D_methods.create_placeholder.m_call))MB_ptr_call
 };
 
 Texture2D_Init_Virtuals_Info :: proc(info: ^Texture2D_Virtual_Info) {

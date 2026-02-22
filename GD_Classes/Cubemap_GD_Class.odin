@@ -14,6 +14,7 @@ Cubemap_MethodBind_List :: struct {
   },
 };
 Cubemap_Init_ :: proc (Cubemap_methods: ^Cubemap_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Cubemap_methods.create_placeholder._create_placeholder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Cubemap, "create_placeholder", 121922552, loc))
-  Cubemap_methods.create_placeholder.m_call = cast(type_of(Cubemap_methods.create_placeholder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Cubemap_methods.create_placeholder.m_call = cast(type_of(Cubemap_methods.create_placeholder.m_call))MB_ptr_call
 };

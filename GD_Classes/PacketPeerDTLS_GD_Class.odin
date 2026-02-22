@@ -34,12 +34,13 @@ PacketPeerDTLS_MethodBind_List :: struct {
   },
   };
 PacketPeerDTLS_Init_ :: proc (PacketPeerDTLS_methods: ^PacketPeerDTLS_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PacketPeerDTLS_methods.poll._poll = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PacketPeerDTLS, "poll", 3218959716, loc))
-  PacketPeerDTLS_methods.poll.m_call = cast(type_of(PacketPeerDTLS_methods.poll.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PacketPeerDTLS_methods.poll.m_call = cast(type_of(PacketPeerDTLS_methods.poll.m_call))MB_ptr_call
   PacketPeerDTLS_methods.connect_to_peer._connect_to_peer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PacketPeerDTLS, "connect_to_peer", 2880188099, loc))
-  PacketPeerDTLS_methods.connect_to_peer.m_call = cast(type_of(PacketPeerDTLS_methods.connect_to_peer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PacketPeerDTLS_methods.connect_to_peer.m_call = cast(type_of(PacketPeerDTLS_methods.connect_to_peer.m_call))MB_ptr_call
   PacketPeerDTLS_methods.get_status._get_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PacketPeerDTLS, "get_status", 3248654679, loc))
-  PacketPeerDTLS_methods.get_status.m_call = cast(type_of(PacketPeerDTLS_methods.get_status.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PacketPeerDTLS_methods.get_status.m_call = cast(type_of(PacketPeerDTLS_methods.get_status.m_call))MB_ptr_call
   PacketPeerDTLS_methods.disconnect_from_peer._disconnect_from_peer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PacketPeerDTLS, "disconnect_from_peer", 3218959716, loc))
-  PacketPeerDTLS_methods.disconnect_from_peer.m_call = cast(type_of(PacketPeerDTLS_methods.disconnect_from_peer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PacketPeerDTLS_methods.disconnect_from_peer.m_call = cast(type_of(PacketPeerDTLS_methods.disconnect_from_peer.m_call))MB_ptr_call
 };

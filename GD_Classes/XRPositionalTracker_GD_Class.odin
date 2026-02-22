@@ -14,16 +14,6 @@ XRPositionalTracker_TrackerHand :: enum i64 {
   TRACKER_HAND_RIGHT = 2,
   TRACKER_HAND_MAX = 3,
 };
-XRPositionalTracker_properties :: struct {
-  profile_gdstring : struct {
-  get_tracker_profile: proc "c" (p_base: XRPositionalTracker, r_value: ^GDW.gdstring),
-  set_tracker_profile: proc "c" (p_base: XRPositionalTracker, p_value: ^GDW.gdstring),
-  },
-  hand_Int : struct {
-  get_tracker_hand: proc "c" (p_base: XRPositionalTracker, r_value: ^GDW.Int),
-  set_tracker_hand: proc "c" (p_base: XRPositionalTracker, p_value: ^GDW.Int),
-  },
-};
 XRPositionalTracker_MethodBind_List :: struct {
   get_tracker_profile: struct{
     using _get_tracker_profile: ^GDW.MethodBind,
@@ -67,32 +57,25 @@ XRPositionalTracker_MethodBind_List :: struct {
   },
   };
 XRPositionalTracker_Init_ :: proc (XRPositionalTracker_methods: ^XRPositionalTracker_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   XRPositionalTracker_methods.get_tracker_profile._get_tracker_profile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "get_tracker_profile", 201670096, loc))
-  XRPositionalTracker_methods.get_tracker_profile.m_call = cast(type_of(XRPositionalTracker_methods.get_tracker_profile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.get_tracker_profile.m_call = cast(type_of(XRPositionalTracker_methods.get_tracker_profile.m_call))MB_ptr_call
   XRPositionalTracker_methods.set_tracker_profile._set_tracker_profile = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "set_tracker_profile", 83702148, loc))
-  XRPositionalTracker_methods.set_tracker_profile.m_call = cast(type_of(XRPositionalTracker_methods.set_tracker_profile.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.set_tracker_profile.m_call = cast(type_of(XRPositionalTracker_methods.set_tracker_profile.m_call))MB_ptr_call
   XRPositionalTracker_methods.get_tracker_hand._get_tracker_hand = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "get_tracker_hand", 4181770860, loc))
-  XRPositionalTracker_methods.get_tracker_hand.m_call = cast(type_of(XRPositionalTracker_methods.get_tracker_hand.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.get_tracker_hand.m_call = cast(type_of(XRPositionalTracker_methods.get_tracker_hand.m_call))MB_ptr_call
   XRPositionalTracker_methods.set_tracker_hand._set_tracker_hand = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "set_tracker_hand", 3904108980, loc))
-  XRPositionalTracker_methods.set_tracker_hand.m_call = cast(type_of(XRPositionalTracker_methods.set_tracker_hand.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.set_tracker_hand.m_call = cast(type_of(XRPositionalTracker_methods.set_tracker_hand.m_call))MB_ptr_call
   XRPositionalTracker_methods.has_pose._has_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "has_pose", 2619796661, loc))
-  XRPositionalTracker_methods.has_pose.m_call = cast(type_of(XRPositionalTracker_methods.has_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.has_pose.m_call = cast(type_of(XRPositionalTracker_methods.has_pose.m_call))MB_ptr_call
   XRPositionalTracker_methods.get_pose._get_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "get_pose", 4099720006, loc))
-  XRPositionalTracker_methods.get_pose.m_call = cast(type_of(XRPositionalTracker_methods.get_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.get_pose.m_call = cast(type_of(XRPositionalTracker_methods.get_pose.m_call))MB_ptr_call
   XRPositionalTracker_methods.invalidate_pose._invalidate_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "invalidate_pose", 3304788590, loc))
-  XRPositionalTracker_methods.invalidate_pose.m_call = cast(type_of(XRPositionalTracker_methods.invalidate_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.invalidate_pose.m_call = cast(type_of(XRPositionalTracker_methods.invalidate_pose.m_call))MB_ptr_call
   XRPositionalTracker_methods.set_pose._set_pose = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "set_pose", 3451230163, loc))
-  XRPositionalTracker_methods.set_pose.m_call = cast(type_of(XRPositionalTracker_methods.set_pose.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.set_pose.m_call = cast(type_of(XRPositionalTracker_methods.set_pose.m_call))MB_ptr_call
   XRPositionalTracker_methods.get_input._get_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "get_input", 2760726917, loc))
-  XRPositionalTracker_methods.get_input.m_call = cast(type_of(XRPositionalTracker_methods.get_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRPositionalTracker_methods.get_input.m_call = cast(type_of(XRPositionalTracker_methods.get_input.m_call))MB_ptr_call
   XRPositionalTracker_methods.set_input._set_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRPositionalTracker, "set_input", 3776071444, loc))
-  XRPositionalTracker_methods.set_input.m_call = cast(type_of(XRPositionalTracker_methods.set_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-XRPositionalTracker_init_props :: proc(XRPositionalTracker_prop: ^XRPositionalTracker_properties, loc:= #caller_location) {
-
-  XRPositionalTracker_prop.profile_gdstring.get_tracker_profile = cast(proc "c" (p_base: XRPositionalTracker, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_tracker_profile")
-  XRPositionalTracker_prop.profile_gdstring.set_tracker_profile = cast(proc "c" (p_base: XRPositionalTracker, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_tracker_profile")
-
-  XRPositionalTracker_prop.hand_Int.get_tracker_hand = cast(proc "c" (p_base: XRPositionalTracker, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_tracker_hand")
-  XRPositionalTracker_prop.hand_Int.set_tracker_hand = cast(proc "c" (p_base: XRPositionalTracker, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_tracker_hand")
+  XRPositionalTracker_methods.set_input.m_call = cast(type_of(XRPositionalTracker_methods.set_input.m_call))MB_ptr_call
 };

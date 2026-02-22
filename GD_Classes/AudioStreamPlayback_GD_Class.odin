@@ -59,24 +59,25 @@ AudioStreamPlayback_MethodBind_List :: struct {
   },
 };
 AudioStreamPlayback_Init_ :: proc (AudioStreamPlayback_methods: ^AudioStreamPlayback_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AudioStreamPlayback_methods.set_sample_playback._set_sample_playback = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "set_sample_playback", 3195455091, loc))
-  AudioStreamPlayback_methods.set_sample_playback.m_call = cast(type_of(AudioStreamPlayback_methods.set_sample_playback.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.set_sample_playback.m_call = cast(type_of(AudioStreamPlayback_methods.set_sample_playback.m_call))MB_ptr_call
   AudioStreamPlayback_methods.get_sample_playback._get_sample_playback = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "get_sample_playback", 3482738536, loc))
-  AudioStreamPlayback_methods.get_sample_playback.m_call = cast(type_of(AudioStreamPlayback_methods.get_sample_playback.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.get_sample_playback.m_call = cast(type_of(AudioStreamPlayback_methods.get_sample_playback.m_call))MB_ptr_call
   AudioStreamPlayback_methods.mix_audio._mix_audio = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "mix_audio", 3341291446, loc))
-  AudioStreamPlayback_methods.mix_audio.m_call = cast(type_of(AudioStreamPlayback_methods.mix_audio.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.mix_audio.m_call = cast(type_of(AudioStreamPlayback_methods.mix_audio.m_call))MB_ptr_call
   AudioStreamPlayback_methods.start._start = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "start", 1958160172, loc))
-  AudioStreamPlayback_methods.start.m_call = cast(type_of(AudioStreamPlayback_methods.start.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.start.m_call = cast(type_of(AudioStreamPlayback_methods.start.m_call))MB_ptr_call
   AudioStreamPlayback_methods.seek._seek = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "seek", 1958160172, loc))
-  AudioStreamPlayback_methods.seek.m_call = cast(type_of(AudioStreamPlayback_methods.seek.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.seek.m_call = cast(type_of(AudioStreamPlayback_methods.seek.m_call))MB_ptr_call
   AudioStreamPlayback_methods.stop._stop = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "stop", 3218959716, loc))
-  AudioStreamPlayback_methods.stop.m_call = cast(type_of(AudioStreamPlayback_methods.stop.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.stop.m_call = cast(type_of(AudioStreamPlayback_methods.stop.m_call))MB_ptr_call
   AudioStreamPlayback_methods.get_loop_count._get_loop_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "get_loop_count", 3905245786, loc))
-  AudioStreamPlayback_methods.get_loop_count.m_call = cast(type_of(AudioStreamPlayback_methods.get_loop_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.get_loop_count.m_call = cast(type_of(AudioStreamPlayback_methods.get_loop_count.m_call))MB_ptr_call
   AudioStreamPlayback_methods.get_playback_position._get_playback_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "get_playback_position", 1740695150, loc))
-  AudioStreamPlayback_methods.get_playback_position.m_call = cast(type_of(AudioStreamPlayback_methods.get_playback_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.get_playback_position.m_call = cast(type_of(AudioStreamPlayback_methods.get_playback_position.m_call))MB_ptr_call
   AudioStreamPlayback_methods.is_playing._is_playing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlayback, "is_playing", 36873697, loc))
-  AudioStreamPlayback_methods.is_playing.m_call = cast(type_of(AudioStreamPlayback_methods.is_playing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlayback_methods.is_playing.m_call = cast(type_of(AudioStreamPlayback_methods.is_playing.m_call))MB_ptr_call
 };
 
 AudioStreamPlayback_Init_Virtuals_Info :: proc(info: ^AudioStreamPlayback_Virtual_Info) {

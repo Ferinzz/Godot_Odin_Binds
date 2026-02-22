@@ -7,12 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 CompressedTextureLayered :: ^GDW.Object
 
-CompressedTextureLayered_properties :: struct {
-  load_path_gdstring : struct {
-  get_load_path: proc "c" (p_base: CompressedTextureLayered, r_value: ^GDW.gdstring),
-  load: proc "c" (p_base: CompressedTextureLayered, p_value: ^GDW.gdstring),
-  },
-};
 CompressedTextureLayered_MethodBind_List :: struct {
   load: struct{
     using _load: ^GDW.MethodBind,
@@ -24,13 +18,9 @@ CompressedTextureLayered_MethodBind_List :: struct {
   },
 };
 CompressedTextureLayered_Init_ :: proc (CompressedTextureLayered_methods: ^CompressedTextureLayered_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   CompressedTextureLayered_methods.load._load = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CompressedTextureLayered, "load", 166001499, loc))
-  CompressedTextureLayered_methods.load.m_call = cast(type_of(CompressedTextureLayered_methods.load.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  CompressedTextureLayered_methods.load.m_call = cast(type_of(CompressedTextureLayered_methods.load.m_call))MB_ptr_call
   CompressedTextureLayered_methods.get_load_path._get_load_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CompressedTextureLayered, "get_load_path", 201670096, loc))
-  CompressedTextureLayered_methods.get_load_path.m_call = cast(type_of(CompressedTextureLayered_methods.get_load_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-CompressedTextureLayered_init_props :: proc(CompressedTextureLayered_prop: ^CompressedTextureLayered_properties, loc:= #caller_location) {
-
-  CompressedTextureLayered_prop.load_path_gdstring.get_load_path = cast(proc "c" (p_base: CompressedTextureLayered, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_load_path")
-  CompressedTextureLayered_prop.load_path_gdstring.load = cast(proc "c" (p_base: CompressedTextureLayered, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "load")
+  CompressedTextureLayered_methods.get_load_path.m_call = cast(type_of(CompressedTextureLayered_methods.get_load_path.m_call))MB_ptr_call
 };

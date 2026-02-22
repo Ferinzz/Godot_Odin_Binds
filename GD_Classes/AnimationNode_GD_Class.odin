@@ -25,16 +25,6 @@ AnimationNode_FilterAction :: enum i64 {
   FILTER_STOP = 2,
   FILTER_BLEND = 3,
 };
-AnimationNode_properties :: struct {
-  filter_enabled_Bool : struct {
-  is_filter_enabled: proc "c" (p_base: AnimationNode, r_value: ^GDW.Bool),
-  set_filter_enabled: proc "c" (p_base: AnimationNode, p_value: ^GDW.Bool),
-  },
-  filters_Array : struct {
-  _get_filters: proc "c" (p_base: AnimationNode, r_value: ^GDW.Array),
-  _set_filters: proc "c" (p_base: AnimationNode, p_value: ^GDW.Array),
-  },
-};
 AnimationNode_MethodBind_List :: struct {
   add_input: struct{
     using _add_input: ^GDW.MethodBind,
@@ -106,40 +96,41 @@ AnimationNode_MethodBind_List :: struct {
   },
 };
 AnimationNode_Init_ :: proc (AnimationNode_methods: ^AnimationNode_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AnimationNode_methods.add_input._add_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "add_input", 2323990056, loc))
-  AnimationNode_methods.add_input.m_call = cast(type_of(AnimationNode_methods.add_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.add_input.m_call = cast(type_of(AnimationNode_methods.add_input.m_call))MB_ptr_call
   AnimationNode_methods.remove_input._remove_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "remove_input", 1286410249, loc))
-  AnimationNode_methods.remove_input.m_call = cast(type_of(AnimationNode_methods.remove_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.remove_input.m_call = cast(type_of(AnimationNode_methods.remove_input.m_call))MB_ptr_call
   AnimationNode_methods.set_input_name._set_input_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "set_input_name", 215573526, loc))
-  AnimationNode_methods.set_input_name.m_call = cast(type_of(AnimationNode_methods.set_input_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.set_input_name.m_call = cast(type_of(AnimationNode_methods.set_input_name.m_call))MB_ptr_call
   AnimationNode_methods.get_input_name._get_input_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "get_input_name", 844755477, loc))
-  AnimationNode_methods.get_input_name.m_call = cast(type_of(AnimationNode_methods.get_input_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.get_input_name.m_call = cast(type_of(AnimationNode_methods.get_input_name.m_call))MB_ptr_call
   AnimationNode_methods.get_input_count._get_input_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "get_input_count", 3905245786, loc))
-  AnimationNode_methods.get_input_count.m_call = cast(type_of(AnimationNode_methods.get_input_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.get_input_count.m_call = cast(type_of(AnimationNode_methods.get_input_count.m_call))MB_ptr_call
   AnimationNode_methods.find_input._find_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "find_input", 1321353865, loc))
-  AnimationNode_methods.find_input.m_call = cast(type_of(AnimationNode_methods.find_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.find_input.m_call = cast(type_of(AnimationNode_methods.find_input.m_call))MB_ptr_call
   AnimationNode_methods.set_filter_path._set_filter_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "set_filter_path", 3868023870, loc))
-  AnimationNode_methods.set_filter_path.m_call = cast(type_of(AnimationNode_methods.set_filter_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.set_filter_path.m_call = cast(type_of(AnimationNode_methods.set_filter_path.m_call))MB_ptr_call
   AnimationNode_methods.is_path_filtered._is_path_filtered = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "is_path_filtered", 861721659, loc))
-  AnimationNode_methods.is_path_filtered.m_call = cast(type_of(AnimationNode_methods.is_path_filtered.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.is_path_filtered.m_call = cast(type_of(AnimationNode_methods.is_path_filtered.m_call))MB_ptr_call
   AnimationNode_methods.set_filter_enabled._set_filter_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "set_filter_enabled", 2586408642, loc))
-  AnimationNode_methods.set_filter_enabled.m_call = cast(type_of(AnimationNode_methods.set_filter_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.set_filter_enabled.m_call = cast(type_of(AnimationNode_methods.set_filter_enabled.m_call))MB_ptr_call
   AnimationNode_methods.is_filter_enabled._is_filter_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "is_filter_enabled", 36873697, loc))
-  AnimationNode_methods.is_filter_enabled.m_call = cast(type_of(AnimationNode_methods.is_filter_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.is_filter_enabled.m_call = cast(type_of(AnimationNode_methods.is_filter_enabled.m_call))MB_ptr_call
   AnimationNode_methods.get_processing_animation_tree_instance_id._get_processing_animation_tree_instance_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "get_processing_animation_tree_instance_id", 3905245786, loc))
-  AnimationNode_methods.get_processing_animation_tree_instance_id.m_call = cast(type_of(AnimationNode_methods.get_processing_animation_tree_instance_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.get_processing_animation_tree_instance_id.m_call = cast(type_of(AnimationNode_methods.get_processing_animation_tree_instance_id.m_call))MB_ptr_call
   AnimationNode_methods.is_process_testing._is_process_testing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "is_process_testing", 36873697, loc))
-  AnimationNode_methods.is_process_testing.m_call = cast(type_of(AnimationNode_methods.is_process_testing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.is_process_testing.m_call = cast(type_of(AnimationNode_methods.is_process_testing.m_call))MB_ptr_call
   AnimationNode_methods.blend_animation._blend_animation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "blend_animation", 1630801826, loc))
-  AnimationNode_methods.blend_animation.m_call = cast(type_of(AnimationNode_methods.blend_animation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.blend_animation.m_call = cast(type_of(AnimationNode_methods.blend_animation.m_call))MB_ptr_call
   AnimationNode_methods.blend_node._blend_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "blend_node", 1746075988, loc))
-  AnimationNode_methods.blend_node.m_call = cast(type_of(AnimationNode_methods.blend_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.blend_node.m_call = cast(type_of(AnimationNode_methods.blend_node.m_call))MB_ptr_call
   AnimationNode_methods.blend_input._blend_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "blend_input", 1361527350, loc))
-  AnimationNode_methods.blend_input.m_call = cast(type_of(AnimationNode_methods.blend_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.blend_input.m_call = cast(type_of(AnimationNode_methods.blend_input.m_call))MB_ptr_call
   AnimationNode_methods.set_parameter._set_parameter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "set_parameter", 3776071444, loc))
-  AnimationNode_methods.set_parameter.m_call = cast(type_of(AnimationNode_methods.set_parameter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.set_parameter.m_call = cast(type_of(AnimationNode_methods.set_parameter.m_call))MB_ptr_call
   AnimationNode_methods.get_parameter._get_parameter = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNode, "get_parameter", 2760726917, loc))
-  AnimationNode_methods.get_parameter.m_call = cast(type_of(AnimationNode_methods.get_parameter.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AnimationNode_methods.get_parameter.m_call = cast(type_of(AnimationNode_methods.get_parameter.m_call))MB_ptr_call
 };
 
 AnimationNode_Init_Virtuals_Info :: proc(info: ^AnimationNode_Virtual_Info) {
@@ -159,12 +150,4 @@ AnimationNode_Init_Virtuals_Info :: proc(info: ^AnimationNode_Virtual_Info) {
     info._get_caption.name = GDW.StringConstruct("_get_caption")
     info._has_filter.p_hash = 36873697
     info._has_filter.name = GDW.StringConstruct("_has_filter")
-};
-AnimationNode_init_props :: proc(AnimationNode_prop: ^AnimationNode_properties, loc:= #caller_location) {
-
-  AnimationNode_prop.filter_enabled_Bool.is_filter_enabled = cast(proc "c" (p_base: AnimationNode, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_filter_enabled")
-  AnimationNode_prop.filter_enabled_Bool.set_filter_enabled = cast(proc "c" (p_base: AnimationNode, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_filter_enabled")
-
-  AnimationNode_prop.filters_Array._get_filters = cast(proc "c" (p_base: AnimationNode, r_value: ^GDW.Array))GDW.Get_Method_Getter(.ARRAY, "_get_filters")
-  AnimationNode_prop.filters_Array._set_filters = cast(proc "c" (p_base: AnimationNode, p_value: ^GDW.Array))GDW.Get_Method_Setter(.ARRAY, "_set_filters")
 };

@@ -46,18 +46,19 @@ JSONRPC_MethodBind_List :: struct {
   },
 };
 JSONRPC_Init_ :: proc (JSONRPC_methods: ^JSONRPC_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   JSONRPC_methods.set_method._set_method = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JSONRPC, "set_method", 2137474292, loc))
-  JSONRPC_methods.set_method.m_call = cast(type_of(JSONRPC_methods.set_method.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JSONRPC_methods.set_method.m_call = cast(type_of(JSONRPC_methods.set_method.m_call))MB_ptr_call
   JSONRPC_methods.process_action._process_action = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JSONRPC, "process_action", 2963479484, loc))
-  JSONRPC_methods.process_action.m_call = cast(type_of(JSONRPC_methods.process_action.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JSONRPC_methods.process_action.m_call = cast(type_of(JSONRPC_methods.process_action.m_call))MB_ptr_call
   JSONRPC_methods.process_string._process_string = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JSONRPC, "process_string", 1703090593, loc))
-  JSONRPC_methods.process_string.m_call = cast(type_of(JSONRPC_methods.process_string.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JSONRPC_methods.process_string.m_call = cast(type_of(JSONRPC_methods.process_string.m_call))MB_ptr_call
   JSONRPC_methods.make_request._make_request = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JSONRPC, "make_request", 3423508980, loc))
-  JSONRPC_methods.make_request.m_call = cast(type_of(JSONRPC_methods.make_request.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JSONRPC_methods.make_request.m_call = cast(type_of(JSONRPC_methods.make_request.m_call))MB_ptr_call
   JSONRPC_methods.make_response._make_response = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JSONRPC, "make_response", 5053918, loc))
-  JSONRPC_methods.make_response.m_call = cast(type_of(JSONRPC_methods.make_response.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JSONRPC_methods.make_response.m_call = cast(type_of(JSONRPC_methods.make_response.m_call))MB_ptr_call
   JSONRPC_methods.make_notification._make_notification = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JSONRPC, "make_notification", 2949127017, loc))
-  JSONRPC_methods.make_notification.m_call = cast(type_of(JSONRPC_methods.make_notification.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JSONRPC_methods.make_notification.m_call = cast(type_of(JSONRPC_methods.make_notification.m_call))MB_ptr_call
   JSONRPC_methods.make_response_error._make_response_error = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.JSONRPC, "make_response_error", 928596297, loc))
-  JSONRPC_methods.make_response_error.m_call = cast(type_of(JSONRPC_methods.make_response_error.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  JSONRPC_methods.make_response_error.m_call = cast(type_of(JSONRPC_methods.make_response_error.m_call))MB_ptr_call
 };

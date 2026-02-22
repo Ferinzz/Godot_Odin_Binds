@@ -50,6 +50,7 @@ ScriptExtension_Virtual_Info :: struct {
 ScriptExtension_MethodBind_List :: struct {
 };
 ScriptExtension_Init_ :: proc (ScriptExtension_methods: ^ScriptExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 ScriptExtension_Init_Virtuals_Info :: proc(info: ^ScriptExtension_Virtual_Info) {

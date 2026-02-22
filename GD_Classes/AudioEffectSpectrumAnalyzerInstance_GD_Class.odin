@@ -19,6 +19,7 @@ AudioEffectSpectrumAnalyzerInstance_MethodBind_List :: struct {
   },
 };
 AudioEffectSpectrumAnalyzerInstance_Init_ :: proc (AudioEffectSpectrumAnalyzerInstance_methods: ^AudioEffectSpectrumAnalyzerInstance_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AudioEffectSpectrumAnalyzerInstance_methods.get_magnitude_for_frequency_range._get_magnitude_for_frequency_range = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioEffectSpectrumAnalyzerInstance, "get_magnitude_for_frequency_range", 797993915, loc))
-  AudioEffectSpectrumAnalyzerInstance_methods.get_magnitude_for_frequency_range.m_call = cast(type_of(AudioEffectSpectrumAnalyzerInstance_methods.get_magnitude_for_frequency_range.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioEffectSpectrumAnalyzerInstance_methods.get_magnitude_for_frequency_range.m_call = cast(type_of(AudioEffectSpectrumAnalyzerInstance_methods.get_magnitude_for_frequency_range.m_call))MB_ptr_call
 };

@@ -26,24 +26,6 @@ XRServer_RotationMode :: enum i64 {
   RESET_BUT_KEEP_TILT = 1,
   DONT_RESET_ROTATION = 2,
 };
-XRServer_properties :: struct {
-  world_scale_float : struct {
-  get_world_scale: proc "c" (p_base: XRServer, r_value: ^GDW.float),
-  set_world_scale: proc "c" (p_base: XRServer, p_value: ^GDW.float),
-  },
-  world_origin_Vector3 : struct {
-  get_world_origin: proc "c" (p_base: XRServer, r_value: ^GDW.Vector3),
-  set_world_origin: proc "c" (p_base: XRServer, p_value: ^GDW.Vector3),
-  },
-  camera_locked_to_origin_Bool : struct {
-  is_camera_locked_to_origin: proc "c" (p_base: XRServer, r_value: ^GDW.Bool),
-  set_camera_locked_to_origin: proc "c" (p_base: XRServer, p_value: ^GDW.Bool),
-  },
-  primary_interface_Object : struct {
-  get_primary_interface: proc "c" (p_base: XRServer, r_value: ^GDW.Object),
-  set_primary_interface: proc "c" (p_base: XRServer, p_value: ^GDW.Object),
-  },
-};
 XRServer_MethodBind_List :: struct {
   get_world_scale: struct{
     using _get_world_scale: ^GDW.MethodBind,
@@ -135,62 +117,49 @@ XRServer_MethodBind_List :: struct {
   },
   };
 XRServer_Init_ :: proc (XRServer_methods: ^XRServer_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   XRServer_methods.get_world_scale._get_world_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_world_scale", 1740695150, loc))
-  XRServer_methods.get_world_scale.m_call = cast(type_of(XRServer_methods.get_world_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_world_scale.m_call = cast(type_of(XRServer_methods.get_world_scale.m_call))MB_ptr_call
   XRServer_methods.set_world_scale._set_world_scale = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "set_world_scale", 373806689, loc))
-  XRServer_methods.set_world_scale.m_call = cast(type_of(XRServer_methods.set_world_scale.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.set_world_scale.m_call = cast(type_of(XRServer_methods.set_world_scale.m_call))MB_ptr_call
   XRServer_methods.get_world_origin._get_world_origin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_world_origin", 3229777777, loc))
-  XRServer_methods.get_world_origin.m_call = cast(type_of(XRServer_methods.get_world_origin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_world_origin.m_call = cast(type_of(XRServer_methods.get_world_origin.m_call))MB_ptr_call
   XRServer_methods.set_world_origin._set_world_origin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "set_world_origin", 2952846383, loc))
-  XRServer_methods.set_world_origin.m_call = cast(type_of(XRServer_methods.set_world_origin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.set_world_origin.m_call = cast(type_of(XRServer_methods.set_world_origin.m_call))MB_ptr_call
   XRServer_methods.get_reference_frame._get_reference_frame = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_reference_frame", 3229777777, loc))
-  XRServer_methods.get_reference_frame.m_call = cast(type_of(XRServer_methods.get_reference_frame.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_reference_frame.m_call = cast(type_of(XRServer_methods.get_reference_frame.m_call))MB_ptr_call
   XRServer_methods.clear_reference_frame._clear_reference_frame = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "clear_reference_frame", 3218959716, loc))
-  XRServer_methods.clear_reference_frame.m_call = cast(type_of(XRServer_methods.clear_reference_frame.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.clear_reference_frame.m_call = cast(type_of(XRServer_methods.clear_reference_frame.m_call))MB_ptr_call
   XRServer_methods.center_on_hmd._center_on_hmd = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "center_on_hmd", 1450904707, loc))
-  XRServer_methods.center_on_hmd.m_call = cast(type_of(XRServer_methods.center_on_hmd.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.center_on_hmd.m_call = cast(type_of(XRServer_methods.center_on_hmd.m_call))MB_ptr_call
   XRServer_methods.get_hmd_transform._get_hmd_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_hmd_transform", 4183770049, loc))
-  XRServer_methods.get_hmd_transform.m_call = cast(type_of(XRServer_methods.get_hmd_transform.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_hmd_transform.m_call = cast(type_of(XRServer_methods.get_hmd_transform.m_call))MB_ptr_call
   XRServer_methods.set_camera_locked_to_origin._set_camera_locked_to_origin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "set_camera_locked_to_origin", 2586408642, loc))
-  XRServer_methods.set_camera_locked_to_origin.m_call = cast(type_of(XRServer_methods.set_camera_locked_to_origin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.set_camera_locked_to_origin.m_call = cast(type_of(XRServer_methods.set_camera_locked_to_origin.m_call))MB_ptr_call
   XRServer_methods.is_camera_locked_to_origin._is_camera_locked_to_origin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "is_camera_locked_to_origin", 36873697, loc))
-  XRServer_methods.is_camera_locked_to_origin.m_call = cast(type_of(XRServer_methods.is_camera_locked_to_origin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.is_camera_locked_to_origin.m_call = cast(type_of(XRServer_methods.is_camera_locked_to_origin.m_call))MB_ptr_call
   XRServer_methods.add_interface._add_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "add_interface", 1898711491, loc))
-  XRServer_methods.add_interface.m_call = cast(type_of(XRServer_methods.add_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.add_interface.m_call = cast(type_of(XRServer_methods.add_interface.m_call))MB_ptr_call
   XRServer_methods.get_interface_count._get_interface_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_interface_count", 3905245786, loc))
-  XRServer_methods.get_interface_count.m_call = cast(type_of(XRServer_methods.get_interface_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_interface_count.m_call = cast(type_of(XRServer_methods.get_interface_count.m_call))MB_ptr_call
   XRServer_methods.remove_interface._remove_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "remove_interface", 1898711491, loc))
-  XRServer_methods.remove_interface.m_call = cast(type_of(XRServer_methods.remove_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.remove_interface.m_call = cast(type_of(XRServer_methods.remove_interface.m_call))MB_ptr_call
   XRServer_methods.get_interface._get_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_interface", 4237347919, loc))
-  XRServer_methods.get_interface.m_call = cast(type_of(XRServer_methods.get_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_interface.m_call = cast(type_of(XRServer_methods.get_interface.m_call))MB_ptr_call
   XRServer_methods.get_interfaces._get_interfaces = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_interfaces", 3995934104, loc))
-  XRServer_methods.get_interfaces.m_call = cast(type_of(XRServer_methods.get_interfaces.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_interfaces.m_call = cast(type_of(XRServer_methods.get_interfaces.m_call))MB_ptr_call
   XRServer_methods.find_interface._find_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "find_interface", 1395192955, loc))
-  XRServer_methods.find_interface.m_call = cast(type_of(XRServer_methods.find_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.find_interface.m_call = cast(type_of(XRServer_methods.find_interface.m_call))MB_ptr_call
   XRServer_methods.add_tracker._add_tracker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "add_tracker", 684804553, loc))
-  XRServer_methods.add_tracker.m_call = cast(type_of(XRServer_methods.add_tracker.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.add_tracker.m_call = cast(type_of(XRServer_methods.add_tracker.m_call))MB_ptr_call
   XRServer_methods.remove_tracker._remove_tracker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "remove_tracker", 684804553, loc))
-  XRServer_methods.remove_tracker.m_call = cast(type_of(XRServer_methods.remove_tracker.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.remove_tracker.m_call = cast(type_of(XRServer_methods.remove_tracker.m_call))MB_ptr_call
   XRServer_methods.get_trackers._get_trackers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_trackers", 3554694381, loc))
-  XRServer_methods.get_trackers.m_call = cast(type_of(XRServer_methods.get_trackers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_trackers.m_call = cast(type_of(XRServer_methods.get_trackers.m_call))MB_ptr_call
   XRServer_methods.get_tracker._get_tracker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_tracker", 147382240, loc))
-  XRServer_methods.get_tracker.m_call = cast(type_of(XRServer_methods.get_tracker.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_tracker.m_call = cast(type_of(XRServer_methods.get_tracker.m_call))MB_ptr_call
   XRServer_methods.get_primary_interface._get_primary_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "get_primary_interface", 2143545064, loc))
-  XRServer_methods.get_primary_interface.m_call = cast(type_of(XRServer_methods.get_primary_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  XRServer_methods.get_primary_interface.m_call = cast(type_of(XRServer_methods.get_primary_interface.m_call))MB_ptr_call
   XRServer_methods.set_primary_interface._set_primary_interface = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRServer, "set_primary_interface", 1898711491, loc))
-  XRServer_methods.set_primary_interface.m_call = cast(type_of(XRServer_methods.set_primary_interface.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-XRServer_init_props :: proc(XRServer_prop: ^XRServer_properties, loc:= #caller_location) {
-
-  XRServer_prop.world_scale_float.get_world_scale = cast(proc "c" (p_base: XRServer, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_world_scale")
-  XRServer_prop.world_scale_float.set_world_scale = cast(proc "c" (p_base: XRServer, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_world_scale")
-
-  XRServer_prop.world_origin_Vector3.get_world_origin = cast(proc "c" (p_base: XRServer, r_value: ^GDW.Vector3))GDW.Get_Method_Getter(.VECTOR3, "get_world_origin")
-  XRServer_prop.world_origin_Vector3.set_world_origin = cast(proc "c" (p_base: XRServer, p_value: ^GDW.Vector3))GDW.Get_Method_Setter(.VECTOR3, "set_world_origin")
-
-  XRServer_prop.camera_locked_to_origin_Bool.is_camera_locked_to_origin = cast(proc "c" (p_base: XRServer, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_camera_locked_to_origin")
-  XRServer_prop.camera_locked_to_origin_Bool.set_camera_locked_to_origin = cast(proc "c" (p_base: XRServer, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_camera_locked_to_origin")
-
-  XRServer_prop.primary_interface_Object.get_primary_interface = cast(proc "c" (p_base: XRServer, r_value: ^GDW.Object))GDW.Get_Method_Getter(.OBJECT, "get_primary_interface")
-  XRServer_prop.primary_interface_Object.set_primary_interface = cast(proc "c" (p_base: XRServer, p_value: ^GDW.Object))GDW.Get_Method_Setter(.OBJECT, "set_primary_interface")
+  XRServer_methods.set_primary_interface.m_call = cast(type_of(XRServer_methods.set_primary_interface.m_call))MB_ptr_call
 };

@@ -19,72 +19,6 @@ TextureProgressBar_FillMode :: enum i64 {
   FILL_BILINEAR_TOP_AND_BOTTOM = 7,
   FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE = 8,
 };
-TextureProgressBar_properties :: struct {
-  fill_mode_Int : struct {
-  get_fill_mode: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int),
-  set_fill_mode: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int),
-  },
-  radial_initial_angle_float : struct {
-  get_radial_initial_angle: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.float),
-  set_radial_initial_angle: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.float),
-  },
-  radial_fill_degrees_float : struct {
-  get_fill_degrees: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.float),
-  set_fill_degrees: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.float),
-  },
-  radial_center_offset_Vector2 : struct {
-  get_radial_center_offset: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Vector2),
-  set_radial_center_offset: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Vector2),
-  },
-  nine_patch_stretch_Bool : struct {
-  get_nine_patch_stretch: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Bool),
-  set_nine_patch_stretch: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Bool),
-  },
-  stretch_margin_left_Int : struct {
-  get_stretch_margin: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int),
-  set_stretch_margin: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int),
-  },
-  stretch_margin_top_Int : struct {
-  get_stretch_margin: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int),
-  set_stretch_margin: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int),
-  },
-  stretch_margin_right_Int : struct {
-  get_stretch_margin: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int),
-  set_stretch_margin: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int),
-  },
-  stretch_margin_bottom_Int : struct {
-  get_stretch_margin: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int),
-  set_stretch_margin: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int),
-  },
-  texture_under_Texture2D : struct {
-    get_under_texture: proc "c" (p_base: TextureProgressBar, r_value: ^Texture2D),
-    set_under_texture: proc "c" (p_base: TextureProgressBar, p_value: ^Texture2D),
-  },
-  texture_over_Texture2D : struct {
-    get_over_texture: proc "c" (p_base: TextureProgressBar, r_value: ^Texture2D),
-    set_over_texture: proc "c" (p_base: TextureProgressBar, p_value: ^Texture2D),
-  },
-  texture_progress_Texture2D : struct {
-    get_progress_texture: proc "c" (p_base: TextureProgressBar, r_value: ^Texture2D),
-    set_progress_texture: proc "c" (p_base: TextureProgressBar, p_value: ^Texture2D),
-  },
-  texture_progress_offset_Vector2 : struct {
-  get_texture_progress_offset: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Vector2),
-  set_texture_progress_offset: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Vector2),
-  },
-  tint_under_Color : struct {
-  get_tint_under: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Color),
-  set_tint_under: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Color),
-  },
-  tint_over_Color : struct {
-  get_tint_over: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Color),
-  set_tint_over: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Color),
-  },
-  tint_progress_Color : struct {
-  get_tint_progress: proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Color),
-  set_tint_progress: proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Color),
-  },
-};
 TextureProgressBar_MethodBind_List :: struct {
   set_under_texture: struct{
     using _set_under_texture: ^GDW.MethodBind,
@@ -192,106 +126,57 @@ TextureProgressBar_MethodBind_List :: struct {
   },
 };
 TextureProgressBar_Init_ :: proc (TextureProgressBar_methods: ^TextureProgressBar_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   TextureProgressBar_methods.set_under_texture._set_under_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_under_texture", 4051416890, loc))
-  TextureProgressBar_methods.set_under_texture.m_call = cast(type_of(TextureProgressBar_methods.set_under_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_under_texture.m_call = cast(type_of(TextureProgressBar_methods.set_under_texture.m_call))MB_ptr_call
   TextureProgressBar_methods.get_under_texture._get_under_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_under_texture", 3635182373, loc))
-  TextureProgressBar_methods.get_under_texture.m_call = cast(type_of(TextureProgressBar_methods.get_under_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_under_texture.m_call = cast(type_of(TextureProgressBar_methods.get_under_texture.m_call))MB_ptr_call
   TextureProgressBar_methods.set_progress_texture._set_progress_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_progress_texture", 4051416890, loc))
-  TextureProgressBar_methods.set_progress_texture.m_call = cast(type_of(TextureProgressBar_methods.set_progress_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_progress_texture.m_call = cast(type_of(TextureProgressBar_methods.set_progress_texture.m_call))MB_ptr_call
   TextureProgressBar_methods.get_progress_texture._get_progress_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_progress_texture", 3635182373, loc))
-  TextureProgressBar_methods.get_progress_texture.m_call = cast(type_of(TextureProgressBar_methods.get_progress_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_progress_texture.m_call = cast(type_of(TextureProgressBar_methods.get_progress_texture.m_call))MB_ptr_call
   TextureProgressBar_methods.set_over_texture._set_over_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_over_texture", 4051416890, loc))
-  TextureProgressBar_methods.set_over_texture.m_call = cast(type_of(TextureProgressBar_methods.set_over_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_over_texture.m_call = cast(type_of(TextureProgressBar_methods.set_over_texture.m_call))MB_ptr_call
   TextureProgressBar_methods.get_over_texture._get_over_texture = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_over_texture", 3635182373, loc))
-  TextureProgressBar_methods.get_over_texture.m_call = cast(type_of(TextureProgressBar_methods.get_over_texture.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_over_texture.m_call = cast(type_of(TextureProgressBar_methods.get_over_texture.m_call))MB_ptr_call
   TextureProgressBar_methods.set_fill_mode._set_fill_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_fill_mode", 1286410249, loc))
-  TextureProgressBar_methods.set_fill_mode.m_call = cast(type_of(TextureProgressBar_methods.set_fill_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_fill_mode.m_call = cast(type_of(TextureProgressBar_methods.set_fill_mode.m_call))MB_ptr_call
   TextureProgressBar_methods.get_fill_mode._get_fill_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_fill_mode", 2455072627, loc))
-  TextureProgressBar_methods.get_fill_mode.m_call = cast(type_of(TextureProgressBar_methods.get_fill_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_fill_mode.m_call = cast(type_of(TextureProgressBar_methods.get_fill_mode.m_call))MB_ptr_call
   TextureProgressBar_methods.set_tint_under._set_tint_under = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_tint_under", 2920490490, loc))
-  TextureProgressBar_methods.set_tint_under.m_call = cast(type_of(TextureProgressBar_methods.set_tint_under.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_tint_under.m_call = cast(type_of(TextureProgressBar_methods.set_tint_under.m_call))MB_ptr_call
   TextureProgressBar_methods.get_tint_under._get_tint_under = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_tint_under", 3444240500, loc))
-  TextureProgressBar_methods.get_tint_under.m_call = cast(type_of(TextureProgressBar_methods.get_tint_under.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_tint_under.m_call = cast(type_of(TextureProgressBar_methods.get_tint_under.m_call))MB_ptr_call
   TextureProgressBar_methods.set_tint_progress._set_tint_progress = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_tint_progress", 2920490490, loc))
-  TextureProgressBar_methods.set_tint_progress.m_call = cast(type_of(TextureProgressBar_methods.set_tint_progress.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_tint_progress.m_call = cast(type_of(TextureProgressBar_methods.set_tint_progress.m_call))MB_ptr_call
   TextureProgressBar_methods.get_tint_progress._get_tint_progress = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_tint_progress", 3444240500, loc))
-  TextureProgressBar_methods.get_tint_progress.m_call = cast(type_of(TextureProgressBar_methods.get_tint_progress.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_tint_progress.m_call = cast(type_of(TextureProgressBar_methods.get_tint_progress.m_call))MB_ptr_call
   TextureProgressBar_methods.set_tint_over._set_tint_over = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_tint_over", 2920490490, loc))
-  TextureProgressBar_methods.set_tint_over.m_call = cast(type_of(TextureProgressBar_methods.set_tint_over.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_tint_over.m_call = cast(type_of(TextureProgressBar_methods.set_tint_over.m_call))MB_ptr_call
   TextureProgressBar_methods.get_tint_over._get_tint_over = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_tint_over", 3444240500, loc))
-  TextureProgressBar_methods.get_tint_over.m_call = cast(type_of(TextureProgressBar_methods.get_tint_over.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_tint_over.m_call = cast(type_of(TextureProgressBar_methods.get_tint_over.m_call))MB_ptr_call
   TextureProgressBar_methods.set_texture_progress_offset._set_texture_progress_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_texture_progress_offset", 743155724, loc))
-  TextureProgressBar_methods.set_texture_progress_offset.m_call = cast(type_of(TextureProgressBar_methods.set_texture_progress_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_texture_progress_offset.m_call = cast(type_of(TextureProgressBar_methods.set_texture_progress_offset.m_call))MB_ptr_call
   TextureProgressBar_methods.get_texture_progress_offset._get_texture_progress_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_texture_progress_offset", 3341600327, loc))
-  TextureProgressBar_methods.get_texture_progress_offset.m_call = cast(type_of(TextureProgressBar_methods.get_texture_progress_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_texture_progress_offset.m_call = cast(type_of(TextureProgressBar_methods.get_texture_progress_offset.m_call))MB_ptr_call
   TextureProgressBar_methods.set_radial_initial_angle._set_radial_initial_angle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_radial_initial_angle", 373806689, loc))
-  TextureProgressBar_methods.set_radial_initial_angle.m_call = cast(type_of(TextureProgressBar_methods.set_radial_initial_angle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_radial_initial_angle.m_call = cast(type_of(TextureProgressBar_methods.set_radial_initial_angle.m_call))MB_ptr_call
   TextureProgressBar_methods.get_radial_initial_angle._get_radial_initial_angle = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_radial_initial_angle", 191475506, loc))
-  TextureProgressBar_methods.get_radial_initial_angle.m_call = cast(type_of(TextureProgressBar_methods.get_radial_initial_angle.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_radial_initial_angle.m_call = cast(type_of(TextureProgressBar_methods.get_radial_initial_angle.m_call))MB_ptr_call
   TextureProgressBar_methods.set_radial_center_offset._set_radial_center_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_radial_center_offset", 743155724, loc))
-  TextureProgressBar_methods.set_radial_center_offset.m_call = cast(type_of(TextureProgressBar_methods.set_radial_center_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_radial_center_offset.m_call = cast(type_of(TextureProgressBar_methods.set_radial_center_offset.m_call))MB_ptr_call
   TextureProgressBar_methods.get_radial_center_offset._get_radial_center_offset = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_radial_center_offset", 1497962370, loc))
-  TextureProgressBar_methods.get_radial_center_offset.m_call = cast(type_of(TextureProgressBar_methods.get_radial_center_offset.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_radial_center_offset.m_call = cast(type_of(TextureProgressBar_methods.get_radial_center_offset.m_call))MB_ptr_call
   TextureProgressBar_methods.set_fill_degrees._set_fill_degrees = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_fill_degrees", 373806689, loc))
-  TextureProgressBar_methods.set_fill_degrees.m_call = cast(type_of(TextureProgressBar_methods.set_fill_degrees.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_fill_degrees.m_call = cast(type_of(TextureProgressBar_methods.set_fill_degrees.m_call))MB_ptr_call
   TextureProgressBar_methods.get_fill_degrees._get_fill_degrees = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_fill_degrees", 191475506, loc))
-  TextureProgressBar_methods.get_fill_degrees.m_call = cast(type_of(TextureProgressBar_methods.get_fill_degrees.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_fill_degrees.m_call = cast(type_of(TextureProgressBar_methods.get_fill_degrees.m_call))MB_ptr_call
   TextureProgressBar_methods.set_stretch_margin._set_stretch_margin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_stretch_margin", 437707142, loc))
-  TextureProgressBar_methods.set_stretch_margin.m_call = cast(type_of(TextureProgressBar_methods.set_stretch_margin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_stretch_margin.m_call = cast(type_of(TextureProgressBar_methods.set_stretch_margin.m_call))MB_ptr_call
   TextureProgressBar_methods.get_stretch_margin._get_stretch_margin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_stretch_margin", 1983885014, loc))
-  TextureProgressBar_methods.get_stretch_margin.m_call = cast(type_of(TextureProgressBar_methods.get_stretch_margin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.get_stretch_margin.m_call = cast(type_of(TextureProgressBar_methods.get_stretch_margin.m_call))MB_ptr_call
   TextureProgressBar_methods.set_nine_patch_stretch._set_nine_patch_stretch = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "set_nine_patch_stretch", 2586408642, loc))
-  TextureProgressBar_methods.set_nine_patch_stretch.m_call = cast(type_of(TextureProgressBar_methods.set_nine_patch_stretch.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  TextureProgressBar_methods.set_nine_patch_stretch.m_call = cast(type_of(TextureProgressBar_methods.set_nine_patch_stretch.m_call))MB_ptr_call
   TextureProgressBar_methods.get_nine_patch_stretch._get_nine_patch_stretch = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.TextureProgressBar, "get_nine_patch_stretch", 36873697, loc))
-  TextureProgressBar_methods.get_nine_patch_stretch.m_call = cast(type_of(TextureProgressBar_methods.get_nine_patch_stretch.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-TextureProgressBar_init_props :: proc(TextureProgressBar_prop: ^TextureProgressBar_properties, loc:= #caller_location) {
-
-  TextureProgressBar_prop.fill_mode_Int.get_fill_mode = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_fill_mode")
-  TextureProgressBar_prop.fill_mode_Int.set_fill_mode = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_fill_mode")
-
-  TextureProgressBar_prop.radial_initial_angle_float.get_radial_initial_angle = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_radial_initial_angle")
-  TextureProgressBar_prop.radial_initial_angle_float.set_radial_initial_angle = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_radial_initial_angle")
-
-  TextureProgressBar_prop.radial_fill_degrees_float.get_fill_degrees = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.float))GDW.Get_Method_Getter(.FLOAT, "get_fill_degrees")
-  TextureProgressBar_prop.radial_fill_degrees_float.set_fill_degrees = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.float))GDW.Get_Method_Setter(.FLOAT, "set_fill_degrees")
-
-  TextureProgressBar_prop.radial_center_offset_Vector2.get_radial_center_offset = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_radial_center_offset")
-  TextureProgressBar_prop.radial_center_offset_Vector2.set_radial_center_offset = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_radial_center_offset")
-
-  TextureProgressBar_prop.nine_patch_stretch_Bool.get_nine_patch_stretch = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "get_nine_patch_stretch")
-  TextureProgressBar_prop.nine_patch_stretch_Bool.set_nine_patch_stretch = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_nine_patch_stretch")
-
-  TextureProgressBar_prop.stretch_margin_left_Int.get_stretch_margin = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_stretch_margin")
-  TextureProgressBar_prop.stretch_margin_left_Int.set_stretch_margin = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_stretch_margin")
-
-  TextureProgressBar_prop.stretch_margin_top_Int.get_stretch_margin = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_stretch_margin")
-  TextureProgressBar_prop.stretch_margin_top_Int.set_stretch_margin = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_stretch_margin")
-
-  TextureProgressBar_prop.stretch_margin_right_Int.get_stretch_margin = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_stretch_margin")
-  TextureProgressBar_prop.stretch_margin_right_Int.set_stretch_margin = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_stretch_margin")
-
-  TextureProgressBar_prop.stretch_margin_bottom_Int.get_stretch_margin = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_stretch_margin")
-  TextureProgressBar_prop.stretch_margin_bottom_Int.set_stretch_margin = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_stretch_margin")
-
-  TextureProgressBar_prop.texture_under_Texture2D.get_under_texture = cast(proc "c" (p_base: TextureProgressBar, r_value: ^Texture2D))GDW.Get_Method_Getter(.OBJECT, "get_under_texture")
-  TextureProgressBar_prop.texture_under_Texture2D.set_under_texture = cast(proc "c" (p_base: TextureProgressBar, p_value: ^Texture2D))GDW.Get_Method_Setter(.OBJECT, "set_under_texture")
-
-  TextureProgressBar_prop.texture_over_Texture2D.get_over_texture = cast(proc "c" (p_base: TextureProgressBar, r_value: ^Texture2D))GDW.Get_Method_Getter(.OBJECT, "get_over_texture")
-  TextureProgressBar_prop.texture_over_Texture2D.set_over_texture = cast(proc "c" (p_base: TextureProgressBar, p_value: ^Texture2D))GDW.Get_Method_Setter(.OBJECT, "set_over_texture")
-
-  TextureProgressBar_prop.texture_progress_Texture2D.get_progress_texture = cast(proc "c" (p_base: TextureProgressBar, r_value: ^Texture2D))GDW.Get_Method_Getter(.OBJECT, "get_progress_texture")
-  TextureProgressBar_prop.texture_progress_Texture2D.set_progress_texture = cast(proc "c" (p_base: TextureProgressBar, p_value: ^Texture2D))GDW.Get_Method_Setter(.OBJECT, "set_progress_texture")
-
-  TextureProgressBar_prop.texture_progress_offset_Vector2.get_texture_progress_offset = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_texture_progress_offset")
-  TextureProgressBar_prop.texture_progress_offset_Vector2.set_texture_progress_offset = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_texture_progress_offset")
-
-  TextureProgressBar_prop.tint_under_Color.get_tint_under = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Color))GDW.Get_Method_Getter(.COLOR, "get_tint_under")
-  TextureProgressBar_prop.tint_under_Color.set_tint_under = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Color))GDW.Get_Method_Setter(.COLOR, "set_tint_under")
-
-  TextureProgressBar_prop.tint_over_Color.get_tint_over = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Color))GDW.Get_Method_Getter(.COLOR, "get_tint_over")
-  TextureProgressBar_prop.tint_over_Color.set_tint_over = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Color))GDW.Get_Method_Setter(.COLOR, "set_tint_over")
-
-  TextureProgressBar_prop.tint_progress_Color.get_tint_progress = cast(proc "c" (p_base: TextureProgressBar, r_value: ^GDW.Color))GDW.Get_Method_Getter(.COLOR, "get_tint_progress")
-  TextureProgressBar_prop.tint_progress_Color.set_tint_progress = cast(proc "c" (p_base: TextureProgressBar, p_value: ^GDW.Color))GDW.Get_Method_Setter(.COLOR, "set_tint_progress")
+  TextureProgressBar_methods.get_nine_patch_stretch.m_call = cast(type_of(TextureProgressBar_methods.get_nine_patch_stretch.m_call))MB_ptr_call
 };

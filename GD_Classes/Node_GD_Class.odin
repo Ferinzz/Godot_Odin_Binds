@@ -118,63 +118,6 @@ Node_Constants :: enum i64 {
   NOTIFICATION_ACCESSIBILITY_UPDATE= 3000,
   NOTIFICATION_ACCESSIBILITY_INVALIDATE= 3001,
 };
-Node_properties :: struct {
-  name_StringName : struct {
-  get_name: proc "c" (p_base: Node, r_value: ^GDW.StringName),
-  set_name: proc "c" (p_base: Node, p_value: ^GDW.StringName),
-  },
-  unique_name_in_owner_Bool : struct {
-  is_unique_name_in_owner: proc "c" (p_base: Node, r_value: ^GDW.Bool),
-  set_unique_name_in_owner: proc "c" (p_base: Node, p_value: ^GDW.Bool),
-  },
-  scene_file_path_gdstring : struct {
-  get_scene_file_path: proc "c" (p_base: Node, r_value: ^GDW.gdstring),
-  set_scene_file_path: proc "c" (p_base: Node, p_value: ^GDW.gdstring),
-  },
-  owner_Node : struct {
-    get_owner: proc "c" (p_base: Node, r_value: ^Node),
-    set_owner: proc "c" (p_base: Node, p_value: ^Node),
-  },
-  multiplayer_MultiplayerAPI : struct {
-    get_multiplayer: proc "c" (p_base: Node, r_value: ^MultiplayerAPI),
-  },
-  process_mode_Int : struct {
-  get_process_mode: proc "c" (p_base: Node, r_value: ^GDW.Int),
-  set_process_mode: proc "c" (p_base: Node, p_value: ^GDW.Int),
-  },
-  process_priority_Int : struct {
-  get_process_priority: proc "c" (p_base: Node, r_value: ^GDW.Int),
-  set_process_priority: proc "c" (p_base: Node, p_value: ^GDW.Int),
-  },
-  process_physics_priority_Int : struct {
-  get_physics_process_priority: proc "c" (p_base: Node, r_value: ^GDW.Int),
-  set_physics_process_priority: proc "c" (p_base: Node, p_value: ^GDW.Int),
-  },
-  process_thread_group_Int : struct {
-  get_process_thread_group: proc "c" (p_base: Node, r_value: ^GDW.Int),
-  set_process_thread_group: proc "c" (p_base: Node, p_value: ^GDW.Int),
-  },
-  process_thread_group_order_Int : struct {
-  get_process_thread_group_order: proc "c" (p_base: Node, r_value: ^GDW.Int),
-  set_process_thread_group_order: proc "c" (p_base: Node, p_value: ^GDW.Int),
-  },
-  process_thread_messages_Int : struct {
-  get_process_thread_messages: proc "c" (p_base: Node, r_value: ^GDW.Int),
-  set_process_thread_messages: proc "c" (p_base: Node, p_value: ^GDW.Int),
-  },
-  physics_interpolation_mode_Int : struct {
-  get_physics_interpolation_mode: proc "c" (p_base: Node, r_value: ^GDW.Int),
-  set_physics_interpolation_mode: proc "c" (p_base: Node, p_value: ^GDW.Int),
-  },
-  auto_translate_mode_Int : struct {
-  get_auto_translate_mode: proc "c" (p_base: Node, r_value: ^GDW.Int),
-  set_auto_translate_mode: proc "c" (p_base: Node, p_value: ^GDW.Int),
-  },
-  editor_description_gdstring : struct {
-  get_editor_description: proc "c" (p_base: Node, r_value: ^GDW.gdstring),
-  set_editor_description: proc "c" (p_base: Node, p_value: ^GDW.gdstring),
-  },
-};
 Node_MethodBind_List :: struct {
   print_orphan_nodes: struct{
     using _print_orphan_nodes: ^GDW.MethodBind,
@@ -662,248 +605,249 @@ Node_MethodBind_List :: struct {
   },
   };
 Node_Init_ :: proc (Node_methods: ^Node_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Node_methods.print_orphan_nodes._print_orphan_nodes = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "print_orphan_nodes", 3218959716, loc))
-  Node_methods.print_orphan_nodes.m_call = cast(type_of(Node_methods.print_orphan_nodes.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.print_orphan_nodes.m_call = cast(type_of(Node_methods.print_orphan_nodes.m_call))MB_ptr_call
   Node_methods.get_orphan_node_ids._get_orphan_node_ids = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_orphan_node_ids", 2915620761, loc))
-  Node_methods.get_orphan_node_ids.m_call = cast(type_of(Node_methods.get_orphan_node_ids.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_orphan_node_ids.m_call = cast(type_of(Node_methods.get_orphan_node_ids.m_call))MB_ptr_call
   Node_methods.add_sibling._add_sibling = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "add_sibling", 2570952461, loc))
-  Node_methods.add_sibling.m_call = cast(type_of(Node_methods.add_sibling.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.add_sibling.m_call = cast(type_of(Node_methods.add_sibling.m_call))MB_ptr_call
   Node_methods.set_name._set_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_name", 3304788590, loc))
-  Node_methods.set_name.m_call = cast(type_of(Node_methods.set_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_name.m_call = cast(type_of(Node_methods.set_name.m_call))MB_ptr_call
   Node_methods.get_name._get_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_name", 2002593661, loc))
-  Node_methods.get_name.m_call = cast(type_of(Node_methods.get_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_name.m_call = cast(type_of(Node_methods.get_name.m_call))MB_ptr_call
   Node_methods.add_child._add_child = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "add_child", 3863233950, loc))
-  Node_methods.add_child.m_call = cast(type_of(Node_methods.add_child.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.add_child.m_call = cast(type_of(Node_methods.add_child.m_call))MB_ptr_call
   Node_methods.remove_child._remove_child = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "remove_child", 1078189570, loc))
-  Node_methods.remove_child.m_call = cast(type_of(Node_methods.remove_child.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.remove_child.m_call = cast(type_of(Node_methods.remove_child.m_call))MB_ptr_call
   Node_methods.reparent._reparent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "reparent", 3685795103, loc))
-  Node_methods.reparent.m_call = cast(type_of(Node_methods.reparent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.reparent.m_call = cast(type_of(Node_methods.reparent.m_call))MB_ptr_call
   Node_methods.get_child_count._get_child_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_child_count", 894402480, loc))
-  Node_methods.get_child_count.m_call = cast(type_of(Node_methods.get_child_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_child_count.m_call = cast(type_of(Node_methods.get_child_count.m_call))MB_ptr_call
   Node_methods.get_children._get_children = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_children", 873284517, loc))
-  Node_methods.get_children.m_call = cast(type_of(Node_methods.get_children.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_children.m_call = cast(type_of(Node_methods.get_children.m_call))MB_ptr_call
   Node_methods.get_child._get_child = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_child", 541253412, loc))
-  Node_methods.get_child.m_call = cast(type_of(Node_methods.get_child.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_child.m_call = cast(type_of(Node_methods.get_child.m_call))MB_ptr_call
   Node_methods.has_node._has_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "has_node", 861721659, loc))
-  Node_methods.has_node.m_call = cast(type_of(Node_methods.has_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.has_node.m_call = cast(type_of(Node_methods.has_node.m_call))MB_ptr_call
   Node_methods.get_node._get_node = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_node", 2734337346, loc))
-  Node_methods.get_node.m_call = cast(type_of(Node_methods.get_node.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_node.m_call = cast(type_of(Node_methods.get_node.m_call))MB_ptr_call
   Node_methods.get_node_or_null._get_node_or_null = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_node_or_null", 2734337346, loc))
-  Node_methods.get_node_or_null.m_call = cast(type_of(Node_methods.get_node_or_null.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_node_or_null.m_call = cast(type_of(Node_methods.get_node_or_null.m_call))MB_ptr_call
   Node_methods.get_parent._get_parent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_parent", 3160264692, loc))
-  Node_methods.get_parent.m_call = cast(type_of(Node_methods.get_parent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_parent.m_call = cast(type_of(Node_methods.get_parent.m_call))MB_ptr_call
   Node_methods.find_child._find_child = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "find_child", 2008217037, loc))
-  Node_methods.find_child.m_call = cast(type_of(Node_methods.find_child.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.find_child.m_call = cast(type_of(Node_methods.find_child.m_call))MB_ptr_call
   Node_methods.find_children._find_children = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "find_children", 2560337219, loc))
-  Node_methods.find_children.m_call = cast(type_of(Node_methods.find_children.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.find_children.m_call = cast(type_of(Node_methods.find_children.m_call))MB_ptr_call
   Node_methods.find_parent._find_parent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "find_parent", 1140089439, loc))
-  Node_methods.find_parent.m_call = cast(type_of(Node_methods.find_parent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.find_parent.m_call = cast(type_of(Node_methods.find_parent.m_call))MB_ptr_call
   Node_methods.has_node_and_resource._has_node_and_resource = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "has_node_and_resource", 861721659, loc))
-  Node_methods.has_node_and_resource.m_call = cast(type_of(Node_methods.has_node_and_resource.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.has_node_and_resource.m_call = cast(type_of(Node_methods.has_node_and_resource.m_call))MB_ptr_call
   Node_methods.get_node_and_resource._get_node_and_resource = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_node_and_resource", 502563882, loc))
-  Node_methods.get_node_and_resource.m_call = cast(type_of(Node_methods.get_node_and_resource.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_node_and_resource.m_call = cast(type_of(Node_methods.get_node_and_resource.m_call))MB_ptr_call
   Node_methods.is_inside_tree._is_inside_tree = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_inside_tree", 36873697, loc))
-  Node_methods.is_inside_tree.m_call = cast(type_of(Node_methods.is_inside_tree.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_inside_tree.m_call = cast(type_of(Node_methods.is_inside_tree.m_call))MB_ptr_call
   Node_methods.is_part_of_edited_scene._is_part_of_edited_scene = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_part_of_edited_scene", 36873697, loc))
-  Node_methods.is_part_of_edited_scene.m_call = cast(type_of(Node_methods.is_part_of_edited_scene.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_part_of_edited_scene.m_call = cast(type_of(Node_methods.is_part_of_edited_scene.m_call))MB_ptr_call
   Node_methods.is_ancestor_of._is_ancestor_of = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_ancestor_of", 3093956946, loc))
-  Node_methods.is_ancestor_of.m_call = cast(type_of(Node_methods.is_ancestor_of.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_ancestor_of.m_call = cast(type_of(Node_methods.is_ancestor_of.m_call))MB_ptr_call
   Node_methods.is_greater_than._is_greater_than = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_greater_than", 3093956946, loc))
-  Node_methods.is_greater_than.m_call = cast(type_of(Node_methods.is_greater_than.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_greater_than.m_call = cast(type_of(Node_methods.is_greater_than.m_call))MB_ptr_call
   Node_methods.get_path._get_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_path", 4075236667, loc))
-  Node_methods.get_path.m_call = cast(type_of(Node_methods.get_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_path.m_call = cast(type_of(Node_methods.get_path.m_call))MB_ptr_call
   Node_methods.get_path_to._get_path_to = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_path_to", 498846349, loc))
-  Node_methods.get_path_to.m_call = cast(type_of(Node_methods.get_path_to.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_path_to.m_call = cast(type_of(Node_methods.get_path_to.m_call))MB_ptr_call
   Node_methods.add_to_group._add_to_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "add_to_group", 3683006648, loc))
-  Node_methods.add_to_group.m_call = cast(type_of(Node_methods.add_to_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.add_to_group.m_call = cast(type_of(Node_methods.add_to_group.m_call))MB_ptr_call
   Node_methods.remove_from_group._remove_from_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "remove_from_group", 3304788590, loc))
-  Node_methods.remove_from_group.m_call = cast(type_of(Node_methods.remove_from_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.remove_from_group.m_call = cast(type_of(Node_methods.remove_from_group.m_call))MB_ptr_call
   Node_methods.is_in_group._is_in_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_in_group", 2619796661, loc))
-  Node_methods.is_in_group.m_call = cast(type_of(Node_methods.is_in_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_in_group.m_call = cast(type_of(Node_methods.is_in_group.m_call))MB_ptr_call
   Node_methods.move_child._move_child = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "move_child", 3315886247, loc))
-  Node_methods.move_child.m_call = cast(type_of(Node_methods.move_child.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.move_child.m_call = cast(type_of(Node_methods.move_child.m_call))MB_ptr_call
   Node_methods.get_groups._get_groups = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_groups", 3995934104, loc))
-  Node_methods.get_groups.m_call = cast(type_of(Node_methods.get_groups.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_groups.m_call = cast(type_of(Node_methods.get_groups.m_call))MB_ptr_call
   Node_methods.set_owner._set_owner = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_owner", 1078189570, loc))
-  Node_methods.set_owner.m_call = cast(type_of(Node_methods.set_owner.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_owner.m_call = cast(type_of(Node_methods.set_owner.m_call))MB_ptr_call
   Node_methods.get_owner._get_owner = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_owner", 3160264692, loc))
-  Node_methods.get_owner.m_call = cast(type_of(Node_methods.get_owner.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_owner.m_call = cast(type_of(Node_methods.get_owner.m_call))MB_ptr_call
   Node_methods.get_index._get_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_index", 894402480, loc))
-  Node_methods.get_index.m_call = cast(type_of(Node_methods.get_index.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_index.m_call = cast(type_of(Node_methods.get_index.m_call))MB_ptr_call
   Node_methods.print_tree._print_tree = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "print_tree", 3218959716, loc))
-  Node_methods.print_tree.m_call = cast(type_of(Node_methods.print_tree.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.print_tree.m_call = cast(type_of(Node_methods.print_tree.m_call))MB_ptr_call
   Node_methods.print_tree_pretty._print_tree_pretty = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "print_tree_pretty", 3218959716, loc))
-  Node_methods.print_tree_pretty.m_call = cast(type_of(Node_methods.print_tree_pretty.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.print_tree_pretty.m_call = cast(type_of(Node_methods.print_tree_pretty.m_call))MB_ptr_call
   Node_methods.get_tree_string._get_tree_string = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_tree_string", 2841200299, loc))
-  Node_methods.get_tree_string.m_call = cast(type_of(Node_methods.get_tree_string.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_tree_string.m_call = cast(type_of(Node_methods.get_tree_string.m_call))MB_ptr_call
   Node_methods.get_tree_string_pretty._get_tree_string_pretty = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_tree_string_pretty", 2841200299, loc))
-  Node_methods.get_tree_string_pretty.m_call = cast(type_of(Node_methods.get_tree_string_pretty.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_tree_string_pretty.m_call = cast(type_of(Node_methods.get_tree_string_pretty.m_call))MB_ptr_call
   Node_methods.set_scene_file_path._set_scene_file_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_scene_file_path", 83702148, loc))
-  Node_methods.set_scene_file_path.m_call = cast(type_of(Node_methods.set_scene_file_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_scene_file_path.m_call = cast(type_of(Node_methods.set_scene_file_path.m_call))MB_ptr_call
   Node_methods.get_scene_file_path._get_scene_file_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_scene_file_path", 201670096, loc))
-  Node_methods.get_scene_file_path.m_call = cast(type_of(Node_methods.get_scene_file_path.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_scene_file_path.m_call = cast(type_of(Node_methods.get_scene_file_path.m_call))MB_ptr_call
   Node_methods.propagate_notification._propagate_notification = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "propagate_notification", 1286410249, loc))
-  Node_methods.propagate_notification.m_call = cast(type_of(Node_methods.propagate_notification.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.propagate_notification.m_call = cast(type_of(Node_methods.propagate_notification.m_call))MB_ptr_call
   Node_methods.propagate_call._propagate_call = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "propagate_call", 1871007965, loc))
-  Node_methods.propagate_call.m_call = cast(type_of(Node_methods.propagate_call.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.propagate_call.m_call = cast(type_of(Node_methods.propagate_call.m_call))MB_ptr_call
   Node_methods.set_physics_process._set_physics_process = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_physics_process", 2586408642, loc))
-  Node_methods.set_physics_process.m_call = cast(type_of(Node_methods.set_physics_process.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_physics_process.m_call = cast(type_of(Node_methods.set_physics_process.m_call))MB_ptr_call
   Node_methods.get_physics_process_delta_time._get_physics_process_delta_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_physics_process_delta_time", 1740695150, loc))
-  Node_methods.get_physics_process_delta_time.m_call = cast(type_of(Node_methods.get_physics_process_delta_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_physics_process_delta_time.m_call = cast(type_of(Node_methods.get_physics_process_delta_time.m_call))MB_ptr_call
   Node_methods.is_physics_processing._is_physics_processing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_physics_processing", 36873697, loc))
-  Node_methods.is_physics_processing.m_call = cast(type_of(Node_methods.is_physics_processing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_physics_processing.m_call = cast(type_of(Node_methods.is_physics_processing.m_call))MB_ptr_call
   Node_methods.get_process_delta_time._get_process_delta_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_process_delta_time", 1740695150, loc))
-  Node_methods.get_process_delta_time.m_call = cast(type_of(Node_methods.get_process_delta_time.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_process_delta_time.m_call = cast(type_of(Node_methods.get_process_delta_time.m_call))MB_ptr_call
   Node_methods.set_process._set_process = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process", 2586408642, loc))
-  Node_methods.set_process.m_call = cast(type_of(Node_methods.set_process.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process.m_call = cast(type_of(Node_methods.set_process.m_call))MB_ptr_call
   Node_methods.set_process_priority._set_process_priority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_priority", 1286410249, loc))
-  Node_methods.set_process_priority.m_call = cast(type_of(Node_methods.set_process_priority.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_priority.m_call = cast(type_of(Node_methods.set_process_priority.m_call))MB_ptr_call
   Node_methods.get_process_priority._get_process_priority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_process_priority", 3905245786, loc))
-  Node_methods.get_process_priority.m_call = cast(type_of(Node_methods.get_process_priority.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_process_priority.m_call = cast(type_of(Node_methods.get_process_priority.m_call))MB_ptr_call
   Node_methods.set_physics_process_priority._set_physics_process_priority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_physics_process_priority", 1286410249, loc))
-  Node_methods.set_physics_process_priority.m_call = cast(type_of(Node_methods.set_physics_process_priority.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_physics_process_priority.m_call = cast(type_of(Node_methods.set_physics_process_priority.m_call))MB_ptr_call
   Node_methods.get_physics_process_priority._get_physics_process_priority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_physics_process_priority", 3905245786, loc))
-  Node_methods.get_physics_process_priority.m_call = cast(type_of(Node_methods.get_physics_process_priority.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_physics_process_priority.m_call = cast(type_of(Node_methods.get_physics_process_priority.m_call))MB_ptr_call
   Node_methods.is_processing._is_processing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_processing", 36873697, loc))
-  Node_methods.is_processing.m_call = cast(type_of(Node_methods.is_processing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_processing.m_call = cast(type_of(Node_methods.is_processing.m_call))MB_ptr_call
   Node_methods.set_process_input._set_process_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_input", 2586408642, loc))
-  Node_methods.set_process_input.m_call = cast(type_of(Node_methods.set_process_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_input.m_call = cast(type_of(Node_methods.set_process_input.m_call))MB_ptr_call
   Node_methods.is_processing_input._is_processing_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_processing_input", 36873697, loc))
-  Node_methods.is_processing_input.m_call = cast(type_of(Node_methods.is_processing_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_processing_input.m_call = cast(type_of(Node_methods.is_processing_input.m_call))MB_ptr_call
   Node_methods.set_process_shortcut_input._set_process_shortcut_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_shortcut_input", 2586408642, loc))
-  Node_methods.set_process_shortcut_input.m_call = cast(type_of(Node_methods.set_process_shortcut_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_shortcut_input.m_call = cast(type_of(Node_methods.set_process_shortcut_input.m_call))MB_ptr_call
   Node_methods.is_processing_shortcut_input._is_processing_shortcut_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_processing_shortcut_input", 36873697, loc))
-  Node_methods.is_processing_shortcut_input.m_call = cast(type_of(Node_methods.is_processing_shortcut_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_processing_shortcut_input.m_call = cast(type_of(Node_methods.is_processing_shortcut_input.m_call))MB_ptr_call
   Node_methods.set_process_unhandled_input._set_process_unhandled_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_unhandled_input", 2586408642, loc))
-  Node_methods.set_process_unhandled_input.m_call = cast(type_of(Node_methods.set_process_unhandled_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_unhandled_input.m_call = cast(type_of(Node_methods.set_process_unhandled_input.m_call))MB_ptr_call
   Node_methods.is_processing_unhandled_input._is_processing_unhandled_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_processing_unhandled_input", 36873697, loc))
-  Node_methods.is_processing_unhandled_input.m_call = cast(type_of(Node_methods.is_processing_unhandled_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_processing_unhandled_input.m_call = cast(type_of(Node_methods.is_processing_unhandled_input.m_call))MB_ptr_call
   Node_methods.set_process_unhandled_key_input._set_process_unhandled_key_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_unhandled_key_input", 2586408642, loc))
-  Node_methods.set_process_unhandled_key_input.m_call = cast(type_of(Node_methods.set_process_unhandled_key_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_unhandled_key_input.m_call = cast(type_of(Node_methods.set_process_unhandled_key_input.m_call))MB_ptr_call
   Node_methods.is_processing_unhandled_key_input._is_processing_unhandled_key_input = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_processing_unhandled_key_input", 36873697, loc))
-  Node_methods.is_processing_unhandled_key_input.m_call = cast(type_of(Node_methods.is_processing_unhandled_key_input.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_processing_unhandled_key_input.m_call = cast(type_of(Node_methods.is_processing_unhandled_key_input.m_call))MB_ptr_call
   Node_methods.set_process_mode._set_process_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_mode", 1841290486, loc))
-  Node_methods.set_process_mode.m_call = cast(type_of(Node_methods.set_process_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_mode.m_call = cast(type_of(Node_methods.set_process_mode.m_call))MB_ptr_call
   Node_methods.get_process_mode._get_process_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_process_mode", 739966102, loc))
-  Node_methods.get_process_mode.m_call = cast(type_of(Node_methods.get_process_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_process_mode.m_call = cast(type_of(Node_methods.get_process_mode.m_call))MB_ptr_call
   Node_methods.can_process._can_process = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "can_process", 36873697, loc))
-  Node_methods.can_process.m_call = cast(type_of(Node_methods.can_process.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.can_process.m_call = cast(type_of(Node_methods.can_process.m_call))MB_ptr_call
   Node_methods.set_process_thread_group._set_process_thread_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_thread_group", 2275442745, loc))
-  Node_methods.set_process_thread_group.m_call = cast(type_of(Node_methods.set_process_thread_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_thread_group.m_call = cast(type_of(Node_methods.set_process_thread_group.m_call))MB_ptr_call
   Node_methods.get_process_thread_group._get_process_thread_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_process_thread_group", 1866404740, loc))
-  Node_methods.get_process_thread_group.m_call = cast(type_of(Node_methods.get_process_thread_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_process_thread_group.m_call = cast(type_of(Node_methods.get_process_thread_group.m_call))MB_ptr_call
   Node_methods.set_process_thread_messages._set_process_thread_messages = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_thread_messages", 1357280998, loc))
-  Node_methods.set_process_thread_messages.m_call = cast(type_of(Node_methods.set_process_thread_messages.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_thread_messages.m_call = cast(type_of(Node_methods.set_process_thread_messages.m_call))MB_ptr_call
   Node_methods.get_process_thread_messages._get_process_thread_messages = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_process_thread_messages", 4228993612, loc))
-  Node_methods.get_process_thread_messages.m_call = cast(type_of(Node_methods.get_process_thread_messages.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_process_thread_messages.m_call = cast(type_of(Node_methods.get_process_thread_messages.m_call))MB_ptr_call
   Node_methods.set_process_thread_group_order._set_process_thread_group_order = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_thread_group_order", 1286410249, loc))
-  Node_methods.set_process_thread_group_order.m_call = cast(type_of(Node_methods.set_process_thread_group_order.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_thread_group_order.m_call = cast(type_of(Node_methods.set_process_thread_group_order.m_call))MB_ptr_call
   Node_methods.get_process_thread_group_order._get_process_thread_group_order = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_process_thread_group_order", 3905245786, loc))
-  Node_methods.get_process_thread_group_order.m_call = cast(type_of(Node_methods.get_process_thread_group_order.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_process_thread_group_order.m_call = cast(type_of(Node_methods.get_process_thread_group_order.m_call))MB_ptr_call
   Node_methods.queue_accessibility_update._queue_accessibility_update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "queue_accessibility_update", 3218959716, loc))
-  Node_methods.queue_accessibility_update.m_call = cast(type_of(Node_methods.queue_accessibility_update.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.queue_accessibility_update.m_call = cast(type_of(Node_methods.queue_accessibility_update.m_call))MB_ptr_call
   Node_methods.get_accessibility_element._get_accessibility_element = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_accessibility_element", 2944877500, loc))
-  Node_methods.get_accessibility_element.m_call = cast(type_of(Node_methods.get_accessibility_element.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_accessibility_element.m_call = cast(type_of(Node_methods.get_accessibility_element.m_call))MB_ptr_call
   Node_methods.set_display_folded._set_display_folded = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_display_folded", 2586408642, loc))
-  Node_methods.set_display_folded.m_call = cast(type_of(Node_methods.set_display_folded.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_display_folded.m_call = cast(type_of(Node_methods.set_display_folded.m_call))MB_ptr_call
   Node_methods.is_displayed_folded._is_displayed_folded = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_displayed_folded", 36873697, loc))
-  Node_methods.is_displayed_folded.m_call = cast(type_of(Node_methods.is_displayed_folded.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_displayed_folded.m_call = cast(type_of(Node_methods.is_displayed_folded.m_call))MB_ptr_call
   Node_methods.set_process_internal._set_process_internal = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_process_internal", 2586408642, loc))
-  Node_methods.set_process_internal.m_call = cast(type_of(Node_methods.set_process_internal.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_process_internal.m_call = cast(type_of(Node_methods.set_process_internal.m_call))MB_ptr_call
   Node_methods.is_processing_internal._is_processing_internal = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_processing_internal", 36873697, loc))
-  Node_methods.is_processing_internal.m_call = cast(type_of(Node_methods.is_processing_internal.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_processing_internal.m_call = cast(type_of(Node_methods.is_processing_internal.m_call))MB_ptr_call
   Node_methods.set_physics_process_internal._set_physics_process_internal = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_physics_process_internal", 2586408642, loc))
-  Node_methods.set_physics_process_internal.m_call = cast(type_of(Node_methods.set_physics_process_internal.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_physics_process_internal.m_call = cast(type_of(Node_methods.set_physics_process_internal.m_call))MB_ptr_call
   Node_methods.is_physics_processing_internal._is_physics_processing_internal = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_physics_processing_internal", 36873697, loc))
-  Node_methods.is_physics_processing_internal.m_call = cast(type_of(Node_methods.is_physics_processing_internal.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_physics_processing_internal.m_call = cast(type_of(Node_methods.is_physics_processing_internal.m_call))MB_ptr_call
   Node_methods.set_physics_interpolation_mode._set_physics_interpolation_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_physics_interpolation_mode", 3202404928, loc))
-  Node_methods.set_physics_interpolation_mode.m_call = cast(type_of(Node_methods.set_physics_interpolation_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_physics_interpolation_mode.m_call = cast(type_of(Node_methods.set_physics_interpolation_mode.m_call))MB_ptr_call
   Node_methods.get_physics_interpolation_mode._get_physics_interpolation_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_physics_interpolation_mode", 2920385216, loc))
-  Node_methods.get_physics_interpolation_mode.m_call = cast(type_of(Node_methods.get_physics_interpolation_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_physics_interpolation_mode.m_call = cast(type_of(Node_methods.get_physics_interpolation_mode.m_call))MB_ptr_call
   Node_methods.is_physics_interpolated._is_physics_interpolated = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_physics_interpolated", 36873697, loc))
-  Node_methods.is_physics_interpolated.m_call = cast(type_of(Node_methods.is_physics_interpolated.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_physics_interpolated.m_call = cast(type_of(Node_methods.is_physics_interpolated.m_call))MB_ptr_call
   Node_methods.is_physics_interpolated_and_enabled._is_physics_interpolated_and_enabled = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_physics_interpolated_and_enabled", 36873697, loc))
-  Node_methods.is_physics_interpolated_and_enabled.m_call = cast(type_of(Node_methods.is_physics_interpolated_and_enabled.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_physics_interpolated_and_enabled.m_call = cast(type_of(Node_methods.is_physics_interpolated_and_enabled.m_call))MB_ptr_call
   Node_methods.reset_physics_interpolation._reset_physics_interpolation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "reset_physics_interpolation", 3218959716, loc))
-  Node_methods.reset_physics_interpolation.m_call = cast(type_of(Node_methods.reset_physics_interpolation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.reset_physics_interpolation.m_call = cast(type_of(Node_methods.reset_physics_interpolation.m_call))MB_ptr_call
   Node_methods.set_auto_translate_mode._set_auto_translate_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_auto_translate_mode", 776149714, loc))
-  Node_methods.set_auto_translate_mode.m_call = cast(type_of(Node_methods.set_auto_translate_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_auto_translate_mode.m_call = cast(type_of(Node_methods.set_auto_translate_mode.m_call))MB_ptr_call
   Node_methods.get_auto_translate_mode._get_auto_translate_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_auto_translate_mode", 2498906432, loc))
-  Node_methods.get_auto_translate_mode.m_call = cast(type_of(Node_methods.get_auto_translate_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_auto_translate_mode.m_call = cast(type_of(Node_methods.get_auto_translate_mode.m_call))MB_ptr_call
   Node_methods.can_auto_translate._can_auto_translate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "can_auto_translate", 36873697, loc))
-  Node_methods.can_auto_translate.m_call = cast(type_of(Node_methods.can_auto_translate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.can_auto_translate.m_call = cast(type_of(Node_methods.can_auto_translate.m_call))MB_ptr_call
   Node_methods.set_translation_domain_inherited._set_translation_domain_inherited = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_translation_domain_inherited", 3218959716, loc))
-  Node_methods.set_translation_domain_inherited.m_call = cast(type_of(Node_methods.set_translation_domain_inherited.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_translation_domain_inherited.m_call = cast(type_of(Node_methods.set_translation_domain_inherited.m_call))MB_ptr_call
   Node_methods.get_window._get_window = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_window", 1757182445, loc))
-  Node_methods.get_window.m_call = cast(type_of(Node_methods.get_window.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_window.m_call = cast(type_of(Node_methods.get_window.m_call))MB_ptr_call
   Node_methods.get_last_exclusive_window._get_last_exclusive_window = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_last_exclusive_window", 1757182445, loc))
-  Node_methods.get_last_exclusive_window.m_call = cast(type_of(Node_methods.get_last_exclusive_window.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_last_exclusive_window.m_call = cast(type_of(Node_methods.get_last_exclusive_window.m_call))MB_ptr_call
   Node_methods.get_tree._get_tree = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_tree", 2958820483, loc))
-  Node_methods.get_tree.m_call = cast(type_of(Node_methods.get_tree.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_tree.m_call = cast(type_of(Node_methods.get_tree.m_call))MB_ptr_call
   Node_methods.create_tween._create_tween = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "create_tween", 3426978995, loc))
-  Node_methods.create_tween.m_call = cast(type_of(Node_methods.create_tween.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.create_tween.m_call = cast(type_of(Node_methods.create_tween.m_call))MB_ptr_call
   Node_methods.duplicate._duplicate = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "duplicate", 3511555459, loc))
-  Node_methods.duplicate.m_call = cast(type_of(Node_methods.duplicate.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.duplicate.m_call = cast(type_of(Node_methods.duplicate.m_call))MB_ptr_call
   Node_methods.replace_by._replace_by = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "replace_by", 2570952461, loc))
-  Node_methods.replace_by.m_call = cast(type_of(Node_methods.replace_by.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.replace_by.m_call = cast(type_of(Node_methods.replace_by.m_call))MB_ptr_call
   Node_methods.set_scene_instance_load_placeholder._set_scene_instance_load_placeholder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_scene_instance_load_placeholder", 2586408642, loc))
-  Node_methods.set_scene_instance_load_placeholder.m_call = cast(type_of(Node_methods.set_scene_instance_load_placeholder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_scene_instance_load_placeholder.m_call = cast(type_of(Node_methods.set_scene_instance_load_placeholder.m_call))MB_ptr_call
   Node_methods.get_scene_instance_load_placeholder._get_scene_instance_load_placeholder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_scene_instance_load_placeholder", 36873697, loc))
-  Node_methods.get_scene_instance_load_placeholder.m_call = cast(type_of(Node_methods.get_scene_instance_load_placeholder.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_scene_instance_load_placeholder.m_call = cast(type_of(Node_methods.get_scene_instance_load_placeholder.m_call))MB_ptr_call
   Node_methods.set_editable_instance._set_editable_instance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_editable_instance", 2731852923, loc))
-  Node_methods.set_editable_instance.m_call = cast(type_of(Node_methods.set_editable_instance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_editable_instance.m_call = cast(type_of(Node_methods.set_editable_instance.m_call))MB_ptr_call
   Node_methods.is_editable_instance._is_editable_instance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_editable_instance", 3093956946, loc))
-  Node_methods.is_editable_instance.m_call = cast(type_of(Node_methods.is_editable_instance.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_editable_instance.m_call = cast(type_of(Node_methods.is_editable_instance.m_call))MB_ptr_call
   Node_methods.get_viewport._get_viewport = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_viewport", 3596683776, loc))
-  Node_methods.get_viewport.m_call = cast(type_of(Node_methods.get_viewport.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_viewport.m_call = cast(type_of(Node_methods.get_viewport.m_call))MB_ptr_call
   Node_methods.queue_free._queue_free = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "queue_free", 3218959716, loc))
-  Node_methods.queue_free.m_call = cast(type_of(Node_methods.queue_free.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.queue_free.m_call = cast(type_of(Node_methods.queue_free.m_call))MB_ptr_call
   Node_methods.request_ready._request_ready = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "request_ready", 3218959716, loc))
-  Node_methods.request_ready.m_call = cast(type_of(Node_methods.request_ready.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.request_ready.m_call = cast(type_of(Node_methods.request_ready.m_call))MB_ptr_call
   Node_methods.is_node_ready._is_node_ready = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_node_ready", 36873697, loc))
-  Node_methods.is_node_ready.m_call = cast(type_of(Node_methods.is_node_ready.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_node_ready.m_call = cast(type_of(Node_methods.is_node_ready.m_call))MB_ptr_call
   Node_methods.set_multiplayer_authority._set_multiplayer_authority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_multiplayer_authority", 972357352, loc))
-  Node_methods.set_multiplayer_authority.m_call = cast(type_of(Node_methods.set_multiplayer_authority.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_multiplayer_authority.m_call = cast(type_of(Node_methods.set_multiplayer_authority.m_call))MB_ptr_call
   Node_methods.get_multiplayer_authority._get_multiplayer_authority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_multiplayer_authority", 3905245786, loc))
-  Node_methods.get_multiplayer_authority.m_call = cast(type_of(Node_methods.get_multiplayer_authority.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_multiplayer_authority.m_call = cast(type_of(Node_methods.get_multiplayer_authority.m_call))MB_ptr_call
   Node_methods.is_multiplayer_authority._is_multiplayer_authority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_multiplayer_authority", 36873697, loc))
-  Node_methods.is_multiplayer_authority.m_call = cast(type_of(Node_methods.is_multiplayer_authority.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_multiplayer_authority.m_call = cast(type_of(Node_methods.is_multiplayer_authority.m_call))MB_ptr_call
   Node_methods.get_multiplayer._get_multiplayer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_multiplayer", 406750475, loc))
-  Node_methods.get_multiplayer.m_call = cast(type_of(Node_methods.get_multiplayer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_multiplayer.m_call = cast(type_of(Node_methods.get_multiplayer.m_call))MB_ptr_call
   Node_methods.rpc_config._rpc_config = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "rpc_config", 3776071444, loc))
-  Node_methods.rpc_config.m_call = cast(type_of(Node_methods.rpc_config.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.rpc_config.m_call = cast(type_of(Node_methods.rpc_config.m_call))MB_ptr_call
   Node_methods.get_node_rpc_config._get_node_rpc_config = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_node_rpc_config", 1214101251, loc))
-  Node_methods.get_node_rpc_config.m_call = cast(type_of(Node_methods.get_node_rpc_config.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_node_rpc_config.m_call = cast(type_of(Node_methods.get_node_rpc_config.m_call))MB_ptr_call
   Node_methods.set_editor_description._set_editor_description = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_editor_description", 83702148, loc))
-  Node_methods.set_editor_description.m_call = cast(type_of(Node_methods.set_editor_description.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_editor_description.m_call = cast(type_of(Node_methods.set_editor_description.m_call))MB_ptr_call
   Node_methods.get_editor_description._get_editor_description = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "get_editor_description", 201670096, loc))
-  Node_methods.get_editor_description.m_call = cast(type_of(Node_methods.get_editor_description.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.get_editor_description.m_call = cast(type_of(Node_methods.get_editor_description.m_call))MB_ptr_call
   Node_methods.set_unique_name_in_owner._set_unique_name_in_owner = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_unique_name_in_owner", 2586408642, loc))
-  Node_methods.set_unique_name_in_owner.m_call = cast(type_of(Node_methods.set_unique_name_in_owner.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_unique_name_in_owner.m_call = cast(type_of(Node_methods.set_unique_name_in_owner.m_call))MB_ptr_call
   Node_methods.is_unique_name_in_owner._is_unique_name_in_owner = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "is_unique_name_in_owner", 36873697, loc))
-  Node_methods.is_unique_name_in_owner.m_call = cast(type_of(Node_methods.is_unique_name_in_owner.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.is_unique_name_in_owner.m_call = cast(type_of(Node_methods.is_unique_name_in_owner.m_call))MB_ptr_call
   Node_methods.atr._atr = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "atr", 3344478075, loc))
-  Node_methods.atr.m_call = cast(type_of(Node_methods.atr.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.atr.m_call = cast(type_of(Node_methods.atr.m_call))MB_ptr_call
   Node_methods.atr_n._atr_n = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "atr_n", 259354841, loc))
-  Node_methods.atr_n.m_call = cast(type_of(Node_methods.atr_n.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.atr_n.m_call = cast(type_of(Node_methods.atr_n.m_call))MB_ptr_call
   Node_methods.rpc._rpc = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "rpc", 4047867050, loc))
-  Node_methods.rpc.m_call = cast(type_of(Node_methods.rpc.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.rpc.m_call = cast(type_of(Node_methods.rpc.m_call))MB_ptr_call
   Node_methods.rpc_id._rpc_id = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "rpc_id", 361499283, loc))
-  Node_methods.rpc_id.m_call = cast(type_of(Node_methods.rpc_id.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.rpc_id.m_call = cast(type_of(Node_methods.rpc_id.m_call))MB_ptr_call
   Node_methods.update_configuration_warnings._update_configuration_warnings = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "update_configuration_warnings", 3218959716, loc))
-  Node_methods.update_configuration_warnings.m_call = cast(type_of(Node_methods.update_configuration_warnings.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.update_configuration_warnings.m_call = cast(type_of(Node_methods.update_configuration_warnings.m_call))MB_ptr_call
   Node_methods.call_deferred_thread_group._call_deferred_thread_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "call_deferred_thread_group", 3400424181, loc))
-  Node_methods.call_deferred_thread_group.m_call = cast(type_of(Node_methods.call_deferred_thread_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.call_deferred_thread_group.m_call = cast(type_of(Node_methods.call_deferred_thread_group.m_call))MB_ptr_call
   Node_methods.set_deferred_thread_group._set_deferred_thread_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_deferred_thread_group", 3776071444, loc))
-  Node_methods.set_deferred_thread_group.m_call = cast(type_of(Node_methods.set_deferred_thread_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_deferred_thread_group.m_call = cast(type_of(Node_methods.set_deferred_thread_group.m_call))MB_ptr_call
   Node_methods.notify_deferred_thread_group._notify_deferred_thread_group = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "notify_deferred_thread_group", 1286410249, loc))
-  Node_methods.notify_deferred_thread_group.m_call = cast(type_of(Node_methods.notify_deferred_thread_group.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.notify_deferred_thread_group.m_call = cast(type_of(Node_methods.notify_deferred_thread_group.m_call))MB_ptr_call
   Node_methods.call_thread_safe._call_thread_safe = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "call_thread_safe", 3400424181, loc))
-  Node_methods.call_thread_safe.m_call = cast(type_of(Node_methods.call_thread_safe.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.call_thread_safe.m_call = cast(type_of(Node_methods.call_thread_safe.m_call))MB_ptr_call
   Node_methods.set_thread_safe._set_thread_safe = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "set_thread_safe", 3776071444, loc))
-  Node_methods.set_thread_safe.m_call = cast(type_of(Node_methods.set_thread_safe.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.set_thread_safe.m_call = cast(type_of(Node_methods.set_thread_safe.m_call))MB_ptr_call
   Node_methods.notify_thread_safe._notify_thread_safe = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Node, "notify_thread_safe", 1286410249, loc))
-  Node_methods.notify_thread_safe.m_call = cast(type_of(Node_methods.notify_thread_safe.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Node_methods.notify_thread_safe.m_call = cast(type_of(Node_methods.notify_thread_safe.m_call))MB_ptr_call
 };
 
 Node_Init_Virtuals_Info :: proc(info: ^Node_Virtual_Info) {
@@ -931,47 +875,4 @@ Node_Init_Virtuals_Info :: proc(info: ^Node_Virtual_Info) {
     info._unhandled_key_input.name = GDW.StringConstruct("_unhandled_key_input")
     info._get_focused_accessibility_element.p_hash = 2944877500
     info._get_focused_accessibility_element.name = GDW.StringConstruct("_get_focused_accessibility_element")
-};
-Node_init_props :: proc(Node_prop: ^Node_properties, loc:= #caller_location) {
-
-  Node_prop.name_StringName.get_name = cast(proc "c" (p_base: Node, r_value: ^GDW.StringName))GDW.Get_Method_Getter(.STRING_NAME, "get_name")
-  Node_prop.name_StringName.set_name = cast(proc "c" (p_base: Node, p_value: ^GDW.StringName))GDW.Get_Method_Setter(.STRING_NAME, "set_name")
-
-  Node_prop.unique_name_in_owner_Bool.is_unique_name_in_owner = cast(proc "c" (p_base: Node, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_unique_name_in_owner")
-  Node_prop.unique_name_in_owner_Bool.set_unique_name_in_owner = cast(proc "c" (p_base: Node, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_unique_name_in_owner")
-
-  Node_prop.scene_file_path_gdstring.get_scene_file_path = cast(proc "c" (p_base: Node, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_scene_file_path")
-  Node_prop.scene_file_path_gdstring.set_scene_file_path = cast(proc "c" (p_base: Node, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_scene_file_path")
-
-  Node_prop.owner_Node.get_owner = cast(proc "c" (p_base: Node, r_value: ^Node))GDW.Get_Method_Getter(.OBJECT, "get_owner")
-  Node_prop.owner_Node.set_owner = cast(proc "c" (p_base: Node, p_value: ^Node))GDW.Get_Method_Setter(.OBJECT, "set_owner")
-
-  Node_prop.multiplayer_MultiplayerAPI.get_multiplayer = cast(proc "c" (p_base: Node, r_value: ^MultiplayerAPI))GDW.Get_Method_Getter(.OBJECT, "get_multiplayer")
-
-  Node_prop.process_mode_Int.get_process_mode = cast(proc "c" (p_base: Node, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_process_mode")
-  Node_prop.process_mode_Int.set_process_mode = cast(proc "c" (p_base: Node, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_process_mode")
-
-  Node_prop.process_priority_Int.get_process_priority = cast(proc "c" (p_base: Node, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_process_priority")
-  Node_prop.process_priority_Int.set_process_priority = cast(proc "c" (p_base: Node, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_process_priority")
-
-  Node_prop.process_physics_priority_Int.get_physics_process_priority = cast(proc "c" (p_base: Node, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_physics_process_priority")
-  Node_prop.process_physics_priority_Int.set_physics_process_priority = cast(proc "c" (p_base: Node, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_physics_process_priority")
-
-  Node_prop.process_thread_group_Int.get_process_thread_group = cast(proc "c" (p_base: Node, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_process_thread_group")
-  Node_prop.process_thread_group_Int.set_process_thread_group = cast(proc "c" (p_base: Node, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_process_thread_group")
-
-  Node_prop.process_thread_group_order_Int.get_process_thread_group_order = cast(proc "c" (p_base: Node, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_process_thread_group_order")
-  Node_prop.process_thread_group_order_Int.set_process_thread_group_order = cast(proc "c" (p_base: Node, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_process_thread_group_order")
-
-  Node_prop.process_thread_messages_Int.get_process_thread_messages = cast(proc "c" (p_base: Node, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_process_thread_messages")
-  Node_prop.process_thread_messages_Int.set_process_thread_messages = cast(proc "c" (p_base: Node, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_process_thread_messages")
-
-  Node_prop.physics_interpolation_mode_Int.get_physics_interpolation_mode = cast(proc "c" (p_base: Node, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_physics_interpolation_mode")
-  Node_prop.physics_interpolation_mode_Int.set_physics_interpolation_mode = cast(proc "c" (p_base: Node, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_physics_interpolation_mode")
-
-  Node_prop.auto_translate_mode_Int.get_auto_translate_mode = cast(proc "c" (p_base: Node, r_value: ^GDW.Int))GDW.Get_Method_Getter(.INT, "get_auto_translate_mode")
-  Node_prop.auto_translate_mode_Int.set_auto_translate_mode = cast(proc "c" (p_base: Node, p_value: ^GDW.Int))GDW.Get_Method_Setter(.INT, "set_auto_translate_mode")
-
-  Node_prop.editor_description_gdstring.get_editor_description = cast(proc "c" (p_base: Node, r_value: ^GDW.gdstring))GDW.Get_Method_Getter(.STRING, "get_editor_description")
-  Node_prop.editor_description_gdstring.set_editor_description = cast(proc "c" (p_base: Node, p_value: ^GDW.gdstring))GDW.Get_Method_Setter(.STRING, "set_editor_description")
 };

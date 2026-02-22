@@ -34,12 +34,13 @@ AESContext_MethodBind_List :: struct {
   },
   };
 AESContext_Init_ :: proc (AESContext_methods: ^AESContext_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AESContext_methods.start._start = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AESContext, "start", 3122411423, loc))
-  AESContext_methods.start.m_call = cast(type_of(AESContext_methods.start.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AESContext_methods.start.m_call = cast(type_of(AESContext_methods.start.m_call))MB_ptr_call
   AESContext_methods.update._update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AESContext, "update", 527836100, loc))
-  AESContext_methods.update.m_call = cast(type_of(AESContext_methods.update.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AESContext_methods.update.m_call = cast(type_of(AESContext_methods.update.m_call))MB_ptr_call
   AESContext_methods.get_iv_state._get_iv_state = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AESContext, "get_iv_state", 2115431945, loc))
-  AESContext_methods.get_iv_state.m_call = cast(type_of(AESContext_methods.get_iv_state.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AESContext_methods.get_iv_state.m_call = cast(type_of(AESContext_methods.get_iv_state.m_call))MB_ptr_call
   AESContext_methods.finish._finish = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AESContext, "finish", 3218959716, loc))
-  AESContext_methods.finish.m_call = cast(type_of(AESContext_methods.finish.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AESContext_methods.finish.m_call = cast(type_of(AESContext_methods.finish.m_call))MB_ptr_call
 };

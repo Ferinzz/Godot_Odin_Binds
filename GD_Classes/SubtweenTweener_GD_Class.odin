@@ -14,6 +14,7 @@ SubtweenTweener_MethodBind_List :: struct {
   },
 };
 SubtweenTweener_Init_ :: proc (SubtweenTweener_methods: ^SubtweenTweener_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   SubtweenTweener_methods.set_delay._set_delay = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SubtweenTweener, "set_delay", 449181780, loc))
-  SubtweenTweener_methods.set_delay.m_call = cast(type_of(SubtweenTweener_methods.set_delay.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  SubtweenTweener_methods.set_delay.m_call = cast(type_of(SubtweenTweener_methods.set_delay.m_call))MB_ptr_call
 };

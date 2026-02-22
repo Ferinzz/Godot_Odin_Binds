@@ -61,6 +61,7 @@ PhysicsDirectBodyState2DExtension_Virtual_Info :: struct {
 PhysicsDirectBodyState2DExtension_MethodBind_List :: struct {
 };
 PhysicsDirectBodyState2DExtension_Init_ :: proc (PhysicsDirectBodyState2DExtension_methods: ^PhysicsDirectBodyState2DExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 PhysicsDirectBodyState2DExtension_Init_Virtuals_Info :: proc(info: ^PhysicsDirectBodyState2DExtension_Virtual_Info) {

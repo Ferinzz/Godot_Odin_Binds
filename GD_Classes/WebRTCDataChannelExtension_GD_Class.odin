@@ -31,6 +31,7 @@ WebRTCDataChannelExtension_Virtual_Info :: struct {
 WebRTCDataChannelExtension_MethodBind_List :: struct {
 };
 WebRTCDataChannelExtension_Init_ :: proc (WebRTCDataChannelExtension_methods: ^WebRTCDataChannelExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 WebRTCDataChannelExtension_Init_Virtuals_Info :: proc(info: ^WebRTCDataChannelExtension_Virtual_Info) {

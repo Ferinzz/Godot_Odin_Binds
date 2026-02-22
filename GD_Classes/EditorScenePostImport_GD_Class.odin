@@ -18,8 +18,9 @@ EditorScenePostImport_MethodBind_List :: struct {
   },
 };
 EditorScenePostImport_Init_ :: proc (EditorScenePostImport_methods: ^EditorScenePostImport_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorScenePostImport_methods.get_source_file._get_source_file = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorScenePostImport, "get_source_file", 201670096, loc))
-  EditorScenePostImport_methods.get_source_file.m_call = cast(type_of(EditorScenePostImport_methods.get_source_file.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorScenePostImport_methods.get_source_file.m_call = cast(type_of(EditorScenePostImport_methods.get_source_file.m_call))MB_ptr_call
 };
 
 EditorScenePostImport_Init_Virtuals_Info :: proc(info: ^EditorScenePostImport_Virtual_Info) {

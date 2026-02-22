@@ -68,24 +68,25 @@ IP_MethodBind_List :: struct {
   },
   };
 IP_Init_ :: proc (IP_methods: ^IP_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   IP_methods.resolve_hostname._resolve_hostname = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "resolve_hostname", 4283295457, loc))
-  IP_methods.resolve_hostname.m_call = cast(type_of(IP_methods.resolve_hostname.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.resolve_hostname.m_call = cast(type_of(IP_methods.resolve_hostname.m_call))MB_ptr_call
   IP_methods.resolve_hostname_addresses._resolve_hostname_addresses = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "resolve_hostname_addresses", 773767525, loc))
-  IP_methods.resolve_hostname_addresses.m_call = cast(type_of(IP_methods.resolve_hostname_addresses.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.resolve_hostname_addresses.m_call = cast(type_of(IP_methods.resolve_hostname_addresses.m_call))MB_ptr_call
   IP_methods.resolve_hostname_queue_item._resolve_hostname_queue_item = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "resolve_hostname_queue_item", 1749894742, loc))
-  IP_methods.resolve_hostname_queue_item.m_call = cast(type_of(IP_methods.resolve_hostname_queue_item.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.resolve_hostname_queue_item.m_call = cast(type_of(IP_methods.resolve_hostname_queue_item.m_call))MB_ptr_call
   IP_methods.get_resolve_item_status._get_resolve_item_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "get_resolve_item_status", 3812250196, loc))
-  IP_methods.get_resolve_item_status.m_call = cast(type_of(IP_methods.get_resolve_item_status.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.get_resolve_item_status.m_call = cast(type_of(IP_methods.get_resolve_item_status.m_call))MB_ptr_call
   IP_methods.get_resolve_item_address._get_resolve_item_address = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "get_resolve_item_address", 844755477, loc))
-  IP_methods.get_resolve_item_address.m_call = cast(type_of(IP_methods.get_resolve_item_address.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.get_resolve_item_address.m_call = cast(type_of(IP_methods.get_resolve_item_address.m_call))MB_ptr_call
   IP_methods.get_resolve_item_addresses._get_resolve_item_addresses = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "get_resolve_item_addresses", 663333327, loc))
-  IP_methods.get_resolve_item_addresses.m_call = cast(type_of(IP_methods.get_resolve_item_addresses.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.get_resolve_item_addresses.m_call = cast(type_of(IP_methods.get_resolve_item_addresses.m_call))MB_ptr_call
   IP_methods.erase_resolve_item._erase_resolve_item = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "erase_resolve_item", 1286410249, loc))
-  IP_methods.erase_resolve_item.m_call = cast(type_of(IP_methods.erase_resolve_item.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.erase_resolve_item.m_call = cast(type_of(IP_methods.erase_resolve_item.m_call))MB_ptr_call
   IP_methods.get_local_addresses._get_local_addresses = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "get_local_addresses", 1139954409, loc))
-  IP_methods.get_local_addresses.m_call = cast(type_of(IP_methods.get_local_addresses.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.get_local_addresses.m_call = cast(type_of(IP_methods.get_local_addresses.m_call))MB_ptr_call
   IP_methods.get_local_interfaces._get_local_interfaces = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "get_local_interfaces", 3995934104, loc))
-  IP_methods.get_local_interfaces.m_call = cast(type_of(IP_methods.get_local_interfaces.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.get_local_interfaces.m_call = cast(type_of(IP_methods.get_local_interfaces.m_call))MB_ptr_call
   IP_methods.clear_cache._clear_cache = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.IP, "clear_cache", 3005725572, loc))
-  IP_methods.clear_cache.m_call = cast(type_of(IP_methods.clear_cache.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  IP_methods.clear_cache.m_call = cast(type_of(IP_methods.clear_cache.m_call))MB_ptr_call
 };

@@ -34,16 +34,17 @@ PhysicsDirectSpaceState3D_MethodBind_List :: struct {
   },
 };
 PhysicsDirectSpaceState3D_Init_ :: proc (PhysicsDirectSpaceState3D_methods: ^PhysicsDirectSpaceState3D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PhysicsDirectSpaceState3D_methods.intersect_point._intersect_point = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsDirectSpaceState3D, "intersect_point", 975173756, loc))
-  PhysicsDirectSpaceState3D_methods.intersect_point.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.intersect_point.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsDirectSpaceState3D_methods.intersect_point.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.intersect_point.m_call))MB_ptr_call
   PhysicsDirectSpaceState3D_methods.intersect_ray._intersect_ray = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsDirectSpaceState3D, "intersect_ray", 3957970750, loc))
-  PhysicsDirectSpaceState3D_methods.intersect_ray.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.intersect_ray.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsDirectSpaceState3D_methods.intersect_ray.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.intersect_ray.m_call))MB_ptr_call
   PhysicsDirectSpaceState3D_methods.intersect_shape._intersect_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsDirectSpaceState3D, "intersect_shape", 3762137681, loc))
-  PhysicsDirectSpaceState3D_methods.intersect_shape.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.intersect_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsDirectSpaceState3D_methods.intersect_shape.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.intersect_shape.m_call))MB_ptr_call
   PhysicsDirectSpaceState3D_methods.cast_motion._cast_motion = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsDirectSpaceState3D, "cast_motion", 1778757334, loc))
-  PhysicsDirectSpaceState3D_methods.cast_motion.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.cast_motion.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsDirectSpaceState3D_methods.cast_motion.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.cast_motion.m_call))MB_ptr_call
   PhysicsDirectSpaceState3D_methods.collide_shape._collide_shape = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsDirectSpaceState3D, "collide_shape", 3762137681, loc))
-  PhysicsDirectSpaceState3D_methods.collide_shape.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.collide_shape.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsDirectSpaceState3D_methods.collide_shape.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.collide_shape.m_call))MB_ptr_call
   PhysicsDirectSpaceState3D_methods.get_rest_info._get_rest_info = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PhysicsDirectSpaceState3D, "get_rest_info", 1376751592, loc))
-  PhysicsDirectSpaceState3D_methods.get_rest_info.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.get_rest_info.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PhysicsDirectSpaceState3D_methods.get_rest_info.m_call = cast(type_of(PhysicsDirectSpaceState3D_methods.get_rest_info.m_call))MB_ptr_call
 };

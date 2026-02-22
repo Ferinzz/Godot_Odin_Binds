@@ -26,12 +26,13 @@ StreamPeerGZIP_MethodBind_List :: struct {
   },
   };
 StreamPeerGZIP_Init_ :: proc (StreamPeerGZIP_methods: ^StreamPeerGZIP_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   StreamPeerGZIP_methods.start_compression._start_compression = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerGZIP, "start_compression", 781582770, loc))
-  StreamPeerGZIP_methods.start_compression.m_call = cast(type_of(StreamPeerGZIP_methods.start_compression.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerGZIP_methods.start_compression.m_call = cast(type_of(StreamPeerGZIP_methods.start_compression.m_call))MB_ptr_call
   StreamPeerGZIP_methods.start_decompression._start_decompression = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerGZIP, "start_decompression", 781582770, loc))
-  StreamPeerGZIP_methods.start_decompression.m_call = cast(type_of(StreamPeerGZIP_methods.start_decompression.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerGZIP_methods.start_decompression.m_call = cast(type_of(StreamPeerGZIP_methods.start_decompression.m_call))MB_ptr_call
   StreamPeerGZIP_methods.finish._finish = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerGZIP, "finish", 166280745, loc))
-  StreamPeerGZIP_methods.finish.m_call = cast(type_of(StreamPeerGZIP_methods.finish.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerGZIP_methods.finish.m_call = cast(type_of(StreamPeerGZIP_methods.finish.m_call))MB_ptr_call
   StreamPeerGZIP_methods.clear._clear = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.StreamPeerGZIP, "clear", 3218959716, loc))
-  StreamPeerGZIP_methods.clear.m_call = cast(type_of(StreamPeerGZIP_methods.clear.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  StreamPeerGZIP_methods.clear.m_call = cast(type_of(StreamPeerGZIP_methods.clear.m_call))MB_ptr_call
 };

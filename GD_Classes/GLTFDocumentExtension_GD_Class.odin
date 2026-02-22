@@ -36,6 +36,7 @@ GLTFDocumentExtension_Virtual_Info :: struct {
 GLTFDocumentExtension_MethodBind_List :: struct {
 };
 GLTFDocumentExtension_Init_ :: proc (GLTFDocumentExtension_methods: ^GLTFDocumentExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 GLTFDocumentExtension_Init_Virtuals_Info :: proc(info: ^GLTFDocumentExtension_Virtual_Info) {

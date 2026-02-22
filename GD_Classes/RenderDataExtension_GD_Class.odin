@@ -17,6 +17,7 @@ RenderDataExtension_Virtual_Info :: struct {
 RenderDataExtension_MethodBind_List :: struct {
 };
 RenderDataExtension_Init_ :: proc (RenderDataExtension_methods: ^RenderDataExtension_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
 };
 
 RenderDataExtension_Init_Virtuals_Info :: proc(info: ^RenderDataExtension_Virtual_Info) {

@@ -77,32 +77,33 @@ EditorNode3DGizmo_MethodBind_List :: struct {
   },
 };
 EditorNode3DGizmo_Init_ :: proc (EditorNode3DGizmo_methods: ^EditorNode3DGizmo_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   EditorNode3DGizmo_methods.add_lines._add_lines = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "add_lines", 2910971437, loc))
-  EditorNode3DGizmo_methods.add_lines.m_call = cast(type_of(EditorNode3DGizmo_methods.add_lines.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.add_lines.m_call = cast(type_of(EditorNode3DGizmo_methods.add_lines.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.add_mesh._add_mesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "add_mesh", 1579955111, loc))
-  EditorNode3DGizmo_methods.add_mesh.m_call = cast(type_of(EditorNode3DGizmo_methods.add_mesh.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.add_mesh.m_call = cast(type_of(EditorNode3DGizmo_methods.add_mesh.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.add_collision_segments._add_collision_segments = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "add_collision_segments", 334873810, loc))
-  EditorNode3DGizmo_methods.add_collision_segments.m_call = cast(type_of(EditorNode3DGizmo_methods.add_collision_segments.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.add_collision_segments.m_call = cast(type_of(EditorNode3DGizmo_methods.add_collision_segments.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.add_collision_triangles._add_collision_triangles = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "add_collision_triangles", 54901064, loc))
-  EditorNode3DGizmo_methods.add_collision_triangles.m_call = cast(type_of(EditorNode3DGizmo_methods.add_collision_triangles.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.add_collision_triangles.m_call = cast(type_of(EditorNode3DGizmo_methods.add_collision_triangles.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.add_unscaled_billboard._add_unscaled_billboard = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "add_unscaled_billboard", 520007164, loc))
-  EditorNode3DGizmo_methods.add_unscaled_billboard.m_call = cast(type_of(EditorNode3DGizmo_methods.add_unscaled_billboard.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.add_unscaled_billboard.m_call = cast(type_of(EditorNode3DGizmo_methods.add_unscaled_billboard.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.add_handles._add_handles = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "add_handles", 2254560097, loc))
-  EditorNode3DGizmo_methods.add_handles.m_call = cast(type_of(EditorNode3DGizmo_methods.add_handles.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.add_handles.m_call = cast(type_of(EditorNode3DGizmo_methods.add_handles.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.set_node_3d._set_node_3d = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "set_node_3d", 1078189570, loc))
-  EditorNode3DGizmo_methods.set_node_3d.m_call = cast(type_of(EditorNode3DGizmo_methods.set_node_3d.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.set_node_3d.m_call = cast(type_of(EditorNode3DGizmo_methods.set_node_3d.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.get_node_3d._get_node_3d = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "get_node_3d", 151077316, loc))
-  EditorNode3DGizmo_methods.get_node_3d.m_call = cast(type_of(EditorNode3DGizmo_methods.get_node_3d.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.get_node_3d.m_call = cast(type_of(EditorNode3DGizmo_methods.get_node_3d.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.get_plugin._get_plugin = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "get_plugin", 4250544552, loc))
-  EditorNode3DGizmo_methods.get_plugin.m_call = cast(type_of(EditorNode3DGizmo_methods.get_plugin.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.get_plugin.m_call = cast(type_of(EditorNode3DGizmo_methods.get_plugin.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.clear._clear = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "clear", 3218959716, loc))
-  EditorNode3DGizmo_methods.clear.m_call = cast(type_of(EditorNode3DGizmo_methods.clear.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.clear.m_call = cast(type_of(EditorNode3DGizmo_methods.clear.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.set_hidden._set_hidden = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "set_hidden", 2586408642, loc))
-  EditorNode3DGizmo_methods.set_hidden.m_call = cast(type_of(EditorNode3DGizmo_methods.set_hidden.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.set_hidden.m_call = cast(type_of(EditorNode3DGizmo_methods.set_hidden.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.is_subgizmo_selected._is_subgizmo_selected = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "is_subgizmo_selected", 1116898809, loc))
-  EditorNode3DGizmo_methods.is_subgizmo_selected.m_call = cast(type_of(EditorNode3DGizmo_methods.is_subgizmo_selected.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.is_subgizmo_selected.m_call = cast(type_of(EditorNode3DGizmo_methods.is_subgizmo_selected.m_call))MB_ptr_call
   EditorNode3DGizmo_methods.get_subgizmo_selection._get_subgizmo_selection = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.EditorNode3DGizmo, "get_subgizmo_selection", 1930428628, loc))
-  EditorNode3DGizmo_methods.get_subgizmo_selection.m_call = cast(type_of(EditorNode3DGizmo_methods.get_subgizmo_selection.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  EditorNode3DGizmo_methods.get_subgizmo_selection.m_call = cast(type_of(EditorNode3DGizmo_methods.get_subgizmo_selection.m_call))MB_ptr_call
 };
 
 EditorNode3DGizmo_Init_Virtuals_Info :: proc(info: ^EditorNode3DGizmo_Virtual_Info) {

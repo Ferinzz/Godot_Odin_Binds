@@ -22,10 +22,11 @@ AudioStreamPlaybackInteractive_MethodBind_List :: struct {
   },
 };
 AudioStreamPlaybackInteractive_Init_ :: proc (AudioStreamPlaybackInteractive_methods: ^AudioStreamPlaybackInteractive_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   AudioStreamPlaybackInteractive_methods.switch_to_clip_by_name._switch_to_clip_by_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlaybackInteractive, "switch_to_clip_by_name", 3304788590, loc))
-  AudioStreamPlaybackInteractive_methods.switch_to_clip_by_name.m_call = cast(type_of(AudioStreamPlaybackInteractive_methods.switch_to_clip_by_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlaybackInteractive_methods.switch_to_clip_by_name.m_call = cast(type_of(AudioStreamPlaybackInteractive_methods.switch_to_clip_by_name.m_call))MB_ptr_call
   AudioStreamPlaybackInteractive_methods.switch_to_clip._switch_to_clip = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlaybackInteractive, "switch_to_clip", 1286410249, loc))
-  AudioStreamPlaybackInteractive_methods.switch_to_clip.m_call = cast(type_of(AudioStreamPlaybackInteractive_methods.switch_to_clip.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlaybackInteractive_methods.switch_to_clip.m_call = cast(type_of(AudioStreamPlaybackInteractive_methods.switch_to_clip.m_call))MB_ptr_call
   AudioStreamPlaybackInteractive_methods.get_current_clip_index._get_current_clip_index = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AudioStreamPlaybackInteractive, "get_current_clip_index", 3905245786, loc))
-  AudioStreamPlaybackInteractive_methods.get_current_clip_index.m_call = cast(type_of(AudioStreamPlaybackInteractive_methods.get_current_clip_index.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  AudioStreamPlaybackInteractive_methods.get_current_clip_index.m_call = cast(type_of(AudioStreamPlaybackInteractive_methods.get_current_clip_index.m_call))MB_ptr_call
 };

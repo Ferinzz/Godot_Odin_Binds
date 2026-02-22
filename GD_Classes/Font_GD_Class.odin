@@ -7,12 +7,6 @@ import GDE "shared:GDWrapper/gdAPI/gdextension"
 
 Font :: ^GDW.Object
 
-Font_properties :: struct {
-  fallbacks_Array : struct {
-  get_fallbacks: proc "c" (p_base: Font, r_value: ^GDW.Array),
-  set_fallbacks: proc "c" (p_base: Font, p_value: ^GDW.Array),
-  },
-};
 Font_MethodBind_List :: struct {
   set_fallbacks: struct{
     using _set_fallbacks: ^GDW.MethodBind,
@@ -152,77 +146,73 @@ Font_MethodBind_List :: struct {
   },
 };
 Font_Init_ :: proc (Font_methods: ^Font_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   Font_methods.set_fallbacks._set_fallbacks = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "set_fallbacks", 381264803, loc))
-  Font_methods.set_fallbacks.m_call = cast(type_of(Font_methods.set_fallbacks.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.set_fallbacks.m_call = cast(type_of(Font_methods.set_fallbacks.m_call))MB_ptr_call
   Font_methods.get_fallbacks._get_fallbacks = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_fallbacks", 3995934104, loc))
-  Font_methods.get_fallbacks.m_call = cast(type_of(Font_methods.get_fallbacks.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_fallbacks.m_call = cast(type_of(Font_methods.get_fallbacks.m_call))MB_ptr_call
   Font_methods.find_variation._find_variation = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "find_variation", 2553855095, loc))
-  Font_methods.find_variation.m_call = cast(type_of(Font_methods.find_variation.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.find_variation.m_call = cast(type_of(Font_methods.find_variation.m_call))MB_ptr_call
   Font_methods.get_rids._get_rids = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_rids", 3995934104, loc))
-  Font_methods.get_rids.m_call = cast(type_of(Font_methods.get_rids.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_rids.m_call = cast(type_of(Font_methods.get_rids.m_call))MB_ptr_call
   Font_methods.get_height._get_height = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_height", 378113874, loc))
-  Font_methods.get_height.m_call = cast(type_of(Font_methods.get_height.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_height.m_call = cast(type_of(Font_methods.get_height.m_call))MB_ptr_call
   Font_methods.get_ascent._get_ascent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_ascent", 378113874, loc))
-  Font_methods.get_ascent.m_call = cast(type_of(Font_methods.get_ascent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_ascent.m_call = cast(type_of(Font_methods.get_ascent.m_call))MB_ptr_call
   Font_methods.get_descent._get_descent = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_descent", 378113874, loc))
-  Font_methods.get_descent.m_call = cast(type_of(Font_methods.get_descent.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_descent.m_call = cast(type_of(Font_methods.get_descent.m_call))MB_ptr_call
   Font_methods.get_underline_position._get_underline_position = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_underline_position", 378113874, loc))
-  Font_methods.get_underline_position.m_call = cast(type_of(Font_methods.get_underline_position.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_underline_position.m_call = cast(type_of(Font_methods.get_underline_position.m_call))MB_ptr_call
   Font_methods.get_underline_thickness._get_underline_thickness = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_underline_thickness", 378113874, loc))
-  Font_methods.get_underline_thickness.m_call = cast(type_of(Font_methods.get_underline_thickness.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_underline_thickness.m_call = cast(type_of(Font_methods.get_underline_thickness.m_call))MB_ptr_call
   Font_methods.get_font_name._get_font_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_font_name", 201670096, loc))
-  Font_methods.get_font_name.m_call = cast(type_of(Font_methods.get_font_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_font_name.m_call = cast(type_of(Font_methods.get_font_name.m_call))MB_ptr_call
   Font_methods.get_font_style_name._get_font_style_name = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_font_style_name", 201670096, loc))
-  Font_methods.get_font_style_name.m_call = cast(type_of(Font_methods.get_font_style_name.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_font_style_name.m_call = cast(type_of(Font_methods.get_font_style_name.m_call))MB_ptr_call
   Font_methods.get_ot_name_strings._get_ot_name_strings = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_ot_name_strings", 3102165223, loc))
-  Font_methods.get_ot_name_strings.m_call = cast(type_of(Font_methods.get_ot_name_strings.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_ot_name_strings.m_call = cast(type_of(Font_methods.get_ot_name_strings.m_call))MB_ptr_call
   Font_methods.get_font_style._get_font_style = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_font_style", 2520224254, loc))
-  Font_methods.get_font_style.m_call = cast(type_of(Font_methods.get_font_style.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_font_style.m_call = cast(type_of(Font_methods.get_font_style.m_call))MB_ptr_call
   Font_methods.get_font_weight._get_font_weight = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_font_weight", 3905245786, loc))
-  Font_methods.get_font_weight.m_call = cast(type_of(Font_methods.get_font_weight.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_font_weight.m_call = cast(type_of(Font_methods.get_font_weight.m_call))MB_ptr_call
   Font_methods.get_font_stretch._get_font_stretch = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_font_stretch", 3905245786, loc))
-  Font_methods.get_font_stretch.m_call = cast(type_of(Font_methods.get_font_stretch.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_font_stretch.m_call = cast(type_of(Font_methods.get_font_stretch.m_call))MB_ptr_call
   Font_methods.get_spacing._get_spacing = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_spacing", 1310880908, loc))
-  Font_methods.get_spacing.m_call = cast(type_of(Font_methods.get_spacing.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_spacing.m_call = cast(type_of(Font_methods.get_spacing.m_call))MB_ptr_call
   Font_methods.get_opentype_features._get_opentype_features = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_opentype_features", 3102165223, loc))
-  Font_methods.get_opentype_features.m_call = cast(type_of(Font_methods.get_opentype_features.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_opentype_features.m_call = cast(type_of(Font_methods.get_opentype_features.m_call))MB_ptr_call
   Font_methods.set_cache_capacity._set_cache_capacity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "set_cache_capacity", 3937882851, loc))
-  Font_methods.set_cache_capacity.m_call = cast(type_of(Font_methods.set_cache_capacity.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.set_cache_capacity.m_call = cast(type_of(Font_methods.set_cache_capacity.m_call))MB_ptr_call
   Font_methods.get_string_size._get_string_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_string_size", 1868866121, loc))
-  Font_methods.get_string_size.m_call = cast(type_of(Font_methods.get_string_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_string_size.m_call = cast(type_of(Font_methods.get_string_size.m_call))MB_ptr_call
   Font_methods.get_multiline_string_size._get_multiline_string_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_multiline_string_size", 519636710, loc))
-  Font_methods.get_multiline_string_size.m_call = cast(type_of(Font_methods.get_multiline_string_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_multiline_string_size.m_call = cast(type_of(Font_methods.get_multiline_string_size.m_call))MB_ptr_call
   Font_methods.draw_string._draw_string = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "draw_string", 1976686372, loc))
-  Font_methods.draw_string.m_call = cast(type_of(Font_methods.draw_string.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.draw_string.m_call = cast(type_of(Font_methods.draw_string.m_call))MB_ptr_call
   Font_methods.draw_multiline_string._draw_multiline_string = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "draw_multiline_string", 2686601589, loc))
-  Font_methods.draw_multiline_string.m_call = cast(type_of(Font_methods.draw_multiline_string.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.draw_multiline_string.m_call = cast(type_of(Font_methods.draw_multiline_string.m_call))MB_ptr_call
   Font_methods.draw_string_outline._draw_string_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "draw_string_outline", 701417663, loc))
-  Font_methods.draw_string_outline.m_call = cast(type_of(Font_methods.draw_string_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.draw_string_outline.m_call = cast(type_of(Font_methods.draw_string_outline.m_call))MB_ptr_call
   Font_methods.draw_multiline_string_outline._draw_multiline_string_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "draw_multiline_string_outline", 4147839237, loc))
-  Font_methods.draw_multiline_string_outline.m_call = cast(type_of(Font_methods.draw_multiline_string_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.draw_multiline_string_outline.m_call = cast(type_of(Font_methods.draw_multiline_string_outline.m_call))MB_ptr_call
   Font_methods.get_char_size._get_char_size = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_char_size", 3016396712, loc))
-  Font_methods.get_char_size.m_call = cast(type_of(Font_methods.get_char_size.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_char_size.m_call = cast(type_of(Font_methods.get_char_size.m_call))MB_ptr_call
   Font_methods.draw_char._draw_char = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "draw_char", 3500170256, loc))
-  Font_methods.draw_char.m_call = cast(type_of(Font_methods.draw_char.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.draw_char.m_call = cast(type_of(Font_methods.draw_char.m_call))MB_ptr_call
   Font_methods.draw_char_outline._draw_char_outline = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "draw_char_outline", 1684114874, loc))
-  Font_methods.draw_char_outline.m_call = cast(type_of(Font_methods.draw_char_outline.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.draw_char_outline.m_call = cast(type_of(Font_methods.draw_char_outline.m_call))MB_ptr_call
   Font_methods.has_char._has_char = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "has_char", 1116898809, loc))
-  Font_methods.has_char.m_call = cast(type_of(Font_methods.has_char.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.has_char.m_call = cast(type_of(Font_methods.has_char.m_call))MB_ptr_call
   Font_methods.get_supported_chars._get_supported_chars = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_supported_chars", 201670096, loc))
-  Font_methods.get_supported_chars.m_call = cast(type_of(Font_methods.get_supported_chars.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_supported_chars.m_call = cast(type_of(Font_methods.get_supported_chars.m_call))MB_ptr_call
   Font_methods.is_language_supported._is_language_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "is_language_supported", 3927539163, loc))
-  Font_methods.is_language_supported.m_call = cast(type_of(Font_methods.is_language_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.is_language_supported.m_call = cast(type_of(Font_methods.is_language_supported.m_call))MB_ptr_call
   Font_methods.is_script_supported._is_script_supported = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "is_script_supported", 3927539163, loc))
-  Font_methods.is_script_supported.m_call = cast(type_of(Font_methods.is_script_supported.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.is_script_supported.m_call = cast(type_of(Font_methods.is_script_supported.m_call))MB_ptr_call
   Font_methods.get_supported_feature_list._get_supported_feature_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_supported_feature_list", 3102165223, loc))
-  Font_methods.get_supported_feature_list.m_call = cast(type_of(Font_methods.get_supported_feature_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_supported_feature_list.m_call = cast(type_of(Font_methods.get_supported_feature_list.m_call))MB_ptr_call
   Font_methods.get_supported_variation_list._get_supported_variation_list = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_supported_variation_list", 3102165223, loc))
-  Font_methods.get_supported_variation_list.m_call = cast(type_of(Font_methods.get_supported_variation_list.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  Font_methods.get_supported_variation_list.m_call = cast(type_of(Font_methods.get_supported_variation_list.m_call))MB_ptr_call
   Font_methods.get_face_count._get_face_count = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Font, "get_face_count", 3905245786, loc))
-  Font_methods.get_face_count.m_call = cast(type_of(Font_methods.get_face_count.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-Font_init_props :: proc(Font_prop: ^Font_properties, loc:= #caller_location) {
-
-  Font_prop.fallbacks_Array.get_fallbacks = cast(proc "c" (p_base: Font, r_value: ^GDW.Array))GDW.Get_Method_Getter(.ARRAY, "get_fallbacks")
-  Font_prop.fallbacks_Array.set_fallbacks = cast(proc "c" (p_base: Font, p_value: ^GDW.Array))GDW.Get_Method_Setter(.ARRAY, "set_fallbacks")
+  Font_methods.get_face_count.m_call = cast(type_of(Font_methods.get_face_count.m_call))MB_ptr_call
 };

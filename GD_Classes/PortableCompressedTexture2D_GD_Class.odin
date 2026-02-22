@@ -17,16 +17,6 @@ PortableCompressedTexture2D_CompressionMode :: enum i64 {
   COMPRESSION_MODE_BPTC = 5,
   COMPRESSION_MODE_ASTC = 6,
 };
-PortableCompressedTexture2D_properties :: struct {
-  size_override_Vector2 : struct {
-  get_size_override: proc "c" (p_base: PortableCompressedTexture2D, r_value: ^GDW.Vector2),
-  set_size_override: proc "c" (p_base: PortableCompressedTexture2D, p_value: ^GDW.Vector2),
-  },
-  keep_compressed_buffer_Bool : struct {
-  is_keeping_compressed_buffer: proc "c" (p_base: PortableCompressedTexture2D, r_value: ^GDW.Bool),
-  set_keep_compressed_buffer: proc "c" (p_base: PortableCompressedTexture2D, p_value: ^GDW.Bool),
-  },
-};
 PortableCompressedTexture2D_MethodBind_List :: struct {
   create_from_image: struct{
     using _create_from_image: ^GDW.MethodBind,
@@ -70,32 +60,25 @@ PortableCompressedTexture2D_MethodBind_List :: struct {
   },
 };
 PortableCompressedTexture2D_Init_ :: proc (PortableCompressedTexture2D_methods: ^PortableCompressedTexture2D_MethodBind_List, loc := #caller_location) {
+  MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
   PortableCompressedTexture2D_methods.create_from_image._create_from_image = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "create_from_image", 3679243433, loc))
-  PortableCompressedTexture2D_methods.create_from_image.m_call = cast(type_of(PortableCompressedTexture2D_methods.create_from_image.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.create_from_image.m_call = cast(type_of(PortableCompressedTexture2D_methods.create_from_image.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.get_format._get_format = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "get_format", 3847873762, loc))
-  PortableCompressedTexture2D_methods.get_format.m_call = cast(type_of(PortableCompressedTexture2D_methods.get_format.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.get_format.m_call = cast(type_of(PortableCompressedTexture2D_methods.get_format.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.get_compression_mode._get_compression_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "get_compression_mode", 3265612739, loc))
-  PortableCompressedTexture2D_methods.get_compression_mode.m_call = cast(type_of(PortableCompressedTexture2D_methods.get_compression_mode.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.get_compression_mode.m_call = cast(type_of(PortableCompressedTexture2D_methods.get_compression_mode.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.set_size_override._set_size_override = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "set_size_override", 743155724, loc))
-  PortableCompressedTexture2D_methods.set_size_override.m_call = cast(type_of(PortableCompressedTexture2D_methods.set_size_override.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.set_size_override.m_call = cast(type_of(PortableCompressedTexture2D_methods.set_size_override.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.get_size_override._get_size_override = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "get_size_override", 3341600327, loc))
-  PortableCompressedTexture2D_methods.get_size_override.m_call = cast(type_of(PortableCompressedTexture2D_methods.get_size_override.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.get_size_override.m_call = cast(type_of(PortableCompressedTexture2D_methods.get_size_override.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.set_keep_compressed_buffer._set_keep_compressed_buffer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "set_keep_compressed_buffer", 2586408642, loc))
-  PortableCompressedTexture2D_methods.set_keep_compressed_buffer.m_call = cast(type_of(PortableCompressedTexture2D_methods.set_keep_compressed_buffer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.set_keep_compressed_buffer.m_call = cast(type_of(PortableCompressedTexture2D_methods.set_keep_compressed_buffer.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.is_keeping_compressed_buffer._is_keeping_compressed_buffer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "is_keeping_compressed_buffer", 36873697, loc))
-  PortableCompressedTexture2D_methods.is_keeping_compressed_buffer.m_call = cast(type_of(PortableCompressedTexture2D_methods.is_keeping_compressed_buffer.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.is_keeping_compressed_buffer.m_call = cast(type_of(PortableCompressedTexture2D_methods.is_keeping_compressed_buffer.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.set_basisu_compressor_params._set_basisu_compressor_params = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "set_basisu_compressor_params", 1602489585, loc))
-  PortableCompressedTexture2D_methods.set_basisu_compressor_params.m_call = cast(type_of(PortableCompressedTexture2D_methods.set_basisu_compressor_params.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.set_basisu_compressor_params.m_call = cast(type_of(PortableCompressedTexture2D_methods.set_basisu_compressor_params.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.set_keep_all_compressed_buffers._set_keep_all_compressed_buffers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "set_keep_all_compressed_buffers", 2586408642, loc))
-  PortableCompressedTexture2D_methods.set_keep_all_compressed_buffers.m_call = cast(type_of(PortableCompressedTexture2D_methods.set_keep_all_compressed_buffers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
+  PortableCompressedTexture2D_methods.set_keep_all_compressed_buffers.m_call = cast(type_of(PortableCompressedTexture2D_methods.set_keep_all_compressed_buffers.m_call))MB_ptr_call
   PortableCompressedTexture2D_methods.is_keeping_all_compressed_buffers._is_keeping_all_compressed_buffers = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.PortableCompressedTexture2D, "is_keeping_all_compressed_buffers", 2240911060, loc))
-  PortableCompressedTexture2D_methods.is_keeping_all_compressed_buffers.m_call = cast(type_of(PortableCompressedTexture2D_methods.is_keeping_all_compressed_buffers.m_call))gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-PortableCompressedTexture2D_init_props :: proc(PortableCompressedTexture2D_prop: ^PortableCompressedTexture2D_properties, loc:= #caller_location) {
-
-  PortableCompressedTexture2D_prop.size_override_Vector2.get_size_override = cast(proc "c" (p_base: PortableCompressedTexture2D, r_value: ^GDW.Vector2))GDW.Get_Method_Getter(.VECTOR2, "get_size_override")
-  PortableCompressedTexture2D_prop.size_override_Vector2.set_size_override = cast(proc "c" (p_base: PortableCompressedTexture2D, p_value: ^GDW.Vector2))GDW.Get_Method_Setter(.VECTOR2, "set_size_override")
-
-  PortableCompressedTexture2D_prop.keep_compressed_buffer_Bool.is_keeping_compressed_buffer = cast(proc "c" (p_base: PortableCompressedTexture2D, r_value: ^GDW.Bool))GDW.Get_Method_Getter(.BOOL, "is_keeping_compressed_buffer")
-  PortableCompressedTexture2D_prop.keep_compressed_buffer_Bool.set_keep_compressed_buffer = cast(proc "c" (p_base: PortableCompressedTexture2D, p_value: ^GDW.Bool))GDW.Get_Method_Setter(.BOOL, "set_keep_compressed_buffer")
+  PortableCompressedTexture2D_methods.is_keeping_all_compressed_buffers.m_call = cast(type_of(PortableCompressedTexture2D_methods.is_keeping_all_compressed_buffers.m_call))MB_ptr_call
 };
