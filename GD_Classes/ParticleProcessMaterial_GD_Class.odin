@@ -71,7 +71,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_direction: struct{
     using _get_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_inherit_velocity_ratio: struct{
     using _set_inherit_velocity_ratio: ^GDW.MethodBind,
@@ -79,7 +79,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_inherit_velocity_ratio: struct{
     using _get_inherit_velocity_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_spread: struct{
     using _set_spread: ^GDW.MethodBind,
@@ -87,7 +87,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_spread: struct{
     using _get_spread: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_flatness: struct{
     using _set_flatness: ^GDW.MethodBind,
@@ -95,7 +95,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_flatness: struct{
     using _get_flatness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_param: struct{
     using _set_param: ^GDW.MethodBind,
@@ -135,7 +135,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_color_ramp: struct{
     using _set_color_ramp: ^GDW.MethodBind,
@@ -143,7 +143,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_color_ramp: struct{
     using _get_color_ramp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_alpha_curve: struct{
     using _set_alpha_curve: ^GDW.MethodBind,
@@ -151,7 +151,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_alpha_curve: struct{
     using _get_alpha_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_emission_curve: struct{
     using _set_emission_curve: ^GDW.MethodBind,
@@ -159,7 +159,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_curve: struct{
     using _get_emission_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_color_initial_ramp: struct{
     using _set_color_initial_ramp: ^GDW.MethodBind,
@@ -167,7 +167,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_color_initial_ramp: struct{
     using _get_color_initial_ramp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_velocity_limit_curve: struct{
     using _set_velocity_limit_curve: ^GDW.MethodBind,
@@ -175,7 +175,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_velocity_limit_curve: struct{
     using _get_velocity_limit_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_particle_flag: struct{
     using _set_particle_flag: ^GDW.MethodBind,
@@ -191,7 +191,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_velocity_pivot: struct{
     using _get_velocity_pivot: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_emission_shape: struct{
     using _set_emission_shape: ^GDW.MethodBind,
@@ -199,7 +199,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_shape: struct{
     using _get_emission_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^ParticleProcessMaterial_EmissionShape)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^ParticleProcessMaterial_EmissionShape)
   },
   set_emission_sphere_radius: struct{
     using _set_emission_sphere_radius: ^GDW.MethodBind,
@@ -207,7 +207,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_sphere_radius: struct{
     using _get_emission_sphere_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_box_extents: struct{
     using _set_emission_box_extents: ^GDW.MethodBind,
@@ -215,7 +215,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_box_extents: struct{
     using _get_emission_box_extents: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_emission_point_texture: struct{
     using _set_emission_point_texture: ^GDW.MethodBind,
@@ -223,7 +223,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_point_texture: struct{
     using _get_emission_point_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_emission_normal_texture: struct{
     using _set_emission_normal_texture: ^GDW.MethodBind,
@@ -231,7 +231,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_normal_texture: struct{
     using _get_emission_normal_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_emission_color_texture: struct{
     using _set_emission_color_texture: ^GDW.MethodBind,
@@ -239,7 +239,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_color_texture: struct{
     using _get_emission_color_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_emission_point_count: struct{
     using _set_emission_point_count: ^GDW.MethodBind,
@@ -247,7 +247,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_point_count: struct{
     using _get_emission_point_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_emission_ring_axis: struct{
     using _set_emission_ring_axis: ^GDW.MethodBind,
@@ -255,7 +255,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_ring_axis: struct{
     using _get_emission_ring_axis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_emission_ring_height: struct{
     using _set_emission_ring_height: ^GDW.MethodBind,
@@ -263,7 +263,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_ring_height: struct{
     using _get_emission_ring_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_ring_radius: struct{
     using _set_emission_ring_radius: ^GDW.MethodBind,
@@ -271,7 +271,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_ring_radius: struct{
     using _get_emission_ring_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_ring_inner_radius: struct{
     using _set_emission_ring_inner_radius: ^GDW.MethodBind,
@@ -279,7 +279,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_ring_inner_radius: struct{
     using _get_emission_ring_inner_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_ring_cone_angle: struct{
     using _set_emission_ring_cone_angle: ^GDW.MethodBind,
@@ -287,7 +287,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_ring_cone_angle: struct{
     using _get_emission_ring_cone_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_shape_offset: struct{
     using _set_emission_shape_offset: ^GDW.MethodBind,
@@ -295,7 +295,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_shape_offset: struct{
     using _get_emission_shape_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_emission_shape_scale: struct{
     using _set_emission_shape_scale: ^GDW.MethodBind,
@@ -303,11 +303,11 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_emission_shape_scale: struct{
     using _get_emission_shape_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_turbulence_enabled: struct{
     using _get_turbulence_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_turbulence_enabled: struct{
     using _set_turbulence_enabled: ^GDW.MethodBind,
@@ -315,7 +315,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_turbulence_noise_strength: struct{
     using _get_turbulence_noise_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_turbulence_noise_strength: struct{
     using _set_turbulence_noise_strength: ^GDW.MethodBind,
@@ -323,7 +323,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_turbulence_noise_scale: struct{
     using _get_turbulence_noise_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_turbulence_noise_scale: struct{
     using _set_turbulence_noise_scale: ^GDW.MethodBind,
@@ -331,7 +331,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_turbulence_noise_speed_random: struct{
     using _get_turbulence_noise_speed_random: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_turbulence_noise_speed_random: struct{
     using _set_turbulence_noise_speed_random: ^GDW.MethodBind,
@@ -339,7 +339,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_turbulence_noise_speed: struct{
     using _get_turbulence_noise_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_turbulence_noise_speed: struct{
     using _set_turbulence_noise_speed: ^GDW.MethodBind,
@@ -347,7 +347,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_gravity: struct{
     using _get_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_gravity: struct{
     using _set_gravity: ^GDW.MethodBind,
@@ -359,11 +359,11 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_lifetime_randomness: struct{
     using _get_lifetime_randomness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_sub_emitter_mode: struct{
     using _get_sub_emitter_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^ParticleProcessMaterial_SubEmitterMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^ParticleProcessMaterial_SubEmitterMode)
   },
   set_sub_emitter_mode: struct{
     using _set_sub_emitter_mode: ^GDW.MethodBind,
@@ -371,7 +371,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_sub_emitter_frequency: struct{
     using _get_sub_emitter_frequency: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sub_emitter_frequency: struct{
     using _set_sub_emitter_frequency: ^GDW.MethodBind,
@@ -379,7 +379,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_sub_emitter_amount_at_end: struct{
     using _get_sub_emitter_amount_at_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sub_emitter_amount_at_end: struct{
     using _set_sub_emitter_amount_at_end: ^GDW.MethodBind,
@@ -387,7 +387,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_sub_emitter_amount_at_collision: struct{
     using _get_sub_emitter_amount_at_collision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sub_emitter_amount_at_collision: struct{
     using _set_sub_emitter_amount_at_collision: ^GDW.MethodBind,
@@ -395,7 +395,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_sub_emitter_amount_at_start: struct{
     using _get_sub_emitter_amount_at_start: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sub_emitter_amount_at_start: struct{
     using _set_sub_emitter_amount_at_start: ^GDW.MethodBind,
@@ -403,7 +403,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_sub_emitter_keep_velocity: struct{
     using _get_sub_emitter_keep_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sub_emitter_keep_velocity: struct{
     using _set_sub_emitter_keep_velocity: ^GDW.MethodBind,
@@ -415,7 +415,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     is_attractor_interaction_enabled: struct{
     using _is_attractor_interaction_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collision_mode: struct{
     using _set_collision_mode: ^GDW.MethodBind,
@@ -423,7 +423,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_collision_mode: struct{
     using _get_collision_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^ParticleProcessMaterial_CollisionMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^ParticleProcessMaterial_CollisionMode)
   },
   set_collision_use_scale: struct{
     using _set_collision_use_scale: ^GDW.MethodBind,
@@ -431,7 +431,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     is_collision_using_scale: struct{
     using _is_collision_using_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collision_friction: struct{
     using _set_collision_friction: ^GDW.MethodBind,
@@ -439,7 +439,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_collision_friction: struct{
     using _get_collision_friction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_collision_bounce: struct{
     using _set_collision_bounce: ^GDW.MethodBind,
@@ -447,7 +447,7 @@ ParticleProcessMaterial_MethodBind_List :: struct {
   },
     get_collision_bounce: struct{
     using _get_collision_bounce: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ParticleProcessMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 ParticleProcessMaterial_Init_ :: proc (ParticleProcessMaterial_methods: ^ParticleProcessMaterial_MethodBind_List, loc := #caller_location) {

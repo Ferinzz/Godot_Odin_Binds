@@ -35,7 +35,7 @@ GLTFState_MethodBind_List :: struct {
   },
   get_json: struct{
     using _get_json: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_json: struct{
     using _set_json: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_major_version: struct{
     using _get_major_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_major_version: struct{
     using _set_major_version: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_minor_version: struct{
     using _get_minor_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_minor_version: struct{
     using _set_minor_version: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_copyright: struct{
     using _get_copyright: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_copyright: struct{
     using _set_copyright: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_glb_data: struct{
     using _get_glb_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   set_glb_data: struct{
     using _set_glb_data: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_use_named_skin_binds: struct{
     using _get_use_named_skin_binds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_named_skin_binds: struct{
     using _set_use_named_skin_binds: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_nodes: struct{
     using _get_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_nodes: struct{
     using _set_nodes: ^GDW.MethodBind,
@@ -91,7 +91,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_buffers: struct{
     using _get_buffers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_buffers: struct{
     using _set_buffers: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_buffer_views: struct{
     using _get_buffer_views: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_buffer_views: struct{
     using _set_buffer_views: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_accessors: struct{
     using _get_accessors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_accessors: struct{
     using _set_accessors: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_meshes: struct{
     using _get_meshes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_meshes: struct{
     using _set_meshes: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ GLTFState_MethodBind_List :: struct {
   },
   get_materials: struct{
     using _get_materials: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_materials: struct{
     using _set_materials: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_scene_name: struct{
     using _get_scene_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_scene_name: struct{
     using _set_scene_name: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_base_path: struct{
     using _get_base_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_base_path: struct{
     using _set_base_path: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_filename: struct{
     using _get_filename: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_filename: struct{
     using _set_filename: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_root_nodes: struct{
     using _get_root_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_root_nodes: struct{
     using _set_root_nodes: ^GDW.MethodBind,
@@ -171,7 +171,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_textures: struct{
     using _get_textures: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_textures: struct{
     using _set_textures: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_texture_samplers: struct{
     using _get_texture_samplers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_texture_samplers: struct{
     using _set_texture_samplers: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_images: struct{
     using _get_images: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_images: struct{
     using _set_images: ^GDW.MethodBind,
@@ -195,7 +195,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_skins: struct{
     using _get_skins: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_skins: struct{
     using _set_skins: ^GDW.MethodBind,
@@ -203,7 +203,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_cameras: struct{
     using _get_cameras: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_cameras: struct{
     using _set_cameras: ^GDW.MethodBind,
@@ -211,7 +211,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_lights: struct{
     using _get_lights: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_lights: struct{
     using _set_lights: ^GDW.MethodBind,
@@ -219,7 +219,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_unique_names: struct{
     using _get_unique_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_unique_names: struct{
     using _set_unique_names: ^GDW.MethodBind,
@@ -227,7 +227,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_unique_animation_names: struct{
     using _get_unique_animation_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_unique_animation_names: struct{
     using _set_unique_animation_names: ^GDW.MethodBind,
@@ -235,7 +235,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_skeletons: struct{
     using _get_skeletons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_skeletons: struct{
     using _set_skeletons: ^GDW.MethodBind,
@@ -243,7 +243,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_create_animations: struct{
     using _get_create_animations: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_create_animations: struct{
     using _set_create_animations: ^GDW.MethodBind,
@@ -251,7 +251,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_import_as_skeleton_bones: struct{
     using _get_import_as_skeleton_bones: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_import_as_skeleton_bones: struct{
     using _set_import_as_skeleton_bones: ^GDW.MethodBind,
@@ -259,7 +259,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_animations: struct{
     using _get_animations: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_animations: struct{
     using _set_animations: ^GDW.MethodBind,
@@ -283,7 +283,7 @@ GLTFState_MethodBind_List :: struct {
   },
     get_handle_binary_image_mode: struct{
     using _get_handle_binary_image_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GLTFState_HandleBinaryImageMode)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GLTFState_HandleBinaryImageMode)
   },
   set_handle_binary_image_mode: struct{
     using _set_handle_binary_image_mode: ^GDW.MethodBind,
@@ -295,11 +295,11 @@ GLTFState_MethodBind_List :: struct {
   },
     get_bake_fps: struct{
     using _get_bake_fps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_handle_binary_image: struct{
     using _get_handle_binary_image: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_handle_binary_image: struct{
     using _set_handle_binary_image: ^GDW.MethodBind,

@@ -106,7 +106,7 @@ EditorExportPlugin_MethodBind_List :: struct {
   },
     skip: struct{
     using _skip: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlugin, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlugin, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_option: struct{
     using _get_option: ^GDW.MethodBind,
@@ -114,11 +114,11 @@ EditorExportPlugin_MethodBind_List :: struct {
   },
   get_export_preset: struct{
     using _get_export_preset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlugin, #by_ptr args: i64 = 0, r_ret: ^EditorExportPreset)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlugin, args: rawptr = nil, r_ret: ^EditorExportPreset)
   },
   get_export_platform: struct{
     using _get_export_platform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlugin, #by_ptr args: i64 = 0, r_ret: ^EditorExportPlatform)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlugin, args: rawptr = nil, r_ret: ^EditorExportPlatform)
   },
 };
 EditorExportPlugin_Init_ :: proc (EditorExportPlugin_methods: ^EditorExportPlugin_MethodBind_List, loc := #caller_location) {

@@ -14,11 +14,11 @@ OpenXRActionMap_MethodBind_List :: struct {
   },
     get_action_sets: struct{
     using _get_action_sets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_action_set_count: struct{
     using _get_action_set_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   find_action_set: struct{
     using _find_action_set: ^GDW.MethodBind,
@@ -42,11 +42,11 @@ OpenXRActionMap_MethodBind_List :: struct {
   },
     get_interaction_profiles: struct{
     using _get_interaction_profiles: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_interaction_profile_count: struct{
     using _get_interaction_profile_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   find_interaction_profile: struct{
     using _find_interaction_profile: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ OpenXRActionMap_MethodBind_List :: struct {
   },
     create_default_action_sets: struct{
     using _create_default_action_sets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionMap, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 OpenXRActionMap_Init_ :: proc (OpenXRActionMap_methods: ^OpenXRActionMap_MethodBind_List, loc := #caller_location) {

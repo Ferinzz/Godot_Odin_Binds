@@ -14,7 +14,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_enable_depth_test: struct{
     using _get_enable_depth_test: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enable_depth_write: struct{
     using _set_enable_depth_write: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_enable_depth_write: struct{
     using _get_enable_depth_write: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_depth_compare_operator: struct{
     using _set_depth_compare_operator: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_depth_compare_operator: struct{
     using _get_depth_compare_operator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_CompareOperator)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_CompareOperator)
   },
   set_enable_depth_range: struct{
     using _set_enable_depth_range: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_enable_depth_range: struct{
     using _get_enable_depth_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_depth_range_min: struct{
     using _set_depth_range_min: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_depth_range_min: struct{
     using _get_depth_range_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_depth_range_max: struct{
     using _set_depth_range_max: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_depth_range_max: struct{
     using _get_depth_range_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_enable_stencil: struct{
     using _set_enable_stencil: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_enable_stencil: struct{
     using _get_enable_stencil: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_front_op_fail: struct{
     using _set_front_op_fail: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_front_op_fail: struct{
     using _get_front_op_fail: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_StencilOperation)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_StencilOperation)
   },
   set_front_op_pass: struct{
     using _set_front_op_pass: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_front_op_pass: struct{
     using _get_front_op_pass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_StencilOperation)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_StencilOperation)
   },
   set_front_op_depth_fail: struct{
     using _set_front_op_depth_fail: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_front_op_depth_fail: struct{
     using _get_front_op_depth_fail: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_StencilOperation)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_StencilOperation)
   },
   set_front_op_compare: struct{
     using _set_front_op_compare: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_front_op_compare: struct{
     using _get_front_op_compare: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_CompareOperator)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_CompareOperator)
   },
   set_front_op_compare_mask: struct{
     using _set_front_op_compare_mask: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_front_op_compare_mask: struct{
     using _get_front_op_compare_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_front_op_write_mask: struct{
     using _set_front_op_write_mask: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_front_op_write_mask: struct{
     using _get_front_op_write_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_front_op_reference: struct{
     using _set_front_op_reference: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_front_op_reference: struct{
     using _get_front_op_reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_back_op_fail: struct{
     using _set_back_op_fail: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_back_op_fail: struct{
     using _get_back_op_fail: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_StencilOperation)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_StencilOperation)
   },
   set_back_op_pass: struct{
     using _set_back_op_pass: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_back_op_pass: struct{
     using _get_back_op_pass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_StencilOperation)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_StencilOperation)
   },
   set_back_op_depth_fail: struct{
     using _set_back_op_depth_fail: ^GDW.MethodBind,
@@ -142,7 +142,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_back_op_depth_fail: struct{
     using _get_back_op_depth_fail: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_StencilOperation)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_StencilOperation)
   },
   set_back_op_compare: struct{
     using _set_back_op_compare: ^GDW.MethodBind,
@@ -150,7 +150,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_back_op_compare: struct{
     using _get_back_op_compare: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_CompareOperator)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^RenderingDevice_CompareOperator)
   },
   set_back_op_compare_mask: struct{
     using _set_back_op_compare_mask: ^GDW.MethodBind,
@@ -158,7 +158,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_back_op_compare_mask: struct{
     using _get_back_op_compare_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_back_op_write_mask: struct{
     using _set_back_op_write_mask: ^GDW.MethodBind,
@@ -166,7 +166,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_back_op_write_mask: struct{
     using _get_back_op_write_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_back_op_reference: struct{
     using _set_back_op_reference: ^GDW.MethodBind,
@@ -174,7 +174,7 @@ RDPipelineDepthStencilState_MethodBind_List :: struct {
   },
     get_back_op_reference: struct{
     using _get_back_op_reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineDepthStencilState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 RDPipelineDepthStencilState_Init_ :: proc (RDPipelineDepthStencilState_methods: ^RDPipelineDepthStencilState_MethodBind_List, loc := #caller_location) {

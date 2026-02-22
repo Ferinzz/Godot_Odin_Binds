@@ -44,7 +44,7 @@ AnimationNodeStateMachine_MethodBind_List :: struct {
   },
   get_node_list: struct{
     using _get_node_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_node_position: struct{
     using _set_node_position: ^GDW.MethodBind,
@@ -76,7 +76,7 @@ AnimationNodeStateMachine_MethodBind_List :: struct {
   },
   get_transition_count: struct{
     using _get_transition_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   remove_transition_by_index: struct{
     using _remove_transition_by_index: ^GDW.MethodBind,
@@ -92,7 +92,7 @@ AnimationNodeStateMachine_MethodBind_List :: struct {
   },
     get_graph_offset: struct{
     using _get_graph_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_state_machine_type: struct{
     using _set_state_machine_type: ^GDW.MethodBind,
@@ -100,7 +100,7 @@ AnimationNodeStateMachine_MethodBind_List :: struct {
   },
     get_state_machine_type: struct{
     using _get_state_machine_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, #by_ptr args: i64 = 0, r_ret: ^AnimationNodeStateMachine_StateMachineType)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, args: rawptr = nil, r_ret: ^AnimationNodeStateMachine_StateMachineType)
   },
   set_allow_transition_to_self: struct{
     using _set_allow_transition_to_self: ^GDW.MethodBind,
@@ -108,7 +108,7 @@ AnimationNodeStateMachine_MethodBind_List :: struct {
   },
     is_allow_transition_to_self: struct{
     using _is_allow_transition_to_self: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_reset_ends: struct{
     using _set_reset_ends: ^GDW.MethodBind,
@@ -116,7 +116,7 @@ AnimationNodeStateMachine_MethodBind_List :: struct {
   },
     are_ends_reset: struct{
     using _are_ends_reset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AnimationNodeStateMachine_Init_ :: proc (AnimationNodeStateMachine_methods: ^AnimationNodeStateMachine_MethodBind_List, loc := #caller_location) {

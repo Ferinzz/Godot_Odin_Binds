@@ -14,11 +14,11 @@ ZIPReader_MethodBind_List :: struct {
   },
   close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ZIPReader, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: ZIPReader, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   get_files: struct{
     using _get_files: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ZIPReader, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ZIPReader, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   read_file: struct{
     using _read_file: ^GDW.MethodBind,

@@ -10,7 +10,7 @@ VisualShaderNodeReroute :: ^GDW.Object
 VisualShaderNodeReroute_MethodBind_List :: struct {
   get_port_type: struct{
     using _get_port_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeReroute, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNode_PortType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeReroute, args: rawptr = nil, r_ret: ^VisualShaderNode_PortType)
   },
 };
 VisualShaderNodeReroute_Init_ :: proc (VisualShaderNodeReroute_methods: ^VisualShaderNodeReroute_MethodBind_List, loc := #caller_location) {

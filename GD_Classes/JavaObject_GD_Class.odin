@@ -10,7 +10,7 @@ JavaObject :: ^GDW.Object
 JavaObject_MethodBind_List :: struct {
   get_java_class: struct{
     using _get_java_class: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaObject, #by_ptr args: i64 = 0, r_ret: ^JavaClass)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaObject, args: rawptr = nil, r_ret: ^JavaClass)
   },
   has_java_method: struct{
     using _has_java_method: ^GDW.MethodBind,

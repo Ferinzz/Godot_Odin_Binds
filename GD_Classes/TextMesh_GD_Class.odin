@@ -14,7 +14,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_horizontal_alignment: struct{
     using _get_horizontal_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   set_vertical_alignment: struct{
     using _set_vertical_alignment: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_vertical_alignment: struct{
     using _get_vertical_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.VerticalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.VerticalAlignment)
   },
   set_text: struct{
     using _set_text: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_font: struct{
     using _set_font: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_font: struct{
     using _get_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^Font)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^Font)
   },
   set_font_size: struct{
     using _set_font_size: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_font_size: struct{
     using _get_font_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_line_spacing: struct{
     using _set_line_spacing: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_line_spacing: struct{
     using _get_line_spacing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_autowrap_mode: struct{
     using _set_autowrap_mode: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_autowrap_mode: struct{
     using _get_autowrap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^TextServer_AutowrapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^TextServer_AutowrapMode)
   },
   set_justification_flags: struct{
     using _set_justification_flags: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_justification_flags: struct{
     using _get_justification_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^TextServer_JustificationFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^TextServer_JustificationFlag)
   },
   set_depth: struct{
     using _set_depth: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_width: struct{
     using _set_width: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_pixel_size: struct{
     using _set_pixel_size: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_pixel_size: struct{
     using _get_pixel_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_curve_step: struct{
     using _set_curve_step: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_curve_step: struct{
     using _get_curve_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_text_direction: struct{
     using _set_text_direction: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^TextServer_Direction)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^TextServer_Direction)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_structured_text_bidi_override: struct{
     using _set_structured_text_bidi_override: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override: struct{
     using _get_structured_text_bidi_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^TextServer_StructuredTextParser)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^TextServer_StructuredTextParser)
   },
   set_structured_text_bidi_override_options: struct{
     using _set_structured_text_bidi_override_options: ^GDW.MethodBind,
@@ -142,7 +142,7 @@ TextMesh_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override_options: struct{
     using _get_structured_text_bidi_override_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_uppercase: struct{
     using _set_uppercase: ^GDW.MethodBind,
@@ -150,7 +150,7 @@ TextMesh_MethodBind_List :: struct {
   },
     is_uppercase: struct{
     using _is_uppercase: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 TextMesh_Init_ :: proc (TextMesh_methods: ^TextMesh_MethodBind_List, loc := #caller_location) {

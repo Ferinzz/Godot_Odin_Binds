@@ -14,7 +14,7 @@ MissingResource_MethodBind_List :: struct {
   },
     get_original_class: struct{
     using _get_original_class: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MissingResource, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: MissingResource, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_recording_properties: struct{
     using _set_recording_properties: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MissingResource_MethodBind_List :: struct {
   },
     is_recording_properties: struct{
     using _is_recording_properties: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MissingResource, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MissingResource, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 MissingResource_Init_ :: proc (MissingResource_methods: ^MissingResource_MethodBind_List, loc := #caller_location) {

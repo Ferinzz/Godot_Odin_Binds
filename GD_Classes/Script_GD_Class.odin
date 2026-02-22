@@ -10,7 +10,7 @@ Script :: ^GDW.Object
 Script_MethodBind_List :: struct {
   can_instantiate: struct{
     using _can_instantiate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   instance_has: struct{
     using _instance_has: ^GDW.MethodBind,
@@ -18,11 +18,11 @@ Script_MethodBind_List :: struct {
   },
   has_source_code: struct{
     using _has_source_code: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_source_code: struct{
     using _get_source_code: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_source_code: struct{
     using _set_source_code: ^GDW.MethodBind,
@@ -34,15 +34,15 @@ Script_MethodBind_List :: struct {
   },
   get_base_script: struct{
     using _get_base_script: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^Script)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^Script)
   },
   get_instance_base_type: struct{
     using _get_instance_base_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   get_global_name: struct{
     using _get_global_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   has_script_signal: struct{
     using _has_script_signal: ^GDW.MethodBind,
@@ -50,19 +50,19 @@ Script_MethodBind_List :: struct {
   },
   get_script_property_list: struct{
     using _get_script_property_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_script_method_list: struct{
     using _get_script_method_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_script_signal_list: struct{
     using _get_script_signal_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_script_constant_map: struct{
     using _get_script_constant_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_property_default_value: struct{
     using _get_property_default_value: ^GDW.MethodBind,
@@ -70,15 +70,15 @@ Script_MethodBind_List :: struct {
   },
   is_tool: struct{
     using _is_tool: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_abstract: struct{
     using _is_abstract: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_rpc_config: struct{
     using _get_rpc_config: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
 };
 Script_Init_ :: proc (Script_methods: ^Script_MethodBind_List, loc := #caller_location) {

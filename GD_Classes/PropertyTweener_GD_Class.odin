@@ -14,11 +14,11 @@ PropertyTweener_MethodBind_List :: struct {
   },
   from_current: struct{
     using _from_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PropertyTweener, #by_ptr args: i64 = 0, r_ret: ^PropertyTweener)
+    m_call: proc(_:^GDW.MethodBind, obj: PropertyTweener, args: rawptr = nil, r_ret: ^PropertyTweener)
   },
   as_relative: struct{
     using _as_relative: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PropertyTweener, #by_ptr args: i64 = 0, r_ret: ^PropertyTweener)
+    m_call: proc(_:^GDW.MethodBind, obj: PropertyTweener, args: rawptr = nil, r_ret: ^PropertyTweener)
   },
   set_trans: struct{
     using _set_trans: ^GDW.MethodBind,

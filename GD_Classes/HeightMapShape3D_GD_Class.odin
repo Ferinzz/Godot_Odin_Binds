@@ -14,7 +14,7 @@ HeightMapShape3D_MethodBind_List :: struct {
   },
     get_map_width: struct{
     using _get_map_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_map_depth: struct{
     using _set_map_depth: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ HeightMapShape3D_MethodBind_List :: struct {
   },
     get_map_depth: struct{
     using _get_map_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_map_data: struct{
     using _set_map_data: ^GDW.MethodBind,
@@ -30,15 +30,15 @@ HeightMapShape3D_MethodBind_List :: struct {
   },
     get_map_data: struct{
     using _get_map_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   get_min_height: struct{
     using _get_min_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_max_height: struct{
     using _get_max_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: HeightMapShape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   update_map_data_from_image: struct{
     using _update_map_data_from_image: ^GDW.MethodBind,

@@ -10,7 +10,7 @@ GridMapEditorPlugin :: ^GDW.Object
 GridMapEditorPlugin_MethodBind_List :: struct {
   get_current_grid_map: struct{
     using _get_current_grid_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, #by_ptr args: i64 = 0, r_ret: ^GridMap)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, args: rawptr = nil, r_ret: ^GridMap)
   },
   set_selection: struct{
     using _set_selection: ^GDW.MethodBind,
@@ -18,19 +18,19 @@ GridMapEditorPlugin_MethodBind_List :: struct {
   },
     clear_selection: struct{
     using _clear_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_selection: struct{
     using _get_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   has_selection: struct{
     using _has_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_selected_cells: struct{
     using _get_selected_cells: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_selected_palette_item: struct{
     using _set_selected_palette_item: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ GridMapEditorPlugin_MethodBind_List :: struct {
   },
     get_selected_palette_item: struct{
     using _get_selected_palette_item: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMapEditorPlugin, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 GridMapEditorPlugin_Init_ :: proc (GridMapEditorPlugin_methods: ^GridMapEditorPlugin_MethodBind_List, loc := #caller_location) {

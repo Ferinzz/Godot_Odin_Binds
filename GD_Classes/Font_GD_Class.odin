@@ -14,7 +14,7 @@ Font_MethodBind_List :: struct {
   },
     get_fallbacks: struct{
     using _get_fallbacks: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   find_variation: struct{
     using _find_variation: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Font_MethodBind_List :: struct {
   },
   get_rids: struct{
     using _get_rids: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_height: struct{
     using _get_height: ^GDW.MethodBind,
@@ -46,27 +46,27 @@ Font_MethodBind_List :: struct {
   },
   get_font_name: struct{
     using _get_font_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_font_style_name: struct{
     using _get_font_style_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_ot_name_strings: struct{
     using _get_ot_name_strings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_font_style: struct{
     using _get_font_style: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^TextServer_FontStyle)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^TextServer_FontStyle)
   },
   get_font_weight: struct{
     using _get_font_weight: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_font_stretch: struct{
     using _get_font_stretch: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_spacing: struct{
     using _get_spacing: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ Font_MethodBind_List :: struct {
   },
   get_opentype_features: struct{
     using _get_opentype_features: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_cache_capacity: struct{
     using _set_cache_capacity: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ Font_MethodBind_List :: struct {
   },
   get_supported_chars: struct{
     using _get_supported_chars: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_language_supported: struct{
     using _is_language_supported: ^GDW.MethodBind,
@@ -134,15 +134,15 @@ Font_MethodBind_List :: struct {
   },
   get_supported_feature_list: struct{
     using _get_supported_feature_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_supported_variation_list: struct{
     using _get_supported_variation_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_face_count: struct{
     using _get_face_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Font, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Font, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 Font_Init_ :: proc (Font_methods: ^Font_MethodBind_List, loc := #caller_location) {

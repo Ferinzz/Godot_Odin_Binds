@@ -14,7 +14,7 @@ MenuBar_MethodBind_List :: struct {
   },
     is_switch_on_hover: struct{
     using _is_switch_on_hover: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_disable_shortcuts: struct{
     using _set_disable_shortcuts: ^GDW.MethodBind,
@@ -26,15 +26,15 @@ MenuBar_MethodBind_List :: struct {
   },
     is_prefer_global_menu: struct{
     using _is_prefer_global_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_native_menu: struct{
     using _is_native_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_menu_count: struct{
     using _get_menu_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_text_direction: struct{
     using _set_text_direction: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ MenuBar_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, #by_ptr args: i64 = 0, r_ret: ^Control_TextDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, args: rawptr = nil, r_ret: ^Control_TextDirection)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ MenuBar_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_flat: struct{
     using _set_flat: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ MenuBar_MethodBind_List :: struct {
   },
     is_flat: struct{
     using _is_flat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_start_index: struct{
     using _set_start_index: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ MenuBar_MethodBind_List :: struct {
   },
     get_start_index: struct{
     using _get_start_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_menu_title: struct{
     using _set_menu_title: ^GDW.MethodBind,

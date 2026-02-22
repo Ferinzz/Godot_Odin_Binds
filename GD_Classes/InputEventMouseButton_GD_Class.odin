@@ -14,7 +14,7 @@ InputEventMouseButton_MethodBind_List :: struct {
   },
     get_factor: struct{
     using _get_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseButton, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_button_index: struct{
     using _set_button_index: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ InputEventMouseButton_MethodBind_List :: struct {
   },
     get_button_index: struct{
     using _get_button_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.MouseButton)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseButton, args: rawptr = nil, r_ret: ^GDW.MouseButton)
   },
   set_pressed: struct{
     using _set_pressed: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ InputEventMouseButton_MethodBind_List :: struct {
   },
     is_double_click: struct{
     using _is_double_click: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 InputEventMouseButton_Init_ :: proc (InputEventMouseButton_methods: ^InputEventMouseButton_MethodBind_List, loc := #caller_location) {

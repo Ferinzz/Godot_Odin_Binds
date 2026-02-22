@@ -10,11 +10,11 @@ ThemeDB :: ^GDW.Object
 ThemeDB_MethodBind_List :: struct {
   get_default_theme: struct{
     using _get_default_theme: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, #by_ptr args: i64 = 0, r_ret: ^Theme)
+    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, args: rawptr = nil, r_ret: ^Theme)
   },
   get_project_theme: struct{
     using _get_project_theme: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, #by_ptr args: i64 = 0, r_ret: ^Theme)
+    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, args: rawptr = nil, r_ret: ^Theme)
   },
   set_fallback_base_scale: struct{
     using _set_fallback_base_scale: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ThemeDB_MethodBind_List :: struct {
   },
     get_fallback_base_scale: struct{
     using _get_fallback_base_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fallback_font: struct{
     using _set_fallback_font: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ ThemeDB_MethodBind_List :: struct {
   },
     get_fallback_font: struct{
     using _get_fallback_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, #by_ptr args: i64 = 0, r_ret: ^Font)
+    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, args: rawptr = nil, r_ret: ^Font)
   },
   set_fallback_font_size: struct{
     using _set_fallback_font_size: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ ThemeDB_MethodBind_List :: struct {
   },
     get_fallback_font_size: struct{
     using _get_fallback_font_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_fallback_icon: struct{
     using _set_fallback_icon: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ ThemeDB_MethodBind_List :: struct {
   },
     get_fallback_icon: struct{
     using _get_fallback_icon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_fallback_stylebox: struct{
     using _set_fallback_stylebox: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ ThemeDB_MethodBind_List :: struct {
   },
     get_fallback_stylebox: struct{
     using _get_fallback_stylebox: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, #by_ptr args: i64 = 0, r_ret: ^StyleBox)
+    m_call: proc(_:^GDW.MethodBind, obj: ThemeDB, args: rawptr = nil, r_ret: ^StyleBox)
   },
 };
 ThemeDB_Init_ :: proc (ThemeDB_methods: ^ThemeDB_MethodBind_List, loc := #caller_location) {

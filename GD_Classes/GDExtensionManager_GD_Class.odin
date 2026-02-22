@@ -38,7 +38,7 @@ GDExtensionManager_MethodBind_List :: struct {
   },
   get_loaded_extensions: struct{
     using _get_loaded_extensions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GDExtensionManager, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: GDExtensionManager, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_extension: struct{
     using _get_extension: ^GDW.MethodBind,

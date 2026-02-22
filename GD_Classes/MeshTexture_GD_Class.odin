@@ -14,7 +14,7 @@ MeshTexture_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshTexture, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshTexture, args: rawptr = nil, r_ret: ^Mesh)
   },
   set_image_size: struct{
     using _set_image_size: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MeshTexture_MethodBind_List :: struct {
   },
     get_image_size: struct{
     using _get_image_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshTexture, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_base_texture: struct{
     using _set_base_texture: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ MeshTexture_MethodBind_List :: struct {
   },
     get_base_texture: struct{
     using _get_base_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshTexture, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshTexture, args: rawptr = nil, r_ret: ^Texture2D)
   },
 };
 MeshTexture_Init_ :: proc (MeshTexture_methods: ^MeshTexture_MethodBind_List, loc := #caller_location) {

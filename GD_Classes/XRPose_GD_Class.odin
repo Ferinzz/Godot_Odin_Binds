@@ -20,7 +20,7 @@ XRPose_MethodBind_List :: struct {
   },
     get_has_tracking_data: struct{
     using _get_has_tracking_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPose, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPose, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_name: struct{
     using _set_name: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ XRPose_MethodBind_List :: struct {
   },
     get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPose, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPose, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_transform: struct{
     using _set_transform: ^GDW.MethodBind,
@@ -36,11 +36,11 @@ XRPose_MethodBind_List :: struct {
   },
     get_transform: struct{
     using _get_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPose, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPose, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   get_adjusted_transform: struct{
     using _get_adjusted_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPose, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPose, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_linear_velocity: struct{
     using _set_linear_velocity: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ XRPose_MethodBind_List :: struct {
   },
     get_linear_velocity: struct{
     using _get_linear_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPose, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPose, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_angular_velocity: struct{
     using _set_angular_velocity: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ XRPose_MethodBind_List :: struct {
   },
     get_angular_velocity: struct{
     using _get_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPose, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPose, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_tracking_confidence: struct{
     using _set_tracking_confidence: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ XRPose_MethodBind_List :: struct {
   },
     get_tracking_confidence: struct{
     using _get_tracking_confidence: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPose, #by_ptr args: i64 = 0, r_ret: ^XRPose_TrackingConfidence)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPose, args: rawptr = nil, r_ret: ^XRPose_TrackingConfidence)
   },
 };
 XRPose_Init_ :: proc (XRPose_methods: ^XRPose_MethodBind_List, loc := #caller_location) {

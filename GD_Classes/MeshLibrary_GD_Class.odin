@@ -94,15 +94,15 @@ MeshLibrary_MethodBind_List :: struct {
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshLibrary, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshLibrary, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_item_list: struct{
     using _get_item_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshLibrary, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshLibrary, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   get_last_unused_item_id: struct{
     using _get_last_unused_item_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshLibrary, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshLibrary, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 MeshLibrary_Init_ :: proc (MeshLibrary_methods: ^MeshLibrary_MethodBind_List, loc := #caller_location) {

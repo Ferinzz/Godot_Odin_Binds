@@ -51,7 +51,7 @@ VisualShaderNodeVectorFunc_MethodBind_List :: struct {
   },
     get_function: struct{
     using _get_function: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVectorFunc, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeVectorFunc_Function)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVectorFunc, args: rawptr = nil, r_ret: ^VisualShaderNodeVectorFunc_Function)
   },
 };
 VisualShaderNodeVectorFunc_Init_ :: proc (VisualShaderNodeVectorFunc_methods: ^VisualShaderNodeVectorFunc_MethodBind_List, loc := #caller_location) {

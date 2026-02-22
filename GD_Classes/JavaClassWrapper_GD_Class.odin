@@ -14,7 +14,7 @@ JavaClassWrapper_MethodBind_List :: struct {
   },
   get_exception: struct{
     using _get_exception: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaClassWrapper, #by_ptr args: i64 = 0, r_ret: ^JavaObject)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaClassWrapper, args: rawptr = nil, r_ret: ^JavaObject)
   },
 };
 JavaClassWrapper_Init_ :: proc (JavaClassWrapper_methods: ^JavaClassWrapper_MethodBind_List, loc := #caller_location) {

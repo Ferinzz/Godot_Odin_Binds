@@ -16,7 +16,7 @@ CSGShape3D_Operation :: enum i64 {
 CSGShape3D_MethodBind_List :: struct {
   is_root_shape: struct{
     using _is_root_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_operation: struct{
     using _set_operation: ^GDW.MethodBind,
@@ -24,7 +24,7 @@ CSGShape3D_MethodBind_List :: struct {
   },
     get_operation: struct{
     using _get_operation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^CSGShape3D_Operation)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^CSGShape3D_Operation)
   },
   set_snap: struct{
     using _set_snap: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ CSGShape3D_MethodBind_List :: struct {
   },
     get_snap: struct{
     using _get_snap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_collision: struct{
     using _set_use_collision: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ CSGShape3D_MethodBind_List :: struct {
   },
     is_using_collision: struct{
     using _is_using_collision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collision_layer: struct{
     using _set_collision_layer: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ CSGShape3D_MethodBind_List :: struct {
   },
     get_collision_layer: struct{
     using _get_collision_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ CSGShape3D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask_value: struct{
     using _set_collision_mask_value: ^GDW.MethodBind,
@@ -80,11 +80,11 @@ CSGShape3D_MethodBind_List :: struct {
   },
     get_collision_priority: struct{
     using _get_collision_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   bake_collision_shape: struct{
     using _bake_collision_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^ConcavePolygonShape3D)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^ConcavePolygonShape3D)
   },
   set_calculate_tangents: struct{
     using _set_calculate_tangents: ^GDW.MethodBind,
@@ -92,15 +92,15 @@ CSGShape3D_MethodBind_List :: struct {
   },
     is_calculating_tangents: struct{
     using _is_calculating_tangents: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_meshes: struct{
     using _get_meshes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   bake_static_mesh: struct{
     using _bake_static_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, #by_ptr args: i64 = 0, r_ret: ^ArrayMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGShape3D, args: rawptr = nil, r_ret: ^ArrayMesh)
   },
 };
 CSGShape3D_Init_ :: proc (CSGShape3D_methods: ^CSGShape3D_MethodBind_List, loc := #caller_location) {

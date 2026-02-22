@@ -16,11 +16,11 @@ MultiplayerAPI_RPCMode :: enum i64 {
 MultiplayerAPI_MethodBind_List :: struct {
   has_multiplayer_peer: struct{
     using _has_multiplayer_peer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_multiplayer_peer: struct{
     using _get_multiplayer_peer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^MultiplayerPeer)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^MultiplayerPeer)
   },
   set_multiplayer_peer: struct{
     using _set_multiplayer_peer: ^GDW.MethodBind,
@@ -28,19 +28,19 @@ MultiplayerAPI_MethodBind_List :: struct {
   },
     get_unique_id: struct{
     using _get_unique_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_server: struct{
     using _is_server: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_remote_sender_id: struct{
     using _get_remote_sender_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   rpc: struct{
     using _rpc: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ MultiplayerAPI_MethodBind_List :: struct {
   },
   get_peers: struct{
     using _get_peers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_default_interface: struct{
     using _set_default_interface: ^GDW.MethodBind,
@@ -64,11 +64,11 @@ MultiplayerAPI_MethodBind_List :: struct {
   },
     get_default_interface: struct{
     using _get_default_interface: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   create_default_interface: struct{
     using _create_default_interface: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: i64 = 0, r_ret: ^MultiplayerAPI)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, args: rawptr = nil, r_ret: ^MultiplayerAPI)
   },
 };
 MultiplayerAPI_Init_ :: proc (MultiplayerAPI_methods: ^MultiplayerAPI_MethodBind_List, loc := #caller_location) {

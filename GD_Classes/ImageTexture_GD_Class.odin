@@ -14,7 +14,7 @@ ImageTexture_MethodBind_List :: struct {
   },
   get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImageTexture, #by_ptr args: i64 = 0, r_ret: ^Image_Format)
+    m_call: proc(_:^GDW.MethodBind, obj: ImageTexture, args: rawptr = nil, r_ret: ^Image_Format)
   },
   set_image: struct{
     using _set_image: ^GDW.MethodBind,

@@ -22,7 +22,7 @@ VisualShaderNodeMultiplyAdd_MethodBind_List :: struct {
   },
     get_op_type: struct{
     using _get_op_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeMultiplyAdd, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeMultiplyAdd_OpType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeMultiplyAdd, args: rawptr = nil, r_ret: ^VisualShaderNodeMultiplyAdd_OpType)
   },
 };
 VisualShaderNodeMultiplyAdd_Init_ :: proc (VisualShaderNodeMultiplyAdd_methods: ^VisualShaderNodeMultiplyAdd_MethodBind_List, loc := #caller_location) {

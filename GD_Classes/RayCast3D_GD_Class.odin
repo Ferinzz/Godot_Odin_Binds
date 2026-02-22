@@ -14,7 +14,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_target_position: struct{
     using _set_target_position: ^GDW.MethodBind,
@@ -22,39 +22,39 @@ RayCast3D_MethodBind_List :: struct {
   },
     get_target_position: struct{
     using _get_target_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   is_colliding: struct{
     using _is_colliding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   force_raycast_update: struct{
     using _force_raycast_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_collider: struct{
     using _get_collider: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Object)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Object)
   },
   get_collider_rid: struct{
     using _get_collider_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_collider_shape: struct{
     using _get_collider_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_collision_point: struct{
     using _get_collision_point: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_collision_normal: struct{
     using _get_collision_normal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_collision_face_index: struct{
     using _get_collision_face_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_exception_rid: struct{
     using _add_exception_rid: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     clear_exceptions: struct{
     using _clear_exceptions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask_value: struct{
     using _set_collision_mask_value: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     get_exclude_parent_body: struct{
     using _get_exclude_parent_body: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_areas: struct{
     using _set_collide_with_areas: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     is_collide_with_areas_enabled: struct{
     using _is_collide_with_areas_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_bodies: struct{
     using _set_collide_with_bodies: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     is_collide_with_bodies_enabled: struct{
     using _is_collide_with_bodies_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hit_from_inside: struct{
     using _set_hit_from_inside: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     is_hit_from_inside_enabled: struct{
     using _is_hit_from_inside_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hit_back_faces: struct{
     using _set_hit_back_faces: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     is_hit_back_faces_enabled: struct{
     using _is_hit_back_faces_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_debug_shape_custom_color: struct{
     using _set_debug_shape_custom_color: ^GDW.MethodBind,
@@ -138,7 +138,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     get_debug_shape_custom_color: struct{
     using _get_debug_shape_custom_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_debug_shape_thickness: struct{
     using _set_debug_shape_thickness: ^GDW.MethodBind,
@@ -146,7 +146,7 @@ RayCast3D_MethodBind_List :: struct {
   },
     get_debug_shape_thickness: struct{
     using _get_debug_shape_thickness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 RayCast3D_Init_ :: proc (RayCast3D_methods: ^RayCast3D_MethodBind_List, loc := #caller_location) {

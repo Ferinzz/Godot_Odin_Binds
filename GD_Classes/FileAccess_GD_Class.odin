@@ -57,7 +57,7 @@ FileAccess_MethodBind_List :: struct {
   },
   get_open_error: struct{
     using _get_open_error: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   create_temp: struct{
     using _create_temp: ^GDW.MethodBind,
@@ -77,19 +77,19 @@ FileAccess_MethodBind_List :: struct {
   },
   flush: struct{
     using _flush: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_path: struct{
     using _get_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_path_absolute: struct{
     using _get_path_absolute: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_open: struct{
     using _is_open: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   seek: struct{
     using _seek: ^GDW.MethodBind,
@@ -101,47 +101,47 @@ FileAccess_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_length: struct{
     using _get_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   eof_reached: struct{
     using _eof_reached: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_8: struct{
     using _get_8: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_16: struct{
     using _get_16: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_32: struct{
     using _get_32: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_64: struct{
     using _get_64: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_half: struct{
     using _get_half: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_float: struct{
     using _get_float: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_double: struct{
     using _get_double: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_real: struct{
     using _get_real: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_buffer: struct{
     using _get_buffer: ^GDW.MethodBind,
@@ -149,7 +149,7 @@ FileAccess_MethodBind_List :: struct {
   },
   get_line: struct{
     using _get_line: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_csv_line: struct{
     using _get_csv_line: ^GDW.MethodBind,
@@ -157,7 +157,7 @@ FileAccess_MethodBind_List :: struct {
   },
   get_as_text: struct{
     using _get_as_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_md5: struct{
     using _get_md5: ^GDW.MethodBind,
@@ -169,7 +169,7 @@ FileAccess_MethodBind_List :: struct {
   },
   is_big_endian: struct{
     using _is_big_endian: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_big_endian: struct{
     using _set_big_endian: ^GDW.MethodBind,
@@ -177,7 +177,7 @@ FileAccess_MethodBind_List :: struct {
   },
     get_error: struct{
     using _get_error: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   get_var: struct{
     using _get_var: ^GDW.MethodBind,
@@ -241,11 +241,11 @@ FileAccess_MethodBind_List :: struct {
   },
   get_pascal_string: struct{
     using _get_pascal_string: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FileAccess, args: rawptr = nil, r_ret: rawptr = nil)
   },
     file_exists: struct{
     using _file_exists: ^GDW.MethodBind,

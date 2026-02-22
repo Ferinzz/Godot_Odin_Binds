@@ -16,7 +16,7 @@ TabContainer_TabPosition :: enum i64 {
 TabContainer_MethodBind_List :: struct {
   get_tab_count: struct{
     using _get_tab_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_current_tab: struct{
     using _set_current_tab: ^GDW.MethodBind,
@@ -24,27 +24,27 @@ TabContainer_MethodBind_List :: struct {
   },
     get_current_tab: struct{
     using _get_current_tab: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_previous_tab: struct{
     using _get_previous_tab: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   select_previous_available: struct{
     using _select_previous_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   select_next_available: struct{
     using _select_next_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_current_tab_control: struct{
     using _get_current_tab_control: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^Control)
   },
   get_tab_bar: struct{
     using _get_tab_bar: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^TabBar)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^TabBar)
   },
   get_tab_control: struct{
     using _get_tab_control: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_tab_alignment: struct{
     using _get_tab_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^TabBar_AlignmentMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^TabBar_AlignmentMode)
   },
   set_tabs_position: struct{
     using _set_tabs_position: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_tabs_position: struct{
     using _get_tabs_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^TabContainer_TabPosition)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^TabContainer_TabPosition)
   },
   set_clip_tabs: struct{
     using _set_clip_tabs: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_clip_tabs: struct{
     using _get_clip_tabs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tabs_visible: struct{
     using _set_tabs_visible: ^GDW.MethodBind,
@@ -80,7 +80,7 @@ TabContainer_MethodBind_List :: struct {
   },
     are_tabs_visible: struct{
     using _are_tabs_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_all_tabs_in_front: struct{
     using _set_all_tabs_in_front: ^GDW.MethodBind,
@@ -88,7 +88,7 @@ TabContainer_MethodBind_List :: struct {
   },
     is_all_tabs_in_front: struct{
     using _is_all_tabs_in_front: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tab_title: struct{
     using _set_tab_title: ^GDW.MethodBind,
@@ -168,7 +168,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_popup: struct{
     using _get_popup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^Popup)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^Popup)
   },
   set_switch_on_drag_hover: struct{
     using _set_switch_on_drag_hover: ^GDW.MethodBind,
@@ -176,7 +176,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_switch_on_drag_hover: struct{
     using _get_switch_on_drag_hover: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_to_rearrange_enabled: struct{
     using _set_drag_to_rearrange_enabled: ^GDW.MethodBind,
@@ -184,7 +184,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_drag_to_rearrange_enabled: struct{
     using _get_drag_to_rearrange_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tabs_rearrange_group: struct{
     using _set_tabs_rearrange_group: ^GDW.MethodBind,
@@ -192,7 +192,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_tabs_rearrange_group: struct{
     using _get_tabs_rearrange_group: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_use_hidden_tabs_for_min_size: struct{
     using _set_use_hidden_tabs_for_min_size: ^GDW.MethodBind,
@@ -200,7 +200,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_use_hidden_tabs_for_min_size: struct{
     using _get_use_hidden_tabs_for_min_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tab_focus_mode: struct{
     using _set_tab_focus_mode: ^GDW.MethodBind,
@@ -208,7 +208,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_tab_focus_mode: struct{
     using _get_tab_focus_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^Control_FocusMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^Control_FocusMode)
   },
   set_deselect_enabled: struct{
     using _set_deselect_enabled: ^GDW.MethodBind,
@@ -216,7 +216,7 @@ TabContainer_MethodBind_List :: struct {
   },
     get_deselect_enabled: struct{
     using _get_deselect_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 TabContainer_Init_ :: proc (TabContainer_methods: ^TabContainer_MethodBind_List, loc := #caller_location) {

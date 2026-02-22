@@ -18,11 +18,11 @@ PrimitiveMesh_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, args: rawptr = nil, r_ret: ^Material)
   },
   get_mesh_arrays: struct{
     using _get_mesh_arrays: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_custom_aabb: struct{
     using _set_custom_aabb: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PrimitiveMesh_MethodBind_List :: struct {
   },
     get_custom_aabb: struct{
     using _get_custom_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   set_flip_faces: struct{
     using _set_flip_faces: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ PrimitiveMesh_MethodBind_List :: struct {
   },
     get_flip_faces: struct{
     using _get_flip_faces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_add_uv2: struct{
     using _set_add_uv2: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ PrimitiveMesh_MethodBind_List :: struct {
   },
     get_add_uv2: struct{
     using _get_add_uv2: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_uv2_padding: struct{
     using _set_uv2_padding: ^GDW.MethodBind,
@@ -54,11 +54,11 @@ PrimitiveMesh_MethodBind_List :: struct {
   },
     get_uv2_padding: struct{
     using _get_uv2_padding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   request_update: struct{
     using _request_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: PrimitiveMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 PrimitiveMesh_Init_ :: proc (PrimitiveMesh_methods: ^PrimitiveMesh_MethodBind_List, loc := #caller_location) {

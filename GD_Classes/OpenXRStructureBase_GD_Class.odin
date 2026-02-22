@@ -14,7 +14,7 @@ OpenXRStructureBase_Virtual_Info :: struct {
 OpenXRStructureBase_MethodBind_List :: struct {
   get_structure_type: struct{
     using _get_structure_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRStructureBase, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRStructureBase, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_next: struct{
     using _set_next: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRStructureBase_MethodBind_List :: struct {
   },
     get_next: struct{
     using _get_next: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRStructureBase, #by_ptr args: i64 = 0, r_ret: ^OpenXRStructureBase)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRStructureBase, args: rawptr = nil, r_ret: ^OpenXRStructureBase)
   },
 };
 OpenXRStructureBase_Init_ :: proc (OpenXRStructureBase_methods: ^OpenXRStructureBase_MethodBind_List, loc := #caller_location) {

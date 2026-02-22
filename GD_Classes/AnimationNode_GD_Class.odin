@@ -44,7 +44,7 @@ AnimationNode_MethodBind_List :: struct {
   },
   get_input_count: struct{
     using _get_input_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   find_input: struct{
     using _find_input: ^GDW.MethodBind,
@@ -64,15 +64,15 @@ AnimationNode_MethodBind_List :: struct {
   },
     is_filter_enabled: struct{
     using _is_filter_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNode, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_processing_animation_tree_instance_id: struct{
     using _get_processing_animation_tree_instance_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_process_testing: struct{
     using _is_process_testing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNode, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   blend_animation: struct{
     using _blend_animation: ^GDW.MethodBind,

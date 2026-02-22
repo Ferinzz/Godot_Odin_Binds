@@ -25,7 +25,7 @@ VisualShaderNodeStep_MethodBind_List :: struct {
   },
     get_op_type: struct{
     using _get_op_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeStep, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeStep_OpType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeStep, args: rawptr = nil, r_ret: ^VisualShaderNodeStep_OpType)
   },
 };
 VisualShaderNodeStep_Init_ :: proc (VisualShaderNodeStep_methods: ^VisualShaderNodeStep_MethodBind_List, loc := #caller_location) {

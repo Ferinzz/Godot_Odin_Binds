@@ -42,7 +42,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     get_region: struct{
     using _get_region: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2i)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^GDW.Rect2i)
   },
   set_size: struct{
     using _set_size: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_cell_size: struct{
     using _set_cell_size: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     get_cell_size: struct{
     using _get_cell_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_cell_shape: struct{
     using _set_cell_shape: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     get_cell_shape: struct{
     using _get_cell_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^AStarGrid2D_CellShape)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^AStarGrid2D_CellShape)
   },
   is_in_bounds: struct{
     using _is_in_bounds: ^GDW.MethodBind,
@@ -86,11 +86,11 @@ AStarGrid2D_MethodBind_List :: struct {
   },
   is_dirty: struct{
     using _is_dirty: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   update: struct{
     using _update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_jumping_enabled: struct{
     using _set_jumping_enabled: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     is_jumping_enabled: struct{
     using _is_jumping_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_diagonal_mode: struct{
     using _set_diagonal_mode: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     get_diagonal_mode: struct{
     using _get_diagonal_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^AStarGrid2D_DiagonalMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^AStarGrid2D_DiagonalMode)
   },
   set_default_compute_heuristic: struct{
     using _set_default_compute_heuristic: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     get_default_compute_heuristic: struct{
     using _get_default_compute_heuristic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^AStarGrid2D_Heuristic)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^AStarGrid2D_Heuristic)
   },
   set_default_estimate_heuristic: struct{
     using _set_default_estimate_heuristic: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     get_default_estimate_heuristic: struct{
     using _get_default_estimate_heuristic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: ^AStarGrid2D_Heuristic)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: ^AStarGrid2D_Heuristic)
   },
   set_point_solid: struct{
     using _set_point_solid: ^GDW.MethodBind,
@@ -150,7 +150,7 @@ AStarGrid2D_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AStarGrid2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_point_position: struct{
     using _get_point_position: ^GDW.MethodBind,

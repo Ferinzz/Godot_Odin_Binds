@@ -14,27 +14,27 @@ Range_Virtual_Info :: struct {
 Range_MethodBind_List :: struct {
   get_value: struct{
     using _get_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_min: struct{
     using _get_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_max: struct{
     using _get_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_step: struct{
     using _get_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_page: struct{
     using _get_page: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_as_ratio: struct{
     using _get_as_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_value: struct{
     using _set_value: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ Range_MethodBind_List :: struct {
   },
     is_using_rounded_values: struct{
     using _is_using_rounded_values: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_exp_ratio: struct{
     using _set_exp_ratio: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Range_MethodBind_List :: struct {
   },
     is_ratio_exp: struct{
     using _is_ratio_exp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_greater: struct{
     using _set_allow_greater: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ Range_MethodBind_List :: struct {
   },
     is_greater_allowed: struct{
     using _is_greater_allowed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_lesser: struct{
     using _set_allow_lesser: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ Range_MethodBind_List :: struct {
   },
     is_lesser_allowed: struct{
     using _is_lesser_allowed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   share: struct{
     using _share: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ Range_MethodBind_List :: struct {
   },
     unshare: struct{
     using _unshare: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Range, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Range, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 Range_Init_ :: proc (Range_methods: ^Range_MethodBind_List, loc := #caller_location) {

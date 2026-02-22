@@ -18,11 +18,11 @@ EditorScript_MethodBind_List :: struct {
   },
     get_scene: struct{
     using _get_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorScript, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorScript, args: rawptr = nil, r_ret: ^Node)
   },
   get_editor_interface: struct{
     using _get_editor_interface: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorScript, #by_ptr args: i64 = 0, r_ret: ^EditorInterface)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorScript, args: rawptr = nil, r_ret: ^EditorInterface)
   },
 };
 EditorScript_Init_ :: proc (EditorScript_methods: ^EditorScript_MethodBind_List, loc := #caller_location) {

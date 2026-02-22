@@ -20,7 +20,7 @@ XRHandModifier3D_MethodBind_List :: struct {
   },
     get_hand_tracker: struct{
     using _get_hand_tracker: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: XRHandModifier3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_bone_update: struct{
     using _set_bone_update: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ XRHandModifier3D_MethodBind_List :: struct {
   },
     get_bone_update: struct{
     using _get_bone_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandModifier3D, #by_ptr args: i64 = 0, r_ret: ^XRHandModifier3D_BoneUpdate)
+    m_call: proc(_:^GDW.MethodBind, obj: XRHandModifier3D, args: rawptr = nil, r_ret: ^XRHandModifier3D_BoneUpdate)
   },
 };
 XRHandModifier3D_Init_ :: proc (XRHandModifier3D_methods: ^XRHandModifier3D_MethodBind_List, loc := #caller_location) {

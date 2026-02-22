@@ -18,11 +18,11 @@ PhysicsBody2D_MethodBind_List :: struct {
   },
   get_gravity: struct{
     using _get_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsBody2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_collision_exceptions: struct{
     using _get_collision_exceptions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsBody2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_collision_exception_with: struct{
     using _add_collision_exception_with: ^GDW.MethodBind,

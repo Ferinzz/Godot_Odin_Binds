@@ -17,7 +17,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_collision_layer: struct{
     using _get_collision_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -25,7 +25,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask_value: struct{
     using _set_collision_mask_value: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_collision_priority: struct{
     using _get_collision_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_physics_material: struct{
     using _set_physics_material: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_physics_material: struct{
     using _get_physics_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^PhysicsMaterial)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^PhysicsMaterial)
   },
   set_bake_navigation: struct{
     using _set_bake_navigation: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ GridMap_MethodBind_List :: struct {
   },
     is_baking_navigation: struct{
     using _is_baking_navigation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_navigation_map: struct{
     using _set_navigation_map: ^GDW.MethodBind,
@@ -73,7 +73,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_navigation_map: struct{
     using _get_navigation_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_mesh_library: struct{
     using _set_mesh_library: ^GDW.MethodBind,
@@ -81,7 +81,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_mesh_library: struct{
     using _get_mesh_library: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^MeshLibrary)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^MeshLibrary)
   },
   set_cell_size: struct{
     using _set_cell_size: ^GDW.MethodBind,
@@ -89,7 +89,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_cell_size: struct{
     using _get_cell_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_cell_scale: struct{
     using _set_cell_scale: ^GDW.MethodBind,
@@ -97,7 +97,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_cell_scale: struct{
     using _get_cell_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_octant_size: struct{
     using _set_octant_size: ^GDW.MethodBind,
@@ -105,7 +105,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_octant_size: struct{
     using _get_octant_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_cell_item: struct{
     using _set_cell_item: ^GDW.MethodBind,
@@ -149,7 +149,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_center_x: struct{
     using _get_center_x: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_center_y: struct{
     using _set_center_y: ^GDW.MethodBind,
@@ -157,7 +157,7 @@ GridMap_MethodBind_List :: struct {
   },
     get_center_y: struct{
     using _get_center_y: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_center_z: struct{
     using _set_center_z: ^GDW.MethodBind,
@@ -165,15 +165,15 @@ GridMap_MethodBind_List :: struct {
   },
     get_center_z: struct{
     using _get_center_z: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_used_cells: struct{
     using _get_used_cells: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_used_cells_by_item: struct{
     using _get_used_cells_by_item: ^GDW.MethodBind,
@@ -181,11 +181,11 @@ GridMap_MethodBind_List :: struct {
   },
   get_meshes: struct{
     using _get_meshes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_bake_meshes: struct{
     using _get_bake_meshes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_bake_mesh_instance: struct{
     using _get_bake_mesh_instance: ^GDW.MethodBind,
@@ -193,7 +193,7 @@ GridMap_MethodBind_List :: struct {
   },
   clear_baked_meshes: struct{
     using _clear_baked_meshes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridMap, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GridMap, args: rawptr = nil, r_ret: rawptr = nil)
   },
     make_baked_meshes: struct{
     using _make_baked_meshes: ^GDW.MethodBind,

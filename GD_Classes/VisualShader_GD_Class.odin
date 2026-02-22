@@ -130,7 +130,7 @@ VisualShader_MethodBind_List :: struct {
   },
     get_graph_offset: struct{
     using _get_graph_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShader, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShader, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 VisualShader_Init_ :: proc (VisualShader_methods: ^VisualShader_MethodBind_List, loc := #caller_location) {

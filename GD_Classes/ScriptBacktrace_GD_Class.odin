@@ -10,15 +10,15 @@ ScriptBacktrace :: ^GDW.Object
 ScriptBacktrace_MethodBind_List :: struct {
   get_language_name: struct{
     using _get_language_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptBacktrace, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptBacktrace, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_empty: struct{
     using _is_empty: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptBacktrace, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptBacktrace, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_frame_count: struct{
     using _get_frame_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptBacktrace, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptBacktrace, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_frame_function: struct{
     using _get_frame_function: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ ScriptBacktrace_MethodBind_List :: struct {
   },
   get_global_variable_count: struct{
     using _get_global_variable_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptBacktrace, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptBacktrace, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_global_variable_name: struct{
     using _get_global_variable_name: ^GDW.MethodBind,

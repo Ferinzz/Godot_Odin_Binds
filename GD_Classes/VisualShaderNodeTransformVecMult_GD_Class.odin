@@ -22,7 +22,7 @@ VisualShaderNodeTransformVecMult_MethodBind_List :: struct {
   },
     get_operator: struct{
     using _get_operator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTransformVecMult, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeTransformVecMult_Operator)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTransformVecMult, args: rawptr = nil, r_ret: ^VisualShaderNodeTransformVecMult_Operator)
   },
 };
 VisualShaderNodeTransformVecMult_Init_ :: proc (VisualShaderNodeTransformVecMult_methods: ^VisualShaderNodeTransformVecMult_MethodBind_List, loc := #caller_location) {

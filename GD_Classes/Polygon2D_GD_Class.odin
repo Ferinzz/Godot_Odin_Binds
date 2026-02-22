@@ -14,7 +14,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_polygon: struct{
     using _get_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_uv: struct{
     using _set_uv: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_uv: struct{
     using _get_uv: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_color: struct{
     using _set_color: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_polygons: struct{
     using _set_polygons: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_polygons: struct{
     using _get_polygons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_vertex_colors: struct{
     using _set_vertex_colors: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_vertex_colors: struct{
     using _get_vertex_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedColorArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.PackedColorArray)
   },
   set_texture: struct{
     using _set_texture: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_texture_offset: struct{
     using _set_texture_offset: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_texture_offset: struct{
     using _get_texture_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_texture_rotation: struct{
     using _set_texture_rotation: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_texture_rotation: struct{
     using _get_texture_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_texture_scale: struct{
     using _set_texture_scale: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_texture_scale: struct{
     using _get_texture_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_invert_enabled: struct{
     using _set_invert_enabled: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_invert_enabled: struct{
     using _get_invert_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_antialiased: struct{
     using _set_antialiased: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_antialiased: struct{
     using _get_antialiased: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_invert_border: struct{
     using _set_invert_border: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_invert_border: struct{
     using _get_invert_border: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   add_bone: struct{
     using _add_bone: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_bone_count: struct{
     using _get_bone_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_bone_path: struct{
     using _get_bone_path: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     clear_bones: struct{
     using _clear_bones: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_bone_path: struct{
     using _set_bone_path: ^GDW.MethodBind,
@@ -150,7 +150,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_skeleton: struct{
     using _get_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_internal_vertex_count: struct{
     using _set_internal_vertex_count: ^GDW.MethodBind,
@@ -158,7 +158,7 @@ Polygon2D_MethodBind_List :: struct {
   },
     get_internal_vertex_count: struct{
     using _get_internal_vertex_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Polygon2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 Polygon2D_Init_ :: proc (Polygon2D_methods: ^Polygon2D_MethodBind_List, loc := #caller_location) {

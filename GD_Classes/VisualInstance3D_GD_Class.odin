@@ -18,11 +18,11 @@ VisualInstance3D_MethodBind_List :: struct {
   },
     get_base: struct{
     using _get_base: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_instance: struct{
     using _get_instance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_layer_mask: struct{
     using _set_layer_mask: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VisualInstance3D_MethodBind_List :: struct {
   },
     get_layer_mask: struct{
     using _get_layer_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_layer_mask_value: struct{
     using _set_layer_mask_value: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ VisualInstance3D_MethodBind_List :: struct {
   },
     get_sorting_offset: struct{
     using _get_sorting_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sorting_use_aabb_center: struct{
     using _set_sorting_use_aabb_center: ^GDW.MethodBind,
@@ -54,11 +54,11 @@ VisualInstance3D_MethodBind_List :: struct {
   },
     is_sorting_use_aabb_center: struct{
     using _is_sorting_use_aabb_center: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_aabb: struct{
     using _get_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualInstance3D, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
 };
 VisualInstance3D_Init_ :: proc (VisualInstance3D_methods: ^VisualInstance3D_MethodBind_List, loc := #caller_location) {

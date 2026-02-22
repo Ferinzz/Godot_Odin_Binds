@@ -14,7 +14,7 @@ GPUParticlesCollision3D_MethodBind_List :: struct {
   },
     get_cull_mask: struct{
     using _get_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollision3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 GPUParticlesCollision3D_Init_ :: proc (GPUParticlesCollision3D_methods: ^GPUParticlesCollision3D_MethodBind_List, loc := #caller_location) {

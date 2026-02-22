@@ -20,7 +20,7 @@ BackBufferCopy_MethodBind_List :: struct {
   },
     get_rect: struct{
     using _get_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BackBufferCopy, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: BackBufferCopy, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_copy_mode: struct{
     using _set_copy_mode: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ BackBufferCopy_MethodBind_List :: struct {
   },
     get_copy_mode: struct{
     using _get_copy_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BackBufferCopy, #by_ptr args: i64 = 0, r_ret: ^BackBufferCopy_CopyMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BackBufferCopy, args: rawptr = nil, r_ret: ^BackBufferCopy_CopyMode)
   },
 };
 BackBufferCopy_Init_ :: proc (BackBufferCopy_methods: ^BackBufferCopy_MethodBind_List, loc := #caller_location) {

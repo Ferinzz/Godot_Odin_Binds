@@ -14,7 +14,7 @@ Texture3DRD_MethodBind_List :: struct {
   },
     get_texture_rd_rid: struct{
     using _get_texture_rd_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture3DRD, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture3DRD, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 Texture3DRD_Init_ :: proc (Texture3DRD_methods: ^Texture3DRD_MethodBind_List, loc := #caller_location) {

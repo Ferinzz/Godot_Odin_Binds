@@ -222,7 +222,7 @@ TreeItem_MethodBind_List :: struct {
   },
     is_collapsed: struct{
     using _is_collapsed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collapsed_recursive: struct{
     using _set_collapsed_recursive: ^GDW.MethodBind,
@@ -238,15 +238,15 @@ TreeItem_MethodBind_List :: struct {
   },
     is_visible: struct{
     using _is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_visible_in_tree: struct{
     using _is_visible_in_tree: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   uncollapse_tree: struct{
     using _uncollapse_tree: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_custom_minimum_height: struct{
     using _set_custom_minimum_height: ^GDW.MethodBind,
@@ -254,7 +254,7 @@ TreeItem_MethodBind_List :: struct {
   },
     get_custom_minimum_height: struct{
     using _get_custom_minimum_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_selectable: struct{
     using _set_selectable: ^GDW.MethodBind,
@@ -334,7 +334,7 @@ TreeItem_MethodBind_List :: struct {
   },
   clear_buttons: struct{
     using _clear_buttons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_button: struct{
     using _add_button: ^GDW.MethodBind,
@@ -422,7 +422,7 @@ TreeItem_MethodBind_List :: struct {
   },
     is_folding_disabled: struct{
     using _is_folding_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   create_child: struct{
     using _create_child: ^GDW.MethodBind,
@@ -438,23 +438,23 @@ TreeItem_MethodBind_List :: struct {
   },
     get_tree: struct{
     using _get_tree: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^Tree)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^Tree)
   },
   get_next: struct{
     using _get_next: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^TreeItem)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^TreeItem)
   },
   get_prev: struct{
     using _get_prev: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^TreeItem)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^TreeItem)
   },
   get_parent: struct{
     using _get_parent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^TreeItem)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^TreeItem)
   },
   get_first_child: struct{
     using _get_first_child: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^TreeItem)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^TreeItem)
   },
   get_next_in_tree: struct{
     using _get_next_in_tree: ^GDW.MethodBind,
@@ -478,15 +478,15 @@ TreeItem_MethodBind_List :: struct {
   },
   get_child_count: struct{
     using _get_child_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_children: struct{
     using _get_children: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_index: struct{
     using _get_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   move_before: struct{
     using _move_before: ^GDW.MethodBind,
@@ -498,7 +498,7 @@ TreeItem_MethodBind_List :: struct {
   },
     call_recursive: struct{
     using _call_recursive: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: struct{method: ^GDW.StringName, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: rawptr = nil)
   },
   };
 TreeItem_Init_ :: proc (TreeItem_methods: ^TreeItem_MethodBind_List, loc := #caller_location) {

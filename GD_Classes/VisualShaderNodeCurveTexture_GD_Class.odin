@@ -14,7 +14,7 @@ VisualShaderNodeCurveTexture_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCurveTexture, #by_ptr args: i64 = 0, r_ret: ^CurveTexture)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCurveTexture, args: rawptr = nil, r_ret: ^CurveTexture)
   },
 };
 VisualShaderNodeCurveTexture_Init_ :: proc (VisualShaderNodeCurveTexture_methods: ^VisualShaderNodeCurveTexture_MethodBind_List, loc := #caller_location) {

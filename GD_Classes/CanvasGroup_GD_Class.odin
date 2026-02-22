@@ -14,7 +14,7 @@ CanvasGroup_MethodBind_List :: struct {
   },
     get_fit_margin: struct{
     using _get_fit_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasGroup, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasGroup, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_clear_margin: struct{
     using _set_clear_margin: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CanvasGroup_MethodBind_List :: struct {
   },
     get_clear_margin: struct{
     using _get_clear_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasGroup, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasGroup, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_mipmaps: struct{
     using _set_use_mipmaps: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CanvasGroup_MethodBind_List :: struct {
   },
     is_using_mipmaps: struct{
     using _is_using_mipmaps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasGroup, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasGroup, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CanvasGroup_Init_ :: proc (CanvasGroup_methods: ^CanvasGroup_MethodBind_List, loc := #caller_location) {

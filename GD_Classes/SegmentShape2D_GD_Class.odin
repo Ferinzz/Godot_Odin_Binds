@@ -14,7 +14,7 @@ SegmentShape2D_MethodBind_List :: struct {
   },
     get_a: struct{
     using _get_a: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SegmentShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: SegmentShape2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_b: struct{
     using _set_b: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SegmentShape2D_MethodBind_List :: struct {
   },
     get_b: struct{
     using _get_b: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SegmentShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: SegmentShape2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 SegmentShape2D_Init_ :: proc (SegmentShape2D_methods: ^SegmentShape2D_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ MissingNode_MethodBind_List :: struct {
   },
     get_original_class: struct{
     using _get_original_class: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MissingNode, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: MissingNode, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_original_scene: struct{
     using _set_original_scene: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MissingNode_MethodBind_List :: struct {
   },
     get_original_scene: struct{
     using _get_original_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MissingNode, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: MissingNode, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_recording_properties: struct{
     using _set_recording_properties: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ MissingNode_MethodBind_List :: struct {
   },
     is_recording_properties: struct{
     using _is_recording_properties: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MissingNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MissingNode, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_recording_signals: struct{
     using _set_recording_signals: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ MissingNode_MethodBind_List :: struct {
   },
     is_recording_signals: struct{
     using _is_recording_signals: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MissingNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MissingNode, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 MissingNode_Init_ :: proc (MissingNode_methods: ^MissingNode_MethodBind_List, loc := #caller_location) {

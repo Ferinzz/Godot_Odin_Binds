@@ -24,7 +24,7 @@ Camera2D_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_anchor_mode: struct{
     using _set_anchor_mode: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ Camera2D_MethodBind_List :: struct {
   },
     get_anchor_mode: struct{
     using _get_anchor_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^Camera2D_AnchorMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^Camera2D_AnchorMode)
   },
   set_ignore_rotation: struct{
     using _set_ignore_rotation: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_ignoring_rotation: struct{
     using _is_ignoring_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_process_callback: struct{
     using _set_process_callback: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ Camera2D_MethodBind_List :: struct {
   },
     get_process_callback: struct{
     using _get_process_callback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^Camera2D_Camera2DProcessCallback)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^Camera2D_Camera2DProcessCallback)
   },
   set_enabled: struct{
     using _set_enabled: ^GDW.MethodBind,
@@ -56,15 +56,15 @@ Camera2D_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   make_current: struct{
     using _make_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_current: struct{
     using _is_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_limit_enabled: struct{
     using _set_limit_enabled: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_limit_enabled: struct{
     using _is_limit_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_limit: struct{
     using _set_limit: ^GDW.MethodBind,
@@ -88,7 +88,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_limit_smoothing_enabled: struct{
     using _is_limit_smoothing_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_vertical_enabled: struct{
     using _set_drag_vertical_enabled: ^GDW.MethodBind,
@@ -96,7 +96,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_drag_vertical_enabled: struct{
     using _is_drag_vertical_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_horizontal_enabled: struct{
     using _set_drag_horizontal_enabled: ^GDW.MethodBind,
@@ -104,7 +104,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_drag_horizontal_enabled: struct{
     using _is_drag_horizontal_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_vertical_offset: struct{
     using _set_drag_vertical_offset: ^GDW.MethodBind,
@@ -112,7 +112,7 @@ Camera2D_MethodBind_List :: struct {
   },
     get_drag_vertical_offset: struct{
     using _get_drag_vertical_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_drag_horizontal_offset: struct{
     using _set_drag_horizontal_offset: ^GDW.MethodBind,
@@ -120,7 +120,7 @@ Camera2D_MethodBind_List :: struct {
   },
     get_drag_horizontal_offset: struct{
     using _get_drag_horizontal_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_drag_margin: struct{
     using _set_drag_margin: ^GDW.MethodBind,
@@ -132,15 +132,15 @@ Camera2D_MethodBind_List :: struct {
   },
   get_target_position: struct{
     using _get_target_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_screen_center_position: struct{
     using _get_screen_center_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_screen_rotation: struct{
     using _get_screen_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_zoom: struct{
     using _set_zoom: ^GDW.MethodBind,
@@ -148,7 +148,7 @@ Camera2D_MethodBind_List :: struct {
   },
     get_zoom: struct{
     using _get_zoom: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_custom_viewport: struct{
     using _set_custom_viewport: ^GDW.MethodBind,
@@ -156,7 +156,7 @@ Camera2D_MethodBind_List :: struct {
   },
     get_custom_viewport: struct{
     using _get_custom_viewport: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^Node)
   },
   set_position_smoothing_speed: struct{
     using _set_position_smoothing_speed: ^GDW.MethodBind,
@@ -164,7 +164,7 @@ Camera2D_MethodBind_List :: struct {
   },
     get_position_smoothing_speed: struct{
     using _get_position_smoothing_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_position_smoothing_enabled: struct{
     using _set_position_smoothing_enabled: ^GDW.MethodBind,
@@ -172,7 +172,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_position_smoothing_enabled: struct{
     using _is_position_smoothing_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_rotation_smoothing_enabled: struct{
     using _set_rotation_smoothing_enabled: ^GDW.MethodBind,
@@ -180,7 +180,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_rotation_smoothing_enabled: struct{
     using _is_rotation_smoothing_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_rotation_smoothing_speed: struct{
     using _set_rotation_smoothing_speed: ^GDW.MethodBind,
@@ -188,19 +188,19 @@ Camera2D_MethodBind_List :: struct {
   },
     get_rotation_smoothing_speed: struct{
     using _get_rotation_smoothing_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   force_update_scroll: struct{
     using _force_update_scroll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     reset_smoothing: struct{
     using _reset_smoothing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     align: struct{
     using _align: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_screen_drawing_enabled: struct{
     using _set_screen_drawing_enabled: ^GDW.MethodBind,
@@ -208,7 +208,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_screen_drawing_enabled: struct{
     using _is_screen_drawing_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_limit_drawing_enabled: struct{
     using _set_limit_drawing_enabled: ^GDW.MethodBind,
@@ -216,7 +216,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_limit_drawing_enabled: struct{
     using _is_limit_drawing_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_margin_drawing_enabled: struct{
     using _set_margin_drawing_enabled: ^GDW.MethodBind,
@@ -224,7 +224,7 @@ Camera2D_MethodBind_List :: struct {
   },
     is_margin_drawing_enabled: struct{
     using _is_margin_drawing_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Camera2D_Init_ :: proc (Camera2D_methods: ^Camera2D_MethodBind_List, loc := #caller_location) {

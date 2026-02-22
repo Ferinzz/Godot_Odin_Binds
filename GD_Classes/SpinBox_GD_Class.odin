@@ -14,7 +14,7 @@ SpinBox_MethodBind_List :: struct {
   },
     get_horizontal_alignment: struct{
     using _get_horizontal_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   set_suffix: struct{
     using _set_suffix: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SpinBox_MethodBind_List :: struct {
   },
     get_suffix: struct{
     using _get_suffix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_prefix: struct{
     using _set_prefix: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ SpinBox_MethodBind_List :: struct {
   },
     get_prefix: struct{
     using _get_prefix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_editable: struct{
     using _set_editable: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ SpinBox_MethodBind_List :: struct {
   },
     get_custom_arrow_step: struct{
     using _get_custom_arrow_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_custom_arrow_round: struct{
     using _set_custom_arrow_round: ^GDW.MethodBind,
@@ -50,11 +50,11 @@ SpinBox_MethodBind_List :: struct {
   },
     is_custom_arrow_rounding: struct{
     using _is_custom_arrow_rounding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_editable: struct{
     using _is_editable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_update_on_text_changed: struct{
     using _set_update_on_text_changed: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ SpinBox_MethodBind_List :: struct {
   },
     get_update_on_text_changed: struct{
     using _get_update_on_text_changed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_select_all_on_focus: struct{
     using _set_select_all_on_focus: ^GDW.MethodBind,
@@ -70,15 +70,15 @@ SpinBox_MethodBind_List :: struct {
   },
     is_select_all_on_focus: struct{
     using _is_select_all_on_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   apply: struct{
     using _apply: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_line_edit: struct{
     using _get_line_edit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, #by_ptr args: i64 = 0, r_ret: ^LineEdit)
+    m_call: proc(_:^GDW.MethodBind, obj: SpinBox, args: rawptr = nil, r_ret: ^LineEdit)
   },
 };
 SpinBox_Init_ :: proc (SpinBox_methods: ^SpinBox_MethodBind_List, loc := #caller_location) {

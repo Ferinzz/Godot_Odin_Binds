@@ -20,15 +20,15 @@ SyntaxHighlighter_MethodBind_List :: struct {
   },
   update_cache: struct{
     using _update_cache: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SyntaxHighlighter, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SyntaxHighlighter, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear_highlighting_cache: struct{
     using _clear_highlighting_cache: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SyntaxHighlighter, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SyntaxHighlighter, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_text_edit: struct{
     using _get_text_edit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SyntaxHighlighter, #by_ptr args: i64 = 0, r_ret: ^TextEdit)
+    m_call: proc(_:^GDW.MethodBind, obj: SyntaxHighlighter, args: rawptr = nil, r_ret: ^TextEdit)
   },
 };
 SyntaxHighlighter_Init_ :: proc (SyntaxHighlighter_methods: ^SyntaxHighlighter_MethodBind_List, loc := #caller_location) {

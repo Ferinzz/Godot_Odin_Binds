@@ -14,7 +14,7 @@ MeshInstance3D_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, args: rawptr = nil, r_ret: ^Mesh)
   },
   set_skeleton_path: struct{
     using _set_skeleton_path: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MeshInstance3D_MethodBind_List :: struct {
   },
     get_skeleton_path: struct{
     using _get_skeleton_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_skin: struct{
     using _set_skin: ^GDW.MethodBind,
@@ -30,15 +30,15 @@ MeshInstance3D_MethodBind_List :: struct {
   },
     get_skin: struct{
     using _get_skin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^Skin)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, args: rawptr = nil, r_ret: ^Skin)
   },
   get_skin_reference: struct{
     using _get_skin_reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^SkinReference)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, args: rawptr = nil, r_ret: ^SkinReference)
   },
   get_surface_override_material_count: struct{
     using _get_surface_override_material_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_surface_override_material: struct{
     using _set_surface_override_material: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ MeshInstance3D_MethodBind_List :: struct {
   },
   create_trimesh_collision: struct{
     using _create_trimesh_collision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     create_convex_collision: struct{
     using _create_convex_collision: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ MeshInstance3D_MethodBind_List :: struct {
   },
     get_blend_shape_count: struct{
     using _get_blend_shape_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   find_blend_shape_by_name: struct{
     using _find_blend_shape_by_name: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ MeshInstance3D_MethodBind_List :: struct {
   },
     create_debug_tangents: struct{
     using _create_debug_tangents: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     bake_mesh_from_current_blend_shape_mix: struct{
     using _bake_mesh_from_current_blend_shape_mix: ^GDW.MethodBind,

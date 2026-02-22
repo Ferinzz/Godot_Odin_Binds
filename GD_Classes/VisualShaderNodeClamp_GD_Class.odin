@@ -24,7 +24,7 @@ VisualShaderNodeClamp_MethodBind_List :: struct {
   },
     get_op_type: struct{
     using _get_op_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeClamp, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeClamp_OpType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeClamp, args: rawptr = nil, r_ret: ^VisualShaderNodeClamp_OpType)
   },
 };
 VisualShaderNodeClamp_Init_ :: proc (VisualShaderNodeClamp_methods: ^VisualShaderNodeClamp_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ RegEx_MethodBind_List :: struct {
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegEx, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RegEx, args: rawptr = nil, r_ret: rawptr = nil)
   },
     compile: struct{
     using _compile: ^GDW.MethodBind,
@@ -34,19 +34,19 @@ RegEx_MethodBind_List :: struct {
   },
   is_valid: struct{
     using _is_valid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegEx, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RegEx, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_pattern: struct{
     using _get_pattern: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegEx, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RegEx, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_group_count: struct{
     using _get_group_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegEx, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RegEx, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_names: struct{
     using _get_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegEx, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: RegEx, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
 };
 RegEx_Init_ :: proc (RegEx_methods: ^RegEx_MethodBind_List, loc := #caller_location) {

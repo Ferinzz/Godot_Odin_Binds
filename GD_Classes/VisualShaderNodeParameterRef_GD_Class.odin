@@ -14,7 +14,7 @@ VisualShaderNodeParameterRef_MethodBind_List :: struct {
   },
     get_parameter_name: struct{
     using _get_parameter_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParameterRef, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParameterRef, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 VisualShaderNodeParameterRef_Init_ :: proc (VisualShaderNodeParameterRef_methods: ^VisualShaderNodeParameterRef_MethodBind_List, loc := #caller_location) {

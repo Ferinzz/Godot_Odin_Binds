@@ -26,7 +26,7 @@ ConfigFile_MethodBind_List :: struct {
   },
   get_sections: struct{
     using _get_sections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConfigFile, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ConfigFile, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_section_keys: struct{
     using _get_section_keys: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ ConfigFile_MethodBind_List :: struct {
   },
   encode_to_text: struct{
     using _encode_to_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConfigFile, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: ConfigFile, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   load_encrypted: struct{
     using _load_encrypted: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ ConfigFile_MethodBind_List :: struct {
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConfigFile, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ConfigFile, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 ConfigFile_Init_ :: proc (ConfigFile_methods: ^ConfigFile_MethodBind_List, loc := #caller_location) {

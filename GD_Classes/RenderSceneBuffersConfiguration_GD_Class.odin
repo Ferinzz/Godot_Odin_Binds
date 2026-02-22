@@ -10,7 +10,7 @@ RenderSceneBuffersConfiguration :: ^GDW.Object
 RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   get_render_target: struct{
     using _get_render_target: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_render_target: struct{
     using _set_render_target: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_internal_size: struct{
     using _get_internal_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_internal_size: struct{
     using _set_internal_size: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_target_size: struct{
     using _get_target_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_target_size: struct{
     using _set_target_size: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_view_count: struct{
     using _get_view_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_view_count: struct{
     using _set_view_count: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_scaling_3d_mode: struct{
     using _get_scaling_3d_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^RenderingServer_ViewportScaling3DMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^RenderingServer_ViewportScaling3DMode)
   },
   set_scaling_3d_mode: struct{
     using _set_scaling_3d_mode: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_msaa_3d: struct{
     using _get_msaa_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^RenderingServer_ViewportMSAA)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^RenderingServer_ViewportMSAA)
   },
   set_msaa_3d: struct{
     using _set_msaa_3d: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_screen_space_aa: struct{
     using _get_screen_space_aa: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^RenderingServer_ViewportScreenSpaceAA)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^RenderingServer_ViewportScreenSpaceAA)
   },
   set_screen_space_aa: struct{
     using _set_screen_space_aa: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_fsr_sharpness: struct{
     using _get_fsr_sharpness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fsr_sharpness: struct{
     using _set_fsr_sharpness: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_texture_mipmap_bias: struct{
     using _get_texture_mipmap_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_texture_mipmap_bias: struct{
     using _set_texture_mipmap_bias: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ RenderSceneBuffersConfiguration_MethodBind_List :: struct {
   },
     get_anisotropic_filtering_level: struct{
     using _get_anisotropic_filtering_level: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, #by_ptr args: i64 = 0, r_ret: ^RenderingServer_ViewportAnisotropicFiltering)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersConfiguration, args: rawptr = nil, r_ret: ^RenderingServer_ViewportAnisotropicFiltering)
   },
   set_anisotropic_filtering_level: struct{
     using _set_anisotropic_filtering_level: ^GDW.MethodBind,

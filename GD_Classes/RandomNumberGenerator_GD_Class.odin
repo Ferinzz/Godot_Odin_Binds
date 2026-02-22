@@ -14,7 +14,7 @@ RandomNumberGenerator_MethodBind_List :: struct {
   },
     get_seed: struct{
     using _get_seed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_state: struct{
     using _set_state: ^GDW.MethodBind,
@@ -22,15 +22,15 @@ RandomNumberGenerator_MethodBind_List :: struct {
   },
     get_state: struct{
     using _get_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   randi: struct{
     using _randi: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   randf: struct{
     using _randf: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, args: rawptr = nil, r_ret: ^GDW.float)
   },
   randfn: struct{
     using _randfn: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ RandomNumberGenerator_MethodBind_List :: struct {
   },
   randomize: struct{
     using _randomize: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RandomNumberGenerator, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 RandomNumberGenerator_Init_ :: proc (RandomNumberGenerator_methods: ^RandomNumberGenerator_MethodBind_List, loc := #caller_location) {

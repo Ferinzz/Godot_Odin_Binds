@@ -14,7 +14,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     get_root_bone: struct{
     using _get_root_bone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_tip_bone: struct{
     using _set_tip_bone: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     get_tip_bone: struct{
     using _get_tip_bone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_target_transform: struct{
     using _set_target_transform: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     get_target_transform: struct{
     using _get_target_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_target_node: struct{
     using _set_target_node: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     get_target_node: struct{
     using _get_target_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_override_tip_basis: struct{
     using _set_override_tip_basis: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     is_override_tip_basis: struct{
     using _is_override_tip_basis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_magnet: struct{
     using _set_use_magnet: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     is_using_magnet: struct{
     using _is_using_magnet: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_magnet_position: struct{
     using _set_magnet_position: ^GDW.MethodBind,
@@ -62,15 +62,15 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     get_magnet_position: struct{
     using _get_magnet_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_parent_skeleton: struct{
     using _get_parent_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^Skeleton3D)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^Skeleton3D)
   },
   is_running: struct{
     using _is_running: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_min_distance: struct{
     using _set_min_distance: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     get_min_distance: struct{
     using _get_min_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_iterations: struct{
     using _set_max_iterations: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     get_max_iterations: struct{
     using _get_max_iterations: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   start: struct{
     using _start: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_interpolation: struct{
     using _set_interpolation: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ SkeletonIK3D_MethodBind_List :: struct {
   },
     get_interpolation: struct{
     using _get_interpolation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonIK3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 SkeletonIK3D_Init_ :: proc (SkeletonIK3D_methods: ^SkeletonIK3D_MethodBind_List, loc := #caller_location) {

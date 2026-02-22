@@ -19,7 +19,7 @@ NavigationPathQueryResult2D_MethodBind_List :: struct {
   },
     get_path: struct{
     using _get_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_path_types: struct{
     using _set_path_types: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ NavigationPathQueryResult2D_MethodBind_List :: struct {
   },
     get_path_types: struct{
     using _get_path_types: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_path_rids: struct{
     using _set_path_rids: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ NavigationPathQueryResult2D_MethodBind_List :: struct {
   },
     get_path_rids: struct{
     using _get_path_rids: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_path_owner_ids: struct{
     using _set_path_owner_ids: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ NavigationPathQueryResult2D_MethodBind_List :: struct {
   },
     get_path_owner_ids: struct{
     using _get_path_owner_ids: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
   set_path_length: struct{
     using _set_path_length: ^GDW.MethodBind,
@@ -51,11 +51,11 @@ NavigationPathQueryResult2D_MethodBind_List :: struct {
   },
     get_path_length: struct{
     using _get_path_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   reset: struct{
     using _reset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryResult2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 NavigationPathQueryResult2D_Init_ :: proc (NavigationPathQueryResult2D_methods: ^NavigationPathQueryResult2D_MethodBind_List, loc := #caller_location) {

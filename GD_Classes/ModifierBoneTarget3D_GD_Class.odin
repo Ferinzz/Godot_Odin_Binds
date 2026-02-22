@@ -14,7 +14,7 @@ ModifierBoneTarget3D_MethodBind_List :: struct {
   },
     get_bone_name: struct{
     using _get_bone_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ModifierBoneTarget3D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: ModifierBoneTarget3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_bone: struct{
     using _set_bone: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ModifierBoneTarget3D_MethodBind_List :: struct {
   },
     get_bone: struct{
     using _get_bone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ModifierBoneTarget3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ModifierBoneTarget3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 ModifierBoneTarget3D_Init_ :: proc (ModifierBoneTarget3D_methods: ^ModifierBoneTarget3D_MethodBind_List, loc := #caller_location) {

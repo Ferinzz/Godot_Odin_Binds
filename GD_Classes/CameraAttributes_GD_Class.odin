@@ -14,7 +14,7 @@ CameraAttributes_MethodBind_List :: struct {
   },
     get_exposure_multiplier: struct{
     using _get_exposure_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_exposure_sensitivity: struct{
     using _set_exposure_sensitivity: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CameraAttributes_MethodBind_List :: struct {
   },
     get_exposure_sensitivity: struct{
     using _get_exposure_sensitivity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_auto_exposure_enabled: struct{
     using _set_auto_exposure_enabled: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CameraAttributes_MethodBind_List :: struct {
   },
     is_auto_exposure_enabled: struct{
     using _is_auto_exposure_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_exposure_speed: struct{
     using _set_auto_exposure_speed: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CameraAttributes_MethodBind_List :: struct {
   },
     get_auto_exposure_speed: struct{
     using _get_auto_exposure_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_auto_exposure_scale: struct{
     using _set_auto_exposure_scale: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CameraAttributes_MethodBind_List :: struct {
   },
     get_auto_exposure_scale: struct{
     using _get_auto_exposure_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributes, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 CameraAttributes_Init_ :: proc (CameraAttributes_methods: ^CameraAttributes_MethodBind_List, loc := #caller_location) {

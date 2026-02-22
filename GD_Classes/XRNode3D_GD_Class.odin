@@ -14,7 +14,7 @@ XRNode3D_MethodBind_List :: struct {
   },
     get_tracker: struct{
     using _get_tracker: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_pose_name: struct{
     using _set_pose_name: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ XRNode3D_MethodBind_List :: struct {
   },
     get_pose_name: struct{
     using _get_pose_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_show_when_tracked: struct{
     using _set_show_when_tracked: ^GDW.MethodBind,
@@ -30,19 +30,19 @@ XRNode3D_MethodBind_List :: struct {
   },
     get_show_when_tracked: struct{
     using _get_show_when_tracked: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_is_active: struct{
     using _get_is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_has_tracking_data: struct{
     using _get_has_tracking_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_pose: struct{
     using _get_pose: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, #by_ptr args: i64 = 0, r_ret: ^XRPose)
+    m_call: proc(_:^GDW.MethodBind, obj: XRNode3D, args: rawptr = nil, r_ret: ^XRPose)
   },
   trigger_haptic_pulse: struct{
     using _trigger_haptic_pulse: ^GDW.MethodBind,

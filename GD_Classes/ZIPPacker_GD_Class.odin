@@ -31,7 +31,7 @@ ZIPPacker_MethodBind_List :: struct {
   },
     get_compression_level: struct{
     using _get_compression_level: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ZIPPacker, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ZIPPacker, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   start_file: struct{
     using _start_file: ^GDW.MethodBind,
@@ -43,11 +43,11 @@ ZIPPacker_MethodBind_List :: struct {
   },
   close_file: struct{
     using _close_file: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ZIPPacker, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: ZIPPacker, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ZIPPacker, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: ZIPPacker, args: rawptr = nil, r_ret: ^GDW.Error)
   },
 };
 ZIPPacker_Init_ :: proc (ZIPPacker_methods: ^ZIPPacker_MethodBind_List, loc := #caller_location) {

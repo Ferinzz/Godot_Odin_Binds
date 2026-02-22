@@ -14,7 +14,7 @@ InputEventMIDI_MethodBind_List :: struct {
   },
     get_channel: struct{
     using _get_channel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_message: struct{
     using _set_message: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ InputEventMIDI_MethodBind_List :: struct {
   },
     get_message: struct{
     using _get_message: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, #by_ptr args: i64 = 0, r_ret: ^GDW.MIDIMessage)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, args: rawptr = nil, r_ret: ^GDW.MIDIMessage)
   },
   set_pitch: struct{
     using _set_pitch: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ InputEventMIDI_MethodBind_List :: struct {
   },
     get_pitch: struct{
     using _get_pitch: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_velocity: struct{
     using _set_velocity: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ InputEventMIDI_MethodBind_List :: struct {
   },
     get_velocity: struct{
     using _get_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_instrument: struct{
     using _set_instrument: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ InputEventMIDI_MethodBind_List :: struct {
   },
     get_instrument: struct{
     using _get_instrument: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_pressure: struct{
     using _set_pressure: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ InputEventMIDI_MethodBind_List :: struct {
   },
     get_pressure: struct{
     using _get_pressure: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_controller_number: struct{
     using _set_controller_number: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ InputEventMIDI_MethodBind_List :: struct {
   },
     get_controller_number: struct{
     using _get_controller_number: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_controller_value: struct{
     using _set_controller_value: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ InputEventMIDI_MethodBind_List :: struct {
   },
     get_controller_value: struct{
     using _get_controller_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMIDI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 InputEventMIDI_Init_ :: proc (InputEventMIDI_methods: ^InputEventMIDI_MethodBind_List, loc := #caller_location) {

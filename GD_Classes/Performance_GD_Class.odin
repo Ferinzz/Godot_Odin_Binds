@@ -100,15 +100,15 @@ Performance_MethodBind_List :: struct {
   },
   get_monitor_modification_time: struct{
     using _get_monitor_modification_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_custom_monitor_names: struct{
     using _get_custom_monitor_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_custom_monitor_types: struct{
     using _get_custom_monitor_types: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
 };
 Performance_Init_ :: proc (Performance_methods: ^Performance_MethodBind_List, loc := #caller_location) {

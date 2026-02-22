@@ -15,7 +15,7 @@ OpenXRSpatialCapabilityConfigurationBaseHeader_Virtual_Info :: struct {
 OpenXRSpatialCapabilityConfigurationBaseHeader_MethodBind_List :: struct {
   has_valid_configuration: struct{
     using _has_valid_configuration: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationBaseHeader, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationBaseHeader, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 OpenXRSpatialCapabilityConfigurationBaseHeader_Init_ :: proc (OpenXRSpatialCapabilityConfigurationBaseHeader_methods: ^OpenXRSpatialCapabilityConfigurationBaseHeader_MethodBind_List, loc := #caller_location) {

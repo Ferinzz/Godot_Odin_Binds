@@ -18,7 +18,7 @@ CurveXYZTexture_MethodBind_List :: struct {
   },
     get_curve_x: struct{
     using _get_curve_x: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CurveXYZTexture, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: CurveXYZTexture, args: rawptr = nil, r_ret: ^Curve)
   },
   set_curve_y: struct{
     using _set_curve_y: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ CurveXYZTexture_MethodBind_List :: struct {
   },
     get_curve_y: struct{
     using _get_curve_y: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CurveXYZTexture, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: CurveXYZTexture, args: rawptr = nil, r_ret: ^Curve)
   },
   set_curve_z: struct{
     using _set_curve_z: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ CurveXYZTexture_MethodBind_List :: struct {
   },
     get_curve_z: struct{
     using _get_curve_z: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CurveXYZTexture, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: CurveXYZTexture, args: rawptr = nil, r_ret: ^Curve)
   },
 };
 CurveXYZTexture_Init_ :: proc (CurveXYZTexture_methods: ^CurveXYZTexture_MethodBind_List, loc := #caller_location) {

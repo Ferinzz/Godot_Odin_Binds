@@ -38,7 +38,7 @@ OpenXRHand_MethodBind_List :: struct {
   },
     get_hand: struct{
     using _get_hand: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, #by_ptr args: i64 = 0, r_ret: ^OpenXRHand_Hands)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, args: rawptr = nil, r_ret: ^OpenXRHand_Hands)
   },
   set_hand_skeleton: struct{
     using _set_hand_skeleton: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ OpenXRHand_MethodBind_List :: struct {
   },
     get_hand_skeleton: struct{
     using _get_hand_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_motion_range: struct{
     using _set_motion_range: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ OpenXRHand_MethodBind_List :: struct {
   },
     get_motion_range: struct{
     using _get_motion_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, #by_ptr args: i64 = 0, r_ret: ^OpenXRHand_MotionRange)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, args: rawptr = nil, r_ret: ^OpenXRHand_MotionRange)
   },
   set_skeleton_rig: struct{
     using _set_skeleton_rig: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ OpenXRHand_MethodBind_List :: struct {
   },
     get_skeleton_rig: struct{
     using _get_skeleton_rig: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, #by_ptr args: i64 = 0, r_ret: ^OpenXRHand_SkeletonRig)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, args: rawptr = nil, r_ret: ^OpenXRHand_SkeletonRig)
   },
   set_bone_update: struct{
     using _set_bone_update: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ OpenXRHand_MethodBind_List :: struct {
   },
     get_bone_update: struct{
     using _get_bone_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, #by_ptr args: i64 = 0, r_ret: ^OpenXRHand_BoneUpdate)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHand, args: rawptr = nil, r_ret: ^OpenXRHand_BoneUpdate)
   },
 };
 OpenXRHand_Init_ :: proc (OpenXRHand_methods: ^OpenXRHand_MethodBind_List, loc := #caller_location) {

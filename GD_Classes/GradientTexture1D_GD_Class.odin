@@ -14,7 +14,7 @@ GradientTexture1D_MethodBind_List :: struct {
   },
     get_gradient: struct{
     using _get_gradient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GradientTexture1D, #by_ptr args: i64 = 0, r_ret: ^Gradient)
+    m_call: proc(_:^GDW.MethodBind, obj: GradientTexture1D, args: rawptr = nil, r_ret: ^Gradient)
   },
   set_width: struct{
     using _set_width: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ GradientTexture1D_MethodBind_List :: struct {
   },
     is_using_hdr: struct{
     using _is_using_hdr: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GradientTexture1D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GradientTexture1D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 GradientTexture1D_Init_ :: proc (GradientTexture1D_methods: ^GradientTexture1D_MethodBind_List, loc := #caller_location) {

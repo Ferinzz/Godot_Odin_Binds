@@ -146,11 +146,11 @@ Viewport_MethodBind_List :: struct {
   },
     get_world_2d: struct{
     using _get_world_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^World2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^World2D)
   },
   find_world_2d: struct{
     using _find_world_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^World2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^World2D)
   },
   set_canvas_transform: struct{
     using _set_canvas_transform: ^GDW.MethodBind,
@@ -158,7 +158,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_canvas_transform: struct{
     using _get_canvas_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   set_global_canvas_transform: struct{
     using _set_global_canvas_transform: ^GDW.MethodBind,
@@ -166,23 +166,23 @@ Viewport_MethodBind_List :: struct {
   },
     get_global_canvas_transform: struct{
     using _get_global_canvas_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_stretch_transform: struct{
     using _get_stretch_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_final_transform: struct{
     using _get_final_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_screen_transform: struct{
     using _get_screen_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_visible_rect: struct{
     using _get_visible_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_transparent_background: struct{
     using _set_transparent_background: ^GDW.MethodBind,
@@ -190,7 +190,7 @@ Viewport_MethodBind_List :: struct {
   },
     has_transparent_background: struct{
     using _has_transparent_background: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_hdr_2d: struct{
     using _set_use_hdr_2d: ^GDW.MethodBind,
@@ -198,7 +198,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_using_hdr_2d: struct{
     using _is_using_hdr_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_msaa_2d: struct{
     using _set_msaa_2d: ^GDW.MethodBind,
@@ -206,7 +206,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_msaa_2d: struct{
     using _get_msaa_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_MSAA)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_MSAA)
   },
   set_msaa_3d: struct{
     using _set_msaa_3d: ^GDW.MethodBind,
@@ -214,7 +214,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_msaa_3d: struct{
     using _get_msaa_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_MSAA)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_MSAA)
   },
   set_screen_space_aa: struct{
     using _set_screen_space_aa: ^GDW.MethodBind,
@@ -222,7 +222,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_screen_space_aa: struct{
     using _get_screen_space_aa: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_ScreenSpaceAA)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_ScreenSpaceAA)
   },
   set_use_taa: struct{
     using _set_use_taa: ^GDW.MethodBind,
@@ -230,7 +230,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_using_taa: struct{
     using _is_using_taa: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_debanding: struct{
     using _set_use_debanding: ^GDW.MethodBind,
@@ -238,7 +238,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_using_debanding: struct{
     using _is_using_debanding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_occlusion_culling: struct{
     using _set_use_occlusion_culling: ^GDW.MethodBind,
@@ -246,7 +246,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_using_occlusion_culling: struct{
     using _is_using_occlusion_culling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_debug_draw: struct{
     using _set_debug_draw: ^GDW.MethodBind,
@@ -254,7 +254,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_debug_draw: struct{
     using _get_debug_draw: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_DebugDraw)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_DebugDraw)
   },
   set_use_oversampling: struct{
     using _set_use_oversampling: ^GDW.MethodBind,
@@ -262,7 +262,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_using_oversampling: struct{
     using _is_using_oversampling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_oversampling_override: struct{
     using _set_oversampling_override: ^GDW.MethodBind,
@@ -270,11 +270,11 @@ Viewport_MethodBind_List :: struct {
   },
     get_oversampling_override: struct{
     using _get_oversampling_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_oversampling: struct{
     using _get_oversampling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_render_info: struct{
     using _get_render_info: ^GDW.MethodBind,
@@ -282,7 +282,7 @@ Viewport_MethodBind_List :: struct {
   },
   get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^ViewportTexture)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^ViewportTexture)
   },
   set_physics_object_picking: struct{
     using _set_physics_object_picking: ^GDW.MethodBind,
@@ -290,7 +290,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_physics_object_picking: struct{
     using _get_physics_object_picking: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_physics_object_picking_sort: struct{
     using _set_physics_object_picking_sort: ^GDW.MethodBind,
@@ -298,7 +298,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_physics_object_picking_sort: struct{
     using _get_physics_object_picking_sort: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_physics_object_picking_first_only: struct{
     using _set_physics_object_picking_first_only: ^GDW.MethodBind,
@@ -306,11 +306,11 @@ Viewport_MethodBind_List :: struct {
   },
     get_physics_object_picking_first_only: struct{
     using _get_physics_object_picking_first_only: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_viewport_rid: struct{
     using _get_viewport_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   push_text_input: struct{
     using _push_text_input: ^GDW.MethodBind,
@@ -326,15 +326,15 @@ Viewport_MethodBind_List :: struct {
   },
     notify_mouse_entered: struct{
     using _notify_mouse_entered: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: rawptr = nil)
   },
     notify_mouse_exited: struct{
     using _notify_mouse_exited: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_mouse_position: struct{
     using _get_mouse_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   warp_mouse: struct{
     using _warp_mouse: ^GDW.MethodBind,
@@ -342,19 +342,19 @@ Viewport_MethodBind_List :: struct {
   },
     update_mouse_cursor_state: struct{
     using _update_mouse_cursor_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: rawptr = nil)
   },
     gui_cancel_drag: struct{
     using _gui_cancel_drag: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: rawptr = nil)
   },
     gui_get_drag_data: struct{
     using _gui_get_drag_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
   gui_get_drag_description: struct{
     using _gui_get_drag_description: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   gui_set_drag_description: struct{
     using _gui_set_drag_description: ^GDW.MethodBind,
@@ -362,23 +362,23 @@ Viewport_MethodBind_List :: struct {
   },
     gui_is_dragging: struct{
     using _gui_is_dragging: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   gui_is_drag_successful: struct{
     using _gui_is_drag_successful: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   gui_release_focus: struct{
     using _gui_release_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: rawptr = nil)
   },
     gui_get_focus_owner: struct{
     using _gui_get_focus_owner: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Control)
   },
   gui_get_hovered_control: struct{
     using _gui_get_hovered_control: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Control)
   },
   set_disable_input: struct{
     using _set_disable_input: ^GDW.MethodBind,
@@ -386,7 +386,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_input_disabled: struct{
     using _is_input_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_positional_shadow_atlas_size: struct{
     using _set_positional_shadow_atlas_size: ^GDW.MethodBind,
@@ -394,7 +394,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_positional_shadow_atlas_size: struct{
     using _get_positional_shadow_atlas_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_positional_shadow_atlas_16_bits: struct{
     using _set_positional_shadow_atlas_16_bits: ^GDW.MethodBind,
@@ -402,7 +402,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_positional_shadow_atlas_16_bits: struct{
     using _get_positional_shadow_atlas_16_bits: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_snap_controls_to_pixels: struct{
     using _set_snap_controls_to_pixels: ^GDW.MethodBind,
@@ -410,7 +410,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_snap_controls_to_pixels_enabled: struct{
     using _is_snap_controls_to_pixels_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_snap_2d_transforms_to_pixel: struct{
     using _set_snap_2d_transforms_to_pixel: ^GDW.MethodBind,
@@ -418,7 +418,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_snap_2d_transforms_to_pixel_enabled: struct{
     using _is_snap_2d_transforms_to_pixel_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_snap_2d_vertices_to_pixel: struct{
     using _set_snap_2d_vertices_to_pixel: ^GDW.MethodBind,
@@ -426,7 +426,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_snap_2d_vertices_to_pixel_enabled: struct{
     using _is_snap_2d_vertices_to_pixel_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_positional_shadow_atlas_quadrant_subdiv: struct{
     using _set_positional_shadow_atlas_quadrant_subdiv: ^GDW.MethodBind,
@@ -438,11 +438,11 @@ Viewport_MethodBind_List :: struct {
   },
   set_input_as_handled: struct{
     using _set_input_as_handled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_input_handled: struct{
     using _is_input_handled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_handle_input_locally: struct{
     using _set_handle_input_locally: ^GDW.MethodBind,
@@ -450,7 +450,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_handling_input_locally: struct{
     using _is_handling_input_locally: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_default_canvas_item_texture_filter: struct{
     using _set_default_canvas_item_texture_filter: ^GDW.MethodBind,
@@ -458,7 +458,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_default_canvas_item_texture_filter: struct{
     using _get_default_canvas_item_texture_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_DefaultCanvasItemTextureFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_DefaultCanvasItemTextureFilter)
   },
   set_embedding_subwindows: struct{
     using _set_embedding_subwindows: ^GDW.MethodBind,
@@ -466,11 +466,11 @@ Viewport_MethodBind_List :: struct {
   },
     is_embedding_subwindows: struct{
     using _is_embedding_subwindows: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_embedded_subwindows: struct{
     using _get_embedded_subwindows: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_drag_threshold: struct{
     using _set_drag_threshold: ^GDW.MethodBind,
@@ -478,7 +478,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_drag_threshold: struct{
     using _get_drag_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_canvas_cull_mask: struct{
     using _set_canvas_cull_mask: ^GDW.MethodBind,
@@ -486,7 +486,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_canvas_cull_mask: struct{
     using _get_canvas_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_canvas_cull_mask_bit: struct{
     using _set_canvas_cull_mask_bit: ^GDW.MethodBind,
@@ -502,7 +502,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_default_canvas_item_texture_repeat: struct{
     using _get_default_canvas_item_texture_repeat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_DefaultCanvasItemTextureRepeat)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_DefaultCanvasItemTextureRepeat)
   },
   set_sdf_oversize: struct{
     using _set_sdf_oversize: ^GDW.MethodBind,
@@ -510,7 +510,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_sdf_oversize: struct{
     using _get_sdf_oversize: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_SDFOversize)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_SDFOversize)
   },
   set_sdf_scale: struct{
     using _set_sdf_scale: ^GDW.MethodBind,
@@ -518,7 +518,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_sdf_scale: struct{
     using _get_sdf_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_SDFScale)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_SDFScale)
   },
   set_mesh_lod_threshold: struct{
     using _set_mesh_lod_threshold: ^GDW.MethodBind,
@@ -526,7 +526,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_mesh_lod_threshold: struct{
     using _get_mesh_lod_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_as_audio_listener_2d: struct{
     using _set_as_audio_listener_2d: ^GDW.MethodBind,
@@ -534,15 +534,15 @@ Viewport_MethodBind_List :: struct {
   },
     is_audio_listener_2d: struct{
     using _is_audio_listener_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_audio_listener_2d: struct{
     using _get_audio_listener_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^AudioListener2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^AudioListener2D)
   },
   get_camera_2d: struct{
     using _get_camera_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Camera2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Camera2D)
   },
   set_world_3d: struct{
     using _set_world_3d: ^GDW.MethodBind,
@@ -550,11 +550,11 @@ Viewport_MethodBind_List :: struct {
   },
     get_world_3d: struct{
     using _get_world_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^World3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^World3D)
   },
   find_world_3d: struct{
     using _find_world_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^World3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^World3D)
   },
   set_use_own_world_3d: struct{
     using _set_use_own_world_3d: ^GDW.MethodBind,
@@ -562,15 +562,15 @@ Viewport_MethodBind_List :: struct {
   },
     is_using_own_world_3d: struct{
     using _is_using_own_world_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_audio_listener_3d: struct{
     using _get_audio_listener_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^AudioListener3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^AudioListener3D)
   },
   get_camera_3d: struct{
     using _get_camera_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Camera3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Camera3D)
   },
   set_as_audio_listener_3d: struct{
     using _set_as_audio_listener_3d: ^GDW.MethodBind,
@@ -578,7 +578,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_audio_listener_3d: struct{
     using _is_audio_listener_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_disable_3d: struct{
     using _set_disable_3d: ^GDW.MethodBind,
@@ -586,7 +586,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_3d_disabled: struct{
     using _is_3d_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_xr: struct{
     using _set_use_xr: ^GDW.MethodBind,
@@ -594,7 +594,7 @@ Viewport_MethodBind_List :: struct {
   },
     is_using_xr: struct{
     using _is_using_xr: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_scaling_3d_mode: struct{
     using _set_scaling_3d_mode: ^GDW.MethodBind,
@@ -602,7 +602,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_scaling_3d_mode: struct{
     using _get_scaling_3d_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_Scaling3DMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_Scaling3DMode)
   },
   set_scaling_3d_scale: struct{
     using _set_scaling_3d_scale: ^GDW.MethodBind,
@@ -610,7 +610,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_scaling_3d_scale: struct{
     using _get_scaling_3d_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fsr_sharpness: struct{
     using _set_fsr_sharpness: ^GDW.MethodBind,
@@ -618,7 +618,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_fsr_sharpness: struct{
     using _get_fsr_sharpness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_texture_mipmap_bias: struct{
     using _set_texture_mipmap_bias: ^GDW.MethodBind,
@@ -626,7 +626,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_texture_mipmap_bias: struct{
     using _get_texture_mipmap_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_anisotropic_filtering_level: struct{
     using _set_anisotropic_filtering_level: ^GDW.MethodBind,
@@ -634,7 +634,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_anisotropic_filtering_level: struct{
     using _get_anisotropic_filtering_level: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_AnisotropicFiltering)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_AnisotropicFiltering)
   },
   set_vrs_mode: struct{
     using _set_vrs_mode: ^GDW.MethodBind,
@@ -642,7 +642,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_vrs_mode: struct{
     using _get_vrs_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_VRSMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_VRSMode)
   },
   set_vrs_update_mode: struct{
     using _set_vrs_update_mode: ^GDW.MethodBind,
@@ -650,7 +650,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_vrs_update_mode: struct{
     using _get_vrs_update_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Viewport_VRSUpdateMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Viewport_VRSUpdateMode)
   },
   set_vrs_texture: struct{
     using _set_vrs_texture: ^GDW.MethodBind,
@@ -658,7 +658,7 @@ Viewport_MethodBind_List :: struct {
   },
     get_vrs_texture: struct{
     using _get_vrs_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Viewport, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Viewport, args: rawptr = nil, r_ret: ^Texture2D)
   },
 };
 Viewport_Init_ :: proc (Viewport_methods: ^Viewport_MethodBind_List, loc := #caller_location) {

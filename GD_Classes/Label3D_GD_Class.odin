@@ -29,7 +29,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_horizontal_alignment: struct{
     using _get_horizontal_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   set_vertical_alignment: struct{
     using _set_vertical_alignment: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_vertical_alignment: struct{
     using _get_vertical_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.VerticalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.VerticalAlignment)
   },
   set_modulate: struct{
     using _set_modulate: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_modulate: struct{
     using _get_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_outline_modulate: struct{
     using _set_outline_modulate: ^GDW.MethodBind,
@@ -53,7 +53,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_outline_modulate: struct{
     using _get_outline_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_text: struct{
     using _set_text: ^GDW.MethodBind,
@@ -61,7 +61,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_text_direction: struct{
     using _set_text_direction: ^GDW.MethodBind,
@@ -69,7 +69,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^TextServer_Direction)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^TextServer_Direction)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -77,7 +77,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_structured_text_bidi_override: struct{
     using _set_structured_text_bidi_override: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override: struct{
     using _get_structured_text_bidi_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^TextServer_StructuredTextParser)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^TextServer_StructuredTextParser)
   },
   set_structured_text_bidi_override_options: struct{
     using _set_structured_text_bidi_override_options: ^GDW.MethodBind,
@@ -93,7 +93,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override_options: struct{
     using _get_structured_text_bidi_override_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_uppercase: struct{
     using _set_uppercase: ^GDW.MethodBind,
@@ -101,7 +101,7 @@ Label3D_MethodBind_List :: struct {
   },
     is_uppercase: struct{
     using _is_uppercase: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_render_priority: struct{
     using _set_render_priority: ^GDW.MethodBind,
@@ -109,7 +109,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_render_priority: struct{
     using _get_render_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_outline_render_priority: struct{
     using _set_outline_render_priority: ^GDW.MethodBind,
@@ -117,7 +117,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_outline_render_priority: struct{
     using _get_outline_render_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_font: struct{
     using _set_font: ^GDW.MethodBind,
@@ -125,7 +125,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_font: struct{
     using _get_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^Font)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^Font)
   },
   set_font_size: struct{
     using _set_font_size: ^GDW.MethodBind,
@@ -133,7 +133,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_font_size: struct{
     using _get_font_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_outline_size: struct{
     using _set_outline_size: ^GDW.MethodBind,
@@ -141,7 +141,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_outline_size: struct{
     using _get_outline_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_line_spacing: struct{
     using _set_line_spacing: ^GDW.MethodBind,
@@ -149,7 +149,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_line_spacing: struct{
     using _get_line_spacing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_autowrap_mode: struct{
     using _set_autowrap_mode: ^GDW.MethodBind,
@@ -157,7 +157,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_autowrap_mode: struct{
     using _get_autowrap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^TextServer_AutowrapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^TextServer_AutowrapMode)
   },
   set_autowrap_trim_flags: struct{
     using _set_autowrap_trim_flags: ^GDW.MethodBind,
@@ -165,7 +165,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_autowrap_trim_flags: struct{
     using _get_autowrap_trim_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^TextServer_LineBreakFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^TextServer_LineBreakFlag)
   },
   set_justification_flags: struct{
     using _set_justification_flags: ^GDW.MethodBind,
@@ -173,7 +173,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_justification_flags: struct{
     using _get_justification_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^TextServer_JustificationFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^TextServer_JustificationFlag)
   },
   set_width: struct{
     using _set_width: ^GDW.MethodBind,
@@ -181,7 +181,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_pixel_size: struct{
     using _set_pixel_size: ^GDW.MethodBind,
@@ -189,7 +189,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_pixel_size: struct{
     using _get_pixel_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -197,7 +197,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_draw_flag: struct{
     using _set_draw_flag: ^GDW.MethodBind,
@@ -213,7 +213,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_billboard_mode: struct{
     using _get_billboard_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_BillboardMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_BillboardMode)
   },
   set_alpha_cut_mode: struct{
     using _set_alpha_cut_mode: ^GDW.MethodBind,
@@ -221,7 +221,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_alpha_cut_mode: struct{
     using _get_alpha_cut_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^Label3D_AlphaCutMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^Label3D_AlphaCutMode)
   },
   set_alpha_scissor_threshold: struct{
     using _set_alpha_scissor_threshold: ^GDW.MethodBind,
@@ -229,7 +229,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_alpha_scissor_threshold: struct{
     using _get_alpha_scissor_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_alpha_hash_scale: struct{
     using _set_alpha_hash_scale: ^GDW.MethodBind,
@@ -237,7 +237,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_alpha_hash_scale: struct{
     using _get_alpha_hash_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_alpha_antialiasing: struct{
     using _set_alpha_antialiasing: ^GDW.MethodBind,
@@ -245,7 +245,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_alpha_antialiasing: struct{
     using _get_alpha_antialiasing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_AlphaAntiAliasing)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_AlphaAntiAliasing)
   },
   set_alpha_antialiasing_edge: struct{
     using _set_alpha_antialiasing_edge: ^GDW.MethodBind,
@@ -253,7 +253,7 @@ Label3D_MethodBind_List :: struct {
   },
     get_alpha_antialiasing_edge: struct{
     using _get_alpha_antialiasing_edge: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_texture_filter: struct{
     using _set_texture_filter: ^GDW.MethodBind,
@@ -261,11 +261,11 @@ Label3D_MethodBind_List :: struct {
   },
     get_texture_filter: struct{
     using _get_texture_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_TextureFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_TextureFilter)
   },
   generate_triangle_mesh: struct{
     using _generate_triangle_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label3D, #by_ptr args: i64 = 0, r_ret: ^TriangleMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: Label3D, args: rawptr = nil, r_ret: ^TriangleMesh)
   },
 };
 Label3D_Init_ :: proc (Label3D_methods: ^Label3D_MethodBind_List, loc := #caller_location) {

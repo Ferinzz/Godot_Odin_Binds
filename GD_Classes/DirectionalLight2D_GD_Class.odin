@@ -14,7 +14,7 @@ DirectionalLight2D_MethodBind_List :: struct {
   },
     get_max_distance: struct{
     using _get_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 DirectionalLight2D_Init_ :: proc (DirectionalLight2D_methods: ^DirectionalLight2D_MethodBind_List, loc := #caller_location) {

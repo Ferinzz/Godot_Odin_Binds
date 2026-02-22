@@ -10,15 +10,15 @@ ScriptEditor :: ^GDW.Object
 ScriptEditor_MethodBind_List :: struct {
   get_current_editor: struct{
     using _get_current_editor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, #by_ptr args: i64 = 0, r_ret: ^ScriptEditorBase)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, args: rawptr = nil, r_ret: ^ScriptEditorBase)
   },
   get_open_script_editors: struct{
     using _get_open_script_editors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_breakpoints: struct{
     using _get_breakpoints: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   register_syntax_highlighter: struct{
     using _register_syntax_highlighter: ^GDW.MethodBind,
@@ -34,11 +34,11 @@ ScriptEditor_MethodBind_List :: struct {
   },
     get_current_script: struct{
     using _get_current_script: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, #by_ptr args: i64 = 0, r_ret: ^Script)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, args: rawptr = nil, r_ret: ^Script)
   },
   get_open_scripts: struct{
     using _get_open_scripts: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditor, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   open_script_create_dialog: struct{
     using _open_script_create_dialog: ^GDW.MethodBind,

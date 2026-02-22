@@ -14,7 +14,7 @@ TextureLayeredRD_MethodBind_List :: struct {
   },
     get_texture_rd_rid: struct{
     using _get_texture_rd_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureLayeredRD, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureLayeredRD, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 TextureLayeredRD_Init_ :: proc (TextureLayeredRD_methods: ^TextureLayeredRD_MethodBind_List, loc := #caller_location) {

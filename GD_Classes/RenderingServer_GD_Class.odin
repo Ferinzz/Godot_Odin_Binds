@@ -794,7 +794,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     texture_2d_placeholder_create: struct{
     using _texture_2d_placeholder_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   texture_2d_layered_placeholder_create: struct{
     using _texture_2d_layered_placeholder_create: ^GDW.MethodBind,
@@ -802,7 +802,7 @@ RenderingServer_MethodBind_List :: struct {
   },
   texture_3d_placeholder_create: struct{
     using _texture_3d_placeholder_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   texture_2d_get: struct{
     using _texture_2d_get: ^GDW.MethodBind,
@@ -854,7 +854,7 @@ RenderingServer_MethodBind_List :: struct {
   },
   shader_create: struct{
     using _shader_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   shader_set_code: struct{
     using _shader_set_code: ^GDW.MethodBind,
@@ -886,7 +886,7 @@ RenderingServer_MethodBind_List :: struct {
   },
   material_create: struct{
     using _material_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   material_set_shader: struct{
     using _material_set_shader: ^GDW.MethodBind,
@@ -918,7 +918,7 @@ RenderingServer_MethodBind_List :: struct {
   },
   mesh_create: struct{
     using _mesh_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   mesh_surface_get_format_offset: struct{
     using _mesh_surface_get_format_offset: ^GDW.MethodBind,
@@ -1026,7 +1026,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     multimesh_create: struct{
     using _multimesh_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   multimesh_allocate_data: struct{
     using _multimesh_allocate_data: ^GDW.MethodBind,
@@ -1134,7 +1134,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     skeleton_create: struct{
     using _skeleton_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   skeleton_allocate_data: struct{
     using _skeleton_allocate_data: ^GDW.MethodBind,
@@ -1166,15 +1166,15 @@ RenderingServer_MethodBind_List :: struct {
   },
     directional_light_create: struct{
     using _directional_light_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   omni_light_create: struct{
     using _omni_light_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   spot_light_create: struct{
     using _spot_light_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   light_set_color: struct{
     using _light_set_color: ^GDW.MethodBind,
@@ -1258,7 +1258,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     reflection_probe_create: struct{
     using _reflection_probe_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   reflection_probe_set_update_mode: struct{
     using _reflection_probe_set_update_mode: ^GDW.MethodBind,
@@ -1326,7 +1326,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     decal_create: struct{
     using _decal_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   decal_set_size: struct{
     using _decal_set_size: ^GDW.MethodBind,
@@ -1374,7 +1374,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     voxel_gi_create: struct{
     using _voxel_gi_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   voxel_gi_allocate_data: struct{
     using _voxel_gi_allocate_data: ^GDW.MethodBind,
@@ -1442,7 +1442,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     lightmap_create: struct{
     using _lightmap_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   lightmap_set_textures: struct{
     using _lightmap_set_textures: ^GDW.MethodBind,
@@ -1486,7 +1486,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     particles_create: struct{
     using _particles_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   particles_set_mode: struct{
     using _particles_set_mode: ^GDW.MethodBind,
@@ -1626,7 +1626,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     particles_collision_create: struct{
     using _particles_collision_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   particles_collision_set_collision_type: struct{
     using _particles_collision_set_collision_type: ^GDW.MethodBind,
@@ -1674,7 +1674,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     fog_volume_create: struct{
     using _fog_volume_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   fog_volume_set_shape: struct{
     using _fog_volume_set_shape: ^GDW.MethodBind,
@@ -1690,7 +1690,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     visibility_notifier_create: struct{
     using _visibility_notifier_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   visibility_notifier_set_aabb: struct{
     using _visibility_notifier_set_aabb: ^GDW.MethodBind,
@@ -1702,7 +1702,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     occluder_create: struct{
     using _occluder_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   occluder_set_mesh: struct{
     using _occluder_set_mesh: ^GDW.MethodBind,
@@ -1710,7 +1710,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     camera_create: struct{
     using _camera_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   camera_set_perspective: struct{
     using _camera_set_perspective: ^GDW.MethodBind,
@@ -1750,7 +1750,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     viewport_create: struct{
     using _viewport_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   viewport_set_use_xr: struct{
     using _viewport_set_use_xr: ^GDW.MethodBind,
@@ -1962,7 +1962,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     sky_create: struct{
     using _sky_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   sky_set_radiance_size: struct{
     using _sky_set_radiance_size: ^GDW.MethodBind,
@@ -1982,7 +1982,7 @@ RenderingServer_MethodBind_List :: struct {
   },
   compositor_effect_create: struct{
     using _compositor_effect_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   compositor_effect_set_enabled: struct{
     using _compositor_effect_set_enabled: ^GDW.MethodBind,
@@ -1998,7 +1998,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     compositor_create: struct{
     using _compositor_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   compositor_set_compositor_effects: struct{
     using _compositor_set_compositor_effects: ^GDW.MethodBind,
@@ -2006,7 +2006,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     environment_create: struct{
     using _environment_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   environment_set_background: struct{
     using _environment_set_background: ^GDW.MethodBind,
@@ -2142,7 +2142,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     camera_attributes_create: struct{
     using _camera_attributes_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   camera_attributes_set_dof_blur_quality: struct{
     using _camera_attributes_set_dof_blur_quality: ^GDW.MethodBind,
@@ -2166,7 +2166,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     scenario_create: struct{
     using _scenario_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   scenario_set_environment: struct{
     using _scenario_set_environment: ^GDW.MethodBind,
@@ -2190,7 +2190,7 @@ RenderingServer_MethodBind_List :: struct {
   },
   instance_create: struct{
     using _instance_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   instance_set_base: struct{
     using _instance_set_base: ^GDW.MethodBind,
@@ -2318,7 +2318,7 @@ RenderingServer_MethodBind_List :: struct {
   },
   canvas_create: struct{
     using _canvas_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   canvas_set_item_mirroring: struct{
     using _canvas_set_item_mirroring: ^GDW.MethodBind,
@@ -2338,7 +2338,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     canvas_texture_create: struct{
     using _canvas_texture_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   canvas_texture_set_channel: struct{
     using _canvas_texture_set_channel: ^GDW.MethodBind,
@@ -2358,7 +2358,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     canvas_item_create: struct{
     using _canvas_item_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   canvas_item_set_parent: struct{
     using _canvas_item_set_parent: ^GDW.MethodBind,
@@ -2570,7 +2570,7 @@ RenderingServer_MethodBind_List :: struct {
   },
   canvas_light_create: struct{
     using _canvas_light_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   canvas_light_attach_to_canvas: struct{
     using _canvas_light_attach_to_canvas: ^GDW.MethodBind,
@@ -2662,7 +2662,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     canvas_light_occluder_create: struct{
     using _canvas_light_occluder_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   canvas_light_occluder_attach_to_canvas: struct{
     using _canvas_light_occluder_attach_to_canvas: ^GDW.MethodBind,
@@ -2702,7 +2702,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     canvas_occluder_polygon_create: struct{
     using _canvas_occluder_polygon_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   canvas_occluder_polygon_set_shape: struct{
     using _canvas_occluder_polygon_set_shape: ^GDW.MethodBind,
@@ -2726,7 +2726,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     global_shader_parameter_get_list: struct{
     using _global_shader_parameter_get_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   global_shader_parameter_set: struct{
     using _global_shader_parameter_set: ^GDW.MethodBind,
@@ -2754,7 +2754,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     has_changed: struct{
     using _has_changed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_rendering_info: struct{
     using _get_rendering_info: ^GDW.MethodBind,
@@ -2762,27 +2762,27 @@ RenderingServer_MethodBind_List :: struct {
   },
   get_video_adapter_name: struct{
     using _get_video_adapter_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_video_adapter_vendor: struct{
     using _get_video_adapter_vendor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_video_adapter_type: struct{
     using _get_video_adapter_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_DeviceType)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^RenderingDevice_DeviceType)
   },
   get_video_adapter_api_version: struct{
     using _get_video_adapter_api_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_current_rendering_driver_name: struct{
     using _get_current_rendering_driver_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_current_rendering_method: struct{
     using _get_current_rendering_method: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   make_sphere_mesh: struct{
     using _make_sphere_mesh: ^GDW.MethodBind,
@@ -2790,15 +2790,15 @@ RenderingServer_MethodBind_List :: struct {
   },
   get_test_cube: struct{
     using _get_test_cube: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_test_texture: struct{
     using _get_test_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_white_texture: struct{
     using _get_white_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_boot_image_with_stretch: struct{
     using _set_boot_image_with_stretch: ^GDW.MethodBind,
@@ -2810,7 +2810,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     get_default_clear_color: struct{
     using _get_default_clear_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_default_clear_color: struct{
     using _set_default_clear_color: ^GDW.MethodBind,
@@ -2826,7 +2826,7 @@ RenderingServer_MethodBind_List :: struct {
   },
     is_render_loop_enabled: struct{
     using _is_render_loop_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_render_loop_enabled: struct{
     using _set_render_loop_enabled: ^GDW.MethodBind,
@@ -2834,11 +2834,11 @@ RenderingServer_MethodBind_List :: struct {
   },
     get_frame_setup_time_cpu: struct{
     using _get_frame_setup_time_cpu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   force_sync: struct{
     using _force_sync: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     force_draw: struct{
     using _force_draw: ^GDW.MethodBind,
@@ -2846,15 +2846,15 @@ RenderingServer_MethodBind_List :: struct {
   },
     get_rendering_device: struct{
     using _get_rendering_device: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^RenderingDevice)
   },
   create_local_rendering_device: struct{
     using _create_local_rendering_device: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^RenderingDevice)
   },
   is_on_render_thread: struct{
     using _is_on_render_thread: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   call_on_render_thread: struct{
     using _call_on_render_thread: ^GDW.MethodBind,

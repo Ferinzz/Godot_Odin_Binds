@@ -21,7 +21,7 @@ ResourceUID_MethodBind_List :: struct {
   },
   create_id: struct{
     using _create_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ResourceUID, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ResourceUID, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   create_id_for_path: struct{
     using _create_id_for_path: ^GDW.MethodBind,

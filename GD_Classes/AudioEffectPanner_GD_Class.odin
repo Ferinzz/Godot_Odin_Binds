@@ -14,7 +14,7 @@ AudioEffectPanner_MethodBind_List :: struct {
   },
     get_pan: struct{
     using _get_pan: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPanner, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPanner, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectPanner_Init_ :: proc (AudioEffectPanner_methods: ^AudioEffectPanner_MethodBind_List, loc := #caller_location) {

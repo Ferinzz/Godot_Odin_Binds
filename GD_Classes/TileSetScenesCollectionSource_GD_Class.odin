@@ -10,7 +10,7 @@ TileSetScenesCollectionSource :: ^GDW.Object
 TileSetScenesCollectionSource_MethodBind_List :: struct {
   get_scene_tiles_count: struct{
     using _get_scene_tiles_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetScenesCollectionSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetScenesCollectionSource, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_scene_tile_id: struct{
     using _get_scene_tile_id: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ TileSetScenesCollectionSource_MethodBind_List :: struct {
   },
     get_next_scene_tile_id: struct{
     using _get_next_scene_tile_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetScenesCollectionSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetScenesCollectionSource, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 TileSetScenesCollectionSource_Init_ :: proc (TileSetScenesCollectionSource_methods: ^TileSetScenesCollectionSource_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_rayleigh_coefficient: struct{
     using _get_rayleigh_coefficient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rayleigh_color: struct{
     using _set_rayleigh_color: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_rayleigh_color: struct{
     using _get_rayleigh_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_mie_coefficient: struct{
     using _set_mie_coefficient: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_mie_coefficient: struct{
     using _get_mie_coefficient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mie_eccentricity: struct{
     using _set_mie_eccentricity: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_mie_eccentricity: struct{
     using _get_mie_eccentricity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mie_color: struct{
     using _set_mie_color: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_mie_color: struct{
     using _get_mie_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_turbidity: struct{
     using _set_turbidity: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_turbidity: struct{
     using _get_turbidity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sun_disk_scale: struct{
     using _set_sun_disk_scale: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_sun_disk_scale: struct{
     using _get_sun_disk_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ground_color: struct{
     using _set_ground_color: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_ground_color: struct{
     using _get_ground_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_energy_multiplier: struct{
     using _set_energy_multiplier: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_energy_multiplier: struct{
     using _get_energy_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_debanding: struct{
     using _set_use_debanding: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_use_debanding: struct{
     using _get_use_debanding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_night_sky: struct{
     using _set_night_sky: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ PhysicalSkyMaterial_MethodBind_List :: struct {
   },
     get_night_sky: struct{
     using _get_night_sky: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalSkyMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
 };
 PhysicalSkyMaterial_Init_ :: proc (PhysicalSkyMaterial_methods: ^PhysicalSkyMaterial_MethodBind_List, loc := #caller_location) {

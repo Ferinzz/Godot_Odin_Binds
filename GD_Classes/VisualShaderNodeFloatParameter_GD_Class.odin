@@ -21,7 +21,7 @@ VisualShaderNodeFloatParameter_MethodBind_List :: struct {
   },
     get_hint: struct{
     using _get_hint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeFloatParameter_Hint)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, args: rawptr = nil, r_ret: ^VisualShaderNodeFloatParameter_Hint)
   },
   set_min: struct{
     using _set_min: ^GDW.MethodBind,
@@ -29,7 +29,7 @@ VisualShaderNodeFloatParameter_MethodBind_List :: struct {
   },
     get_min: struct{
     using _get_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max: struct{
     using _set_max: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ VisualShaderNodeFloatParameter_MethodBind_List :: struct {
   },
     get_max: struct{
     using _get_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_step: struct{
     using _set_step: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ VisualShaderNodeFloatParameter_MethodBind_List :: struct {
   },
     get_step: struct{
     using _get_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_default_value_enabled: struct{
     using _set_default_value_enabled: ^GDW.MethodBind,
@@ -53,7 +53,7 @@ VisualShaderNodeFloatParameter_MethodBind_List :: struct {
   },
     is_default_value_enabled: struct{
     using _is_default_value_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_default_value: struct{
     using _set_default_value: ^GDW.MethodBind,
@@ -61,7 +61,7 @@ VisualShaderNodeFloatParameter_MethodBind_List :: struct {
   },
     get_default_value: struct{
     using _get_default_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatParameter, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 VisualShaderNodeFloatParameter_Init_ :: proc (VisualShaderNodeFloatParameter_methods: ^VisualShaderNodeFloatParameter_MethodBind_List, loc := #caller_location) {

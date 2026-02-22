@@ -30,7 +30,7 @@ ENetMultiplayerPeer_MethodBind_List :: struct {
   },
     get_host: struct{
     using _get_host: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetMultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^ENetConnection)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetMultiplayerPeer, args: rawptr = nil, r_ret: ^ENetConnection)
   },
   get_peer: struct{
     using _get_peer: ^GDW.MethodBind,

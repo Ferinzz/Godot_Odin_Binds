@@ -18,7 +18,7 @@ RDShaderFile_MethodBind_List :: struct {
   },
   get_version_list: struct{
     using _get_version_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDShaderFile, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RDShaderFile, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_base_error: struct{
     using _set_base_error: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ RDShaderFile_MethodBind_List :: struct {
   },
     get_base_error: struct{
     using _get_base_error: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDShaderFile, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RDShaderFile, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 RDShaderFile_Init_ :: proc (RDShaderFile_methods: ^RDShaderFile_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ XRFaceModifier3D_MethodBind_List :: struct {
   },
     get_face_tracker: struct{
     using _get_face_tracker: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRFaceModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: XRFaceModifier3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_target: struct{
     using _set_target: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ XRFaceModifier3D_MethodBind_List :: struct {
   },
     get_target: struct{
     using _get_target: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRFaceModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: XRFaceModifier3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
 };
 XRFaceModifier3D_Init_ :: proc (XRFaceModifier3D_methods: ^XRFaceModifier3D_MethodBind_List, loc := #caller_location) {

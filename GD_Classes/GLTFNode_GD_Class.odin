@@ -10,7 +10,7 @@ GLTFNode :: ^GDW.Object
 GLTFNode_MethodBind_List :: struct {
   get_original_name: struct{
     using _get_original_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_original_name: struct{
     using _set_original_name: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_parent: struct{
     using _get_parent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_parent: struct{
     using _set_parent: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_height: struct{
     using _set_height: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_xform: struct{
     using _get_xform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_xform: struct{
     using _set_xform: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_mesh: struct{
     using _set_mesh: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_camera: struct{
     using _get_camera: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_camera: struct{
     using _set_camera: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_skin: struct{
     using _get_skin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_skin: struct{
     using _set_skin: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_skeleton: struct{
     using _get_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_skeleton: struct{
     using _set_skeleton: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_position: struct{
     using _set_position: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_rotation: struct{
     using _get_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Quaternion)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Quaternion)
   },
   set_rotation: struct{
     using _set_rotation: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_scale: struct{
     using _get_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_scale: struct{
     using _set_scale: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_children: struct{
     using _get_children: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_children: struct{
     using _set_children: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_light: struct{
     using _get_light: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_light: struct{
     using _set_light: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ GLTFNode_MethodBind_List :: struct {
   },
     get_visible: struct{
     using _get_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFNode, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_visible: struct{
     using _set_visible: ^GDW.MethodBind,

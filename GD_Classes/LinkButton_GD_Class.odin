@@ -20,7 +20,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_text_overrun_behavior: struct{
     using _set_text_overrun_behavior: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_text_overrun_behavior: struct{
     using _get_text_overrun_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^TextServer_OverrunBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^TextServer_OverrunBehavior)
   },
   set_ellipsis_char: struct{
     using _set_ellipsis_char: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_ellipsis_char: struct{
     using _get_ellipsis_char: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_text_direction: struct{
     using _set_text_direction: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^Control_TextDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^Control_TextDirection)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_uri: struct{
     using _set_uri: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_uri: struct{
     using _get_uri: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_underline_mode: struct{
     using _set_underline_mode: ^GDW.MethodBind,
@@ -68,7 +68,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_underline_mode: struct{
     using _get_underline_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^LinkButton_UnderlineMode)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^LinkButton_UnderlineMode)
   },
   set_structured_text_bidi_override: struct{
     using _set_structured_text_bidi_override: ^GDW.MethodBind,
@@ -76,7 +76,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override: struct{
     using _get_structured_text_bidi_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^TextServer_StructuredTextParser)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^TextServer_StructuredTextParser)
   },
   set_structured_text_bidi_override_options: struct{
     using _set_structured_text_bidi_override_options: ^GDW.MethodBind,
@@ -84,7 +84,7 @@ LinkButton_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override_options: struct{
     using _get_structured_text_bidi_override_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: LinkButton, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 LinkButton_Init_ :: proc (LinkButton_methods: ^LinkButton_MethodBind_List, loc := #caller_location) {

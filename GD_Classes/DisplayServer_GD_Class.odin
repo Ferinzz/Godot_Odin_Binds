@@ -307,7 +307,7 @@ DisplayServer_MethodBind_List :: struct {
   },
   get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   help_set_search_callbacks: struct{
     using _help_set_search_callbacks: ^GDW.MethodBind,
@@ -507,19 +507,19 @@ DisplayServer_MethodBind_List :: struct {
   },
     global_menu_get_system_menu_roots: struct{
     using _global_menu_get_system_menu_roots: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   tts_is_speaking: struct{
     using _tts_is_speaking: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   tts_is_paused: struct{
     using _tts_is_paused: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   tts_get_voices: struct{
     using _tts_get_voices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   tts_get_voices_for_language: struct{
     using _tts_get_voices_for_language: ^GDW.MethodBind,
@@ -531,15 +531,15 @@ DisplayServer_MethodBind_List :: struct {
   },
     tts_pause: struct{
     using _tts_pause: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     tts_resume: struct{
     using _tts_resume: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     tts_stop: struct{
     using _tts_stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     tts_set_utterance_callback: struct{
     using _tts_set_utterance_callback: ^GDW.MethodBind,
@@ -547,19 +547,19 @@ DisplayServer_MethodBind_List :: struct {
   },
     is_dark_mode_supported: struct{
     using _is_dark_mode_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_dark_mode: struct{
     using _is_dark_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_accent_color: struct{
     using _get_accent_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   get_base_color: struct{
     using _get_base_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_system_theme_change_callback: struct{
     using _set_system_theme_change_callback: ^GDW.MethodBind,
@@ -571,7 +571,7 @@ DisplayServer_MethodBind_List :: struct {
   },
     mouse_get_mode: struct{
     using _mouse_get_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^DisplayServer_MouseMode)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^DisplayServer_MouseMode)
   },
   warp_mouse: struct{
     using _warp_mouse: ^GDW.MethodBind,
@@ -579,11 +579,11 @@ DisplayServer_MethodBind_List :: struct {
   },
     mouse_get_position: struct{
     using _mouse_get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   mouse_get_button_state: struct{
     using _mouse_get_button_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.MouseButtonMask)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.MouseButtonMask)
   },
   clipboard_set: struct{
     using _clipboard_set: ^GDW.MethodBind,
@@ -591,19 +591,19 @@ DisplayServer_MethodBind_List :: struct {
   },
     clipboard_get: struct{
     using _clipboard_get: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   clipboard_get_image: struct{
     using _clipboard_get_image: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^Image)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^Image)
   },
   clipboard_has: struct{
     using _clipboard_has: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   clipboard_has_image: struct{
     using _clipboard_has_image: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   clipboard_set_primary: struct{
     using _clipboard_set_primary: ^GDW.MethodBind,
@@ -611,27 +611,27 @@ DisplayServer_MethodBind_List :: struct {
   },
     clipboard_get_primary: struct{
     using _clipboard_get_primary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_display_cutouts: struct{
     using _get_display_cutouts: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_display_safe_area: struct{
     using _get_display_safe_area: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2i)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Rect2i)
   },
   get_screen_count: struct{
     using _get_screen_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_primary_screen: struct{
     using _get_primary_screen: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_keyboard_focus_screen: struct{
     using _get_keyboard_focus_screen: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_screen_from_rect: struct{
     using _get_screen_from_rect: ^GDW.MethodBind,
@@ -659,11 +659,11 @@ DisplayServer_MethodBind_List :: struct {
   },
   is_touchscreen_available: struct{
     using _is_touchscreen_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   screen_get_max_scale: struct{
     using _screen_get_max_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   screen_get_refresh_rate: struct{
     using _screen_get_refresh_rate: ^GDW.MethodBind,
@@ -695,11 +695,11 @@ DisplayServer_MethodBind_List :: struct {
   },
     screen_is_kept_on: struct{
     using _screen_is_kept_on: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_window_list: struct{
     using _get_window_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   get_window_at_screen_position: struct{
     using _get_window_at_screen_position: ^GDW.MethodBind,
@@ -711,7 +711,7 @@ DisplayServer_MethodBind_List :: struct {
   },
   window_get_active_popup: struct{
     using _window_get_active_popup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   window_set_popup_safe_rect: struct{
     using _window_set_popup_safe_rect: ^GDW.MethodBind,
@@ -875,11 +875,11 @@ DisplayServer_MethodBind_List :: struct {
   },
   window_maximize_on_title_dbl_click: struct{
     using _window_maximize_on_title_dbl_click: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   window_minimize_on_title_dbl_click: struct{
     using _window_minimize_on_title_dbl_click: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   window_start_drag: struct{
     using _window_start_drag: ^GDW.MethodBind,
@@ -895,19 +895,19 @@ DisplayServer_MethodBind_List :: struct {
   },
     accessibility_should_increase_contrast: struct{
     using _accessibility_should_increase_contrast: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   accessibility_should_reduce_animation: struct{
     using _accessibility_should_reduce_animation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   accessibility_should_reduce_transparency: struct{
     using _accessibility_should_reduce_transparency: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   accessibility_screen_reader_active: struct{
     using _accessibility_screen_reader_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   accessibility_create_element: struct{
     using _accessibility_create_element: ^GDW.MethodBind,
@@ -1199,11 +1199,11 @@ DisplayServer_MethodBind_List :: struct {
   },
     ime_get_selection: struct{
     using _ime_get_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   ime_get_text: struct{
     using _ime_get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   virtual_keyboard_show: struct{
     using _virtual_keyboard_show: ^GDW.MethodBind,
@@ -1211,15 +1211,15 @@ DisplayServer_MethodBind_List :: struct {
   },
     virtual_keyboard_hide: struct{
     using _virtual_keyboard_hide: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     virtual_keyboard_get_height: struct{
     using _virtual_keyboard_get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_hardware_keyboard: struct{
     using _has_hardware_keyboard: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hardware_keyboard_connection_change_callback: struct{
     using _set_hardware_keyboard_connection_change_callback: ^GDW.MethodBind,
@@ -1231,7 +1231,7 @@ DisplayServer_MethodBind_List :: struct {
   },
     cursor_get_shape: struct{
     using _cursor_get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^DisplayServer_CursorShape)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^DisplayServer_CursorShape)
   },
   cursor_set_custom_image: struct{
     using _cursor_set_custom_image: ^GDW.MethodBind,
@@ -1239,7 +1239,7 @@ DisplayServer_MethodBind_List :: struct {
   },
     get_swap_cancel_ok: struct{
     using _get_swap_cancel_ok: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   enable_for_stealing_focus: struct{
     using _enable_for_stealing_focus: ^GDW.MethodBind,
@@ -1263,15 +1263,15 @@ DisplayServer_MethodBind_List :: struct {
   },
   beep: struct{
     using _beep: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     keyboard_get_layout_count: struct{
     using _keyboard_get_layout_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   keyboard_get_current_layout: struct{
     using _keyboard_get_current_layout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   keyboard_set_current_layout: struct{
     using _keyboard_set_current_layout: ^GDW.MethodBind,
@@ -1295,7 +1295,7 @@ DisplayServer_MethodBind_List :: struct {
   },
   show_emoji_and_symbol_picker: struct{
     using _show_emoji_and_symbol_picker: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     color_picker: struct{
     using _color_picker: ^GDW.MethodBind,
@@ -1303,11 +1303,11 @@ DisplayServer_MethodBind_List :: struct {
   },
   process_events: struct{
     using _process_events: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     force_process_and_drop_events: struct{
     using _force_process_and_drop_events: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_native_icon: struct{
     using _set_native_icon: ^GDW.MethodBind,
@@ -1347,7 +1347,7 @@ DisplayServer_MethodBind_List :: struct {
   },
     tablet_get_driver_count: struct{
     using _tablet_get_driver_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   tablet_get_driver_name: struct{
     using _tablet_get_driver_name: ^GDW.MethodBind,
@@ -1355,7 +1355,7 @@ DisplayServer_MethodBind_List :: struct {
   },
   tablet_get_current_driver: struct{
     using _tablet_get_current_driver: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   tablet_set_current_driver: struct{
     using _tablet_set_current_driver: ^GDW.MethodBind,
@@ -1363,7 +1363,7 @@ DisplayServer_MethodBind_List :: struct {
   },
     is_window_transparency_available: struct{
     using _is_window_transparency_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   register_additional_output: struct{
     using _register_additional_output: ^GDW.MethodBind,
@@ -1375,7 +1375,7 @@ DisplayServer_MethodBind_List :: struct {
   },
     has_additional_outputs: struct{
     using _has_additional_outputs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 DisplayServer_Init_ :: proc (DisplayServer_methods: ^DisplayServer_MethodBind_List, loc := #caller_location) {

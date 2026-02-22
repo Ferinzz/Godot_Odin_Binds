@@ -18,7 +18,7 @@ InputEventKey_MethodBind_List :: struct {
   },
     get_keycode: struct{
     using _get_keycode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.Key)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.Key)
   },
   set_physical_keycode: struct{
     using _set_physical_keycode: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ InputEventKey_MethodBind_List :: struct {
   },
     get_physical_keycode: struct{
     using _get_physical_keycode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.Key)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.Key)
   },
   set_key_label: struct{
     using _set_key_label: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ InputEventKey_MethodBind_List :: struct {
   },
     get_key_label: struct{
     using _get_key_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.Key)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.Key)
   },
   set_unicode: struct{
     using _set_unicode: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ InputEventKey_MethodBind_List :: struct {
   },
     get_unicode: struct{
     using _get_unicode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_location: struct{
     using _set_location: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ InputEventKey_MethodBind_List :: struct {
   },
     get_location: struct{
     using _get_location: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.KeyLocation)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.KeyLocation)
   },
   set_echo: struct{
     using _set_echo: ^GDW.MethodBind,
@@ -58,31 +58,31 @@ InputEventKey_MethodBind_List :: struct {
   },
     get_keycode_with_modifiers: struct{
     using _get_keycode_with_modifiers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.Key)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.Key)
   },
   get_physical_keycode_with_modifiers: struct{
     using _get_physical_keycode_with_modifiers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.Key)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.Key)
   },
   get_key_label_with_modifiers: struct{
     using _get_key_label_with_modifiers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.Key)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.Key)
   },
   as_text_keycode: struct{
     using _as_text_keycode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   as_text_physical_keycode: struct{
     using _as_text_physical_keycode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   as_text_key_label: struct{
     using _as_text_key_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   as_text_location: struct{
     using _as_text_location: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventKey, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 InputEventKey_Init_ :: proc (InputEventKey_methods: ^InputEventKey_MethodBind_List, loc := #caller_location) {

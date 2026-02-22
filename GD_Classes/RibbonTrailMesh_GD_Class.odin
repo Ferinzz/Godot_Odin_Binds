@@ -19,7 +19,7 @@ RibbonTrailMesh_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sections: struct{
     using _set_sections: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ RibbonTrailMesh_MethodBind_List :: struct {
   },
     get_sections: struct{
     using _get_sections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_section_length: struct{
     using _set_section_length: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ RibbonTrailMesh_MethodBind_List :: struct {
   },
     get_section_length: struct{
     using _get_section_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_section_segments: struct{
     using _set_section_segments: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ RibbonTrailMesh_MethodBind_List :: struct {
   },
     get_section_segments: struct{
     using _get_section_segments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_curve: struct{
     using _set_curve: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ RibbonTrailMesh_MethodBind_List :: struct {
   },
     get_curve: struct{
     using _get_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, args: rawptr = nil, r_ret: ^Curve)
   },
   set_shape: struct{
     using _set_shape: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ RibbonTrailMesh_MethodBind_List :: struct {
   },
     get_shape: struct{
     using _get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, #by_ptr args: i64 = 0, r_ret: ^RibbonTrailMesh_Shape)
+    m_call: proc(_:^GDW.MethodBind, obj: RibbonTrailMesh, args: rawptr = nil, r_ret: ^RibbonTrailMesh_Shape)
   },
 };
 RibbonTrailMesh_Init_ :: proc (RibbonTrailMesh_methods: ^RibbonTrailMesh_MethodBind_List, loc := #caller_location) {

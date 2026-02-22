@@ -14,11 +14,11 @@ Shortcut_MethodBind_List :: struct {
   },
     get_events: struct{
     using _get_events: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shortcut, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Shortcut, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   has_valid_event: struct{
     using _has_valid_event: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shortcut, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Shortcut, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   matches_event: struct{
     using _matches_event: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ Shortcut_MethodBind_List :: struct {
   },
   get_as_text: struct{
     using _get_as_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shortcut, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Shortcut, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 Shortcut_Init_ :: proc (Shortcut_methods: ^Shortcut_MethodBind_List, loc := #caller_location) {

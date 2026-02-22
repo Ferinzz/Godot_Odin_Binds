@@ -14,7 +14,7 @@ InputEventShortcut_MethodBind_List :: struct {
   },
     get_shortcut: struct{
     using _get_shortcut: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventShortcut, #by_ptr args: i64 = 0, r_ret: ^Shortcut)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventShortcut, args: rawptr = nil, r_ret: ^Shortcut)
   },
 };
 InputEventShortcut_Init_ :: proc (InputEventShortcut_methods: ^InputEventShortcut_MethodBind_List, loc := #caller_location) {

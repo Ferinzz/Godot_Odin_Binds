@@ -23,7 +23,7 @@ FlowContainer_LastWrapAlignmentMode :: enum i64 {
 FlowContainer_MethodBind_List :: struct {
   get_line_count: struct{
     using _get_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_alignment: struct{
     using _set_alignment: ^GDW.MethodBind,
@@ -31,7 +31,7 @@ FlowContainer_MethodBind_List :: struct {
   },
     get_alignment: struct{
     using _get_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, #by_ptr args: i64 = 0, r_ret: ^FlowContainer_AlignmentMode)
+    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, args: rawptr = nil, r_ret: ^FlowContainer_AlignmentMode)
   },
   set_last_wrap_alignment: struct{
     using _set_last_wrap_alignment: ^GDW.MethodBind,
@@ -39,7 +39,7 @@ FlowContainer_MethodBind_List :: struct {
   },
     get_last_wrap_alignment: struct{
     using _get_last_wrap_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, #by_ptr args: i64 = 0, r_ret: ^FlowContainer_LastWrapAlignmentMode)
+    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, args: rawptr = nil, r_ret: ^FlowContainer_LastWrapAlignmentMode)
   },
   set_vertical: struct{
     using _set_vertical: ^GDW.MethodBind,
@@ -47,7 +47,7 @@ FlowContainer_MethodBind_List :: struct {
   },
     is_vertical: struct{
     using _is_vertical: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_reverse_fill: struct{
     using _set_reverse_fill: ^GDW.MethodBind,
@@ -55,7 +55,7 @@ FlowContainer_MethodBind_List :: struct {
   },
     is_reverse_fill: struct{
     using _is_reverse_fill: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FlowContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 FlowContainer_Init_ :: proc (FlowContainer_methods: ^FlowContainer_MethodBind_List, loc := #caller_location) {

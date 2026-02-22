@@ -24,7 +24,7 @@ CollisionObject2D_DisableMode :: enum i64 {
 CollisionObject2D_MethodBind_List :: struct {
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_collision_layer: struct{
     using _set_collision_layer: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ CollisionObject2D_MethodBind_List :: struct {
   },
     get_collision_layer: struct{
     using _get_collision_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ CollisionObject2D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_layer_value: struct{
     using _set_collision_layer_value: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ CollisionObject2D_MethodBind_List :: struct {
   },
     get_collision_priority: struct{
     using _get_collision_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_disable_mode: struct{
     using _set_disable_mode: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ CollisionObject2D_MethodBind_List :: struct {
   },
     get_disable_mode: struct{
     using _get_disable_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: i64 = 0, r_ret: ^CollisionObject2D_DisableMode)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, args: rawptr = nil, r_ret: ^CollisionObject2D_DisableMode)
   },
   set_pickable: struct{
     using _set_pickable: ^GDW.MethodBind,
@@ -80,7 +80,7 @@ CollisionObject2D_MethodBind_List :: struct {
   },
     is_pickable: struct{
     using _is_pickable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   create_shape_owner: struct{
     using _create_shape_owner: ^GDW.MethodBind,
@@ -92,7 +92,7 @@ CollisionObject2D_MethodBind_List :: struct {
   },
     get_shape_owners: struct{
     using _get_shape_owners: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   shape_owner_set_transform: struct{
     using _shape_owner_set_transform: ^GDW.MethodBind,

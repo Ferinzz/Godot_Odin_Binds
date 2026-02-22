@@ -27,7 +27,7 @@ VisualShaderNodeCubemap_MethodBind_List :: struct {
   },
     get_source: struct{
     using _get_source: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCubemap, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeCubemap_Source)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCubemap, args: rawptr = nil, r_ret: ^VisualShaderNodeCubemap_Source)
   },
   set_cube_map: struct{
     using _set_cube_map: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ VisualShaderNodeCubemap_MethodBind_List :: struct {
   },
     get_cube_map: struct{
     using _get_cube_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCubemap, #by_ptr args: i64 = 0, r_ret: ^TextureLayered)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCubemap, args: rawptr = nil, r_ret: ^TextureLayered)
   },
   set_texture_type: struct{
     using _set_texture_type: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ VisualShaderNodeCubemap_MethodBind_List :: struct {
   },
     get_texture_type: struct{
     using _get_texture_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCubemap, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeCubemap_TextureType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCubemap, args: rawptr = nil, r_ret: ^VisualShaderNodeCubemap_TextureType)
   },
 };
 VisualShaderNodeCubemap_Init_ :: proc (VisualShaderNodeCubemap_methods: ^VisualShaderNodeCubemap_MethodBind_List, loc := #caller_location) {

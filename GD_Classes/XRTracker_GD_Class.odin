@@ -10,7 +10,7 @@ XRTracker :: ^GDW.Object
 XRTracker_MethodBind_List :: struct {
   get_tracker_type: struct{
     using _get_tracker_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRTracker, #by_ptr args: i64 = 0, r_ret: ^XRServer_TrackerType)
+    m_call: proc(_:^GDW.MethodBind, obj: XRTracker, args: rawptr = nil, r_ret: ^XRServer_TrackerType)
   },
   set_tracker_type: struct{
     using _set_tracker_type: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ XRTracker_MethodBind_List :: struct {
   },
     get_tracker_name: struct{
     using _get_tracker_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: XRTracker, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_tracker_name: struct{
     using _set_tracker_name: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ XRTracker_MethodBind_List :: struct {
   },
     get_tracker_desc: struct{
     using _get_tracker_desc: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: XRTracker, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_tracker_desc: struct{
     using _set_tracker_desc: ^GDW.MethodBind,

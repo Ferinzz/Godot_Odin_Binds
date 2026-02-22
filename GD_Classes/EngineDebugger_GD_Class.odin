@@ -10,7 +10,7 @@ EngineDebugger :: ^GDW.Object
 EngineDebugger_MethodBind_List :: struct {
   is_active: struct{
     using _is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   register_profiler: struct{
     using _register_profiler: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ EngineDebugger_MethodBind_List :: struct {
   },
   line_poll: struct{
     using _line_poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, args: rawptr = nil, r_ret: rawptr = nil)
   },
     send_message: struct{
     using _send_message: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ EngineDebugger_MethodBind_List :: struct {
   },
     get_lines_left: struct{
     using _get_lines_left: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_depth: struct{
     using _set_depth: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ EngineDebugger_MethodBind_List :: struct {
   },
     get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_breakpoint: struct{
     using _is_breakpoint: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ EngineDebugger_MethodBind_List :: struct {
   },
   is_skipping_breakpoints: struct{
     using _is_skipping_breakpoints: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   insert_breakpoint: struct{
     using _insert_breakpoint: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ EngineDebugger_MethodBind_List :: struct {
   },
     clear_breakpoints: struct{
     using _clear_breakpoints: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EngineDebugger, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 EngineDebugger_Init_ :: proc (EngineDebugger_methods: ^EngineDebugger_MethodBind_List, loc := #caller_location) {

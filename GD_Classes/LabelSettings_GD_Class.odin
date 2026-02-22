@@ -14,7 +14,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_line_spacing: struct{
     using _get_line_spacing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_paragraph_spacing: struct{
     using _set_paragraph_spacing: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_paragraph_spacing: struct{
     using _get_paragraph_spacing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_font: struct{
     using _set_font: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_font: struct{
     using _get_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^Font)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^Font)
   },
   set_font_size: struct{
     using _set_font_size: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_font_size: struct{
     using _get_font_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_font_color: struct{
     using _set_font_color: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_font_color: struct{
     using _get_font_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_outline_size: struct{
     using _set_outline_size: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_outline_size: struct{
     using _get_outline_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_outline_color: struct{
     using _set_outline_color: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_outline_color: struct{
     using _get_outline_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_shadow_size: struct{
     using _set_shadow_size: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_shadow_size: struct{
     using _get_shadow_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_shadow_color: struct{
     using _set_shadow_color: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_shadow_color: struct{
     using _get_shadow_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_shadow_offset: struct{
     using _set_shadow_offset: ^GDW.MethodBind,
@@ -86,11 +86,11 @@ LabelSettings_MethodBind_List :: struct {
   },
     get_shadow_offset: struct{
     using _get_shadow_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_stacked_outline_count: struct{
     using _get_stacked_outline_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_stacked_outline_count: struct{
     using _set_stacked_outline_count: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ LabelSettings_MethodBind_List :: struct {
   },
   get_stacked_shadow_count: struct{
     using _get_stacked_shadow_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LabelSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_stacked_shadow_count: struct{
     using _set_stacked_shadow_count: ^GDW.MethodBind,

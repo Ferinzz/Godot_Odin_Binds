@@ -21,7 +21,7 @@ AudioStreamGenerator_MethodBind_List :: struct {
   },
     get_mix_rate: struct{
     using _get_mix_rate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGenerator, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGenerator, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mix_rate_mode: struct{
     using _set_mix_rate_mode: ^GDW.MethodBind,
@@ -29,7 +29,7 @@ AudioStreamGenerator_MethodBind_List :: struct {
   },
     get_mix_rate_mode: struct{
     using _get_mix_rate_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGenerator, #by_ptr args: i64 = 0, r_ret: ^AudioStreamGenerator_AudioStreamGeneratorMixRate)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGenerator, args: rawptr = nil, r_ret: ^AudioStreamGenerator_AudioStreamGeneratorMixRate)
   },
   set_buffer_length: struct{
     using _set_buffer_length: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ AudioStreamGenerator_MethodBind_List :: struct {
   },
     get_buffer_length: struct{
     using _get_buffer_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGenerator, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGenerator, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioStreamGenerator_Init_ :: proc (AudioStreamGenerator_methods: ^AudioStreamGenerator_MethodBind_List, loc := #caller_location) {

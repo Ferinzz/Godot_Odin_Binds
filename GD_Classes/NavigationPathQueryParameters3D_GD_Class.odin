@@ -33,7 +33,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_pathfinding_algorithm: struct{
     using _get_pathfinding_algorithm: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^NavigationPathQueryParameters3D_PathfindingAlgorithm)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^NavigationPathQueryParameters3D_PathfindingAlgorithm)
   },
   set_path_postprocessing: struct{
     using _set_path_postprocessing: ^GDW.MethodBind,
@@ -41,7 +41,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_path_postprocessing: struct{
     using _get_path_postprocessing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^NavigationPathQueryParameters3D_PathPostProcessing)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^NavigationPathQueryParameters3D_PathPostProcessing)
   },
   set_map: struct{
     using _set_map: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_map: struct{
     using _get_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_start_position: struct{
     using _set_start_position: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_start_position: struct{
     using _get_start_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_target_position: struct{
     using _set_target_position: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_target_position: struct{
     using _get_target_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_navigation_layers: struct{
     using _set_navigation_layers: ^GDW.MethodBind,
@@ -73,7 +73,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_navigation_layers: struct{
     using _get_navigation_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_metadata_flags: struct{
     using _set_metadata_flags: ^GDW.MethodBind,
@@ -81,7 +81,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_metadata_flags: struct{
     using _get_metadata_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^NavigationPathQueryParameters3D_PathMetadataFlags)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^NavigationPathQueryParameters3D_PathMetadataFlags)
   },
   set_simplify_path: struct{
     using _set_simplify_path: ^GDW.MethodBind,
@@ -89,7 +89,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_simplify_path: struct{
     using _get_simplify_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_simplify_epsilon: struct{
     using _set_simplify_epsilon: ^GDW.MethodBind,
@@ -97,7 +97,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_simplify_epsilon: struct{
     using _get_simplify_epsilon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_included_regions: struct{
     using _set_included_regions: ^GDW.MethodBind,
@@ -105,7 +105,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_included_regions: struct{
     using _get_included_regions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_excluded_regions: struct{
     using _set_excluded_regions: ^GDW.MethodBind,
@@ -113,7 +113,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_excluded_regions: struct{
     using _get_excluded_regions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_path_return_max_length: struct{
     using _set_path_return_max_length: ^GDW.MethodBind,
@@ -121,7 +121,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_path_return_max_length: struct{
     using _get_path_return_max_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_return_max_radius: struct{
     using _set_path_return_max_radius: ^GDW.MethodBind,
@@ -129,7 +129,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_path_return_max_radius: struct{
     using _get_path_return_max_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_search_max_polygons: struct{
     using _set_path_search_max_polygons: ^GDW.MethodBind,
@@ -137,7 +137,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_path_search_max_polygons: struct{
     using _get_path_search_max_polygons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_path_search_max_distance: struct{
     using _set_path_search_max_distance: ^GDW.MethodBind,
@@ -145,7 +145,7 @@ NavigationPathQueryParameters3D_MethodBind_List :: struct {
   },
     get_path_search_max_distance: struct{
     using _get_path_search_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPathQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 NavigationPathQueryParameters3D_Init_ :: proc (NavigationPathQueryParameters3D_methods: ^NavigationPathQueryParameters3D_MethodBind_List, loc := #caller_location) {

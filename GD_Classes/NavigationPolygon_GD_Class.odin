@@ -34,7 +34,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_vertices: struct{
     using _get_vertices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   add_polygon: struct{
     using _add_polygon: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_polygon_count: struct{
     using _get_polygon_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_polygon: struct{
     using _get_polygon: ^GDW.MethodBind,
@@ -50,11 +50,11 @@ NavigationPolygon_MethodBind_List :: struct {
   },
   clear_polygons: struct{
     using _clear_polygons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_navigation_mesh: struct{
     using _get_navigation_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^NavigationMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^NavigationMesh)
   },
   add_outline: struct{
     using _add_outline: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_outline_count: struct{
     using _get_outline_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_outline: struct{
     using _set_outline: ^GDW.MethodBind,
@@ -82,11 +82,11 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     clear_outlines: struct{
     using _clear_outlines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: rawptr = nil)
   },
     make_polygons_from_outlines: struct{
     using _make_polygons_from_outlines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_cell_size: struct{
     using _set_cell_size: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_cell_size: struct{
     using _get_cell_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_border_size: struct{
     using _set_border_size: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_border_size: struct{
     using _get_border_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sample_partition_type: struct{
     using _set_sample_partition_type: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_sample_partition_type: struct{
     using _get_sample_partition_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^NavigationPolygon_SamplePartitionType)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^NavigationPolygon_SamplePartitionType)
   },
   set_parsed_geometry_type: struct{
     using _set_parsed_geometry_type: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_parsed_geometry_type: struct{
     using _get_parsed_geometry_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^NavigationPolygon_ParsedGeometryType)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^NavigationPolygon_ParsedGeometryType)
   },
   set_parsed_collision_mask: struct{
     using _set_parsed_collision_mask: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_parsed_collision_mask: struct{
     using _get_parsed_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_parsed_collision_mask_value: struct{
     using _set_parsed_collision_mask_value: ^GDW.MethodBind,
@@ -142,7 +142,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_source_geometry_mode: struct{
     using _get_source_geometry_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^NavigationPolygon_SourceGeometryMode)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^NavigationPolygon_SourceGeometryMode)
   },
   set_source_geometry_group_name: struct{
     using _set_source_geometry_group_name: ^GDW.MethodBind,
@@ -150,7 +150,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_source_geometry_group_name: struct{
     using _get_source_geometry_group_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_agent_radius: struct{
     using _set_agent_radius: ^GDW.MethodBind,
@@ -158,7 +158,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_agent_radius: struct{
     using _get_agent_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_baking_rect: struct{
     using _set_baking_rect: ^GDW.MethodBind,
@@ -166,7 +166,7 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_baking_rect: struct{
     using _get_baking_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_baking_rect_offset: struct{
     using _set_baking_rect_offset: ^GDW.MethodBind,
@@ -174,11 +174,11 @@ NavigationPolygon_MethodBind_List :: struct {
   },
     get_baking_rect_offset: struct{
     using _get_baking_rect_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationPolygon, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 NavigationPolygon_Init_ :: proc (NavigationPolygon_methods: ^NavigationPolygon_MethodBind_List, loc := #caller_location) {

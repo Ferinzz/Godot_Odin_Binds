@@ -24,7 +24,7 @@ BoxContainer_MethodBind_List :: struct {
   },
     get_alignment: struct{
     using _get_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoxContainer, #by_ptr args: i64 = 0, r_ret: ^BoxContainer_AlignmentMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BoxContainer, args: rawptr = nil, r_ret: ^BoxContainer_AlignmentMode)
   },
   set_vertical: struct{
     using _set_vertical: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ BoxContainer_MethodBind_List :: struct {
   },
     is_vertical: struct{
     using _is_vertical: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoxContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BoxContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 BoxContainer_Init_ :: proc (BoxContainer_methods: ^BoxContainer_MethodBind_List, loc := #caller_location) {

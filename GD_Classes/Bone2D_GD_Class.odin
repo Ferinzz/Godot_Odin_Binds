@@ -14,19 +14,19 @@ Bone2D_MethodBind_List :: struct {
   },
     get_rest: struct{
     using _get_rest: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   apply_rest: struct{
     using _apply_rest: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_skeleton_rest: struct{
     using _get_skeleton_rest: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_index_in_skeleton: struct{
     using _get_index_in_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_autocalculate_length_and_angle: struct{
     using _set_autocalculate_length_and_angle: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ Bone2D_MethodBind_List :: struct {
   },
     get_autocalculate_length_and_angle: struct{
     using _get_autocalculate_length_and_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_length: struct{
     using _set_length: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ Bone2D_MethodBind_List :: struct {
   },
     get_length: struct{
     using _get_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bone_angle: struct{
     using _set_bone_angle: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ Bone2D_MethodBind_List :: struct {
   },
     get_bone_angle: struct{
     using _get_bone_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Bone2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 Bone2D_Init_ :: proc (Bone2D_methods: ^Bone2D_MethodBind_List, loc := #caller_location) {

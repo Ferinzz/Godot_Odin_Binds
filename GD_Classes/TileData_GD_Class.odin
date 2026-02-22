@@ -14,7 +14,7 @@ TileData_MethodBind_List :: struct {
   },
     get_flip_h: struct{
     using _get_flip_h: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_flip_v: struct{
     using _set_flip_v: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ TileData_MethodBind_List :: struct {
   },
     get_flip_v: struct{
     using _get_flip_v: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_transpose: struct{
     using _set_transpose: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ TileData_MethodBind_List :: struct {
   },
     get_transpose: struct{
     using _get_transpose: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_material: struct{
     using _set_material: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ TileData_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^Material)
   },
   set_texture_origin: struct{
     using _set_texture_origin: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ TileData_MethodBind_List :: struct {
   },
     get_texture_origin: struct{
     using _get_texture_origin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_modulate: struct{
     using _set_modulate: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ TileData_MethodBind_List :: struct {
   },
     get_modulate: struct{
     using _get_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_z_index: struct{
     using _set_z_index: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ TileData_MethodBind_List :: struct {
   },
     get_z_index: struct{
     using _get_z_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_y_sort_origin: struct{
     using _set_y_sort_origin: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ TileData_MethodBind_List :: struct {
   },
     get_y_sort_origin: struct{
     using _get_y_sort_origin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_occluder_polygons_count: struct{
     using _set_occluder_polygons_count: ^GDW.MethodBind,
@@ -166,7 +166,7 @@ TileData_MethodBind_List :: struct {
   },
     get_terrain_set: struct{
     using _get_terrain_set: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_terrain: struct{
     using _set_terrain: ^GDW.MethodBind,
@@ -174,7 +174,7 @@ TileData_MethodBind_List :: struct {
   },
     get_terrain: struct{
     using _get_terrain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_terrain_peering_bit: struct{
     using _set_terrain_peering_bit: ^GDW.MethodBind,
@@ -202,7 +202,7 @@ TileData_MethodBind_List :: struct {
   },
     get_probability: struct{
     using _get_probability: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileData, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TileData, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_custom_data: struct{
     using _set_custom_data: ^GDW.MethodBind,

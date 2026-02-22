@@ -14,7 +14,7 @@ InputEventFromWindow_MethodBind_List :: struct {
   },
     get_window_id: struct{
     using _get_window_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventFromWindow, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventFromWindow, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 InputEventFromWindow_Init_ :: proc (InputEventFromWindow_methods: ^InputEventFromWindow_MethodBind_List, loc := #caller_location) {

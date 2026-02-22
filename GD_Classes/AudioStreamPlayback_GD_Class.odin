@@ -27,7 +27,7 @@ AudioStreamPlayback_MethodBind_List :: struct {
   },
     get_sample_playback: struct{
     using _get_sample_playback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, #by_ptr args: i64 = 0, r_ret: ^AudioSamplePlayback)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, args: rawptr = nil, r_ret: ^AudioSamplePlayback)
   },
   mix_audio: struct{
     using _mix_audio: ^GDW.MethodBind,
@@ -43,19 +43,19 @@ AudioStreamPlayback_MethodBind_List :: struct {
   },
     stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_loop_count: struct{
     using _get_loop_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_playback_position: struct{
     using _get_playback_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, args: rawptr = nil, r_ret: ^GDW.float)
   },
   is_playing: struct{
     using _is_playing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayback, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AudioStreamPlayback_Init_ :: proc (AudioStreamPlayback_methods: ^AudioStreamPlayback_MethodBind_List, loc := #caller_location) {

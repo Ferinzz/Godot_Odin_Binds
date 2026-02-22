@@ -14,11 +14,11 @@ GraphFrame_MethodBind_List :: struct {
   },
     get_title: struct{
     using _get_title: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_titlebar_hbox: struct{
     using _get_titlebar_hbox: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, #by_ptr args: i64 = 0, r_ret: ^HBoxContainer)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, args: rawptr = nil, r_ret: ^HBoxContainer)
   },
   set_autoshrink_enabled: struct{
     using _set_autoshrink_enabled: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ GraphFrame_MethodBind_List :: struct {
   },
     is_autoshrink_enabled: struct{
     using _is_autoshrink_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_autoshrink_margin: struct{
     using _set_autoshrink_margin: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GraphFrame_MethodBind_List :: struct {
   },
     get_autoshrink_margin: struct{
     using _get_autoshrink_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_drag_margin: struct{
     using _set_drag_margin: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GraphFrame_MethodBind_List :: struct {
   },
     get_drag_margin: struct{
     using _get_drag_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_tint_color_enabled: struct{
     using _set_tint_color_enabled: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ GraphFrame_MethodBind_List :: struct {
   },
     is_tint_color_enabled: struct{
     using _is_tint_color_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tint_color: struct{
     using _set_tint_color: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ GraphFrame_MethodBind_List :: struct {
   },
     get_tint_color: struct{
     using _get_tint_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphFrame, args: rawptr = nil, r_ret: ^GDW.Color)
   },
 };
 GraphFrame_Init_ :: proc (GraphFrame_methods: ^GraphFrame_MethodBind_List, loc := #caller_location) {

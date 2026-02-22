@@ -25,7 +25,7 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_margins: struct{
     using _set_margins: ^GDW.MethodBind,
@@ -33,7 +33,7 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
     get_margins: struct{
     using _get_margins: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_separation: struct{
     using _set_separation: ^GDW.MethodBind,
@@ -41,7 +41,7 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
     get_separation: struct{
     using _get_separation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_texture_region_size: struct{
     using _set_texture_region_size: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
     get_texture_region_size: struct{
     using _get_texture_region_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_use_texture_padding: struct{
     using _set_use_texture_padding: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
     get_use_texture_padding: struct{
     using _get_use_texture_padding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   create_tile: struct{
     using _create_tile: ^GDW.MethodBind,
@@ -89,11 +89,11 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
   has_tiles_outside_texture: struct{
     using _has_tiles_outside_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   clear_tiles_outside_texture: struct{
     using _clear_tiles_outside_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_tile_animation_columns: struct{
     using _set_tile_animation_columns: ^GDW.MethodBind,
@@ -169,7 +169,7 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
   get_atlas_grid_size: struct{
     using _get_atlas_grid_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   get_tile_texture_region: struct{
     using _get_tile_texture_region: ^GDW.MethodBind,
@@ -177,7 +177,7 @@ TileSetAtlasSource_MethodBind_List :: struct {
   },
   get_runtime_texture: struct{
     using _get_runtime_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetAtlasSource, args: rawptr = nil, r_ret: ^Texture2D)
   },
   get_runtime_tile_texture_region: struct{
     using _get_runtime_tile_texture_region: ^GDW.MethodBind,

@@ -14,7 +14,7 @@ InputEventScreenTouch_MethodBind_List :: struct {
   },
     get_index: struct{
     using _get_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventScreenTouch, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventScreenTouch, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_position: struct{
     using _set_position: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ InputEventScreenTouch_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventScreenTouch, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventScreenTouch, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_pressed: struct{
     using _set_pressed: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ InputEventScreenTouch_MethodBind_List :: struct {
   },
     is_double_tap: struct{
     using _is_double_tap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventScreenTouch, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventScreenTouch, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 InputEventScreenTouch_Init_ :: proc (InputEventScreenTouch_methods: ^InputEventScreenTouch_MethodBind_List, loc := #caller_location) {

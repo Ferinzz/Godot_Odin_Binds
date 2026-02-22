@@ -14,7 +14,7 @@ LightOccluder2D_MethodBind_List :: struct {
   },
     get_occluder_polygon: struct{
     using _get_occluder_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightOccluder2D, #by_ptr args: i64 = 0, r_ret: ^OccluderPolygon2D)
+    m_call: proc(_:^GDW.MethodBind, obj: LightOccluder2D, args: rawptr = nil, r_ret: ^OccluderPolygon2D)
   },
   set_occluder_light_mask: struct{
     using _set_occluder_light_mask: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ LightOccluder2D_MethodBind_List :: struct {
   },
     get_occluder_light_mask: struct{
     using _get_occluder_light_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightOccluder2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LightOccluder2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_as_sdf_collision: struct{
     using _set_as_sdf_collision: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ LightOccluder2D_MethodBind_List :: struct {
   },
     is_set_as_sdf_collision: struct{
     using _is_set_as_sdf_collision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightOccluder2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LightOccluder2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 LightOccluder2D_Init_ :: proc (LightOccluder2D_methods: ^LightOccluder2D_MethodBind_List, loc := #caller_location) {

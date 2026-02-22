@@ -10,15 +10,15 @@ AudioListener2D :: ^GDW.Object
 AudioListener2D_MethodBind_List :: struct {
   make_current: struct{
     using _make_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioListener2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioListener2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear_current: struct{
     using _clear_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioListener2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioListener2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_current: struct{
     using _is_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioListener2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioListener2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AudioListener2D_Init_ :: proc (AudioListener2D_methods: ^AudioListener2D_MethodBind_List, loc := #caller_location) {

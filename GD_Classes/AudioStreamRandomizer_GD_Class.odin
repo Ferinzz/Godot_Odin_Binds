@@ -48,7 +48,7 @@ AudioStreamRandomizer_MethodBind_List :: struct {
   },
     get_streams_count: struct{
     using _get_streams_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_random_pitch: struct{
     using _set_random_pitch: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ AudioStreamRandomizer_MethodBind_List :: struct {
   },
     get_random_pitch: struct{
     using _get_random_pitch: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_random_pitch_semitones: struct{
     using _set_random_pitch_semitones: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ AudioStreamRandomizer_MethodBind_List :: struct {
   },
     get_random_pitch_semitones: struct{
     using _get_random_pitch_semitones: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_random_volume_offset_db: struct{
     using _set_random_volume_offset_db: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ AudioStreamRandomizer_MethodBind_List :: struct {
   },
     get_random_volume_offset_db: struct{
     using _get_random_volume_offset_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_playback_mode: struct{
     using _set_playback_mode: ^GDW.MethodBind,
@@ -80,7 +80,7 @@ AudioStreamRandomizer_MethodBind_List :: struct {
   },
     get_playback_mode: struct{
     using _get_playback_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, #by_ptr args: i64 = 0, r_ret: ^AudioStreamRandomizer_PlaybackMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamRandomizer, args: rawptr = nil, r_ret: ^AudioStreamRandomizer_PlaybackMode)
   },
 };
 AudioStreamRandomizer_Init_ :: proc (AudioStreamRandomizer_methods: ^AudioStreamRandomizer_MethodBind_List, loc := #caller_location) {

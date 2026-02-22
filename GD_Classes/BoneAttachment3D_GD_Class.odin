@@ -10,7 +10,7 @@ BoneAttachment3D :: ^GDW.Object
 BoneAttachment3D_MethodBind_List :: struct {
   get_skeleton: struct{
     using _get_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, #by_ptr args: i64 = 0, r_ret: ^Skeleton3D)
+    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, args: rawptr = nil, r_ret: ^Skeleton3D)
   },
   set_bone_name: struct{
     using _set_bone_name: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ BoneAttachment3D_MethodBind_List :: struct {
   },
     get_bone_name: struct{
     using _get_bone_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_bone_idx: struct{
     using _set_bone_idx: ^GDW.MethodBind,
@@ -26,11 +26,11 @@ BoneAttachment3D_MethodBind_List :: struct {
   },
     get_bone_idx: struct{
     using _get_bone_idx: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   on_skeleton_update: struct{
     using _on_skeleton_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_override_pose: struct{
     using _set_override_pose: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ BoneAttachment3D_MethodBind_List :: struct {
   },
     get_override_pose: struct{
     using _get_override_pose: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_external_skeleton: struct{
     using _set_use_external_skeleton: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ BoneAttachment3D_MethodBind_List :: struct {
   },
     get_use_external_skeleton: struct{
     using _get_use_external_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_external_skeleton: struct{
     using _set_external_skeleton: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ BoneAttachment3D_MethodBind_List :: struct {
   },
     get_external_skeleton: struct{
     using _get_external_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: BoneAttachment3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
 };
 BoneAttachment3D_Init_ :: proc (BoneAttachment3D_methods: ^BoneAttachment3D_MethodBind_List, loc := #caller_location) {

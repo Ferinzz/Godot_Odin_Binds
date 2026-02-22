@@ -18,7 +18,7 @@ CryptoKey_MethodBind_List :: struct {
   },
   is_public_only: struct{
     using _is_public_only: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CryptoKey, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CryptoKey, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   save_to_string: struct{
     using _save_to_string: ^GDW.MethodBind,

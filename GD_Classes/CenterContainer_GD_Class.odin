@@ -14,7 +14,7 @@ CenterContainer_MethodBind_List :: struct {
   },
     is_using_top_left: struct{
     using _is_using_top_left: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CenterContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CenterContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CenterContainer_Init_ :: proc (CenterContainer_methods: ^CenterContainer_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     is_dof_blur_far_enabled: struct{
     using _is_dof_blur_far_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_dof_blur_far_distance: struct{
     using _set_dof_blur_far_distance: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     get_dof_blur_far_distance: struct{
     using _get_dof_blur_far_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_dof_blur_far_transition: struct{
     using _set_dof_blur_far_transition: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     get_dof_blur_far_transition: struct{
     using _get_dof_blur_far_transition: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_dof_blur_near_enabled: struct{
     using _set_dof_blur_near_enabled: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     is_dof_blur_near_enabled: struct{
     using _is_dof_blur_near_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_dof_blur_near_distance: struct{
     using _set_dof_blur_near_distance: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     get_dof_blur_near_distance: struct{
     using _get_dof_blur_near_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_dof_blur_near_transition: struct{
     using _set_dof_blur_near_transition: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     get_dof_blur_near_transition: struct{
     using _get_dof_blur_near_transition: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_dof_blur_amount: struct{
     using _set_dof_blur_amount: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     get_dof_blur_amount: struct{
     using _get_dof_blur_amount: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_auto_exposure_max_sensitivity: struct{
     using _set_auto_exposure_max_sensitivity: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     get_auto_exposure_max_sensitivity: struct{
     using _get_auto_exposure_max_sensitivity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_auto_exposure_min_sensitivity: struct{
     using _set_auto_exposure_min_sensitivity: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ CameraAttributesPractical_MethodBind_List :: struct {
   },
     get_auto_exposure_min_sensitivity: struct{
     using _get_auto_exposure_min_sensitivity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPractical, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 CameraAttributesPractical_Init_ :: proc (CameraAttributesPractical_methods: ^CameraAttributesPractical_MethodBind_List, loc := #caller_location) {

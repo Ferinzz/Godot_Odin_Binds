@@ -23,7 +23,7 @@ EditorDebuggerPlugin_MethodBind_List :: struct {
   },
   get_sessions: struct{
     using _get_sessions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDebuggerPlugin, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDebuggerPlugin, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 EditorDebuggerPlugin_Init_ :: proc (EditorDebuggerPlugin_methods: ^EditorDebuggerPlugin_MethodBind_List, loc := #caller_location) {

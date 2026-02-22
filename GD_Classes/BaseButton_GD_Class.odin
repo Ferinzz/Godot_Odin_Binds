@@ -32,7 +32,7 @@ BaseButton_MethodBind_List :: struct {
   },
     is_pressed: struct{
     using _is_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_pressed_no_signal: struct{
     using _set_pressed_no_signal: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ BaseButton_MethodBind_List :: struct {
   },
     is_hovered: struct{
     using _is_hovered: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_toggle_mode: struct{
     using _set_toggle_mode: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ BaseButton_MethodBind_List :: struct {
   },
     is_toggle_mode: struct{
     using _is_toggle_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shortcut_in_tooltip: struct{
     using _set_shortcut_in_tooltip: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ BaseButton_MethodBind_List :: struct {
   },
     is_shortcut_in_tooltip_enabled: struct{
     using _is_shortcut_in_tooltip_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_disabled: struct{
     using _set_disabled: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ BaseButton_MethodBind_List :: struct {
   },
     is_disabled: struct{
     using _is_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_action_mode: struct{
     using _set_action_mode: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ BaseButton_MethodBind_List :: struct {
   },
     get_action_mode: struct{
     using _get_action_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^BaseButton_ActionMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^BaseButton_ActionMode)
   },
   set_button_mask: struct{
     using _set_button_mask: ^GDW.MethodBind,
@@ -80,11 +80,11 @@ BaseButton_MethodBind_List :: struct {
   },
     get_button_mask: struct{
     using _get_button_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.MouseButtonMask)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^GDW.MouseButtonMask)
   },
   get_draw_mode: struct{
     using _get_draw_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^BaseButton_DrawMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^BaseButton_DrawMode)
   },
   set_keep_pressed_outside: struct{
     using _set_keep_pressed_outside: ^GDW.MethodBind,
@@ -92,7 +92,7 @@ BaseButton_MethodBind_List :: struct {
   },
     is_keep_pressed_outside: struct{
     using _is_keep_pressed_outside: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shortcut_feedback: struct{
     using _set_shortcut_feedback: ^GDW.MethodBind,
@@ -100,7 +100,7 @@ BaseButton_MethodBind_List :: struct {
   },
     is_shortcut_feedback: struct{
     using _is_shortcut_feedback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shortcut: struct{
     using _set_shortcut: ^GDW.MethodBind,
@@ -108,7 +108,7 @@ BaseButton_MethodBind_List :: struct {
   },
     get_shortcut: struct{
     using _get_shortcut: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^Shortcut)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^Shortcut)
   },
   set_button_group: struct{
     using _set_button_group: ^GDW.MethodBind,
@@ -116,7 +116,7 @@ BaseButton_MethodBind_List :: struct {
   },
     get_button_group: struct{
     using _get_button_group: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, #by_ptr args: i64 = 0, r_ret: ^ButtonGroup)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseButton, args: rawptr = nil, r_ret: ^ButtonGroup)
   },
 };
 BaseButton_Init_ :: proc (BaseButton_methods: ^BaseButton_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ PinJoint2D_MethodBind_List :: struct {
   },
     get_softness: struct{
     using _get_softness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_angular_limit_lower: struct{
     using _set_angular_limit_lower: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ PinJoint2D_MethodBind_List :: struct {
   },
     get_angular_limit_lower: struct{
     using _get_angular_limit_lower: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_angular_limit_upper: struct{
     using _set_angular_limit_upper: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PinJoint2D_MethodBind_List :: struct {
   },
     get_angular_limit_upper: struct{
     using _get_angular_limit_upper: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_motor_target_velocity: struct{
     using _set_motor_target_velocity: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ PinJoint2D_MethodBind_List :: struct {
   },
     get_motor_target_velocity: struct{
     using _get_motor_target_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_motor_enabled: struct{
     using _set_motor_enabled: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ PinJoint2D_MethodBind_List :: struct {
   },
     is_motor_enabled: struct{
     using _is_motor_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_angular_limit_enabled: struct{
     using _set_angular_limit_enabled: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ PinJoint2D_MethodBind_List :: struct {
   },
     is_angular_limit_enabled: struct{
     using _is_angular_limit_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PinJoint2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PinJoint2D_Init_ :: proc (PinJoint2D_methods: ^PinJoint2D_MethodBind_List, loc := #caller_location) {

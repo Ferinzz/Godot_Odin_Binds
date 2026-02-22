@@ -10,31 +10,31 @@ GodotInstance :: ^GDW.Object
 GodotInstance_MethodBind_List :: struct {
   start: struct{
     using _start: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_started: struct{
     using _is_started: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   iteration: struct{
     using _iteration: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   focus_in: struct{
     using _focus_in: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, args: rawptr = nil, r_ret: rawptr = nil)
   },
     focus_out: struct{
     using _focus_out: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, args: rawptr = nil, r_ret: rawptr = nil)
   },
     pause: struct{
     using _pause: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, args: rawptr = nil, r_ret: rawptr = nil)
   },
     resume: struct{
     using _resume: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GodotInstance, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 GodotInstance_Init_ :: proc (GodotInstance_methods: ^GodotInstance_MethodBind_List, loc := #caller_location) {

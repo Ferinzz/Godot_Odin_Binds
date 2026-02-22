@@ -14,7 +14,7 @@ ShaderMaterial_MethodBind_List :: struct {
   },
     get_shader: struct{
     using _get_shader: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShaderMaterial, #by_ptr args: i64 = 0, r_ret: ^Shader)
+    m_call: proc(_:^GDW.MethodBind, obj: ShaderMaterial, args: rawptr = nil, r_ret: ^Shader)
   },
   set_shader_parameter: struct{
     using _set_shader_parameter: ^GDW.MethodBind,

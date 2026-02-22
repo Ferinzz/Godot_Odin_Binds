@@ -14,7 +14,7 @@ VisualShaderNodeParticleMeshEmitter_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMeshEmitter, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMeshEmitter, args: rawptr = nil, r_ret: ^Mesh)
   },
   set_use_all_surfaces: struct{
     using _set_use_all_surfaces: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ VisualShaderNodeParticleMeshEmitter_MethodBind_List :: struct {
   },
     is_use_all_surfaces: struct{
     using _is_use_all_surfaces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMeshEmitter, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMeshEmitter, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_surface_index: struct{
     using _set_surface_index: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VisualShaderNodeParticleMeshEmitter_MethodBind_List :: struct {
   },
     get_surface_index: struct{
     using _get_surface_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMeshEmitter, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMeshEmitter, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 VisualShaderNodeParticleMeshEmitter_Init_ :: proc (VisualShaderNodeParticleMeshEmitter_methods: ^VisualShaderNodeParticleMeshEmitter_MethodBind_List, loc := #caller_location) {

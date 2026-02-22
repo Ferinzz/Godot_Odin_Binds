@@ -14,7 +14,7 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
   to_node: struct{
     using _to_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^CollisionObject3D)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^CollisionObject3D)
   },
   from_dictionary: struct{
     using _from_dictionary: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
   to_dictionary: struct{
     using _to_dictionary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_body_type: struct{
     using _get_body_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_body_type: struct{
     using _set_body_type: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
     get_mass: struct{
     using _get_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mass: struct{
     using _set_mass: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
     get_linear_velocity: struct{
     using _get_linear_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_linear_velocity: struct{
     using _set_linear_velocity: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
     get_angular_velocity: struct{
     using _get_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_angular_velocity: struct{
     using _set_angular_velocity: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
     get_center_of_mass: struct{
     using _get_center_of_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_center_of_mass: struct{
     using _set_center_of_mass: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
     get_inertia_diagonal: struct{
     using _get_inertia_diagonal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_inertia_diagonal: struct{
     using _set_inertia_diagonal: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
     get_inertia_orientation: struct{
     using _get_inertia_orientation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.Quaternion)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.Quaternion)
   },
   set_inertia_orientation: struct{
     using _set_inertia_orientation: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ GLTFPhysicsBody_MethodBind_List :: struct {
   },
     get_inertia_tensor: struct{
     using _get_inertia_tensor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, #by_ptr args: i64 = 0, r_ret: ^GDW.Basis)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsBody, args: rawptr = nil, r_ret: ^GDW.Basis)
   },
   set_inertia_tensor: struct{
     using _set_inertia_tensor: ^GDW.MethodBind,

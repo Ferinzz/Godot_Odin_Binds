@@ -45,15 +45,15 @@ XRInterfaceExtension_Virtual_Info :: struct {
 XRInterfaceExtension_MethodBind_List :: struct {
   get_color_texture: struct{
     using _get_color_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterfaceExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterfaceExtension, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_depth_texture: struct{
     using _get_depth_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterfaceExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterfaceExtension, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_velocity_texture: struct{
     using _get_velocity_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterfaceExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterfaceExtension, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   add_blit: struct{
     using _add_blit: ^GDW.MethodBind,

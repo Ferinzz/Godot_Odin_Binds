@@ -30,7 +30,7 @@ MultiplayerPeer_MethodBind_List :: struct {
   },
     get_transfer_channel: struct{
     using _get_transfer_channel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_transfer_mode: struct{
     using _set_transfer_mode: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ MultiplayerPeer_MethodBind_List :: struct {
   },
     get_transfer_mode: struct{
     using _get_transfer_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^MultiplayerPeer_TransferMode)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^MultiplayerPeer_TransferMode)
   },
   set_target_peer: struct{
     using _set_target_peer: ^GDW.MethodBind,
@@ -46,23 +46,23 @@ MultiplayerPeer_MethodBind_List :: struct {
   },
     get_packet_peer: struct{
     using _get_packet_peer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_packet_channel: struct{
     using _get_packet_channel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_packet_mode: struct{
     using _get_packet_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^MultiplayerPeer_TransferMode)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^MultiplayerPeer_TransferMode)
   },
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     disconnect_peer: struct{
     using _disconnect_peer: ^GDW.MethodBind,
@@ -70,15 +70,15 @@ MultiplayerPeer_MethodBind_List :: struct {
   },
     get_connection_status: struct{
     using _get_connection_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^MultiplayerPeer_ConnectionStatus)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^MultiplayerPeer_ConnectionStatus)
   },
   get_unique_id: struct{
     using _get_unique_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   generate_unique_id: struct{
     using _generate_unique_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_refuse_new_connections: struct{
     using _set_refuse_new_connections: ^GDW.MethodBind,
@@ -86,11 +86,11 @@ MultiplayerPeer_MethodBind_List :: struct {
   },
     is_refusing_new_connections: struct{
     using _is_refusing_new_connections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_server_relay_supported: struct{
     using _is_server_relay_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 MultiplayerPeer_Init_ :: proc (MultiplayerPeer_methods: ^MultiplayerPeer_MethodBind_List, loc := #caller_location) {

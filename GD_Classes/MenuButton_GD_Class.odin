@@ -10,11 +10,11 @@ MenuButton :: ^GDW.Object
 MenuButton_MethodBind_List :: struct {
   get_popup: struct{
     using _get_popup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuButton, #by_ptr args: i64 = 0, r_ret: ^PopupMenu)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuButton, args: rawptr = nil, r_ret: ^PopupMenu)
   },
   show_popup: struct{
     using _show_popup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuButton, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuButton, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_switch_on_hover: struct{
     using _set_switch_on_hover: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MenuButton_MethodBind_List :: struct {
   },
     is_switch_on_hover: struct{
     using _is_switch_on_hover: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_disable_shortcuts: struct{
     using _set_disable_shortcuts: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ MenuButton_MethodBind_List :: struct {
   },
     get_item_count: struct{
     using _get_item_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MenuButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MenuButton, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 MenuButton_Init_ :: proc (MenuButton_methods: ^MenuButton_MethodBind_List, loc := #caller_location) {

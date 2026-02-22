@@ -10,7 +10,7 @@ SpringArm3D :: ^GDW.Object
 SpringArm3D_MethodBind_List :: struct {
   get_hit_length: struct{
     using _get_hit_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_length: struct{
     using _set_length: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ SpringArm3D_MethodBind_List :: struct {
   },
     get_length: struct{
     using _get_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_shape: struct{
     using _set_shape: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ SpringArm3D_MethodBind_List :: struct {
   },
     get_shape: struct{
     using _get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, #by_ptr args: i64 = 0, r_ret: ^Shape3D)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, args: rawptr = nil, r_ret: ^Shape3D)
   },
   add_excluded_object: struct{
     using _add_excluded_object: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ SpringArm3D_MethodBind_List :: struct {
   },
   clear_excluded_objects: struct{
     using _clear_excluded_objects: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ SpringArm3D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_margin: struct{
     using _set_margin: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ SpringArm3D_MethodBind_List :: struct {
   },
     get_margin: struct{
     using _get_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringArm3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 SpringArm3D_Init_ :: proc (SpringArm3D_methods: ^SpringArm3D_MethodBind_List, loc := #caller_location) {

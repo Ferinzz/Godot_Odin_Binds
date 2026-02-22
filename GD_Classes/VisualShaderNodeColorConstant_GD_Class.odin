@@ -14,7 +14,7 @@ VisualShaderNodeColorConstant_MethodBind_List :: struct {
   },
     get_constant: struct{
     using _get_constant: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeColorConstant, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeColorConstant, args: rawptr = nil, r_ret: ^GDW.Color)
   },
 };
 VisualShaderNodeColorConstant_Init_ :: proc (VisualShaderNodeColorConstant_methods: ^VisualShaderNodeColorConstant_MethodBind_List, loc := #caller_location) {

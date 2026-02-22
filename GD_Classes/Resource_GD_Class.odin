@@ -31,7 +31,7 @@ Resource_MethodBind_List :: struct {
   },
     get_path: struct{
     using _get_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_path_cache: struct{
     using _set_path_cache: ^GDW.MethodBind,
@@ -43,11 +43,11 @@ Resource_MethodBind_List :: struct {
   },
     get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_local_to_scene: struct{
     using _set_local_to_scene: ^GDW.MethodBind,
@@ -55,19 +55,19 @@ Resource_MethodBind_List :: struct {
   },
     is_local_to_scene: struct{
     using _is_local_to_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_local_scene: struct{
     using _get_local_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: ^Node)
   },
   setup_local_to_scene: struct{
     using _setup_local_to_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: rawptr = nil)
   },
     reset_state: struct{
     using _reset_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_id_for_path: struct{
     using _set_id_for_path: ^GDW.MethodBind,
@@ -79,11 +79,11 @@ Resource_MethodBind_List :: struct {
   },
   is_built_in: struct{
     using _is_built_in: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   generate_scene_unique_id: struct{
     using _generate_scene_unique_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_scene_unique_id: struct{
     using _set_scene_unique_id: ^GDW.MethodBind,
@@ -91,11 +91,11 @@ Resource_MethodBind_List :: struct {
   },
     get_scene_unique_id: struct{
     using _get_scene_unique_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   emit_changed: struct{
     using _emit_changed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Resource, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Resource, args: rawptr = nil, r_ret: rawptr = nil)
   },
     duplicate: struct{
     using _duplicate: ^GDW.MethodBind,

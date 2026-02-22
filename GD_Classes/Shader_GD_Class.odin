@@ -18,7 +18,7 @@ Shader_Mode :: enum i64 {
 Shader_MethodBind_List :: struct {
   get_mode: struct{
     using _get_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shader, #by_ptr args: i64 = 0, r_ret: ^Shader_Mode)
+    m_call: proc(_:^GDW.MethodBind, obj: Shader, args: rawptr = nil, r_ret: ^Shader_Mode)
   },
   set_code: struct{
     using _set_code: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ Shader_MethodBind_List :: struct {
   },
     get_code: struct{
     using _get_code: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shader, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Shader, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_default_texture_parameter: struct{
     using _set_default_texture_parameter: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ Shader_MethodBind_List :: struct {
   },
   inspect_native_shader_code: struct{
     using _inspect_native_shader_code: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shader, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Shader, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 Shader_Init_ :: proc (Shader_methods: ^Shader_MethodBind_List, loc := #caller_location) {

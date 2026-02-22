@@ -30,23 +30,23 @@ Node2D_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_rotation: struct{
     using _get_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_rotation_degrees: struct{
     using _get_rotation_degrees: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_skew: struct{
     using _get_skew: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_scale: struct{
     using _get_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   rotate: struct{
     using _rotate: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Node2D_MethodBind_List :: struct {
   },
     get_global_position: struct{
     using _get_global_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_global_rotation: struct{
     using _set_global_rotation: ^GDW.MethodBind,
@@ -90,11 +90,11 @@ Node2D_MethodBind_List :: struct {
   },
     get_global_rotation: struct{
     using _get_global_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_global_rotation_degrees: struct{
     using _get_global_rotation_degrees: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_global_skew: struct{
     using _set_global_skew: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ Node2D_MethodBind_List :: struct {
   },
     get_global_skew: struct{
     using _get_global_skew: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_global_scale: struct{
     using _set_global_scale: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ Node2D_MethodBind_List :: struct {
   },
     get_global_scale: struct{
     using _get_global_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Node2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_transform: struct{
     using _set_transform: ^GDW.MethodBind,

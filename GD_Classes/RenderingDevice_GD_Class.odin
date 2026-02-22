@@ -822,7 +822,7 @@ RenderingDevice_MethodBind_List :: struct {
   },
   shader_create_placeholder: struct{
     using _shader_create_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   shader_get_vertex_input_attribute_mask: struct{
     using _shader_get_vertex_input_attribute_mask: ^GDW.MethodBind,
@@ -958,7 +958,7 @@ RenderingDevice_MethodBind_List :: struct {
   },
     draw_list_switch_to_next_pass: struct{
     using _draw_list_switch_to_next_pass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   draw_list_switch_to_next_pass_split: struct{
     using _draw_list_switch_to_next_pass_split: ^GDW.MethodBind,
@@ -966,11 +966,11 @@ RenderingDevice_MethodBind_List :: struct {
   },
   draw_list_end: struct{
     using _draw_list_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: rawptr = nil)
   },
     compute_list_begin: struct{
     using _compute_list_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   compute_list_bind_compute_pipeline: struct{
     using _compute_list_bind_compute_pipeline: ^GDW.MethodBind,
@@ -998,7 +998,7 @@ RenderingDevice_MethodBind_List :: struct {
   },
     compute_list_end: struct{
     using _compute_list_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: rawptr = nil)
   },
     free_rid: struct{
     using _free_rid: ^GDW.MethodBind,
@@ -1010,11 +1010,11 @@ RenderingDevice_MethodBind_List :: struct {
   },
     get_captured_timestamps_count: struct{
     using _get_captured_timestamps_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_captured_timestamps_frame: struct{
     using _get_captured_timestamps_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_captured_timestamp_gpu_time: struct{
     using _get_captured_timestamp_gpu_time: ^GDW.MethodBind,
@@ -1038,15 +1038,15 @@ RenderingDevice_MethodBind_List :: struct {
   },
   get_frame_delay: struct{
     using _get_frame_delay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   submit: struct{
     using _submit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: rawptr = nil)
   },
     sync: struct{
     using _sync: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: rawptr = nil)
   },
     barrier: struct{
     using _barrier: ^GDW.MethodBind,
@@ -1054,11 +1054,11 @@ RenderingDevice_MethodBind_List :: struct {
   },
     full_barrier: struct{
     using _full_barrier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: rawptr = nil)
   },
     create_local_device: struct{
     using _create_local_device: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^RenderingDevice)
   },
   set_resource_name: struct{
     using _set_resource_name: ^GDW.MethodBind,
@@ -1074,19 +1074,19 @@ RenderingDevice_MethodBind_List :: struct {
   },
     draw_command_end_label: struct{
     using _draw_command_end_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_device_vendor_name: struct{
     using _get_device_vendor_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_device_name: struct{
     using _get_device_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_device_pipeline_cache_uuid: struct{
     using _get_device_pipeline_cache_uuid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_memory_usage: struct{
     using _get_memory_usage: ^GDW.MethodBind,
@@ -1098,11 +1098,11 @@ RenderingDevice_MethodBind_List :: struct {
   },
   get_perf_report: struct{
     using _get_perf_report: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_driver_and_device_memory_report: struct{
     using _get_driver_and_device_memory_report: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_tracked_object_name: struct{
     using _get_tracked_object_name: ^GDW.MethodBind,
@@ -1110,15 +1110,15 @@ RenderingDevice_MethodBind_List :: struct {
   },
   get_tracked_object_type_count: struct{
     using _get_tracked_object_type_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_driver_total_memory: struct{
     using _get_driver_total_memory: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_driver_allocation_count: struct{
     using _get_driver_allocation_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_driver_memory_by_object_type: struct{
     using _get_driver_memory_by_object_type: ^GDW.MethodBind,
@@ -1130,11 +1130,11 @@ RenderingDevice_MethodBind_List :: struct {
   },
   get_device_total_memory: struct{
     using _get_device_total_memory: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_device_allocation_count: struct{
     using _get_device_allocation_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderingDevice, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_device_memory_by_object_type: struct{
     using _get_device_memory_by_object_type: ^GDW.MethodBind,

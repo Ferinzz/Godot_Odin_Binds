@@ -41,7 +41,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_material_override: struct{
     using _get_material_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^Material)
   },
   set_material_overlay: struct{
     using _set_material_overlay: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_material_overlay: struct{
     using _get_material_overlay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^Material)
   },
   set_cast_shadows_setting: struct{
     using _set_cast_shadows_setting: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_cast_shadows_setting: struct{
     using _get_cast_shadows_setting: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GeometryInstance3D_ShadowCastingSetting)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GeometryInstance3D_ShadowCastingSetting)
   },
   set_lod_bias: struct{
     using _set_lod_bias: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_lod_bias: struct{
     using _get_lod_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_transparency: struct{
     using _set_transparency: ^GDW.MethodBind,
@@ -73,7 +73,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_transparency: struct{
     using _get_transparency: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_end_margin: struct{
     using _set_visibility_range_end_margin: ^GDW.MethodBind,
@@ -81,7 +81,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_end_margin: struct{
     using _get_visibility_range_end_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_end: struct{
     using _set_visibility_range_end: ^GDW.MethodBind,
@@ -89,7 +89,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_end: struct{
     using _get_visibility_range_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_begin_margin: struct{
     using _set_visibility_range_begin_margin: ^GDW.MethodBind,
@@ -97,7 +97,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_begin_margin: struct{
     using _get_visibility_range_begin_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_begin: struct{
     using _set_visibility_range_begin: ^GDW.MethodBind,
@@ -105,7 +105,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_begin: struct{
     using _get_visibility_range_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_fade_mode: struct{
     using _set_visibility_range_fade_mode: ^GDW.MethodBind,
@@ -113,7 +113,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_fade_mode: struct{
     using _get_visibility_range_fade_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GeometryInstance3D_VisibilityRangeFadeMode)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GeometryInstance3D_VisibilityRangeFadeMode)
   },
   set_instance_shader_parameter: struct{
     using _set_instance_shader_parameter: ^GDW.MethodBind,
@@ -129,7 +129,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_extra_cull_margin: struct{
     using _get_extra_cull_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_lightmap_texel_scale: struct{
     using _set_lightmap_texel_scale: ^GDW.MethodBind,
@@ -137,7 +137,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_lightmap_texel_scale: struct{
     using _get_lightmap_texel_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_lightmap_scale: struct{
     using _set_lightmap_scale: ^GDW.MethodBind,
@@ -145,7 +145,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_lightmap_scale: struct{
     using _get_lightmap_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GeometryInstance3D_LightmapScale)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GeometryInstance3D_LightmapScale)
   },
   set_gi_mode: struct{
     using _set_gi_mode: ^GDW.MethodBind,
@@ -153,7 +153,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_gi_mode: struct{
     using _get_gi_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GeometryInstance3D_GIMode)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GeometryInstance3D_GIMode)
   },
   set_ignore_occlusion_culling: struct{
     using _set_ignore_occlusion_culling: ^GDW.MethodBind,
@@ -161,7 +161,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     is_ignoring_occlusion_culling: struct{
     using _is_ignoring_occlusion_culling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_custom_aabb: struct{
     using _set_custom_aabb: ^GDW.MethodBind,
@@ -169,7 +169,7 @@ GeometryInstance3D_MethodBind_List :: struct {
   },
     get_custom_aabb: struct{
     using _get_custom_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: GeometryInstance3D, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
 };
 GeometryInstance3D_Init_ :: proc (GeometryInstance3D_methods: ^GeometryInstance3D_MethodBind_List, loc := #caller_location) {

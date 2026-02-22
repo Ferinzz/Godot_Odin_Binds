@@ -14,7 +14,7 @@ InputMap_MethodBind_List :: struct {
   },
   get_actions: struct{
     using _get_actions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: InputMap, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_action: struct{
     using _add_action: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ InputMap_MethodBind_List :: struct {
   },
   load_from_project_settings: struct{
     using _load_from_project_settings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputMap, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: InputMap, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 InputMap_Init_ :: proc (InputMap_methods: ^InputMap_MethodBind_List, loc := #caller_location) {

@@ -22,7 +22,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     get_progress: struct{
     using _get_progress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_h_offset: struct{
     using _set_h_offset: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     get_h_offset: struct{
     using _get_h_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_v_offset: struct{
     using _set_v_offset: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     get_v_offset: struct{
     using _get_v_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_progress_ratio: struct{
     using _set_progress_ratio: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     get_progress_ratio: struct{
     using _get_progress_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rotation_mode: struct{
     using _set_rotation_mode: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     get_rotation_mode: struct{
     using _get_rotation_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^PathFollow3D_RotationMode)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^PathFollow3D_RotationMode)
   },
   set_cubic_interpolation: struct{
     using _set_cubic_interpolation: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     get_cubic_interpolation: struct{
     using _get_cubic_interpolation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_model_front: struct{
     using _set_use_model_front: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     is_using_model_front: struct{
     using _is_using_model_front: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_loop: struct{
     using _set_loop: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     has_loop: struct{
     using _has_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tilt_enabled: struct{
     using _set_tilt_enabled: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ PathFollow3D_MethodBind_List :: struct {
   },
     is_tilt_enabled: struct{
     using _is_tilt_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   correct_posture: struct{
     using _correct_posture: ^GDW.MethodBind,

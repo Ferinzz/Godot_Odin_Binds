@@ -17,7 +17,7 @@ RDFramebufferPass_MethodBind_List :: struct {
   },
     get_color_attachments: struct{
     using _get_color_attachments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_input_attachments: struct{
     using _set_input_attachments: ^GDW.MethodBind,
@@ -25,7 +25,7 @@ RDFramebufferPass_MethodBind_List :: struct {
   },
     get_input_attachments: struct{
     using _get_input_attachments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_resolve_attachments: struct{
     using _set_resolve_attachments: ^GDW.MethodBind,
@@ -33,7 +33,7 @@ RDFramebufferPass_MethodBind_List :: struct {
   },
     get_resolve_attachments: struct{
     using _get_resolve_attachments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_preserve_attachments: struct{
     using _set_preserve_attachments: ^GDW.MethodBind,
@@ -41,7 +41,7 @@ RDFramebufferPass_MethodBind_List :: struct {
   },
     get_preserve_attachments: struct{
     using _get_preserve_attachments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_depth_attachment: struct{
     using _set_depth_attachment: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ RDFramebufferPass_MethodBind_List :: struct {
   },
     get_depth_attachment: struct{
     using _get_depth_attachment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDFramebufferPass, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 RDFramebufferPass_Init_ :: proc (RDFramebufferPass_methods: ^RDFramebufferPass_MethodBind_List, loc := #caller_location) {

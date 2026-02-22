@@ -14,7 +14,7 @@ RDAttachmentFormat_MethodBind_List :: struct {
   },
     get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDAttachmentFormat, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_DataFormat)
+    m_call: proc(_:^GDW.MethodBind, obj: RDAttachmentFormat, args: rawptr = nil, r_ret: ^RenderingDevice_DataFormat)
   },
   set_samples: struct{
     using _set_samples: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDAttachmentFormat_MethodBind_List :: struct {
   },
     get_samples: struct{
     using _get_samples: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDAttachmentFormat, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureSamples)
+    m_call: proc(_:^GDW.MethodBind, obj: RDAttachmentFormat, args: rawptr = nil, r_ret: ^RenderingDevice_TextureSamples)
   },
   set_usage_flags: struct{
     using _set_usage_flags: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RDAttachmentFormat_MethodBind_List :: struct {
   },
     get_usage_flags: struct{
     using _get_usage_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDAttachmentFormat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDAttachmentFormat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 RDAttachmentFormat_Init_ :: proc (RDAttachmentFormat_methods: ^RDAttachmentFormat_MethodBind_List, loc := #caller_location) {

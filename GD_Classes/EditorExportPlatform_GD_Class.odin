@@ -26,11 +26,11 @@ EditorExportPlatform_DebugFlags :: enum i64 {
 EditorExportPlatform_MethodBind_List :: struct {
   get_os_name: struct{
     using _get_os_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   create_preset: struct{
     using _create_preset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, #by_ptr args: i64 = 0, r_ret: ^EditorExportPreset)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, args: rawptr = nil, r_ret: ^EditorExportPreset)
   },
   find_export_template: struct{
     using _find_export_template: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ EditorExportPlatform_MethodBind_List :: struct {
   },
   get_current_presets: struct{
     using _get_current_presets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   save_pack: struct{
     using _save_pack: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ EditorExportPlatform_MethodBind_List :: struct {
   },
   clear_messages: struct{
     using _clear_messages: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_message: struct{
     using _add_message: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ EditorExportPlatform_MethodBind_List :: struct {
   },
     get_message_count: struct{
     using _get_message_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_message_type: struct{
     using _get_message_type: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ EditorExportPlatform_MethodBind_List :: struct {
   },
   get_worst_message_type: struct{
     using _get_worst_message_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, #by_ptr args: i64 = 0, r_ret: ^EditorExportPlatform_ExportMessageType)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatform, args: rawptr = nil, r_ret: ^EditorExportPlatform_ExportMessageType)
   },
   ssh_run_on_remote: struct{
     using _ssh_run_on_remote: ^GDW.MethodBind,

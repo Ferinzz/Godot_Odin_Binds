@@ -18,7 +18,7 @@ StreamPeerTLS_Status :: enum i64 {
 StreamPeerTLS_MethodBind_List :: struct {
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTLS, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTLS, args: rawptr = nil, r_ret: rawptr = nil)
   },
     accept_stream: struct{
     using _accept_stream: ^GDW.MethodBind,
@@ -30,15 +30,15 @@ StreamPeerTLS_MethodBind_List :: struct {
   },
   get_status: struct{
     using _get_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTLS, #by_ptr args: i64 = 0, r_ret: ^StreamPeerTLS_Status)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTLS, args: rawptr = nil, r_ret: ^StreamPeerTLS_Status)
   },
   get_stream: struct{
     using _get_stream: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTLS, #by_ptr args: i64 = 0, r_ret: ^StreamPeer)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTLS, args: rawptr = nil, r_ret: ^StreamPeer)
   },
   disconnect_from_stream: struct{
     using _disconnect_from_stream: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTLS, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTLS, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 StreamPeerTLS_Init_ :: proc (StreamPeerTLS_methods: ^StreamPeerTLS_MethodBind_List, loc := #caller_location) {

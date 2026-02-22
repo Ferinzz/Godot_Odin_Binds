@@ -10,19 +10,19 @@ RenderData :: ^GDW.Object
 RenderData_MethodBind_List :: struct {
   get_render_scene_buffers: struct{
     using _get_render_scene_buffers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderData, #by_ptr args: i64 = 0, r_ret: ^RenderSceneBuffers)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderData, args: rawptr = nil, r_ret: ^RenderSceneBuffers)
   },
   get_render_scene_data: struct{
     using _get_render_scene_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderData, #by_ptr args: i64 = 0, r_ret: ^RenderSceneData)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderData, args: rawptr = nil, r_ret: ^RenderSceneData)
   },
   get_environment: struct{
     using _get_environment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderData, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderData, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_camera_attributes: struct{
     using _get_camera_attributes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderData, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderData, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 RenderData_Init_ :: proc (RenderData_methods: ^RenderData_MethodBind_List, loc := #caller_location) {

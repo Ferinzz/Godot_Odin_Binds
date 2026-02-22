@@ -48,7 +48,7 @@ EditorExportPlatformExtension_MethodBind_List :: struct {
   },
     get_config_error: struct{
     using _get_config_error: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatformExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatformExtension, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_config_missing_templates: struct{
     using _set_config_missing_templates: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ EditorExportPlatformExtension_MethodBind_List :: struct {
   },
     get_config_missing_templates: struct{
     using _get_config_missing_templates: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatformExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPlatformExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 EditorExportPlatformExtension_Init_ :: proc (EditorExportPlatformExtension_methods: ^EditorExportPlatformExtension_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ VisualShaderNodeParticleEmitter_MethodBind_List :: struct {
   },
     is_mode_2d: struct{
     using _is_mode_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleEmitter, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleEmitter, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 VisualShaderNodeParticleEmitter_Init_ :: proc (VisualShaderNodeParticleEmitter_methods: ^VisualShaderNodeParticleEmitter_MethodBind_List, loc := #caller_location) {

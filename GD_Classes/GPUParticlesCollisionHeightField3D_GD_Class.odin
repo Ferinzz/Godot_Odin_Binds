@@ -29,7 +29,7 @@ GPUParticlesCollisionHeightField3D_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_resolution: struct{
     using _set_resolution: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ GPUParticlesCollisionHeightField3D_MethodBind_List :: struct {
   },
     get_resolution: struct{
     using _get_resolution: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, #by_ptr args: i64 = 0, r_ret: ^GPUParticlesCollisionHeightField3D_Resolution)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, args: rawptr = nil, r_ret: ^GPUParticlesCollisionHeightField3D_Resolution)
   },
   set_update_mode: struct{
     using _set_update_mode: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ GPUParticlesCollisionHeightField3D_MethodBind_List :: struct {
   },
     get_update_mode: struct{
     using _get_update_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, #by_ptr args: i64 = 0, r_ret: ^GPUParticlesCollisionHeightField3D_UpdateMode)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, args: rawptr = nil, r_ret: ^GPUParticlesCollisionHeightField3D_UpdateMode)
   },
   set_heightfield_mask: struct{
     using _set_heightfield_mask: ^GDW.MethodBind,
@@ -53,7 +53,7 @@ GPUParticlesCollisionHeightField3D_MethodBind_List :: struct {
   },
     get_heightfield_mask: struct{
     using _get_heightfield_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_heightfield_mask_value: struct{
     using _set_heightfield_mask_value: ^GDW.MethodBind,
@@ -69,7 +69,7 @@ GPUParticlesCollisionHeightField3D_MethodBind_List :: struct {
   },
     is_follow_camera_enabled: struct{
     using _is_follow_camera_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionHeightField3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 GPUParticlesCollisionHeightField3D_Init_ :: proc (GPUParticlesCollisionHeightField3D_methods: ^GPUParticlesCollisionHeightField3D_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ ParallaxBackground_MethodBind_List :: struct {
   },
     get_scroll_offset: struct{
     using _get_scroll_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_scroll_base_offset: struct{
     using _set_scroll_base_offset: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ParallaxBackground_MethodBind_List :: struct {
   },
     get_scroll_base_offset: struct{
     using _get_scroll_base_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_scroll_base_scale: struct{
     using _set_scroll_base_scale: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ ParallaxBackground_MethodBind_List :: struct {
   },
     get_scroll_base_scale: struct{
     using _get_scroll_base_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_limit_begin: struct{
     using _set_limit_begin: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ ParallaxBackground_MethodBind_List :: struct {
   },
     get_limit_begin: struct{
     using _get_limit_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_limit_end: struct{
     using _set_limit_end: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ ParallaxBackground_MethodBind_List :: struct {
   },
     get_limit_end: struct{
     using _get_limit_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_ignore_camera_zoom: struct{
     using _set_ignore_camera_zoom: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ ParallaxBackground_MethodBind_List :: struct {
   },
     is_ignore_camera_zoom: struct{
     using _is_ignore_camera_zoom: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxBackground, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 ParallaxBackground_Init_ :: proc (ParallaxBackground_methods: ^ParallaxBackground_MethodBind_List, loc := #caller_location) {

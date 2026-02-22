@@ -19,7 +19,7 @@ Container_Constants :: enum i64 {
 Container_MethodBind_List :: struct {
   queue_sort: struct{
     using _queue_sort: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Container, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Container, args: rawptr = nil, r_ret: rawptr = nil)
   },
     fit_child_in_rect: struct{
     using _fit_child_in_rect: ^GDW.MethodBind,

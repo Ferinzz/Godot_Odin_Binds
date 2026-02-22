@@ -14,7 +14,7 @@ AudioEffectChorus_MethodBind_List :: struct {
   },
     get_voice_count: struct{
     using _get_voice_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectChorus, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectChorus, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_voice_delay_ms: struct{
     using _set_voice_delay_ms: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ AudioEffectChorus_MethodBind_List :: struct {
   },
     get_wet: struct{
     using _get_wet: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectChorus, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectChorus, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_dry: struct{
     using _set_dry: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ AudioEffectChorus_MethodBind_List :: struct {
   },
     get_dry: struct{
     using _get_dry: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectChorus, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectChorus, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectChorus_Init_ :: proc (AudioEffectChorus_methods: ^AudioEffectChorus_MethodBind_List, loc := #caller_location) {

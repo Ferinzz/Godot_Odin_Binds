@@ -14,7 +14,7 @@ TriangleMesh_MethodBind_List :: struct {
   },
   get_faces: struct{
     using _get_faces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TriangleMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TriangleMesh, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   intersect_segment: struct{
     using _intersect_segment: ^GDW.MethodBind,

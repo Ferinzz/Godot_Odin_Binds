@@ -14,7 +14,7 @@ StyleBoxLine_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_thickness: struct{
     using _set_thickness: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ StyleBoxLine_MethodBind_List :: struct {
   },
     get_thickness: struct{
     using _get_thickness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_grow_begin: struct{
     using _set_grow_begin: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ StyleBoxLine_MethodBind_List :: struct {
   },
     get_grow_begin: struct{
     using _get_grow_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_grow_end: struct{
     using _set_grow_end: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ StyleBoxLine_MethodBind_List :: struct {
   },
     get_grow_end: struct{
     using _get_grow_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vertical: struct{
     using _set_vertical: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ StyleBoxLine_MethodBind_List :: struct {
   },
     is_vertical: struct{
     using _is_vertical: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxLine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 StyleBoxLine_Init_ :: proc (StyleBoxLine_methods: ^StyleBoxLine_MethodBind_List, loc := #caller_location) {

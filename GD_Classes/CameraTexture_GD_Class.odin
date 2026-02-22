@@ -14,7 +14,7 @@ CameraTexture_MethodBind_List :: struct {
   },
     get_camera_feed_id: struct{
     using _get_camera_feed_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraTexture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_which_feed: struct{
     using _set_which_feed: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CameraTexture_MethodBind_List :: struct {
   },
     get_which_feed: struct{
     using _get_which_feed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraTexture, #by_ptr args: i64 = 0, r_ret: ^CameraServer_FeedImage)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraTexture, args: rawptr = nil, r_ret: ^CameraServer_FeedImage)
   },
   set_camera_active: struct{
     using _set_camera_active: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CameraTexture_MethodBind_List :: struct {
   },
     get_camera_active: struct{
     using _get_camera_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraTexture, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CameraTexture_Init_ :: proc (CameraTexture_methods: ^CameraTexture_MethodBind_List, loc := #caller_location) {

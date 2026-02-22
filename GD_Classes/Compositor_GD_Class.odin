@@ -14,7 +14,7 @@ Compositor_MethodBind_List :: struct {
   },
     get_compositor_effects: struct{
     using _get_compositor_effects: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Compositor, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Compositor, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 Compositor_Init_ :: proc (Compositor_methods: ^Compositor_MethodBind_List, loc := #caller_location) {

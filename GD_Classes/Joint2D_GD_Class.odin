@@ -14,7 +14,7 @@ Joint2D_MethodBind_List :: struct {
   },
     get_node_a: struct{
     using _get_node_a: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_node_b: struct{
     using _set_node_b: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Joint2D_MethodBind_List :: struct {
   },
     get_node_b: struct{
     using _get_node_b: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_bias: struct{
     using _set_bias: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ Joint2D_MethodBind_List :: struct {
   },
     get_bias: struct{
     using _get_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_exclude_nodes_from_collision: struct{
     using _set_exclude_nodes_from_collision: ^GDW.MethodBind,
@@ -38,11 +38,11 @@ Joint2D_MethodBind_List :: struct {
   },
     get_exclude_nodes_from_collision: struct{
     using _get_exclude_nodes_from_collision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Joint2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 Joint2D_Init_ :: proc (Joint2D_methods: ^Joint2D_MethodBind_List, loc := #caller_location) {

@@ -14,15 +14,15 @@ PacketPeerUDP_MethodBind_List :: struct {
   },
   close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, args: rawptr = nil, r_ret: rawptr = nil)
   },
     wait: struct{
     using _wait: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   is_bound: struct{
     using _is_bound: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   connect_to_host: struct{
     using _connect_to_host: ^GDW.MethodBind,
@@ -30,19 +30,19 @@ PacketPeerUDP_MethodBind_List :: struct {
   },
   is_socket_connected: struct{
     using _is_socket_connected: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_packet_ip: struct{
     using _get_packet_ip: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_packet_port: struct{
     using _get_packet_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_local_port: struct{
     using _get_local_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerUDP, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_dest_address: struct{
     using _set_dest_address: ^GDW.MethodBind,

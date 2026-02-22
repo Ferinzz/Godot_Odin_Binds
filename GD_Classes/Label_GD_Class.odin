@@ -14,7 +14,7 @@ Label_MethodBind_List :: struct {
   },
     get_horizontal_alignment: struct{
     using _get_horizontal_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   set_vertical_alignment: struct{
     using _set_vertical_alignment: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Label_MethodBind_List :: struct {
   },
     get_vertical_alignment: struct{
     using _get_vertical_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.VerticalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.VerticalAlignment)
   },
   set_text: struct{
     using _set_text: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ Label_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_label_settings: struct{
     using _set_label_settings: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Label_MethodBind_List :: struct {
   },
     get_label_settings: struct{
     using _get_label_settings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^LabelSettings)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^LabelSettings)
   },
   set_text_direction: struct{
     using _set_text_direction: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ Label_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^Control_TextDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^Control_TextDirection)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Label_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_paragraph_separator: struct{
     using _set_paragraph_separator: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ Label_MethodBind_List :: struct {
   },
     get_paragraph_separator: struct{
     using _get_paragraph_separator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_autowrap_mode: struct{
     using _set_autowrap_mode: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ Label_MethodBind_List :: struct {
   },
     get_autowrap_mode: struct{
     using _get_autowrap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^TextServer_AutowrapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^TextServer_AutowrapMode)
   },
   set_autowrap_trim_flags: struct{
     using _set_autowrap_trim_flags: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Label_MethodBind_List :: struct {
   },
     get_autowrap_trim_flags: struct{
     using _get_autowrap_trim_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^TextServer_LineBreakFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^TextServer_LineBreakFlag)
   },
   set_justification_flags: struct{
     using _set_justification_flags: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ Label_MethodBind_List :: struct {
   },
     get_justification_flags: struct{
     using _get_justification_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^TextServer_JustificationFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^TextServer_JustificationFlag)
   },
   set_clip_text: struct{
     using _set_clip_text: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ Label_MethodBind_List :: struct {
   },
     is_clipping_text: struct{
     using _is_clipping_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tab_stops: struct{
     using _set_tab_stops: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ Label_MethodBind_List :: struct {
   },
     get_tab_stops: struct{
     using _get_tab_stops: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   set_text_overrun_behavior: struct{
     using _set_text_overrun_behavior: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ Label_MethodBind_List :: struct {
   },
     get_text_overrun_behavior: struct{
     using _get_text_overrun_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^TextServer_OverrunBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^TextServer_OverrunBehavior)
   },
   set_ellipsis_char: struct{
     using _set_ellipsis_char: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ Label_MethodBind_List :: struct {
   },
     get_ellipsis_char: struct{
     using _get_ellipsis_char: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_uppercase: struct{
     using _set_uppercase: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ Label_MethodBind_List :: struct {
   },
     is_uppercase: struct{
     using _is_uppercase: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_line_height: struct{
     using _get_line_height: ^GDW.MethodBind,
@@ -134,15 +134,15 @@ Label_MethodBind_List :: struct {
   },
   get_line_count: struct{
     using _get_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_visible_line_count: struct{
     using _get_visible_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_total_character_count: struct{
     using _get_total_character_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_visible_characters: struct{
     using _set_visible_characters: ^GDW.MethodBind,
@@ -150,11 +150,11 @@ Label_MethodBind_List :: struct {
   },
     get_visible_characters: struct{
     using _get_visible_characters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_visible_characters_behavior: struct{
     using _get_visible_characters_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^TextServer_VisibleCharactersBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^TextServer_VisibleCharactersBehavior)
   },
   set_visible_characters_behavior: struct{
     using _set_visible_characters_behavior: ^GDW.MethodBind,
@@ -166,7 +166,7 @@ Label_MethodBind_List :: struct {
   },
     get_visible_ratio: struct{
     using _get_visible_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_lines_skipped: struct{
     using _set_lines_skipped: ^GDW.MethodBind,
@@ -174,7 +174,7 @@ Label_MethodBind_List :: struct {
   },
     get_lines_skipped: struct{
     using _get_lines_skipped: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_lines_visible: struct{
     using _set_max_lines_visible: ^GDW.MethodBind,
@@ -182,7 +182,7 @@ Label_MethodBind_List :: struct {
   },
     get_max_lines_visible: struct{
     using _get_max_lines_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_structured_text_bidi_override: struct{
     using _set_structured_text_bidi_override: ^GDW.MethodBind,
@@ -190,7 +190,7 @@ Label_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override: struct{
     using _get_structured_text_bidi_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^TextServer_StructuredTextParser)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^TextServer_StructuredTextParser)
   },
   set_structured_text_bidi_override_options: struct{
     using _set_structured_text_bidi_override_options: ^GDW.MethodBind,
@@ -198,7 +198,7 @@ Label_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override_options: struct{
     using _get_structured_text_bidi_override_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Label, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Label, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_character_bounds: struct{
     using _get_character_bounds: ^GDW.MethodBind,

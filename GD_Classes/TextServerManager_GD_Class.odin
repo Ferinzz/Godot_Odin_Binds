@@ -14,7 +14,7 @@ TextServerManager_MethodBind_List :: struct {
   },
     get_interface_count: struct{
     using _get_interface_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServerManager, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServerManager, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   remove_interface: struct{
     using _remove_interface: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ TextServerManager_MethodBind_List :: struct {
   },
   get_interfaces: struct{
     using _get_interfaces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServerManager, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServerManager, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   find_interface: struct{
     using _find_interface: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ TextServerManager_MethodBind_List :: struct {
   },
     get_primary_interface: struct{
     using _get_primary_interface: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServerManager, #by_ptr args: i64 = 0, r_ret: ^TextServer)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServerManager, args: rawptr = nil, r_ret: ^TextServer)
   },
 };
 TextServerManager_Init_ :: proc (TextServerManager_methods: ^TextServerManager_MethodBind_List, loc := #caller_location) {

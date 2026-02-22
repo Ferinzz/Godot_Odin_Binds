@@ -19,7 +19,7 @@ CollisionPolygon2D_MethodBind_List :: struct {
   },
     get_polygon: struct{
     using _get_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_build_mode: struct{
     using _set_build_mode: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ CollisionPolygon2D_MethodBind_List :: struct {
   },
     get_build_mode: struct{
     using _get_build_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, #by_ptr args: i64 = 0, r_ret: ^CollisionPolygon2D_BuildMode)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, args: rawptr = nil, r_ret: ^CollisionPolygon2D_BuildMode)
   },
   set_disabled: struct{
     using _set_disabled: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ CollisionPolygon2D_MethodBind_List :: struct {
   },
     is_disabled: struct{
     using _is_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_one_way_collision: struct{
     using _set_one_way_collision: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ CollisionPolygon2D_MethodBind_List :: struct {
   },
     is_one_way_collision_enabled: struct{
     using _is_one_way_collision_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_one_way_collision_margin: struct{
     using _set_one_way_collision_margin: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ CollisionPolygon2D_MethodBind_List :: struct {
   },
     get_one_way_collision_margin: struct{
     using _get_one_way_collision_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 CollisionPolygon2D_Init_ :: proc (CollisionPolygon2D_methods: ^CollisionPolygon2D_MethodBind_List, loc := #caller_location) {

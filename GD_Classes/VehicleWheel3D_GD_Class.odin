@@ -14,7 +14,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_suspension_rest_length: struct{
     using _set_suspension_rest_length: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_suspension_rest_length: struct{
     using _get_suspension_rest_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_suspension_travel: struct{
     using _set_suspension_travel: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_suspension_travel: struct{
     using _get_suspension_travel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_suspension_stiffness: struct{
     using _set_suspension_stiffness: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_suspension_stiffness: struct{
     using _get_suspension_stiffness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_suspension_max_force: struct{
     using _set_suspension_max_force: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_suspension_max_force: struct{
     using _get_suspension_max_force: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_damping_compression: struct{
     using _set_damping_compression: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_damping_compression: struct{
     using _get_damping_compression: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_damping_relaxation: struct{
     using _set_damping_relaxation: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_damping_relaxation: struct{
     using _get_damping_relaxation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_as_traction: struct{
     using _set_use_as_traction: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     is_used_as_traction: struct{
     using _is_used_as_traction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_as_steering: struct{
     using _set_use_as_steering: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     is_used_as_steering: struct{
     using _is_used_as_steering: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_friction_slip: struct{
     using _set_friction_slip: ^GDW.MethodBind,
@@ -86,23 +86,23 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_friction_slip: struct{
     using _get_friction_slip: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   is_in_contact: struct{
     using _is_in_contact: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_contact_body: struct{
     using _get_contact_body: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^Node3D)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^Node3D)
   },
   get_contact_point: struct{
     using _get_contact_point: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_contact_normal: struct{
     using _get_contact_normal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_roll_influence: struct{
     using _set_roll_influence: ^GDW.MethodBind,
@@ -110,15 +110,15 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_roll_influence: struct{
     using _get_roll_influence: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_skidinfo: struct{
     using _get_skidinfo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_rpm: struct{
     using _get_rpm: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_engine_force: struct{
     using _set_engine_force: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_engine_force: struct{
     using _get_engine_force: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_brake: struct{
     using _set_brake: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_brake: struct{
     using _get_brake: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_steering: struct{
     using _set_steering: ^GDW.MethodBind,
@@ -142,7 +142,7 @@ VehicleWheel3D_MethodBind_List :: struct {
   },
     get_steering: struct{
     using _get_steering: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleWheel3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 VehicleWheel3D_Init_ :: proc (VehicleWheel3D_methods: ^VehicleWheel3D_MethodBind_List, loc := #caller_location) {

@@ -18,51 +18,51 @@ AnimationNodeStateMachinePlayback_MethodBind_List :: struct {
   },
     next: struct{
     using _next: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: rawptr = nil)
   },
     stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_playing: struct{
     using _is_playing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_current_node: struct{
     using _get_current_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   get_current_play_position: struct{
     using _get_current_play_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_current_length: struct{
     using _get_current_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_fading_from_node: struct{
     using _get_fading_from_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   get_fading_from_play_position: struct{
     using _get_fading_from_play_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_fading_from_length: struct{
     using _get_fading_from_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_fading_position: struct{
     using _get_fading_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_fading_length: struct{
     using _get_fading_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_travel_path: struct{
     using _get_travel_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachinePlayback, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 AnimationNodeStateMachinePlayback_Init_ :: proc (AnimationNodeStateMachinePlayback_methods: ^AnimationNodeStateMachinePlayback_MethodBind_List, loc := #caller_location) {

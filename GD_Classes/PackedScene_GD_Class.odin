@@ -25,11 +25,11 @@ PackedScene_MethodBind_List :: struct {
   },
   can_instantiate: struct{
     using _can_instantiate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PackedScene, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PackedScene, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_state: struct{
     using _get_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PackedScene, #by_ptr args: i64 = 0, r_ret: ^SceneState)
+    m_call: proc(_:^GDW.MethodBind, obj: PackedScene, args: rawptr = nil, r_ret: ^SceneState)
   },
 };
 PackedScene_Init_ :: proc (PackedScene_methods: ^PackedScene_MethodBind_List, loc := #caller_location) {

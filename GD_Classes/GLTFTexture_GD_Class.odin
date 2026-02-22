@@ -10,7 +10,7 @@ GLTFTexture :: ^GDW.Object
 GLTFTexture_MethodBind_List :: struct {
   get_src_image: struct{
     using _get_src_image: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFTexture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_src_image: struct{
     using _set_src_image: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ GLTFTexture_MethodBind_List :: struct {
   },
     get_sampler: struct{
     using _get_sampler: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFTexture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sampler: struct{
     using _set_sampler: ^GDW.MethodBind,

@@ -14,11 +14,11 @@ EditorInspector_MethodBind_List :: struct {
   },
     get_selected_path: struct{
     using _get_selected_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInspector, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInspector, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_edited_object: struct{
     using _get_edited_object: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInspector, #by_ptr args: i64 = 0, r_ret: ^GDW.Object)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInspector, args: rawptr = nil, r_ret: ^GDW.Object)
   },
   instantiate_property_editor: struct{
     using _instantiate_property_editor: ^GDW.MethodBind,

@@ -14,7 +14,7 @@ DirAccess_MethodBind_List :: struct {
   },
   get_open_error: struct{
     using _get_open_error: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   create_temp: struct{
     using _create_temp: ^GDW.MethodBind,
@@ -22,23 +22,23 @@ DirAccess_MethodBind_List :: struct {
   },
   list_dir_begin: struct{
     using _list_dir_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   get_next: struct{
     using _get_next: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   current_is_dir: struct{
     using _current_is_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   list_dir_end: struct{
     using _list_dir_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_files: struct{
     using _get_files: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_files_at: struct{
     using _get_files_at: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ DirAccess_MethodBind_List :: struct {
   },
   get_directories: struct{
     using _get_directories: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_directories_at: struct{
     using _get_directories_at: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ DirAccess_MethodBind_List :: struct {
   },
   get_drive_count: struct{
     using _get_drive_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_drive_name: struct{
     using _get_drive_name: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ DirAccess_MethodBind_List :: struct {
   },
   get_current_drive: struct{
     using _get_current_drive: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   change_dir: struct{
     using _change_dir: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ DirAccess_MethodBind_List :: struct {
   },
   get_space_left: struct{
     using _get_space_left: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   copy: struct{
     using _copy: ^GDW.MethodBind,
@@ -150,7 +150,7 @@ DirAccess_MethodBind_List :: struct {
   },
     get_include_navigational: struct{
     using _get_include_navigational: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_include_hidden: struct{
     using _set_include_hidden: ^GDW.MethodBind,
@@ -158,11 +158,11 @@ DirAccess_MethodBind_List :: struct {
   },
     get_include_hidden: struct{
     using _get_include_hidden: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_filesystem_type: struct{
     using _get_filesystem_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: DirAccess, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_case_sensitive: struct{
     using _is_case_sensitive: ^GDW.MethodBind,

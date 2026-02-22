@@ -14,11 +14,11 @@ RemoteTransform2D_MethodBind_List :: struct {
   },
     get_remote_node: struct{
     using _get_remote_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   force_update_cache: struct{
     using _force_update_cache: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_use_global_coordinates: struct{
     using _set_use_global_coordinates: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ RemoteTransform2D_MethodBind_List :: struct {
   },
     get_use_global_coordinates: struct{
     using _get_use_global_coordinates: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_update_position: struct{
     using _set_update_position: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ RemoteTransform2D_MethodBind_List :: struct {
   },
     get_update_position: struct{
     using _get_update_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_update_rotation: struct{
     using _set_update_rotation: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ RemoteTransform2D_MethodBind_List :: struct {
   },
     get_update_rotation: struct{
     using _get_update_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_update_scale: struct{
     using _set_update_scale: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ RemoteTransform2D_MethodBind_List :: struct {
   },
     get_update_scale: struct{
     using _get_update_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RemoteTransform2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 RemoteTransform2D_Init_ :: proc (RemoteTransform2D_methods: ^RemoteTransform2D_MethodBind_List, loc := #caller_location) {

@@ -14,11 +14,11 @@ OpenXRInteractionProfile_MethodBind_List :: struct {
   },
     get_interaction_profile_path: struct{
     using _get_interaction_profile_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_binding_count: struct{
     using _get_binding_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_binding: struct{
     using _get_binding: ^GDW.MethodBind,
@@ -30,11 +30,11 @@ OpenXRInteractionProfile_MethodBind_List :: struct {
   },
     get_bindings: struct{
     using _get_bindings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_binding_modifier_count: struct{
     using _get_binding_modifier_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_binding_modifier: struct{
     using _get_binding_modifier: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ OpenXRInteractionProfile_MethodBind_List :: struct {
   },
     get_binding_modifiers: struct{
     using _get_binding_modifiers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInteractionProfile, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 OpenXRInteractionProfile_Init_ :: proc (OpenXRInteractionProfile_methods: ^OpenXRInteractionProfile_MethodBind_List, loc := #caller_location) {

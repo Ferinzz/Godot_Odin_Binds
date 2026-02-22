@@ -22,7 +22,7 @@ VisualShaderNodeBillboard_MethodBind_List :: struct {
   },
     get_billboard_type: struct{
     using _get_billboard_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeBillboard, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeBillboard_BillboardType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeBillboard, args: rawptr = nil, r_ret: ^VisualShaderNodeBillboard_BillboardType)
   },
   set_keep_scale_enabled: struct{
     using _set_keep_scale_enabled: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VisualShaderNodeBillboard_MethodBind_List :: struct {
   },
     is_keep_scale_enabled: struct{
     using _is_keep_scale_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeBillboard, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeBillboard, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 VisualShaderNodeBillboard_Init_ :: proc (VisualShaderNodeBillboard_methods: ^VisualShaderNodeBillboard_MethodBind_List, loc := #caller_location) {

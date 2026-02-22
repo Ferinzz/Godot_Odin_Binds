@@ -14,7 +14,7 @@ VisualShaderNodeUIntParameter_MethodBind_List :: struct {
   },
     is_default_value_enabled: struct{
     using _is_default_value_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUIntParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUIntParameter, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_default_value: struct{
     using _set_default_value: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ VisualShaderNodeUIntParameter_MethodBind_List :: struct {
   },
     get_default_value: struct{
     using _get_default_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUIntParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUIntParameter, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 VisualShaderNodeUIntParameter_Init_ :: proc (VisualShaderNodeUIntParameter_methods: ^VisualShaderNodeUIntParameter_MethodBind_List, loc := #caller_location) {

@@ -10,7 +10,7 @@ WeakRef :: ^GDW.Object
 WeakRef_MethodBind_List :: struct {
   get_ref: struct{
     using _get_ref: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WeakRef, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: WeakRef, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
 };
 WeakRef_Init_ :: proc (WeakRef_methods: ^WeakRef_MethodBind_List, loc := #caller_location) {

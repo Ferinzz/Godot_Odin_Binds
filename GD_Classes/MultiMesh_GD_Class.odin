@@ -24,7 +24,7 @@ MultiMesh_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^Mesh)
   },
   set_use_colors: struct{
     using _set_use_colors: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ MultiMesh_MethodBind_List :: struct {
   },
     is_using_colors: struct{
     using _is_using_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_custom_data: struct{
     using _set_use_custom_data: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ MultiMesh_MethodBind_List :: struct {
   },
     is_using_custom_data: struct{
     using _is_using_custom_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_transform_format: struct{
     using _set_transform_format: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ MultiMesh_MethodBind_List :: struct {
   },
     get_transform_format: struct{
     using _get_transform_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^MultiMesh_TransformFormat)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^MultiMesh_TransformFormat)
   },
   set_instance_count: struct{
     using _set_instance_count: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ MultiMesh_MethodBind_List :: struct {
   },
     get_instance_count: struct{
     using _get_instance_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_visible_instance_count: struct{
     using _set_visible_instance_count: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ MultiMesh_MethodBind_List :: struct {
   },
     get_visible_instance_count: struct{
     using _get_visible_instance_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_physics_interpolation_quality: struct{
     using _set_physics_interpolation_quality: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ MultiMesh_MethodBind_List :: struct {
   },
     get_physics_interpolation_quality: struct{
     using _get_physics_interpolation_quality: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^MultiMesh_PhysicsInterpolationQuality)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^MultiMesh_PhysicsInterpolationQuality)
   },
   set_instance_transform: struct{
     using _set_instance_transform: ^GDW.MethodBind,
@@ -112,7 +112,7 @@ MultiMesh_MethodBind_List :: struct {
   },
     reset_instances_physics_interpolation: struct{
     using _reset_instances_physics_interpolation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_custom_aabb: struct{
     using _set_custom_aabb: ^GDW.MethodBind,
@@ -120,15 +120,15 @@ MultiMesh_MethodBind_List :: struct {
   },
     get_custom_aabb: struct{
     using _get_custom_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   get_aabb: struct{
     using _get_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   get_buffer: struct{
     using _get_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMesh, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   set_buffer: struct{
     using _set_buffer: ^GDW.MethodBind,

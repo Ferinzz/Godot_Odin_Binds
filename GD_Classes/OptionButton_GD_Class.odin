@@ -86,7 +86,7 @@ OptionButton_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: rawptr = nil)
   },
     select: struct{
     using _select: ^GDW.MethodBind,
@@ -94,15 +94,15 @@ OptionButton_MethodBind_List :: struct {
   },
     get_selected: struct{
     using _get_selected: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_selected_id: struct{
     using _get_selected_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_selected_metadata: struct{
     using _get_selected_metadata: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
   remove_item: struct{
     using _remove_item: ^GDW.MethodBind,
@@ -110,11 +110,11 @@ OptionButton_MethodBind_List :: struct {
   },
     get_popup: struct{
     using _get_popup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: ^PopupMenu)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: ^PopupMenu)
   },
   show_popup: struct{
     using _show_popup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_item_count: struct{
     using _set_item_count: ^GDW.MethodBind,
@@ -122,11 +122,11 @@ OptionButton_MethodBind_List :: struct {
   },
     get_item_count: struct{
     using _get_item_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_selectable_items: struct{
     using _has_selectable_items: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_selectable_item: struct{
     using _get_selectable_item: ^GDW.MethodBind,
@@ -138,7 +138,7 @@ OptionButton_MethodBind_List :: struct {
   },
     is_fit_to_longest_item: struct{
     using _is_fit_to_longest_item: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_reselect: struct{
     using _set_allow_reselect: ^GDW.MethodBind,
@@ -146,7 +146,7 @@ OptionButton_MethodBind_List :: struct {
   },
     get_allow_reselect: struct{
     using _get_allow_reselect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OptionButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_disable_shortcuts: struct{
     using _set_disable_shortcuts: ^GDW.MethodBind,

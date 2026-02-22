@@ -14,7 +14,7 @@ AudioEffectPhaser_MethodBind_List :: struct {
   },
     get_range_min_hz: struct{
     using _get_range_min_hz: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_range_max_hz: struct{
     using _set_range_max_hz: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AudioEffectPhaser_MethodBind_List :: struct {
   },
     get_range_max_hz: struct{
     using _get_range_max_hz: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rate_hz: struct{
     using _set_rate_hz: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioEffectPhaser_MethodBind_List :: struct {
   },
     get_rate_hz: struct{
     using _get_rate_hz: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_feedback: struct{
     using _set_feedback: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AudioEffectPhaser_MethodBind_List :: struct {
   },
     get_feedback: struct{
     using _get_feedback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_depth: struct{
     using _set_depth: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ AudioEffectPhaser_MethodBind_List :: struct {
   },
     get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPhaser, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectPhaser_Init_ :: proc (AudioEffectPhaser_methods: ^AudioEffectPhaser_MethodBind_List, loc := #caller_location) {

@@ -29,7 +29,7 @@ XRServer_RotationMode :: enum i64 {
 XRServer_MethodBind_List :: struct {
   get_world_scale: struct{
     using _get_world_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_world_scale: struct{
     using _set_world_scale: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ XRServer_MethodBind_List :: struct {
   },
     get_world_origin: struct{
     using _get_world_origin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_world_origin: struct{
     using _set_world_origin: ^GDW.MethodBind,
@@ -45,11 +45,11 @@ XRServer_MethodBind_List :: struct {
   },
     get_reference_frame: struct{
     using _get_reference_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   clear_reference_frame: struct{
     using _clear_reference_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     center_on_hmd: struct{
     using _center_on_hmd: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ XRServer_MethodBind_List :: struct {
   },
     get_hmd_transform: struct{
     using _get_hmd_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_camera_locked_to_origin: struct{
     using _set_camera_locked_to_origin: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ XRServer_MethodBind_List :: struct {
   },
     is_camera_locked_to_origin: struct{
     using _is_camera_locked_to_origin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_interface: struct{
     using _add_interface: ^GDW.MethodBind,
@@ -73,7 +73,7 @@ XRServer_MethodBind_List :: struct {
   },
     get_interface_count: struct{
     using _get_interface_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   remove_interface: struct{
     using _remove_interface: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ XRServer_MethodBind_List :: struct {
   },
   get_interfaces: struct{
     using _get_interfaces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   find_interface: struct{
     using _find_interface: ^GDW.MethodBind,
@@ -109,7 +109,7 @@ XRServer_MethodBind_List :: struct {
   },
   get_primary_interface: struct{
     using _get_primary_interface: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRServer, #by_ptr args: i64 = 0, r_ret: ^XRInterface)
+    m_call: proc(_:^GDW.MethodBind, obj: XRServer, args: rawptr = nil, r_ret: ^XRInterface)
   },
   set_primary_interface: struct{
     using _set_primary_interface: ^GDW.MethodBind,

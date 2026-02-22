@@ -10,19 +10,19 @@ KinematicCollision2D :: ^GDW.Object
 KinematicCollision2D_MethodBind_List :: struct {
   get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_normal: struct{
     using _get_normal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_travel: struct{
     using _get_travel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_remainder: struct{
     using _get_remainder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_angle: struct{
     using _get_angle: ^GDW.MethodBind,
@@ -30,35 +30,35 @@ KinematicCollision2D_MethodBind_List :: struct {
   },
   get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_local_shape: struct{
     using _get_local_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Object)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Object)
   },
   get_collider: struct{
     using _get_collider: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Object)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Object)
   },
   get_collider_id: struct{
     using _get_collider_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_collider_rid: struct{
     using _get_collider_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_collider_shape: struct{
     using _get_collider_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Object)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Object)
   },
   get_collider_shape_index: struct{
     using _get_collider_shape_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_collider_velocity: struct{
     using _get_collider_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 KinematicCollision2D_Init_ :: proc (KinematicCollision2D_methods: ^KinematicCollision2D_MethodBind_List, loc := #caller_location) {

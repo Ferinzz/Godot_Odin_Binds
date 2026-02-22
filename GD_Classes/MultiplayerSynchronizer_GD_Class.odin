@@ -20,7 +20,7 @@ MultiplayerSynchronizer_MethodBind_List :: struct {
   },
     get_root_path: struct{
     using _get_root_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_replication_interval: struct{
     using _set_replication_interval: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ MultiplayerSynchronizer_MethodBind_List :: struct {
   },
     get_replication_interval: struct{
     using _get_replication_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_delta_interval: struct{
     using _set_delta_interval: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ MultiplayerSynchronizer_MethodBind_List :: struct {
   },
     get_delta_interval: struct{
     using _get_delta_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_replication_config: struct{
     using _set_replication_config: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ MultiplayerSynchronizer_MethodBind_List :: struct {
   },
     get_replication_config: struct{
     using _get_replication_config: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, #by_ptr args: i64 = 0, r_ret: ^SceneReplicationConfig)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, args: rawptr = nil, r_ret: ^SceneReplicationConfig)
   },
   set_visibility_update_mode: struct{
     using _set_visibility_update_mode: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ MultiplayerSynchronizer_MethodBind_List :: struct {
   },
     get_visibility_update_mode: struct{
     using _get_visibility_update_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, #by_ptr args: i64 = 0, r_ret: ^MultiplayerSynchronizer_VisibilityUpdateMode)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, args: rawptr = nil, r_ret: ^MultiplayerSynchronizer_VisibilityUpdateMode)
   },
   update_visibility: struct{
     using _update_visibility: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ MultiplayerSynchronizer_MethodBind_List :: struct {
   },
     is_visibility_public: struct{
     using _is_visibility_public: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSynchronizer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_visibility_filter: struct{
     using _add_visibility_filter: ^GDW.MethodBind,

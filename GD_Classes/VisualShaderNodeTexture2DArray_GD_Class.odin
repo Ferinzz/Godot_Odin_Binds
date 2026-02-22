@@ -14,7 +14,7 @@ VisualShaderNodeTexture2DArray_MethodBind_List :: struct {
   },
     get_texture_array: struct{
     using _get_texture_array: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTexture2DArray, #by_ptr args: i64 = 0, r_ret: ^TextureLayered)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTexture2DArray, args: rawptr = nil, r_ret: ^TextureLayered)
   },
 };
 VisualShaderNodeTexture2DArray_Init_ :: proc (VisualShaderNodeTexture2DArray_methods: ^VisualShaderNodeTexture2DArray_MethodBind_List, loc := #caller_location) {

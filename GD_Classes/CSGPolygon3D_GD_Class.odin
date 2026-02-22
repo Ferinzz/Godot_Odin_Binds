@@ -31,7 +31,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_polygon: struct{
     using _get_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_mode: struct{
     using _set_mode: ^GDW.MethodBind,
@@ -39,7 +39,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_mode: struct{
     using _get_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^CSGPolygon3D_Mode)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^CSGPolygon3D_Mode)
   },
   set_depth: struct{
     using _set_depth: ^GDW.MethodBind,
@@ -47,7 +47,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_spin_degrees: struct{
     using _set_spin_degrees: ^GDW.MethodBind,
@@ -55,7 +55,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_spin_degrees: struct{
     using _get_spin_degrees: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_spin_sides: struct{
     using _set_spin_sides: ^GDW.MethodBind,
@@ -63,7 +63,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_spin_sides: struct{
     using _get_spin_sides: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_path_node: struct{
     using _set_path_node: ^GDW.MethodBind,
@@ -71,7 +71,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_path_node: struct{
     using _get_path_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_path_interval_type: struct{
     using _set_path_interval_type: ^GDW.MethodBind,
@@ -79,7 +79,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_path_interval_type: struct{
     using _get_path_interval_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^CSGPolygon3D_PathIntervalType)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^CSGPolygon3D_PathIntervalType)
   },
   set_path_interval: struct{
     using _set_path_interval: ^GDW.MethodBind,
@@ -87,7 +87,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_path_interval: struct{
     using _get_path_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_simplify_angle: struct{
     using _set_path_simplify_angle: ^GDW.MethodBind,
@@ -95,7 +95,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_path_simplify_angle: struct{
     using _get_path_simplify_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_rotation: struct{
     using _set_path_rotation: ^GDW.MethodBind,
@@ -103,7 +103,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_path_rotation: struct{
     using _get_path_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^CSGPolygon3D_PathRotation)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^CSGPolygon3D_PathRotation)
   },
   set_path_rotation_accurate: struct{
     using _set_path_rotation_accurate: ^GDW.MethodBind,
@@ -111,7 +111,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_path_rotation_accurate: struct{
     using _get_path_rotation_accurate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_path_local: struct{
     using _set_path_local: ^GDW.MethodBind,
@@ -119,7 +119,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     is_path_local: struct{
     using _is_path_local: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_path_continuous_u: struct{
     using _set_path_continuous_u: ^GDW.MethodBind,
@@ -127,7 +127,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     is_path_continuous_u: struct{
     using _is_path_continuous_u: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_path_u_distance: struct{
     using _set_path_u_distance: ^GDW.MethodBind,
@@ -135,7 +135,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_path_u_distance: struct{
     using _get_path_u_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_joined: struct{
     using _set_path_joined: ^GDW.MethodBind,
@@ -143,7 +143,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     is_path_joined: struct{
     using _is_path_joined: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_material: struct{
     using _set_material: ^GDW.MethodBind,
@@ -151,7 +151,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^Material)
   },
   set_smooth_faces: struct{
     using _set_smooth_faces: ^GDW.MethodBind,
@@ -159,7 +159,7 @@ CSGPolygon3D_MethodBind_List :: struct {
   },
     get_smooth_faces: struct{
     using _get_smooth_faces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPolygon3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CSGPolygon3D_Init_ :: proc (CSGPolygon3D_methods: ^CSGPolygon3D_MethodBind_List, loc := #caller_location) {

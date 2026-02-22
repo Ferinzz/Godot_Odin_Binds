@@ -10,11 +10,11 @@ Semaphore :: ^GDW.Object
 Semaphore_MethodBind_List :: struct {
   wait: struct{
     using _wait: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Semaphore, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Semaphore, args: rawptr = nil, r_ret: rawptr = nil)
   },
     try_wait: struct{
     using _try_wait: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Semaphore, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Semaphore, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   post: struct{
     using _post: ^GDW.MethodBind,

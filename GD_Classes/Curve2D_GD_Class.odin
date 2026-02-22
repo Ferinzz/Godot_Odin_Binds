@@ -10,7 +10,7 @@ Curve2D :: ^GDW.Object
 Curve2D_MethodBind_List :: struct {
   get_point_count: struct{
     using _get_point_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_point_count: struct{
     using _set_point_count: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ Curve2D_MethodBind_List :: struct {
   },
     clear_points: struct{
     using _clear_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     sample: struct{
     using _sample: ^GDW.MethodBind,
@@ -66,11 +66,11 @@ Curve2D_MethodBind_List :: struct {
   },
     get_bake_interval: struct{
     using _get_bake_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_baked_length: struct{
     using _get_baked_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   sample_baked: struct{
     using _sample_baked: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ Curve2D_MethodBind_List :: struct {
   },
   get_baked_points: struct{
     using _get_baked_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   get_closest_point: struct{
     using _get_closest_point: ^GDW.MethodBind,

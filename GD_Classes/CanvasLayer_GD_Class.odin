@@ -14,7 +14,7 @@ CanvasLayer_MethodBind_List :: struct {
   },
     get_layer: struct{
     using _get_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_visible: struct{
     using _set_visible: ^GDW.MethodBind,
@@ -22,15 +22,15 @@ CanvasLayer_MethodBind_List :: struct {
   },
     is_visible: struct{
     using _is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   show: struct{
     using _show: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     hide: struct{
     using _hide: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_transform: struct{
     using _set_transform: ^GDW.MethodBind,
@@ -38,11 +38,11 @@ CanvasLayer_MethodBind_List :: struct {
   },
     get_transform: struct{
     using _get_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_final_transform: struct{
     using _get_final_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ CanvasLayer_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_rotation: struct{
     using _set_rotation: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ CanvasLayer_MethodBind_List :: struct {
   },
     get_rotation: struct{
     using _get_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_scale: struct{
     using _set_scale: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ CanvasLayer_MethodBind_List :: struct {
   },
     get_scale: struct{
     using _get_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_follow_viewport: struct{
     using _set_follow_viewport: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ CanvasLayer_MethodBind_List :: struct {
   },
     is_following_viewport: struct{
     using _is_following_viewport: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_follow_viewport_scale: struct{
     using _set_follow_viewport_scale: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ CanvasLayer_MethodBind_List :: struct {
   },
     get_follow_viewport_scale: struct{
     using _get_follow_viewport_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_custom_viewport: struct{
     using _set_custom_viewport: ^GDW.MethodBind,
@@ -90,11 +90,11 @@ CanvasLayer_MethodBind_List :: struct {
   },
     get_custom_viewport: struct{
     using _get_custom_viewport: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^Node)
   },
   get_canvas: struct{
     using _get_canvas: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasLayer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 CanvasLayer_Init_ :: proc (CanvasLayer_methods: ^CanvasLayer_MethodBind_List, loc := #caller_location) {

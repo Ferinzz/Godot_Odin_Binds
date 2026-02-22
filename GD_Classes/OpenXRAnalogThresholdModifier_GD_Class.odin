@@ -14,7 +14,7 @@ OpenXRAnalogThresholdModifier_MethodBind_List :: struct {
   },
     get_on_threshold: struct{
     using _get_on_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnalogThresholdModifier, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnalogThresholdModifier, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_off_threshold: struct{
     using _set_off_threshold: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRAnalogThresholdModifier_MethodBind_List :: struct {
   },
     get_off_threshold: struct{
     using _get_off_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnalogThresholdModifier, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnalogThresholdModifier, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_on_haptic: struct{
     using _set_on_haptic: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OpenXRAnalogThresholdModifier_MethodBind_List :: struct {
   },
     get_on_haptic: struct{
     using _get_on_haptic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnalogThresholdModifier, #by_ptr args: i64 = 0, r_ret: ^OpenXRHapticBase)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnalogThresholdModifier, args: rawptr = nil, r_ret: ^OpenXRHapticBase)
   },
   set_off_haptic: struct{
     using _set_off_haptic: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ OpenXRAnalogThresholdModifier_MethodBind_List :: struct {
   },
     get_off_haptic: struct{
     using _get_off_haptic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnalogThresholdModifier, #by_ptr args: i64 = 0, r_ret: ^OpenXRHapticBase)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnalogThresholdModifier, args: rawptr = nil, r_ret: ^OpenXRHapticBase)
   },
 };
 OpenXRAnalogThresholdModifier_Init_ :: proc (OpenXRAnalogThresholdModifier_methods: ^OpenXRAnalogThresholdModifier_MethodBind_List, loc := #caller_location) {

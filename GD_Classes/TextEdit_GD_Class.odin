@@ -91,15 +91,15 @@ TextEdit_GutterType :: enum i64 {
 TextEdit_MethodBind_List :: struct {
   has_ime_text: struct{
     using _has_ime_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   cancel_ime: struct{
     using _cancel_ime: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     apply_ime: struct{
     using _apply_ime: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_editable: struct{
     using _set_editable: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_editable: struct{
     using _is_editable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_text_direction: struct{
     using _set_text_direction: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^Control_TextDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^Control_TextDirection)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -123,7 +123,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_structured_text_bidi_override: struct{
     using _set_structured_text_bidi_override: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override: struct{
     using _get_structured_text_bidi_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^TextServer_StructuredTextParser)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^TextServer_StructuredTextParser)
   },
   set_structured_text_bidi_override_options: struct{
     using _set_structured_text_bidi_override_options: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override_options: struct{
     using _get_structured_text_bidi_override_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_tab_size: struct{
     using _set_tab_size: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_tab_size: struct{
     using _get_tab_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_indent_wrapped_lines: struct{
     using _set_indent_wrapped_lines: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_indent_wrapped_lines: struct{
     using _is_indent_wrapped_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tab_input_mode: struct{
     using _set_tab_input_mode: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_tab_input_mode: struct{
     using _get_tab_input_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_overtype_mode_enabled: struct{
     using _set_overtype_mode_enabled: ^GDW.MethodBind,
@@ -171,7 +171,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_overtype_mode_enabled: struct{
     using _is_overtype_mode_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_context_menu_enabled: struct{
     using _set_context_menu_enabled: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_context_menu_enabled: struct{
     using _is_context_menu_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_emoji_menu_enabled: struct{
     using _set_emoji_menu_enabled: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_emoji_menu_enabled: struct{
     using _is_emoji_menu_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_backspace_deletes_composite_character_enabled: struct{
     using _set_backspace_deletes_composite_character_enabled: ^GDW.MethodBind,
@@ -195,7 +195,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_backspace_deletes_composite_character_enabled: struct{
     using _is_backspace_deletes_composite_character_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shortcut_keys_enabled: struct{
     using _set_shortcut_keys_enabled: ^GDW.MethodBind,
@@ -203,7 +203,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_shortcut_keys_enabled: struct{
     using _is_shortcut_keys_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_virtual_keyboard_enabled: struct{
     using _set_virtual_keyboard_enabled: ^GDW.MethodBind,
@@ -211,7 +211,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_virtual_keyboard_enabled: struct{
     using _is_virtual_keyboard_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_virtual_keyboard_show_on_focus: struct{
     using _set_virtual_keyboard_show_on_focus: ^GDW.MethodBind,
@@ -219,7 +219,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_virtual_keyboard_show_on_focus: struct{
     using _get_virtual_keyboard_show_on_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_middle_mouse_paste_enabled: struct{
     using _set_middle_mouse_paste_enabled: ^GDW.MethodBind,
@@ -227,7 +227,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_middle_mouse_paste_enabled: struct{
     using _is_middle_mouse_paste_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_empty_selection_clipboard_enabled: struct{
     using _set_empty_selection_clipboard_enabled: ^GDW.MethodBind,
@@ -235,11 +235,11 @@ TextEdit_MethodBind_List :: struct {
   },
     is_empty_selection_clipboard_enabled: struct{
     using _is_empty_selection_clipboard_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_text: struct{
     using _set_text: ^GDW.MethodBind,
@@ -247,11 +247,11 @@ TextEdit_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_line_count: struct{
     using _get_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_placeholder: struct{
     using _set_placeholder: ^GDW.MethodBind,
@@ -259,7 +259,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_placeholder: struct{
     using _get_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_line: struct{
     using _set_line: ^GDW.MethodBind,
@@ -279,7 +279,7 @@ TextEdit_MethodBind_List :: struct {
   },
   get_line_height: struct{
     using _get_line_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_indent_level: struct{
     using _get_indent_level: ^GDW.MethodBind,
@@ -315,7 +315,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_last_unhidden_line: struct{
     using _get_last_unhidden_line: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_next_visible_line_offset_from: struct{
     using _get_next_visible_line_offset_from: ^GDW.MethodBind,
@@ -351,47 +351,47 @@ TextEdit_MethodBind_List :: struct {
   },
     end_action: struct{
     using _end_action: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     begin_complex_operation: struct{
     using _begin_complex_operation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     end_complex_operation: struct{
     using _end_complex_operation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     has_undo: struct{
     using _has_undo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   has_redo: struct{
     using _has_redo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   undo: struct{
     using _undo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     redo: struct{
     using _redo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear_undo_history: struct{
     using _clear_undo_history: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     tag_saved_version: struct{
     using _tag_saved_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_version: struct{
     using _get_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_saved_version: struct{
     using _get_saved_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_search_text: struct{
     using _set_search_text: ^GDW.MethodBind,
@@ -411,7 +411,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_local_mouse_pos: struct{
     using _get_local_mouse_pos: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_word_at_pos: struct{
     using _get_word_at_pos: ^GDW.MethodBind,
@@ -435,7 +435,7 @@ TextEdit_MethodBind_List :: struct {
   },
   is_dragging_cursor: struct{
     using _is_dragging_cursor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_mouse_over_selection: struct{
     using _is_mouse_over_selection: ^GDW.MethodBind,
@@ -447,7 +447,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_caret_type: struct{
     using _get_caret_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^TextEdit_CaretType)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^TextEdit_CaretType)
   },
   set_caret_blink_enabled: struct{
     using _set_caret_blink_enabled: ^GDW.MethodBind,
@@ -455,7 +455,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_caret_blink_enabled: struct{
     using _is_caret_blink_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_caret_blink_interval: struct{
     using _set_caret_blink_interval: ^GDW.MethodBind,
@@ -463,7 +463,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_caret_blink_interval: struct{
     using _get_caret_blink_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_draw_caret_when_editable_disabled: struct{
     using _set_draw_caret_when_editable_disabled: ^GDW.MethodBind,
@@ -471,7 +471,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_drawing_caret_when_editable_disabled: struct{
     using _is_drawing_caret_when_editable_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_move_caret_on_right_click_enabled: struct{
     using _set_move_caret_on_right_click_enabled: ^GDW.MethodBind,
@@ -479,7 +479,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_move_caret_on_right_click_enabled: struct{
     using _is_move_caret_on_right_click_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_caret_mid_grapheme_enabled: struct{
     using _set_caret_mid_grapheme_enabled: ^GDW.MethodBind,
@@ -487,7 +487,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_caret_mid_grapheme_enabled: struct{
     using _is_caret_mid_grapheme_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_multiple_carets_enabled: struct{
     using _set_multiple_carets_enabled: ^GDW.MethodBind,
@@ -495,7 +495,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_multiple_carets_enabled: struct{
     using _is_multiple_carets_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_caret: struct{
     using _add_caret: ^GDW.MethodBind,
@@ -507,11 +507,11 @@ TextEdit_MethodBind_List :: struct {
   },
     remove_secondary_carets: struct{
     using _remove_secondary_carets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_caret_count: struct{
     using _get_caret_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_caret_at_carets: struct{
     using _add_caret_at_carets: ^GDW.MethodBind,
@@ -527,19 +527,19 @@ TextEdit_MethodBind_List :: struct {
   },
     merge_overlapping_carets: struct{
     using _merge_overlapping_carets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     begin_multicaret_edit: struct{
     using _begin_multicaret_edit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     end_multicaret_edit: struct{
     using _end_multicaret_edit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_in_mulitcaret_edit: struct{
     using _is_in_mulitcaret_edit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   multicaret_edit_ignore_caret: struct{
     using _multicaret_edit_ignore_caret: ^GDW.MethodBind,
@@ -591,7 +591,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_default_word_separators_enabled: struct{
     using _is_default_word_separators_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_custom_word_separators: struct{
     using _set_use_custom_word_separators: ^GDW.MethodBind,
@@ -599,7 +599,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_custom_word_separators_enabled: struct{
     using _is_custom_word_separators_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_custom_word_separators: struct{
     using _set_custom_word_separators: ^GDW.MethodBind,
@@ -607,7 +607,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_custom_word_separators: struct{
     using _get_custom_word_separators: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_selecting_enabled: struct{
     using _set_selecting_enabled: ^GDW.MethodBind,
@@ -615,7 +615,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_selecting_enabled: struct{
     using _is_selecting_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_deselect_on_focus_loss_enabled: struct{
     using _set_deselect_on_focus_loss_enabled: ^GDW.MethodBind,
@@ -623,7 +623,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_deselect_on_focus_loss_enabled: struct{
     using _is_deselect_on_focus_loss_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_and_drop_selection_enabled: struct{
     using _set_drag_and_drop_selection_enabled: ^GDW.MethodBind,
@@ -631,7 +631,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_drag_and_drop_selection_enabled: struct{
     using _is_drag_and_drop_selection_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_selection_mode: struct{
     using _set_selection_mode: ^GDW.MethodBind,
@@ -639,11 +639,11 @@ TextEdit_MethodBind_List :: struct {
   },
     get_selection_mode: struct{
     using _get_selection_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^TextEdit_SelectionMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^TextEdit_SelectionMode)
   },
   select_all: struct{
     using _select_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     select_word_under_caret: struct{
     using _select_word_under_caret: ^GDW.MethodBind,
@@ -651,11 +651,11 @@ TextEdit_MethodBind_List :: struct {
   },
     add_selection_for_next_occurrence: struct{
     using _add_selection_for_next_occurrence: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     skip_selection_for_next_occurrence: struct{
     using _skip_selection_for_next_occurrence: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     select: struct{
     using _select: ^GDW.MethodBind,
@@ -727,7 +727,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_line_wrapping_mode: struct{
     using _get_line_wrapping_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^TextEdit_LineWrappingMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^TextEdit_LineWrappingMode)
   },
   set_autowrap_mode: struct{
     using _set_autowrap_mode: ^GDW.MethodBind,
@@ -735,7 +735,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_autowrap_mode: struct{
     using _get_autowrap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^TextServer_AutowrapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^TextServer_AutowrapMode)
   },
   is_line_wrapped: struct{
     using _is_line_wrapped: ^GDW.MethodBind,
@@ -759,15 +759,15 @@ TextEdit_MethodBind_List :: struct {
   },
     is_smooth_scroll_enabled: struct{
     using _is_smooth_scroll_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_v_scroll_bar: struct{
     using _get_v_scroll_bar: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^VScrollBar)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^VScrollBar)
   },
   get_h_scroll_bar: struct{
     using _get_h_scroll_bar: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^HScrollBar)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^HScrollBar)
   },
   set_v_scroll: struct{
     using _set_v_scroll: ^GDW.MethodBind,
@@ -775,7 +775,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_v_scroll: struct{
     using _get_v_scroll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_h_scroll: struct{
     using _set_h_scroll: ^GDW.MethodBind,
@@ -783,7 +783,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_h_scroll: struct{
     using _get_h_scroll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_scroll_past_end_of_file_enabled: struct{
     using _set_scroll_past_end_of_file_enabled: ^GDW.MethodBind,
@@ -791,7 +791,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_scroll_past_end_of_file_enabled: struct{
     using _is_scroll_past_end_of_file_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_v_scroll_speed: struct{
     using _set_v_scroll_speed: ^GDW.MethodBind,
@@ -799,7 +799,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_v_scroll_speed: struct{
     using _get_v_scroll_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fit_content_height_enabled: struct{
     using _set_fit_content_height_enabled: ^GDW.MethodBind,
@@ -807,7 +807,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_fit_content_height_enabled: struct{
     using _is_fit_content_height_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_fit_content_width_enabled: struct{
     using _set_fit_content_width_enabled: ^GDW.MethodBind,
@@ -815,7 +815,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_fit_content_width_enabled: struct{
     using _is_fit_content_width_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_scroll_pos_for_line: struct{
     using _get_scroll_pos_for_line: ^GDW.MethodBind,
@@ -827,7 +827,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_first_visible_line: struct{
     using _get_first_visible_line: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_line_as_center_visible: struct{
     using _set_line_as_center_visible: ^GDW.MethodBind,
@@ -839,15 +839,15 @@ TextEdit_MethodBind_List :: struct {
   },
     get_last_full_visible_line: struct{
     using _get_last_full_visible_line: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_last_full_visible_line_wrap_index: struct{
     using _get_last_full_visible_line_wrap_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_visible_line_count: struct{
     using _get_visible_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_visible_line_count_in_range: struct{
     using _get_visible_line_count_in_range: ^GDW.MethodBind,
@@ -855,7 +855,7 @@ TextEdit_MethodBind_List :: struct {
   },
   get_total_visible_line_count: struct{
     using _get_total_visible_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   adjust_viewport_to_caret: struct{
     using _adjust_viewport_to_caret: ^GDW.MethodBind,
@@ -871,7 +871,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_drawing_minimap: struct{
     using _is_drawing_minimap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_minimap_width: struct{
     using _set_minimap_width: ^GDW.MethodBind,
@@ -879,11 +879,11 @@ TextEdit_MethodBind_List :: struct {
   },
     get_minimap_width: struct{
     using _get_minimap_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_minimap_visible_lines: struct{
     using _get_minimap_visible_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_gutter: struct{
     using _add_gutter: ^GDW.MethodBind,
@@ -895,7 +895,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_gutter_count: struct{
     using _get_gutter_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_gutter_name: struct{
     using _set_gutter_name: ^GDW.MethodBind,
@@ -955,7 +955,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_total_gutter_width: struct{
     using _get_total_gutter_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_line_gutter_metadata: struct{
     using _set_line_gutter_metadata: ^GDW.MethodBind,
@@ -1011,7 +1011,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_syntax_highlighter: struct{
     using _get_syntax_highlighter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^SyntaxHighlighter)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^SyntaxHighlighter)
   },
   set_highlight_current_line: struct{
     using _set_highlight_current_line: ^GDW.MethodBind,
@@ -1019,7 +1019,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_highlight_current_line_enabled: struct{
     using _is_highlight_current_line_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_highlight_all_occurrences: struct{
     using _set_highlight_all_occurrences: ^GDW.MethodBind,
@@ -1027,11 +1027,11 @@ TextEdit_MethodBind_List :: struct {
   },
     is_highlight_all_occurrences_enabled: struct{
     using _is_highlight_all_occurrences_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_draw_control_chars: struct{
     using _get_draw_control_chars: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_control_chars: struct{
     using _set_draw_control_chars: ^GDW.MethodBind,
@@ -1043,7 +1043,7 @@ TextEdit_MethodBind_List :: struct {
   },
     is_drawing_tabs: struct{
     using _is_drawing_tabs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_spaces: struct{
     using _set_draw_spaces: ^GDW.MethodBind,
@@ -1051,15 +1051,15 @@ TextEdit_MethodBind_List :: struct {
   },
     is_drawing_spaces: struct{
     using _is_drawing_spaces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_menu: struct{
     using _get_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^PopupMenu)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^PopupMenu)
   },
   is_menu_visible: struct{
     using _is_menu_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   menu_option: struct{
     using _menu_option: ^GDW.MethodBind,
@@ -1071,7 +1071,7 @@ TextEdit_MethodBind_List :: struct {
   },
     get_caret_index_edit_order: struct{
     using _get_caret_index_edit_order: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TextEdit, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   get_selection_line: struct{
     using _get_selection_line: ^GDW.MethodBind,

@@ -27,7 +27,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_transform: struct{
     using _get_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_position: struct{
     using _set_position: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_rotation: struct{
     using _set_rotation: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_rotation: struct{
     using _get_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_rotation_degrees: struct{
     using _set_rotation_degrees: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_rotation_degrees: struct{
     using _get_rotation_degrees: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_rotation_order: struct{
     using _set_rotation_order: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_rotation_order: struct{
     using _get_rotation_order: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.EulerOrder)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.EulerOrder)
   },
   set_rotation_edit_mode: struct{
     using _set_rotation_edit_mode: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_rotation_edit_mode: struct{
     using _get_rotation_edit_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^Node3D_RotationEditMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^Node3D_RotationEditMode)
   },
   set_scale: struct{
     using _set_scale: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_scale: struct{
     using _get_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_quaternion: struct{
     using _set_quaternion: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_quaternion: struct{
     using _get_quaternion: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Quaternion)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Quaternion)
   },
   set_basis: struct{
     using _set_basis: ^GDW.MethodBind,
@@ -91,7 +91,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_basis: struct{
     using _get_basis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Basis)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Basis)
   },
   set_global_transform: struct{
     using _set_global_transform: ^GDW.MethodBind,
@@ -99,11 +99,11 @@ Node3D_MethodBind_List :: struct {
   },
     get_global_transform: struct{
     using _get_global_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   get_global_transform_interpolated: struct{
     using _get_global_transform_interpolated: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_global_position: struct{
     using _set_global_position: ^GDW.MethodBind,
@@ -111,7 +111,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_global_position: struct{
     using _get_global_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_global_basis: struct{
     using _set_global_basis: ^GDW.MethodBind,
@@ -119,7 +119,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_global_basis: struct{
     using _get_global_basis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Basis)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Basis)
   },
   set_global_rotation: struct{
     using _set_global_rotation: ^GDW.MethodBind,
@@ -127,7 +127,7 @@ Node3D_MethodBind_List :: struct {
   },
     get_global_rotation: struct{
     using _get_global_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_global_rotation_degrees: struct{
     using _set_global_rotation_degrees: ^GDW.MethodBind,
@@ -135,11 +135,11 @@ Node3D_MethodBind_List :: struct {
   },
     get_global_rotation_degrees: struct{
     using _get_global_rotation_degrees: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_parent_node_3d: struct{
     using _get_parent_node_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^Node3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^Node3D)
   },
   set_ignore_transform_notification: struct{
     using _set_ignore_transform_notification: ^GDW.MethodBind,
@@ -151,7 +151,7 @@ Node3D_MethodBind_List :: struct {
   },
     is_set_as_top_level: struct{
     using _is_set_as_top_level: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_disable_scale: struct{
     using _set_disable_scale: ^GDW.MethodBind,
@@ -159,15 +159,15 @@ Node3D_MethodBind_List :: struct {
   },
     is_scale_disabled: struct{
     using _is_scale_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_world_3d: struct{
     using _get_world_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^World3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^World3D)
   },
   force_update_transform: struct{
     using _force_update_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_visibility_parent: struct{
     using _set_visibility_parent: ^GDW.MethodBind,
@@ -175,11 +175,11 @@ Node3D_MethodBind_List :: struct {
   },
     get_visibility_parent: struct{
     using _get_visibility_parent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   update_gizmos: struct{
     using _update_gizmos: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_gizmo: struct{
     using _add_gizmo: ^GDW.MethodBind,
@@ -187,11 +187,11 @@ Node3D_MethodBind_List :: struct {
   },
     get_gizmos: struct{
     using _get_gizmos: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   clear_gizmos: struct{
     using _clear_gizmos: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_subgizmo_selection: struct{
     using _set_subgizmo_selection: ^GDW.MethodBind,
@@ -199,7 +199,7 @@ Node3D_MethodBind_List :: struct {
   },
     clear_subgizmo_selection: struct{
     using _clear_subgizmo_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_visible: struct{
     using _set_visible: ^GDW.MethodBind,
@@ -207,19 +207,19 @@ Node3D_MethodBind_List :: struct {
   },
     is_visible: struct{
     using _is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_visible_in_tree: struct{
     using _is_visible_in_tree: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   show: struct{
     using _show: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     hide: struct{
     using _hide: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_notify_local_transform: struct{
     using _set_notify_local_transform: ^GDW.MethodBind,
@@ -227,7 +227,7 @@ Node3D_MethodBind_List :: struct {
   },
     is_local_transform_notification_enabled: struct{
     using _is_local_transform_notification_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_notify_transform: struct{
     using _set_notify_transform: ^GDW.MethodBind,
@@ -235,7 +235,7 @@ Node3D_MethodBind_List :: struct {
   },
     is_transform_notification_enabled: struct{
     using _is_transform_notification_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   rotate: struct{
     using _rotate: ^GDW.MethodBind,
@@ -283,11 +283,11 @@ Node3D_MethodBind_List :: struct {
   },
     orthonormalize: struct{
     using _orthonormalize: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_identity: struct{
     using _set_identity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     look_at: struct{
     using _look_at: ^GDW.MethodBind,

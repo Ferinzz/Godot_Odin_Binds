@@ -20,11 +20,11 @@ SkeletonModification2D_MethodBind_List :: struct {
   },
     get_enabled: struct{
     using _get_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_modification_stack: struct{
     using _get_modification_stack: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, #by_ptr args: i64 = 0, r_ret: ^SkeletonModificationStack2D)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, args: rawptr = nil, r_ret: ^SkeletonModificationStack2D)
   },
   set_is_setup: struct{
     using _set_is_setup: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ SkeletonModification2D_MethodBind_List :: struct {
   },
     get_is_setup: struct{
     using _get_is_setup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_execution_mode: struct{
     using _set_execution_mode: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ SkeletonModification2D_MethodBind_List :: struct {
   },
     get_execution_mode: struct{
     using _get_execution_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   clamp_angle: struct{
     using _clamp_angle: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ SkeletonModification2D_MethodBind_List :: struct {
   },
     get_editor_draw_gizmo: struct{
     using _get_editor_draw_gizmo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 SkeletonModification2D_Init_ :: proc (SkeletonModification2D_methods: ^SkeletonModification2D_MethodBind_List, loc := #caller_location) {

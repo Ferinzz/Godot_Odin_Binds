@@ -30,7 +30,7 @@ JavaScriptBridge_MethodBind_List :: struct {
   },
   create_object: struct{
     using _create_object: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaScriptBridge, #by_ptr args: struct{object: ^GDW.gdstring, }, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaScriptBridge, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Variant)
   },
   download_buffer: struct{
     using _download_buffer: ^GDW.MethodBind,
@@ -38,15 +38,15 @@ JavaScriptBridge_MethodBind_List :: struct {
   },
     pwa_needs_update: struct{
     using _pwa_needs_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaScriptBridge, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaScriptBridge, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   pwa_update: struct{
     using _pwa_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaScriptBridge, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaScriptBridge, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   force_fs_sync: struct{
     using _force_fs_sync: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaScriptBridge, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaScriptBridge, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 JavaScriptBridge_Init_ :: proc (JavaScriptBridge_methods: ^JavaScriptBridge_MethodBind_List, loc := #caller_location) {

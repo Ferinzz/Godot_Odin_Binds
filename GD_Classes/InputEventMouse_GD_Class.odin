@@ -14,7 +14,7 @@ InputEventMouse_MethodBind_List :: struct {
   },
     get_button_mask: struct{
     using _get_button_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouse, #by_ptr args: i64 = 0, r_ret: ^GDW.MouseButtonMask)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouse, args: rawptr = nil, r_ret: ^GDW.MouseButtonMask)
   },
   set_position: struct{
     using _set_position: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ InputEventMouse_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouse, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouse, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_global_position: struct{
     using _set_global_position: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ InputEventMouse_MethodBind_List :: struct {
   },
     get_global_position: struct{
     using _get_global_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouse, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouse, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 InputEventMouse_Init_ :: proc (InputEventMouse_methods: ^InputEventMouse_MethodBind_List, loc := #caller_location) {

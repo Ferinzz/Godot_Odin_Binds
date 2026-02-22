@@ -18,11 +18,11 @@ StaticBody3D_MethodBind_List :: struct {
   },
     get_constant_linear_velocity: struct{
     using _get_constant_linear_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StaticBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: StaticBody3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_constant_angular_velocity: struct{
     using _get_constant_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StaticBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: StaticBody3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_physics_material_override: struct{
     using _set_physics_material_override: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ StaticBody3D_MethodBind_List :: struct {
   },
     get_physics_material_override: struct{
     using _get_physics_material_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StaticBody3D, #by_ptr args: i64 = 0, r_ret: ^PhysicsMaterial)
+    m_call: proc(_:^GDW.MethodBind, obj: StaticBody3D, args: rawptr = nil, r_ret: ^PhysicsMaterial)
   },
 };
 StaticBody3D_Init_ :: proc (StaticBody3D_methods: ^StaticBody3D_MethodBind_List, loc := #caller_location) {

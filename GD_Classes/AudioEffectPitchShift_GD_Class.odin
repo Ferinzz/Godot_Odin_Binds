@@ -23,7 +23,7 @@ AudioEffectPitchShift_MethodBind_List :: struct {
   },
     get_pitch_scale: struct{
     using _get_pitch_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPitchShift, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPitchShift, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_oversampling: struct{
     using _set_oversampling: ^GDW.MethodBind,
@@ -31,7 +31,7 @@ AudioEffectPitchShift_MethodBind_List :: struct {
   },
     get_oversampling: struct{
     using _get_oversampling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPitchShift, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPitchShift, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_fft_size: struct{
     using _set_fft_size: ^GDW.MethodBind,
@@ -39,7 +39,7 @@ AudioEffectPitchShift_MethodBind_List :: struct {
   },
     get_fft_size: struct{
     using _get_fft_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPitchShift, #by_ptr args: i64 = 0, r_ret: ^AudioEffectPitchShift_FFTSize)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectPitchShift, args: rawptr = nil, r_ret: ^AudioEffectPitchShift_FFTSize)
   },
 };
 AudioEffectPitchShift_Init_ :: proc (AudioEffectPitchShift_methods: ^AudioEffectPitchShift_MethodBind_List, loc := #caller_location) {

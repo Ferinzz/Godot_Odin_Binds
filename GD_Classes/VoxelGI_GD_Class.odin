@@ -22,7 +22,7 @@ VoxelGI_MethodBind_List :: struct {
   },
     get_probe_data: struct{
     using _get_probe_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, #by_ptr args: i64 = 0, r_ret: ^VoxelGIData)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, args: rawptr = nil, r_ret: ^VoxelGIData)
   },
   set_subdiv: struct{
     using _set_subdiv: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VoxelGI_MethodBind_List :: struct {
   },
     get_subdiv: struct{
     using _get_subdiv: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, #by_ptr args: i64 = 0, r_ret: ^VoxelGI_Subdiv)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, args: rawptr = nil, r_ret: ^VoxelGI_Subdiv)
   },
   set_size: struct{
     using _set_size: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ VoxelGI_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_camera_attributes: struct{
     using _set_camera_attributes: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ VoxelGI_MethodBind_List :: struct {
   },
     get_camera_attributes: struct{
     using _get_camera_attributes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, #by_ptr args: i64 = 0, r_ret: ^CameraAttributes)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, args: rawptr = nil, r_ret: ^CameraAttributes)
   },
   bake: struct{
     using _bake: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ VoxelGI_MethodBind_List :: struct {
   },
     debug_bake: struct{
     using _debug_bake: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGI, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 VoxelGI_Init_ :: proc (VoxelGI_methods: ^VoxelGI_MethodBind_List, loc := #caller_location) {

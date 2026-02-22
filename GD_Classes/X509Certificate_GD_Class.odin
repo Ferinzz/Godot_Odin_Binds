@@ -18,7 +18,7 @@ X509Certificate_MethodBind_List :: struct {
   },
   save_to_string: struct{
     using _save_to_string: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: X509Certificate, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: X509Certificate, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   load_from_string: struct{
     using _load_from_string: ^GDW.MethodBind,

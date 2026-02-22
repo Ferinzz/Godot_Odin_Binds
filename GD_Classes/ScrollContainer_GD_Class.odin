@@ -29,7 +29,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_h_scroll: struct{
     using _get_h_scroll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_v_scroll: struct{
     using _set_v_scroll: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_v_scroll: struct{
     using _get_v_scroll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_horizontal_custom_step: struct{
     using _set_horizontal_custom_step: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_horizontal_custom_step: struct{
     using _get_horizontal_custom_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vertical_custom_step: struct{
     using _set_vertical_custom_step: ^GDW.MethodBind,
@@ -53,7 +53,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_vertical_custom_step: struct{
     using _get_vertical_custom_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_horizontal_scroll_mode: struct{
     using _set_horizontal_scroll_mode: ^GDW.MethodBind,
@@ -61,7 +61,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_horizontal_scroll_mode: struct{
     using _get_horizontal_scroll_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^ScrollContainer_ScrollMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^ScrollContainer_ScrollMode)
   },
   set_vertical_scroll_mode: struct{
     using _set_vertical_scroll_mode: ^GDW.MethodBind,
@@ -69,7 +69,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_vertical_scroll_mode: struct{
     using _get_vertical_scroll_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^ScrollContainer_ScrollMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^ScrollContainer_ScrollMode)
   },
   set_deadzone: struct{
     using _set_deadzone: ^GDW.MethodBind,
@@ -77,7 +77,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_deadzone: struct{
     using _get_deadzone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_scroll_hint_mode: struct{
     using _set_scroll_hint_mode: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_scroll_hint_mode: struct{
     using _get_scroll_hint_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^ScrollContainer_ScrollHintMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^ScrollContainer_ScrollHintMode)
   },
   set_tile_scroll_hint: struct{
     using _set_tile_scroll_hint: ^GDW.MethodBind,
@@ -93,7 +93,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     is_scroll_hint_tiled: struct{
     using _is_scroll_hint_tiled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_follow_focus: struct{
     using _set_follow_focus: ^GDW.MethodBind,
@@ -101,15 +101,15 @@ ScrollContainer_MethodBind_List :: struct {
   },
     is_following_focus: struct{
     using _is_following_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_h_scroll_bar: struct{
     using _get_h_scroll_bar: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^HScrollBar)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^HScrollBar)
   },
   get_v_scroll_bar: struct{
     using _get_v_scroll_bar: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^VScrollBar)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^VScrollBar)
   },
   ensure_control_visible: struct{
     using _ensure_control_visible: ^GDW.MethodBind,
@@ -121,7 +121,7 @@ ScrollContainer_MethodBind_List :: struct {
   },
     get_draw_focus_border: struct{
     using _get_draw_focus_border: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 ScrollContainer_Init_ :: proc (ScrollContainer_methods: ^ScrollContainer_MethodBind_List, loc := #caller_location) {

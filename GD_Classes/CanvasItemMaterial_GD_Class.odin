@@ -28,7 +28,7 @@ CanvasItemMaterial_MethodBind_List :: struct {
   },
     get_blend_mode: struct{
     using _get_blend_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, #by_ptr args: i64 = 0, r_ret: ^CanvasItemMaterial_BlendMode)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, args: rawptr = nil, r_ret: ^CanvasItemMaterial_BlendMode)
   },
   set_light_mode: struct{
     using _set_light_mode: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ CanvasItemMaterial_MethodBind_List :: struct {
   },
     get_light_mode: struct{
     using _get_light_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, #by_ptr args: i64 = 0, r_ret: ^CanvasItemMaterial_LightMode)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, args: rawptr = nil, r_ret: ^CanvasItemMaterial_LightMode)
   },
   set_particles_animation: struct{
     using _set_particles_animation: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ CanvasItemMaterial_MethodBind_List :: struct {
   },
     get_particles_animation: struct{
     using _get_particles_animation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_particles_anim_h_frames: struct{
     using _set_particles_anim_h_frames: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ CanvasItemMaterial_MethodBind_List :: struct {
   },
     get_particles_anim_h_frames: struct{
     using _get_particles_anim_h_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_particles_anim_v_frames: struct{
     using _set_particles_anim_v_frames: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ CanvasItemMaterial_MethodBind_List :: struct {
   },
     get_particles_anim_v_frames: struct{
     using _get_particles_anim_v_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_particles_anim_loop: struct{
     using _set_particles_anim_loop: ^GDW.MethodBind,
@@ -68,7 +68,7 @@ CanvasItemMaterial_MethodBind_List :: struct {
   },
     get_particles_anim_loop: struct{
     using _get_particles_anim_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItemMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CanvasItemMaterial_Init_ :: proc (CanvasItemMaterial_methods: ^CanvasItemMaterial_MethodBind_List, loc := #caller_location) {

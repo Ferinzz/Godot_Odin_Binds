@@ -14,7 +14,7 @@ PacketPeerStream_MethodBind_List :: struct {
   },
     get_stream_peer: struct{
     using _get_stream_peer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerStream, #by_ptr args: i64 = 0, r_ret: ^StreamPeer)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerStream, args: rawptr = nil, r_ret: ^StreamPeer)
   },
   set_input_buffer_max_size: struct{
     using _set_input_buffer_max_size: ^GDW.MethodBind,
@@ -26,11 +26,11 @@ PacketPeerStream_MethodBind_List :: struct {
   },
     get_input_buffer_max_size: struct{
     using _get_input_buffer_max_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerStream, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerStream, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_output_buffer_max_size: struct{
     using _get_output_buffer_max_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerStream, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerStream, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 PacketPeerStream_Init_ :: proc (PacketPeerStream_methods: ^PacketPeerStream_MethodBind_List, loc := #caller_location) {

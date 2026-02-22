@@ -18,7 +18,7 @@ AudioEffectEQ_MethodBind_List :: struct {
   },
   get_band_count: struct{
     using _get_band_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectEQ, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectEQ, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 AudioEffectEQ_Init_ :: proc (AudioEffectEQ_methods: ^AudioEffectEQ_MethodBind_List, loc := #caller_location) {

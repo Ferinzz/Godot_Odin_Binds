@@ -20,7 +20,7 @@ PlaneMesh_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_subdivide_width: struct{
     using _set_subdivide_width: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ PlaneMesh_MethodBind_List :: struct {
   },
     get_subdivide_width: struct{
     using _get_subdivide_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_subdivide_depth: struct{
     using _set_subdivide_depth: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ PlaneMesh_MethodBind_List :: struct {
   },
     get_subdivide_depth: struct{
     using _get_subdivide_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_center_offset: struct{
     using _set_center_offset: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ PlaneMesh_MethodBind_List :: struct {
   },
     get_center_offset: struct{
     using _get_center_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_orientation: struct{
     using _set_orientation: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ PlaneMesh_MethodBind_List :: struct {
   },
     get_orientation: struct{
     using _get_orientation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, #by_ptr args: i64 = 0, r_ret: ^PlaneMesh_Orientation)
+    m_call: proc(_:^GDW.MethodBind, obj: PlaneMesh, args: rawptr = nil, r_ret: ^PlaneMesh_Orientation)
   },
 };
 PlaneMesh_Init_ :: proc (PlaneMesh_methods: ^PlaneMesh_MethodBind_List, loc := #caller_location) {

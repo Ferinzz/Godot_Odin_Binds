@@ -10,19 +10,19 @@ RefCounted :: ^GDW.Object
 RefCounted_MethodBind_List :: struct {
   init_ref: struct{
     using _init_ref: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RefCounted, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RefCounted, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   reference: struct{
     using _reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RefCounted, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RefCounted, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   unreference: struct{
     using _unreference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RefCounted, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RefCounted, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_reference_count: struct{
     using _get_reference_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RefCounted, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RefCounted, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 RefCounted_Init_ :: proc (RefCounted_methods: ^RefCounted_MethodBind_List, loc := #caller_location) {

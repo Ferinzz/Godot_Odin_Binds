@@ -14,7 +14,7 @@ OpenXRPlaneTracker_MethodBind_List :: struct {
   },
     get_bounds_size: struct{
     using _get_bounds_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_plane_alignment: struct{
     using _set_plane_alignment: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRPlaneTracker_MethodBind_List :: struct {
   },
     get_plane_alignment: struct{
     using _get_plane_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, #by_ptr args: i64 = 0, r_ret: ^OpenXRSpatialComponentPlaneAlignmentList_PlaneAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, args: rawptr = nil, r_ret: ^OpenXRSpatialComponentPlaneAlignmentList_PlaneAlignment)
   },
   set_plane_label: struct{
     using _set_plane_label: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OpenXRPlaneTracker_MethodBind_List :: struct {
   },
     get_plane_label: struct{
     using _get_plane_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_mesh_data: struct{
     using _set_mesh_data: ^GDW.MethodBind,
@@ -38,15 +38,15 @@ OpenXRPlaneTracker_MethodBind_List :: struct {
   },
     clear_mesh_data: struct{
     using _clear_mesh_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_mesh_offset: struct{
     using _get_mesh_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRPlaneTracker, args: rawptr = nil, r_ret: ^Mesh)
   },
   get_shape: struct{
     using _get_shape: ^GDW.MethodBind,

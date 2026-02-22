@@ -30,7 +30,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     is_centered: struct{
     using _is_centered: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_flip_h: struct{
     using _set_flip_h: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     is_flipped_h: struct{
     using _is_flipped_h: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_flip_v: struct{
     using _set_flip_v: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     is_flipped_v: struct{
     using _is_flipped_v: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_modulate: struct{
     using _set_modulate: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_modulate: struct{
     using _get_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_render_priority: struct{
     using _set_render_priority: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_render_priority: struct{
     using _get_render_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_pixel_size: struct{
     using _set_pixel_size: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_pixel_size: struct{
     using _get_pixel_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_axis: struct{
     using _set_axis: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_axis: struct{
     using _get_axis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3_Axis)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.Vector3_Axis)
   },
   set_draw_flag: struct{
     using _set_draw_flag: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_alpha_cut_mode: struct{
     using _get_alpha_cut_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^SpriteBase3D_AlphaCutMode)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^SpriteBase3D_AlphaCutMode)
   },
   set_alpha_scissor_threshold: struct{
     using _set_alpha_scissor_threshold: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_alpha_scissor_threshold: struct{
     using _get_alpha_scissor_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_alpha_hash_scale: struct{
     using _set_alpha_hash_scale: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_alpha_hash_scale: struct{
     using _get_alpha_hash_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_alpha_antialiasing: struct{
     using _set_alpha_antialiasing: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_alpha_antialiasing: struct{
     using _get_alpha_antialiasing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_AlphaAntiAliasing)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_AlphaAntiAliasing)
   },
   set_alpha_antialiasing_edge: struct{
     using _set_alpha_antialiasing_edge: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_alpha_antialiasing_edge: struct{
     using _get_alpha_antialiasing_edge: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_billboard_mode: struct{
     using _set_billboard_mode: ^GDW.MethodBind,
@@ -142,7 +142,7 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_billboard_mode: struct{
     using _get_billboard_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_BillboardMode)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_BillboardMode)
   },
   set_texture_filter: struct{
     using _set_texture_filter: ^GDW.MethodBind,
@@ -150,15 +150,15 @@ SpriteBase3D_MethodBind_List :: struct {
   },
     get_texture_filter: struct{
     using _get_texture_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_TextureFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_TextureFilter)
   },
   get_item_rect: struct{
     using _get_item_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   generate_triangle_mesh: struct{
     using _generate_triangle_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, #by_ptr args: i64 = 0, r_ret: ^TriangleMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteBase3D, args: rawptr = nil, r_ret: ^TriangleMesh)
   },
 };
 SpriteBase3D_Init_ :: proc (SpriteBase3D_methods: ^SpriteBase3D_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ MultiMeshInstance2D_MethodBind_List :: struct {
   },
     get_multimesh: struct{
     using _get_multimesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMeshInstance2D, #by_ptr args: i64 = 0, r_ret: ^MultiMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMeshInstance2D, args: rawptr = nil, r_ret: ^MultiMesh)
   },
   set_texture: struct{
     using _set_texture: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MultiMeshInstance2D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMeshInstance2D, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiMeshInstance2D, args: rawptr = nil, r_ret: ^Texture2D)
   },
 };
 MultiMeshInstance2D_Init_ :: proc (MultiMeshInstance2D_methods: ^MultiMeshInstance2D_MethodBind_List, loc := #caller_location) {

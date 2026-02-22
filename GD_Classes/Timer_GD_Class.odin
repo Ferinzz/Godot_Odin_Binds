@@ -19,7 +19,7 @@ Timer_MethodBind_List :: struct {
   },
     get_wait_time: struct{
     using _get_wait_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_one_shot: struct{
     using _set_one_shot: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ Timer_MethodBind_List :: struct {
   },
     is_one_shot: struct{
     using _is_one_shot: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_autostart: struct{
     using _set_autostart: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ Timer_MethodBind_List :: struct {
   },
     has_autostart: struct{
     using _has_autostart: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   start: struct{
     using _start: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ Timer_MethodBind_List :: struct {
   },
     stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_paused: struct{
     using _set_paused: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ Timer_MethodBind_List :: struct {
   },
     is_paused: struct{
     using _is_paused: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_ignore_time_scale: struct{
     using _set_ignore_time_scale: ^GDW.MethodBind,
@@ -59,15 +59,15 @@ Timer_MethodBind_List :: struct {
   },
     is_ignoring_time_scale: struct{
     using _is_ignoring_time_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_stopped: struct{
     using _is_stopped: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_time_left: struct{
     using _get_time_left: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_timer_process_callback: struct{
     using _set_timer_process_callback: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ Timer_MethodBind_List :: struct {
   },
     get_timer_process_callback: struct{
     using _get_timer_process_callback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Timer, #by_ptr args: i64 = 0, r_ret: ^Timer_TimerProcessCallback)
+    m_call: proc(_:^GDW.MethodBind, obj: Timer, args: rawptr = nil, r_ret: ^Timer_TimerProcessCallback)
   },
 };
 Timer_Init_ :: proc (Timer_methods: ^Timer_MethodBind_List, loc := #caller_location) {

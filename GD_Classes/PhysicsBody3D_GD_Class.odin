@@ -18,7 +18,7 @@ PhysicsBody3D_MethodBind_List :: struct {
   },
   get_gravity: struct{
     using _get_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsBody3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_axis_lock: struct{
     using _set_axis_lock: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PhysicsBody3D_MethodBind_List :: struct {
   },
   get_collision_exceptions: struct{
     using _get_collision_exceptions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsBody3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_collision_exception_with: struct{
     using _add_collision_exception_with: ^GDW.MethodBind,

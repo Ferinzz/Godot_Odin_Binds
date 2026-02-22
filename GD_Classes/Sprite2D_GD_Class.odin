@@ -14,7 +14,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_centered: struct{
     using _set_centered: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     is_centered: struct{
     using _is_centered: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_flip_h: struct{
     using _set_flip_h: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     is_flipped_h: struct{
     using _is_flipped_h: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_flip_v: struct{
     using _set_flip_v: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     is_flipped_v: struct{
     using _is_flipped_v: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_region_enabled: struct{
     using _set_region_enabled: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     is_region_enabled: struct{
     using _is_region_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_pixel_opaque: struct{
     using _is_pixel_opaque: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     get_region_rect: struct{
     using _get_region_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_region_filter_clip_enabled: struct{
     using _set_region_filter_clip_enabled: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     is_region_filter_clip_enabled: struct{
     using _is_region_filter_clip_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_frame: struct{
     using _set_frame: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     get_frame: struct{
     using _get_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_frame_coords: struct{
     using _set_frame_coords: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     get_frame_coords: struct{
     using _get_frame_coords: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_vframes: struct{
     using _set_vframes: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ Sprite2D_MethodBind_List :: struct {
   },
     get_vframes: struct{
     using _get_vframes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_hframes: struct{
     using _set_hframes: ^GDW.MethodBind,
@@ -106,11 +106,11 @@ Sprite2D_MethodBind_List :: struct {
   },
     get_hframes: struct{
     using _get_hframes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_rect: struct{
     using _get_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite2D, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
 };
 Sprite2D_Init_ :: proc (Sprite2D_methods: ^Sprite2D_MethodBind_List, loc := #caller_location) {

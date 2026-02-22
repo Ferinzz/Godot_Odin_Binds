@@ -10,27 +10,27 @@ EditorPaths :: ^GDW.Object
 EditorPaths_MethodBind_List :: struct {
   get_data_dir: struct{
     using _get_data_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_config_dir: struct{
     using _get_config_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_cache_dir: struct{
     using _get_cache_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_self_contained: struct{
     using _is_self_contained: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_self_contained_file: struct{
     using _get_self_contained_file: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_project_settings_dir: struct{
     using _get_project_settings_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPaths, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 EditorPaths_Init_ :: proc (EditorPaths_methods: ^EditorPaths_MethodBind_List, loc := #caller_location) {

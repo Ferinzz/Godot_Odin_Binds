@@ -10,7 +10,7 @@ EditorFileSystemDirectory :: ^GDW.Object
 EditorFileSystemDirectory_MethodBind_List :: struct {
   get_subdir_count: struct{
     using _get_subdir_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_subdir: struct{
     using _get_subdir: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ EditorFileSystemDirectory_MethodBind_List :: struct {
   },
   get_file_count: struct{
     using _get_file_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_file: struct{
     using _get_file: ^GDW.MethodBind,
@@ -46,15 +46,15 @@ EditorFileSystemDirectory_MethodBind_List :: struct {
   },
   get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_path: struct{
     using _get_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_parent: struct{
     using _get_parent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, #by_ptr args: i64 = 0, r_ret: ^EditorFileSystemDirectory)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystemDirectory, args: rawptr = nil, r_ret: ^EditorFileSystemDirectory)
   },
   find_file_index: struct{
     using _find_file_index: ^GDW.MethodBind,

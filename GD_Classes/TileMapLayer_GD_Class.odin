@@ -30,11 +30,11 @@ TileMapLayer_MethodBind_List :: struct {
   },
     fix_invalid_tiles: struct{
     using _fix_invalid_tiles: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_cell_source_id: struct{
     using _get_cell_source_id: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
   get_used_cells: struct{
     using _get_used_cells: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_used_cells_by_id: struct{
     using _get_used_cells_by_id: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
   get_used_rect: struct{
     using _get_used_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Rect2i)
   },
   get_pattern: struct{
     using _get_pattern: ^GDW.MethodBind,
@@ -102,11 +102,11 @@ TileMapLayer_MethodBind_List :: struct {
   },
   update_internals: struct{
     using _update_internals: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     notify_runtime_tile_data_update: struct{
     using _notify_runtime_tile_data_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     map_pattern: struct{
     using _map_pattern: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     get_tile_map_data_as_array: struct{
     using _get_tile_map_data_as_array: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   set_enabled: struct{
     using _set_enabled: ^GDW.MethodBind,
@@ -142,7 +142,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tile_set: struct{
     using _set_tile_set: ^GDW.MethodBind,
@@ -150,7 +150,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     get_tile_set: struct{
     using _get_tile_set: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^TileSet)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^TileSet)
   },
   set_y_sort_origin: struct{
     using _set_y_sort_origin: ^GDW.MethodBind,
@@ -158,7 +158,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     get_y_sort_origin: struct{
     using _get_y_sort_origin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_x_draw_order_reversed: struct{
     using _set_x_draw_order_reversed: ^GDW.MethodBind,
@@ -166,7 +166,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     is_x_draw_order_reversed: struct{
     using _is_x_draw_order_reversed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_rendering_quadrant_size: struct{
     using _set_rendering_quadrant_size: ^GDW.MethodBind,
@@ -174,7 +174,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     get_rendering_quadrant_size: struct{
     using _get_rendering_quadrant_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_enabled: struct{
     using _set_collision_enabled: ^GDW.MethodBind,
@@ -182,7 +182,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     is_collision_enabled: struct{
     using _is_collision_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_kinematic_bodies: struct{
     using _set_use_kinematic_bodies: ^GDW.MethodBind,
@@ -190,7 +190,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     is_using_kinematic_bodies: struct{
     using _is_using_kinematic_bodies: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collision_visibility_mode: struct{
     using _set_collision_visibility_mode: ^GDW.MethodBind,
@@ -198,7 +198,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     get_collision_visibility_mode: struct{
     using _get_collision_visibility_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^TileMapLayer_DebugVisibilityMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^TileMapLayer_DebugVisibilityMode)
   },
   set_physics_quadrant_size: struct{
     using _set_physics_quadrant_size: ^GDW.MethodBind,
@@ -206,7 +206,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     get_physics_quadrant_size: struct{
     using _get_physics_quadrant_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_occlusion_enabled: struct{
     using _set_occlusion_enabled: ^GDW.MethodBind,
@@ -214,7 +214,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     is_occlusion_enabled: struct{
     using _is_occlusion_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_navigation_enabled: struct{
     using _set_navigation_enabled: ^GDW.MethodBind,
@@ -222,7 +222,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     is_navigation_enabled: struct{
     using _is_navigation_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_navigation_map: struct{
     using _set_navigation_map: ^GDW.MethodBind,
@@ -230,7 +230,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     get_navigation_map: struct{
     using _get_navigation_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_navigation_visibility_mode: struct{
     using _set_navigation_visibility_mode: ^GDW.MethodBind,
@@ -238,7 +238,7 @@ TileMapLayer_MethodBind_List :: struct {
   },
     get_navigation_visibility_mode: struct{
     using _get_navigation_visibility_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, #by_ptr args: i64 = 0, r_ret: ^TileMapLayer_DebugVisibilityMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapLayer, args: rawptr = nil, r_ret: ^TileMapLayer_DebugVisibilityMode)
   },
 };
 TileMapLayer_Init_ :: proc (TileMapLayer_methods: ^TileMapLayer_MethodBind_List, loc := #caller_location) {

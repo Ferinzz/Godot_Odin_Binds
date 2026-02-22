@@ -17,11 +17,11 @@ AudioStreamPlaylist_MethodBind_List :: struct {
   },
     get_stream_count: struct{
     using _get_stream_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_bpm: struct{
     using _get_bpm: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_list_stream: struct{
     using _set_list_stream: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ AudioStreamPlaylist_MethodBind_List :: struct {
   },
     get_shuffle: struct{
     using _get_shuffle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_fade_time: struct{
     using _set_fade_time: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ AudioStreamPlaylist_MethodBind_List :: struct {
   },
     get_fade_time: struct{
     using _get_fade_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_loop: struct{
     using _set_loop: ^GDW.MethodBind,
@@ -53,7 +53,7 @@ AudioStreamPlaylist_MethodBind_List :: struct {
   },
     has_loop: struct{
     using _has_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaylist, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AudioStreamPlaylist_Init_ :: proc (AudioStreamPlaylist_methods: ^AudioStreamPlaylist_MethodBind_List, loc := #caller_location) {

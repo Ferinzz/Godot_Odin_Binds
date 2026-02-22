@@ -23,27 +23,27 @@ AudioStream_Virtual_Info :: struct {
 AudioStream_MethodBind_List :: struct {
   get_length: struct{
     using _get_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, args: rawptr = nil, r_ret: ^GDW.float)
   },
   is_monophonic: struct{
     using _is_monophonic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   instantiate_playback: struct{
     using _instantiate_playback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, #by_ptr args: i64 = 0, r_ret: ^AudioStreamPlayback)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, args: rawptr = nil, r_ret: ^AudioStreamPlayback)
   },
   can_be_sampled: struct{
     using _can_be_sampled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   generate_sample: struct{
     using _generate_sample: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, #by_ptr args: i64 = 0, r_ret: ^AudioSample)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, args: rawptr = nil, r_ret: ^AudioSample)
   },
   is_meta_stream: struct{
     using _is_meta_stream: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStream, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AudioStream_Init_ :: proc (AudioStream_methods: ^AudioStream_MethodBind_List, loc := #caller_location) {

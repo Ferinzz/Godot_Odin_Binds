@@ -16,7 +16,7 @@ Curve_TangentMode :: enum i64 {
 Curve_MethodBind_List :: struct {
   get_point_count: struct{
     using _get_point_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_point_count: struct{
     using _set_point_count: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ Curve_MethodBind_List :: struct {
   },
     clear_points: struct{
     using _clear_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_point_position: struct{
     using _get_point_position: ^GDW.MethodBind,
@@ -88,7 +88,7 @@ Curve_MethodBind_List :: struct {
   },
     get_min_value: struct{
     using _get_min_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_min_value: struct{
     using _set_min_value: ^GDW.MethodBind,
@@ -96,7 +96,7 @@ Curve_MethodBind_List :: struct {
   },
     get_max_value: struct{
     using _get_max_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_value: struct{
     using _set_max_value: ^GDW.MethodBind,
@@ -104,11 +104,11 @@ Curve_MethodBind_List :: struct {
   },
     get_value_range: struct{
     using _get_value_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_min_domain: struct{
     using _get_min_domain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_min_domain: struct{
     using _set_min_domain: ^GDW.MethodBind,
@@ -116,7 +116,7 @@ Curve_MethodBind_List :: struct {
   },
     get_max_domain: struct{
     using _get_max_domain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_domain: struct{
     using _set_max_domain: ^GDW.MethodBind,
@@ -124,19 +124,19 @@ Curve_MethodBind_List :: struct {
   },
     get_domain_range: struct{
     using _get_domain_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: ^GDW.float)
   },
   clean_dupes: struct{
     using _clean_dupes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: rawptr = nil)
   },
     bake: struct{
     using _bake: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_bake_resolution: struct{
     using _get_bake_resolution: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bake_resolution: struct{
     using _set_bake_resolution: ^GDW.MethodBind,

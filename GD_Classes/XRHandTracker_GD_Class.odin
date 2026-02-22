@@ -62,7 +62,7 @@ XRHandTracker_MethodBind_List :: struct {
   },
     get_has_tracking_data: struct{
     using _get_has_tracking_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hand_tracking_source: struct{
     using _set_hand_tracking_source: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ XRHandTracker_MethodBind_List :: struct {
   },
     get_hand_tracking_source: struct{
     using _get_hand_tracking_source: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: i64 = 0, r_ret: ^XRHandTracker_HandTrackingSource)
+    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, args: rawptr = nil, r_ret: ^XRHandTracker_HandTrackingSource)
   },
   set_hand_joint_flags: struct{
     using _set_hand_joint_flags: ^GDW.MethodBind,

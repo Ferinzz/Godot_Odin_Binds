@@ -26,11 +26,11 @@ AESContext_MethodBind_List :: struct {
   },
   get_iv_state: struct{
     using _get_iv_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AESContext, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: AESContext, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   finish: struct{
     using _finish: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AESContext, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AESContext, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 AESContext_Init_ :: proc (AESContext_methods: ^AESContext_MethodBind_List, loc := #caller_location) {

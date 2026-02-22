@@ -22,15 +22,15 @@ WebRTCDataChannel_ChannelState :: enum i64 {
 WebRTCDataChannel_MethodBind_List :: struct {
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     was_string_packet: struct{
     using _was_string_packet: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_write_mode: struct{
     using _set_write_mode: ^GDW.MethodBind,
@@ -38,43 +38,43 @@ WebRTCDataChannel_MethodBind_List :: struct {
   },
     get_write_mode: struct{
     using _get_write_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^WebRTCDataChannel_WriteMode)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^WebRTCDataChannel_WriteMode)
   },
   get_ready_state: struct{
     using _get_ready_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^WebRTCDataChannel_ChannelState)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^WebRTCDataChannel_ChannelState)
   },
   get_label: struct{
     using _get_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_ordered: struct{
     using _is_ordered: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_id: struct{
     using _get_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_max_packet_life_time: struct{
     using _get_max_packet_life_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_max_retransmits: struct{
     using _get_max_retransmits: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_protocol: struct{
     using _get_protocol: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_negotiated: struct{
     using _is_negotiated: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_buffered_amount: struct{
     using _get_buffered_amount: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCDataChannel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 WebRTCDataChannel_Init_ :: proc (WebRTCDataChannel_methods: ^WebRTCDataChannel_MethodBind_List, loc := #caller_location) {

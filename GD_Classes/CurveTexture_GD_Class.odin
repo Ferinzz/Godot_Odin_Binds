@@ -23,7 +23,7 @@ CurveTexture_MethodBind_List :: struct {
   },
     get_curve: struct{
     using _get_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CurveTexture, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: CurveTexture, args: rawptr = nil, r_ret: ^Curve)
   },
   set_texture_mode: struct{
     using _set_texture_mode: ^GDW.MethodBind,
@@ -31,7 +31,7 @@ CurveTexture_MethodBind_List :: struct {
   },
     get_texture_mode: struct{
     using _get_texture_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CurveTexture, #by_ptr args: i64 = 0, r_ret: ^CurveTexture_TextureMode)
+    m_call: proc(_:^GDW.MethodBind, obj: CurveTexture, args: rawptr = nil, r_ret: ^CurveTexture_TextureMode)
   },
 };
 CurveTexture_Init_ :: proc (CurveTexture_methods: ^CurveTexture_MethodBind_List, loc := #caller_location) {

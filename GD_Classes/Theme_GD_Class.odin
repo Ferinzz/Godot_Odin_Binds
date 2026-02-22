@@ -44,7 +44,7 @@ Theme_MethodBind_List :: struct {
   },
   get_icon_type_list: struct{
     using _get_icon_type_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_stylebox: struct{
     using _set_stylebox: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ Theme_MethodBind_List :: struct {
   },
   get_stylebox_type_list: struct{
     using _get_stylebox_type_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_font: struct{
     using _set_font: ^GDW.MethodBind,
@@ -100,7 +100,7 @@ Theme_MethodBind_List :: struct {
   },
   get_font_type_list: struct{
     using _get_font_type_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_font_size: struct{
     using _set_font_size: ^GDW.MethodBind,
@@ -128,7 +128,7 @@ Theme_MethodBind_List :: struct {
   },
   get_font_size_type_list: struct{
     using _get_font_size_type_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_color: struct{
     using _set_color: ^GDW.MethodBind,
@@ -156,7 +156,7 @@ Theme_MethodBind_List :: struct {
   },
   get_color_type_list: struct{
     using _get_color_type_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_constant: struct{
     using _set_constant: ^GDW.MethodBind,
@@ -184,7 +184,7 @@ Theme_MethodBind_List :: struct {
   },
   get_constant_type_list: struct{
     using _get_constant_type_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_default_base_scale: struct{
     using _set_default_base_scale: ^GDW.MethodBind,
@@ -192,11 +192,11 @@ Theme_MethodBind_List :: struct {
   },
     get_default_base_scale: struct{
     using _get_default_base_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.float)
   },
   has_default_base_scale: struct{
     using _has_default_base_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_default_font: struct{
     using _set_default_font: ^GDW.MethodBind,
@@ -204,11 +204,11 @@ Theme_MethodBind_List :: struct {
   },
     get_default_font: struct{
     using _get_default_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^Font)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^Font)
   },
   has_default_font: struct{
     using _has_default_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_default_font_size: struct{
     using _set_default_font_size: ^GDW.MethodBind,
@@ -216,11 +216,11 @@ Theme_MethodBind_List :: struct {
   },
     get_default_font_size: struct{
     using _get_default_font_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_default_font_size: struct{
     using _has_default_font_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_theme_item: struct{
     using _set_theme_item: ^GDW.MethodBind,
@@ -284,7 +284,7 @@ Theme_MethodBind_List :: struct {
   },
     get_type_list: struct{
     using _get_type_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   merge_with: struct{
     using _merge_with: ^GDW.MethodBind,
@@ -292,7 +292,7 @@ Theme_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Theme, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Theme, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 Theme_Init_ :: proc (Theme_methods: ^Theme_MethodBind_List, loc := #caller_location) {

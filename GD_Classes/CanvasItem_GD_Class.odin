@@ -49,7 +49,7 @@ CanvasItem_Constants :: enum i64 {
 CanvasItem_MethodBind_List :: struct {
   get_canvas_item: struct{
     using _get_canvas_item: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_visible: struct{
     using _set_visible: ^GDW.MethodBind,
@@ -57,27 +57,27 @@ CanvasItem_MethodBind_List :: struct {
   },
     is_visible: struct{
     using _is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_visible_in_tree: struct{
     using _is_visible_in_tree: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   show: struct{
     using _show: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     hide: struct{
     using _hide: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     queue_redraw: struct{
     using _queue_redraw: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     move_to_front: struct{
     using _move_to_front: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_as_top_level: struct{
     using _set_as_top_level: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     is_set_as_top_level: struct{
     using _is_set_as_top_level: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_light_mask: struct{
     using _set_light_mask: ^GDW.MethodBind,
@@ -93,7 +93,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_light_mask: struct{
     using _get_light_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_modulate: struct{
     using _set_modulate: ^GDW.MethodBind,
@@ -101,7 +101,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_modulate: struct{
     using _get_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_self_modulate: struct{
     using _set_self_modulate: ^GDW.MethodBind,
@@ -109,7 +109,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_self_modulate: struct{
     using _get_self_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_z_index: struct{
     using _set_z_index: ^GDW.MethodBind,
@@ -117,7 +117,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_z_index: struct{
     using _get_z_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_z_as_relative: struct{
     using _set_z_as_relative: ^GDW.MethodBind,
@@ -125,7 +125,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     is_z_relative: struct{
     using _is_z_relative: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_y_sort_enabled: struct{
     using _set_y_sort_enabled: ^GDW.MethodBind,
@@ -133,7 +133,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     is_y_sort_enabled: struct{
     using _is_y_sort_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_behind_parent: struct{
     using _set_draw_behind_parent: ^GDW.MethodBind,
@@ -141,7 +141,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     is_draw_behind_parent_enabled: struct{
     using _is_draw_behind_parent_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   draw_line: struct{
     using _draw_line: ^GDW.MethodBind,
@@ -269,55 +269,55 @@ CanvasItem_MethodBind_List :: struct {
   },
     draw_end_animation: struct{
     using _draw_end_animation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_transform: struct{
     using _get_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_global_transform: struct{
     using _get_global_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_global_transform_with_canvas: struct{
     using _get_global_transform_with_canvas: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_viewport_transform: struct{
     using _get_viewport_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_viewport_rect: struct{
     using _get_viewport_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   get_canvas_transform: struct{
     using _get_canvas_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_screen_transform: struct{
     using _get_screen_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_local_mouse_position: struct{
     using _get_local_mouse_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_global_mouse_position: struct{
     using _get_global_mouse_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_canvas: struct{
     using _get_canvas: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_canvas_layer_node: struct{
     using _get_canvas_layer_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^CanvasLayer)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^CanvasLayer)
   },
   get_world_2d: struct{
     using _get_world_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^World2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^World2D)
   },
   set_material: struct{
     using _set_material: ^GDW.MethodBind,
@@ -325,7 +325,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^Material)
   },
   set_instance_shader_parameter: struct{
     using _set_instance_shader_parameter: ^GDW.MethodBind,
@@ -341,7 +341,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_use_parent_material: struct{
     using _get_use_parent_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_notify_local_transform: struct{
     using _set_notify_local_transform: ^GDW.MethodBind,
@@ -349,7 +349,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     is_local_transform_notification_enabled: struct{
     using _is_local_transform_notification_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_notify_transform: struct{
     using _set_notify_transform: ^GDW.MethodBind,
@@ -357,11 +357,11 @@ CanvasItem_MethodBind_List :: struct {
   },
     is_transform_notification_enabled: struct{
     using _is_transform_notification_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   force_update_transform: struct{
     using _force_update_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     make_canvas_position_local: struct{
     using _make_canvas_position_local: ^GDW.MethodBind,
@@ -377,7 +377,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_visibility_layer: struct{
     using _get_visibility_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_visibility_layer_bit: struct{
     using _set_visibility_layer_bit: ^GDW.MethodBind,
@@ -393,7 +393,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_texture_filter: struct{
     using _get_texture_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^CanvasItem_TextureFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^CanvasItem_TextureFilter)
   },
   set_texture_repeat: struct{
     using _set_texture_repeat: ^GDW.MethodBind,
@@ -401,7 +401,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_texture_repeat: struct{
     using _get_texture_repeat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^CanvasItem_TextureRepeat)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^CanvasItem_TextureRepeat)
   },
   set_clip_children_mode: struct{
     using _set_clip_children_mode: ^GDW.MethodBind,
@@ -409,7 +409,7 @@ CanvasItem_MethodBind_List :: struct {
   },
     get_clip_children_mode: struct{
     using _get_clip_children_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, #by_ptr args: i64 = 0, r_ret: ^CanvasItem_ClipChildrenMode)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasItem, args: rawptr = nil, r_ret: ^CanvasItem_ClipChildrenMode)
   },
 };
 CanvasItem_Init_ :: proc (CanvasItem_methods: ^CanvasItem_MethodBind_List, loc := #caller_location) {

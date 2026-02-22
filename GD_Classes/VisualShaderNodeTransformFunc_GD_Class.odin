@@ -20,7 +20,7 @@ VisualShaderNodeTransformFunc_MethodBind_List :: struct {
   },
     get_function: struct{
     using _get_function: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTransformFunc, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeTransformFunc_Function)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTransformFunc, args: rawptr = nil, r_ret: ^VisualShaderNodeTransformFunc_Function)
   },
 };
 VisualShaderNodeTransformFunc_Init_ :: proc (VisualShaderNodeTransformFunc_methods: ^VisualShaderNodeTransformFunc_MethodBind_List, loc := #caller_location) {

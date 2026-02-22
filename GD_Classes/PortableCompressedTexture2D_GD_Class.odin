@@ -24,11 +24,11 @@ PortableCompressedTexture2D_MethodBind_List :: struct {
   },
     get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, #by_ptr args: i64 = 0, r_ret: ^Image_Format)
+    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, args: rawptr = nil, r_ret: ^Image_Format)
   },
   get_compression_mode: struct{
     using _get_compression_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, #by_ptr args: i64 = 0, r_ret: ^PortableCompressedTexture2D_CompressionMode)
+    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, args: rawptr = nil, r_ret: ^PortableCompressedTexture2D_CompressionMode)
   },
   set_size_override: struct{
     using _set_size_override: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ PortableCompressedTexture2D_MethodBind_List :: struct {
   },
     get_size_override: struct{
     using _get_size_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_keep_compressed_buffer: struct{
     using _set_keep_compressed_buffer: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ PortableCompressedTexture2D_MethodBind_List :: struct {
   },
     is_keeping_compressed_buffer: struct{
     using _is_keeping_compressed_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_basisu_compressor_params: struct{
     using _set_basisu_compressor_params: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ PortableCompressedTexture2D_MethodBind_List :: struct {
   },
     is_keeping_all_compressed_buffers: struct{
     using _is_keeping_all_compressed_buffers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PortableCompressedTexture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PortableCompressedTexture2D_Init_ :: proc (PortableCompressedTexture2D_methods: ^PortableCompressedTexture2D_MethodBind_List, loc := #caller_location) {

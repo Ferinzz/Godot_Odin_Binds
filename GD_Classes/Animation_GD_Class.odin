@@ -62,7 +62,7 @@ Animation_MethodBind_List :: struct {
   },
     get_track_count: struct{
     using _get_track_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Animation, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Animation, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   track_get_type: struct{
     using _track_get_type: ^GDW.MethodBind,
@@ -338,7 +338,7 @@ Animation_MethodBind_List :: struct {
   },
   get_marker_names: struct{
     using _get_marker_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Animation, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Animation, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_marker_color: struct{
     using _get_marker_color: ^GDW.MethodBind,
@@ -354,7 +354,7 @@ Animation_MethodBind_List :: struct {
   },
     get_length: struct{
     using _get_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Animation, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Animation, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_loop_mode: struct{
     using _set_loop_mode: ^GDW.MethodBind,
@@ -362,7 +362,7 @@ Animation_MethodBind_List :: struct {
   },
     get_loop_mode: struct{
     using _get_loop_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Animation, #by_ptr args: i64 = 0, r_ret: ^Animation_LoopMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Animation, args: rawptr = nil, r_ret: ^Animation_LoopMode)
   },
   set_step: struct{
     using _set_step: ^GDW.MethodBind,
@@ -370,11 +370,11 @@ Animation_MethodBind_List :: struct {
   },
     get_step: struct{
     using _get_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Animation, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Animation, args: rawptr = nil, r_ret: ^GDW.float)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Animation, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Animation, args: rawptr = nil, r_ret: rawptr = nil)
   },
     copy_track: struct{
     using _copy_track: ^GDW.MethodBind,
@@ -390,7 +390,7 @@ Animation_MethodBind_List :: struct {
   },
     is_capture_included: struct{
     using _is_capture_included: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Animation, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Animation, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Animation_Init_ :: proc (Animation_methods: ^Animation_MethodBind_List, loc := #caller_location) {

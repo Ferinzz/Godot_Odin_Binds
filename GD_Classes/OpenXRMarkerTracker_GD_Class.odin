@@ -14,7 +14,7 @@ OpenXRMarkerTracker_MethodBind_List :: struct {
   },
     get_bounds_size: struct{
     using _get_bounds_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRMarkerTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRMarkerTracker, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_marker_type: struct{
     using _set_marker_type: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRMarkerTracker_MethodBind_List :: struct {
   },
     get_marker_type: struct{
     using _get_marker_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRMarkerTracker, #by_ptr args: i64 = 0, r_ret: ^OpenXRSpatialComponentMarkerList_MarkerType)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRMarkerTracker, args: rawptr = nil, r_ret: ^OpenXRSpatialComponentMarkerList_MarkerType)
   },
   set_marker_id: struct{
     using _set_marker_id: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OpenXRMarkerTracker_MethodBind_List :: struct {
   },
     get_marker_id: struct{
     using _get_marker_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRMarkerTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRMarkerTracker, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_marker_data: struct{
     using _set_marker_data: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ OpenXRMarkerTracker_MethodBind_List :: struct {
   },
     get_marker_data: struct{
     using _get_marker_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRMarkerTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRMarkerTracker, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
 };
 OpenXRMarkerTracker_Init_ :: proc (OpenXRMarkerTracker_methods: ^OpenXRMarkerTracker_MethodBind_List, loc := #caller_location) {

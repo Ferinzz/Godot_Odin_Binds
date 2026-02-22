@@ -40,19 +40,19 @@ OS_MethodBind_List :: struct {
   },
   get_system_ca_certificates: struct{
     using _get_system_ca_certificates: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_connected_midi_inputs: struct{
     using _get_connected_midi_inputs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   open_midi_inputs: struct{
     using _open_midi_inputs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: rawptr = nil)
   },
     close_midi_inputs: struct{
     using _close_midi_inputs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: rawptr = nil)
   },
     alert: struct{
     using _alert: ^GDW.MethodBind,
@@ -68,7 +68,7 @@ OS_MethodBind_List :: struct {
   },
     is_in_low_processor_usage_mode: struct{
     using _is_in_low_processor_usage_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_low_processor_usage_mode_sleep_usec: struct{
     using _set_low_processor_usage_mode_sleep_usec: ^GDW.MethodBind,
@@ -76,7 +76,7 @@ OS_MethodBind_List :: struct {
   },
     get_low_processor_usage_mode_sleep_usec: struct{
     using _get_low_processor_usage_mode_sleep_usec: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_delta_smoothing: struct{
     using _set_delta_smoothing: ^GDW.MethodBind,
@@ -84,19 +84,19 @@ OS_MethodBind_List :: struct {
   },
     is_delta_smoothing_enabled: struct{
     using _is_delta_smoothing_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_processor_count: struct{
     using _get_processor_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_processor_name: struct{
     using _get_processor_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_system_fonts: struct{
     using _get_system_fonts: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_system_font_path: struct{
     using _get_system_font_path: ^GDW.MethodBind,
@@ -108,7 +108,7 @@ OS_MethodBind_List :: struct {
   },
   get_executable_path: struct{
     using _get_executable_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   read_string_from_stdin: struct{
     using _read_string_from_stdin: ^GDW.MethodBind,
@@ -120,15 +120,15 @@ OS_MethodBind_List :: struct {
   },
   get_stdin_type: struct{
     using _get_stdin_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^OS_StdHandleType)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^OS_StdHandleType)
   },
   get_stdout_type: struct{
     using _get_stdout_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^OS_StdHandleType)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^OS_StdHandleType)
   },
   get_stderr_type: struct{
     using _get_stderr_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^OS_StdHandleType)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^OS_StdHandleType)
   },
   execute: struct{
     using _execute: ^GDW.MethodBind,
@@ -172,7 +172,7 @@ OS_MethodBind_List :: struct {
   },
   get_process_id: struct{
     using _get_process_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_environment: struct{
     using _has_environment: ^GDW.MethodBind,
@@ -192,31 +192,31 @@ OS_MethodBind_List :: struct {
   },
     get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_distribution_name: struct{
     using _get_distribution_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_version: struct{
     using _get_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_version_alias: struct{
     using _get_version_alias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_cmdline_args: struct{
     using _get_cmdline_args: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_cmdline_user_args: struct{
     using _get_cmdline_user_args: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_video_adapter_driver_info: struct{
     using _get_video_adapter_driver_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_restart_on_exit: struct{
     using _set_restart_on_exit: ^GDW.MethodBind,
@@ -224,11 +224,11 @@ OS_MethodBind_List :: struct {
   },
     is_restart_on_exit_set: struct{
     using _is_restart_on_exit_set: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_restart_on_exit_arguments: struct{
     using _get_restart_on_exit_arguments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   delay_usec: struct{
     using _delay_usec: ^GDW.MethodBind,
@@ -240,39 +240,39 @@ OS_MethodBind_List :: struct {
   },
     get_locale: struct{
     using _get_locale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_locale_language: struct{
     using _get_locale_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_model_name: struct{
     using _get_model_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_userfs_persistent: struct{
     using _is_userfs_persistent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_stdout_verbose: struct{
     using _is_stdout_verbose: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_debug_build: struct{
     using _is_debug_build: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_static_memory_usage: struct{
     using _get_static_memory_usage: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_static_memory_peak_usage: struct{
     using _get_static_memory_peak_usage: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_memory_info: struct{
     using _get_memory_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   move_to_trash: struct{
     using _move_to_trash: ^GDW.MethodBind,
@@ -280,7 +280,7 @@ OS_MethodBind_List :: struct {
   },
   get_user_data_dir: struct{
     using _get_user_data_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_system_dir: struct{
     using _get_system_dir: ^GDW.MethodBind,
@@ -288,23 +288,23 @@ OS_MethodBind_List :: struct {
   },
   get_config_dir: struct{
     using _get_config_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_data_dir: struct{
     using _get_data_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_cache_dir: struct{
     using _get_cache_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_temp_dir: struct{
     using _get_temp_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_unique_id: struct{
     using _get_unique_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_keycode_string: struct{
     using _get_keycode_string: ^GDW.MethodBind,
@@ -328,11 +328,11 @@ OS_MethodBind_List :: struct {
   },
   get_thread_caller_id: struct{
     using _get_thread_caller_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_main_thread_id: struct{
     using _get_main_thread_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_feature: struct{
     using _has_feature: ^GDW.MethodBind,
@@ -340,7 +340,7 @@ OS_MethodBind_List :: struct {
   },
   is_sandboxed: struct{
     using _is_sandboxed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   request_permission: struct{
     using _request_permission: ^GDW.MethodBind,
@@ -348,15 +348,15 @@ OS_MethodBind_List :: struct {
   },
   request_permissions: struct{
     using _request_permissions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_granted_permissions: struct{
     using _get_granted_permissions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   revoke_granted_permissions: struct{
     using _revoke_granted_permissions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OS, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OS, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_logger: struct{
     using _add_logger: ^GDW.MethodBind,

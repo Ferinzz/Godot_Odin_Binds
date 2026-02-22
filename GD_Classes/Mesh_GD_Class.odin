@@ -104,19 +104,19 @@ Mesh_MethodBind_List :: struct {
   },
     get_lightmap_size_hint: struct{
     using _get_lightmap_size_hint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Mesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Mesh, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   get_aabb: struct{
     using _get_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Mesh, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: Mesh, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   get_faces: struct{
     using _get_faces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Mesh, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Mesh, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   get_surface_count: struct{
     using _get_surface_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Mesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Mesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   surface_get_arrays: struct{
     using _surface_get_arrays: ^GDW.MethodBind,
@@ -136,11 +136,11 @@ Mesh_MethodBind_List :: struct {
   },
   create_placeholder: struct{
     using _create_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Mesh, #by_ptr args: i64 = 0, r_ret: ^Resource)
+    m_call: proc(_:^GDW.MethodBind, obj: Mesh, args: rawptr = nil, r_ret: ^Resource)
   },
   create_trimesh_shape: struct{
     using _create_trimesh_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Mesh, #by_ptr args: i64 = 0, r_ret: ^ConcavePolygonShape3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Mesh, args: rawptr = nil, r_ret: ^ConcavePolygonShape3D)
   },
   create_convex_shape: struct{
     using _create_convex_shape: ^GDW.MethodBind,
@@ -152,7 +152,7 @@ Mesh_MethodBind_List :: struct {
   },
   generate_triangle_mesh: struct{
     using _generate_triangle_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Mesh, #by_ptr args: i64 = 0, r_ret: ^TriangleMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: Mesh, args: rawptr = nil, r_ret: ^TriangleMesh)
   },
 };
 Mesh_Init_ :: proc (Mesh_methods: ^Mesh_MethodBind_List, loc := #caller_location) {

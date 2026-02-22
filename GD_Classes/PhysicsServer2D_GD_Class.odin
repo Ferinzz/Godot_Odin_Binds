@@ -137,35 +137,35 @@ PhysicsServer2D_ProcessInfo :: enum i64 {
 PhysicsServer2D_MethodBind_List :: struct {
   world_boundary_shape_create: struct{
     using _world_boundary_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   separation_ray_shape_create: struct{
     using _separation_ray_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   segment_shape_create: struct{
     using _segment_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   circle_shape_create: struct{
     using _circle_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   rectangle_shape_create: struct{
     using _rectangle_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   capsule_shape_create: struct{
     using _capsule_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   convex_polygon_shape_create: struct{
     using _convex_polygon_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   concave_polygon_shape_create: struct{
     using _concave_polygon_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   shape_set_data: struct{
     using _shape_set_data: ^GDW.MethodBind,
@@ -181,7 +181,7 @@ PhysicsServer2D_MethodBind_List :: struct {
   },
   space_create: struct{
     using _space_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   space_set_active: struct{
     using _space_set_active: ^GDW.MethodBind,
@@ -205,7 +205,7 @@ PhysicsServer2D_MethodBind_List :: struct {
   },
   area_create: struct{
     using _area_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   area_set_space: struct{
     using _area_set_space: ^GDW.MethodBind,
@@ -313,7 +313,7 @@ PhysicsServer2D_MethodBind_List :: struct {
   },
     body_create: struct{
     using _body_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   body_set_space: struct{
     using _body_set_space: ^GDW.MethodBind,
@@ -537,7 +537,7 @@ PhysicsServer2D_MethodBind_List :: struct {
   },
   joint_create: struct{
     using _joint_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   joint_clear: struct{
     using _joint_clear: ^GDW.MethodBind,

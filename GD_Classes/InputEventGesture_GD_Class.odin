@@ -14,7 +14,7 @@ InputEventGesture_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventGesture, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventGesture, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 InputEventGesture_Init_ :: proc (InputEventGesture_methods: ^InputEventGesture_MethodBind_List, loc := #caller_location) {

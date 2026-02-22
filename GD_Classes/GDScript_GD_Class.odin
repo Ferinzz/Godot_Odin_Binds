@@ -10,7 +10,7 @@ GDScript :: ^GDW.Object
 GDScript_MethodBind_List :: struct {
   new: struct{
     using _new: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GDScript, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: GDScript, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Variant)
   },
 };
 GDScript_Init_ :: proc (GDScript_methods: ^GDScript_MethodBind_List, loc := #caller_location) {

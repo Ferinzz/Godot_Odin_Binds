@@ -17,7 +17,7 @@ AnimatedTexture_MethodBind_List :: struct {
   },
     get_frames: struct{
     using _get_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_current_frame: struct{
     using _set_current_frame: ^GDW.MethodBind,
@@ -25,7 +25,7 @@ AnimatedTexture_MethodBind_List :: struct {
   },
     get_current_frame: struct{
     using _get_current_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_pause: struct{
     using _set_pause: ^GDW.MethodBind,
@@ -33,7 +33,7 @@ AnimatedTexture_MethodBind_List :: struct {
   },
     get_pause: struct{
     using _get_pause: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_one_shot: struct{
     using _set_one_shot: ^GDW.MethodBind,
@@ -41,7 +41,7 @@ AnimatedTexture_MethodBind_List :: struct {
   },
     get_one_shot: struct{
     using _get_one_shot: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_speed_scale: struct{
     using _set_speed_scale: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ AnimatedTexture_MethodBind_List :: struct {
   },
     get_speed_scale: struct{
     using _get_speed_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedTexture, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_frame_texture: struct{
     using _set_frame_texture: ^GDW.MethodBind,

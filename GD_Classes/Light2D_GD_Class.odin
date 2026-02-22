@@ -26,7 +26,7 @@ Light2D_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_editor_only: struct{
     using _set_editor_only: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ Light2D_MethodBind_List :: struct {
   },
     is_editor_only: struct{
     using _is_editor_only: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_color: struct{
     using _set_color: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_energy: struct{
     using _set_energy: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_energy: struct{
     using _get_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_z_range_min: struct{
     using _set_z_range_min: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_z_range_min: struct{
     using _get_z_range_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_z_range_max: struct{
     using _set_z_range_max: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_z_range_max: struct{
     using _get_z_range_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_layer_range_min: struct{
     using _set_layer_range_min: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_layer_range_min: struct{
     using _get_layer_range_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_layer_range_max: struct{
     using _set_layer_range_max: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_layer_range_max: struct{
     using _get_layer_range_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_item_cull_mask: struct{
     using _set_item_cull_mask: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_item_cull_mask: struct{
     using _get_item_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_item_shadow_cull_mask: struct{
     using _set_item_shadow_cull_mask: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_item_shadow_cull_mask: struct{
     using _get_item_shadow_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_shadow_enabled: struct{
     using _set_shadow_enabled: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ Light2D_MethodBind_List :: struct {
   },
     is_shadow_enabled: struct{
     using _is_shadow_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shadow_smooth: struct{
     using _set_shadow_smooth: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_shadow_smooth: struct{
     using _get_shadow_smooth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_shadow_filter: struct{
     using _set_shadow_filter: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_shadow_filter: struct{
     using _get_shadow_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^Light2D_ShadowFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^Light2D_ShadowFilter)
   },
   set_shadow_color: struct{
     using _set_shadow_color: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_shadow_color: struct{
     using _get_shadow_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_blend_mode: struct{
     using _set_blend_mode: ^GDW.MethodBind,
@@ -138,7 +138,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_blend_mode: struct{
     using _get_blend_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^Light2D_BlendMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^Light2D_BlendMode)
   },
   set_height: struct{
     using _set_height: ^GDW.MethodBind,
@@ -146,7 +146,7 @@ Light2D_MethodBind_List :: struct {
   },
     get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Light2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 Light2D_Init_ :: proc (Light2D_methods: ^Light2D_MethodBind_List, loc := #caller_location) {

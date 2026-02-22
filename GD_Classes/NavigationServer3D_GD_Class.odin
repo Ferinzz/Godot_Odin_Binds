@@ -23,11 +23,11 @@ NavigationServer3D_ProcessInfo :: enum i64 {
 NavigationServer3D_MethodBind_List :: struct {
   get_maps: struct{
     using _get_maps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   map_create: struct{
     using _map_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   map_set_active: struct{
     using _map_set_active: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ NavigationServer3D_MethodBind_List :: struct {
   },
     region_create: struct{
     using _region_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   region_get_iteration_id: struct{
     using _region_get_iteration_id: ^GDW.MethodBind,
@@ -279,7 +279,7 @@ NavigationServer3D_MethodBind_List :: struct {
   },
   link_create: struct{
     using _link_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   link_get_iteration_id: struct{
     using _link_get_iteration_id: ^GDW.MethodBind,
@@ -359,7 +359,7 @@ NavigationServer3D_MethodBind_List :: struct {
   },
   agent_create: struct{
     using _agent_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   agent_set_avoidance_enabled: struct{
     using _agent_set_avoidance_enabled: ^GDW.MethodBind,
@@ -507,7 +507,7 @@ NavigationServer3D_MethodBind_List :: struct {
   },
   obstacle_create: struct{
     using _obstacle_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   obstacle_set_avoidance_enabled: struct{
     using _obstacle_set_avoidance_enabled: ^GDW.MethodBind,
@@ -607,7 +607,7 @@ NavigationServer3D_MethodBind_List :: struct {
   },
   source_geometry_parser_create: struct{
     using _source_geometry_parser_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   source_geometry_parser_set_callback: struct{
     using _source_geometry_parser_set_callback: ^GDW.MethodBind,
@@ -631,7 +631,7 @@ NavigationServer3D_MethodBind_List :: struct {
   },
     get_debug_enabled: struct{
     using _get_debug_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationServer3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_process_info: struct{
     using _get_process_info: ^GDW.MethodBind,

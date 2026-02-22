@@ -55,7 +55,7 @@ SkeletonModifier3D_RotationAxis :: enum i64 {
 SkeletonModifier3D_MethodBind_List :: struct {
   get_skeleton: struct{
     using _get_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModifier3D, #by_ptr args: i64 = 0, r_ret: ^Skeleton3D)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModifier3D, args: rawptr = nil, r_ret: ^Skeleton3D)
   },
   set_active: struct{
     using _set_active: ^GDW.MethodBind,
@@ -63,7 +63,7 @@ SkeletonModifier3D_MethodBind_List :: struct {
   },
     is_active: struct{
     using _is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_influence: struct{
     using _set_influence: ^GDW.MethodBind,
@@ -71,7 +71,7 @@ SkeletonModifier3D_MethodBind_List :: struct {
   },
     get_influence: struct{
     using _get_influence: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 SkeletonModifier3D_Init_ :: proc (SkeletonModifier3D_methods: ^SkeletonModifier3D_MethodBind_List, loc := #caller_location) {

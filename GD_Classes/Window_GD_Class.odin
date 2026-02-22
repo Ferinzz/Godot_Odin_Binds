@@ -85,7 +85,7 @@ Window_MethodBind_List :: struct {
   },
     get_title: struct{
     using _get_title: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_initial_position: struct{
     using _set_initial_position: ^GDW.MethodBind,
@@ -93,7 +93,7 @@ Window_MethodBind_List :: struct {
   },
     get_initial_position: struct{
     using _get_initial_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Window_WindowInitialPosition)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Window_WindowInitialPosition)
   },
   set_current_screen: struct{
     using _set_current_screen: ^GDW.MethodBind,
@@ -101,7 +101,7 @@ Window_MethodBind_List :: struct {
   },
     get_current_screen: struct{
     using _get_current_screen: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_position: struct{
     using _set_position: ^GDW.MethodBind,
@@ -109,11 +109,11 @@ Window_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   move_to_center: struct{
     using _move_to_center: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_size: struct{
     using _set_size: ^GDW.MethodBind,
@@ -121,19 +121,19 @@ Window_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   reset_size: struct{
     using _reset_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_position_with_decorations: struct{
     using _get_position_with_decorations: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   get_size_with_decorations: struct{
     using _get_size_with_decorations: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_max_size: struct{
     using _set_max_size: ^GDW.MethodBind,
@@ -141,7 +141,7 @@ Window_MethodBind_List :: struct {
   },
     get_max_size: struct{
     using _get_max_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_min_size: struct{
     using _set_min_size: ^GDW.MethodBind,
@@ -149,7 +149,7 @@ Window_MethodBind_List :: struct {
   },
     get_min_size: struct{
     using _get_min_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_mode: struct{
     using _set_mode: ^GDW.MethodBind,
@@ -157,7 +157,7 @@ Window_MethodBind_List :: struct {
   },
     get_mode: struct{
     using _get_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Window_Mode)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Window_Mode)
   },
   set_flag: struct{
     using _set_flag: ^GDW.MethodBind,
@@ -169,15 +169,15 @@ Window_MethodBind_List :: struct {
   },
   is_maximize_allowed: struct{
     using _is_maximize_allowed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   request_attention: struct{
     using _request_attention: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     move_to_foreground: struct{
     using _move_to_foreground: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_visible: struct{
     using _set_visible: ^GDW.MethodBind,
@@ -185,15 +185,15 @@ Window_MethodBind_List :: struct {
   },
     is_visible: struct{
     using _is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   hide: struct{
     using _hide: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     show: struct{
     using _show: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_transient: struct{
     using _set_transient: ^GDW.MethodBind,
@@ -201,7 +201,7 @@ Window_MethodBind_List :: struct {
   },
     is_transient: struct{
     using _is_transient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_transient_to_focused: struct{
     using _set_transient_to_focused: ^GDW.MethodBind,
@@ -209,7 +209,7 @@ Window_MethodBind_List :: struct {
   },
     is_transient_to_focused: struct{
     using _is_transient_to_focused: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_exclusive: struct{
     using _set_exclusive: ^GDW.MethodBind,
@@ -217,7 +217,7 @@ Window_MethodBind_List :: struct {
   },
     is_exclusive: struct{
     using _is_exclusive: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_unparent_when_invisible: struct{
     using _set_unparent_when_invisible: ^GDW.MethodBind,
@@ -225,19 +225,19 @@ Window_MethodBind_List :: struct {
   },
     can_draw: struct{
     using _can_draw: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   has_focus: struct{
     using _has_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   grab_focus: struct{
     using _grab_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     start_drag: struct{
     using _start_drag: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     start_resize: struct{
     using _start_resize: ^GDW.MethodBind,
@@ -253,11 +253,11 @@ Window_MethodBind_List :: struct {
   },
     is_embedded: struct{
     using _is_embedded: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_contents_minimum_size: struct{
     using _get_contents_minimum_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_force_native: struct{
     using _set_force_native: ^GDW.MethodBind,
@@ -265,7 +265,7 @@ Window_MethodBind_List :: struct {
   },
     get_force_native: struct{
     using _get_force_native: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_content_scale_size: struct{
     using _set_content_scale_size: ^GDW.MethodBind,
@@ -273,7 +273,7 @@ Window_MethodBind_List :: struct {
   },
     get_content_scale_size: struct{
     using _get_content_scale_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_content_scale_mode: struct{
     using _set_content_scale_mode: ^GDW.MethodBind,
@@ -281,7 +281,7 @@ Window_MethodBind_List :: struct {
   },
     get_content_scale_mode: struct{
     using _get_content_scale_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Window_ContentScaleMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Window_ContentScaleMode)
   },
   set_content_scale_aspect: struct{
     using _set_content_scale_aspect: ^GDW.MethodBind,
@@ -289,7 +289,7 @@ Window_MethodBind_List :: struct {
   },
     get_content_scale_aspect: struct{
     using _get_content_scale_aspect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Window_ContentScaleAspect)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Window_ContentScaleAspect)
   },
   set_content_scale_stretch: struct{
     using _set_content_scale_stretch: ^GDW.MethodBind,
@@ -297,7 +297,7 @@ Window_MethodBind_List :: struct {
   },
     get_content_scale_stretch: struct{
     using _get_content_scale_stretch: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Window_ContentScaleStretch)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Window_ContentScaleStretch)
   },
   set_nonclient_area: struct{
     using _set_nonclient_area: ^GDW.MethodBind,
@@ -305,7 +305,7 @@ Window_MethodBind_List :: struct {
   },
     get_nonclient_area: struct{
     using _get_nonclient_area: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Rect2i)
   },
   set_keep_title_visible: struct{
     using _set_keep_title_visible: ^GDW.MethodBind,
@@ -313,7 +313,7 @@ Window_MethodBind_List :: struct {
   },
     get_keep_title_visible: struct{
     using _get_keep_title_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_content_scale_factor: struct{
     using _set_content_scale_factor: ^GDW.MethodBind,
@@ -321,7 +321,7 @@ Window_MethodBind_List :: struct {
   },
     get_content_scale_factor: struct{
     using _get_content_scale_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mouse_passthrough_polygon: struct{
     using _set_mouse_passthrough_polygon: ^GDW.MethodBind,
@@ -329,7 +329,7 @@ Window_MethodBind_List :: struct {
   },
     get_mouse_passthrough_polygon: struct{
     using _get_mouse_passthrough_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_wrap_controls: struct{
     using _set_wrap_controls: ^GDW.MethodBind,
@@ -337,11 +337,11 @@ Window_MethodBind_List :: struct {
   },
     is_wrapping_controls: struct{
     using _is_wrapping_controls: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   child_controls_changed: struct{
     using _child_controls_changed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_theme: struct{
     using _set_theme: ^GDW.MethodBind,
@@ -349,7 +349,7 @@ Window_MethodBind_List :: struct {
   },
     get_theme: struct{
     using _get_theme: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Theme)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Theme)
   },
   set_theme_type_variation: struct{
     using _set_theme_type_variation: ^GDW.MethodBind,
@@ -357,15 +357,15 @@ Window_MethodBind_List :: struct {
   },
     get_theme_type_variation: struct{
     using _get_theme_type_variation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   begin_bulk_theme_override: struct{
     using _begin_bulk_theme_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     end_bulk_theme_override: struct{
     using _end_bulk_theme_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_theme_icon_override: struct{
     using _add_theme_icon_override: ^GDW.MethodBind,
@@ -489,19 +489,19 @@ Window_MethodBind_List :: struct {
   },
   get_theme_default_base_scale: struct{
     using _get_theme_default_base_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_theme_default_font: struct{
     using _get_theme_default_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Font)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Font)
   },
   get_theme_default_font_size: struct{
     using _get_theme_default_font_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_window_id: struct{
     using _get_window_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_accessibility_name: struct{
     using _set_accessibility_name: ^GDW.MethodBind,
@@ -509,7 +509,7 @@ Window_MethodBind_List :: struct {
   },
     get_accessibility_name: struct{
     using _get_accessibility_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_accessibility_description: struct{
     using _set_accessibility_description: ^GDW.MethodBind,
@@ -517,11 +517,11 @@ Window_MethodBind_List :: struct {
   },
     get_accessibility_description: struct{
     using _get_accessibility_description: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_focused_window: struct{
     using _get_focused_window: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Window)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Window)
   },
   set_layout_direction: struct{
     using _set_layout_direction: ^GDW.MethodBind,
@@ -529,11 +529,11 @@ Window_MethodBind_List :: struct {
   },
     get_layout_direction: struct{
     using _get_layout_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^Window_LayoutDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^Window_LayoutDirection)
   },
   is_layout_rtl: struct{
     using _is_layout_rtl: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_translate: struct{
     using _set_auto_translate: ^GDW.MethodBind,
@@ -541,7 +541,7 @@ Window_MethodBind_List :: struct {
   },
     is_auto_translating: struct{
     using _is_auto_translating: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_font_oversampling: struct{
     using _set_use_font_oversampling: ^GDW.MethodBind,
@@ -549,7 +549,7 @@ Window_MethodBind_List :: struct {
   },
     is_using_font_oversampling: struct{
     using _is_using_font_oversampling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Window, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Window, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   popup: struct{
     using _popup: ^GDW.MethodBind,

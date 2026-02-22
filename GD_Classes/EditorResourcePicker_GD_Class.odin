@@ -19,11 +19,11 @@ EditorResourcePicker_MethodBind_List :: struct {
   },
     get_base_type: struct{
     using _get_base_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_allowed_types: struct{
     using _get_allowed_types: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_edited_resource: struct{
     using _set_edited_resource: ^GDW.MethodBind,
@@ -31,7 +31,7 @@ EditorResourcePicker_MethodBind_List :: struct {
   },
     get_edited_resource: struct{
     using _get_edited_resource: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, #by_ptr args: i64 = 0, r_ret: ^Resource)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, args: rawptr = nil, r_ret: ^Resource)
   },
   set_toggle_mode: struct{
     using _set_toggle_mode: ^GDW.MethodBind,
@@ -39,7 +39,7 @@ EditorResourcePicker_MethodBind_List :: struct {
   },
     is_toggle_mode: struct{
     using _is_toggle_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_toggle_pressed: struct{
     using _set_toggle_pressed: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ EditorResourcePicker_MethodBind_List :: struct {
   },
     is_editable: struct{
     using _is_editable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 EditorResourcePicker_Init_ :: proc (EditorResourcePicker_methods: ^EditorResourcePicker_MethodBind_List, loc := #caller_location) {

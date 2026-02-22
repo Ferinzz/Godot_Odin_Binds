@@ -14,7 +14,7 @@ ColorPalette_MethodBind_List :: struct {
   },
     get_colors: struct{
     using _get_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPalette, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedColorArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPalette, args: rawptr = nil, r_ret: ^GDW.PackedColorArray)
   },
 };
 ColorPalette_Init_ :: proc (ColorPalette_methods: ^ColorPalette_MethodBind_List, loc := #caller_location) {

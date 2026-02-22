@@ -19,7 +19,7 @@ AnimationNodeAnimation_MethodBind_List :: struct {
   },
     get_animation: struct{
     using _get_animation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_play_mode: struct{
     using _set_play_mode: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ AnimationNodeAnimation_MethodBind_List :: struct {
   },
     get_play_mode: struct{
     using _get_play_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, #by_ptr args: i64 = 0, r_ret: ^AnimationNodeAnimation_PlayMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, args: rawptr = nil, r_ret: ^AnimationNodeAnimation_PlayMode)
   },
   set_advance_on_start: struct{
     using _set_advance_on_start: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ AnimationNodeAnimation_MethodBind_List :: struct {
   },
     is_advance_on_start: struct{
     using _is_advance_on_start: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_custom_timeline: struct{
     using _set_use_custom_timeline: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ AnimationNodeAnimation_MethodBind_List :: struct {
   },
     is_using_custom_timeline: struct{
     using _is_using_custom_timeline: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_timeline_length: struct{
     using _set_timeline_length: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ AnimationNodeAnimation_MethodBind_List :: struct {
   },
     get_timeline_length: struct{
     using _get_timeline_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_stretch_time_scale: struct{
     using _set_stretch_time_scale: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ AnimationNodeAnimation_MethodBind_List :: struct {
   },
     is_stretching_time_scale: struct{
     using _is_stretching_time_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_start_offset: struct{
     using _set_start_offset: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ AnimationNodeAnimation_MethodBind_List :: struct {
   },
     get_start_offset: struct{
     using _get_start_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_loop_mode: struct{
     using _set_loop_mode: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ AnimationNodeAnimation_MethodBind_List :: struct {
   },
     get_loop_mode: struct{
     using _get_loop_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, #by_ptr args: i64 = 0, r_ret: ^Animation_LoopMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeAnimation, args: rawptr = nil, r_ret: ^Animation_LoopMode)
   },
 };
 AnimationNodeAnimation_Init_ :: proc (AnimationNodeAnimation_methods: ^AnimationNodeAnimation_MethodBind_List, loc := #caller_location) {

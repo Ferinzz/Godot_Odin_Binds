@@ -10,11 +10,11 @@ FoldableGroup :: ^GDW.Object
 FoldableGroup_MethodBind_List :: struct {
   get_expanded_container: struct{
     using _get_expanded_container: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableGroup, #by_ptr args: i64 = 0, r_ret: ^FoldableContainer)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableGroup, args: rawptr = nil, r_ret: ^FoldableContainer)
   },
   get_containers: struct{
     using _get_containers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableGroup, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableGroup, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_allow_folding_all: struct{
     using _set_allow_folding_all: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ FoldableGroup_MethodBind_List :: struct {
   },
     is_allow_folding_all: struct{
     using _is_allow_folding_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableGroup, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableGroup, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 FoldableGroup_Init_ :: proc (FoldableGroup_methods: ^FoldableGroup_MethodBind_List, loc := #caller_location) {

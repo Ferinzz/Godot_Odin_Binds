@@ -35,7 +35,7 @@ HTTPRequest_MethodBind_List :: struct {
   },
   cancel_request: struct{
     using _cancel_request: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_tls_options: struct{
     using _set_tls_options: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ HTTPRequest_MethodBind_List :: struct {
   },
     get_http_client_status: struct{
     using _get_http_client_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^HTTPClient_Status)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^HTTPClient_Status)
   },
   set_use_threads: struct{
     using _set_use_threads: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ HTTPRequest_MethodBind_List :: struct {
   },
     is_using_threads: struct{
     using _is_using_threads: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_accept_gzip: struct{
     using _set_accept_gzip: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ HTTPRequest_MethodBind_List :: struct {
   },
     is_accepting_gzip: struct{
     using _is_accepting_gzip: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_body_size_limit: struct{
     using _set_body_size_limit: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ HTTPRequest_MethodBind_List :: struct {
   },
     get_body_size_limit: struct{
     using _get_body_size_limit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_redirects: struct{
     using _set_max_redirects: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ HTTPRequest_MethodBind_List :: struct {
   },
     get_max_redirects: struct{
     using _get_max_redirects: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_download_file: struct{
     using _set_download_file: ^GDW.MethodBind,
@@ -83,15 +83,15 @@ HTTPRequest_MethodBind_List :: struct {
   },
     get_download_file: struct{
     using _get_download_file: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_downloaded_bytes: struct{
     using _get_downloaded_bytes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_body_size: struct{
     using _get_body_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_timeout: struct{
     using _set_timeout: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ HTTPRequest_MethodBind_List :: struct {
   },
     get_timeout: struct{
     using _get_timeout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_download_chunk_size: struct{
     using _set_download_chunk_size: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ HTTPRequest_MethodBind_List :: struct {
   },
     get_download_chunk_size: struct{
     using _get_download_chunk_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPRequest, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_http_proxy: struct{
     using _set_http_proxy: ^GDW.MethodBind,

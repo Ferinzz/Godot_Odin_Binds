@@ -14,7 +14,7 @@ CylinderMesh_MethodBind_List :: struct {
   },
     get_top_radius: struct{
     using _get_top_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bottom_radius: struct{
     using _set_bottom_radius: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CylinderMesh_MethodBind_List :: struct {
   },
     get_bottom_radius: struct{
     using _get_bottom_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_height: struct{
     using _set_height: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CylinderMesh_MethodBind_List :: struct {
   },
     get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_radial_segments: struct{
     using _set_radial_segments: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CylinderMesh_MethodBind_List :: struct {
   },
     get_radial_segments: struct{
     using _get_radial_segments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_rings: struct{
     using _set_rings: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CylinderMesh_MethodBind_List :: struct {
   },
     get_rings: struct{
     using _get_rings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_cap_top: struct{
     using _set_cap_top: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ CylinderMesh_MethodBind_List :: struct {
   },
     is_cap_top: struct{
     using _is_cap_top: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_cap_bottom: struct{
     using _set_cap_bottom: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ CylinderMesh_MethodBind_List :: struct {
   },
     is_cap_bottom: struct{
     using _is_cap_bottom: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CylinderMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CylinderMesh_Init_ :: proc (CylinderMesh_methods: ^CylinderMesh_MethodBind_List, loc := #caller_location) {

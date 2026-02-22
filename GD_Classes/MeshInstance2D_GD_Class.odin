@@ -14,7 +14,7 @@ MeshInstance2D_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance2D, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance2D, args: rawptr = nil, r_ret: ^Mesh)
   },
   set_texture: struct{
     using _set_texture: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MeshInstance2D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance2D, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshInstance2D, args: rawptr = nil, r_ret: ^Texture2D)
   },
 };
 MeshInstance2D_Init_ :: proc (MeshInstance2D_methods: ^MeshInstance2D_MethodBind_List, loc := #caller_location) {

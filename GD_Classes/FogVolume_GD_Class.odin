@@ -14,7 +14,7 @@ FogVolume_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogVolume, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: FogVolume, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_shape: struct{
     using _set_shape: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ FogVolume_MethodBind_List :: struct {
   },
     get_shape: struct{
     using _get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogVolume, #by_ptr args: i64 = 0, r_ret: ^RenderingServer_FogVolumeShape)
+    m_call: proc(_:^GDW.MethodBind, obj: FogVolume, args: rawptr = nil, r_ret: ^RenderingServer_FogVolumeShape)
   },
   set_material: struct{
     using _set_material: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ FogVolume_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogVolume, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: FogVolume, args: rawptr = nil, r_ret: ^Material)
   },
 };
 FogVolume_Init_ :: proc (FogVolume_methods: ^FogVolume_MethodBind_List, loc := #caller_location) {

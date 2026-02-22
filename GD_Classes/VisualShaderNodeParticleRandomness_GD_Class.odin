@@ -22,7 +22,7 @@ VisualShaderNodeParticleRandomness_MethodBind_List :: struct {
   },
     get_op_type: struct{
     using _get_op_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleRandomness, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeParticleRandomness_OpType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleRandomness, args: rawptr = nil, r_ret: ^VisualShaderNodeParticleRandomness_OpType)
   },
 };
 VisualShaderNodeParticleRandomness_Init_ :: proc (VisualShaderNodeParticleRandomness_methods: ^VisualShaderNodeParticleRandomness_MethodBind_List, loc := #caller_location) {

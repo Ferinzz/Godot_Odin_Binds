@@ -14,7 +14,7 @@ VisibleOnScreenNotifier2D_MethodBind_List :: struct {
   },
     get_rect: struct{
     using _get_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenNotifier2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenNotifier2D, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_show_rect: struct{
     using _set_show_rect: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ VisibleOnScreenNotifier2D_MethodBind_List :: struct {
   },
     is_showing_rect: struct{
     using _is_showing_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenNotifier2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenNotifier2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_on_screen: struct{
     using _is_on_screen: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenNotifier2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenNotifier2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 VisibleOnScreenNotifier2D_Init_ :: proc (VisibleOnScreenNotifier2D_methods: ^VisibleOnScreenNotifier2D_MethodBind_List, loc := #caller_location) {

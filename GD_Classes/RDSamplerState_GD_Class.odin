@@ -14,7 +14,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_mag_filter: struct{
     using _get_mag_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_SamplerFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^RenderingDevice_SamplerFilter)
   },
   set_min_filter: struct{
     using _set_min_filter: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_min_filter: struct{
     using _get_min_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_SamplerFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^RenderingDevice_SamplerFilter)
   },
   set_mip_filter: struct{
     using _set_mip_filter: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_mip_filter: struct{
     using _get_mip_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_SamplerFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^RenderingDevice_SamplerFilter)
   },
   set_repeat_u: struct{
     using _set_repeat_u: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_repeat_u: struct{
     using _get_repeat_u: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_SamplerRepeatMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^RenderingDevice_SamplerRepeatMode)
   },
   set_repeat_v: struct{
     using _set_repeat_v: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_repeat_v: struct{
     using _get_repeat_v: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_SamplerRepeatMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^RenderingDevice_SamplerRepeatMode)
   },
   set_repeat_w: struct{
     using _set_repeat_w: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_repeat_w: struct{
     using _get_repeat_w: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_SamplerRepeatMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^RenderingDevice_SamplerRepeatMode)
   },
   set_lod_bias: struct{
     using _set_lod_bias: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_lod_bias: struct{
     using _get_lod_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_anisotropy: struct{
     using _set_use_anisotropy: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_use_anisotropy: struct{
     using _get_use_anisotropy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_anisotropy_max: struct{
     using _set_anisotropy_max: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_anisotropy_max: struct{
     using _get_anisotropy_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_enable_compare: struct{
     using _set_enable_compare: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_enable_compare: struct{
     using _get_enable_compare: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_compare_op: struct{
     using _set_compare_op: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_compare_op: struct{
     using _get_compare_op: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_CompareOperator)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^RenderingDevice_CompareOperator)
   },
   set_min_lod: struct{
     using _set_min_lod: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_min_lod: struct{
     using _get_min_lod: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_lod: struct{
     using _set_max_lod: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_max_lod: struct{
     using _get_max_lod: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_border_color: struct{
     using _set_border_color: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_border_color: struct{
     using _get_border_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_SamplerBorderColor)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^RenderingDevice_SamplerBorderColor)
   },
   set_unnormalized_uvw: struct{
     using _set_unnormalized_uvw: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ RDSamplerState_MethodBind_List :: struct {
   },
     get_unnormalized_uvw: struct{
     using _get_unnormalized_uvw: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDSamplerState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 RDSamplerState_Init_ :: proc (RDSamplerState_methods: ^RDSamplerState_MethodBind_List, loc := #caller_location) {

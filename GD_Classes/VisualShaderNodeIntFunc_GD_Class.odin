@@ -22,7 +22,7 @@ VisualShaderNodeIntFunc_MethodBind_List :: struct {
   },
     get_function: struct{
     using _get_function: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntFunc, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeIntFunc_Function)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntFunc, args: rawptr = nil, r_ret: ^VisualShaderNodeIntFunc_Function)
   },
 };
 VisualShaderNodeIntFunc_Init_ :: proc (VisualShaderNodeIntFunc_methods: ^VisualShaderNodeIntFunc_MethodBind_List, loc := #caller_location) {

@@ -29,7 +29,7 @@ OpenXRSpatialCapabilityConfigurationAruco_ArucoDict :: enum i64 {
 OpenXRSpatialCapabilityConfigurationAruco_MethodBind_List :: struct {
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
   set_aruco_dict: struct{
     using _set_aruco_dict: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ OpenXRSpatialCapabilityConfigurationAruco_MethodBind_List :: struct {
   },
     get_aruco_dict: struct{
     using _get_aruco_dict: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, #by_ptr args: i64 = 0, r_ret: ^OpenXRSpatialCapabilityConfigurationAruco_ArucoDict)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, args: rawptr = nil, r_ret: ^OpenXRSpatialCapabilityConfigurationAruco_ArucoDict)
   },
 };
 OpenXRSpatialCapabilityConfigurationAruco_Init_ :: proc (OpenXRSpatialCapabilityConfigurationAruco_methods: ^OpenXRSpatialCapabilityConfigurationAruco_MethodBind_List, loc := #caller_location) {

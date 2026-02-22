@@ -14,11 +14,11 @@ VisualShaderNodeInput_MethodBind_List :: struct {
   },
     get_input_name: struct{
     using _get_input_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeInput, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeInput, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_input_real_name: struct{
     using _get_input_real_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeInput, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeInput, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 VisualShaderNodeInput_Init_ :: proc (VisualShaderNodeInput_methods: ^VisualShaderNodeInput_MethodBind_List, loc := #caller_location) {

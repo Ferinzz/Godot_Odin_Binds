@@ -41,7 +41,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_default_blend_time: struct{
     using _get_default_blend_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_auto_capture: struct{
     using _set_auto_capture: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     is_auto_capture: struct{
     using _is_auto_capture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_capture_duration: struct{
     using _set_auto_capture_duration: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_auto_capture_duration: struct{
     using _get_auto_capture_duration: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_auto_capture_transition_type: struct{
     using _set_auto_capture_transition_type: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_auto_capture_transition_type: struct{
     using _get_auto_capture_transition_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^Tween_TransitionType)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^Tween_TransitionType)
   },
   set_auto_capture_ease_type: struct{
     using _set_auto_capture_ease_type: ^GDW.MethodBind,
@@ -73,7 +73,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_auto_capture_ease_type: struct{
     using _get_auto_capture_ease_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^Tween_EaseType)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^Tween_EaseType)
   },
   play: struct{
     using _play: ^GDW.MethodBind,
@@ -105,7 +105,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     pause: struct{
     using _pause: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     stop: struct{
     using _stop: ^GDW.MethodBind,
@@ -113,11 +113,11 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     is_playing: struct{
     using _is_playing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_animation_active: struct{
     using _is_animation_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_current_animation: struct{
     using _set_current_animation: ^GDW.MethodBind,
@@ -125,7 +125,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_current_animation: struct{
     using _get_current_animation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_assigned_animation: struct{
     using _set_assigned_animation: ^GDW.MethodBind,
@@ -133,7 +133,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_assigned_animation: struct{
     using _get_assigned_animation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   queue: struct{
     using _queue: ^GDW.MethodBind,
@@ -141,11 +141,11 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_queue: struct{
     using _get_queue: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   clear_queue: struct{
     using _clear_queue: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_speed_scale: struct{
     using _set_speed_scale: ^GDW.MethodBind,
@@ -153,11 +153,11 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_speed_scale: struct{
     using _get_speed_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_playing_speed: struct{
     using _get_playing_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_autoplay: struct{
     using _set_autoplay: ^GDW.MethodBind,
@@ -165,7 +165,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_autoplay: struct{
     using _get_autoplay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_movie_quit_on_finish_enabled: struct{
     using _set_movie_quit_on_finish_enabled: ^GDW.MethodBind,
@@ -173,15 +173,15 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     is_movie_quit_on_finish_enabled: struct{
     using _is_movie_quit_on_finish_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_current_animation_position: struct{
     using _get_current_animation_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_current_animation_length: struct{
     using _get_current_animation_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_section_with_markers: struct{
     using _set_section_with_markers: ^GDW.MethodBind,
@@ -193,19 +193,19 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     reset_section: struct{
     using _reset_section: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_section_start_time: struct{
     using _get_section_start_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_section_end_time: struct{
     using _get_section_end_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   has_section: struct{
     using _has_section: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   seek: struct{
     using _seek: ^GDW.MethodBind,
@@ -217,7 +217,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_process_callback: struct{
     using _get_process_callback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^AnimationPlayer_AnimationProcessCallback)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^AnimationPlayer_AnimationProcessCallback)
   },
   set_method_call_mode: struct{
     using _set_method_call_mode: ^GDW.MethodBind,
@@ -225,7 +225,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_method_call_mode: struct{
     using _get_method_call_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^AnimationPlayer_AnimationMethodCallMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^AnimationPlayer_AnimationMethodCallMode)
   },
   set_root: struct{
     using _set_root: ^GDW.MethodBind,
@@ -233,7 +233,7 @@ AnimationPlayer_MethodBind_List :: struct {
   },
     get_root: struct{
     using _get_root: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationPlayer, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
 };
 AnimationPlayer_Init_ :: proc (AnimationPlayer_methods: ^AnimationPlayer_MethodBind_List, loc := #caller_location) {

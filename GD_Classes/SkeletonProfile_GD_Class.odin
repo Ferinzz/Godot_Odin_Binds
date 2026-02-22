@@ -20,7 +20,7 @@ SkeletonProfile_MethodBind_List :: struct {
   },
     get_root_bone: struct{
     using _get_root_bone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonProfile, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_scale_base_bone: struct{
     using _set_scale_base_bone: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ SkeletonProfile_MethodBind_List :: struct {
   },
     get_scale_base_bone: struct{
     using _get_scale_base_bone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonProfile, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_group_size: struct{
     using _set_group_size: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ SkeletonProfile_MethodBind_List :: struct {
   },
     get_group_size: struct{
     using _get_group_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonProfile, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_group_name: struct{
     using _get_group_name: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ SkeletonProfile_MethodBind_List :: struct {
   },
     get_bone_size: struct{
     using _get_bone_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonProfile, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonProfile, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   find_bone: struct{
     using _find_bone: ^GDW.MethodBind,

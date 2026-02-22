@@ -59,7 +59,7 @@ ENetPacketPeer_MethodBind_List :: struct {
   },
     ping: struct{
     using _ping: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     ping_interval: struct{
     using _ping_interval: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ ENetPacketPeer_MethodBind_List :: struct {
   },
     reset: struct{
     using _reset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     send: struct{
     using _send: ^GDW.MethodBind,
@@ -83,15 +83,15 @@ ENetPacketPeer_MethodBind_List :: struct {
   },
     get_packet_flags: struct{
     using _get_packet_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_remote_address: struct{
     using _get_remote_address: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_remote_port: struct{
     using _get_remote_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_statistic: struct{
     using _get_statistic: ^GDW.MethodBind,
@@ -99,15 +99,15 @@ ENetPacketPeer_MethodBind_List :: struct {
   },
   get_state: struct{
     using _get_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, #by_ptr args: i64 = 0, r_ret: ^ENetPacketPeer_PeerState)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, args: rawptr = nil, r_ret: ^ENetPacketPeer_PeerState)
   },
   get_channels: struct{
     using _get_channels: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_active: struct{
     using _is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetPacketPeer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 ENetPacketPeer_Init_ :: proc (ENetPacketPeer_methods: ^ENetPacketPeer_MethodBind_List, loc := #caller_location) {

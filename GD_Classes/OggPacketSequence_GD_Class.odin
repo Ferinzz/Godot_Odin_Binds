@@ -14,7 +14,7 @@ OggPacketSequence_MethodBind_List :: struct {
   },
     get_packet_data: struct{
     using _get_packet_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OggPacketSequence, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OggPacketSequence, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_packet_granule_positions: struct{
     using _set_packet_granule_positions: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OggPacketSequence_MethodBind_List :: struct {
   },
     get_packet_granule_positions: struct{
     using _get_packet_granule_positions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OggPacketSequence, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OggPacketSequence, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
   set_sampling_rate: struct{
     using _set_sampling_rate: ^GDW.MethodBind,
@@ -30,11 +30,11 @@ OggPacketSequence_MethodBind_List :: struct {
   },
     get_sampling_rate: struct{
     using _get_sampling_rate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OggPacketSequence, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OggPacketSequence, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_length: struct{
     using _get_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OggPacketSequence, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OggPacketSequence, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 OggPacketSequence_Init_ :: proc (OggPacketSequence_methods: ^OggPacketSequence_MethodBind_List, loc := #caller_location) {

@@ -10,7 +10,7 @@ ScriptEditorBase :: ^GDW.Object
 ScriptEditorBase_MethodBind_List :: struct {
   get_base_editor: struct{
     using _get_base_editor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditorBase, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: ScriptEditorBase, args: rawptr = nil, r_ret: ^Control)
   },
   add_syntax_highlighter: struct{
     using _add_syntax_highlighter: ^GDW.MethodBind,

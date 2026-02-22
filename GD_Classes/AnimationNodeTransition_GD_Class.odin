@@ -42,7 +42,7 @@ AnimationNodeTransition_MethodBind_List :: struct {
   },
     get_xfade_time: struct{
     using _get_xfade_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeTransition, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeTransition, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_xfade_curve: struct{
     using _set_xfade_curve: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ AnimationNodeTransition_MethodBind_List :: struct {
   },
     get_xfade_curve: struct{
     using _get_xfade_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeTransition, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeTransition, args: rawptr = nil, r_ret: ^Curve)
   },
   set_allow_transition_to_self: struct{
     using _set_allow_transition_to_self: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ AnimationNodeTransition_MethodBind_List :: struct {
   },
     is_allow_transition_to_self: struct{
     using _is_allow_transition_to_self: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeTransition, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeTransition, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AnimationNodeTransition_Init_ :: proc (AnimationNodeTransition_methods: ^AnimationNodeTransition_MethodBind_List, loc := #caller_location) {

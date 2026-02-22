@@ -14,7 +14,7 @@ CapsuleShape3D_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CapsuleShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CapsuleShape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_height: struct{
     using _set_height: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CapsuleShape3D_MethodBind_List :: struct {
   },
     get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CapsuleShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CapsuleShape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mid_height: struct{
     using _set_mid_height: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CapsuleShape3D_MethodBind_List :: struct {
   },
     get_mid_height: struct{
     using _get_mid_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CapsuleShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CapsuleShape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 CapsuleShape3D_Init_ :: proc (CapsuleShape3D_methods: ^CapsuleShape3D_MethodBind_List, loc := #caller_location) {

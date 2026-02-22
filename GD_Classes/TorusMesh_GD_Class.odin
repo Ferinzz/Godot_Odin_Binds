@@ -14,7 +14,7 @@ TorusMesh_MethodBind_List :: struct {
   },
     get_inner_radius: struct{
     using _get_inner_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TorusMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TorusMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_outer_radius: struct{
     using _set_outer_radius: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ TorusMesh_MethodBind_List :: struct {
   },
     get_outer_radius: struct{
     using _get_outer_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TorusMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TorusMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rings: struct{
     using _set_rings: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ TorusMesh_MethodBind_List :: struct {
   },
     get_rings: struct{
     using _get_rings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TorusMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TorusMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_ring_segments: struct{
     using _set_ring_segments: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ TorusMesh_MethodBind_List :: struct {
   },
     get_ring_segments: struct{
     using _get_ring_segments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TorusMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TorusMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 TorusMesh_Init_ :: proc (TorusMesh_methods: ^TorusMesh_MethodBind_List, loc := #caller_location) {

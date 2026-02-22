@@ -24,7 +24,7 @@ GPUParticlesCollisionSDF3D_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_resolution: struct{
     using _set_resolution: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ GPUParticlesCollisionSDF3D_MethodBind_List :: struct {
   },
     get_resolution: struct{
     using _get_resolution: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, #by_ptr args: i64 = 0, r_ret: ^GPUParticlesCollisionSDF3D_Resolution)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, args: rawptr = nil, r_ret: ^GPUParticlesCollisionSDF3D_Resolution)
   },
   set_texture: struct{
     using _set_texture: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ GPUParticlesCollisionSDF3D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, #by_ptr args: i64 = 0, r_ret: ^Texture3D)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, args: rawptr = nil, r_ret: ^Texture3D)
   },
   set_thickness: struct{
     using _set_thickness: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ GPUParticlesCollisionSDF3D_MethodBind_List :: struct {
   },
     get_thickness: struct{
     using _get_thickness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bake_mask: struct{
     using _set_bake_mask: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ GPUParticlesCollisionSDF3D_MethodBind_List :: struct {
   },
     get_bake_mask: struct{
     using _get_bake_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesCollisionSDF3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bake_mask_value: struct{
     using _set_bake_mask_value: ^GDW.MethodBind,

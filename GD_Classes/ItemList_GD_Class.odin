@@ -168,7 +168,7 @@ ItemList_MethodBind_List :: struct {
   },
     deselect_all: struct{
     using _deselect_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_selected: struct{
     using _is_selected: ^GDW.MethodBind,
@@ -176,7 +176,7 @@ ItemList_MethodBind_List :: struct {
   },
   get_selected_items: struct{
     using _get_selected_items: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   move_item: struct{
     using _move_item: ^GDW.MethodBind,
@@ -188,7 +188,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_item_count: struct{
     using _get_item_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   remove_item: struct{
     using _remove_item: ^GDW.MethodBind,
@@ -196,11 +196,11 @@ ItemList_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: rawptr = nil)
   },
     sort_items_by_text: struct{
     using _sort_items_by_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_fixed_column_width: struct{
     using _set_fixed_column_width: ^GDW.MethodBind,
@@ -208,7 +208,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_fixed_column_width: struct{
     using _get_fixed_column_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_same_column_width: struct{
     using _set_same_column_width: ^GDW.MethodBind,
@@ -216,7 +216,7 @@ ItemList_MethodBind_List :: struct {
   },
     is_same_column_width: struct{
     using _is_same_column_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_max_text_lines: struct{
     using _set_max_text_lines: ^GDW.MethodBind,
@@ -224,7 +224,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_max_text_lines: struct{
     using _get_max_text_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_columns: struct{
     using _set_max_columns: ^GDW.MethodBind,
@@ -232,7 +232,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_max_columns: struct{
     using _get_max_columns: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_select_mode: struct{
     using _set_select_mode: ^GDW.MethodBind,
@@ -240,7 +240,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_select_mode: struct{
     using _get_select_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^ItemList_SelectMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^ItemList_SelectMode)
   },
   set_icon_mode: struct{
     using _set_icon_mode: ^GDW.MethodBind,
@@ -248,7 +248,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_icon_mode: struct{
     using _get_icon_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^ItemList_IconMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^ItemList_IconMode)
   },
   set_fixed_icon_size: struct{
     using _set_fixed_icon_size: ^GDW.MethodBind,
@@ -256,7 +256,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_fixed_icon_size: struct{
     using _get_fixed_icon_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_icon_scale: struct{
     using _set_icon_scale: ^GDW.MethodBind,
@@ -264,7 +264,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_icon_scale: struct{
     using _get_icon_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_allow_rmb_select: struct{
     using _set_allow_rmb_select: ^GDW.MethodBind,
@@ -272,7 +272,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_allow_rmb_select: struct{
     using _get_allow_rmb_select: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_reselect: struct{
     using _set_allow_reselect: ^GDW.MethodBind,
@@ -280,7 +280,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_allow_reselect: struct{
     using _get_allow_reselect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_search: struct{
     using _set_allow_search: ^GDW.MethodBind,
@@ -288,7 +288,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_allow_search: struct{
     using _get_allow_search: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_width: struct{
     using _set_auto_width: ^GDW.MethodBind,
@@ -296,7 +296,7 @@ ItemList_MethodBind_List :: struct {
   },
     has_auto_width: struct{
     using _has_auto_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_height: struct{
     using _set_auto_height: ^GDW.MethodBind,
@@ -304,11 +304,11 @@ ItemList_MethodBind_List :: struct {
   },
     has_auto_height: struct{
     using _has_auto_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_anything_selected: struct{
     using _is_anything_selected: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_item_at_position: struct{
     using _get_item_at_position: ^GDW.MethodBind,
@@ -316,15 +316,15 @@ ItemList_MethodBind_List :: struct {
   },
   ensure_current_is_visible: struct{
     using _ensure_current_is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_v_scroll_bar: struct{
     using _get_v_scroll_bar: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^VScrollBar)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^VScrollBar)
   },
   get_h_scroll_bar: struct{
     using _get_h_scroll_bar: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^HScrollBar)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^HScrollBar)
   },
   set_scroll_hint_mode: struct{
     using _set_scroll_hint_mode: ^GDW.MethodBind,
@@ -332,7 +332,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_scroll_hint_mode: struct{
     using _get_scroll_hint_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^ItemList_ScrollHintMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^ItemList_ScrollHintMode)
   },
   set_tile_scroll_hint: struct{
     using _set_tile_scroll_hint: ^GDW.MethodBind,
@@ -340,7 +340,7 @@ ItemList_MethodBind_List :: struct {
   },
     is_scroll_hint_tiled: struct{
     using _is_scroll_hint_tiled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_text_overrun_behavior: struct{
     using _set_text_overrun_behavior: ^GDW.MethodBind,
@@ -348,7 +348,7 @@ ItemList_MethodBind_List :: struct {
   },
     get_text_overrun_behavior: struct{
     using _get_text_overrun_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^TextServer_OverrunBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^TextServer_OverrunBehavior)
   },
   set_wraparound_items: struct{
     using _set_wraparound_items: ^GDW.MethodBind,
@@ -356,11 +356,11 @@ ItemList_MethodBind_List :: struct {
   },
     has_wraparound_items: struct{
     using _has_wraparound_items: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   force_update_list_size: struct{
     using _force_update_list_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ItemList, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ItemList, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 ItemList_Init_ :: proc (ItemList_methods: ^ItemList_MethodBind_List, loc := #caller_location) {

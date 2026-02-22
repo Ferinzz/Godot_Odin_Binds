@@ -20,7 +20,7 @@ VisualShaderNodeUVFunc_MethodBind_List :: struct {
   },
     get_function: struct{
     using _get_function: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUVFunc, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeUVFunc_Function)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUVFunc, args: rawptr = nil, r_ret: ^VisualShaderNodeUVFunc_Function)
   },
 };
 VisualShaderNodeUVFunc_Init_ :: proc (VisualShaderNodeUVFunc_methods: ^VisualShaderNodeUVFunc_MethodBind_List, loc := #caller_location) {

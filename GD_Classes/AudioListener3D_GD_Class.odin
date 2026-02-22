@@ -16,19 +16,19 @@ AudioListener3D_DopplerTracking :: enum i64 {
 AudioListener3D_MethodBind_List :: struct {
   make_current: struct{
     using _make_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear_current: struct{
     using _clear_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_current: struct{
     using _is_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_listener_transform: struct{
     using _get_listener_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_doppler_tracking: struct{
     using _set_doppler_tracking: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ AudioListener3D_MethodBind_List :: struct {
   },
     get_doppler_tracking: struct{
     using _get_doppler_tracking: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, #by_ptr args: i64 = 0, r_ret: ^AudioListener3D_DopplerTracking)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioListener3D, args: rawptr = nil, r_ret: ^AudioListener3D_DopplerTracking)
   },
 };
 AudioListener3D_Init_ :: proc (AudioListener3D_methods: ^AudioListener3D_MethodBind_List, loc := #caller_location) {

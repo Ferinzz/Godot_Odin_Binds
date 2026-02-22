@@ -32,7 +32,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     get_pick_color: struct{
     using _get_pick_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_deferred_mode: struct{
     using _set_deferred_mode: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     is_deferred_mode: struct{
     using _is_deferred_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_color_mode: struct{
     using _set_color_mode: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     get_color_mode: struct{
     using _get_color_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^ColorPicker_ColorModeType)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^ColorPicker_ColorModeType)
   },
   set_edit_alpha: struct{
     using _set_edit_alpha: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     is_editing_alpha: struct{
     using _is_editing_alpha: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_edit_intensity: struct{
     using _set_edit_intensity: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     is_editing_intensity: struct{
     using _is_editing_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_can_add_swatches: struct{
     using _set_can_add_swatches: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     are_swatches_enabled: struct{
     using _are_swatches_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_presets_visible: struct{
     using _set_presets_visible: ^GDW.MethodBind,
@@ -80,7 +80,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     are_presets_visible: struct{
     using _are_presets_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_modes_visible: struct{
     using _set_modes_visible: ^GDW.MethodBind,
@@ -88,7 +88,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     are_modes_visible: struct{
     using _are_modes_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sampler_visible: struct{
     using _set_sampler_visible: ^GDW.MethodBind,
@@ -96,7 +96,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     is_sampler_visible: struct{
     using _is_sampler_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sliders_visible: struct{
     using _set_sliders_visible: ^GDW.MethodBind,
@@ -104,7 +104,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     are_sliders_visible: struct{
     using _are_sliders_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hex_visible: struct{
     using _set_hex_visible: ^GDW.MethodBind,
@@ -112,7 +112,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     is_hex_visible: struct{
     using _is_hex_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_preset: struct{
     using _add_preset: ^GDW.MethodBind,
@@ -124,7 +124,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     get_presets: struct{
     using _get_presets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedColorArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.PackedColorArray)
   },
   add_recent_preset: struct{
     using _add_recent_preset: ^GDW.MethodBind,
@@ -136,7 +136,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     get_recent_presets: struct{
     using _get_recent_presets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedColorArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^GDW.PackedColorArray)
   },
   set_picker_shape: struct{
     using _set_picker_shape: ^GDW.MethodBind,
@@ -144,7 +144,7 @@ ColorPicker_MethodBind_List :: struct {
   },
     get_picker_shape: struct{
     using _get_picker_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, #by_ptr args: i64 = 0, r_ret: ^ColorPicker_PickerShapeType)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPicker, args: rawptr = nil, r_ret: ^ColorPicker_PickerShapeType)
   },
 };
 ColorPicker_Init_ :: proc (ColorPicker_methods: ^ColorPicker_MethodBind_List, loc := #caller_location) {

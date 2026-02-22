@@ -14,7 +14,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_scroll_scale: struct{
     using _get_scroll_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_repeat_size: struct{
     using _set_repeat_size: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_repeat_size: struct{
     using _get_repeat_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_repeat_times: struct{
     using _set_repeat_times: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_repeat_times: struct{
     using _get_repeat_times: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_autoscroll: struct{
     using _set_autoscroll: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_autoscroll: struct{
     using _get_autoscroll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_scroll_offset: struct{
     using _set_scroll_offset: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_scroll_offset: struct{
     using _get_scroll_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_screen_offset: struct{
     using _set_screen_offset: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_screen_offset: struct{
     using _get_screen_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_limit_begin: struct{
     using _set_limit_begin: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_limit_begin: struct{
     using _get_limit_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_limit_end: struct{
     using _set_limit_end: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_limit_end: struct{
     using _get_limit_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_follow_viewport: struct{
     using _set_follow_viewport: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     get_follow_viewport: struct{
     using _get_follow_viewport: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_ignore_camera_scroll: struct{
     using _set_ignore_camera_scroll: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ Parallax2D_MethodBind_List :: struct {
   },
     is_ignore_camera_scroll: struct{
     using _is_ignore_camera_scroll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Parallax2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Parallax2D_Init_ :: proc (Parallax2D_methods: ^Parallax2D_MethodBind_List, loc := #caller_location) {

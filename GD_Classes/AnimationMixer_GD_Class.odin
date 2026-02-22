@@ -51,7 +51,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
   get_animation_library_list: struct{
     using _get_animation_library_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   has_animation: struct{
     using _has_animation: ^GDW.MethodBind,
@@ -63,7 +63,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
   get_animation_list: struct{
     using _get_animation_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_active: struct{
     using _set_active: ^GDW.MethodBind,
@@ -71,7 +71,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     is_active: struct{
     using _is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_deterministic: struct{
     using _set_deterministic: ^GDW.MethodBind,
@@ -79,7 +79,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     is_deterministic: struct{
     using _is_deterministic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_root_node: struct{
     using _set_root_node: ^GDW.MethodBind,
@@ -87,7 +87,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     get_root_node: struct{
     using _get_root_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_callback_mode_process: struct{
     using _set_callback_mode_process: ^GDW.MethodBind,
@@ -95,7 +95,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     get_callback_mode_process: struct{
     using _get_callback_mode_process: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^AnimationMixer_AnimationCallbackModeProcess)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^AnimationMixer_AnimationCallbackModeProcess)
   },
   set_callback_mode_method: struct{
     using _set_callback_mode_method: ^GDW.MethodBind,
@@ -103,7 +103,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     get_callback_mode_method: struct{
     using _get_callback_mode_method: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^AnimationMixer_AnimationCallbackModeMethod)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^AnimationMixer_AnimationCallbackModeMethod)
   },
   set_callback_mode_discrete: struct{
     using _set_callback_mode_discrete: ^GDW.MethodBind,
@@ -111,7 +111,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     get_callback_mode_discrete: struct{
     using _get_callback_mode_discrete: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^AnimationMixer_AnimationCallbackModeDiscrete)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^AnimationMixer_AnimationCallbackModeDiscrete)
   },
   set_audio_max_polyphony: struct{
     using _set_audio_max_polyphony: ^GDW.MethodBind,
@@ -119,7 +119,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     get_audio_max_polyphony: struct{
     using _get_audio_max_polyphony: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_root_motion_track: struct{
     using _set_root_motion_track: ^GDW.MethodBind,
@@ -127,7 +127,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     get_root_motion_track: struct{
     using _get_root_motion_track: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_root_motion_local: struct{
     using _set_root_motion_local: ^GDW.MethodBind,
@@ -135,35 +135,35 @@ AnimationMixer_MethodBind_List :: struct {
   },
     is_root_motion_local: struct{
     using _is_root_motion_local: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_root_motion_position: struct{
     using _get_root_motion_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_root_motion_rotation: struct{
     using _get_root_motion_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Quaternion)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Quaternion)
   },
   get_root_motion_scale: struct{
     using _get_root_motion_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_root_motion_position_accumulator: struct{
     using _get_root_motion_position_accumulator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_root_motion_rotation_accumulator: struct{
     using _get_root_motion_rotation_accumulator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Quaternion)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Quaternion)
   },
   get_root_motion_scale_accumulator: struct{
     using _get_root_motion_scale_accumulator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   clear_caches: struct{
     using _clear_caches: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     advance: struct{
     using _advance: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ AnimationMixer_MethodBind_List :: struct {
   },
     is_reset_on_save_enabled: struct{
     using _is_reset_on_save_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationMixer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   find_animation: struct{
     using _find_animation: ^GDW.MethodBind,

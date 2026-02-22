@@ -33,7 +33,7 @@ TextureRect_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_expand_mode: struct{
     using _set_expand_mode: ^GDW.MethodBind,
@@ -41,7 +41,7 @@ TextureRect_MethodBind_List :: struct {
   },
     get_expand_mode: struct{
     using _get_expand_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, #by_ptr args: i64 = 0, r_ret: ^TextureRect_ExpandMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, args: rawptr = nil, r_ret: ^TextureRect_ExpandMode)
   },
   set_flip_h: struct{
     using _set_flip_h: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ TextureRect_MethodBind_List :: struct {
   },
     is_flipped_h: struct{
     using _is_flipped_h: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_flip_v: struct{
     using _set_flip_v: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ TextureRect_MethodBind_List :: struct {
   },
     is_flipped_v: struct{
     using _is_flipped_v: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_stretch_mode: struct{
     using _set_stretch_mode: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ TextureRect_MethodBind_List :: struct {
   },
     get_stretch_mode: struct{
     using _get_stretch_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, #by_ptr args: i64 = 0, r_ret: ^TextureRect_StretchMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureRect, args: rawptr = nil, r_ret: ^TextureRect_StretchMode)
   },
 };
 TextureRect_Init_ :: proc (TextureRect_methods: ^TextureRect_MethodBind_List, loc := #caller_location) {

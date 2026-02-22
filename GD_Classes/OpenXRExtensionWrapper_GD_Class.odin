@@ -57,11 +57,11 @@ OpenXRExtensionWrapper_Virtual_Info :: struct {
 OpenXRExtensionWrapper_MethodBind_List :: struct {
   get_openxr_api: struct{
     using _get_openxr_api: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRExtensionWrapper, #by_ptr args: i64 = 0, r_ret: ^OpenXRAPIExtension)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRExtensionWrapper, args: rawptr = nil, r_ret: ^OpenXRAPIExtension)
   },
   register_extension_wrapper: struct{
     using _register_extension_wrapper: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRExtensionWrapper, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRExtensionWrapper, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 OpenXRExtensionWrapper_Init_ :: proc (OpenXRExtensionWrapper_methods: ^OpenXRExtensionWrapper_MethodBind_List, loc := #caller_location) {

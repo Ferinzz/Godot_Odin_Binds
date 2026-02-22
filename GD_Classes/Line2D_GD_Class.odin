@@ -32,7 +32,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_points: struct{
     using _get_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_point_position: struct{
     using _set_point_position: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ Line2D_MethodBind_List :: struct {
   },
   get_point_count: struct{
     using _get_point_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_point: struct{
     using _add_point: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ Line2D_MethodBind_List :: struct {
   },
     clear_points: struct{
     using _clear_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_closed: struct{
     using _set_closed: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ Line2D_MethodBind_List :: struct {
   },
     is_closed: struct{
     using _is_closed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_width: struct{
     using _set_width: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_curve: struct{
     using _set_curve: ^GDW.MethodBind,
@@ -80,7 +80,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_curve: struct{
     using _get_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^Curve)
   },
   set_default_color: struct{
     using _set_default_color: ^GDW.MethodBind,
@@ -88,7 +88,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_default_color: struct{
     using _get_default_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_gradient: struct{
     using _set_gradient: ^GDW.MethodBind,
@@ -96,7 +96,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_gradient: struct{
     using _get_gradient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^Gradient)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^Gradient)
   },
   set_texture: struct{
     using _set_texture: ^GDW.MethodBind,
@@ -104,7 +104,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_texture_mode: struct{
     using _set_texture_mode: ^GDW.MethodBind,
@@ -112,7 +112,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_texture_mode: struct{
     using _get_texture_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^Line2D_LineTextureMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^Line2D_LineTextureMode)
   },
   set_joint_mode: struct{
     using _set_joint_mode: ^GDW.MethodBind,
@@ -120,7 +120,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_joint_mode: struct{
     using _get_joint_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^Line2D_LineJointMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^Line2D_LineJointMode)
   },
   set_begin_cap_mode: struct{
     using _set_begin_cap_mode: ^GDW.MethodBind,
@@ -128,7 +128,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_begin_cap_mode: struct{
     using _get_begin_cap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^Line2D_LineCapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^Line2D_LineCapMode)
   },
   set_end_cap_mode: struct{
     using _set_end_cap_mode: ^GDW.MethodBind,
@@ -136,7 +136,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_end_cap_mode: struct{
     using _get_end_cap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^Line2D_LineCapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^Line2D_LineCapMode)
   },
   set_sharp_limit: struct{
     using _set_sharp_limit: ^GDW.MethodBind,
@@ -144,7 +144,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_sharp_limit: struct{
     using _get_sharp_limit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_round_precision: struct{
     using _set_round_precision: ^GDW.MethodBind,
@@ -152,7 +152,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_round_precision: struct{
     using _get_round_precision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_antialiased: struct{
     using _set_antialiased: ^GDW.MethodBind,
@@ -160,7 +160,7 @@ Line2D_MethodBind_List :: struct {
   },
     get_antialiased: struct{
     using _get_antialiased: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Line2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Line2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Line2D_Init_ :: proc (Line2D_methods: ^Line2D_MethodBind_List, loc := #caller_location) {

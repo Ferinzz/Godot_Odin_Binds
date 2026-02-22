@@ -14,7 +14,7 @@ VisualShaderNodeGroupBase_MethodBind_List :: struct {
   },
     get_inputs: struct{
     using _get_inputs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_outputs: struct{
     using _set_outputs: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ VisualShaderNodeGroupBase_MethodBind_List :: struct {
   },
     get_outputs: struct{
     using _get_outputs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_valid_port_name: struct{
     using _is_valid_port_name: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ VisualShaderNodeGroupBase_MethodBind_List :: struct {
   },
     get_input_port_count: struct{
     using _get_input_port_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_input_port: struct{
     using _has_input_port: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ VisualShaderNodeGroupBase_MethodBind_List :: struct {
   },
   clear_input_ports: struct{
     using _clear_input_ports: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_output_port: struct{
     using _add_output_port: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ VisualShaderNodeGroupBase_MethodBind_List :: struct {
   },
     get_output_port_count: struct{
     using _get_output_port_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_output_port: struct{
     using _has_output_port: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ VisualShaderNodeGroupBase_MethodBind_List :: struct {
   },
   clear_output_ports: struct{
     using _clear_output_ports: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_input_port_name: struct{
     using _set_input_port_name: ^GDW.MethodBind,
@@ -86,11 +86,11 @@ VisualShaderNodeGroupBase_MethodBind_List :: struct {
   },
     get_free_input_port_id: struct{
     using _get_free_input_port_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_free_output_port_id: struct{
     using _get_free_output_port_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeGroupBase, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 VisualShaderNodeGroupBase_Init_ :: proc (VisualShaderNodeGroupBase_methods: ^VisualShaderNodeGroupBase_MethodBind_List, loc := #caller_location) {

@@ -10,7 +10,7 @@ XRVRS :: ^GDW.Object
 XRVRS_MethodBind_List :: struct {
   get_vrs_min_radius: struct{
     using _get_vrs_min_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRVRS, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: XRVRS, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vrs_min_radius: struct{
     using _set_vrs_min_radius: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ XRVRS_MethodBind_List :: struct {
   },
     get_vrs_strength: struct{
     using _get_vrs_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRVRS, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: XRVRS, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vrs_strength: struct{
     using _set_vrs_strength: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ XRVRS_MethodBind_List :: struct {
   },
     get_vrs_render_region: struct{
     using _get_vrs_render_region: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRVRS, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2i)
+    m_call: proc(_:^GDW.MethodBind, obj: XRVRS, args: rawptr = nil, r_ret: ^GDW.Rect2i)
   },
   set_vrs_render_region: struct{
     using _set_vrs_render_region: ^GDW.MethodBind,

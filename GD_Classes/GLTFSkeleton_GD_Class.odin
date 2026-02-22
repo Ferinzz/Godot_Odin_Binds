@@ -10,7 +10,7 @@ GLTFSkeleton :: ^GDW.Object
 GLTFSkeleton_MethodBind_List :: struct {
   get_joints: struct{
     using _get_joints: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_joints: struct{
     using _set_joints: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ GLTFSkeleton_MethodBind_List :: struct {
   },
     get_roots: struct{
     using _get_roots: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_roots: struct{
     using _set_roots: ^GDW.MethodBind,
@@ -26,11 +26,11 @@ GLTFSkeleton_MethodBind_List :: struct {
   },
     get_godot_skeleton: struct{
     using _get_godot_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, #by_ptr args: i64 = 0, r_ret: ^Skeleton3D)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, args: rawptr = nil, r_ret: ^Skeleton3D)
   },
   get_unique_names: struct{
     using _get_unique_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_unique_names: struct{
     using _set_unique_names: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ GLTFSkeleton_MethodBind_List :: struct {
   },
     get_godot_bone_node: struct{
     using _get_godot_bone_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_godot_bone_node: struct{
     using _set_godot_bone_node: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ GLTFSkeleton_MethodBind_List :: struct {
   },
     get_bone_attachment_count: struct{
     using _get_bone_attachment_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkeleton, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_bone_attachment: struct{
     using _get_bone_attachment: ^GDW.MethodBind,

@@ -38,7 +38,7 @@ WebRTCMultiplayerPeer_MethodBind_List :: struct {
   },
   get_peers: struct{
     using _get_peers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCMultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCMultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
 };
 WebRTCMultiplayerPeer_Init_ :: proc (WebRTCMultiplayerPeer_methods: ^WebRTCMultiplayerPeer_MethodBind_List, loc := #caller_location) {

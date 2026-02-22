@@ -14,7 +14,7 @@ RDUniform_MethodBind_List :: struct {
   },
     get_uniform_type: struct{
     using _get_uniform_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDUniform, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_UniformType)
+    m_call: proc(_:^GDW.MethodBind, obj: RDUniform, args: rawptr = nil, r_ret: ^RenderingDevice_UniformType)
   },
   set_binding: struct{
     using _set_binding: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDUniform_MethodBind_List :: struct {
   },
     get_binding: struct{
     using _get_binding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDUniform, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDUniform, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_id: struct{
     using _add_id: ^GDW.MethodBind,
@@ -30,11 +30,11 @@ RDUniform_MethodBind_List :: struct {
   },
     clear_ids: struct{
     using _clear_ids: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDUniform, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RDUniform, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_ids: struct{
     using _get_ids: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDUniform, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RDUniform, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 RDUniform_Init_ :: proc (RDUniform_methods: ^RDUniform_MethodBind_List, loc := #caller_location) {

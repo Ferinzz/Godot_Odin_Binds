@@ -14,7 +14,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_enable_depth_clamp: struct{
     using _get_enable_depth_clamp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_discard_primitives: struct{
     using _set_discard_primitives: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_discard_primitives: struct{
     using _get_discard_primitives: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_wireframe: struct{
     using _set_wireframe: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_wireframe: struct{
     using _get_wireframe: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_cull_mode: struct{
     using _set_cull_mode: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_cull_mode: struct{
     using _get_cull_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_PolygonCullMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^RenderingDevice_PolygonCullMode)
   },
   set_front_face: struct{
     using _set_front_face: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_front_face: struct{
     using _get_front_face: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_PolygonFrontFace)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^RenderingDevice_PolygonFrontFace)
   },
   set_depth_bias_enabled: struct{
     using _set_depth_bias_enabled: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_depth_bias_enabled: struct{
     using _get_depth_bias_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_depth_bias_constant_factor: struct{
     using _set_depth_bias_constant_factor: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_depth_bias_constant_factor: struct{
     using _get_depth_bias_constant_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_depth_bias_clamp: struct{
     using _set_depth_bias_clamp: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_depth_bias_clamp: struct{
     using _get_depth_bias_clamp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_depth_bias_slope_factor: struct{
     using _set_depth_bias_slope_factor: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_depth_bias_slope_factor: struct{
     using _get_depth_bias_slope_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_line_width: struct{
     using _set_line_width: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_line_width: struct{
     using _get_line_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_patch_control_points: struct{
     using _set_patch_control_points: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ RDPipelineRasterizationState_MethodBind_List :: struct {
   },
     get_patch_control_points: struct{
     using _get_patch_control_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineRasterizationState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 RDPipelineRasterizationState_Init_ :: proc (RDPipelineRasterizationState_methods: ^RDPipelineRasterizationState_MethodBind_List, loc := #caller_location) {

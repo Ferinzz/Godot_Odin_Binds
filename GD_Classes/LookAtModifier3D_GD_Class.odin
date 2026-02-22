@@ -20,7 +20,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_target_node: struct{
     using _get_target_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_bone_name: struct{
     using _set_bone_name: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_bone_name: struct{
     using _get_bone_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_bone: struct{
     using _set_bone: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_bone: struct{
     using _get_bone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_forward_axis: struct{
     using _set_forward_axis: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_forward_axis: struct{
     using _get_forward_axis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^SkeletonModifier3D_BoneAxis)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^SkeletonModifier3D_BoneAxis)
   },
   set_primary_rotation_axis: struct{
     using _set_primary_rotation_axis: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_primary_rotation_axis: struct{
     using _get_primary_rotation_axis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3_Axis)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Vector3_Axis)
   },
   set_use_secondary_rotation: struct{
     using _set_use_secondary_rotation: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     is_using_secondary_rotation: struct{
     using _is_using_secondary_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_relative: struct{
     using _set_relative: ^GDW.MethodBind,
@@ -68,7 +68,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     is_relative: struct{
     using _is_relative: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_origin_safe_margin: struct{
     using _set_origin_safe_margin: ^GDW.MethodBind,
@@ -76,7 +76,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_origin_safe_margin: struct{
     using _get_origin_safe_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_origin_from: struct{
     using _set_origin_from: ^GDW.MethodBind,
@@ -84,7 +84,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_origin_from: struct{
     using _get_origin_from: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^LookAtModifier3D_OriginFrom)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^LookAtModifier3D_OriginFrom)
   },
   set_origin_bone_name: struct{
     using _set_origin_bone_name: ^GDW.MethodBind,
@@ -92,7 +92,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_origin_bone_name: struct{
     using _get_origin_bone_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_origin_bone: struct{
     using _set_origin_bone: ^GDW.MethodBind,
@@ -100,7 +100,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_origin_bone: struct{
     using _get_origin_bone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_origin_external_node: struct{
     using _set_origin_external_node: ^GDW.MethodBind,
@@ -108,7 +108,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_origin_external_node: struct{
     using _get_origin_external_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_origin_offset: struct{
     using _set_origin_offset: ^GDW.MethodBind,
@@ -116,7 +116,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_origin_offset: struct{
     using _get_origin_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_duration: struct{
     using _set_duration: ^GDW.MethodBind,
@@ -124,7 +124,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_duration: struct{
     using _get_duration: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_transition_type: struct{
     using _set_transition_type: ^GDW.MethodBind,
@@ -132,7 +132,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_transition_type: struct{
     using _get_transition_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^Tween_TransitionType)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^Tween_TransitionType)
   },
   set_ease_type: struct{
     using _set_ease_type: ^GDW.MethodBind,
@@ -140,7 +140,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_ease_type: struct{
     using _get_ease_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^Tween_EaseType)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^Tween_EaseType)
   },
   set_use_angle_limitation: struct{
     using _set_use_angle_limitation: ^GDW.MethodBind,
@@ -148,7 +148,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     is_using_angle_limitation: struct{
     using _is_using_angle_limitation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_symmetry_limitation: struct{
     using _set_symmetry_limitation: ^GDW.MethodBind,
@@ -156,7 +156,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     is_limitation_symmetry: struct{
     using _is_limitation_symmetry: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_primary_limit_angle: struct{
     using _set_primary_limit_angle: ^GDW.MethodBind,
@@ -164,7 +164,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_primary_limit_angle: struct{
     using _get_primary_limit_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_primary_damp_threshold: struct{
     using _set_primary_damp_threshold: ^GDW.MethodBind,
@@ -172,7 +172,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_primary_damp_threshold: struct{
     using _get_primary_damp_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_primary_positive_limit_angle: struct{
     using _set_primary_positive_limit_angle: ^GDW.MethodBind,
@@ -180,7 +180,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_primary_positive_limit_angle: struct{
     using _get_primary_positive_limit_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_primary_positive_damp_threshold: struct{
     using _set_primary_positive_damp_threshold: ^GDW.MethodBind,
@@ -188,7 +188,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_primary_positive_damp_threshold: struct{
     using _get_primary_positive_damp_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_primary_negative_limit_angle: struct{
     using _set_primary_negative_limit_angle: ^GDW.MethodBind,
@@ -196,7 +196,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_primary_negative_limit_angle: struct{
     using _get_primary_negative_limit_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_primary_negative_damp_threshold: struct{
     using _set_primary_negative_damp_threshold: ^GDW.MethodBind,
@@ -204,7 +204,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_primary_negative_damp_threshold: struct{
     using _get_primary_negative_damp_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_secondary_limit_angle: struct{
     using _set_secondary_limit_angle: ^GDW.MethodBind,
@@ -212,7 +212,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_secondary_limit_angle: struct{
     using _get_secondary_limit_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_secondary_damp_threshold: struct{
     using _set_secondary_damp_threshold: ^GDW.MethodBind,
@@ -220,7 +220,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_secondary_damp_threshold: struct{
     using _get_secondary_damp_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_secondary_positive_limit_angle: struct{
     using _set_secondary_positive_limit_angle: ^GDW.MethodBind,
@@ -228,7 +228,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_secondary_positive_limit_angle: struct{
     using _get_secondary_positive_limit_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_secondary_positive_damp_threshold: struct{
     using _set_secondary_positive_damp_threshold: ^GDW.MethodBind,
@@ -236,7 +236,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_secondary_positive_damp_threshold: struct{
     using _get_secondary_positive_damp_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_secondary_negative_limit_angle: struct{
     using _set_secondary_negative_limit_angle: ^GDW.MethodBind,
@@ -244,7 +244,7 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_secondary_negative_limit_angle: struct{
     using _get_secondary_negative_limit_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_secondary_negative_damp_threshold: struct{
     using _set_secondary_negative_damp_threshold: ^GDW.MethodBind,
@@ -252,19 +252,19 @@ LookAtModifier3D_MethodBind_List :: struct {
   },
     get_secondary_negative_damp_threshold: struct{
     using _get_secondary_negative_damp_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_interpolation_remaining: struct{
     using _get_interpolation_remaining: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   is_interpolating: struct{
     using _is_interpolating: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_target_within_limitation: struct{
     using _is_target_within_limitation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LookAtModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 LookAtModifier3D_Init_ :: proc (LookAtModifier3D_methods: ^LookAtModifier3D_MethodBind_List, loc := #caller_location) {

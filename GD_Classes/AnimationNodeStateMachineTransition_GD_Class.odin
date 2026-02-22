@@ -26,7 +26,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     get_switch_mode: struct{
     using _get_switch_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^AnimationNodeStateMachineTransition_SwitchMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^AnimationNodeStateMachineTransition_SwitchMode)
   },
   set_advance_mode: struct{
     using _set_advance_mode: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     get_advance_mode: struct{
     using _get_advance_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^AnimationNodeStateMachineTransition_AdvanceMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^AnimationNodeStateMachineTransition_AdvanceMode)
   },
   set_advance_condition: struct{
     using _set_advance_condition: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     get_advance_condition: struct{
     using _get_advance_condition: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_xfade_time: struct{
     using _set_xfade_time: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     get_xfade_time: struct{
     using _get_xfade_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_xfade_curve: struct{
     using _set_xfade_curve: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     get_xfade_curve: struct{
     using _get_xfade_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^Curve)
   },
   set_break_loop_at_end: struct{
     using _set_break_loop_at_end: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     is_loop_broken_at_end: struct{
     using _is_loop_broken_at_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_reset: struct{
     using _set_reset: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     is_reset: struct{
     using _is_reset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_priority: struct{
     using _set_priority: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     get_priority: struct{
     using _get_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_advance_expression: struct{
     using _set_advance_expression: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ AnimationNodeStateMachineTransition_MethodBind_List :: struct {
   },
     get_advance_expression: struct{
     using _get_advance_expression: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeStateMachineTransition, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 AnimationNodeStateMachineTransition_Init_ :: proc (AnimationNodeStateMachineTransition_methods: ^AnimationNodeStateMachineTransition_MethodBind_List, loc := #caller_location) {

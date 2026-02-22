@@ -26,7 +26,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_under_texture: struct{
     using _get_under_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_progress_texture: struct{
     using _set_progress_texture: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_progress_texture: struct{
     using _get_progress_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_over_texture: struct{
     using _set_over_texture: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_over_texture: struct{
     using _get_over_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_fill_mode: struct{
     using _set_fill_mode: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_fill_mode: struct{
     using _get_fill_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_tint_under: struct{
     using _set_tint_under: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_tint_under: struct{
     using _get_tint_under: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_tint_progress: struct{
     using _set_tint_progress: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_tint_progress: struct{
     using _get_tint_progress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_tint_over: struct{
     using _set_tint_over: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_tint_over: struct{
     using _get_tint_over: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_texture_progress_offset: struct{
     using _set_texture_progress_offset: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_texture_progress_offset: struct{
     using _get_texture_progress_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_radial_initial_angle: struct{
     using _set_radial_initial_angle: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_radial_initial_angle: struct{
     using _get_radial_initial_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_radial_center_offset: struct{
     using _set_radial_center_offset: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_radial_center_offset: struct{
     using _get_radial_center_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_fill_degrees: struct{
     using _set_fill_degrees: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_fill_degrees: struct{
     using _get_fill_degrees: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_stretch_margin: struct{
     using _set_stretch_margin: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ TextureProgressBar_MethodBind_List :: struct {
   },
     get_nine_patch_stretch: struct{
     using _get_nine_patch_stretch: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureProgressBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 TextureProgressBar_Init_ :: proc (TextureProgressBar_methods: ^TextureProgressBar_MethodBind_List, loc := #caller_location) {

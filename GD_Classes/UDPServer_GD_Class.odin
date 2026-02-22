@@ -14,27 +14,27 @@ UDPServer_MethodBind_List :: struct {
   },
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   is_connection_available: struct{
     using _is_connection_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_local_port: struct{
     using _get_local_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_listening: struct{
     using _is_listening: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   take_connection: struct{
     using _take_connection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, #by_ptr args: i64 = 0, r_ret: ^PacketPeerUDP)
+    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, args: rawptr = nil, r_ret: ^PacketPeerUDP)
   },
   stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_max_pending_connections: struct{
     using _set_max_pending_connections: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ UDPServer_MethodBind_List :: struct {
   },
     get_max_pending_connections: struct{
     using _get_max_pending_connections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: UDPServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 UDPServer_Init_ :: proc (UDPServer_methods: ^UDPServer_MethodBind_List, loc := #caller_location) {

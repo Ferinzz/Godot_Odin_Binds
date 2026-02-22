@@ -146,15 +146,15 @@ Control_Constants :: enum i64 {
 Control_MethodBind_List :: struct {
   accept_event: struct{
     using _accept_event: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_minimum_size: struct{
     using _get_minimum_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_combined_minimum_size: struct{
     using _get_combined_minimum_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_anchors_preset: struct{
     using _set_anchors_preset: ^GDW.MethodBind,
@@ -206,7 +206,7 @@ Control_MethodBind_List :: struct {
   },
     reset_size: struct{
     using _reset_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_custom_minimum_size: struct{
     using _set_custom_minimum_size: ^GDW.MethodBind,
@@ -238,67 +238,67 @@ Control_MethodBind_List :: struct {
   },
     get_begin: struct{
     using _get_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_end: struct{
     using _get_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_rotation: struct{
     using _get_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_rotation_degrees: struct{
     using _get_rotation_degrees: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_scale: struct{
     using _get_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_pivot_offset: struct{
     using _get_pivot_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_pivot_offset_ratio: struct{
     using _get_pivot_offset_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_combined_pivot_offset: struct{
     using _get_combined_pivot_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_custom_minimum_size: struct{
     using _get_custom_minimum_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_parent_area_size: struct{
     using _get_parent_area_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_global_position: struct{
     using _get_global_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_screen_position: struct{
     using _get_screen_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_rect: struct{
     using _get_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   get_global_rect: struct{
     using _get_global_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_focus_mode: struct{
     using _set_focus_mode: ^GDW.MethodBind,
@@ -306,11 +306,11 @@ Control_MethodBind_List :: struct {
   },
     get_focus_mode: struct{
     using _get_focus_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_FocusMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_FocusMode)
   },
   get_focus_mode_with_override: struct{
     using _get_focus_mode_with_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_FocusMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_FocusMode)
   },
   set_focus_behavior_recursive: struct{
     using _set_focus_behavior_recursive: ^GDW.MethodBind,
@@ -318,7 +318,7 @@ Control_MethodBind_List :: struct {
   },
     get_focus_behavior_recursive: struct{
     using _get_focus_behavior_recursive: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_FocusBehaviorRecursive)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_FocusBehaviorRecursive)
   },
   has_focus: struct{
     using _has_focus: ^GDW.MethodBind,
@@ -330,15 +330,15 @@ Control_MethodBind_List :: struct {
   },
     release_focus: struct{
     using _release_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     find_prev_valid_focus: struct{
     using _find_prev_valid_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control)
   },
   find_next_valid_focus: struct{
     using _find_next_valid_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control)
   },
   find_valid_focus_neighbor: struct{
     using _find_valid_focus_neighbor: ^GDW.MethodBind,
@@ -350,7 +350,7 @@ Control_MethodBind_List :: struct {
   },
     get_h_size_flags: struct{
     using _get_h_size_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_SizeFlags)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_SizeFlags)
   },
   set_stretch_ratio: struct{
     using _set_stretch_ratio: ^GDW.MethodBind,
@@ -358,7 +358,7 @@ Control_MethodBind_List :: struct {
   },
     get_stretch_ratio: struct{
     using _get_stretch_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_v_size_flags: struct{
     using _set_v_size_flags: ^GDW.MethodBind,
@@ -366,7 +366,7 @@ Control_MethodBind_List :: struct {
   },
     get_v_size_flags: struct{
     using _get_v_size_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_SizeFlags)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_SizeFlags)
   },
   set_theme: struct{
     using _set_theme: ^GDW.MethodBind,
@@ -374,7 +374,7 @@ Control_MethodBind_List :: struct {
   },
     get_theme: struct{
     using _get_theme: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Theme)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Theme)
   },
   set_theme_type_variation: struct{
     using _set_theme_type_variation: ^GDW.MethodBind,
@@ -382,15 +382,15 @@ Control_MethodBind_List :: struct {
   },
     get_theme_type_variation: struct{
     using _get_theme_type_variation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   begin_bulk_theme_override: struct{
     using _begin_bulk_theme_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     end_bulk_theme_override: struct{
     using _end_bulk_theme_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_theme_icon_override: struct{
     using _add_theme_icon_override: ^GDW.MethodBind,
@@ -514,19 +514,19 @@ Control_MethodBind_List :: struct {
   },
   get_theme_default_base_scale: struct{
     using _get_theme_default_base_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_theme_default_font: struct{
     using _get_theme_default_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Font)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Font)
   },
   get_theme_default_font_size: struct{
     using _get_theme_default_font_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_parent_control: struct{
     using _get_parent_control: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control)
   },
   set_h_grow_direction: struct{
     using _set_h_grow_direction: ^GDW.MethodBind,
@@ -534,7 +534,7 @@ Control_MethodBind_List :: struct {
   },
     get_h_grow_direction: struct{
     using _get_h_grow_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_GrowDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_GrowDirection)
   },
   set_v_grow_direction: struct{
     using _set_v_grow_direction: ^GDW.MethodBind,
@@ -542,7 +542,7 @@ Control_MethodBind_List :: struct {
   },
     get_v_grow_direction: struct{
     using _get_v_grow_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_GrowDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_GrowDirection)
   },
   set_tooltip_auto_translate_mode: struct{
     using _set_tooltip_auto_translate_mode: ^GDW.MethodBind,
@@ -550,7 +550,7 @@ Control_MethodBind_List :: struct {
   },
     get_tooltip_auto_translate_mode: struct{
     using _get_tooltip_auto_translate_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Node_AutoTranslateMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Node_AutoTranslateMode)
   },
   set_tooltip_text: struct{
     using _set_tooltip_text: ^GDW.MethodBind,
@@ -558,7 +558,7 @@ Control_MethodBind_List :: struct {
   },
     get_tooltip_text: struct{
     using _get_tooltip_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_tooltip: struct{
     using _get_tooltip: ^GDW.MethodBind,
@@ -570,7 +570,7 @@ Control_MethodBind_List :: struct {
   },
     get_default_cursor_shape: struct{
     using _get_default_cursor_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_CursorShape)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_CursorShape)
   },
   get_cursor_shape: struct{
     using _get_cursor_shape: ^GDW.MethodBind,
@@ -590,7 +590,7 @@ Control_MethodBind_List :: struct {
   },
     get_focus_next: struct{
     using _get_focus_next: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_focus_previous: struct{
     using _set_focus_previous: ^GDW.MethodBind,
@@ -598,7 +598,7 @@ Control_MethodBind_List :: struct {
   },
     get_focus_previous: struct{
     using _get_focus_previous: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   force_drag: struct{
     using _force_drag: ^GDW.MethodBind,
@@ -606,11 +606,11 @@ Control_MethodBind_List :: struct {
   },
     accessibility_drag: struct{
     using _accessibility_drag: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     accessibility_drop: struct{
     using _accessibility_drop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_accessibility_name: struct{
     using _set_accessibility_name: ^GDW.MethodBind,
@@ -618,7 +618,7 @@ Control_MethodBind_List :: struct {
   },
     get_accessibility_name: struct{
     using _get_accessibility_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_accessibility_description: struct{
     using _set_accessibility_description: ^GDW.MethodBind,
@@ -626,7 +626,7 @@ Control_MethodBind_List :: struct {
   },
     get_accessibility_description: struct{
     using _get_accessibility_description: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_accessibility_live: struct{
     using _set_accessibility_live: ^GDW.MethodBind,
@@ -634,7 +634,7 @@ Control_MethodBind_List :: struct {
   },
     get_accessibility_live: struct{
     using _get_accessibility_live: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^DisplayServer_AccessibilityLiveMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^DisplayServer_AccessibilityLiveMode)
   },
   set_accessibility_controls_nodes: struct{
     using _set_accessibility_controls_nodes: ^GDW.MethodBind,
@@ -642,7 +642,7 @@ Control_MethodBind_List :: struct {
   },
     get_accessibility_controls_nodes: struct{
     using _get_accessibility_controls_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_accessibility_described_by_nodes: struct{
     using _set_accessibility_described_by_nodes: ^GDW.MethodBind,
@@ -650,7 +650,7 @@ Control_MethodBind_List :: struct {
   },
     get_accessibility_described_by_nodes: struct{
     using _get_accessibility_described_by_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_accessibility_labeled_by_nodes: struct{
     using _set_accessibility_labeled_by_nodes: ^GDW.MethodBind,
@@ -658,7 +658,7 @@ Control_MethodBind_List :: struct {
   },
     get_accessibility_labeled_by_nodes: struct{
     using _get_accessibility_labeled_by_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_accessibility_flow_to_nodes: struct{
     using _set_accessibility_flow_to_nodes: ^GDW.MethodBind,
@@ -666,7 +666,7 @@ Control_MethodBind_List :: struct {
   },
     get_accessibility_flow_to_nodes: struct{
     using _get_accessibility_flow_to_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_mouse_filter: struct{
     using _set_mouse_filter: ^GDW.MethodBind,
@@ -674,11 +674,11 @@ Control_MethodBind_List :: struct {
   },
     get_mouse_filter: struct{
     using _get_mouse_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_MouseFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_MouseFilter)
   },
   get_mouse_filter_with_override: struct{
     using _get_mouse_filter_with_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_MouseFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_MouseFilter)
   },
   set_mouse_behavior_recursive: struct{
     using _set_mouse_behavior_recursive: ^GDW.MethodBind,
@@ -686,7 +686,7 @@ Control_MethodBind_List :: struct {
   },
     get_mouse_behavior_recursive: struct{
     using _get_mouse_behavior_recursive: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_MouseBehaviorRecursive)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_MouseBehaviorRecursive)
   },
   set_force_pass_scroll_events: struct{
     using _set_force_pass_scroll_events: ^GDW.MethodBind,
@@ -694,7 +694,7 @@ Control_MethodBind_List :: struct {
   },
     is_force_pass_scroll_events: struct{
     using _is_force_pass_scroll_events: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_clip_contents: struct{
     using _set_clip_contents: ^GDW.MethodBind,
@@ -702,11 +702,11 @@ Control_MethodBind_List :: struct {
   },
     is_clipping_contents: struct{
     using _is_clipping_contents: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   grab_click_focus: struct{
     using _grab_click_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_drag_forwarding: struct{
     using _set_drag_forwarding: ^GDW.MethodBind,
@@ -718,7 +718,7 @@ Control_MethodBind_List :: struct {
   },
     is_drag_successful: struct{
     using _is_drag_successful: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   warp_mouse: struct{
     using _warp_mouse: ^GDW.MethodBind,
@@ -730,11 +730,11 @@ Control_MethodBind_List :: struct {
   },
     get_shortcut_context: struct{
     using _get_shortcut_context: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Node)
   },
   update_minimum_size: struct{
     using _update_minimum_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_layout_direction: struct{
     using _set_layout_direction: ^GDW.MethodBind,
@@ -742,11 +742,11 @@ Control_MethodBind_List :: struct {
   },
     get_layout_direction: struct{
     using _get_layout_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^Control_LayoutDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^Control_LayoutDirection)
   },
   is_layout_rtl: struct{
     using _is_layout_rtl: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_translate: struct{
     using _set_auto_translate: ^GDW.MethodBind,
@@ -754,7 +754,7 @@ Control_MethodBind_List :: struct {
   },
     is_auto_translating: struct{
     using _is_auto_translating: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_localize_numeral_system: struct{
     using _set_localize_numeral_system: ^GDW.MethodBind,
@@ -762,7 +762,7 @@ Control_MethodBind_List :: struct {
   },
     is_localizing_numeral_system: struct{
     using _is_localizing_numeral_system: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Control, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Control, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Control_Init_ :: proc (Control_methods: ^Control_MethodBind_List, loc := #caller_location) {

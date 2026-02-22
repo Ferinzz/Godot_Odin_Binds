@@ -18,7 +18,7 @@ ClassDB_APIType :: enum i64 {
 ClassDB_MethodBind_List :: struct {
   get_class_list: struct{
     using _get_class_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ClassDB, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ClassDB, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_inheriters_from_class: struct{
     using _get_inheriters_from_class: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ ClassDB_MethodBind_List :: struct {
   },
   class_call_static: struct{
     using _class_call_static: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ClassDB, #by_ptr args: struct{class: ^GDW.StringName, method: ^GDW.StringName, }, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: ClassDB, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Variant)
   },
   class_get_integer_constant_list: struct{
     using _class_get_integer_constant_list: ^GDW.MethodBind,

@@ -14,7 +14,7 @@ InputEventJoypadButton_MethodBind_List :: struct {
   },
     get_button_index: struct{
     using _get_button_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventJoypadButton, #by_ptr args: i64 = 0, r_ret: ^GDW.JoyButton)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventJoypadButton, args: rawptr = nil, r_ret: ^GDW.JoyButton)
   },
   set_pressure: struct{
     using _set_pressure: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ InputEventJoypadButton_MethodBind_List :: struct {
   },
     get_pressure: struct{
     using _get_pressure: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventJoypadButton, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventJoypadButton, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_pressed: struct{
     using _set_pressed: ^GDW.MethodBind,

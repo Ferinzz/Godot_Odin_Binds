@@ -38,15 +38,15 @@ EditorDock_DockSlot :: enum i64 {
 EditorDock_MethodBind_List :: struct {
   open: struct{
     using _open: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: rawptr = nil)
   },
     make_visible: struct{
     using _make_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: rawptr = nil)
   },
     close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_title: struct{
     using _set_title: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_title: struct{
     using _get_title: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_layout_key: struct{
     using _set_layout_key: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_layout_key: struct{
     using _get_layout_key: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_global: struct{
     using _set_global: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ EditorDock_MethodBind_List :: struct {
   },
     is_global: struct{
     using _is_global: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_transient: struct{
     using _set_transient: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ EditorDock_MethodBind_List :: struct {
   },
     is_transient: struct{
     using _is_transient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_closable: struct{
     using _set_closable: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ EditorDock_MethodBind_List :: struct {
   },
     is_closable: struct{
     using _is_closable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_icon_name: struct{
     using _set_icon_name: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_icon_name: struct{
     using _get_icon_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_dock_icon: struct{
     using _set_dock_icon: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_dock_icon: struct{
     using _get_dock_icon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_force_show_icon: struct{
     using _set_force_show_icon: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_force_show_icon: struct{
     using _get_force_show_icon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_title_color: struct{
     using _set_title_color: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_title_color: struct{
     using _get_title_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_dock_shortcut: struct{
     using _set_dock_shortcut: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_dock_shortcut: struct{
     using _get_dock_shortcut: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^Shortcut)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^Shortcut)
   },
   set_default_slot: struct{
     using _set_default_slot: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_default_slot: struct{
     using _get_default_slot: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^EditorDock_DockSlot)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^EditorDock_DockSlot)
   },
   set_available_layouts: struct{
     using _set_available_layouts: ^GDW.MethodBind,
@@ -142,7 +142,7 @@ EditorDock_MethodBind_List :: struct {
   },
     get_available_layouts: struct{
     using _get_available_layouts: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, #by_ptr args: i64 = 0, r_ret: ^EditorDock_DockLayout)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDock, args: rawptr = nil, r_ret: ^EditorDock_DockLayout)
   },
 };
 EditorDock_Init_ :: proc (EditorDock_methods: ^EditorDock_MethodBind_List, loc := #caller_location) {

@@ -14,11 +14,11 @@ TranslationServer_MethodBind_List :: struct {
   },
     get_locale: struct{
     using _get_locale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_tool_locale: struct{
     using _get_tool_locale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   compare_locales: struct{
     using _compare_locales: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ TranslationServer_MethodBind_List :: struct {
   },
   get_all_languages: struct{
     using _get_all_languages: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_language_name: struct{
     using _get_language_name: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ TranslationServer_MethodBind_List :: struct {
   },
   get_all_scripts: struct{
     using _get_all_scripts: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_script_name: struct{
     using _get_script_name: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ TranslationServer_MethodBind_List :: struct {
   },
   get_all_countries: struct{
     using _get_all_countries: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_country_name: struct{
     using _get_country_name: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ TranslationServer_MethodBind_List :: struct {
   },
   get_translations: struct{
     using _get_translations: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   find_translations: struct{
     using _find_translations: ^GDW.MethodBind,
@@ -110,11 +110,11 @@ TranslationServer_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_loaded_locales: struct{
     using _get_loaded_locales: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   format_number: struct{
     using _format_number: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ TranslationServer_MethodBind_List :: struct {
   },
   is_pseudolocalization_enabled: struct{
     using _is_pseudolocalization_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_pseudolocalization_enabled: struct{
     using _set_pseudolocalization_enabled: ^GDW.MethodBind,
@@ -138,7 +138,7 @@ TranslationServer_MethodBind_List :: struct {
   },
     reload_pseudolocalization: struct{
     using _reload_pseudolocalization: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     pseudolocalize: struct{
     using _pseudolocalize: ^GDW.MethodBind,

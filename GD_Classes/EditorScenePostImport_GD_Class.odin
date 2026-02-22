@@ -14,7 +14,7 @@ EditorScenePostImport_Virtual_Info :: struct {
 EditorScenePostImport_MethodBind_List :: struct {
   get_source_file: struct{
     using _get_source_file: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorScenePostImport, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorScenePostImport, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 EditorScenePostImport_Init_ :: proc (EditorScenePostImport_methods: ^EditorScenePostImport_MethodBind_List, loc := #caller_location) {

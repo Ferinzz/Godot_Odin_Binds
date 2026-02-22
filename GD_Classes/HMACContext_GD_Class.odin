@@ -18,7 +18,7 @@ HMACContext_MethodBind_List :: struct {
   },
   finish: struct{
     using _finish: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HMACContext, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: HMACContext, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
 };
 HMACContext_Init_ :: proc (HMACContext_methods: ^HMACContext_MethodBind_List, loc := #caller_location) {

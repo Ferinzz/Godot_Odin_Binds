@@ -25,7 +25,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_intensity: struct{
     using _get_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_blend_distance: struct{
     using _set_blend_distance: ^GDW.MethodBind,
@@ -33,7 +33,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_blend_distance: struct{
     using _get_blend_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ambient_mode: struct{
     using _set_ambient_mode: ^GDW.MethodBind,
@@ -41,7 +41,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_ambient_mode: struct{
     using _get_ambient_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^ReflectionProbe_AmbientMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^ReflectionProbe_AmbientMode)
   },
   set_ambient_color: struct{
     using _set_ambient_color: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_ambient_color: struct{
     using _get_ambient_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_ambient_color_energy: struct{
     using _set_ambient_color_energy: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_ambient_color_energy: struct{
     using _get_ambient_color_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_distance: struct{
     using _set_max_distance: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_max_distance: struct{
     using _get_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mesh_lod_threshold: struct{
     using _set_mesh_lod_threshold: ^GDW.MethodBind,
@@ -73,7 +73,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_mesh_lod_threshold: struct{
     using _get_mesh_lod_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_size: struct{
     using _set_size: ^GDW.MethodBind,
@@ -81,7 +81,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_origin_offset: struct{
     using _set_origin_offset: ^GDW.MethodBind,
@@ -89,7 +89,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_origin_offset: struct{
     using _get_origin_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_as_interior: struct{
     using _set_as_interior: ^GDW.MethodBind,
@@ -97,7 +97,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     is_set_as_interior: struct{
     using _is_set_as_interior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enable_box_projection: struct{
     using _set_enable_box_projection: ^GDW.MethodBind,
@@ -105,7 +105,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     is_box_projection_enabled: struct{
     using _is_box_projection_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enable_shadows: struct{
     using _set_enable_shadows: ^GDW.MethodBind,
@@ -113,7 +113,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     are_shadows_enabled: struct{
     using _are_shadows_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_cull_mask: struct{
     using _set_cull_mask: ^GDW.MethodBind,
@@ -121,7 +121,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_cull_mask: struct{
     using _get_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_reflection_mask: struct{
     using _set_reflection_mask: ^GDW.MethodBind,
@@ -129,7 +129,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_reflection_mask: struct{
     using _get_reflection_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_update_mode: struct{
     using _set_update_mode: ^GDW.MethodBind,
@@ -137,7 +137,7 @@ ReflectionProbe_MethodBind_List :: struct {
   },
     get_update_mode: struct{
     using _get_update_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, #by_ptr args: i64 = 0, r_ret: ^ReflectionProbe_UpdateMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ReflectionProbe, args: rawptr = nil, r_ret: ^ReflectionProbe_UpdateMode)
   },
 };
 ReflectionProbe_Init_ :: proc (ReflectionProbe_methods: ^ReflectionProbe_MethodBind_List, loc := #caller_location) {

@@ -18,7 +18,7 @@ InstancePlaceholder_MethodBind_List :: struct {
   },
   get_instance_path: struct{
     using _get_instance_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InstancePlaceholder, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: InstancePlaceholder, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 InstancePlaceholder_Init_ :: proc (InstancePlaceholder_methods: ^InstancePlaceholder_MethodBind_List, loc := #caller_location) {

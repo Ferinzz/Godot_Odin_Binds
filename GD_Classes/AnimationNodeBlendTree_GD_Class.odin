@@ -46,7 +46,7 @@ AnimationNodeBlendTree_MethodBind_List :: struct {
   },
     get_node_list: struct{
     using _get_node_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendTree, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_node_position: struct{
     using _set_node_position: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ AnimationNodeBlendTree_MethodBind_List :: struct {
   },
     get_graph_offset: struct{
     using _get_graph_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendTree, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 AnimationNodeBlendTree_Init_ :: proc (AnimationNodeBlendTree_methods: ^AnimationNodeBlendTree_MethodBind_List, loc := #caller_location) {

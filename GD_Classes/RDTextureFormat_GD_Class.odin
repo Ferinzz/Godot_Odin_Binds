@@ -14,7 +14,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_DataFormat)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^RenderingDevice_DataFormat)
   },
   set_width: struct{
     using _set_width: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_height: struct{
     using _set_height: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_depth: struct{
     using _set_depth: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_array_layers: struct{
     using _set_array_layers: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_array_layers: struct{
     using _get_array_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_mipmaps: struct{
     using _set_mipmaps: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_mipmaps: struct{
     using _get_mipmaps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_texture_type: struct{
     using _set_texture_type: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_texture_type: struct{
     using _get_texture_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureType)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^RenderingDevice_TextureType)
   },
   set_samples: struct{
     using _set_samples: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_samples: struct{
     using _get_samples: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureSamples)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^RenderingDevice_TextureSamples)
   },
   set_usage_bits: struct{
     using _set_usage_bits: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_usage_bits: struct{
     using _get_usage_bits: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureUsageBits)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^RenderingDevice_TextureUsageBits)
   },
   set_is_resolve_buffer: struct{
     using _set_is_resolve_buffer: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_is_resolve_buffer: struct{
     using _get_is_resolve_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_is_discardable: struct{
     using _set_is_discardable: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ RDTextureFormat_MethodBind_List :: struct {
   },
     get_is_discardable: struct{
     using _get_is_discardable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureFormat, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_shareable_format: struct{
     using _add_shareable_format: ^GDW.MethodBind,

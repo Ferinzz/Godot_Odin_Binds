@@ -101,7 +101,7 @@ EditorPlugin_MethodBind_List :: struct {
   },
     get_export_as_menu: struct{
     using _get_export_as_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: ^PopupMenu)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: ^PopupMenu)
   },
   add_custom_type: struct{
     using _add_custom_type: ^GDW.MethodBind,
@@ -141,7 +141,7 @@ EditorPlugin_MethodBind_List :: struct {
   },
     update_overlays: struct{
     using _update_overlays: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   make_bottom_panel_item_visible: struct{
     using _make_bottom_panel_item_visible: ^GDW.MethodBind,
@@ -149,11 +149,11 @@ EditorPlugin_MethodBind_List :: struct {
   },
     hide_bottom_panel: struct{
     using _hide_bottom_panel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_undo_redo: struct{
     using _get_undo_redo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: ^EditorUndoRedoManager)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: ^EditorUndoRedoManager)
   },
   add_undo_redo_inspector_hook_callback: struct{
     using _add_undo_redo_inspector_hook_callback: ^GDW.MethodBind,
@@ -165,7 +165,7 @@ EditorPlugin_MethodBind_List :: struct {
   },
     queue_save_layout: struct{
     using _queue_save_layout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_translation_parser_plugin: struct{
     using _add_translation_parser_plugin: ^GDW.MethodBind,
@@ -241,11 +241,11 @@ EditorPlugin_MethodBind_List :: struct {
   },
     set_input_event_forwarding_always_enabled: struct{
     using _set_input_event_forwarding_always_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_force_draw_over_forwarding_enabled: struct{
     using _set_force_draw_over_forwarding_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_context_menu_plugin: struct{
     using _add_context_menu_plugin: ^GDW.MethodBind,
@@ -257,11 +257,11 @@ EditorPlugin_MethodBind_List :: struct {
   },
     get_editor_interface: struct{
     using _get_editor_interface: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: ^EditorInterface)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: ^EditorInterface)
   },
   get_script_create_dialog: struct{
     using _get_script_create_dialog: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: ^ScriptCreateDialog)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: ^ScriptCreateDialog)
   },
   add_debugger_plugin: struct{
     using _add_debugger_plugin: ^GDW.MethodBind,
@@ -273,7 +273,7 @@ EditorPlugin_MethodBind_List :: struct {
   },
     get_plugin_version: struct{
     using _get_plugin_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorPlugin, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 EditorPlugin_Init_ :: proc (EditorPlugin_methods: ^EditorPlugin_MethodBind_List, loc := #caller_location) {

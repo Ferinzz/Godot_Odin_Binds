@@ -17,11 +17,11 @@ GDExtension_InitializationLevel :: enum i64 {
 GDExtension_MethodBind_List :: struct {
   is_library_open: struct{
     using _is_library_open: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GDExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GDExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_minimum_library_initialization_level: struct{
     using _get_minimum_library_initialization_level: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GDExtension, #by_ptr args: i64 = 0, r_ret: ^GDExtension_InitializationLevel)
+    m_call: proc(_:^GDW.MethodBind, obj: GDExtension, args: rawptr = nil, r_ret: ^GDExtension_InitializationLevel)
   },
 };
 GDExtension_Init_ :: proc (GDExtension_methods: ^GDExtension_MethodBind_List, loc := #caller_location) {

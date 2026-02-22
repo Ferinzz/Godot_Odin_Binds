@@ -14,7 +14,7 @@ Skin_MethodBind_List :: struct {
   },
     get_bind_count: struct{
     using _get_bind_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skin, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Skin, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_bind: struct{
     using _add_bind: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ Skin_MethodBind_List :: struct {
   },
   clear_binds: struct{
     using _clear_binds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skin, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Skin, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 Skin_Init_ :: proc (Skin_methods: ^Skin_MethodBind_List, loc := #caller_location) {

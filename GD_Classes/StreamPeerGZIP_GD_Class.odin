@@ -18,11 +18,11 @@ StreamPeerGZIP_MethodBind_List :: struct {
   },
   finish: struct{
     using _finish: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerGZIP, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerGZIP, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerGZIP, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerGZIP, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 StreamPeerGZIP_Init_ :: proc (StreamPeerGZIP_methods: ^StreamPeerGZIP_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shape: struct{
     using _set_shape: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     get_shape: struct{
     using _get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^Shape2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^Shape2D)
   },
   set_target_position: struct{
     using _set_target_position: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     get_target_position: struct{
     using _get_target_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_margin: struct{
     using _set_margin: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     get_margin: struct{
     using _get_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_results: struct{
     using _set_max_results: ^GDW.MethodBind,
@@ -46,19 +46,19 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     get_max_results: struct{
     using _get_max_results: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_colliding: struct{
     using _is_colliding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_collision_count: struct{
     using _get_collision_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   force_shapecast_update: struct{
     using _force_shapecast_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_collider: struct{
     using _get_collider: ^GDW.MethodBind,
@@ -82,11 +82,11 @@ ShapeCast2D_MethodBind_List :: struct {
   },
   get_closest_collision_safe_fraction: struct{
     using _get_closest_collision_safe_fraction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_closest_collision_unsafe_fraction: struct{
     using _get_closest_collision_unsafe_fraction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   add_exception_rid: struct{
     using _add_exception_rid: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     clear_exceptions: struct{
     using _clear_exceptions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask_value: struct{
     using _set_collision_mask_value: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     get_exclude_parent_body: struct{
     using _get_exclude_parent_body: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_areas: struct{
     using _set_collide_with_areas: ^GDW.MethodBind,
@@ -138,7 +138,7 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     is_collide_with_areas_enabled: struct{
     using _is_collide_with_areas_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_bodies: struct{
     using _set_collide_with_bodies: ^GDW.MethodBind,
@@ -146,11 +146,11 @@ ShapeCast2D_MethodBind_List :: struct {
   },
     is_collide_with_bodies_enabled: struct{
     using _is_collide_with_bodies_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_collision_result: struct{
     using _get_collision_result: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ShapeCast2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 ShapeCast2D_Init_ :: proc (ShapeCast2D_methods: ^ShapeCast2D_MethodBind_List, loc := #caller_location) {

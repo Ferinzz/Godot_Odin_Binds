@@ -14,7 +14,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^ImporterMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^ImporterMesh)
   },
   set_skin: struct{
     using _set_skin: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_skin: struct{
     using _get_skin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^Skin)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^Skin)
   },
   set_skeleton_path: struct{
     using _set_skeleton_path: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_skeleton_path: struct{
     using _get_skeleton_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_layer_mask: struct{
     using _set_layer_mask: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_layer_mask: struct{
     using _get_layer_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_cast_shadows_setting: struct{
     using _set_cast_shadows_setting: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_cast_shadows_setting: struct{
     using _get_cast_shadows_setting: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GeometryInstance3D_ShadowCastingSetting)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^GeometryInstance3D_ShadowCastingSetting)
   },
   set_visibility_range_end_margin: struct{
     using _set_visibility_range_end_margin: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_end_margin: struct{
     using _get_visibility_range_end_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_end: struct{
     using _set_visibility_range_end: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_end: struct{
     using _get_visibility_range_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_begin_margin: struct{
     using _set_visibility_range_begin_margin: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_begin_margin: struct{
     using _get_visibility_range_begin_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_begin: struct{
     using _set_visibility_range_begin: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_begin: struct{
     using _get_visibility_range_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_visibility_range_fade_mode: struct{
     using _set_visibility_range_fade_mode: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ ImporterMeshInstance3D_MethodBind_List :: struct {
   },
     get_visibility_range_fade_mode: struct{
     using _get_visibility_range_fade_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, #by_ptr args: i64 = 0, r_ret: ^GeometryInstance3D_VisibilityRangeFadeMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMeshInstance3D, args: rawptr = nil, r_ret: ^GeometryInstance3D_VisibilityRangeFadeMode)
   },
 };
 ImporterMeshInstance3D_Init_ :: proc (ImporterMeshInstance3D_methods: ^ImporterMeshInstance3D_MethodBind_List, loc := #caller_location) {

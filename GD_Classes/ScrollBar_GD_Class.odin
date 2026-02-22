@@ -14,7 +14,7 @@ ScrollBar_MethodBind_List :: struct {
   },
     get_custom_step: struct{
     using _get_custom_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ScrollBar, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ScrollBar, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 ScrollBar_Init_ :: proc (ScrollBar_methods: ^ScrollBar_MethodBind_List, loc := #caller_location) {

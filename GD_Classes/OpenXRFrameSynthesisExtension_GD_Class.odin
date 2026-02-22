@@ -10,11 +10,11 @@ OpenXRFrameSynthesisExtension :: ^GDW.Object
 OpenXRFrameSynthesisExtension_MethodBind_List :: struct {
   is_available: struct{
     using _is_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFrameSynthesisExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFrameSynthesisExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFrameSynthesisExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFrameSynthesisExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enabled: struct{
     using _set_enabled: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRFrameSynthesisExtension_MethodBind_List :: struct {
   },
     get_relax_frame_interval: struct{
     using _get_relax_frame_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFrameSynthesisExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFrameSynthesisExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_relax_frame_interval: struct{
     using _set_relax_frame_interval: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OpenXRFrameSynthesisExtension_MethodBind_List :: struct {
   },
     skip_next_frame: struct{
     using _skip_next_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFrameSynthesisExtension, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFrameSynthesisExtension, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 OpenXRFrameSynthesisExtension_Init_ :: proc (OpenXRFrameSynthesisExtension_methods: ^OpenXRFrameSynthesisExtension_MethodBind_List, loc := #caller_location) {

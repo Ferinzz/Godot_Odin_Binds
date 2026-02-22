@@ -15,7 +15,7 @@ AudioStreamPlaybackResampled_Virtual_Info :: struct {
 AudioStreamPlaybackResampled_MethodBind_List :: struct {
   begin_resample: struct{
     using _begin_resample: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaybackResampled, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaybackResampled, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 AudioStreamPlaybackResampled_Init_ :: proc (AudioStreamPlaybackResampled_methods: ^AudioStreamPlaybackResampled_MethodBind_List, loc := #caller_location) {

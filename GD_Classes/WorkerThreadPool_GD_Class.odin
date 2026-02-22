@@ -22,7 +22,7 @@ WorkerThreadPool_MethodBind_List :: struct {
   },
   get_caller_task_id: struct{
     using _get_caller_task_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WorkerThreadPool, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WorkerThreadPool, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_group_task: struct{
     using _add_group_task: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ WorkerThreadPool_MethodBind_List :: struct {
   },
     get_caller_group_id: struct{
     using _get_caller_group_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WorkerThreadPool, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WorkerThreadPool, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 WorkerThreadPool_Init_ :: proc (WorkerThreadPool_methods: ^WorkerThreadPool_MethodBind_List, loc := #caller_location) {

@@ -10,7 +10,7 @@ OpenXRSpatialCapabilityConfigurationMicroQrCode :: ^GDW.Object
 OpenXRSpatialCapabilityConfigurationMicroQrCode_MethodBind_List :: struct {
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationMicroQrCode, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationMicroQrCode, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
 };
 OpenXRSpatialCapabilityConfigurationMicroQrCode_Init_ :: proc (OpenXRSpatialCapabilityConfigurationMicroQrCode_methods: ^OpenXRSpatialCapabilityConfigurationMicroQrCode_MethodBind_List, loc := #caller_location) {

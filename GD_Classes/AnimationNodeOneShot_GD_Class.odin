@@ -26,7 +26,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     get_fadein_time: struct{
     using _get_fadein_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fadein_curve: struct{
     using _set_fadein_curve: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     get_fadein_curve: struct{
     using _get_fadein_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^Curve)
   },
   set_fadeout_time: struct{
     using _set_fadeout_time: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     get_fadeout_time: struct{
     using _get_fadeout_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fadeout_curve: struct{
     using _set_fadeout_curve: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     get_fadeout_curve: struct{
     using _get_fadeout_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^Curve)
   },
   set_break_loop_at_end: struct{
     using _set_break_loop_at_end: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     is_loop_broken_at_end: struct{
     using _is_loop_broken_at_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_abort_on_reset: struct{
     using _set_abort_on_reset: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     is_aborted_on_reset: struct{
     using _is_aborted_on_reset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_autorestart: struct{
     using _set_autorestart: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     has_autorestart: struct{
     using _has_autorestart: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_autorestart_delay: struct{
     using _set_autorestart_delay: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     get_autorestart_delay: struct{
     using _get_autorestart_delay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_autorestart_random_delay: struct{
     using _set_autorestart_random_delay: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     get_autorestart_random_delay: struct{
     using _get_autorestart_random_delay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mix_mode: struct{
     using _set_mix_mode: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ AnimationNodeOneShot_MethodBind_List :: struct {
   },
     get_mix_mode: struct{
     using _get_mix_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, #by_ptr args: i64 = 0, r_ret: ^AnimationNodeOneShot_MixMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeOneShot, args: rawptr = nil, r_ret: ^AnimationNodeOneShot_MixMode)
   },
 };
 AnimationNodeOneShot_Init_ :: proc (AnimationNodeOneShot_methods: ^AnimationNodeOneShot_MethodBind_List, loc := #caller_location) {

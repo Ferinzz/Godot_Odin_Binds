@@ -20,27 +20,27 @@ XMLParser_NodeType :: enum i64 {
 XMLParser_MethodBind_List :: struct {
   read: struct{
     using _read: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   get_node_type: struct{
     using _get_node_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: ^XMLParser_NodeType)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: ^XMLParser_NodeType)
   },
   get_node_name: struct{
     using _get_node_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_node_data: struct{
     using _get_node_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_node_offset: struct{
     using _get_node_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_attribute_count: struct{
     using _get_attribute_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_attribute_name: struct{
     using _get_attribute_name: ^GDW.MethodBind,
@@ -64,15 +64,15 @@ XMLParser_MethodBind_List :: struct {
   },
   is_empty: struct{
     using _is_empty: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_current_line: struct{
     using _get_current_line: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   skip_section: struct{
     using _skip_section: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: XMLParser, args: rawptr = nil, r_ret: rawptr = nil)
   },
     seek: struct{
     using _seek: ^GDW.MethodBind,

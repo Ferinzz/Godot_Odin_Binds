@@ -18,7 +18,7 @@ EditorFileDialog_MethodBind_List :: struct {
   },
     is_overwrite_warning_disabled: struct{
     using _is_overwrite_warning_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileDialog, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 EditorFileDialog_Init_ :: proc (EditorFileDialog_methods: ^EditorFileDialog_MethodBind_List, loc := #caller_location) {

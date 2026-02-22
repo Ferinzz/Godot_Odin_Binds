@@ -14,7 +14,7 @@ CompressedTexture2D_MethodBind_List :: struct {
   },
   get_load_path: struct{
     using _get_load_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompressedTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: CompressedTexture2D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 CompressedTexture2D_Init_ :: proc (CompressedTexture2D_methods: ^CompressedTexture2D_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ DampedSpringJoint2D_MethodBind_List :: struct {
   },
     get_length: struct{
     using _get_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DampedSpringJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: DampedSpringJoint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rest_length: struct{
     using _set_rest_length: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ DampedSpringJoint2D_MethodBind_List :: struct {
   },
     get_rest_length: struct{
     using _get_rest_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DampedSpringJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: DampedSpringJoint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_stiffness: struct{
     using _set_stiffness: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ DampedSpringJoint2D_MethodBind_List :: struct {
   },
     get_stiffness: struct{
     using _get_stiffness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DampedSpringJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: DampedSpringJoint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_damping: struct{
     using _set_damping: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ DampedSpringJoint2D_MethodBind_List :: struct {
   },
     get_damping: struct{
     using _get_damping: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DampedSpringJoint2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: DampedSpringJoint2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 DampedSpringJoint2D_Init_ :: proc (DampedSpringJoint2D_methods: ^DampedSpringJoint2D_MethodBind_List, loc := #caller_location) {

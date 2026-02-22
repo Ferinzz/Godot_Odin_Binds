@@ -103,19 +103,19 @@ Time_MethodBind_List :: struct {
   },
   get_time_zone_from_system: struct{
     using _get_time_zone_from_system: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Time, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Time, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_unix_time_from_system: struct{
     using _get_unix_time_from_system: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Time, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Time, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_ticks_msec: struct{
     using _get_ticks_msec: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Time, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Time, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_ticks_usec: struct{
     using _get_ticks_usec: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Time, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Time, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 Time_Init_ :: proc (Time_methods: ^Time_MethodBind_List, loc := #caller_location) {

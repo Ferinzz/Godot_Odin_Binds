@@ -26,7 +26,7 @@ DirectionalLight3D_MethodBind_List :: struct {
   },
     get_shadow_mode: struct{
     using _get_shadow_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight3D, #by_ptr args: i64 = 0, r_ret: ^DirectionalLight3D_ShadowMode)
+    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight3D, args: rawptr = nil, r_ret: ^DirectionalLight3D_ShadowMode)
   },
   set_blend_splits: struct{
     using _set_blend_splits: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ DirectionalLight3D_MethodBind_List :: struct {
   },
     is_blend_splits_enabled: struct{
     using _is_blend_splits_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sky_mode: struct{
     using _set_sky_mode: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ DirectionalLight3D_MethodBind_List :: struct {
   },
     get_sky_mode: struct{
     using _get_sky_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight3D, #by_ptr args: i64 = 0, r_ret: ^DirectionalLight3D_SkyMode)
+    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight3D, args: rawptr = nil, r_ret: ^DirectionalLight3D_SkyMode)
   },
 };
 DirectionalLight3D_Init_ :: proc (DirectionalLight3D_methods: ^DirectionalLight3D_MethodBind_List, loc := #caller_location) {

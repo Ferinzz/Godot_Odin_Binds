@@ -10,7 +10,7 @@ OpenXRRenderModelExtension :: ^GDW.Object
 OpenXRRenderModelExtension_MethodBind_List :: struct {
   is_active: struct{
     using _is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModelExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModelExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   render_model_create: struct{
     using _render_model_create: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRRenderModelExtension_MethodBind_List :: struct {
   },
     render_model_get_all: struct{
     using _render_model_get_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModelExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModelExtension, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   render_model_new_scene_instance: struct{
     using _render_model_new_scene_instance: ^GDW.MethodBind,

@@ -56,7 +56,7 @@ TileSet_TerrainMode :: enum i64 {
 TileSet_MethodBind_List :: struct {
   get_next_source_id: struct{
     using _get_next_source_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_source: struct{
     using _add_source: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ TileSet_MethodBind_List :: struct {
   },
     get_source_count: struct{
     using _get_source_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_source_id: struct{
     using _get_source_id: ^GDW.MethodBind,
@@ -92,7 +92,7 @@ TileSet_MethodBind_List :: struct {
   },
     get_tile_shape: struct{
     using _get_tile_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^TileSet_TileShape)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^TileSet_TileShape)
   },
   set_tile_layout: struct{
     using _set_tile_layout: ^GDW.MethodBind,
@@ -100,7 +100,7 @@ TileSet_MethodBind_List :: struct {
   },
     get_tile_layout: struct{
     using _get_tile_layout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^TileSet_TileLayout)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^TileSet_TileLayout)
   },
   set_tile_offset_axis: struct{
     using _set_tile_offset_axis: ^GDW.MethodBind,
@@ -108,7 +108,7 @@ TileSet_MethodBind_List :: struct {
   },
     get_tile_offset_axis: struct{
     using _get_tile_offset_axis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^TileSet_TileOffsetAxis)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^TileSet_TileOffsetAxis)
   },
   set_tile_size: struct{
     using _set_tile_size: ^GDW.MethodBind,
@@ -116,7 +116,7 @@ TileSet_MethodBind_List :: struct {
   },
     get_tile_size: struct{
     using _get_tile_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_uv_clipping: struct{
     using _set_uv_clipping: ^GDW.MethodBind,
@@ -124,11 +124,11 @@ TileSet_MethodBind_List :: struct {
   },
     is_uv_clipping: struct{
     using _is_uv_clipping: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_occlusion_layers_count: struct{
     using _get_occlusion_layers_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_occlusion_layer: struct{
     using _add_occlusion_layer: ^GDW.MethodBind,
@@ -160,7 +160,7 @@ TileSet_MethodBind_List :: struct {
   },
   get_physics_layers_count: struct{
     using _get_physics_layers_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_physics_layer: struct{
     using _add_physics_layer: ^GDW.MethodBind,
@@ -208,7 +208,7 @@ TileSet_MethodBind_List :: struct {
   },
   get_terrain_sets_count: struct{
     using _get_terrain_sets_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_terrain_set: struct{
     using _add_terrain_set: ^GDW.MethodBind,
@@ -264,7 +264,7 @@ TileSet_MethodBind_List :: struct {
   },
   get_navigation_layers_count: struct{
     using _get_navigation_layers_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_navigation_layer: struct{
     using _add_navigation_layer: ^GDW.MethodBind,
@@ -296,7 +296,7 @@ TileSet_MethodBind_List :: struct {
   },
   get_custom_data_layers_count: struct{
     using _get_custom_data_layers_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_custom_data_layer: struct{
     using _add_custom_data_layer: ^GDW.MethodBind,
@@ -388,11 +388,11 @@ TileSet_MethodBind_List :: struct {
   },
   cleanup_invalid_tile_proxies: struct{
     using _cleanup_invalid_tile_proxies: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear_tile_proxies: struct{
     using _clear_tile_proxies: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_pattern: struct{
     using _add_pattern: ^GDW.MethodBind,
@@ -408,7 +408,7 @@ TileSet_MethodBind_List :: struct {
   },
     get_patterns_count: struct{
     using _get_patterns_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 TileSet_Init_ :: proc (TileSet_methods: ^TileSet_MethodBind_List, loc := #caller_location) {

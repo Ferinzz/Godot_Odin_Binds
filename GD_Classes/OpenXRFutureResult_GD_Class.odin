@@ -16,15 +16,15 @@ OpenXRFutureResult_ResultStatus :: enum i64 {
 OpenXRFutureResult_MethodBind_List :: struct {
   get_status: struct{
     using _get_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, #by_ptr args: i64 = 0, r_ret: ^OpenXRFutureResult_ResultStatus)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^OpenXRFutureResult_ResultStatus)
   },
   get_future: struct{
     using _get_future: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   cancel_future: struct{
     using _cancel_future: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_result_value: struct{
     using _set_result_value: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ OpenXRFutureResult_MethodBind_List :: struct {
   },
     get_result_value: struct{
     using _get_result_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
 };
 OpenXRFutureResult_Init_ :: proc (OpenXRFutureResult_methods: ^OpenXRFutureResult_MethodBind_List, loc := #caller_location) {

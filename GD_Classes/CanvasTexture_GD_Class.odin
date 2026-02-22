@@ -14,7 +14,7 @@ CanvasTexture_MethodBind_List :: struct {
   },
     get_diffuse_texture: struct{
     using _get_diffuse_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_normal_texture: struct{
     using _set_normal_texture: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CanvasTexture_MethodBind_List :: struct {
   },
     get_normal_texture: struct{
     using _get_normal_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_specular_texture: struct{
     using _set_specular_texture: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CanvasTexture_MethodBind_List :: struct {
   },
     get_specular_texture: struct{
     using _get_specular_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_specular_color: struct{
     using _set_specular_color: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CanvasTexture_MethodBind_List :: struct {
   },
     get_specular_color: struct{
     using _get_specular_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_specular_shininess: struct{
     using _set_specular_shininess: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CanvasTexture_MethodBind_List :: struct {
   },
     get_specular_shininess: struct{
     using _get_specular_shininess: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_texture_filter: struct{
     using _set_texture_filter: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ CanvasTexture_MethodBind_List :: struct {
   },
     get_texture_filter: struct{
     using _get_texture_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, #by_ptr args: i64 = 0, r_ret: ^CanvasItem_TextureFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, args: rawptr = nil, r_ret: ^CanvasItem_TextureFilter)
   },
   set_texture_repeat: struct{
     using _set_texture_repeat: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ CanvasTexture_MethodBind_List :: struct {
   },
     get_texture_repeat: struct{
     using _get_texture_repeat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, #by_ptr args: i64 = 0, r_ret: ^CanvasItem_TextureRepeat)
+    m_call: proc(_:^GDW.MethodBind, obj: CanvasTexture, args: rawptr = nil, r_ret: ^CanvasItem_TextureRepeat)
   },
 };
 CanvasTexture_Init_ :: proc (CanvasTexture_methods: ^CanvasTexture_MethodBind_List, loc := #caller_location) {

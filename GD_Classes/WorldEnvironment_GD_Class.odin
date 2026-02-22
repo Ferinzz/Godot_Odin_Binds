@@ -14,7 +14,7 @@ WorldEnvironment_MethodBind_List :: struct {
   },
     get_environment: struct{
     using _get_environment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WorldEnvironment, #by_ptr args: i64 = 0, r_ret: ^Environment)
+    m_call: proc(_:^GDW.MethodBind, obj: WorldEnvironment, args: rawptr = nil, r_ret: ^Environment)
   },
   set_camera_attributes: struct{
     using _set_camera_attributes: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ WorldEnvironment_MethodBind_List :: struct {
   },
     get_camera_attributes: struct{
     using _get_camera_attributes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WorldEnvironment, #by_ptr args: i64 = 0, r_ret: ^CameraAttributes)
+    m_call: proc(_:^GDW.MethodBind, obj: WorldEnvironment, args: rawptr = nil, r_ret: ^CameraAttributes)
   },
   set_compositor: struct{
     using _set_compositor: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ WorldEnvironment_MethodBind_List :: struct {
   },
     get_compositor: struct{
     using _get_compositor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WorldEnvironment, #by_ptr args: i64 = 0, r_ret: ^Compositor)
+    m_call: proc(_:^GDW.MethodBind, obj: WorldEnvironment, args: rawptr = nil, r_ret: ^Compositor)
   },
 };
 WorldEnvironment_Init_ :: proc (WorldEnvironment_methods: ^WorldEnvironment_MethodBind_List, loc := #caller_location) {

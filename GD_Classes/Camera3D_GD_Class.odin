@@ -63,7 +63,7 @@ Camera3D_MethodBind_List :: struct {
   },
     make_current: struct{
     using _make_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear_current: struct{
     using _clear_current: ^GDW.MethodBind,
@@ -75,35 +75,35 @@ Camera3D_MethodBind_List :: struct {
   },
     is_current: struct{
     using _is_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_camera_transform: struct{
     using _get_camera_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   get_camera_projection: struct{
     using _get_camera_projection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Projection)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.Projection)
   },
   get_fov: struct{
     using _get_fov: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_frustum_offset: struct{
     using _get_frustum_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_far: struct{
     using _get_far: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_near: struct{
     using _get_near: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fov: struct{
     using _set_fov: ^GDW.MethodBind,
@@ -127,7 +127,7 @@ Camera3D_MethodBind_List :: struct {
   },
     get_projection: struct{
     using _get_projection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^Camera3D_ProjectionType)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^Camera3D_ProjectionType)
   },
   set_projection: struct{
     using _set_projection: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ Camera3D_MethodBind_List :: struct {
   },
     get_h_offset: struct{
     using _get_h_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_v_offset: struct{
     using _set_v_offset: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ Camera3D_MethodBind_List :: struct {
   },
     get_v_offset: struct{
     using _get_v_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_cull_mask: struct{
     using _set_cull_mask: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ Camera3D_MethodBind_List :: struct {
   },
     get_cull_mask: struct{
     using _get_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_environment: struct{
     using _set_environment: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ Camera3D_MethodBind_List :: struct {
   },
     get_environment: struct{
     using _get_environment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^Environment)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^Environment)
   },
   set_attributes: struct{
     using _set_attributes: ^GDW.MethodBind,
@@ -171,7 +171,7 @@ Camera3D_MethodBind_List :: struct {
   },
     get_attributes: struct{
     using _get_attributes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^CameraAttributes)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^CameraAttributes)
   },
   set_compositor: struct{
     using _set_compositor: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ Camera3D_MethodBind_List :: struct {
   },
     get_compositor: struct{
     using _get_compositor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^Compositor)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^Compositor)
   },
   set_keep_aspect_mode: struct{
     using _set_keep_aspect_mode: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ Camera3D_MethodBind_List :: struct {
   },
     get_keep_aspect_mode: struct{
     using _get_keep_aspect_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^Camera3D_KeepAspect)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^Camera3D_KeepAspect)
   },
   set_doppler_tracking: struct{
     using _set_doppler_tracking: ^GDW.MethodBind,
@@ -195,11 +195,11 @@ Camera3D_MethodBind_List :: struct {
   },
     get_doppler_tracking: struct{
     using _get_doppler_tracking: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^Camera3D_DopplerTracking)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^Camera3D_DopplerTracking)
   },
   get_frustum: struct{
     using _get_frustum: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   is_position_in_frustum: struct{
     using _is_position_in_frustum: ^GDW.MethodBind,
@@ -207,11 +207,11 @@ Camera3D_MethodBind_List :: struct {
   },
   get_camera_rid: struct{
     using _get_camera_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_pyramid_shape_rid: struct{
     using _get_pyramid_shape_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Camera3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_cull_mask_value: struct{
     using _set_cull_mask_value: ^GDW.MethodBind,

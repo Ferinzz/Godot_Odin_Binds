@@ -17,7 +17,7 @@ OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict :: enum i64 {
 OpenXRSpatialCapabilityConfigurationAprilTag_MethodBind_List :: struct {
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
   set_april_dict: struct{
     using _set_april_dict: ^GDW.MethodBind,
@@ -25,7 +25,7 @@ OpenXRSpatialCapabilityConfigurationAprilTag_MethodBind_List :: struct {
   },
     get_april_dict: struct{
     using _get_april_dict: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, #by_ptr args: i64 = 0, r_ret: ^OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, args: rawptr = nil, r_ret: ^OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict)
   },
 };
 OpenXRSpatialCapabilityConfigurationAprilTag_Init_ :: proc (OpenXRSpatialCapabilityConfigurationAprilTag_methods: ^OpenXRSpatialCapabilityConfigurationAprilTag_MethodBind_List, loc := #caller_location) {

@@ -22,7 +22,7 @@ RDShaderSource_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDShaderSource, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_ShaderLanguage)
+    m_call: proc(_:^GDW.MethodBind, obj: RDShaderSource, args: rawptr = nil, r_ret: ^RenderingDevice_ShaderLanguage)
   },
 };
 RDShaderSource_Init_ :: proc (RDShaderSource_methods: ^RDShaderSource_MethodBind_List, loc := #caller_location) {

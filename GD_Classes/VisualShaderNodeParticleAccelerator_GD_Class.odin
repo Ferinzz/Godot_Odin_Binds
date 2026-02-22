@@ -21,7 +21,7 @@ VisualShaderNodeParticleAccelerator_MethodBind_List :: struct {
   },
     get_mode: struct{
     using _get_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleAccelerator, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeParticleAccelerator_Mode)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleAccelerator, args: rawptr = nil, r_ret: ^VisualShaderNodeParticleAccelerator_Mode)
   },
 };
 VisualShaderNodeParticleAccelerator_Init_ :: proc (VisualShaderNodeParticleAccelerator_methods: ^VisualShaderNodeParticleAccelerator_MethodBind_List, loc := #caller_location) {

@@ -22,7 +22,7 @@ RetargetModifier3D_MethodBind_List :: struct {
   },
     get_profile: struct{
     using _get_profile: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, #by_ptr args: i64 = 0, r_ret: ^SkeletonProfile)
+    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, args: rawptr = nil, r_ret: ^SkeletonProfile)
   },
   set_use_global_pose: struct{
     using _set_use_global_pose: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RetargetModifier3D_MethodBind_List :: struct {
   },
     is_using_global_pose: struct{
     using _is_using_global_pose: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enable_flags: struct{
     using _set_enable_flags: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RetargetModifier3D_MethodBind_List :: struct {
   },
     get_enable_flags: struct{
     using _get_enable_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, #by_ptr args: i64 = 0, r_ret: ^RetargetModifier3D_TransformFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, args: rawptr = nil, r_ret: ^RetargetModifier3D_TransformFlag)
   },
   set_position_enabled: struct{
     using _set_position_enabled: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ RetargetModifier3D_MethodBind_List :: struct {
   },
     is_position_enabled: struct{
     using _is_position_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_rotation_enabled: struct{
     using _set_rotation_enabled: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ RetargetModifier3D_MethodBind_List :: struct {
   },
     is_rotation_enabled: struct{
     using _is_rotation_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_scale_enabled: struct{
     using _set_scale_enabled: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ RetargetModifier3D_MethodBind_List :: struct {
   },
     is_scale_enabled: struct{
     using _is_scale_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RetargetModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 RetargetModifier3D_Init_ :: proc (RetargetModifier3D_methods: ^RetargetModifier3D_MethodBind_List, loc := #caller_location) {

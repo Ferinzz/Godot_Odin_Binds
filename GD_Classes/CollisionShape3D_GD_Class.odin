@@ -18,7 +18,7 @@ CollisionShape3D_MethodBind_List :: struct {
   },
     get_shape: struct{
     using _get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, #by_ptr args: i64 = 0, r_ret: ^Shape3D)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, args: rawptr = nil, r_ret: ^Shape3D)
   },
   set_disabled: struct{
     using _set_disabled: ^GDW.MethodBind,
@@ -26,11 +26,11 @@ CollisionShape3D_MethodBind_List :: struct {
   },
     is_disabled: struct{
     using _is_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   make_convex_from_siblings: struct{
     using _make_convex_from_siblings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_debug_color: struct{
     using _set_debug_color: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CollisionShape3D_MethodBind_List :: struct {
   },
     get_debug_color: struct{
     using _get_debug_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_enable_debug_fill: struct{
     using _set_enable_debug_fill: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CollisionShape3D_MethodBind_List :: struct {
   },
     get_enable_debug_fill: struct{
     using _get_enable_debug_fill: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CollisionShape3D_Init_ :: proc (CollisionShape3D_methods: ^CollisionShape3D_MethodBind_List, loc := #caller_location) {

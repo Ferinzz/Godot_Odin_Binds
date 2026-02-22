@@ -35,15 +35,15 @@ EditorExportPreset_MethodBind_List :: struct {
   },
   get_files_to_export: struct{
     using _get_files_to_export: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_customized_files: struct{
     using _get_customized_files: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_customized_files_count: struct{
     using _get_customized_files_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_export_file: struct{
     using _has_export_file: ^GDW.MethodBind,
@@ -59,67 +59,67 @@ EditorExportPreset_MethodBind_List :: struct {
   },
   get_preset_name: struct{
     using _get_preset_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_runnable: struct{
     using _is_runnable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   are_advanced_options_enabled: struct{
     using _are_advanced_options_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_dedicated_server: struct{
     using _is_dedicated_server: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_export_filter: struct{
     using _get_export_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^EditorExportPreset_ExportFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^EditorExportPreset_ExportFilter)
   },
   get_include_filter: struct{
     using _get_include_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_exclude_filter: struct{
     using _get_exclude_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_custom_features: struct{
     using _get_custom_features: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_patches: struct{
     using _get_patches: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_export_path: struct{
     using _get_export_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_encryption_in_filter: struct{
     using _get_encryption_in_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_encryption_ex_filter: struct{
     using _get_encryption_ex_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_encrypt_pck: struct{
     using _get_encrypt_pck: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_encrypt_directory: struct{
     using _get_encrypt_directory: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_encryption_key: struct{
     using _get_encryption_key: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_script_export_mode: struct{
     using _get_script_export_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, #by_ptr args: i64 = 0, r_ret: ^EditorExportPreset_ScriptExportMode)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorExportPreset, args: rawptr = nil, r_ret: ^EditorExportPreset_ScriptExportMode)
   },
   get_or_env: struct{
     using _get_or_env: ^GDW.MethodBind,

@@ -18,11 +18,11 @@ GLTFBufferView_MethodBind_List :: struct {
   },
   to_dictionary: struct{
     using _to_dictionary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_buffer: struct{
     using _get_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_buffer: struct{
     using _set_buffer: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ GLTFBufferView_MethodBind_List :: struct {
   },
     get_byte_offset: struct{
     using _get_byte_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_byte_offset: struct{
     using _set_byte_offset: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ GLTFBufferView_MethodBind_List :: struct {
   },
     get_byte_length: struct{
     using _get_byte_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_byte_length: struct{
     using _set_byte_length: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ GLTFBufferView_MethodBind_List :: struct {
   },
     get_byte_stride: struct{
     using _get_byte_stride: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_byte_stride: struct{
     using _set_byte_stride: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ GLTFBufferView_MethodBind_List :: struct {
   },
     get_indices: struct{
     using _get_indices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_indices: struct{
     using _set_indices: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ GLTFBufferView_MethodBind_List :: struct {
   },
     get_vertex_attributes: struct{
     using _get_vertex_attributes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFBufferView, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_vertex_attributes: struct{
     using _set_vertex_attributes: ^GDW.MethodBind,

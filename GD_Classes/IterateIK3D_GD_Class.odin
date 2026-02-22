@@ -14,7 +14,7 @@ IterateIK3D_MethodBind_List :: struct {
   },
     get_max_iterations: struct{
     using _get_max_iterations: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: IterateIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: IterateIK3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_min_distance: struct{
     using _set_min_distance: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ IterateIK3D_MethodBind_List :: struct {
   },
     get_min_distance: struct{
     using _get_min_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: IterateIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: IterateIK3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_angular_delta_limit: struct{
     using _set_angular_delta_limit: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ IterateIK3D_MethodBind_List :: struct {
   },
     get_angular_delta_limit: struct{
     using _get_angular_delta_limit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: IterateIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: IterateIK3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_deterministic: struct{
     using _set_deterministic: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ IterateIK3D_MethodBind_List :: struct {
   },
     is_deterministic: struct{
     using _is_deterministic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: IterateIK3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: IterateIK3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_target_node: struct{
     using _set_target_node: ^GDW.MethodBind,

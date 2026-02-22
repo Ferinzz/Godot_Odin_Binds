@@ -14,7 +14,7 @@ CSGPrimitive3D_MethodBind_List :: struct {
   },
     get_flip_faces: struct{
     using _get_flip_faces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGPrimitive3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGPrimitive3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CSGPrimitive3D_Init_ :: proc (CSGPrimitive3D_methods: ^CSGPrimitive3D_MethodBind_List, loc := #caller_location) {

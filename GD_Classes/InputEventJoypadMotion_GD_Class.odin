@@ -14,7 +14,7 @@ InputEventJoypadMotion_MethodBind_List :: struct {
   },
     get_axis: struct{
     using _get_axis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventJoypadMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.JoyAxis)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventJoypadMotion, args: rawptr = nil, r_ret: ^GDW.JoyAxis)
   },
   set_axis_value: struct{
     using _set_axis_value: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ InputEventJoypadMotion_MethodBind_List :: struct {
   },
     get_axis_value: struct{
     using _get_axis_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventJoypadMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventJoypadMotion, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 InputEventJoypadMotion_Init_ :: proc (InputEventJoypadMotion_methods: ^InputEventJoypadMotion_MethodBind_List, loc := #caller_location) {

@@ -10,11 +10,11 @@ NavigationMeshSourceGeometryData2D :: ^GDW.Object
 NavigationMeshSourceGeometryData2D_MethodBind_List :: struct {
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     has_data: struct{
     using _has_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_traversable_outlines: struct{
     using _set_traversable_outlines: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ NavigationMeshSourceGeometryData2D_MethodBind_List :: struct {
   },
     get_traversable_outlines: struct{
     using _get_traversable_outlines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_obstruction_outlines: struct{
     using _set_obstruction_outlines: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ NavigationMeshSourceGeometryData2D_MethodBind_List :: struct {
   },
     get_obstruction_outlines: struct{
     using _get_obstruction_outlines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   append_traversable_outlines: struct{
     using _append_traversable_outlines: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ NavigationMeshSourceGeometryData2D_MethodBind_List :: struct {
   },
     clear_projected_obstructions: struct{
     using _clear_projected_obstructions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_projected_obstructions: struct{
     using _set_projected_obstructions: ^GDW.MethodBind,
@@ -66,11 +66,11 @@ NavigationMeshSourceGeometryData2D_MethodBind_List :: struct {
   },
     get_projected_obstructions: struct{
     using _get_projected_obstructions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_bounds: struct{
     using _get_bounds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData2D, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
 };
 NavigationMeshSourceGeometryData2D_Init_ :: proc (NavigationMeshSourceGeometryData2D_methods: ^NavigationMeshSourceGeometryData2D_MethodBind_List, loc := #caller_location) {

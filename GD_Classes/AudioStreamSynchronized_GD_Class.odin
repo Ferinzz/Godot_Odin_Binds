@@ -17,7 +17,7 @@ AudioStreamSynchronized_MethodBind_List :: struct {
   },
     get_stream_count: struct{
     using _get_stream_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamSynchronized, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamSynchronized, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sync_stream: struct{
     using _set_sync_stream: ^GDW.MethodBind,

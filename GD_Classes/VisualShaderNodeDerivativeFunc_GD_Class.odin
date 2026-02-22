@@ -36,7 +36,7 @@ VisualShaderNodeDerivativeFunc_MethodBind_List :: struct {
   },
     get_op_type: struct{
     using _get_op_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeDerivativeFunc, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeDerivativeFunc_OpType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeDerivativeFunc, args: rawptr = nil, r_ret: ^VisualShaderNodeDerivativeFunc_OpType)
   },
   set_function: struct{
     using _set_function: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ VisualShaderNodeDerivativeFunc_MethodBind_List :: struct {
   },
     get_function: struct{
     using _get_function: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeDerivativeFunc, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeDerivativeFunc_Function)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeDerivativeFunc, args: rawptr = nil, r_ret: ^VisualShaderNodeDerivativeFunc_Function)
   },
   set_precision: struct{
     using _set_precision: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ VisualShaderNodeDerivativeFunc_MethodBind_List :: struct {
   },
     get_precision: struct{
     using _get_precision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeDerivativeFunc, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeDerivativeFunc_Precision)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeDerivativeFunc, args: rawptr = nil, r_ret: ^VisualShaderNodeDerivativeFunc_Precision)
   },
 };
 VisualShaderNodeDerivativeFunc_Init_ :: proc (VisualShaderNodeDerivativeFunc_methods: ^VisualShaderNodeDerivativeFunc_MethodBind_List, loc := #caller_location) {

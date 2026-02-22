@@ -191,11 +191,11 @@ TextServer_MethodBind_List :: struct {
   },
   get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_features: struct{
     using _get_features: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   load_support_data: struct{
     using _load_support_data: ^GDW.MethodBind,
@@ -203,11 +203,11 @@ TextServer_MethodBind_List :: struct {
   },
   get_support_data_filename: struct{
     using _get_support_data_filename: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_support_data_info: struct{
     using _get_support_data_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   save_support_data: struct{
     using _save_support_data: ^GDW.MethodBind,
@@ -215,7 +215,7 @@ TextServer_MethodBind_List :: struct {
   },
   get_support_data: struct{
     using _get_support_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServer, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   is_locale_using_support_data: struct{
     using _is_locale_using_support_data: ^GDW.MethodBind,
@@ -243,7 +243,7 @@ TextServer_MethodBind_List :: struct {
   },
     create_font: struct{
     using _create_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServer, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServer, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   create_font_linked_variation: struct{
     using _create_font_linked_variation: ^GDW.MethodBind,
@@ -383,7 +383,7 @@ TextServer_MethodBind_List :: struct {
   },
   font_clear_system_fallback_cache: struct{
     using _font_clear_system_fallback_cache: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     font_set_force_autohinter: struct{
     using _font_set_force_autohinter: ^GDW.MethodBind,
@@ -735,7 +735,7 @@ TextServer_MethodBind_List :: struct {
   },
   font_get_global_oversampling: struct{
     using _font_get_global_oversampling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   font_set_global_oversampling: struct{
     using _font_set_global_oversampling: ^GDW.MethodBind,

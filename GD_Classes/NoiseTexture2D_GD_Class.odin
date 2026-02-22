@@ -22,7 +22,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     is_generating_mipmaps: struct{
     using _is_generating_mipmaps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_noise: struct{
     using _set_noise: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     get_noise: struct{
     using _get_noise: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^Noise)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^Noise)
   },
   set_color_ramp: struct{
     using _set_color_ramp: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     get_color_ramp: struct{
     using _get_color_ramp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^Gradient)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^Gradient)
   },
   set_seamless: struct{
     using _set_seamless: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     get_seamless: struct{
     using _get_seamless: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_invert: struct{
     using _set_invert: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     get_invert: struct{
     using _get_invert: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_in_3d_space: struct{
     using _set_in_3d_space: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     is_in_3d_space: struct{
     using _is_in_3d_space: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_as_normal_map: struct{
     using _set_as_normal_map: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     is_normal_map: struct{
     using _is_normal_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_normalize: struct{
     using _set_normalize: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     is_normalized: struct{
     using _is_normalized: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_seamless_blend_skirt: struct{
     using _set_seamless_blend_skirt: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     get_seamless_blend_skirt: struct{
     using _get_seamless_blend_skirt: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bump_strength: struct{
     using _set_bump_strength: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ NoiseTexture2D_MethodBind_List :: struct {
   },
     get_bump_strength: struct{
     using _get_bump_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NoiseTexture2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 NoiseTexture2D_Init_ :: proc (NoiseTexture2D_methods: ^NoiseTexture2D_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ Shape3D_MethodBind_List :: struct {
   },
     get_custom_solver_bias: struct{
     using _get_custom_solver_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Shape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_margin: struct{
     using _set_margin: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ Shape3D_MethodBind_List :: struct {
   },
     get_margin: struct{
     using _get_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Shape3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_debug_mesh: struct{
     using _get_debug_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shape3D, #by_ptr args: i64 = 0, r_ret: ^ArrayMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: Shape3D, args: rawptr = nil, r_ret: ^ArrayMesh)
   },
 };
 Shape3D_Init_ :: proc (Shape3D_methods: ^Shape3D_MethodBind_List, loc := #caller_location) {

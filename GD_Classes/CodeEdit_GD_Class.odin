@@ -40,7 +40,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     get_indent_size: struct{
     using _get_indent_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_indent_using_spaces: struct{
     using _set_indent_using_spaces: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_indent_using_spaces: struct{
     using _is_indent_using_spaces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_indent_enabled: struct{
     using _set_auto_indent_enabled: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_auto_indent_enabled: struct{
     using _is_auto_indent_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_indent_prefixes: struct{
     using _set_auto_indent_prefixes: ^GDW.MethodBind,
@@ -64,19 +64,19 @@ CodeEdit_MethodBind_List :: struct {
   },
     get_auto_indent_prefixes: struct{
     using _get_auto_indent_prefixes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   do_indent: struct{
     using _do_indent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     indent_lines: struct{
     using _indent_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     unindent_lines: struct{
     using _unindent_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     convert_indent: struct{
     using _convert_indent: ^GDW.MethodBind,
@@ -88,7 +88,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_auto_brace_completion_enabled: struct{
     using _is_auto_brace_completion_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_highlight_matching_braces_enabled: struct{
     using _set_highlight_matching_braces_enabled: ^GDW.MethodBind,
@@ -96,7 +96,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_highlight_matching_braces_enabled: struct{
     using _is_highlight_matching_braces_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_auto_brace_completion_pair: struct{
     using _add_auto_brace_completion_pair: ^GDW.MethodBind,
@@ -108,7 +108,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     get_auto_brace_completion_pairs: struct{
     using _get_auto_brace_completion_pairs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   has_auto_brace_completion_open_key: struct{
     using _has_auto_brace_completion_open_key: ^GDW.MethodBind,
@@ -128,7 +128,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_drawing_breakpoints_gutter: struct{
     using _is_drawing_breakpoints_gutter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_bookmarks_gutter: struct{
     using _set_draw_bookmarks_gutter: ^GDW.MethodBind,
@@ -136,7 +136,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_drawing_bookmarks_gutter: struct{
     using _is_drawing_bookmarks_gutter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_executing_lines_gutter: struct{
     using _set_draw_executing_lines_gutter: ^GDW.MethodBind,
@@ -144,7 +144,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_drawing_executing_lines_gutter: struct{
     using _is_drawing_executing_lines_gutter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_line_as_breakpoint: struct{
     using _set_line_as_breakpoint: ^GDW.MethodBind,
@@ -156,11 +156,11 @@ CodeEdit_MethodBind_List :: struct {
   },
   clear_breakpointed_lines: struct{
     using _clear_breakpointed_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_breakpointed_lines: struct{
     using _get_breakpointed_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_line_as_bookmarked: struct{
     using _set_line_as_bookmarked: ^GDW.MethodBind,
@@ -172,11 +172,11 @@ CodeEdit_MethodBind_List :: struct {
   },
   clear_bookmarked_lines: struct{
     using _clear_bookmarked_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_bookmarked_lines: struct{
     using _get_bookmarked_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_line_as_executing: struct{
     using _set_line_as_executing: ^GDW.MethodBind,
@@ -188,11 +188,11 @@ CodeEdit_MethodBind_List :: struct {
   },
   clear_executing_lines: struct{
     using _clear_executing_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_executing_lines: struct{
     using _get_executing_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_draw_line_numbers: struct{
     using _set_draw_line_numbers: ^GDW.MethodBind,
@@ -200,7 +200,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_draw_line_numbers_enabled: struct{
     using _is_draw_line_numbers_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_line_numbers_zero_padded: struct{
     using _set_line_numbers_zero_padded: ^GDW.MethodBind,
@@ -208,7 +208,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_line_numbers_zero_padded: struct{
     using _is_line_numbers_zero_padded: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_line_numbers_min_digits: struct{
     using _set_line_numbers_min_digits: ^GDW.MethodBind,
@@ -216,7 +216,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     get_line_numbers_min_digits: struct{
     using _get_line_numbers_min_digits: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_draw_fold_gutter: struct{
     using _set_draw_fold_gutter: ^GDW.MethodBind,
@@ -224,7 +224,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_drawing_fold_gutter: struct{
     using _is_drawing_fold_gutter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_line_folding_enabled: struct{
     using _set_line_folding_enabled: ^GDW.MethodBind,
@@ -232,7 +232,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_line_folding_enabled: struct{
     using _is_line_folding_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   can_fold_line: struct{
     using _can_fold_line: ^GDW.MethodBind,
@@ -248,11 +248,11 @@ CodeEdit_MethodBind_List :: struct {
   },
     fold_all_lines: struct{
     using _fold_all_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     unfold_all_lines: struct{
     using _unfold_all_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     toggle_foldable_line: struct{
     using _toggle_foldable_line: ^GDW.MethodBind,
@@ -260,7 +260,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     toggle_foldable_lines_at_carets: struct{
     using _toggle_foldable_lines_at_carets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_line_folded: struct{
     using _is_line_folded: ^GDW.MethodBind,
@@ -268,19 +268,19 @@ CodeEdit_MethodBind_List :: struct {
   },
   get_folded_lines: struct{
     using _get_folded_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   create_code_region: struct{
     using _create_code_region: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_code_region_start_tag: struct{
     using _get_code_region_start_tag: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_code_region_end_tag: struct{
     using _get_code_region_end_tag: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_code_region_tags: struct{
     using _set_code_region_tags: ^GDW.MethodBind,
@@ -312,11 +312,11 @@ CodeEdit_MethodBind_List :: struct {
   },
     clear_string_delimiters: struct{
     using _clear_string_delimiters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_string_delimiters: struct{
     using _get_string_delimiters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   is_in_string: struct{
     using _is_in_string: ^GDW.MethodBind,
@@ -340,11 +340,11 @@ CodeEdit_MethodBind_List :: struct {
   },
     clear_comment_delimiters: struct{
     using _clear_comment_delimiters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_comment_delimiters: struct{
     using _get_comment_delimiters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   is_in_comment: struct{
     using _is_in_comment: ^GDW.MethodBind,
@@ -376,7 +376,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     get_text_for_code_completion: struct{
     using _get_text_for_code_completion: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   request_code_completion: struct{
     using _request_code_completion: ^GDW.MethodBind,
@@ -392,7 +392,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     get_code_completion_options: struct{
     using _get_code_completion_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_code_completion_option: struct{
     using _get_code_completion_option: ^GDW.MethodBind,
@@ -400,7 +400,7 @@ CodeEdit_MethodBind_List :: struct {
   },
   get_code_completion_selected_index: struct{
     using _get_code_completion_selected_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_code_completion_selected_index: struct{
     using _set_code_completion_selected_index: ^GDW.MethodBind,
@@ -412,7 +412,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     cancel_code_completion: struct{
     using _cancel_code_completion: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_code_completion_enabled: struct{
     using _set_code_completion_enabled: ^GDW.MethodBind,
@@ -420,7 +420,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_code_completion_enabled: struct{
     using _is_code_completion_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_code_completion_prefixes: struct{
     using _set_code_completion_prefixes: ^GDW.MethodBind,
@@ -428,7 +428,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     get_code_completion_prefixes: struct{
     using _get_code_completion_prefixes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_line_length_guidelines: struct{
     using _set_line_length_guidelines: ^GDW.MethodBind,
@@ -436,7 +436,7 @@ CodeEdit_MethodBind_List :: struct {
   },
     get_line_length_guidelines: struct{
     using _get_line_length_guidelines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_symbol_lookup_on_click_enabled: struct{
     using _set_symbol_lookup_on_click_enabled: ^GDW.MethodBind,
@@ -444,11 +444,11 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_symbol_lookup_on_click_enabled: struct{
     using _is_symbol_lookup_on_click_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_text_for_symbol_lookup: struct{
     using _get_text_for_symbol_lookup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_text_with_cursor_char: struct{
     using _get_text_with_cursor_char: ^GDW.MethodBind,
@@ -464,27 +464,27 @@ CodeEdit_MethodBind_List :: struct {
   },
     is_symbol_tooltip_on_hover_enabled: struct{
     using _is_symbol_tooltip_on_hover_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   move_lines_up: struct{
     using _move_lines_up: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     move_lines_down: struct{
     using _move_lines_down: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     delete_lines: struct{
     using _delete_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     duplicate_selection: struct{
     using _duplicate_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     duplicate_lines: struct{
     using _duplicate_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 CodeEdit_Init_ :: proc (CodeEdit_methods: ^CodeEdit_MethodBind_List, loc := #caller_location) {

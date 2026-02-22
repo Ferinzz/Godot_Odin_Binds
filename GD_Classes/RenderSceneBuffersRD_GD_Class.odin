@@ -74,47 +74,47 @@ RenderSceneBuffersRD_MethodBind_List :: struct {
   },
   get_render_target: struct{
     using _get_render_target: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_view_count: struct{
     using _get_view_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_internal_size: struct{
     using _get_internal_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   get_target_size: struct{
     using _get_target_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   get_scaling_3d_mode: struct{
     using _get_scaling_3d_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^RenderingServer_ViewportScaling3DMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^RenderingServer_ViewportScaling3DMode)
   },
   get_fsr_sharpness: struct{
     using _get_fsr_sharpness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_msaa_3d: struct{
     using _get_msaa_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^RenderingServer_ViewportMSAA)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^RenderingServer_ViewportMSAA)
   },
   get_texture_samples: struct{
     using _get_texture_samples: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureSamples)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^RenderingDevice_TextureSamples)
   },
   get_screen_space_aa: struct{
     using _get_screen_space_aa: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^RenderingServer_ViewportScreenSpaceAA)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^RenderingServer_ViewportScreenSpaceAA)
   },
   get_use_taa: struct{
     using _get_use_taa: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_use_debanding: struct{
     using _get_use_debanding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneBuffersRD, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 RenderSceneBuffersRD_Init_ :: proc (RenderSceneBuffersRD_methods: ^RenderSceneBuffersRD_MethodBind_List, loc := #caller_location) {

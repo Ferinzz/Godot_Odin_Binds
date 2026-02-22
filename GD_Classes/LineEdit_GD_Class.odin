@@ -62,15 +62,15 @@ LineEdit_ExpandMode :: enum i64 {
 LineEdit_MethodBind_List :: struct {
   has_ime_text: struct{
     using _has_ime_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   cancel_ime: struct{
     using _cancel_ime: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     apply_ime: struct{
     using _apply_ime: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_horizontal_alignment: struct{
     using _set_horizontal_alignment: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_horizontal_alignment: struct{
     using _get_horizontal_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   edit: struct{
     using _edit: ^GDW.MethodBind,
@@ -86,11 +86,11 @@ LineEdit_MethodBind_List :: struct {
   },
     unedit: struct{
     using _unedit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_editing: struct{
     using _is_editing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_keep_editing_on_text_submit: struct{
     using _set_keep_editing_on_text_submit: ^GDW.MethodBind,
@@ -98,11 +98,11 @@ LineEdit_MethodBind_List :: struct {
   },
     is_editing_kept_on_text_submit: struct{
     using _is_editing_kept_on_text_submit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     select: struct{
     using _select: ^GDW.MethodBind,
@@ -110,35 +110,35 @@ LineEdit_MethodBind_List :: struct {
   },
     select_all: struct{
     using _select_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     deselect: struct{
     using _deselect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     has_undo: struct{
     using _has_undo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   has_redo: struct{
     using _has_redo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   has_selection: struct{
     using _has_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_selected_text: struct{
     using _get_selected_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_selection_from_column: struct{
     using _get_selection_from_column: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_selection_to_column: struct{
     using _get_selection_to_column: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_text: struct{
     using _set_text: ^GDW.MethodBind,
@@ -146,11 +146,11 @@ LineEdit_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_draw_control_chars: struct{
     using _get_draw_control_chars: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_control_chars: struct{
     using _set_draw_control_chars: ^GDW.MethodBind,
@@ -162,7 +162,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^Control_TextDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^Control_TextDirection)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -170,7 +170,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_structured_text_bidi_override: struct{
     using _set_structured_text_bidi_override: ^GDW.MethodBind,
@@ -178,7 +178,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override: struct{
     using _get_structured_text_bidi_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^TextServer_StructuredTextParser)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^TextServer_StructuredTextParser)
   },
   set_structured_text_bidi_override_options: struct{
     using _set_structured_text_bidi_override_options: ^GDW.MethodBind,
@@ -186,7 +186,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override_options: struct{
     using _get_structured_text_bidi_override_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_placeholder: struct{
     using _set_placeholder: ^GDW.MethodBind,
@@ -194,7 +194,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_placeholder: struct{
     using _get_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_caret_column: struct{
     using _set_caret_column: ^GDW.MethodBind,
@@ -202,7 +202,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_caret_column: struct{
     using _get_caret_column: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_next_composite_character_column: struct{
     using _get_next_composite_character_column: ^GDW.MethodBind,
@@ -214,7 +214,7 @@ LineEdit_MethodBind_List :: struct {
   },
   get_scroll_offset: struct{
     using _get_scroll_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_expand_to_text_length_enabled: struct{
     using _set_expand_to_text_length_enabled: ^GDW.MethodBind,
@@ -222,7 +222,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_expand_to_text_length_enabled: struct{
     using _is_expand_to_text_length_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_caret_blink_enabled: struct{
     using _set_caret_blink_enabled: ^GDW.MethodBind,
@@ -230,7 +230,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_caret_blink_enabled: struct{
     using _is_caret_blink_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_caret_mid_grapheme_enabled: struct{
     using _set_caret_mid_grapheme_enabled: ^GDW.MethodBind,
@@ -238,7 +238,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_caret_mid_grapheme_enabled: struct{
     using _is_caret_mid_grapheme_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_caret_force_displayed: struct{
     using _set_caret_force_displayed: ^GDW.MethodBind,
@@ -246,7 +246,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_caret_force_displayed: struct{
     using _is_caret_force_displayed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_caret_blink_interval: struct{
     using _set_caret_blink_interval: ^GDW.MethodBind,
@@ -254,7 +254,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_caret_blink_interval: struct{
     using _get_caret_blink_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_length: struct{
     using _set_max_length: ^GDW.MethodBind,
@@ -262,7 +262,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_max_length: struct{
     using _get_max_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   insert_text_at_caret: struct{
     using _insert_text_at_caret: ^GDW.MethodBind,
@@ -270,7 +270,7 @@ LineEdit_MethodBind_List :: struct {
   },
     delete_char_at_caret: struct{
     using _delete_char_at_caret: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     delete_text: struct{
     using _delete_text: ^GDW.MethodBind,
@@ -282,7 +282,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_editable: struct{
     using _is_editable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_secret: struct{
     using _set_secret: ^GDW.MethodBind,
@@ -290,7 +290,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_secret: struct{
     using _is_secret: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_secret_character: struct{
     using _set_secret_character: ^GDW.MethodBind,
@@ -298,7 +298,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_secret_character: struct{
     using _get_secret_character: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   menu_option: struct{
     using _menu_option: ^GDW.MethodBind,
@@ -306,11 +306,11 @@ LineEdit_MethodBind_List :: struct {
   },
     get_menu: struct{
     using _get_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^PopupMenu)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^PopupMenu)
   },
   is_menu_visible: struct{
     using _is_menu_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_context_menu_enabled: struct{
     using _set_context_menu_enabled: ^GDW.MethodBind,
@@ -318,7 +318,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_context_menu_enabled: struct{
     using _is_context_menu_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_emoji_menu_enabled: struct{
     using _set_emoji_menu_enabled: ^GDW.MethodBind,
@@ -326,7 +326,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_emoji_menu_enabled: struct{
     using _is_emoji_menu_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_backspace_deletes_composite_character_enabled: struct{
     using _set_backspace_deletes_composite_character_enabled: ^GDW.MethodBind,
@@ -334,7 +334,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_backspace_deletes_composite_character_enabled: struct{
     using _is_backspace_deletes_composite_character_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_virtual_keyboard_enabled: struct{
     using _set_virtual_keyboard_enabled: ^GDW.MethodBind,
@@ -342,7 +342,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_virtual_keyboard_enabled: struct{
     using _is_virtual_keyboard_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_virtual_keyboard_show_on_focus: struct{
     using _set_virtual_keyboard_show_on_focus: ^GDW.MethodBind,
@@ -350,7 +350,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_virtual_keyboard_show_on_focus: struct{
     using _get_virtual_keyboard_show_on_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_virtual_keyboard_type: struct{
     using _set_virtual_keyboard_type: ^GDW.MethodBind,
@@ -358,7 +358,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_virtual_keyboard_type: struct{
     using _get_virtual_keyboard_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^LineEdit_VirtualKeyboardType)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^LineEdit_VirtualKeyboardType)
   },
   set_clear_button_enabled: struct{
     using _set_clear_button_enabled: ^GDW.MethodBind,
@@ -366,7 +366,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_clear_button_enabled: struct{
     using _is_clear_button_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shortcut_keys_enabled: struct{
     using _set_shortcut_keys_enabled: ^GDW.MethodBind,
@@ -374,7 +374,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_shortcut_keys_enabled: struct{
     using _is_shortcut_keys_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_middle_mouse_paste_enabled: struct{
     using _set_middle_mouse_paste_enabled: ^GDW.MethodBind,
@@ -382,7 +382,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_middle_mouse_paste_enabled: struct{
     using _is_middle_mouse_paste_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_selecting_enabled: struct{
     using _set_selecting_enabled: ^GDW.MethodBind,
@@ -390,7 +390,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_selecting_enabled: struct{
     using _is_selecting_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_deselect_on_focus_loss_enabled: struct{
     using _set_deselect_on_focus_loss_enabled: ^GDW.MethodBind,
@@ -398,7 +398,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_deselect_on_focus_loss_enabled: struct{
     using _is_deselect_on_focus_loss_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_and_drop_selection_enabled: struct{
     using _set_drag_and_drop_selection_enabled: ^GDW.MethodBind,
@@ -406,7 +406,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_drag_and_drop_selection_enabled: struct{
     using _is_drag_and_drop_selection_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_right_icon: struct{
     using _set_right_icon: ^GDW.MethodBind,
@@ -414,7 +414,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_right_icon: struct{
     using _get_right_icon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_icon_expand_mode: struct{
     using _set_icon_expand_mode: ^GDW.MethodBind,
@@ -422,7 +422,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_icon_expand_mode: struct{
     using _get_icon_expand_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^LineEdit_ExpandMode)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^LineEdit_ExpandMode)
   },
   set_right_icon_scale: struct{
     using _set_right_icon_scale: ^GDW.MethodBind,
@@ -430,7 +430,7 @@ LineEdit_MethodBind_List :: struct {
   },
     get_right_icon_scale: struct{
     using _get_right_icon_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_flat: struct{
     using _set_flat: ^GDW.MethodBind,
@@ -438,7 +438,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_flat: struct{
     using _is_flat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_select_all_on_focus: struct{
     using _set_select_all_on_focus: ^GDW.MethodBind,
@@ -446,7 +446,7 @@ LineEdit_MethodBind_List :: struct {
   },
     is_select_all_on_focus: struct{
     using _is_select_all_on_focus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LineEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 LineEdit_Init_ :: proc (LineEdit_methods: ^LineEdit_MethodBind_List, loc := #caller_location) {

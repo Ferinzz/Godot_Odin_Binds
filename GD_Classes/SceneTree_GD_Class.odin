@@ -17,7 +17,7 @@ SceneTree_GroupCallFlags :: enum i64 {
 SceneTree_MethodBind_List :: struct {
   get_root: struct{
     using _get_root: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^Window)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^Window)
   },
   has_group: struct{
     using _has_group: ^GDW.MethodBind,
@@ -25,15 +25,15 @@ SceneTree_MethodBind_List :: struct {
   },
   is_accessibility_enabled: struct{
     using _is_accessibility_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_accessibility_supported: struct{
     using _is_accessibility_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_auto_accept_quit: struct{
     using _is_auto_accept_quit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_accept_quit: struct{
     using _set_auto_accept_quit: ^GDW.MethodBind,
@@ -41,7 +41,7 @@ SceneTree_MethodBind_List :: struct {
   },
     is_quit_on_go_back: struct{
     using _is_quit_on_go_back: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_quit_on_go_back: struct{
     using _set_quit_on_go_back: ^GDW.MethodBind,
@@ -53,7 +53,7 @@ SceneTree_MethodBind_List :: struct {
   },
     is_debugging_collisions_hint: struct{
     using _is_debugging_collisions_hint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_debug_paths_hint: struct{
     using _set_debug_paths_hint: ^GDW.MethodBind,
@@ -61,7 +61,7 @@ SceneTree_MethodBind_List :: struct {
   },
     is_debugging_paths_hint: struct{
     using _is_debugging_paths_hint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_debug_navigation_hint: struct{
     using _set_debug_navigation_hint: ^GDW.MethodBind,
@@ -69,7 +69,7 @@ SceneTree_MethodBind_List :: struct {
   },
     is_debugging_navigation_hint: struct{
     using _is_debugging_navigation_hint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_edited_scene_root: struct{
     using _set_edited_scene_root: ^GDW.MethodBind,
@@ -77,7 +77,7 @@ SceneTree_MethodBind_List :: struct {
   },
     get_edited_scene_root: struct{
     using _get_edited_scene_root: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^Node)
   },
   set_pause: struct{
     using _set_pause: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ SceneTree_MethodBind_List :: struct {
   },
     is_paused: struct{
     using _is_paused: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   create_timer: struct{
     using _create_timer: ^GDW.MethodBind,
@@ -93,19 +93,19 @@ SceneTree_MethodBind_List :: struct {
   },
   create_tween: struct{
     using _create_tween: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^Tween)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^Tween)
   },
   get_processed_tweens: struct{
     using _get_processed_tweens: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_node_count: struct{
     using _get_node_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_frame: struct{
     using _get_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   quit: struct{
     using _quit: ^GDW.MethodBind,
@@ -117,7 +117,7 @@ SceneTree_MethodBind_List :: struct {
   },
     is_physics_interpolation_enabled: struct{
     using _is_physics_interpolation_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   queue_delete: struct{
     using _queue_delete: ^GDW.MethodBind,
@@ -125,7 +125,7 @@ SceneTree_MethodBind_List :: struct {
   },
     call_group_flags: struct{
     using _call_group_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: struct{flags: ^GDW.Int, group: ^GDW.StringName, method: ^GDW.StringName, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: rawptr = nil)
   },
     notify_group_flags: struct{
     using _notify_group_flags: ^GDW.MethodBind,
@@ -137,7 +137,7 @@ SceneTree_MethodBind_List :: struct {
   },
     call_group: struct{
     using _call_group: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: struct{group: ^GDW.StringName, method: ^GDW.StringName, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: rawptr = nil)
   },
     notify_group: struct{
     using _notify_group: ^GDW.MethodBind,
@@ -165,7 +165,7 @@ SceneTree_MethodBind_List :: struct {
   },
     get_current_scene: struct{
     using _get_current_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^Node)
   },
   change_scene_to_file: struct{
     using _change_scene_to_file: ^GDW.MethodBind,
@@ -181,11 +181,11 @@ SceneTree_MethodBind_List :: struct {
   },
   reload_current_scene: struct{
     using _reload_current_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   unload_current_scene: struct{
     using _unload_current_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_multiplayer: struct{
     using _set_multiplayer: ^GDW.MethodBind,
@@ -201,7 +201,7 @@ SceneTree_MethodBind_List :: struct {
   },
     is_multiplayer_poll_enabled: struct{
     using _is_multiplayer_poll_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 SceneTree_Init_ :: proc (SceneTree_methods: ^SceneTree_MethodBind_List, loc := #caller_location) {

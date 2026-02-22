@@ -46,11 +46,11 @@ LimitAngularVelocityModifier3D_MethodBind_List :: struct {
   },
     get_chain_count: struct{
     using _get_chain_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   clear_chains: struct{
     using _clear_chains: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_max_angular_velocity: struct{
     using _set_max_angular_velocity: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ LimitAngularVelocityModifier3D_MethodBind_List :: struct {
   },
     get_max_angular_velocity: struct{
     using _get_max_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_exclude: struct{
     using _set_exclude: ^GDW.MethodBind,
@@ -66,11 +66,11 @@ LimitAngularVelocityModifier3D_MethodBind_List :: struct {
   },
     is_exclude: struct{
     using _is_exclude: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   reset: struct{
     using _reset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LimitAngularVelocityModifier3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 LimitAngularVelocityModifier3D_Init_ :: proc (LimitAngularVelocityModifier3D_methods: ^LimitAngularVelocityModifier3D_MethodBind_List, loc := #caller_location) {

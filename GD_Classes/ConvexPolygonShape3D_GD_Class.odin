@@ -14,7 +14,7 @@ ConvexPolygonShape3D_MethodBind_List :: struct {
   },
     get_points: struct{
     using _get_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConvexPolygonShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ConvexPolygonShape3D, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
 };
 ConvexPolygonShape3D_Init_ :: proc (ConvexPolygonShape3D_methods: ^ConvexPolygonShape3D_MethodBind_List, loc := #caller_location) {

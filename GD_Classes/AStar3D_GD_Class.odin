@@ -16,7 +16,7 @@ AStar3D_Virtual_Info :: struct {
 AStar3D_MethodBind_List :: struct {
   get_available_point_id: struct{
     using _get_available_point_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_point: struct{
     using _add_point: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ AStar3D_MethodBind_List :: struct {
   },
   get_point_ids: struct{
     using _get_point_ids: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
   set_point_disabled: struct{
     using _set_point_disabled: ^GDW.MethodBind,
@@ -68,7 +68,7 @@ AStar3D_MethodBind_List :: struct {
   },
     is_neighbor_filter_enabled: struct{
     using _is_neighbor_filter_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   connect_points: struct{
     using _connect_points: ^GDW.MethodBind,
@@ -84,11 +84,11 @@ AStar3D_MethodBind_List :: struct {
   },
   get_point_count: struct{
     using _get_point_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_point_capacity: struct{
     using _get_point_capacity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   reserve_space: struct{
     using _reserve_space: ^GDW.MethodBind,
@@ -96,7 +96,7 @@ AStar3D_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AStar3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_closest_point: struct{
     using _get_closest_point: ^GDW.MethodBind,

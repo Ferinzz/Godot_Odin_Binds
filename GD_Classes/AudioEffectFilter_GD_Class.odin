@@ -21,7 +21,7 @@ AudioEffectFilter_MethodBind_List :: struct {
   },
     get_cutoff: struct{
     using _get_cutoff: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectFilter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectFilter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_resonance: struct{
     using _set_resonance: ^GDW.MethodBind,
@@ -29,7 +29,7 @@ AudioEffectFilter_MethodBind_List :: struct {
   },
     get_resonance: struct{
     using _get_resonance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectFilter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectFilter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_gain: struct{
     using _set_gain: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ AudioEffectFilter_MethodBind_List :: struct {
   },
     get_gain: struct{
     using _get_gain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectFilter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectFilter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_db: struct{
     using _set_db: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ AudioEffectFilter_MethodBind_List :: struct {
   },
     get_db: struct{
     using _get_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectFilter, #by_ptr args: i64 = 0, r_ret: ^AudioEffectFilter_FilterDB)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectFilter, args: rawptr = nil, r_ret: ^AudioEffectFilter_FilterDB)
   },
 };
 AudioEffectFilter_Init_ :: proc (AudioEffectFilter_methods: ^AudioEffectFilter_MethodBind_List, loc := #caller_location) {

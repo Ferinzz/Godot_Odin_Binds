@@ -14,7 +14,7 @@ FontVariation_MethodBind_List :: struct {
   },
     get_base_font: struct{
     using _get_base_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, #by_ptr args: i64 = 0, r_ret: ^Font)
+    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, args: rawptr = nil, r_ret: ^Font)
   },
   set_variation_opentype: struct{
     using _set_variation_opentype: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ FontVariation_MethodBind_List :: struct {
   },
     get_variation_opentype: struct{
     using _get_variation_opentype: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_variation_embolden: struct{
     using _set_variation_embolden: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ FontVariation_MethodBind_List :: struct {
   },
     get_variation_embolden: struct{
     using _get_variation_embolden: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_variation_face_index: struct{
     using _set_variation_face_index: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ FontVariation_MethodBind_List :: struct {
   },
     get_variation_face_index: struct{
     using _get_variation_face_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_variation_transform: struct{
     using _set_variation_transform: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ FontVariation_MethodBind_List :: struct {
   },
     get_variation_transform: struct{
     using _get_variation_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   set_opentype_features: struct{
     using _set_opentype_features: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ FontVariation_MethodBind_List :: struct {
   },
     get_baseline_offset: struct{
     using _get_baseline_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FontVariation, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 FontVariation_Init_ :: proc (FontVariation_methods: ^FontVariation_MethodBind_List, loc := #caller_location) {

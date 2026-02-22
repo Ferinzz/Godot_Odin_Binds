@@ -26,7 +26,7 @@ VisualShaderNodeSwitch_MethodBind_List :: struct {
   },
     get_op_type: struct{
     using _get_op_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeSwitch, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeSwitch_OpType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeSwitch, args: rawptr = nil, r_ret: ^VisualShaderNodeSwitch_OpType)
   },
 };
 VisualShaderNodeSwitch_Init_ :: proc (VisualShaderNodeSwitch_methods: ^VisualShaderNodeSwitch_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ PathFollow2D_MethodBind_List :: struct {
   },
     get_progress: struct{
     using _get_progress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_h_offset: struct{
     using _set_h_offset: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ PathFollow2D_MethodBind_List :: struct {
   },
     get_h_offset: struct{
     using _get_h_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_v_offset: struct{
     using _set_v_offset: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PathFollow2D_MethodBind_List :: struct {
   },
     get_v_offset: struct{
     using _get_v_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_progress_ratio: struct{
     using _set_progress_ratio: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ PathFollow2D_MethodBind_List :: struct {
   },
     get_progress_ratio: struct{
     using _get_progress_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rotates: struct{
     using _set_rotates: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ PathFollow2D_MethodBind_List :: struct {
   },
     is_rotating: struct{
     using _is_rotating: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_cubic_interpolation: struct{
     using _set_cubic_interpolation: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ PathFollow2D_MethodBind_List :: struct {
   },
     get_cubic_interpolation: struct{
     using _get_cubic_interpolation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_loop: struct{
     using _set_loop: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ PathFollow2D_MethodBind_List :: struct {
   },
     has_loop: struct{
     using _has_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PathFollow2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PathFollow2D_Init_ :: proc (PathFollow2D_methods: ^PathFollow2D_MethodBind_List, loc := #caller_location) {

@@ -17,7 +17,7 @@ StyleBox_Virtual_Info :: struct {
 StyleBox_MethodBind_List :: struct {
   get_minimum_size: struct{
     using _get_minimum_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBox, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBox, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_content_margin: struct{
     using _set_content_margin: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ StyleBox_MethodBind_List :: struct {
   },
   get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBox, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBox, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   draw: struct{
     using _draw: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ StyleBox_MethodBind_List :: struct {
   },
     get_current_item_drawn: struct{
     using _get_current_item_drawn: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBox, #by_ptr args: i64 = 0, r_ret: ^CanvasItem)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBox, args: rawptr = nil, r_ret: ^CanvasItem)
   },
   test_mask: struct{
     using _test_mask: ^GDW.MethodBind,

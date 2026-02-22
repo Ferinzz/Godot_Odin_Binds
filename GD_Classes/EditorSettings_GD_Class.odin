@@ -49,7 +49,7 @@ EditorSettings_MethodBind_List :: struct {
   },
     get_favorites: struct{
     using _get_favorites: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSettings, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_recent_dirs: struct{
     using _set_recent_dirs: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ EditorSettings_MethodBind_List :: struct {
   },
     get_recent_dirs: struct{
     using _get_recent_dirs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSettings, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_builtin_action_override: struct{
     using _set_builtin_action_override: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ EditorSettings_MethodBind_List :: struct {
   },
   get_shortcut_list: struct{
     using _get_shortcut_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSettings, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   check_changed_settings_in_group: struct{
     using _check_changed_settings_in_group: ^GDW.MethodBind,
@@ -93,7 +93,7 @@ EditorSettings_MethodBind_List :: struct {
   },
   get_changed_settings: struct{
     using _get_changed_settings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSettings, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   mark_setting_changed: struct{
     using _mark_setting_changed: ^GDW.MethodBind,

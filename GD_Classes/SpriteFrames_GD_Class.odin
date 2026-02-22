@@ -30,7 +30,7 @@ SpriteFrames_MethodBind_List :: struct {
   },
     get_animation_names: struct{
     using _get_animation_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteFrames, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteFrames, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_animation_speed: struct{
     using _set_animation_speed: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ SpriteFrames_MethodBind_List :: struct {
   },
     clear_all: struct{
     using _clear_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpriteFrames, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SpriteFrames, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 SpriteFrames_Init_ :: proc (SpriteFrames_methods: ^SpriteFrames_MethodBind_List, loc := #caller_location) {

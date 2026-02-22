@@ -14,7 +14,7 @@ SphereMesh_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_height: struct{
     using _set_height: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SphereMesh_MethodBind_List :: struct {
   },
     get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_radial_segments: struct{
     using _set_radial_segments: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ SphereMesh_MethodBind_List :: struct {
   },
     get_radial_segments: struct{
     using _get_radial_segments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_rings: struct{
     using _set_rings: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ SphereMesh_MethodBind_List :: struct {
   },
     get_rings: struct{
     using _get_rings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_is_hemisphere: struct{
     using _set_is_hemisphere: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ SphereMesh_MethodBind_List :: struct {
   },
     get_is_hemisphere: struct{
     using _get_is_hemisphere: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SphereMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 SphereMesh_Init_ :: proc (SphereMesh_methods: ^SphereMesh_MethodBind_List, loc := #caller_location) {

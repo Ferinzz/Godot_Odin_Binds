@@ -10,7 +10,7 @@ NavigationAgent2D :: ^GDW.Object
 NavigationAgent2D_MethodBind_List :: struct {
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_avoidance_enabled: struct{
     using _set_avoidance_enabled: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_avoidance_enabled: struct{
     using _get_avoidance_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_path_desired_distance: struct{
     using _set_path_desired_distance: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_path_desired_distance: struct{
     using _get_path_desired_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_target_desired_distance: struct{
     using _set_target_desired_distance: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_target_desired_distance: struct{
     using _get_target_desired_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_radius: struct{
     using _set_radius: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_neighbor_distance: struct{
     using _set_neighbor_distance: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_neighbor_distance: struct{
     using _get_neighbor_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_neighbors: struct{
     using _set_max_neighbors: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_max_neighbors: struct{
     using _get_max_neighbors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_time_horizon_agents: struct{
     using _set_time_horizon_agents: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_time_horizon_agents: struct{
     using _get_time_horizon_agents: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_time_horizon_obstacles: struct{
     using _set_time_horizon_obstacles: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_time_horizon_obstacles: struct{
     using _get_time_horizon_obstacles: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_speed: struct{
     using _set_max_speed: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_max_speed: struct{
     using _get_max_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_max_distance: struct{
     using _set_path_max_distance: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_path_max_distance: struct{
     using _get_path_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_navigation_layers: struct{
     using _set_navigation_layers: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_navigation_layers: struct{
     using _get_navigation_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_navigation_layer_value: struct{
     using _set_navigation_layer_value: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_pathfinding_algorithm: struct{
     using _get_pathfinding_algorithm: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^NavigationPathQueryParameters2D_PathfindingAlgorithm)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^NavigationPathQueryParameters2D_PathfindingAlgorithm)
   },
   set_path_postprocessing: struct{
     using _set_path_postprocessing: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_path_postprocessing: struct{
     using _get_path_postprocessing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^NavigationPathQueryParameters2D_PathPostProcessing)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^NavigationPathQueryParameters2D_PathPostProcessing)
   },
   set_path_metadata_flags: struct{
     using _set_path_metadata_flags: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_path_metadata_flags: struct{
     using _get_path_metadata_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^NavigationPathQueryParameters2D_PathMetadataFlags)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^NavigationPathQueryParameters2D_PathMetadataFlags)
   },
   set_navigation_map: struct{
     using _set_navigation_map: ^GDW.MethodBind,
@@ -138,7 +138,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_navigation_map: struct{
     using _get_navigation_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_target_position: struct{
     using _set_target_position: ^GDW.MethodBind,
@@ -146,7 +146,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_target_position: struct{
     using _get_target_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_simplify_path: struct{
     using _set_simplify_path: ^GDW.MethodBind,
@@ -154,7 +154,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_simplify_path: struct{
     using _get_simplify_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_simplify_epsilon: struct{
     using _set_simplify_epsilon: ^GDW.MethodBind,
@@ -162,7 +162,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_simplify_epsilon: struct{
     using _get_simplify_epsilon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_return_max_length: struct{
     using _set_path_return_max_length: ^GDW.MethodBind,
@@ -170,7 +170,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_path_return_max_length: struct{
     using _get_path_return_max_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_return_max_radius: struct{
     using _set_path_return_max_radius: ^GDW.MethodBind,
@@ -178,7 +178,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_path_return_max_radius: struct{
     using _get_path_return_max_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_path_search_max_polygons: struct{
     using _set_path_search_max_polygons: ^GDW.MethodBind,
@@ -186,7 +186,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_path_search_max_polygons: struct{
     using _get_path_search_max_polygons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_path_search_max_distance: struct{
     using _set_path_search_max_distance: ^GDW.MethodBind,
@@ -194,15 +194,15 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_path_search_max_distance: struct{
     using _get_path_search_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_path_length: struct{
     using _get_path_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_next_path_position: struct{
     using _get_next_path_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_velocity_forced: struct{
     using _set_velocity_forced: ^GDW.MethodBind,
@@ -214,39 +214,39 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_velocity: struct{
     using _get_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   distance_to_target: struct{
     using _distance_to_target: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_current_navigation_result: struct{
     using _get_current_navigation_result: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^NavigationPathQueryResult2D)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^NavigationPathQueryResult2D)
   },
   get_current_navigation_path: struct{
     using _get_current_navigation_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   get_current_navigation_path_index: struct{
     using _get_current_navigation_path_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_target_reached: struct{
     using _is_target_reached: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_target_reachable: struct{
     using _is_target_reachable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_navigation_finished: struct{
     using _is_navigation_finished: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_final_position: struct{
     using _get_final_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_avoidance_layers: struct{
     using _set_avoidance_layers: ^GDW.MethodBind,
@@ -254,7 +254,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_avoidance_layers: struct{
     using _get_avoidance_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_avoidance_mask: struct{
     using _set_avoidance_mask: ^GDW.MethodBind,
@@ -262,7 +262,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_avoidance_mask: struct{
     using _get_avoidance_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_avoidance_layer_value: struct{
     using _set_avoidance_layer_value: ^GDW.MethodBind,
@@ -286,7 +286,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_avoidance_priority: struct{
     using _get_avoidance_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_debug_enabled: struct{
     using _set_debug_enabled: ^GDW.MethodBind,
@@ -294,7 +294,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_debug_enabled: struct{
     using _get_debug_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_debug_use_custom: struct{
     using _set_debug_use_custom: ^GDW.MethodBind,
@@ -302,7 +302,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_debug_use_custom: struct{
     using _get_debug_use_custom: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_debug_path_custom_color: struct{
     using _set_debug_path_custom_color: ^GDW.MethodBind,
@@ -310,7 +310,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_debug_path_custom_color: struct{
     using _get_debug_path_custom_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_debug_path_custom_point_size: struct{
     using _set_debug_path_custom_point_size: ^GDW.MethodBind,
@@ -318,7 +318,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_debug_path_custom_point_size: struct{
     using _get_debug_path_custom_point_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_debug_path_custom_line_width: struct{
     using _set_debug_path_custom_line_width: ^GDW.MethodBind,
@@ -326,7 +326,7 @@ NavigationAgent2D_MethodBind_List :: struct {
   },
     get_debug_path_custom_line_width: struct{
     using _get_debug_path_custom_line_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationAgent2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 NavigationAgent2D_Init_ :: proc (NavigationAgent2D_methods: ^NavigationAgent2D_MethodBind_List, loc := #caller_location) {

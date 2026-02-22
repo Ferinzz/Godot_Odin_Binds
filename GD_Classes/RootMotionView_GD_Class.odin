@@ -14,7 +14,7 @@ RootMotionView_MethodBind_List :: struct {
   },
     get_animation_path: struct{
     using _get_animation_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_color: struct{
     using _set_color: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RootMotionView_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_cell_size: struct{
     using _set_cell_size: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RootMotionView_MethodBind_List :: struct {
   },
     get_cell_size: struct{
     using _get_cell_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_radius: struct{
     using _set_radius: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RootMotionView_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_zero_y: struct{
     using _set_zero_y: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ RootMotionView_MethodBind_List :: struct {
   },
     get_zero_y: struct{
     using _get_zero_y: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RootMotionView, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 RootMotionView_Init_ :: proc (RootMotionView_methods: ^RootMotionView_MethodBind_List, loc := #caller_location) {

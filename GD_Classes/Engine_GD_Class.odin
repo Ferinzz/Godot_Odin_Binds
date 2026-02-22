@@ -14,7 +14,7 @@ Engine_MethodBind_List :: struct {
   },
     get_physics_ticks_per_second: struct{
     using _get_physics_ticks_per_second: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_physics_steps_per_frame: struct{
     using _set_max_physics_steps_per_frame: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Engine_MethodBind_List :: struct {
   },
     get_max_physics_steps_per_frame: struct{
     using _get_max_physics_steps_per_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_physics_jitter_fix: struct{
     using _set_physics_jitter_fix: ^GDW.MethodBind,
@@ -30,11 +30,11 @@ Engine_MethodBind_List :: struct {
   },
     get_physics_jitter_fix: struct{
     using _get_physics_jitter_fix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_physics_interpolation_fraction: struct{
     using _get_physics_interpolation_fraction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_fps: struct{
     using _set_max_fps: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ Engine_MethodBind_List :: struct {
   },
     get_max_fps: struct{
     using _get_max_fps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_time_scale: struct{
     using _set_time_scale: ^GDW.MethodBind,
@@ -50,59 +50,59 @@ Engine_MethodBind_List :: struct {
   },
     get_time_scale: struct{
     using _get_time_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_frames_drawn: struct{
     using _get_frames_drawn: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_frames_per_second: struct{
     using _get_frames_per_second: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_physics_frames: struct{
     using _get_physics_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_process_frames: struct{
     using _get_process_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_main_loop: struct{
     using _get_main_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^MainLoop)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^MainLoop)
   },
   get_version_info: struct{
     using _get_version_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_author_info: struct{
     using _get_author_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_copyright_info: struct{
     using _get_copyright_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_donor_info: struct{
     using _get_donor_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_license_info: struct{
     using _get_license_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_license_text: struct{
     using _get_license_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_architecture_name: struct{
     using _get_architecture_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_in_physics_frame: struct{
     using _is_in_physics_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   has_singleton: struct{
     using _has_singleton: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ Engine_MethodBind_List :: struct {
   },
     get_singleton_list: struct{
     using _get_singleton_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   register_script_language: struct{
     using _register_script_language: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ Engine_MethodBind_List :: struct {
   },
   get_script_language_count: struct{
     using _get_script_language_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_script_language: struct{
     using _get_script_language: ^GDW.MethodBind,
@@ -146,15 +146,15 @@ Engine_MethodBind_List :: struct {
   },
   is_editor_hint: struct{
     using _is_editor_hint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_embedded_in_editor: struct{
     using _is_embedded_in_editor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_write_movie_path: struct{
     using _get_write_movie_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_print_to_stdout: struct{
     using _set_print_to_stdout: ^GDW.MethodBind,
@@ -162,7 +162,7 @@ Engine_MethodBind_List :: struct {
   },
     is_printing_to_stdout: struct{
     using _is_printing_to_stdout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_print_error_messages: struct{
     using _set_print_error_messages: ^GDW.MethodBind,
@@ -170,7 +170,7 @@ Engine_MethodBind_List :: struct {
   },
     is_printing_error_messages: struct{
     using _is_printing_error_messages: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Engine_Init_ :: proc (Engine_methods: ^Engine_MethodBind_List, loc := #caller_location) {

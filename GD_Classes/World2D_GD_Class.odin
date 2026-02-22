@@ -10,19 +10,19 @@ World2D :: ^GDW.Object
 World2D_MethodBind_List :: struct {
   get_canvas: struct{
     using _get_canvas: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: World2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_navigation_map: struct{
     using _get_navigation_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: World2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_space: struct{
     using _get_space: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: World2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_direct_space_state: struct{
     using _get_direct_space_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World2D, #by_ptr args: i64 = 0, r_ret: ^PhysicsDirectSpaceState2D)
+    m_call: proc(_:^GDW.MethodBind, obj: World2D, args: rawptr = nil, r_ret: ^PhysicsDirectSpaceState2D)
   },
 };
 World2D_Init_ :: proc (World2D_methods: ^World2D_MethodBind_List, loc := #caller_location) {

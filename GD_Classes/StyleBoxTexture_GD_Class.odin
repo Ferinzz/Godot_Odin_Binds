@@ -20,7 +20,7 @@ StyleBoxTexture_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_texture_margin: struct{
     using _set_texture_margin: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ StyleBoxTexture_MethodBind_List :: struct {
   },
     get_region_rect: struct{
     using _get_region_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_draw_center: struct{
     using _set_draw_center: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ StyleBoxTexture_MethodBind_List :: struct {
   },
     is_draw_center_enabled: struct{
     using _is_draw_center_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_modulate: struct{
     using _set_modulate: ^GDW.MethodBind,
@@ -68,7 +68,7 @@ StyleBoxTexture_MethodBind_List :: struct {
   },
     get_modulate: struct{
     using _get_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_h_axis_stretch_mode: struct{
     using _set_h_axis_stretch_mode: ^GDW.MethodBind,
@@ -76,7 +76,7 @@ StyleBoxTexture_MethodBind_List :: struct {
   },
     get_h_axis_stretch_mode: struct{
     using _get_h_axis_stretch_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, #by_ptr args: i64 = 0, r_ret: ^StyleBoxTexture_AxisStretchMode)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, args: rawptr = nil, r_ret: ^StyleBoxTexture_AxisStretchMode)
   },
   set_v_axis_stretch_mode: struct{
     using _set_v_axis_stretch_mode: ^GDW.MethodBind,
@@ -84,7 +84,7 @@ StyleBoxTexture_MethodBind_List :: struct {
   },
     get_v_axis_stretch_mode: struct{
     using _get_v_axis_stretch_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, #by_ptr args: i64 = 0, r_ret: ^StyleBoxTexture_AxisStretchMode)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxTexture, args: rawptr = nil, r_ret: ^StyleBoxTexture_AxisStretchMode)
   },
 };
 StyleBoxTexture_Init_ :: proc (StyleBoxTexture_methods: ^StyleBoxTexture_MethodBind_List, loc := #caller_location) {

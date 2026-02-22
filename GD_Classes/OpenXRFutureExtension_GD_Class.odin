@@ -10,7 +10,7 @@ OpenXRFutureExtension :: ^GDW.Object
 OpenXRFutureExtension_MethodBind_List :: struct {
   is_active: struct{
     using _is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   register_future: struct{
     using _register_future: ^GDW.MethodBind,

@@ -14,7 +14,7 @@ SkeletonModification2DPhysicalBones_MethodBind_List :: struct {
   },
     get_physical_bone_chain_length: struct{
     using _get_physical_bone_chain_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DPhysicalBones, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DPhysicalBones, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_physical_bone_node: struct{
     using _set_physical_bone_node: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ SkeletonModification2DPhysicalBones_MethodBind_List :: struct {
   },
   fetch_physical_bones: struct{
     using _fetch_physical_bones: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DPhysicalBones, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DPhysicalBones, args: rawptr = nil, r_ret: rawptr = nil)
   },
     start_simulation: struct{
     using _start_simulation: ^GDW.MethodBind,

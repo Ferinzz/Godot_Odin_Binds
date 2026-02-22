@@ -14,7 +14,7 @@ RayCast2D_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_target_position: struct{
     using _set_target_position: ^GDW.MethodBind,
@@ -22,35 +22,35 @@ RayCast2D_MethodBind_List :: struct {
   },
     get_target_position: struct{
     using _get_target_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   is_colliding: struct{
     using _is_colliding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   force_raycast_update: struct{
     using _force_raycast_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_collider: struct{
     using _get_collider: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Object)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Object)
   },
   get_collider_rid: struct{
     using _get_collider_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_collider_shape: struct{
     using _get_collider_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_collision_point: struct{
     using _get_collision_point: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_collision_normal: struct{
     using _get_collision_normal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   add_exception_rid: struct{
     using _add_exception_rid: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ RayCast2D_MethodBind_List :: struct {
   },
     clear_exceptions: struct{
     using _clear_exceptions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ RayCast2D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask_value: struct{
     using _set_collision_mask_value: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ RayCast2D_MethodBind_List :: struct {
   },
     get_exclude_parent_body: struct{
     using _get_exclude_parent_body: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_areas: struct{
     using _set_collide_with_areas: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ RayCast2D_MethodBind_List :: struct {
   },
     is_collide_with_areas_enabled: struct{
     using _is_collide_with_areas_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_bodies: struct{
     using _set_collide_with_bodies: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ RayCast2D_MethodBind_List :: struct {
   },
     is_collide_with_bodies_enabled: struct{
     using _is_collide_with_bodies_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hit_from_inside: struct{
     using _set_hit_from_inside: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ RayCast2D_MethodBind_List :: struct {
   },
     is_hit_from_inside_enabled: struct{
     using _is_hit_from_inside_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RayCast2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 RayCast2D_Init_ :: proc (RayCast2D_methods: ^RayCast2D_MethodBind_List, loc := #caller_location) {

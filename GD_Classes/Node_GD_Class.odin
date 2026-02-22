@@ -121,11 +121,11 @@ Node_Constants :: enum i64 {
 Node_MethodBind_List :: struct {
   print_orphan_nodes: struct{
     using _print_orphan_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_orphan_node_ids: struct{
     using _get_orphan_node_ids: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_sibling: struct{
     using _add_sibling: ^GDW.MethodBind,
@@ -137,7 +137,7 @@ Node_MethodBind_List :: struct {
   },
     get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   add_child: struct{
     using _add_child: ^GDW.MethodBind,
@@ -177,7 +177,7 @@ Node_MethodBind_List :: struct {
   },
   get_parent: struct{
     using _get_parent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Node)
   },
   find_child: struct{
     using _find_child: ^GDW.MethodBind,
@@ -201,11 +201,11 @@ Node_MethodBind_List :: struct {
   },
   is_inside_tree: struct{
     using _is_inside_tree: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_part_of_edited_scene: struct{
     using _is_part_of_edited_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_ancestor_of: struct{
     using _is_ancestor_of: ^GDW.MethodBind,
@@ -217,7 +217,7 @@ Node_MethodBind_List :: struct {
   },
   get_path: struct{
     using _get_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   get_path_to: struct{
     using _get_path_to: ^GDW.MethodBind,
@@ -241,7 +241,7 @@ Node_MethodBind_List :: struct {
   },
     get_groups: struct{
     using _get_groups: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_owner: struct{
     using _set_owner: ^GDW.MethodBind,
@@ -249,7 +249,7 @@ Node_MethodBind_List :: struct {
   },
     get_owner: struct{
     using _get_owner: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Node)
   },
   get_index: struct{
     using _get_index: ^GDW.MethodBind,
@@ -257,19 +257,19 @@ Node_MethodBind_List :: struct {
   },
   print_tree: struct{
     using _print_tree: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     print_tree_pretty: struct{
     using _print_tree_pretty: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_tree_string: struct{
     using _get_tree_string: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_tree_string_pretty: struct{
     using _get_tree_string_pretty: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_scene_file_path: struct{
     using _set_scene_file_path: ^GDW.MethodBind,
@@ -277,7 +277,7 @@ Node_MethodBind_List :: struct {
   },
     get_scene_file_path: struct{
     using _get_scene_file_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   propagate_notification: struct{
     using _propagate_notification: ^GDW.MethodBind,
@@ -293,15 +293,15 @@ Node_MethodBind_List :: struct {
   },
     get_physics_process_delta_time: struct{
     using _get_physics_process_delta_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.float)
   },
   is_physics_processing: struct{
     using _is_physics_processing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_process_delta_time: struct{
     using _get_process_delta_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_process: struct{
     using _set_process: ^GDW.MethodBind,
@@ -313,7 +313,7 @@ Node_MethodBind_List :: struct {
   },
     get_process_priority: struct{
     using _get_process_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_physics_process_priority: struct{
     using _set_physics_process_priority: ^GDW.MethodBind,
@@ -321,11 +321,11 @@ Node_MethodBind_List :: struct {
   },
     get_physics_process_priority: struct{
     using _get_physics_process_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_processing: struct{
     using _is_processing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_process_input: struct{
     using _set_process_input: ^GDW.MethodBind,
@@ -333,7 +333,7 @@ Node_MethodBind_List :: struct {
   },
     is_processing_input: struct{
     using _is_processing_input: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_process_shortcut_input: struct{
     using _set_process_shortcut_input: ^GDW.MethodBind,
@@ -341,7 +341,7 @@ Node_MethodBind_List :: struct {
   },
     is_processing_shortcut_input: struct{
     using _is_processing_shortcut_input: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_process_unhandled_input: struct{
     using _set_process_unhandled_input: ^GDW.MethodBind,
@@ -349,7 +349,7 @@ Node_MethodBind_List :: struct {
   },
     is_processing_unhandled_input: struct{
     using _is_processing_unhandled_input: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_process_unhandled_key_input: struct{
     using _set_process_unhandled_key_input: ^GDW.MethodBind,
@@ -357,7 +357,7 @@ Node_MethodBind_List :: struct {
   },
     is_processing_unhandled_key_input: struct{
     using _is_processing_unhandled_key_input: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_process_mode: struct{
     using _set_process_mode: ^GDW.MethodBind,
@@ -365,11 +365,11 @@ Node_MethodBind_List :: struct {
   },
     get_process_mode: struct{
     using _get_process_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Node_ProcessMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Node_ProcessMode)
   },
   can_process: struct{
     using _can_process: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_process_thread_group: struct{
     using _set_process_thread_group: ^GDW.MethodBind,
@@ -377,7 +377,7 @@ Node_MethodBind_List :: struct {
   },
     get_process_thread_group: struct{
     using _get_process_thread_group: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Node_ProcessThreadGroup)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Node_ProcessThreadGroup)
   },
   set_process_thread_messages: struct{
     using _set_process_thread_messages: ^GDW.MethodBind,
@@ -385,7 +385,7 @@ Node_MethodBind_List :: struct {
   },
     get_process_thread_messages: struct{
     using _get_process_thread_messages: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Node_ProcessThreadMessages)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Node_ProcessThreadMessages)
   },
   set_process_thread_group_order: struct{
     using _set_process_thread_group_order: ^GDW.MethodBind,
@@ -393,15 +393,15 @@ Node_MethodBind_List :: struct {
   },
     get_process_thread_group_order: struct{
     using _get_process_thread_group_order: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   queue_accessibility_update: struct{
     using _queue_accessibility_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_accessibility_element: struct{
     using _get_accessibility_element: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_display_folded: struct{
     using _set_display_folded: ^GDW.MethodBind,
@@ -409,7 +409,7 @@ Node_MethodBind_List :: struct {
   },
     is_displayed_folded: struct{
     using _is_displayed_folded: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_process_internal: struct{
     using _set_process_internal: ^GDW.MethodBind,
@@ -417,7 +417,7 @@ Node_MethodBind_List :: struct {
   },
     is_processing_internal: struct{
     using _is_processing_internal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_physics_process_internal: struct{
     using _set_physics_process_internal: ^GDW.MethodBind,
@@ -425,7 +425,7 @@ Node_MethodBind_List :: struct {
   },
     is_physics_processing_internal: struct{
     using _is_physics_processing_internal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_physics_interpolation_mode: struct{
     using _set_physics_interpolation_mode: ^GDW.MethodBind,
@@ -433,19 +433,19 @@ Node_MethodBind_List :: struct {
   },
     get_physics_interpolation_mode: struct{
     using _get_physics_interpolation_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Node_PhysicsInterpolationMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Node_PhysicsInterpolationMode)
   },
   is_physics_interpolated: struct{
     using _is_physics_interpolated: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_physics_interpolated_and_enabled: struct{
     using _is_physics_interpolated_and_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   reset_physics_interpolation: struct{
     using _reset_physics_interpolation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_auto_translate_mode: struct{
     using _set_auto_translate_mode: ^GDW.MethodBind,
@@ -453,31 +453,31 @@ Node_MethodBind_List :: struct {
   },
     get_auto_translate_mode: struct{
     using _get_auto_translate_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Node_AutoTranslateMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Node_AutoTranslateMode)
   },
   can_auto_translate: struct{
     using _can_auto_translate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_translation_domain_inherited: struct{
     using _set_translation_domain_inherited: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_window: struct{
     using _get_window: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Window)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Window)
   },
   get_last_exclusive_window: struct{
     using _get_last_exclusive_window: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Window)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Window)
   },
   get_tree: struct{
     using _get_tree: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^SceneTree)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^SceneTree)
   },
   create_tween: struct{
     using _create_tween: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Tween)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Tween)
   },
   duplicate: struct{
     using _duplicate: ^GDW.MethodBind,
@@ -493,7 +493,7 @@ Node_MethodBind_List :: struct {
   },
     get_scene_instance_load_placeholder: struct{
     using _get_scene_instance_load_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_editable_instance: struct{
     using _set_editable_instance: ^GDW.MethodBind,
@@ -505,19 +505,19 @@ Node_MethodBind_List :: struct {
   },
   get_viewport: struct{
     using _get_viewport: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^Viewport)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^Viewport)
   },
   queue_free: struct{
     using _queue_free: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     request_ready: struct{
     using _request_ready: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_node_ready: struct{
     using _is_node_ready: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_multiplayer_authority: struct{
     using _set_multiplayer_authority: ^GDW.MethodBind,
@@ -525,15 +525,15 @@ Node_MethodBind_List :: struct {
   },
     get_multiplayer_authority: struct{
     using _get_multiplayer_authority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_multiplayer_authority: struct{
     using _is_multiplayer_authority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_multiplayer: struct{
     using _get_multiplayer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^MultiplayerAPI)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^MultiplayerAPI)
   },
   rpc_config: struct{
     using _rpc_config: ^GDW.MethodBind,
@@ -541,7 +541,7 @@ Node_MethodBind_List :: struct {
   },
     get_node_rpc_config: struct{
     using _get_node_rpc_config: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
   set_editor_description: struct{
     using _set_editor_description: ^GDW.MethodBind,
@@ -549,7 +549,7 @@ Node_MethodBind_List :: struct {
   },
     get_editor_description: struct{
     using _get_editor_description: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_unique_name_in_owner: struct{
     using _set_unique_name_in_owner: ^GDW.MethodBind,
@@ -557,7 +557,7 @@ Node_MethodBind_List :: struct {
   },
     is_unique_name_in_owner: struct{
     using _is_unique_name_in_owner: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   atr: struct{
     using _atr: ^GDW.MethodBind,
@@ -569,19 +569,19 @@ Node_MethodBind_List :: struct {
   },
   rpc: struct{
     using _rpc: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: struct{method: ^GDW.StringName, }, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Error)
   },
   rpc_id: struct{
     using _rpc_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: struct{peer_id: ^GDW.Int, method: ^GDW.StringName, }, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Error)
   },
   update_configuration_warnings: struct{
     using _update_configuration_warnings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, args: rawptr = nil, r_ret: rawptr = nil)
   },
     call_deferred_thread_group: struct{
     using _call_deferred_thread_group: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: struct{method: ^GDW.StringName, }, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Variant)
   },
   set_deferred_thread_group: struct{
     using _set_deferred_thread_group: ^GDW.MethodBind,
@@ -593,7 +593,7 @@ Node_MethodBind_List :: struct {
   },
     call_thread_safe: struct{
     using _call_thread_safe: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: struct{method: ^GDW.StringName, }, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Node, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Variant)
   },
   set_thread_safe: struct{
     using _set_thread_safe: ^GDW.MethodBind,

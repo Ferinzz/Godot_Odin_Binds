@@ -10,7 +10,7 @@ NavigationObstacle2D :: ^GDW.Object
 NavigationObstacle2D_MethodBind_List :: struct {
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_avoidance_enabled: struct{
     using _set_avoidance_enabled: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ NavigationObstacle2D_MethodBind_List :: struct {
   },
     get_avoidance_enabled: struct{
     using _get_avoidance_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_navigation_map: struct{
     using _set_navigation_map: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ NavigationObstacle2D_MethodBind_List :: struct {
   },
     get_navigation_map: struct{
     using _get_navigation_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_radius: struct{
     using _set_radius: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ NavigationObstacle2D_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_velocity: struct{
     using _set_velocity: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ NavigationObstacle2D_MethodBind_List :: struct {
   },
     get_velocity: struct{
     using _get_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_vertices: struct{
     using _set_vertices: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ NavigationObstacle2D_MethodBind_List :: struct {
   },
     get_vertices: struct{
     using _get_vertices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_avoidance_layers: struct{
     using _set_avoidance_layers: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ NavigationObstacle2D_MethodBind_List :: struct {
   },
     get_avoidance_layers: struct{
     using _get_avoidance_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_avoidance_layer_value: struct{
     using _set_avoidance_layer_value: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ NavigationObstacle2D_MethodBind_List :: struct {
   },
     get_affect_navigation_mesh: struct{
     using _get_affect_navigation_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_carve_navigation_mesh: struct{
     using _set_carve_navigation_mesh: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ NavigationObstacle2D_MethodBind_List :: struct {
   },
     get_carve_navigation_mesh: struct{
     using _get_carve_navigation_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationObstacle2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 NavigationObstacle2D_Init_ :: proc (NavigationObstacle2D_methods: ^NavigationObstacle2D_MethodBind_List, loc := #caller_location) {

@@ -27,7 +27,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_stream: struct{
     using _get_stream: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^AudioStream)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^AudioStream)
   },
   set_volume_db: struct{
     using _set_volume_db: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_volume_db: struct{
     using _get_volume_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volume_linear: struct{
     using _set_volume_linear: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_volume_linear: struct{
     using _get_volume_linear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_unit_size: struct{
     using _set_unit_size: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_unit_size: struct{
     using _get_unit_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_db: struct{
     using _set_max_db: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_max_db: struct{
     using _get_max_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_pitch_scale: struct{
     using _set_pitch_scale: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_pitch_scale: struct{
     using _get_pitch_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   play: struct{
     using _play: ^GDW.MethodBind,
@@ -79,15 +79,15 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_playing: struct{
     using _is_playing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_playback_position: struct{
     using _get_playback_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bus: struct{
     using _set_bus: ^GDW.MethodBind,
@@ -95,7 +95,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_bus: struct{
     using _get_bus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_autoplay: struct{
     using _set_autoplay: ^GDW.MethodBind,
@@ -103,7 +103,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     is_autoplay_enabled: struct{
     using _is_autoplay_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_playing: struct{
     using _set_playing: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_max_distance: struct{
     using _get_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_area_mask: struct{
     using _set_area_mask: ^GDW.MethodBind,
@@ -123,7 +123,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_area_mask: struct{
     using _get_area_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_emission_angle: struct{
     using _set_emission_angle: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_emission_angle: struct{
     using _get_emission_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_angle_enabled: struct{
     using _set_emission_angle_enabled: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     is_emission_angle_enabled: struct{
     using _is_emission_angle_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_emission_angle_filter_attenuation_db: struct{
     using _set_emission_angle_filter_attenuation_db: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_emission_angle_filter_attenuation_db: struct{
     using _get_emission_angle_filter_attenuation_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_attenuation_filter_cutoff_hz: struct{
     using _set_attenuation_filter_cutoff_hz: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_attenuation_filter_cutoff_hz: struct{
     using _get_attenuation_filter_cutoff_hz: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_attenuation_filter_db: struct{
     using _set_attenuation_filter_db: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_attenuation_filter_db: struct{
     using _get_attenuation_filter_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_attenuation_model: struct{
     using _set_attenuation_model: ^GDW.MethodBind,
@@ -171,7 +171,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_attenuation_model: struct{
     using _get_attenuation_model: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^AudioStreamPlayer3D_AttenuationModel)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^AudioStreamPlayer3D_AttenuationModel)
   },
   set_doppler_tracking: struct{
     using _set_doppler_tracking: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_doppler_tracking: struct{
     using _get_doppler_tracking: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^AudioStreamPlayer3D_DopplerTracking)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^AudioStreamPlayer3D_DopplerTracking)
   },
   set_stream_paused: struct{
     using _set_stream_paused: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_stream_paused: struct{
     using _get_stream_paused: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_max_polyphony: struct{
     using _set_max_polyphony: ^GDW.MethodBind,
@@ -195,7 +195,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_max_polyphony: struct{
     using _get_max_polyphony: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_panning_strength: struct{
     using _set_panning_strength: ^GDW.MethodBind,
@@ -203,15 +203,15 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_panning_strength: struct{
     using _get_panning_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   has_stream_playback: struct{
     using _has_stream_playback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_stream_playback: struct{
     using _get_stream_playback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^AudioStreamPlayback)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^AudioStreamPlayback)
   },
   set_playback_type: struct{
     using _set_playback_type: ^GDW.MethodBind,
@@ -219,7 +219,7 @@ AudioStreamPlayer3D_MethodBind_List :: struct {
   },
     get_playback_type: struct{
     using _get_playback_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, #by_ptr args: i64 = 0, r_ret: ^AudioServer_PlaybackType)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlayer3D, args: rawptr = nil, r_ret: ^AudioServer_PlaybackType)
   },
 };
 AudioStreamPlayer3D_Init_ :: proc (AudioStreamPlayer3D_methods: ^AudioStreamPlayer3D_MethodBind_List, loc := #caller_location) {

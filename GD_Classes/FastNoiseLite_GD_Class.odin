@@ -59,7 +59,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_noise_type: struct{
     using _get_noise_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^FastNoiseLite_NoiseType)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^FastNoiseLite_NoiseType)
   },
   set_seed: struct{
     using _set_seed: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_seed: struct{
     using _get_seed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_frequency: struct{
     using _set_frequency: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_frequency: struct{
     using _get_frequency: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_fractal_type: struct{
     using _set_fractal_type: ^GDW.MethodBind,
@@ -91,7 +91,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_fractal_type: struct{
     using _get_fractal_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^FastNoiseLite_FractalType)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^FastNoiseLite_FractalType)
   },
   set_fractal_octaves: struct{
     using _set_fractal_octaves: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_fractal_octaves: struct{
     using _get_fractal_octaves: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_fractal_lacunarity: struct{
     using _set_fractal_lacunarity: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_fractal_lacunarity: struct{
     using _get_fractal_lacunarity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fractal_gain: struct{
     using _set_fractal_gain: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_fractal_gain: struct{
     using _get_fractal_gain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fractal_weighted_strength: struct{
     using _set_fractal_weighted_strength: ^GDW.MethodBind,
@@ -123,7 +123,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_fractal_weighted_strength: struct{
     using _get_fractal_weighted_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fractal_ping_pong_strength: struct{
     using _set_fractal_ping_pong_strength: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_fractal_ping_pong_strength: struct{
     using _get_fractal_ping_pong_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_cellular_distance_function: struct{
     using _set_cellular_distance_function: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_cellular_distance_function: struct{
     using _get_cellular_distance_function: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^FastNoiseLite_CellularDistanceFunction)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^FastNoiseLite_CellularDistanceFunction)
   },
   set_cellular_jitter: struct{
     using _set_cellular_jitter: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_cellular_jitter: struct{
     using _get_cellular_jitter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_cellular_return_type: struct{
     using _set_cellular_return_type: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_cellular_return_type: struct{
     using _get_cellular_return_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^FastNoiseLite_CellularReturnType)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^FastNoiseLite_CellularReturnType)
   },
   set_domain_warp_enabled: struct{
     using _set_domain_warp_enabled: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     is_domain_warp_enabled: struct{
     using _is_domain_warp_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_domain_warp_type: struct{
     using _set_domain_warp_type: ^GDW.MethodBind,
@@ -171,7 +171,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_domain_warp_type: struct{
     using _get_domain_warp_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^FastNoiseLite_DomainWarpType)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^FastNoiseLite_DomainWarpType)
   },
   set_domain_warp_amplitude: struct{
     using _set_domain_warp_amplitude: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_domain_warp_amplitude: struct{
     using _get_domain_warp_amplitude: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_domain_warp_frequency: struct{
     using _set_domain_warp_frequency: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_domain_warp_frequency: struct{
     using _get_domain_warp_frequency: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_domain_warp_fractal_type: struct{
     using _set_domain_warp_fractal_type: ^GDW.MethodBind,
@@ -195,7 +195,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_domain_warp_fractal_type: struct{
     using _get_domain_warp_fractal_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^FastNoiseLite_DomainWarpFractalType)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^FastNoiseLite_DomainWarpFractalType)
   },
   set_domain_warp_fractal_octaves: struct{
     using _set_domain_warp_fractal_octaves: ^GDW.MethodBind,
@@ -203,7 +203,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_domain_warp_fractal_octaves: struct{
     using _get_domain_warp_fractal_octaves: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_domain_warp_fractal_lacunarity: struct{
     using _set_domain_warp_fractal_lacunarity: ^GDW.MethodBind,
@@ -211,7 +211,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_domain_warp_fractal_lacunarity: struct{
     using _get_domain_warp_fractal_lacunarity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_domain_warp_fractal_gain: struct{
     using _set_domain_warp_fractal_gain: ^GDW.MethodBind,
@@ -219,7 +219,7 @@ FastNoiseLite_MethodBind_List :: struct {
   },
     get_domain_warp_fractal_gain: struct{
     using _get_domain_warp_fractal_gain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FastNoiseLite, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 FastNoiseLite_Init_ :: proc (FastNoiseLite_methods: ^FastNoiseLite_MethodBind_List, loc := #caller_location) {

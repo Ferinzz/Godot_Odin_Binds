@@ -14,7 +14,7 @@ AudioEffectLimiter_MethodBind_List :: struct {
   },
     get_ceiling_db: struct{
     using _get_ceiling_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectLimiter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectLimiter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_threshold_db: struct{
     using _set_threshold_db: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AudioEffectLimiter_MethodBind_List :: struct {
   },
     get_threshold_db: struct{
     using _get_threshold_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectLimiter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectLimiter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_soft_clip_db: struct{
     using _set_soft_clip_db: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioEffectLimiter_MethodBind_List :: struct {
   },
     get_soft_clip_db: struct{
     using _get_soft_clip_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectLimiter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectLimiter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_soft_clip_ratio: struct{
     using _set_soft_clip_ratio: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AudioEffectLimiter_MethodBind_List :: struct {
   },
     get_soft_clip_ratio: struct{
     using _get_soft_clip_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectLimiter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectLimiter, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectLimiter_Init_ :: proc (AudioEffectLimiter_methods: ^AudioEffectLimiter_MethodBind_List, loc := #caller_location) {

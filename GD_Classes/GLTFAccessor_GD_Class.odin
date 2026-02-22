@@ -39,11 +39,11 @@ GLTFAccessor_MethodBind_List :: struct {
   },
   to_dictionary: struct{
     using _to_dictionary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_buffer_view: struct{
     using _get_buffer_view: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_buffer_view: struct{
     using _set_buffer_view: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_byte_offset: struct{
     using _get_byte_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_byte_offset: struct{
     using _set_byte_offset: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_component_type: struct{
     using _get_component_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GLTFAccessor_GLTFComponentType)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GLTFAccessor_GLTFComponentType)
   },
   set_component_type: struct{
     using _set_component_type: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_normalized: struct{
     using _get_normalized: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_normalized: struct{
     using _set_normalized: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_count: struct{
     using _get_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_count: struct{
     using _set_count: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_accessor_type: struct{
     using _get_accessor_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GLTFAccessor_GLTFAccessorType)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GLTFAccessor_GLTFAccessorType)
   },
   set_accessor_type: struct{
     using _set_accessor_type: ^GDW.MethodBind,
@@ -91,7 +91,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_type: struct{
     using _get_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_type: struct{
     using _set_type: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_min: struct{
     using _get_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.PackedFloat64Array)
   },
   set_min: struct{
     using _set_min: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_max: struct{
     using _get_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.PackedFloat64Array)
   },
   set_max: struct{
     using _set_max: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_sparse_count: struct{
     using _get_sparse_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sparse_count: struct{
     using _set_sparse_count: ^GDW.MethodBind,
@@ -123,7 +123,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_sparse_indices_buffer_view: struct{
     using _get_sparse_indices_buffer_view: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sparse_indices_buffer_view: struct{
     using _set_sparse_indices_buffer_view: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_sparse_indices_byte_offset: struct{
     using _get_sparse_indices_byte_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sparse_indices_byte_offset: struct{
     using _set_sparse_indices_byte_offset: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_sparse_indices_component_type: struct{
     using _get_sparse_indices_component_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GLTFAccessor_GLTFComponentType)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GLTFAccessor_GLTFComponentType)
   },
   set_sparse_indices_component_type: struct{
     using _set_sparse_indices_component_type: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_sparse_values_buffer_view: struct{
     using _get_sparse_values_buffer_view: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sparse_values_buffer_view: struct{
     using _set_sparse_values_buffer_view: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ GLTFAccessor_MethodBind_List :: struct {
   },
     get_sparse_values_byte_offset: struct{
     using _get_sparse_values_byte_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAccessor, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sparse_values_byte_offset: struct{
     using _set_sparse_values_byte_offset: ^GDW.MethodBind,

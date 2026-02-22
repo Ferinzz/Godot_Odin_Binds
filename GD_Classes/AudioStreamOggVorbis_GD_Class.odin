@@ -22,7 +22,7 @@ AudioStreamOggVorbis_MethodBind_List :: struct {
   },
     get_packet_sequence: struct{
     using _get_packet_sequence: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, #by_ptr args: i64 = 0, r_ret: ^OggPacketSequence)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, args: rawptr = nil, r_ret: ^OggPacketSequence)
   },
   set_loop: struct{
     using _set_loop: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioStreamOggVorbis_MethodBind_List :: struct {
   },
     has_loop: struct{
     using _has_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_loop_offset: struct{
     using _set_loop_offset: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AudioStreamOggVorbis_MethodBind_List :: struct {
   },
     get_loop_offset: struct{
     using _get_loop_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bpm: struct{
     using _set_bpm: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ AudioStreamOggVorbis_MethodBind_List :: struct {
   },
     get_bpm: struct{
     using _get_bpm: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_beat_count: struct{
     using _set_beat_count: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ AudioStreamOggVorbis_MethodBind_List :: struct {
   },
     get_beat_count: struct{
     using _get_beat_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bar_beats: struct{
     using _set_bar_beats: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ AudioStreamOggVorbis_MethodBind_List :: struct {
   },
     get_bar_beats: struct{
     using _get_bar_beats: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_tags: struct{
     using _set_tags: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ AudioStreamOggVorbis_MethodBind_List :: struct {
   },
     get_tags: struct{
     using _get_tags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamOggVorbis, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
 };
 AudioStreamOggVorbis_Init_ :: proc (AudioStreamOggVorbis_methods: ^AudioStreamOggVorbis_MethodBind_List, loc := #caller_location) {

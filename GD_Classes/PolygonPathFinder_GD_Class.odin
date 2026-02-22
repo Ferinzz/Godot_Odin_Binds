@@ -38,7 +38,7 @@ PolygonPathFinder_MethodBind_List :: struct {
   },
   get_bounds: struct{
     using _get_bounds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PolygonPathFinder, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: PolygonPathFinder, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
 };
 PolygonPathFinder_Init_ :: proc (PolygonPathFinder_methods: ^PolygonPathFinder_MethodBind_List, loc := #caller_location) {

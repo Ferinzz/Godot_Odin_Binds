@@ -14,7 +14,7 @@ AudioEffectCompressor_MethodBind_List :: struct {
   },
     get_threshold: struct{
     using _get_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ratio: struct{
     using _set_ratio: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AudioEffectCompressor_MethodBind_List :: struct {
   },
     get_ratio: struct{
     using _get_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_gain: struct{
     using _set_gain: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioEffectCompressor_MethodBind_List :: struct {
   },
     get_gain: struct{
     using _get_gain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_attack_us: struct{
     using _set_attack_us: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AudioEffectCompressor_MethodBind_List :: struct {
   },
     get_attack_us: struct{
     using _get_attack_us: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_release_ms: struct{
     using _set_release_ms: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ AudioEffectCompressor_MethodBind_List :: struct {
   },
     get_release_ms: struct{
     using _get_release_ms: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mix: struct{
     using _set_mix: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ AudioEffectCompressor_MethodBind_List :: struct {
   },
     get_mix: struct{
     using _get_mix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sidechain: struct{
     using _set_sidechain: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ AudioEffectCompressor_MethodBind_List :: struct {
   },
     get_sidechain: struct{
     using _get_sidechain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCompressor, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
 };
 AudioEffectCompressor_Init_ :: proc (AudioEffectCompressor_methods: ^AudioEffectCompressor_MethodBind_List, loc := #caller_location) {

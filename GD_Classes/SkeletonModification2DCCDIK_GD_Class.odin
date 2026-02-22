@@ -14,7 +14,7 @@ SkeletonModification2DCCDIK_MethodBind_List :: struct {
   },
     get_target_node: struct{
     using _get_target_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DCCDIK, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DCCDIK, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_tip_node: struct{
     using _set_tip_node: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SkeletonModification2DCCDIK_MethodBind_List :: struct {
   },
     get_tip_node: struct{
     using _get_tip_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DCCDIK, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DCCDIK, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_ccdik_data_chain_length: struct{
     using _set_ccdik_data_chain_length: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ SkeletonModification2DCCDIK_MethodBind_List :: struct {
   },
     get_ccdik_data_chain_length: struct{
     using _get_ccdik_data_chain_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DCCDIK, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DCCDIK, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_ccdik_joint_bone2d_node: struct{
     using _set_ccdik_joint_bone2d_node: ^GDW.MethodBind,

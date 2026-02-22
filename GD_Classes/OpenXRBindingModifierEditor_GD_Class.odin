@@ -10,7 +10,7 @@ OpenXRBindingModifierEditor :: ^GDW.Object
 OpenXRBindingModifierEditor_MethodBind_List :: struct {
   get_binding_modifier: struct{
     using _get_binding_modifier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRBindingModifierEditor, #by_ptr args: i64 = 0, r_ret: ^OpenXRBindingModifier)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRBindingModifierEditor, args: rawptr = nil, r_ret: ^OpenXRBindingModifier)
   },
   setup: struct{
     using _setup: ^GDW.MethodBind,

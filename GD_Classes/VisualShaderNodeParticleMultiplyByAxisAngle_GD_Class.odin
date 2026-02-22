@@ -14,7 +14,7 @@ VisualShaderNodeParticleMultiplyByAxisAngle_MethodBind_List :: struct {
   },
     is_degrees_mode: struct{
     using _is_degrees_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMultiplyByAxisAngle, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMultiplyByAxisAngle, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 VisualShaderNodeParticleMultiplyByAxisAngle_Init_ :: proc (VisualShaderNodeParticleMultiplyByAxisAngle_methods: ^VisualShaderNodeParticleMultiplyByAxisAngle_MethodBind_List, loc := #caller_location) {

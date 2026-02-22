@@ -14,7 +14,7 @@ RDPipelineMultisampleState_MethodBind_List :: struct {
   },
     get_sample_count: struct{
     using _get_sample_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureSamples)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, args: rawptr = nil, r_ret: ^RenderingDevice_TextureSamples)
   },
   set_enable_sample_shading: struct{
     using _set_enable_sample_shading: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDPipelineMultisampleState_MethodBind_List :: struct {
   },
     get_enable_sample_shading: struct{
     using _get_enable_sample_shading: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_min_sample_shading: struct{
     using _set_min_sample_shading: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RDPipelineMultisampleState_MethodBind_List :: struct {
   },
     get_min_sample_shading: struct{
     using _get_min_sample_shading: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_enable_alpha_to_coverage: struct{
     using _set_enable_alpha_to_coverage: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RDPipelineMultisampleState_MethodBind_List :: struct {
   },
     get_enable_alpha_to_coverage: struct{
     using _get_enable_alpha_to_coverage: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enable_alpha_to_one: struct{
     using _set_enable_alpha_to_one: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ RDPipelineMultisampleState_MethodBind_List :: struct {
   },
     get_enable_alpha_to_one: struct{
     using _get_enable_alpha_to_one: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sample_masks: struct{
     using _set_sample_masks: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ RDPipelineMultisampleState_MethodBind_List :: struct {
   },
     get_sample_masks: struct{
     using _get_sample_masks: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineMultisampleState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 RDPipelineMultisampleState_Init_ :: proc (RDPipelineMultisampleState_methods: ^RDPipelineMultisampleState_MethodBind_List, loc := #caller_location) {

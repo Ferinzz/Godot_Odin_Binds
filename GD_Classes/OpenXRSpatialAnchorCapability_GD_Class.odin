@@ -15,11 +15,11 @@ OpenXRSpatialAnchorCapability_PersistenceScope :: enum i64 {
 OpenXRSpatialAnchorCapability_MethodBind_List :: struct {
   is_spatial_anchor_supported: struct{
     using _is_spatial_anchor_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialAnchorCapability, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialAnchorCapability, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_spatial_persistence_supported: struct{
     using _is_spatial_persistence_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialAnchorCapability, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialAnchorCapability, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_persistence_scope_supported: struct{
     using _is_persistence_scope_supported: ^GDW.MethodBind,

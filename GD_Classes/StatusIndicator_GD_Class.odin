@@ -14,7 +14,7 @@ StatusIndicator_MethodBind_List :: struct {
   },
     get_tooltip: struct{
     using _get_tooltip: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_icon: struct{
     using _set_icon: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ StatusIndicator_MethodBind_List :: struct {
   },
     get_icon: struct{
     using _get_icon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_visible: struct{
     using _set_visible: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ StatusIndicator_MethodBind_List :: struct {
   },
     is_visible: struct{
     using _is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_menu: struct{
     using _set_menu: ^GDW.MethodBind,
@@ -38,11 +38,11 @@ StatusIndicator_MethodBind_List :: struct {
   },
     get_menu: struct{
     using _get_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   get_rect: struct{
     using _get_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: StatusIndicator, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
 };
 StatusIndicator_Init_ :: proc (StatusIndicator_methods: ^StatusIndicator_MethodBind_List, loc := #caller_location) {

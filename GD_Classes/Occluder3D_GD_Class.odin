@@ -10,11 +10,11 @@ Occluder3D :: ^GDW.Object
 Occluder3D_MethodBind_List :: struct {
   get_vertices: struct{
     using _get_vertices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Occluder3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Occluder3D, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   get_indices: struct{
     using _get_indices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Occluder3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Occluder3D, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
 };
 Occluder3D_Init_ :: proc (Occluder3D_methods: ^Occluder3D_MethodBind_List, loc := #caller_location) {

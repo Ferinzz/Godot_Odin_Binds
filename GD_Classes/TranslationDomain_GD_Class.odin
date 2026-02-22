@@ -22,11 +22,11 @@ TranslationDomain_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_translations: struct{
     using _get_translations: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   has_translation_for_locale: struct{
     using _has_translation_for_locale: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
   get_locale_override: struct{
     using _get_locale_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_locale_override: struct{
     using _set_locale_override: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enabled: struct{
     using _set_enabled: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     is_pseudolocalization_enabled: struct{
     using _is_pseudolocalization_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_pseudolocalization_enabled: struct{
     using _set_pseudolocalization_enabled: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     is_pseudolocalization_accents_enabled: struct{
     using _is_pseudolocalization_accents_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_pseudolocalization_accents_enabled: struct{
     using _set_pseudolocalization_accents_enabled: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     is_pseudolocalization_double_vowels_enabled: struct{
     using _is_pseudolocalization_double_vowels_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_pseudolocalization_double_vowels_enabled: struct{
     using _set_pseudolocalization_double_vowels_enabled: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     is_pseudolocalization_fake_bidi_enabled: struct{
     using _is_pseudolocalization_fake_bidi_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_pseudolocalization_fake_bidi_enabled: struct{
     using _set_pseudolocalization_fake_bidi_enabled: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     is_pseudolocalization_override_enabled: struct{
     using _is_pseudolocalization_override_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_pseudolocalization_override_enabled: struct{
     using _set_pseudolocalization_override_enabled: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     is_pseudolocalization_skip_placeholders_enabled: struct{
     using _is_pseudolocalization_skip_placeholders_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_pseudolocalization_skip_placeholders_enabled: struct{
     using _set_pseudolocalization_skip_placeholders_enabled: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     get_pseudolocalization_expansion_ratio: struct{
     using _get_pseudolocalization_expansion_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_pseudolocalization_expansion_ratio: struct{
     using _set_pseudolocalization_expansion_ratio: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     get_pseudolocalization_prefix: struct{
     using _get_pseudolocalization_prefix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_pseudolocalization_prefix: struct{
     using _set_pseudolocalization_prefix: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ TranslationDomain_MethodBind_List :: struct {
   },
     get_pseudolocalization_suffix: struct{
     using _get_pseudolocalization_suffix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TranslationDomain, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_pseudolocalization_suffix: struct{
     using _set_pseudolocalization_suffix: ^GDW.MethodBind,

@@ -15,11 +15,11 @@ ImageFormatLoaderExtension_Virtual_Info :: struct {
 ImageFormatLoaderExtension_MethodBind_List :: struct {
   add_format_loader: struct{
     using _add_format_loader: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImageFormatLoaderExtension, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ImageFormatLoaderExtension, args: rawptr = nil, r_ret: rawptr = nil)
   },
     remove_format_loader: struct{
     using _remove_format_loader: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImageFormatLoaderExtension, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ImageFormatLoaderExtension, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 ImageFormatLoaderExtension_Init_ :: proc (ImageFormatLoaderExtension_methods: ^ImageFormatLoaderExtension_MethodBind_List, loc := #caller_location) {

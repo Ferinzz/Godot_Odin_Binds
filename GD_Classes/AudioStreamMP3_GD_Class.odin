@@ -22,7 +22,7 @@ AudioStreamMP3_MethodBind_List :: struct {
   },
     get_data: struct{
     using _get_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   set_loop: struct{
     using _set_loop: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioStreamMP3_MethodBind_List :: struct {
   },
     has_loop: struct{
     using _has_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_loop_offset: struct{
     using _set_loop_offset: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AudioStreamMP3_MethodBind_List :: struct {
   },
     get_loop_offset: struct{
     using _get_loop_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bpm: struct{
     using _set_bpm: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ AudioStreamMP3_MethodBind_List :: struct {
   },
     get_bpm: struct{
     using _get_bpm: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_beat_count: struct{
     using _set_beat_count: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ AudioStreamMP3_MethodBind_List :: struct {
   },
     get_beat_count: struct{
     using _get_beat_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bar_beats: struct{
     using _set_bar_beats: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ AudioStreamMP3_MethodBind_List :: struct {
   },
     get_bar_beats: struct{
     using _get_bar_beats: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamMP3, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 AudioStreamMP3_Init_ :: proc (AudioStreamMP3_methods: ^AudioStreamMP3_MethodBind_List, loc := #caller_location) {

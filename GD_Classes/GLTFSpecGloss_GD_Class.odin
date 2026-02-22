@@ -10,7 +10,7 @@ GLTFSpecGloss :: ^GDW.Object
 GLTFSpecGloss_MethodBind_List :: struct {
   get_diffuse_img: struct{
     using _get_diffuse_img: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, #by_ptr args: i64 = 0, r_ret: ^Image)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, args: rawptr = nil, r_ret: ^Image)
   },
   set_diffuse_img: struct{
     using _set_diffuse_img: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ GLTFSpecGloss_MethodBind_List :: struct {
   },
     get_diffuse_factor: struct{
     using _get_diffuse_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_diffuse_factor: struct{
     using _set_diffuse_factor: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ GLTFSpecGloss_MethodBind_List :: struct {
   },
     get_gloss_factor: struct{
     using _get_gloss_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_gloss_factor: struct{
     using _set_gloss_factor: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFSpecGloss_MethodBind_List :: struct {
   },
     get_specular_factor: struct{
     using _get_specular_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_specular_factor: struct{
     using _set_specular_factor: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GLTFSpecGloss_MethodBind_List :: struct {
   },
     get_spec_gloss_img: struct{
     using _get_spec_gloss_img: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, #by_ptr args: i64 = 0, r_ret: ^Image)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSpecGloss, args: rawptr = nil, r_ret: ^Image)
   },
   set_spec_gloss_img: struct{
     using _set_spec_gloss_img: ^GDW.MethodBind,

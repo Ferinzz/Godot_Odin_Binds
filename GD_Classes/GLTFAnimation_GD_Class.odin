@@ -10,7 +10,7 @@ GLTFAnimation :: ^GDW.Object
 GLTFAnimation_MethodBind_List :: struct {
   get_original_name: struct{
     using _get_original_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAnimation, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAnimation, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_original_name: struct{
     using _set_original_name: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ GLTFAnimation_MethodBind_List :: struct {
   },
     get_loop: struct{
     using _get_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFAnimation, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFAnimation, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_loop: struct{
     using _set_loop: ^GDW.MethodBind,

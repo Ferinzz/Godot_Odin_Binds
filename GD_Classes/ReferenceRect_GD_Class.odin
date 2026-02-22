@@ -10,7 +10,7 @@ ReferenceRect :: ^GDW.Object
 ReferenceRect_MethodBind_List :: struct {
   get_border_color: struct{
     using _get_border_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReferenceRect, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ReferenceRect, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_border_color: struct{
     using _set_border_color: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ ReferenceRect_MethodBind_List :: struct {
   },
     get_border_width: struct{
     using _get_border_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReferenceRect, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ReferenceRect, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_border_width: struct{
     using _set_border_width: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ ReferenceRect_MethodBind_List :: struct {
   },
     get_editor_only: struct{
     using _get_editor_only: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ReferenceRect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ReferenceRect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_editor_only: struct{
     using _set_editor_only: ^GDW.MethodBind,

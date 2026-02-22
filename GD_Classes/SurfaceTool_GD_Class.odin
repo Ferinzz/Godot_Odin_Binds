@@ -31,7 +31,7 @@ SurfaceTool_MethodBind_List :: struct {
   },
     get_skin_weight_count: struct{
     using _get_skin_weight_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: ^SurfaceTool_SkinWeightCount)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: ^SurfaceTool_SkinWeightCount)
   },
   set_custom_format: struct{
     using _set_custom_format: ^GDW.MethodBind,
@@ -95,11 +95,11 @@ SurfaceTool_MethodBind_List :: struct {
   },
     index: struct{
     using _index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: rawptr = nil)
   },
     deindex: struct{
     using _deindex: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: rawptr = nil)
   },
     generate_normals: struct{
     using _generate_normals: ^GDW.MethodBind,
@@ -107,15 +107,15 @@ SurfaceTool_MethodBind_List :: struct {
   },
     generate_tangents: struct{
     using _generate_tangents: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: rawptr = nil)
   },
     optimize_indices_for_cache: struct{
     using _optimize_indices_for_cache: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_aabb: struct{
     using _get_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   generate_lod: struct{
     using _generate_lod: ^GDW.MethodBind,
@@ -127,11 +127,11 @@ SurfaceTool_MethodBind_List :: struct {
   },
     get_primitive_type: struct{
     using _get_primitive_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: ^Mesh_PrimitiveType)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: ^Mesh_PrimitiveType)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: rawptr = nil)
   },
     create_from: struct{
     using _create_from: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ SurfaceTool_MethodBind_List :: struct {
   },
   commit_to_arrays: struct{
     using _commit_to_arrays: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: SurfaceTool, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 SurfaceTool_Init_ :: proc (SurfaceTool_methods: ^SurfaceTool_MethodBind_List, loc := #caller_location) {

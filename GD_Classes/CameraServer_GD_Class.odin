@@ -21,7 +21,7 @@ CameraServer_MethodBind_List :: struct {
   },
     is_monitoring_feeds: struct{
     using _is_monitoring_feeds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_feed: struct{
     using _get_feed: ^GDW.MethodBind,
@@ -29,11 +29,11 @@ CameraServer_MethodBind_List :: struct {
   },
   get_feed_count: struct{
     using _get_feed_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   feeds: struct{
     using _feeds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraServer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_feed: struct{
     using _add_feed: ^GDW.MethodBind,

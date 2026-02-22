@@ -101,11 +101,11 @@ OpenXRInterface_HandJointFlags :: enum i64 {
 OpenXRInterface_MethodBind_List :: struct {
   get_session_state: struct{
     using _get_session_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^OpenXRInterface_SessionState)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^OpenXRInterface_SessionState)
   },
   get_display_refresh_rate: struct{
     using _get_display_refresh_rate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_display_refresh_rate: struct{
     using _set_display_refresh_rate: ^GDW.MethodBind,
@@ -113,7 +113,7 @@ OpenXRInterface_MethodBind_List :: struct {
   },
     get_render_target_size_multiplier: struct{
     using _get_render_target_size_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_render_target_size_multiplier: struct{
     using _set_render_target_size_multiplier: ^GDW.MethodBind,
@@ -121,11 +121,11 @@ OpenXRInterface_MethodBind_List :: struct {
   },
     is_foveation_supported: struct{
     using _is_foveation_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_foveation_level: struct{
     using _get_foveation_level: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_foveation_level: struct{
     using _set_foveation_level: ^GDW.MethodBind,
@@ -133,7 +133,7 @@ OpenXRInterface_MethodBind_List :: struct {
   },
     get_foveation_dynamic: struct{
     using _get_foveation_dynamic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_foveation_dynamic: struct{
     using _set_foveation_dynamic: ^GDW.MethodBind,
@@ -149,11 +149,11 @@ OpenXRInterface_MethodBind_List :: struct {
   },
     get_action_sets: struct{
     using _get_action_sets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_available_display_refresh_rates: struct{
     using _get_available_display_refresh_rates: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_motion_range: struct{
     using _set_motion_range: ^GDW.MethodBind,
@@ -193,19 +193,19 @@ OpenXRInterface_MethodBind_List :: struct {
   },
   is_hand_tracking_supported: struct{
     using _is_hand_tracking_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_hand_interaction_supported: struct{
     using _is_hand_interaction_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_eye_gaze_interaction_supported: struct{
     using _is_eye_gaze_interaction_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_vrs_min_radius: struct{
     using _get_vrs_min_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vrs_min_radius: struct{
     using _set_vrs_min_radius: ^GDW.MethodBind,
@@ -213,7 +213,7 @@ OpenXRInterface_MethodBind_List :: struct {
   },
     get_vrs_strength: struct{
     using _get_vrs_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vrs_strength: struct{
     using _set_vrs_strength: ^GDW.MethodBind,

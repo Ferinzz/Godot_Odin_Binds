@@ -14,7 +14,7 @@ CircleShape2D_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CircleShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CircleShape2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 CircleShape2D_Init_ :: proc (CircleShape2D_methods: ^CircleShape2D_MethodBind_List, loc := #caller_location) {

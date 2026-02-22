@@ -38,7 +38,7 @@ Gradient_MethodBind_List :: struct {
   },
   reverse: struct{
     using _reverse: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Gradient, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Gradient, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_color: struct{
     using _set_color: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Gradient_MethodBind_List :: struct {
   },
   get_point_count: struct{
     using _get_point_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Gradient, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Gradient, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_offsets: struct{
     using _set_offsets: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ Gradient_MethodBind_List :: struct {
   },
     get_offsets: struct{
     using _get_offsets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Gradient, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Gradient, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   set_colors: struct{
     using _set_colors: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ Gradient_MethodBind_List :: struct {
   },
     get_colors: struct{
     using _get_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Gradient, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedColorArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Gradient, args: rawptr = nil, r_ret: ^GDW.PackedColorArray)
   },
   set_interpolation_mode: struct{
     using _set_interpolation_mode: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Gradient_MethodBind_List :: struct {
   },
     get_interpolation_mode: struct{
     using _get_interpolation_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Gradient, #by_ptr args: i64 = 0, r_ret: ^Gradient_InterpolationMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Gradient, args: rawptr = nil, r_ret: ^Gradient_InterpolationMode)
   },
   set_interpolation_color_space: struct{
     using _set_interpolation_color_space: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ Gradient_MethodBind_List :: struct {
   },
     get_interpolation_color_space: struct{
     using _get_interpolation_color_space: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Gradient, #by_ptr args: i64 = 0, r_ret: ^Gradient_ColorSpace)
+    m_call: proc(_:^GDW.MethodBind, obj: Gradient, args: rawptr = nil, r_ret: ^Gradient_ColorSpace)
   },
 };
 Gradient_Init_ :: proc (Gradient_methods: ^Gradient_MethodBind_List, loc := #caller_location) {

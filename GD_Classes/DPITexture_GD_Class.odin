@@ -18,7 +18,7 @@ DPITexture_MethodBind_List :: struct {
   },
     get_source: struct{
     using _get_source: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_base_scale: struct{
     using _set_base_scale: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ DPITexture_MethodBind_List :: struct {
   },
     get_base_scale: struct{
     using _get_base_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_saturation: struct{
     using _set_saturation: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ DPITexture_MethodBind_List :: struct {
   },
     get_saturation: struct{
     using _get_saturation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_color_map: struct{
     using _set_color_map: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ DPITexture_MethodBind_List :: struct {
   },
     get_color_map: struct{
     using _get_color_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_size_override: struct{
     using _set_size_override: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ DPITexture_MethodBind_List :: struct {
   },
     get_scaled_rid: struct{
     using _get_scaled_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: DPITexture, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 DPITexture_Init_ :: proc (DPITexture_methods: ^DPITexture_MethodBind_List, loc := #caller_location) {

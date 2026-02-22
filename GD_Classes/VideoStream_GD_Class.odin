@@ -18,7 +18,7 @@ VideoStream_MethodBind_List :: struct {
   },
     get_file: struct{
     using _get_file: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStream, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStream, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 VideoStream_Init_ :: proc (VideoStream_methods: ^VideoStream_MethodBind_List, loc := #caller_location) {

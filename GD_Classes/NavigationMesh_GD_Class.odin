@@ -35,7 +35,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_sample_partition_type: struct{
     using _get_sample_partition_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^NavigationMesh_SamplePartitionType)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^NavigationMesh_SamplePartitionType)
   },
   set_parsed_geometry_type: struct{
     using _set_parsed_geometry_type: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_parsed_geometry_type: struct{
     using _get_parsed_geometry_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^NavigationMesh_ParsedGeometryType)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^NavigationMesh_ParsedGeometryType)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask_value: struct{
     using _set_collision_mask_value: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_source_geometry_mode: struct{
     using _get_source_geometry_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^NavigationMesh_SourceGeometryMode)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^NavigationMesh_SourceGeometryMode)
   },
   set_source_group_name: struct{
     using _set_source_group_name: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_source_group_name: struct{
     using _get_source_group_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_cell_size: struct{
     using _set_cell_size: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_cell_size: struct{
     using _get_cell_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_cell_height: struct{
     using _set_cell_height: ^GDW.MethodBind,
@@ -91,7 +91,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_cell_height: struct{
     using _get_cell_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_border_size: struct{
     using _set_border_size: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_border_size: struct{
     using _get_border_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_agent_height: struct{
     using _set_agent_height: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_agent_height: struct{
     using _get_agent_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_agent_radius: struct{
     using _set_agent_radius: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_agent_radius: struct{
     using _get_agent_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_agent_max_climb: struct{
     using _set_agent_max_climb: ^GDW.MethodBind,
@@ -123,7 +123,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_agent_max_climb: struct{
     using _get_agent_max_climb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_agent_max_slope: struct{
     using _set_agent_max_slope: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_agent_max_slope: struct{
     using _get_agent_max_slope: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_region_min_size: struct{
     using _set_region_min_size: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_region_min_size: struct{
     using _get_region_min_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_region_merge_size: struct{
     using _set_region_merge_size: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_region_merge_size: struct{
     using _get_region_merge_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_edge_max_length: struct{
     using _set_edge_max_length: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_edge_max_length: struct{
     using _get_edge_max_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_edge_max_error: struct{
     using _set_edge_max_error: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_edge_max_error: struct{
     using _get_edge_max_error: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vertices_per_polygon: struct{
     using _set_vertices_per_polygon: ^GDW.MethodBind,
@@ -171,7 +171,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_vertices_per_polygon: struct{
     using _get_vertices_per_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_detail_sample_distance: struct{
     using _set_detail_sample_distance: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_detail_sample_distance: struct{
     using _get_detail_sample_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_detail_sample_max_error: struct{
     using _set_detail_sample_max_error: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_detail_sample_max_error: struct{
     using _get_detail_sample_max_error: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_filter_low_hanging_obstacles: struct{
     using _set_filter_low_hanging_obstacles: ^GDW.MethodBind,
@@ -195,7 +195,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_filter_low_hanging_obstacles: struct{
     using _get_filter_low_hanging_obstacles: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_filter_ledge_spans: struct{
     using _set_filter_ledge_spans: ^GDW.MethodBind,
@@ -203,7 +203,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_filter_ledge_spans: struct{
     using _get_filter_ledge_spans: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_filter_walkable_low_height_spans: struct{
     using _set_filter_walkable_low_height_spans: ^GDW.MethodBind,
@@ -211,7 +211,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_filter_walkable_low_height_spans: struct{
     using _get_filter_walkable_low_height_spans: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_filter_baking_aabb: struct{
     using _set_filter_baking_aabb: ^GDW.MethodBind,
@@ -219,7 +219,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_filter_baking_aabb: struct{
     using _get_filter_baking_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   set_filter_baking_aabb_offset: struct{
     using _set_filter_baking_aabb_offset: ^GDW.MethodBind,
@@ -227,7 +227,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_filter_baking_aabb_offset: struct{
     using _get_filter_baking_aabb_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_vertices: struct{
     using _set_vertices: ^GDW.MethodBind,
@@ -235,7 +235,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_vertices: struct{
     using _get_vertices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   add_polygon: struct{
     using _add_polygon: ^GDW.MethodBind,
@@ -243,7 +243,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     get_polygon_count: struct{
     using _get_polygon_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_polygon: struct{
     using _get_polygon: ^GDW.MethodBind,
@@ -251,7 +251,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
   clear_polygons: struct{
     using _clear_polygons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
     create_from_mesh: struct{
     using _create_from_mesh: ^GDW.MethodBind,
@@ -259,7 +259,7 @@ NavigationMesh_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 NavigationMesh_Init_ :: proc (NavigationMesh_methods: ^NavigationMesh_MethodBind_List, loc := #caller_location) {

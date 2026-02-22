@@ -10,11 +10,11 @@ AcceptDialog :: ^GDW.Object
 AcceptDialog_MethodBind_List :: struct {
   get_ok_button: struct{
     using _get_ok_button: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, #by_ptr args: i64 = 0, r_ret: ^Button)
+    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, args: rawptr = nil, r_ret: ^Button)
   },
   get_label: struct{
     using _get_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, #by_ptr args: i64 = 0, r_ret: ^Label)
+    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, args: rawptr = nil, r_ret: ^Label)
   },
   set_hide_on_ok: struct{
     using _set_hide_on_ok: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AcceptDialog_MethodBind_List :: struct {
   },
     get_hide_on_ok: struct{
     using _get_hide_on_ok: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_close_on_escape: struct{
     using _set_close_on_escape: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AcceptDialog_MethodBind_List :: struct {
   },
     get_close_on_escape: struct{
     using _get_close_on_escape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_button: struct{
     using _add_button: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ AcceptDialog_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_autowrap: struct{
     using _set_autowrap: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ AcceptDialog_MethodBind_List :: struct {
   },
     has_autowrap: struct{
     using _has_autowrap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_ok_button_text: struct{
     using _set_ok_button_text: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ AcceptDialog_MethodBind_List :: struct {
   },
     get_ok_button_text: struct{
     using _get_ok_button_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AcceptDialog, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 AcceptDialog_Init_ :: proc (AcceptDialog_methods: ^AcceptDialog_MethodBind_List, loc := #caller_location) {

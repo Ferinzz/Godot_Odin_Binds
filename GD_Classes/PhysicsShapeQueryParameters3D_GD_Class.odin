@@ -14,7 +14,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     get_shape: struct{
     using _get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^Resource)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^Resource)
   },
   set_shape_rid: struct{
     using _set_shape_rid: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     get_shape_rid: struct{
     using _get_shape_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_transform: struct{
     using _set_transform: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     get_transform: struct{
     using _get_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_motion: struct{
     using _set_motion: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     get_motion: struct{
     using _get_motion: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_margin: struct{
     using _set_margin: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     get_margin: struct{
     using _get_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_exclude: struct{
     using _set_exclude: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     get_exclude: struct{
     using _get_exclude: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_collide_with_bodies: struct{
     using _set_collide_with_bodies: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     is_collide_with_bodies_enabled: struct{
     using _is_collide_with_bodies_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_areas: struct{
     using _set_collide_with_areas: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ PhysicsShapeQueryParameters3D_MethodBind_List :: struct {
   },
     is_collide_with_areas_enabled: struct{
     using _is_collide_with_areas_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsShapeQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PhysicsShapeQueryParameters3D_Init_ :: proc (PhysicsShapeQueryParameters3D_methods: ^PhysicsShapeQueryParameters3D_MethodBind_List, loc := #caller_location) {

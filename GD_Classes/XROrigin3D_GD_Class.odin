@@ -14,7 +14,7 @@ XROrigin3D_MethodBind_List :: struct {
   },
     get_world_scale: struct{
     using _get_world_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XROrigin3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: XROrigin3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_current: struct{
     using _set_current: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ XROrigin3D_MethodBind_List :: struct {
   },
     is_current: struct{
     using _is_current: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XROrigin3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XROrigin3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 XROrigin3D_Init_ :: proc (XROrigin3D_methods: ^XROrigin3D_MethodBind_List, loc := #caller_location) {

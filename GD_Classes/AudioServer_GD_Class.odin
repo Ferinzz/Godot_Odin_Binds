@@ -28,7 +28,7 @@ AudioServer_MethodBind_List :: struct {
   },
     get_bus_count: struct{
     using _get_bus_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   remove_bus: struct{
     using _remove_bus: ^GDW.MethodBind,
@@ -152,39 +152,39 @@ AudioServer_MethodBind_List :: struct {
   },
     get_playback_speed_scale: struct{
     using _get_playback_speed_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   lock: struct{
     using _lock: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     unlock: struct{
     using _unlock: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_speaker_mode: struct{
     using _get_speaker_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^AudioServer_SpeakerMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^AudioServer_SpeakerMode)
   },
   get_mix_rate: struct{
     using _get_mix_rate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_input_mix_rate: struct{
     using _get_input_mix_rate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_driver_name: struct{
     using _get_driver_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_output_device_list: struct{
     using _get_output_device_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_output_device: struct{
     using _get_output_device: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_output_device: struct{
     using _set_output_device: ^GDW.MethodBind,
@@ -192,23 +192,23 @@ AudioServer_MethodBind_List :: struct {
   },
     get_time_to_next_mix: struct{
     using _get_time_to_next_mix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_time_since_last_mix: struct{
     using _get_time_since_last_mix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_output_latency: struct{
     using _get_output_latency: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_input_device_list: struct{
     using _get_input_device_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_input_device: struct{
     using _get_input_device: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_input_device: struct{
     using _set_input_device: ^GDW.MethodBind,
@@ -220,11 +220,11 @@ AudioServer_MethodBind_List :: struct {
   },
   get_input_frames_available: struct{
     using _get_input_frames_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_input_buffer_length_frames: struct{
     using _get_input_buffer_length_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_input_frames: struct{
     using _get_input_frames: ^GDW.MethodBind,
@@ -236,7 +236,7 @@ AudioServer_MethodBind_List :: struct {
   },
     generate_bus_layout: struct{
     using _generate_bus_layout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, #by_ptr args: i64 = 0, r_ret: ^AudioBusLayout)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioServer, args: rawptr = nil, r_ret: ^AudioBusLayout)
   },
   set_enable_tagging_used_audio_streams: struct{
     using _set_enable_tagging_used_audio_streams: ^GDW.MethodBind,

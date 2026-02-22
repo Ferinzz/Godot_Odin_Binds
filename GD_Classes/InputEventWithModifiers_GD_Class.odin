@@ -14,11 +14,11 @@ InputEventWithModifiers_MethodBind_List :: struct {
   },
     is_command_or_control_autoremap: struct{
     using _is_command_or_control_autoremap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_command_or_control_pressed: struct{
     using _is_command_or_control_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_alt_pressed: struct{
     using _set_alt_pressed: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ InputEventWithModifiers_MethodBind_List :: struct {
   },
     is_alt_pressed: struct{
     using _is_alt_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shift_pressed: struct{
     using _set_shift_pressed: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ InputEventWithModifiers_MethodBind_List :: struct {
   },
     is_shift_pressed: struct{
     using _is_shift_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_ctrl_pressed: struct{
     using _set_ctrl_pressed: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ InputEventWithModifiers_MethodBind_List :: struct {
   },
     is_ctrl_pressed: struct{
     using _is_ctrl_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_meta_pressed: struct{
     using _set_meta_pressed: ^GDW.MethodBind,
@@ -50,11 +50,11 @@ InputEventWithModifiers_MethodBind_List :: struct {
   },
     is_meta_pressed: struct{
     using _is_meta_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_modifiers_mask: struct{
     using _get_modifiers_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, #by_ptr args: i64 = 0, r_ret: ^GDW.KeyModifierMask)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventWithModifiers, args: rawptr = nil, r_ret: ^GDW.KeyModifierMask)
   },
 };
 InputEventWithModifiers_Init_ :: proc (InputEventWithModifiers_methods: ^InputEventWithModifiers_MethodBind_List, loc := #caller_location) {

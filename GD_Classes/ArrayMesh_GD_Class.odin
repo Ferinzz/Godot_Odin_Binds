@@ -14,7 +14,7 @@ ArrayMesh_MethodBind_List :: struct {
   },
     get_blend_shape_count: struct{
     using _get_blend_shape_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_blend_shape_name: struct{
     using _get_blend_shape_name: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ ArrayMesh_MethodBind_List :: struct {
   },
     clear_blend_shapes: struct{
     using _clear_blend_shapes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_blend_shape_mode: struct{
     using _set_blend_shape_mode: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ ArrayMesh_MethodBind_List :: struct {
   },
     get_blend_shape_mode: struct{
     using _get_blend_shape_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, #by_ptr args: i64 = 0, r_ret: ^Mesh_BlendShapeMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, args: rawptr = nil, r_ret: ^Mesh_BlendShapeMode)
   },
   add_surface_from_arrays: struct{
     using _add_surface_from_arrays: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ ArrayMesh_MethodBind_List :: struct {
   },
     clear_surfaces: struct{
     using _clear_surfaces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
     surface_remove: struct{
     using _surface_remove: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ ArrayMesh_MethodBind_List :: struct {
   },
   regen_normal_maps: struct{
     using _regen_normal_maps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
     lightmap_unwrap: struct{
     using _lightmap_unwrap: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ ArrayMesh_MethodBind_List :: struct {
   },
     get_custom_aabb: struct{
     using _get_custom_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   set_shadow_mesh: struct{
     using _set_shadow_mesh: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ ArrayMesh_MethodBind_List :: struct {
   },
     get_shadow_mesh: struct{
     using _get_shadow_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, #by_ptr args: i64 = 0, r_ret: ^ArrayMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: ArrayMesh, args: rawptr = nil, r_ret: ^ArrayMesh)
   },
 };
 ArrayMesh_Init_ :: proc (ArrayMesh_methods: ^ArrayMesh_MethodBind_List, loc := #caller_location) {

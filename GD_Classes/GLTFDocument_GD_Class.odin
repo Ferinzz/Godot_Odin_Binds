@@ -26,7 +26,7 @@ GLTFDocument_MethodBind_List :: struct {
   },
     get_image_format: struct{
     using _get_image_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_lossy_quality: struct{
     using _set_lossy_quality: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFDocument_MethodBind_List :: struct {
   },
     get_lossy_quality: struct{
     using _get_lossy_quality: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fallback_image_format: struct{
     using _set_fallback_image_format: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GLTFDocument_MethodBind_List :: struct {
   },
     get_fallback_image_format: struct{
     using _get_fallback_image_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_fallback_image_quality: struct{
     using _set_fallback_image_quality: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ GLTFDocument_MethodBind_List :: struct {
   },
     get_fallback_image_quality: struct{
     using _get_fallback_image_quality: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_root_node_mode: struct{
     using _set_root_node_mode: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ GLTFDocument_MethodBind_List :: struct {
   },
     get_root_node_mode: struct{
     using _get_root_node_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, #by_ptr args: i64 = 0, r_ret: ^GLTFDocument_RootNodeMode)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, args: rawptr = nil, r_ret: ^GLTFDocument_RootNodeMode)
   },
   set_visibility_mode: struct{
     using _set_visibility_mode: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ GLTFDocument_MethodBind_List :: struct {
   },
     get_visibility_mode: struct{
     using _get_visibility_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, #by_ptr args: i64 = 0, r_ret: ^GLTFDocument_VisibilityMode)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, args: rawptr = nil, r_ret: ^GLTFDocument_VisibilityMode)
   },
   append_from_file: struct{
     using _append_from_file: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ GLTFDocument_MethodBind_List :: struct {
   },
     get_supported_gltf_extensions: struct{
     using _get_supported_gltf_extensions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFDocument, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
 };
 GLTFDocument_Init_ :: proc (GLTFDocument_methods: ^GLTFDocument_MethodBind_List, loc := #caller_location) {

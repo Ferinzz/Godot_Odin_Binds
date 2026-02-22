@@ -14,7 +14,7 @@ PackedDataContainer_MethodBind_List :: struct {
   },
   size: struct{
     using _size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PackedDataContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PackedDataContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 PackedDataContainer_Init_ :: proc (PackedDataContainer_methods: ^PackedDataContainer_MethodBind_List, loc := #caller_location) {

@@ -21,7 +21,7 @@ OpenXRAction_MethodBind_List :: struct {
   },
     get_localized_name: struct{
     using _get_localized_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAction, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAction, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_action_type: struct{
     using _set_action_type: ^GDW.MethodBind,
@@ -29,7 +29,7 @@ OpenXRAction_MethodBind_List :: struct {
   },
     get_action_type: struct{
     using _get_action_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAction, #by_ptr args: i64 = 0, r_ret: ^OpenXRAction_ActionType)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAction, args: rawptr = nil, r_ret: ^OpenXRAction_ActionType)
   },
   set_toplevel_paths: struct{
     using _set_toplevel_paths: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ OpenXRAction_MethodBind_List :: struct {
   },
     get_toplevel_paths: struct{
     using _get_toplevel_paths: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAction, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAction, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
 };
 OpenXRAction_Init_ :: proc (OpenXRAction_methods: ^OpenXRAction_MethodBind_List, loc := #caller_location) {

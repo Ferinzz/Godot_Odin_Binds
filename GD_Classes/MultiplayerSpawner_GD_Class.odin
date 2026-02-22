@@ -14,7 +14,7 @@ MultiplayerSpawner_MethodBind_List :: struct {
   },
     get_spawnable_scene_count: struct{
     using _get_spawnable_scene_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_spawnable_scene: struct{
     using _get_spawnable_scene: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MultiplayerSpawner_MethodBind_List :: struct {
   },
   clear_spawnable_scenes: struct{
     using _clear_spawnable_scenes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, args: rawptr = nil, r_ret: rawptr = nil)
   },
     spawn: struct{
     using _spawn: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ MultiplayerSpawner_MethodBind_List :: struct {
   },
   get_spawn_path: struct{
     using _get_spawn_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_spawn_path: struct{
     using _set_spawn_path: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ MultiplayerSpawner_MethodBind_List :: struct {
   },
     get_spawn_limit: struct{
     using _get_spawn_limit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_spawn_limit: struct{
     using _set_spawn_limit: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ MultiplayerSpawner_MethodBind_List :: struct {
   },
     get_spawn_function: struct{
     using _get_spawn_function: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, #by_ptr args: i64 = 0, r_ret: ^GDW.Callable)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerSpawner, args: rawptr = nil, r_ret: ^GDW.Callable)
   },
   set_spawn_function: struct{
     using _set_spawn_function: ^GDW.MethodBind,

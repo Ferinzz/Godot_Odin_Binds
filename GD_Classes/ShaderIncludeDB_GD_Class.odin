@@ -10,7 +10,7 @@ ShaderIncludeDB :: ^GDW.Object
 ShaderIncludeDB_MethodBind_List :: struct {
   list_built_in_include_files: struct{
     using _list_built_in_include_files: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShaderIncludeDB, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ShaderIncludeDB, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   has_built_in_include_file: struct{
     using _has_built_in_include_file: ^GDW.MethodBind,

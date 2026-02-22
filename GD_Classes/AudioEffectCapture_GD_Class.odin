@@ -18,7 +18,7 @@ AudioEffectCapture_MethodBind_List :: struct {
   },
   clear_buffer: struct{
     using _clear_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_buffer_length: struct{
     using _set_buffer_length: ^GDW.MethodBind,
@@ -26,23 +26,23 @@ AudioEffectCapture_MethodBind_List :: struct {
   },
     get_buffer_length: struct{
     using _get_buffer_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_frames_available: struct{
     using _get_frames_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_discarded_frames: struct{
     using _get_discarded_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_buffer_length_frames: struct{
     using _get_buffer_length_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_pushed_frames: struct{
     using _get_pushed_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectCapture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 AudioEffectCapture_Init_ :: proc (AudioEffectCapture_methods: ^AudioEffectCapture_MethodBind_List, loc := #caller_location) {

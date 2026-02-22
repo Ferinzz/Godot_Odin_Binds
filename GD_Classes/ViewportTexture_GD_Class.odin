@@ -14,7 +14,7 @@ ViewportTexture_MethodBind_List :: struct {
   },
     get_viewport_path_in_scene: struct{
     using _get_viewport_path_in_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ViewportTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: ViewportTexture, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
 };
 ViewportTexture_Init_ :: proc (ViewportTexture_methods: ^ViewportTexture_MethodBind_List, loc := #caller_location) {

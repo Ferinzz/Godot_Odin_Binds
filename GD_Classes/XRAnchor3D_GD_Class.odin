@@ -10,11 +10,11 @@ XRAnchor3D :: ^GDW.Object
 XRAnchor3D_MethodBind_List :: struct {
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRAnchor3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: XRAnchor3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_plane: struct{
     using _get_plane: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRAnchor3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Plane)
+    m_call: proc(_:^GDW.MethodBind, obj: XRAnchor3D, args: rawptr = nil, r_ret: ^GDW.Plane)
   },
 };
 XRAnchor3D_Init_ :: proc (XRAnchor3D_methods: ^XRAnchor3D_MethodBind_List, loc := #caller_location) {

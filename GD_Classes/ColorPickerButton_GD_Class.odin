@@ -14,15 +14,15 @@ ColorPickerButton_MethodBind_List :: struct {
   },
     get_pick_color: struct{
     using _get_pick_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   get_picker: struct{
     using _get_picker: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, #by_ptr args: i64 = 0, r_ret: ^ColorPicker)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, args: rawptr = nil, r_ret: ^ColorPicker)
   },
   get_popup: struct{
     using _get_popup: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, #by_ptr args: i64 = 0, r_ret: ^PopupPanel)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, args: rawptr = nil, r_ret: ^PopupPanel)
   },
   set_edit_alpha: struct{
     using _set_edit_alpha: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ ColorPickerButton_MethodBind_List :: struct {
   },
     is_editing_alpha: struct{
     using _is_editing_alpha: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_edit_intensity: struct{
     using _set_edit_intensity: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ ColorPickerButton_MethodBind_List :: struct {
   },
     is_editing_intensity: struct{
     using _is_editing_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorPickerButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 ColorPickerButton_Init_ :: proc (ColorPickerButton_methods: ^ColorPickerButton_MethodBind_List, loc := #caller_location) {

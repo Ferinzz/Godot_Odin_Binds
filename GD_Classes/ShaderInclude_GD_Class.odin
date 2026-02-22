@@ -14,7 +14,7 @@ ShaderInclude_MethodBind_List :: struct {
   },
     get_code: struct{
     using _get_code: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ShaderInclude, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: ShaderInclude, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 ShaderInclude_Init_ :: proc (ShaderInclude_methods: ^ShaderInclude_MethodBind_List, loc := #caller_location) {

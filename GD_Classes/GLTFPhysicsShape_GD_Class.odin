@@ -30,11 +30,11 @@ GLTFPhysicsShape_MethodBind_List :: struct {
   },
   to_dictionary: struct{
     using _to_dictionary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_shape_type: struct{
     using _get_shape_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_shape_type: struct{
     using _set_shape_type: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GLTFPhysicsShape_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_size: struct{
     using _set_size: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ GLTFPhysicsShape_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_radius: struct{
     using _set_radius: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ GLTFPhysicsShape_MethodBind_List :: struct {
   },
     get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_height: struct{
     using _set_height: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ GLTFPhysicsShape_MethodBind_List :: struct {
   },
     get_is_trigger: struct{
     using _get_is_trigger: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_is_trigger: struct{
     using _set_is_trigger: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ GLTFPhysicsShape_MethodBind_List :: struct {
   },
     get_mesh_index: struct{
     using _get_mesh_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_mesh_index: struct{
     using _set_mesh_index: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ GLTFPhysicsShape_MethodBind_List :: struct {
   },
     get_importer_mesh: struct{
     using _get_importer_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, #by_ptr args: i64 = 0, r_ret: ^ImporterMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFPhysicsShape, args: rawptr = nil, r_ret: ^ImporterMesh)
   },
   set_importer_mesh: struct{
     using _set_importer_mesh: ^GDW.MethodBind,

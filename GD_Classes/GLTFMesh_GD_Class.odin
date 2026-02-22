@@ -10,7 +10,7 @@ GLTFMesh :: ^GDW.Object
 GLTFMesh_MethodBind_List :: struct {
   get_original_name: struct{
     using _get_original_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFMesh, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_original_name: struct{
     using _set_original_name: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ GLTFMesh_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFMesh, #by_ptr args: i64 = 0, r_ret: ^ImporterMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFMesh, args: rawptr = nil, r_ret: ^ImporterMesh)
   },
   set_mesh: struct{
     using _set_mesh: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ GLTFMesh_MethodBind_List :: struct {
   },
     get_blend_weights: struct{
     using _get_blend_weights: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFMesh, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   set_blend_weights: struct{
     using _set_blend_weights: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFMesh_MethodBind_List :: struct {
   },
     get_instance_materials: struct{
     using _get_instance_materials: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFMesh, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_instance_materials: struct{
     using _set_instance_materials: ^GDW.MethodBind,

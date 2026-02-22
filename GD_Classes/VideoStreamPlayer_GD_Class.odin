@@ -14,19 +14,19 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     get_stream: struct{
     using _get_stream: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^VideoStream)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^VideoStream)
   },
   play: struct{
     using _play: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_playing: struct{
     using _is_playing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_paused: struct{
     using _set_paused: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     is_paused: struct{
     using _is_paused: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_loop: struct{
     using _set_loop: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     has_loop: struct{
     using _has_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_volume: struct{
     using _set_volume: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     get_volume: struct{
     using _get_volume: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volume_db: struct{
     using _set_volume_db: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     get_volume_db: struct{
     using _get_volume_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_speed_scale: struct{
     using _set_speed_scale: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     get_speed_scale: struct{
     using _get_speed_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_audio_track: struct{
     using _set_audio_track: ^GDW.MethodBind,
@@ -74,15 +74,15 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     get_audio_track: struct{
     using _get_audio_track: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_stream_name: struct{
     using _get_stream_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_stream_length: struct{
     using _get_stream_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_stream_position: struct{
     using _set_stream_position: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     get_stream_position: struct{
     using _get_stream_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_autoplay: struct{
     using _set_autoplay: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     has_autoplay: struct{
     using _has_autoplay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_expand: struct{
     using _set_expand: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     has_expand: struct{
     using _has_expand: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_buffering_msec: struct{
     using _set_buffering_msec: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     get_buffering_msec: struct{
     using _get_buffering_msec: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bus: struct{
     using _set_bus: ^GDW.MethodBind,
@@ -122,11 +122,11 @@ VideoStreamPlayer_MethodBind_List :: struct {
   },
     get_bus: struct{
     using _get_bus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   get_video_texture: struct{
     using _get_video_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: VideoStreamPlayer, args: rawptr = nil, r_ret: ^Texture2D)
   },
 };
 VideoStreamPlayer_Init_ :: proc (VideoStreamPlayer_methods: ^VideoStreamPlayer_MethodBind_List, loc := #caller_location) {

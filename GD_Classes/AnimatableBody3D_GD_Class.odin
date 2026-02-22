@@ -14,7 +14,7 @@ AnimatableBody3D_MethodBind_List :: struct {
   },
     is_sync_to_physics_enabled: struct{
     using _is_sync_to_physics_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatableBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatableBody3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AnimatableBody3D_Init_ :: proc (AnimatableBody3D_methods: ^AnimatableBody3D_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ PolygonOccluder3D_MethodBind_List :: struct {
   },
     get_polygon: struct{
     using _get_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PolygonOccluder3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PolygonOccluder3D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
 };
 PolygonOccluder3D_Init_ :: proc (PolygonOccluder3D_methods: ^PolygonOccluder3D_MethodBind_List, loc := #caller_location) {

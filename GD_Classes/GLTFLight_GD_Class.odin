@@ -14,7 +14,7 @@ GLTFLight_MethodBind_List :: struct {
   },
   to_node: struct{
     using _to_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, #by_ptr args: i64 = 0, r_ret: ^Light3D)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, args: rawptr = nil, r_ret: ^Light3D)
   },
   from_dictionary: struct{
     using _from_dictionary: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ GLTFLight_MethodBind_List :: struct {
   },
   to_dictionary: struct{
     using _to_dictionary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_color: struct{
     using _set_color: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFLight_MethodBind_List :: struct {
   },
     get_intensity: struct{
     using _get_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_intensity: struct{
     using _set_intensity: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GLTFLight_MethodBind_List :: struct {
   },
     get_light_type: struct{
     using _get_light_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_light_type: struct{
     using _set_light_type: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ GLTFLight_MethodBind_List :: struct {
   },
     get_range: struct{
     using _get_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_range: struct{
     using _set_range: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ GLTFLight_MethodBind_List :: struct {
   },
     get_inner_cone_angle: struct{
     using _get_inner_cone_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_inner_cone_angle: struct{
     using _set_inner_cone_angle: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ GLTFLight_MethodBind_List :: struct {
   },
     get_outer_cone_angle: struct{
     using _get_outer_cone_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFLight, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_outer_cone_angle: struct{
     using _set_outer_cone_angle: ^GDW.MethodBind,

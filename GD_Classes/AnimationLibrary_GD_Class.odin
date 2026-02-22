@@ -30,11 +30,11 @@ AnimationLibrary_MethodBind_List :: struct {
   },
   get_animation_list: struct{
     using _get_animation_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationLibrary, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationLibrary, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_animation_list_size: struct{
     using _get_animation_list_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationLibrary, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationLibrary, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 AnimationLibrary_Init_ :: proc (AnimationLibrary_methods: ^AnimationLibrary_MethodBind_List, loc := #caller_location) {

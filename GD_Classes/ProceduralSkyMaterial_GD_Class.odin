@@ -14,7 +14,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_sky_top_color: struct{
     using _get_sky_top_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_sky_horizon_color: struct{
     using _set_sky_horizon_color: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_sky_horizon_color: struct{
     using _get_sky_horizon_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_sky_curve: struct{
     using _set_sky_curve: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_sky_curve: struct{
     using _get_sky_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sky_energy_multiplier: struct{
     using _set_sky_energy_multiplier: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_sky_energy_multiplier: struct{
     using _get_sky_energy_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sky_cover: struct{
     using _set_sky_cover: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_sky_cover: struct{
     using _get_sky_cover: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_sky_cover_modulate: struct{
     using _set_sky_cover_modulate: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_sky_cover_modulate: struct{
     using _get_sky_cover_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_ground_bottom_color: struct{
     using _set_ground_bottom_color: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_ground_bottom_color: struct{
     using _get_ground_bottom_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_ground_horizon_color: struct{
     using _set_ground_horizon_color: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_ground_horizon_color: struct{
     using _get_ground_horizon_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_ground_curve: struct{
     using _set_ground_curve: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_ground_curve: struct{
     using _get_ground_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ground_energy_multiplier: struct{
     using _set_ground_energy_multiplier: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_ground_energy_multiplier: struct{
     using _get_ground_energy_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sun_angle_max: struct{
     using _set_sun_angle_max: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_sun_angle_max: struct{
     using _get_sun_angle_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sun_curve: struct{
     using _set_sun_curve: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_sun_curve: struct{
     using _get_sun_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_debanding: struct{
     using _set_use_debanding: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_use_debanding: struct{
     using _get_use_debanding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_energy_multiplier: struct{
     using _set_energy_multiplier: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ ProceduralSkyMaterial_MethodBind_List :: struct {
   },
     get_energy_multiplier: struct{
     using _get_energy_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: ProceduralSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 ProceduralSkyMaterial_Init_ :: proc (ProceduralSkyMaterial_methods: ^ProceduralSkyMaterial_MethodBind_List, loc := #caller_location) {

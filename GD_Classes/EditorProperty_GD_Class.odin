@@ -19,7 +19,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     get_label: struct{
     using _get_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_read_only: struct{
     using _set_read_only: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_read_only: struct{
     using _is_read_only: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_label: struct{
     using _set_draw_label: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_draw_label: struct{
     using _is_draw_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_background: struct{
     using _set_draw_background: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_draw_background: struct{
     using _is_draw_background: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_checkable: struct{
     using _set_checkable: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_checkable: struct{
     using _is_checkable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_checked: struct{
     using _set_checked: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_checked: struct{
     using _is_checked: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draw_warning: struct{
     using _set_draw_warning: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_draw_warning: struct{
     using _is_draw_warning: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_keying: struct{
     using _set_keying: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_keying: struct{
     using _is_keying: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_deletable: struct{
     using _set_deletable: ^GDW.MethodBind,
@@ -83,19 +83,19 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_deletable: struct{
     using _is_deletable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_edited_property: struct{
     using _get_edited_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   get_edited_object: struct{
     using _get_edited_object: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Object)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Object)
   },
   update_property: struct{
     using _update_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_focusable: struct{
     using _add_focusable: ^GDW.MethodBind,
@@ -111,7 +111,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_selectable: struct{
     using _is_selectable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_folding: struct{
     using _set_use_folding: ^GDW.MethodBind,
@@ -119,7 +119,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     is_using_folding: struct{
     using _is_using_folding: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_name_split_ratio: struct{
     using _set_name_split_ratio: ^GDW.MethodBind,
@@ -127,15 +127,15 @@ EditorProperty_MethodBind_List :: struct {
   },
     get_name_split_ratio: struct{
     using _get_name_split_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.float)
   },
   deselect: struct{
     using _deselect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_selected: struct{
     using _is_selected: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   select: struct{
     using _select: ^GDW.MethodBind,

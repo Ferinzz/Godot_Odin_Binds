@@ -43,7 +43,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_layer_viewport: struct{
     using _get_layer_viewport: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^SubViewport)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^SubViewport)
   },
   set_use_android_surface: struct{
     using _set_use_android_surface: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_use_android_surface: struct{
     using _get_use_android_surface: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_android_surface_size: struct{
     using _set_android_surface_size: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_android_surface_size: struct{
     using _get_android_surface_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_enable_hole_punch: struct{
     using _set_enable_hole_punch: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_enable_hole_punch: struct{
     using _get_enable_hole_punch: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sort_order: struct{
     using _set_sort_order: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_sort_order: struct{
     using _get_sort_order: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_alpha_blend: struct{
     using _set_alpha_blend: ^GDW.MethodBind,
@@ -83,19 +83,19 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_alpha_blend: struct{
     using _get_alpha_blend: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_android_surface: struct{
     using _get_android_surface: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^JavaObject)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^JavaObject)
   },
   is_natively_supported: struct{
     using _is_natively_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_protected_content: struct{
     using _is_protected_content: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_protected_content: struct{
     using _set_protected_content: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_min_filter: struct{
     using _get_min_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_Filter)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_Filter)
   },
   set_mag_filter: struct{
     using _set_mag_filter: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_mag_filter: struct{
     using _get_mag_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_Filter)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_Filter)
   },
   set_mipmap_mode: struct{
     using _set_mipmap_mode: ^GDW.MethodBind,
@@ -123,7 +123,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_mipmap_mode: struct{
     using _get_mipmap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_MipmapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_MipmapMode)
   },
   set_horizontal_wrap: struct{
     using _set_horizontal_wrap: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_horizontal_wrap: struct{
     using _get_horizontal_wrap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_Wrap)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_Wrap)
   },
   set_vertical_wrap: struct{
     using _set_vertical_wrap: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_vertical_wrap: struct{
     using _get_vertical_wrap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_Wrap)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_Wrap)
   },
   set_red_swizzle: struct{
     using _set_red_swizzle: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_red_swizzle: struct{
     using _get_red_swizzle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_Swizzle)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_Swizzle)
   },
   set_green_swizzle: struct{
     using _set_green_swizzle: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_green_swizzle: struct{
     using _get_green_swizzle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_Swizzle)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_Swizzle)
   },
   set_blue_swizzle: struct{
     using _set_blue_swizzle: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_blue_swizzle: struct{
     using _get_blue_swizzle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_Swizzle)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_Swizzle)
   },
   set_alpha_swizzle: struct{
     using _set_alpha_swizzle: ^GDW.MethodBind,
@@ -171,7 +171,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_alpha_swizzle: struct{
     using _get_alpha_swizzle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^OpenXRCompositionLayer_Swizzle)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^OpenXRCompositionLayer_Swizzle)
   },
   set_max_anisotropy: struct{
     using _set_max_anisotropy: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_max_anisotropy: struct{
     using _get_max_anisotropy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_border_color: struct{
     using _set_border_color: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ OpenXRCompositionLayer_MethodBind_List :: struct {
   },
     get_border_color: struct{
     using _get_border_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayer, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   intersects_ray: struct{
     using _intersects_ray: ^GDW.MethodBind,

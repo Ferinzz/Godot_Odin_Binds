@@ -14,35 +14,35 @@ EditorInterface_MethodBind_List :: struct {
   },
     get_command_palette: struct{
     using _get_command_palette: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorCommandPalette)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorCommandPalette)
   },
   get_resource_filesystem: struct{
     using _get_resource_filesystem: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorFileSystem)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorFileSystem)
   },
   get_editor_paths: struct{
     using _get_editor_paths: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorPaths)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorPaths)
   },
   get_resource_previewer: struct{
     using _get_resource_previewer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorResourcePreview)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorResourcePreview)
   },
   get_selection: struct{
     using _get_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorSelection)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorSelection)
   },
   get_editor_settings: struct{
     using _get_editor_settings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorSettings)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorSettings)
   },
   get_editor_toaster: struct{
     using _get_editor_toaster: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorToaster)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorToaster)
   },
   get_editor_undo_redo: struct{
     using _get_editor_undo_redo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorUndoRedoManager)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorUndoRedoManager)
   },
   make_mesh_previews: struct{
     using _make_mesh_previews: ^GDW.MethodBind,
@@ -58,23 +58,23 @@ EditorInterface_MethodBind_List :: struct {
   },
   get_editor_theme: struct{
     using _get_editor_theme: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^Theme)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^Theme)
   },
   get_base_control: struct{
     using _get_base_control: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^Control)
   },
   get_editor_main_screen: struct{
     using _get_editor_main_screen: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^VBoxContainer)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^VBoxContainer)
   },
   get_script_editor: struct{
     using _get_script_editor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^ScriptEditor)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^ScriptEditor)
   },
   get_editor_viewport_2d: struct{
     using _get_editor_viewport_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^SubViewport)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^SubViewport)
   },
   get_editor_viewport_3d: struct{
     using _get_editor_viewport_3d: ^GDW.MethodBind,
@@ -90,35 +90,35 @@ EditorInterface_MethodBind_List :: struct {
   },
     is_distraction_free_mode_enabled: struct{
     using _is_distraction_free_mode_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_multi_window_enabled: struct{
     using _is_multi_window_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_editor_scale: struct{
     using _get_editor_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_editor_language: struct{
     using _get_editor_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_node_3d_snap_enabled: struct{
     using _is_node_3d_snap_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_node_3d_translate_snap: struct{
     using _get_node_3d_translate_snap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_node_3d_rotate_snap: struct{
     using _get_node_3d_rotate_snap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_node_3d_scale_snap: struct{
     using _get_node_3d_scale_snap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   popup_dialog: struct{
     using _popup_dialog: ^GDW.MethodBind,
@@ -138,7 +138,7 @@ EditorInterface_MethodBind_List :: struct {
   },
     get_current_feature_profile: struct{
     using _get_current_feature_profile: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_current_feature_profile: struct{
     using _set_current_feature_profile: ^GDW.MethodBind,
@@ -166,7 +166,7 @@ EditorInterface_MethodBind_List :: struct {
   },
     get_file_system_dock: struct{
     using _get_file_system_dock: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^FileSystemDock)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^FileSystemDock)
   },
   select_file: struct{
     using _select_file: ^GDW.MethodBind,
@@ -174,19 +174,19 @@ EditorInterface_MethodBind_List :: struct {
   },
     get_selected_paths: struct{
     using _get_selected_paths: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_current_path: struct{
     using _get_current_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_current_directory: struct{
     using _get_current_directory: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_inspector: struct{
     using _get_inspector: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^EditorInspector)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^EditorInspector)
   },
   inspect_object: struct{
     using _inspect_object: ^GDW.MethodBind,
@@ -222,15 +222,15 @@ EditorInterface_MethodBind_List :: struct {
   },
   get_open_scenes: struct{
     using _get_open_scenes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_open_scene_roots: struct{
     using _get_open_scene_roots: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_edited_scene_root: struct{
     using _get_edited_scene_root: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^Node)
   },
   add_root_node: struct{
     using _add_root_node: ^GDW.MethodBind,
@@ -238,7 +238,7 @@ EditorInterface_MethodBind_List :: struct {
   },
     save_scene: struct{
     using _save_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   save_scene_as: struct{
     using _save_scene_as: ^GDW.MethodBind,
@@ -246,23 +246,23 @@ EditorInterface_MethodBind_List :: struct {
   },
     save_all_scenes: struct{
     using _save_all_scenes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: rawptr = nil)
   },
     close_scene: struct{
     using _close_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   mark_scene_as_unsaved: struct{
     using _mark_scene_as_unsaved: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: rawptr = nil)
   },
     play_main_scene: struct{
     using _play_main_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: rawptr = nil)
   },
     play_current_scene: struct{
     using _play_current_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: rawptr = nil)
   },
     play_custom_scene: struct{
     using _play_custom_scene: ^GDW.MethodBind,
@@ -270,15 +270,15 @@ EditorInterface_MethodBind_List :: struct {
   },
     stop_playing_scene: struct{
     using _stop_playing_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_playing_scene: struct{
     using _is_playing_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_playing_scene: struct{
     using _get_playing_scene: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_movie_maker_enabled: struct{
     using _set_movie_maker_enabled: ^GDW.MethodBind,
@@ -286,7 +286,7 @@ EditorInterface_MethodBind_List :: struct {
   },
     is_movie_maker_enabled: struct{
     using _is_movie_maker_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 EditorInterface_Init_ :: proc (EditorInterface_methods: ^EditorInterface_MethodBind_List, loc := #caller_location) {

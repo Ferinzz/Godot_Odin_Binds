@@ -20,7 +20,7 @@ VisibleOnScreenEnabler2D_MethodBind_List :: struct {
   },
     get_enable_mode: struct{
     using _get_enable_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenEnabler2D, #by_ptr args: i64 = 0, r_ret: ^VisibleOnScreenEnabler2D_EnableMode)
+    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenEnabler2D, args: rawptr = nil, r_ret: ^VisibleOnScreenEnabler2D_EnableMode)
   },
   set_enable_node_path: struct{
     using _set_enable_node_path: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ VisibleOnScreenEnabler2D_MethodBind_List :: struct {
   },
     get_enable_node_path: struct{
     using _get_enable_node_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenEnabler2D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenEnabler2D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
 };
 VisibleOnScreenEnabler2D_Init_ :: proc (VisibleOnScreenEnabler2D_methods: ^VisibleOnScreenEnabler2D_MethodBind_List, loc := #caller_location) {

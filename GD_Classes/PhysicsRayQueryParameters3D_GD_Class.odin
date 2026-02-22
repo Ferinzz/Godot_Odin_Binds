@@ -18,7 +18,7 @@ PhysicsRayQueryParameters3D_MethodBind_List :: struct {
   },
     get_from: struct{
     using _get_from: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_to: struct{
     using _set_to: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ PhysicsRayQueryParameters3D_MethodBind_List :: struct {
   },
     get_to: struct{
     using _get_to: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ PhysicsRayQueryParameters3D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_exclude: struct{
     using _set_exclude: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ PhysicsRayQueryParameters3D_MethodBind_List :: struct {
   },
     get_exclude: struct{
     using _get_exclude: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_collide_with_bodies: struct{
     using _set_collide_with_bodies: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ PhysicsRayQueryParameters3D_MethodBind_List :: struct {
   },
     is_collide_with_bodies_enabled: struct{
     using _is_collide_with_bodies_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_areas: struct{
     using _set_collide_with_areas: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ PhysicsRayQueryParameters3D_MethodBind_List :: struct {
   },
     is_collide_with_areas_enabled: struct{
     using _is_collide_with_areas_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hit_from_inside: struct{
     using _set_hit_from_inside: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ PhysicsRayQueryParameters3D_MethodBind_List :: struct {
   },
     is_hit_from_inside_enabled: struct{
     using _is_hit_from_inside_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hit_back_faces: struct{
     using _set_hit_back_faces: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ PhysicsRayQueryParameters3D_MethodBind_List :: struct {
   },
     is_hit_back_faces_enabled: struct{
     using _is_hit_back_faces_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsRayQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PhysicsRayQueryParameters3D_Init_ :: proc (PhysicsRayQueryParameters3D_methods: ^PhysicsRayQueryParameters3D_MethodBind_List, loc := #caller_location) {

@@ -31,7 +31,7 @@ VisualShaderNode_MethodBind_List :: struct {
   },
     get_output_port_for_preview: struct{
     using _get_output_port_for_preview: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_input_port_default_value: struct{
     using _set_input_port_default_value: ^GDW.MethodBind,
@@ -47,7 +47,7 @@ VisualShaderNode_MethodBind_List :: struct {
   },
     clear_default_input_values: struct{
     using _clear_default_input_values: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNode, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNode, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_default_input_values: struct{
     using _set_default_input_values: ^GDW.MethodBind,
@@ -55,7 +55,7 @@ VisualShaderNode_MethodBind_List :: struct {
   },
     get_default_input_values: struct{
     using _get_default_input_values: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNode, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_frame: struct{
     using _set_frame: ^GDW.MethodBind,
@@ -63,7 +63,7 @@ VisualShaderNode_MethodBind_List :: struct {
   },
     get_frame: struct{
     using _get_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 VisualShaderNode_Init_ :: proc (VisualShaderNode_methods: ^VisualShaderNode_MethodBind_List, loc := #caller_location) {

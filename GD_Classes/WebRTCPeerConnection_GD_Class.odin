@@ -46,7 +46,7 @@ WebRTCPeerConnection_MethodBind_List :: struct {
   },
   create_offer: struct{
     using _create_offer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   set_local_description: struct{
     using _set_local_description: ^GDW.MethodBind,
@@ -62,23 +62,23 @@ WebRTCPeerConnection_MethodBind_List :: struct {
   },
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_connection_state: struct{
     using _get_connection_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, #by_ptr args: i64 = 0, r_ret: ^WebRTCPeerConnection_ConnectionState)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, args: rawptr = nil, r_ret: ^WebRTCPeerConnection_ConnectionState)
   },
   get_gathering_state: struct{
     using _get_gathering_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, #by_ptr args: i64 = 0, r_ret: ^WebRTCPeerConnection_GatheringState)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, args: rawptr = nil, r_ret: ^WebRTCPeerConnection_GatheringState)
   },
   get_signaling_state: struct{
     using _get_signaling_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, #by_ptr args: i64 = 0, r_ret: ^WebRTCPeerConnection_SignalingState)
+    m_call: proc(_:^GDW.MethodBind, obj: WebRTCPeerConnection, args: rawptr = nil, r_ret: ^WebRTCPeerConnection_SignalingState)
   },
 };
 WebRTCPeerConnection_Init_ :: proc (WebRTCPeerConnection_methods: ^WebRTCPeerConnection_MethodBind_List, loc := #caller_location) {

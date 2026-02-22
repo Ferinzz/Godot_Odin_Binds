@@ -17,15 +17,15 @@ StreamPeerSocket_Status :: enum i64 {
 StreamPeerSocket_MethodBind_List :: struct {
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   get_status: struct{
     using _get_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, #by_ptr args: i64 = 0, r_ret: ^StreamPeerSocket_Status)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, args: rawptr = nil, r_ret: ^StreamPeerSocket_Status)
   },
   disconnect_from_host: struct{
     using _disconnect_from_host: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerSocket, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 StreamPeerSocket_Init_ :: proc (StreamPeerSocket_methods: ^StreamPeerSocket_MethodBind_List, loc := #caller_location) {

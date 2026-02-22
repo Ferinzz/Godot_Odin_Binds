@@ -56,11 +56,11 @@ IP_MethodBind_List :: struct {
   },
     get_local_addresses: struct{
     using _get_local_addresses: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: IP, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: IP, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_local_interfaces: struct{
     using _get_local_interfaces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: IP, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: IP, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   clear_cache: struct{
     using _clear_cache: ^GDW.MethodBind,

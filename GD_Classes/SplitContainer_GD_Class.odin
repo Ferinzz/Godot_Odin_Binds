@@ -20,7 +20,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     get_split_offsets: struct{
     using _get_split_offsets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   clamp_split_offset: struct{
     using _clamp_split_offset: ^GDW.MethodBind,
@@ -32,7 +32,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     is_collapsed: struct{
     using _is_collapsed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_dragger_visibility: struct{
     using _set_dragger_visibility: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     get_dragger_visibility: struct{
     using _get_dragger_visibility: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^SplitContainer_DraggerVisibility)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^SplitContainer_DraggerVisibility)
   },
   set_vertical: struct{
     using _set_vertical: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     is_vertical: struct{
     using _is_vertical: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_dragging_enabled: struct{
     using _set_dragging_enabled: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     is_dragging_enabled: struct{
     using _is_dragging_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_area_margin_begin: struct{
     using _set_drag_area_margin_begin: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     get_drag_area_margin_begin: struct{
     using _get_drag_area_margin_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_drag_area_margin_end: struct{
     using _set_drag_area_margin_end: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     get_drag_area_margin_end: struct{
     using _get_drag_area_margin_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_drag_area_offset: struct{
     using _set_drag_area_offset: ^GDW.MethodBind,
@@ -80,7 +80,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     get_drag_area_offset: struct{
     using _get_drag_area_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_drag_area_highlight_in_editor: struct{
     using _set_drag_area_highlight_in_editor: ^GDW.MethodBind,
@@ -88,11 +88,11 @@ SplitContainer_MethodBind_List :: struct {
   },
     is_drag_area_highlight_in_editor_enabled: struct{
     using _is_drag_area_highlight_in_editor_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_drag_area_controls: struct{
     using _get_drag_area_controls: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_touch_dragger_enabled: struct{
     using _set_touch_dragger_enabled: ^GDW.MethodBind,
@@ -100,11 +100,11 @@ SplitContainer_MethodBind_List :: struct {
   },
     is_touch_dragger_enabled: struct{
     using _is_touch_dragger_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_drag_area_control: struct{
     using _get_drag_area_control: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^Control)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^Control)
   },
   set_split_offset: struct{
     using _set_split_offset: ^GDW.MethodBind,
@@ -112,7 +112,7 @@ SplitContainer_MethodBind_List :: struct {
   },
     get_split_offset: struct{
     using _get_split_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SplitContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 SplitContainer_Init_ :: proc (SplitContainer_methods: ^SplitContainer_MethodBind_List, loc := #caller_location) {

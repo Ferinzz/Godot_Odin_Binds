@@ -14,7 +14,7 @@ AnimationNodeSync_MethodBind_List :: struct {
   },
     is_using_sync: struct{
     using _is_using_sync: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeSync, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeSync, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AnimationNodeSync_Init_ :: proc (AnimationNodeSync_methods: ^AnimationNodeSync_MethodBind_List, loc := #caller_location) {

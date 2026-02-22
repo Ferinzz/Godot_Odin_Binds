@@ -67,31 +67,31 @@ Tween_MethodBind_List :: struct {
   },
   stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: rawptr = nil)
   },
     pause: struct{
     using _pause: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: rawptr = nil)
   },
     play: struct{
     using _play: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: rawptr = nil)
   },
     kill: struct{
     using _kill: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_total_elapsed_time: struct{
     using _get_total_elapsed_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: ^GDW.float)
   },
   is_running: struct{
     using _is_running: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_valid: struct{
     using _is_valid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   bind_node: struct{
     using _bind_node: ^GDW.MethodBind,
@@ -119,7 +119,7 @@ Tween_MethodBind_List :: struct {
   },
   get_loops_left: struct{
     using _get_loops_left: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_speed_scale: struct{
     using _set_speed_scale: ^GDW.MethodBind,
@@ -135,11 +135,11 @@ Tween_MethodBind_List :: struct {
   },
   parallel: struct{
     using _parallel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: ^Tween)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: ^Tween)
   },
   chain: struct{
     using _chain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: i64 = 0, r_ret: ^Tween)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, args: rawptr = nil, r_ret: ^Tween)
   },
   interpolate_value: struct{
     using _interpolate_value: ^GDW.MethodBind,

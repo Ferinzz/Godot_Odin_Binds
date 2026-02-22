@@ -20,7 +20,7 @@ NinePatchRect_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_patch_margin: struct{
     using _set_patch_margin: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ NinePatchRect_MethodBind_List :: struct {
   },
     get_region_rect: struct{
     using _get_region_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_draw_center: struct{
     using _set_draw_center: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ NinePatchRect_MethodBind_List :: struct {
   },
     is_draw_center_enabled: struct{
     using _is_draw_center_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_h_axis_stretch_mode: struct{
     using _set_h_axis_stretch_mode: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ NinePatchRect_MethodBind_List :: struct {
   },
     get_h_axis_stretch_mode: struct{
     using _get_h_axis_stretch_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, #by_ptr args: i64 = 0, r_ret: ^NinePatchRect_AxisStretchMode)
+    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, args: rawptr = nil, r_ret: ^NinePatchRect_AxisStretchMode)
   },
   set_v_axis_stretch_mode: struct{
     using _set_v_axis_stretch_mode: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ NinePatchRect_MethodBind_List :: struct {
   },
     get_v_axis_stretch_mode: struct{
     using _get_v_axis_stretch_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, #by_ptr args: i64 = 0, r_ret: ^NinePatchRect_AxisStretchMode)
+    m_call: proc(_:^GDW.MethodBind, obj: NinePatchRect, args: rawptr = nil, r_ret: ^NinePatchRect_AxisStretchMode)
   },
 };
 NinePatchRect_Init_ :: proc (NinePatchRect_methods: ^NinePatchRect_MethodBind_List, loc := #caller_location) {

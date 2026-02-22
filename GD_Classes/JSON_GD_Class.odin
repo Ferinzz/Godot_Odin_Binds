@@ -22,7 +22,7 @@ JSON_MethodBind_List :: struct {
   },
   get_data: struct{
     using _get_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JSON, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: JSON, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
   set_data: struct{
     using _set_data: ^GDW.MethodBind,
@@ -30,15 +30,15 @@ JSON_MethodBind_List :: struct {
   },
     get_parsed_text: struct{
     using _get_parsed_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JSON, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: JSON, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_error_line: struct{
     using _get_error_line: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JSON, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: JSON, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_error_message: struct{
     using _get_error_message: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JSON, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: JSON, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   from_native: struct{
     using _from_native: ^GDW.MethodBind,

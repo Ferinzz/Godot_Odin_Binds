@@ -14,7 +14,7 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     get_sprite_frames: struct{
     using _get_sprite_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^SpriteFrames)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^SpriteFrames)
   },
   set_animation: struct{
     using _set_animation: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     get_animation: struct{
     using _get_animation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_autoplay: struct{
     using _set_autoplay: ^GDW.MethodBind,
@@ -30,11 +30,11 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     get_autoplay: struct{
     using _get_autoplay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_playing: struct{
     using _is_playing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   play: struct{
     using _play: ^GDW.MethodBind,
@@ -46,11 +46,11 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     pause: struct{
     using _pause: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_centered: struct{
     using _set_centered: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     is_centered: struct{
     using _is_centered: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_flip_h: struct{
     using _set_flip_h: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     is_flipped_h: struct{
     using _is_flipped_h: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_flip_v: struct{
     using _set_flip_v: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     is_flipped_v: struct{
     using _is_flipped_v: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_frame: struct{
     using _set_frame: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     get_frame: struct{
     using _get_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_frame_progress: struct{
     using _set_frame_progress: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     get_frame_progress: struct{
     using _get_frame_progress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_frame_and_progress: struct{
     using _set_frame_and_progress: ^GDW.MethodBind,
@@ -110,11 +110,11 @@ AnimatedSprite2D_MethodBind_List :: struct {
   },
     get_speed_scale: struct{
     using _get_speed_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_playing_speed: struct{
     using _get_playing_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimatedSprite2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AnimatedSprite2D_Init_ :: proc (AnimatedSprite2D_methods: ^AnimatedSprite2D_MethodBind_List, loc := #caller_location) {

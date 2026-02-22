@@ -10,19 +10,19 @@ OpenXRSpatialCapabilityConfigurationPlaneTracking :: ^GDW.Object
 OpenXRSpatialCapabilityConfigurationPlaneTracking_MethodBind_List :: struct {
   supports_mesh_2d: struct{
     using _supports_mesh_2d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationPlaneTracking, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationPlaneTracking, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   supports_polygons: struct{
     using _supports_polygons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationPlaneTracking, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationPlaneTracking, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   supports_labels: struct{
     using _supports_labels: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationPlaneTracking, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationPlaneTracking, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationPlaneTracking, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationPlaneTracking, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
 };
 OpenXRSpatialCapabilityConfigurationPlaneTracking_Init_ :: proc (OpenXRSpatialCapabilityConfigurationPlaneTracking_methods: ^OpenXRSpatialCapabilityConfigurationPlaneTracking_MethodBind_List, loc := #caller_location) {

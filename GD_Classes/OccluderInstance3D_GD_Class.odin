@@ -14,7 +14,7 @@ OccluderInstance3D_MethodBind_List :: struct {
   },
     get_bake_mask: struct{
     using _get_bake_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bake_mask_value: struct{
     using _set_bake_mask_value: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OccluderInstance3D_MethodBind_List :: struct {
   },
     get_bake_simplification_distance: struct{
     using _get_bake_simplification_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_occluder: struct{
     using _set_occluder: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ OccluderInstance3D_MethodBind_List :: struct {
   },
     get_occluder: struct{
     using _get_occluder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: i64 = 0, r_ret: ^Occluder3D)
+    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^Occluder3D)
   },
 };
 OccluderInstance3D_Init_ :: proc (OccluderInstance3D_methods: ^OccluderInstance3D_MethodBind_List, loc := #caller_location) {

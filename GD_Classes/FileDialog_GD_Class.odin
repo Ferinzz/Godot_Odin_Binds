@@ -41,7 +41,7 @@ FileDialog_Customization :: enum i64 {
 FileDialog_MethodBind_List :: struct {
   clear_filters: struct{
     using _clear_filters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_filter: struct{
     using _add_filter: ^GDW.MethodBind,
@@ -53,11 +53,11 @@ FileDialog_MethodBind_List :: struct {
   },
     get_filters: struct{
     using _get_filters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   clear_filename_filter: struct{
     using _clear_filename_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_filename_filter: struct{
     using _set_filename_filter: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ FileDialog_MethodBind_List :: struct {
   },
     get_filename_filter: struct{
     using _get_filename_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_option_name: struct{
     using _get_option_name: ^GDW.MethodBind,
@@ -97,7 +97,7 @@ FileDialog_MethodBind_List :: struct {
   },
     get_option_count: struct{
     using _get_option_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_option: struct{
     using _add_option: ^GDW.MethodBind,
@@ -105,19 +105,19 @@ FileDialog_MethodBind_List :: struct {
   },
     get_selected_options: struct{
     using _get_selected_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_current_dir: struct{
     using _get_current_dir: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_current_file: struct{
     using _get_current_file: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_current_path: struct{
     using _get_current_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_current_dir: struct{
     using _set_current_dir: ^GDW.MethodBind,
@@ -137,7 +137,7 @@ FileDialog_MethodBind_List :: struct {
   },
     is_mode_overriding_title: struct{
     using _is_mode_overriding_title: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_file_mode: struct{
     using _set_file_mode: ^GDW.MethodBind,
@@ -145,7 +145,7 @@ FileDialog_MethodBind_List :: struct {
   },
     get_file_mode: struct{
     using _get_file_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^FileDialog_FileMode)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^FileDialog_FileMode)
   },
   set_display_mode: struct{
     using _set_display_mode: ^GDW.MethodBind,
@@ -153,15 +153,15 @@ FileDialog_MethodBind_List :: struct {
   },
     get_display_mode: struct{
     using _get_display_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^FileDialog_DisplayMode)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^FileDialog_DisplayMode)
   },
   get_vbox: struct{
     using _get_vbox: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^VBoxContainer)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^VBoxContainer)
   },
   get_line_edit: struct{
     using _get_line_edit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^LineEdit)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^LineEdit)
   },
   set_access: struct{
     using _set_access: ^GDW.MethodBind,
@@ -169,7 +169,7 @@ FileDialog_MethodBind_List :: struct {
   },
     get_access: struct{
     using _get_access: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^FileDialog_Access)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^FileDialog_Access)
   },
   set_root_subfolder: struct{
     using _set_root_subfolder: ^GDW.MethodBind,
@@ -177,7 +177,7 @@ FileDialog_MethodBind_List :: struct {
   },
     get_root_subfolder: struct{
     using _get_root_subfolder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_show_hidden_files: struct{
     using _set_show_hidden_files: ^GDW.MethodBind,
@@ -185,7 +185,7 @@ FileDialog_MethodBind_List :: struct {
   },
     is_showing_hidden_files: struct{
     using _is_showing_hidden_files: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_native_dialog: struct{
     using _set_use_native_dialog: ^GDW.MethodBind,
@@ -193,7 +193,7 @@ FileDialog_MethodBind_List :: struct {
   },
     get_use_native_dialog: struct{
     using _get_use_native_dialog: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_customization_flag_enabled: struct{
     using _set_customization_flag_enabled: ^GDW.MethodBind,
@@ -205,7 +205,7 @@ FileDialog_MethodBind_List :: struct {
   },
   deselect_all: struct{
     using _deselect_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_favorite_list: struct{
     using _set_favorite_list: ^GDW.MethodBind,
@@ -213,7 +213,7 @@ FileDialog_MethodBind_List :: struct {
   },
     get_favorite_list: struct{
     using _get_favorite_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_recent_list: struct{
     using _set_recent_list: ^GDW.MethodBind,
@@ -221,7 +221,7 @@ FileDialog_MethodBind_List :: struct {
   },
     get_recent_list: struct{
     using _get_recent_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_get_icon_callback: struct{
     using _set_get_icon_callback: ^GDW.MethodBind,
@@ -233,11 +233,11 @@ FileDialog_MethodBind_List :: struct {
   },
     popup_file_dialog: struct{
     using _popup_file_dialog: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: rawptr = nil)
   },
     invalidate: struct{
     using _invalidate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FileDialog, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 FileDialog_Init_ :: proc (FileDialog_methods: ^FileDialog_MethodBind_List, loc := #caller_location) {

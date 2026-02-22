@@ -28,7 +28,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_tab_count: struct{
     using _get_tab_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_current_tab: struct{
     using _set_current_tab: ^GDW.MethodBind,
@@ -36,19 +36,19 @@ TabBar_MethodBind_List :: struct {
   },
     get_current_tab: struct{
     using _get_current_tab: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_previous_tab: struct{
     using _get_previous_tab: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   select_previous_available: struct{
     using _select_previous_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   select_next_available: struct{
     using _select_next_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tab_title: struct{
     using _set_tab_title: ^GDW.MethodBind,
@@ -148,7 +148,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_tab_alignment: struct{
     using _get_tab_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^TabBar_AlignmentMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^TabBar_AlignmentMode)
   },
   set_clip_tabs: struct{
     using _set_clip_tabs: ^GDW.MethodBind,
@@ -156,15 +156,15 @@ TabBar_MethodBind_List :: struct {
   },
     get_clip_tabs: struct{
     using _get_clip_tabs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_tab_offset: struct{
     using _get_tab_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_offset_buttons_visible: struct{
     using _get_offset_buttons_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   ensure_tab_visible: struct{
     using _ensure_tab_visible: ^GDW.MethodBind,
@@ -184,7 +184,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_close_with_middle_mouse: struct{
     using _get_close_with_middle_mouse: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tab_close_display_policy: struct{
     using _set_tab_close_display_policy: ^GDW.MethodBind,
@@ -192,7 +192,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_tab_close_display_policy: struct{
     using _get_tab_close_display_policy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^TabBar_CloseButtonDisplayPolicy)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^TabBar_CloseButtonDisplayPolicy)
   },
   set_max_tab_width: struct{
     using _set_max_tab_width: ^GDW.MethodBind,
@@ -200,7 +200,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_max_tab_width: struct{
     using _get_max_tab_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_scrolling_enabled: struct{
     using _set_scrolling_enabled: ^GDW.MethodBind,
@@ -208,7 +208,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_scrolling_enabled: struct{
     using _get_scrolling_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_to_rearrange_enabled: struct{
     using _set_drag_to_rearrange_enabled: ^GDW.MethodBind,
@@ -216,7 +216,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_drag_to_rearrange_enabled: struct{
     using _get_drag_to_rearrange_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_switch_on_drag_hover: struct{
     using _set_switch_on_drag_hover: ^GDW.MethodBind,
@@ -224,7 +224,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_switch_on_drag_hover: struct{
     using _get_switch_on_drag_hover: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tabs_rearrange_group: struct{
     using _set_tabs_rearrange_group: ^GDW.MethodBind,
@@ -232,7 +232,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_tabs_rearrange_group: struct{
     using _get_tabs_rearrange_group: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_scroll_to_selected: struct{
     using _set_scroll_to_selected: ^GDW.MethodBind,
@@ -240,7 +240,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_scroll_to_selected: struct{
     using _get_scroll_to_selected: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_select_with_rmb: struct{
     using _set_select_with_rmb: ^GDW.MethodBind,
@@ -248,7 +248,7 @@ TabBar_MethodBind_List :: struct {
   },
     get_select_with_rmb: struct{
     using _get_select_with_rmb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_deselect_enabled: struct{
     using _set_deselect_enabled: ^GDW.MethodBind,
@@ -256,11 +256,11 @@ TabBar_MethodBind_List :: struct {
   },
     get_deselect_enabled: struct{
     using _get_deselect_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   clear_tabs: struct{
     using _clear_tabs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TabBar, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TabBar, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 TabBar_Init_ :: proc (TabBar_methods: ^TabBar_MethodBind_List, loc := #caller_location) {

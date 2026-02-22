@@ -10,15 +10,15 @@ World3D :: ^GDW.Object
 World3D_MethodBind_List :: struct {
   get_space: struct{
     using _get_space: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: World3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_navigation_map: struct{
     using _get_navigation_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: World3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_scenario: struct{
     using _get_scenario: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: World3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_environment: struct{
     using _set_environment: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ World3D_MethodBind_List :: struct {
   },
     get_environment: struct{
     using _get_environment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World3D, #by_ptr args: i64 = 0, r_ret: ^Environment)
+    m_call: proc(_:^GDW.MethodBind, obj: World3D, args: rawptr = nil, r_ret: ^Environment)
   },
   set_fallback_environment: struct{
     using _set_fallback_environment: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ World3D_MethodBind_List :: struct {
   },
     get_fallback_environment: struct{
     using _get_fallback_environment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World3D, #by_ptr args: i64 = 0, r_ret: ^Environment)
+    m_call: proc(_:^GDW.MethodBind, obj: World3D, args: rawptr = nil, r_ret: ^Environment)
   },
   set_camera_attributes: struct{
     using _set_camera_attributes: ^GDW.MethodBind,
@@ -42,11 +42,11 @@ World3D_MethodBind_List :: struct {
   },
     get_camera_attributes: struct{
     using _get_camera_attributes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World3D, #by_ptr args: i64 = 0, r_ret: ^CameraAttributes)
+    m_call: proc(_:^GDW.MethodBind, obj: World3D, args: rawptr = nil, r_ret: ^CameraAttributes)
   },
   get_direct_space_state: struct{
     using _get_direct_space_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: World3D, #by_ptr args: i64 = 0, r_ret: ^PhysicsDirectSpaceState3D)
+    m_call: proc(_:^GDW.MethodBind, obj: World3D, args: rawptr = nil, r_ret: ^PhysicsDirectSpaceState3D)
   },
 };
 World3D_Init_ :: proc (World3D_methods: ^World3D_MethodBind_List, loc := #caller_location) {

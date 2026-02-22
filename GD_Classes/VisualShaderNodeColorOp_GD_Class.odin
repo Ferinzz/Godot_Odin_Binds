@@ -27,7 +27,7 @@ VisualShaderNodeColorOp_MethodBind_List :: struct {
   },
     get_operator: struct{
     using _get_operator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeColorOp, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeColorOp_Operator)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeColorOp, args: rawptr = nil, r_ret: ^VisualShaderNodeColorOp_Operator)
   },
 };
 VisualShaderNodeColorOp_Init_ :: proc (VisualShaderNodeColorOp_methods: ^VisualShaderNodeColorOp_MethodBind_List, loc := #caller_location) {

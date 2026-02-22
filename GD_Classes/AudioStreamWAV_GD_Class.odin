@@ -36,7 +36,7 @@ AudioStreamWAV_MethodBind_List :: struct {
   },
     get_data: struct{
     using _get_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   set_format: struct{
     using _set_format: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ AudioStreamWAV_MethodBind_List :: struct {
   },
     get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, #by_ptr args: i64 = 0, r_ret: ^AudioStreamWAV_Format)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, args: rawptr = nil, r_ret: ^AudioStreamWAV_Format)
   },
   set_loop_mode: struct{
     using _set_loop_mode: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ AudioStreamWAV_MethodBind_List :: struct {
   },
     get_loop_mode: struct{
     using _get_loop_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, #by_ptr args: i64 = 0, r_ret: ^AudioStreamWAV_LoopMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, args: rawptr = nil, r_ret: ^AudioStreamWAV_LoopMode)
   },
   set_loop_begin: struct{
     using _set_loop_begin: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ AudioStreamWAV_MethodBind_List :: struct {
   },
     get_loop_begin: struct{
     using _get_loop_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_loop_end: struct{
     using _set_loop_end: ^GDW.MethodBind,
@@ -68,7 +68,7 @@ AudioStreamWAV_MethodBind_List :: struct {
   },
     get_loop_end: struct{
     using _get_loop_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_mix_rate: struct{
     using _set_mix_rate: ^GDW.MethodBind,
@@ -76,7 +76,7 @@ AudioStreamWAV_MethodBind_List :: struct {
   },
     get_mix_rate: struct{
     using _get_mix_rate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_stereo: struct{
     using _set_stereo: ^GDW.MethodBind,
@@ -84,7 +84,7 @@ AudioStreamWAV_MethodBind_List :: struct {
   },
     is_stereo: struct{
     using _is_stereo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tags: struct{
     using _set_tags: ^GDW.MethodBind,
@@ -92,7 +92,7 @@ AudioStreamWAV_MethodBind_List :: struct {
   },
     get_tags: struct{
     using _get_tags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamWAV, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   save_to_wav: struct{
     using _save_to_wav: ^GDW.MethodBind,

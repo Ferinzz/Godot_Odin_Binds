@@ -14,7 +14,7 @@ BoxMesh_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoxMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: BoxMesh, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_subdivide_width: struct{
     using _set_subdivide_width: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ BoxMesh_MethodBind_List :: struct {
   },
     get_subdivide_width: struct{
     using _get_subdivide_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoxMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BoxMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_subdivide_height: struct{
     using _set_subdivide_height: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ BoxMesh_MethodBind_List :: struct {
   },
     get_subdivide_height: struct{
     using _get_subdivide_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoxMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BoxMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_subdivide_depth: struct{
     using _set_subdivide_depth: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ BoxMesh_MethodBind_List :: struct {
   },
     get_subdivide_depth: struct{
     using _get_subdivide_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoxMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BoxMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 BoxMesh_Init_ :: proc (BoxMesh_methods: ^BoxMesh_MethodBind_List, loc := #caller_location) {

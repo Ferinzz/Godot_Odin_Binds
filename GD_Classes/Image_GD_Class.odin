@@ -108,31 +108,31 @@ Image_Constants :: enum i64 {
 Image_MethodBind_List :: struct {
   get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   has_mipmaps: struct{
     using _has_mipmaps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^Image_Format)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^Image_Format)
   },
   get_data: struct{
     using _get_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   get_data_size: struct{
     using _get_data_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   convert: struct{
     using _convert: ^GDW.MethodBind,
@@ -140,7 +140,7 @@ Image_MethodBind_List :: struct {
   },
     get_mipmap_count: struct{
     using _get_mipmap_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_mipmap_offset: struct{
     using _get_mipmap_offset: ^GDW.MethodBind,
@@ -156,7 +156,7 @@ Image_MethodBind_List :: struct {
   },
     shrink_x2: struct{
     using _shrink_x2: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     crop: struct{
     using _crop: ^GDW.MethodBind,
@@ -164,11 +164,11 @@ Image_MethodBind_List :: struct {
   },
     flip_x: struct{
     using _flip_x: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     flip_y: struct{
     using _flip_y: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     generate_mipmaps: struct{
     using _generate_mipmaps: ^GDW.MethodBind,
@@ -176,7 +176,7 @@ Image_MethodBind_List :: struct {
   },
   clear_mipmaps: struct{
     using _clear_mipmaps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     create: struct{
     using _create: ^GDW.MethodBind,
@@ -196,7 +196,7 @@ Image_MethodBind_List :: struct {
   },
     is_empty: struct{
     using _is_empty: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   load: struct{
     using _load: ^GDW.MethodBind,
@@ -212,7 +212,7 @@ Image_MethodBind_List :: struct {
   },
   save_png_to_buffer: struct{
     using _save_png_to_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   save_jpg: struct{
     using _save_jpg: ^GDW.MethodBind,
@@ -236,7 +236,7 @@ Image_MethodBind_List :: struct {
   },
   save_dds_to_buffer: struct{
     using _save_dds_to_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   save_webp: struct{
     using _save_webp: ^GDW.MethodBind,
@@ -248,11 +248,11 @@ Image_MethodBind_List :: struct {
   },
   detect_alpha: struct{
     using _detect_alpha: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^Image_AlphaMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^Image_AlphaMode)
   },
   is_invisible: struct{
     using _is_invisible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   detect_used_channels: struct{
     using _detect_used_channels: ^GDW.MethodBind,
@@ -268,11 +268,11 @@ Image_MethodBind_List :: struct {
   },
   decompress: struct{
     using _decompress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   is_compressed: struct{
     using _is_compressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   rotate_90: struct{
     using _rotate_90: ^GDW.MethodBind,
@@ -280,31 +280,31 @@ Image_MethodBind_List :: struct {
   },
     rotate_180: struct{
     using _rotate_180: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     fix_alpha_edges: struct{
     using _fix_alpha_edges: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     premultiply_alpha: struct{
     using _premultiply_alpha: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     srgb_to_linear: struct{
     using _srgb_to_linear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     linear_to_srgb: struct{
     using _linear_to_srgb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     normal_map_to_xy: struct{
     using _normal_map_to_xy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: rawptr = nil)
   },
     rgbe_to_srgb: struct{
     using _rgbe_to_srgb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^Image)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^Image)
   },
   bump_map_to_normal_map: struct{
     using _bump_map_to_normal_map: ^GDW.MethodBind,
@@ -340,7 +340,7 @@ Image_MethodBind_List :: struct {
   },
     get_used_rect: struct{
     using _get_used_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Image, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Image, args: rawptr = nil, r_ret: ^GDW.Rect2i)
   },
   get_region: struct{
     using _get_region: ^GDW.MethodBind,

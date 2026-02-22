@@ -25,7 +25,7 @@ WebXRInterface_MethodBind_List :: struct {
   },
     get_session_mode: struct{
     using _get_session_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_required_features: struct{
     using _set_required_features: ^GDW.MethodBind,
@@ -33,7 +33,7 @@ WebXRInterface_MethodBind_List :: struct {
   },
     get_required_features: struct{
     using _get_required_features: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_optional_features: struct{
     using _set_optional_features: ^GDW.MethodBind,
@@ -41,15 +41,15 @@ WebXRInterface_MethodBind_List :: struct {
   },
     get_optional_features: struct{
     using _get_optional_features: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_reference_space_type: struct{
     using _get_reference_space_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_enabled_features: struct{
     using _get_enabled_features: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_requested_reference_space_types: struct{
     using _set_requested_reference_space_types: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ WebXRInterface_MethodBind_List :: struct {
   },
     get_requested_reference_space_types: struct{
     using _get_requested_reference_space_types: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_input_source_active: struct{
     using _is_input_source_active: ^GDW.MethodBind,
@@ -73,11 +73,11 @@ WebXRInterface_MethodBind_List :: struct {
   },
   get_visibility_state: struct{
     using _get_visibility_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_display_refresh_rate: struct{
     using _get_display_refresh_rate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_display_refresh_rate: struct{
     using _set_display_refresh_rate: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ WebXRInterface_MethodBind_List :: struct {
   },
     get_available_display_refresh_rates: struct{
     using _get_available_display_refresh_rates: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: WebXRInterface, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 WebXRInterface_Init_ :: proc (WebXRInterface_methods: ^WebXRInterface_MethodBind_List, loc := #caller_location) {

@@ -30,11 +30,11 @@ CodeHighlighter_MethodBind_List :: struct {
   },
     clear_keyword_colors: struct{
     using _clear_keyword_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_keyword_colors: struct{
     using _get_keyword_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   add_member_keyword_color: struct{
     using _add_member_keyword_color: ^GDW.MethodBind,
@@ -58,11 +58,11 @@ CodeHighlighter_MethodBind_List :: struct {
   },
     clear_member_keyword_colors: struct{
     using _clear_member_keyword_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_member_keyword_colors: struct{
     using _get_member_keyword_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   add_color_region: struct{
     using _add_color_region: ^GDW.MethodBind,
@@ -82,11 +82,11 @@ CodeHighlighter_MethodBind_List :: struct {
   },
     clear_color_regions: struct{
     using _clear_color_regions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_color_regions: struct{
     using _get_color_regions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_function_color: struct{
     using _set_function_color: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ CodeHighlighter_MethodBind_List :: struct {
   },
     get_function_color: struct{
     using _get_function_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_number_color: struct{
     using _set_number_color: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ CodeHighlighter_MethodBind_List :: struct {
   },
     get_number_color: struct{
     using _get_number_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_symbol_color: struct{
     using _set_symbol_color: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ CodeHighlighter_MethodBind_List :: struct {
   },
     get_symbol_color: struct{
     using _get_symbol_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_member_variable_color: struct{
     using _set_member_variable_color: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ CodeHighlighter_MethodBind_List :: struct {
   },
     get_member_variable_color: struct{
     using _get_member_variable_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CodeHighlighter, args: rawptr = nil, r_ret: ^GDW.Color)
   },
 };
 CodeHighlighter_Init_ :: proc (CodeHighlighter_methods: ^CodeHighlighter_MethodBind_List, loc := #caller_location) {

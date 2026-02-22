@@ -10,7 +10,7 @@ Curve3D :: ^GDW.Object
 Curve3D_MethodBind_List :: struct {
   get_point_count: struct{
     using _get_point_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_point_count: struct{
     using _set_point_count: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ Curve3D_MethodBind_List :: struct {
   },
     clear_points: struct{
     using _clear_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     sample: struct{
     using _sample: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ Curve3D_MethodBind_List :: struct {
   },
     is_closed: struct{
     using _is_closed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_bake_interval: struct{
     using _set_bake_interval: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ Curve3D_MethodBind_List :: struct {
   },
     get_bake_interval: struct{
     using _get_bake_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_up_vector_enabled: struct{
     using _set_up_vector_enabled: ^GDW.MethodBind,
@@ -90,11 +90,11 @@ Curve3D_MethodBind_List :: struct {
   },
     is_up_vector_enabled: struct{
     using _is_up_vector_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_baked_length: struct{
     using _get_baked_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   sample_baked: struct{
     using _sample_baked: ^GDW.MethodBind,
@@ -110,15 +110,15 @@ Curve3D_MethodBind_List :: struct {
   },
   get_baked_points: struct{
     using _get_baked_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   get_baked_tilts: struct{
     using _get_baked_tilts: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   get_baked_up_vectors: struct{
     using _get_baked_up_vectors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Curve3D, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   get_closest_point: struct{
     using _get_closest_point: ^GDW.MethodBind,

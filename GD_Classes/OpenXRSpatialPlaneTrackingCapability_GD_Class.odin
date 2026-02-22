@@ -10,7 +10,7 @@ OpenXRSpatialPlaneTrackingCapability :: ^GDW.Object
 OpenXRSpatialPlaneTrackingCapability_MethodBind_List :: struct {
   is_supported: struct{
     using _is_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialPlaneTrackingCapability, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialPlaneTrackingCapability, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 OpenXRSpatialPlaneTrackingCapability_Init_ :: proc (OpenXRSpatialPlaneTrackingCapability_methods: ^OpenXRSpatialPlaneTrackingCapability_MethodBind_List, loc := #caller_location) {

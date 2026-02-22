@@ -14,7 +14,7 @@ VisualShaderNodeExpression_MethodBind_List :: struct {
   },
     get_expression: struct{
     using _get_expression: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeExpression, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeExpression, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 VisualShaderNodeExpression_Init_ :: proc (VisualShaderNodeExpression_methods: ^VisualShaderNodeExpression_MethodBind_List, loc := #caller_location) {

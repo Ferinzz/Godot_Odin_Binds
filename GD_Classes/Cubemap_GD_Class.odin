@@ -10,7 +10,7 @@ Cubemap :: ^GDW.Object
 Cubemap_MethodBind_List :: struct {
   create_placeholder: struct{
     using _create_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Cubemap, #by_ptr args: i64 = 0, r_ret: ^Resource)
+    m_call: proc(_:^GDW.MethodBind, obj: Cubemap, args: rawptr = nil, r_ret: ^Resource)
   },
 };
 Cubemap_Init_ :: proc (Cubemap_methods: ^Cubemap_MethodBind_List, loc := #caller_location) {

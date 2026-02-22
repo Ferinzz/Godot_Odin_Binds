@@ -27,7 +27,7 @@ AspectRatioContainer_MethodBind_List :: struct {
   },
     get_ratio: struct{
     using _get_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AspectRatioContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AspectRatioContainer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_stretch_mode: struct{
     using _set_stretch_mode: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ AspectRatioContainer_MethodBind_List :: struct {
   },
     get_stretch_mode: struct{
     using _get_stretch_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AspectRatioContainer, #by_ptr args: i64 = 0, r_ret: ^AspectRatioContainer_StretchMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AspectRatioContainer, args: rawptr = nil, r_ret: ^AspectRatioContainer_StretchMode)
   },
   set_alignment_horizontal: struct{
     using _set_alignment_horizontal: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ AspectRatioContainer_MethodBind_List :: struct {
   },
     get_alignment_horizontal: struct{
     using _get_alignment_horizontal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AspectRatioContainer, #by_ptr args: i64 = 0, r_ret: ^AspectRatioContainer_AlignmentMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AspectRatioContainer, args: rawptr = nil, r_ret: ^AspectRatioContainer_AlignmentMode)
   },
   set_alignment_vertical: struct{
     using _set_alignment_vertical: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ AspectRatioContainer_MethodBind_List :: struct {
   },
     get_alignment_vertical: struct{
     using _get_alignment_vertical: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AspectRatioContainer, #by_ptr args: i64 = 0, r_ret: ^AspectRatioContainer_AlignmentMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AspectRatioContainer, args: rawptr = nil, r_ret: ^AspectRatioContainer_AlignmentMode)
   },
 };
 AspectRatioContainer_Init_ :: proc (AspectRatioContainer_methods: ^AspectRatioContainer_MethodBind_List, loc := #caller_location) {

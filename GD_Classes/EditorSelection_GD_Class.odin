@@ -10,7 +10,7 @@ EditorSelection :: ^GDW.Object
 EditorSelection_MethodBind_List :: struct {
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSelection, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSelection, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_node: struct{
     using _add_node: ^GDW.MethodBind,
@@ -22,15 +22,15 @@ EditorSelection_MethodBind_List :: struct {
   },
     get_selected_nodes: struct{
     using _get_selected_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSelection, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSelection, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_top_selected_nodes: struct{
     using _get_top_selected_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSelection, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSelection, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_transformable_selected_nodes: struct{
     using _get_transformable_selected_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSelection, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSelection, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 EditorSelection_Init_ :: proc (EditorSelection_methods: ^EditorSelection_MethodBind_List, loc := #caller_location) {

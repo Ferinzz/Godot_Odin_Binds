@@ -19,31 +19,31 @@ Texture3D_Virtual_Info :: struct {
 Texture3D_MethodBind_List :: struct {
   get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, #by_ptr args: i64 = 0, r_ret: ^Image_Format)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, args: rawptr = nil, r_ret: ^Image_Format)
   },
   get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_mipmaps: struct{
     using _has_mipmaps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_data: struct{
     using _get_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   create_placeholder: struct{
     using _create_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, #by_ptr args: i64 = 0, r_ret: ^Resource)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture3D, args: rawptr = nil, r_ret: ^Resource)
   },
 };
 Texture3D_Init_ :: proc (Texture3D_methods: ^Texture3D_MethodBind_List, loc := #caller_location) {

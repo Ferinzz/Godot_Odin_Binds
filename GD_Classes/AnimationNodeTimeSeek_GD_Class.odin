@@ -14,7 +14,7 @@ AnimationNodeTimeSeek_MethodBind_List :: struct {
   },
     is_explicit_elapse: struct{
     using _is_explicit_elapse: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeTimeSeek, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeTimeSeek, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AnimationNodeTimeSeek_Init_ :: proc (AnimationNodeTimeSeek_methods: ^AnimationNodeTimeSeek_MethodBind_List, loc := #caller_location) {

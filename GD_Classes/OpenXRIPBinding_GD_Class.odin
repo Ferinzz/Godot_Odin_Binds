@@ -14,7 +14,7 @@ OpenXRIPBinding_MethodBind_List :: struct {
   },
     get_action: struct{
     using _get_action: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, #by_ptr args: i64 = 0, r_ret: ^OpenXRAction)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, args: rawptr = nil, r_ret: ^OpenXRAction)
   },
   set_binding_path: struct{
     using _set_binding_path: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ OpenXRIPBinding_MethodBind_List :: struct {
   },
     get_binding_path: struct{
     using _get_binding_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_binding_modifier_count: struct{
     using _get_binding_modifier_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_binding_modifier: struct{
     using _get_binding_modifier: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ OpenXRIPBinding_MethodBind_List :: struct {
   },
     get_binding_modifiers: struct{
     using _get_binding_modifiers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_paths: struct{
     using _set_paths: ^GDW.MethodBind,
@@ -46,11 +46,11 @@ OpenXRIPBinding_MethodBind_List :: struct {
   },
     get_paths: struct{
     using _get_paths: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_path_count: struct{
     using _get_path_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRIPBinding, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   has_path: struct{
     using _has_path: ^GDW.MethodBind,

@@ -27,7 +27,7 @@ CompositorEffect_MethodBind_List :: struct {
   },
     get_enabled: struct{
     using _get_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_effect_callback_type: struct{
     using _set_effect_callback_type: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ CompositorEffect_MethodBind_List :: struct {
   },
     get_effect_callback_type: struct{
     using _get_effect_callback_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, #by_ptr args: i64 = 0, r_ret: ^CompositorEffect_EffectCallbackType)
+    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, args: rawptr = nil, r_ret: ^CompositorEffect_EffectCallbackType)
   },
   set_access_resolved_color: struct{
     using _set_access_resolved_color: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ CompositorEffect_MethodBind_List :: struct {
   },
     get_access_resolved_color: struct{
     using _get_access_resolved_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_access_resolved_depth: struct{
     using _set_access_resolved_depth: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ CompositorEffect_MethodBind_List :: struct {
   },
     get_access_resolved_depth: struct{
     using _get_access_resolved_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_needs_motion_vectors: struct{
     using _set_needs_motion_vectors: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ CompositorEffect_MethodBind_List :: struct {
   },
     get_needs_motion_vectors: struct{
     using _get_needs_motion_vectors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_needs_normal_roughness: struct{
     using _set_needs_normal_roughness: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ CompositorEffect_MethodBind_List :: struct {
   },
     get_needs_normal_roughness: struct{
     using _get_needs_normal_roughness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_needs_separate_specular: struct{
     using _set_needs_separate_specular: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ CompositorEffect_MethodBind_List :: struct {
   },
     get_needs_separate_specular: struct{
     using _get_needs_separate_specular: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CompositorEffect, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CompositorEffect_Init_ :: proc (CompositorEffect_methods: ^CompositorEffect_MethodBind_List, loc := #caller_location) {

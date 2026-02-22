@@ -10,11 +10,11 @@ ButtonGroup :: ^GDW.Object
 ButtonGroup_MethodBind_List :: struct {
   get_pressed_button: struct{
     using _get_pressed_button: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, #by_ptr args: i64 = 0, r_ret: ^BaseButton)
+    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^BaseButton)
   },
   get_buttons: struct{
     using _get_buttons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_allow_unpress: struct{
     using _set_allow_unpress: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ButtonGroup_MethodBind_List :: struct {
   },
     is_allow_unpress: struct{
     using _is_allow_unpress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 ButtonGroup_Init_ :: proc (ButtonGroup_methods: ^ButtonGroup_MethodBind_List, loc := #caller_location) {

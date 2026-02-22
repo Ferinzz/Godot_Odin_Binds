@@ -42,7 +42,7 @@ VisualShaderNodeCompare_MethodBind_List :: struct {
   },
     get_comparison_type: struct{
     using _get_comparison_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCompare, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeCompare_ComparisonType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCompare, args: rawptr = nil, r_ret: ^VisualShaderNodeCompare_ComparisonType)
   },
   set_function: struct{
     using _set_function: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ VisualShaderNodeCompare_MethodBind_List :: struct {
   },
     get_function: struct{
     using _get_function: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCompare, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeCompare_Function)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCompare, args: rawptr = nil, r_ret: ^VisualShaderNodeCompare_Function)
   },
   set_condition: struct{
     using _set_condition: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ VisualShaderNodeCompare_MethodBind_List :: struct {
   },
     get_condition: struct{
     using _get_condition: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCompare, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeCompare_Condition)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeCompare, args: rawptr = nil, r_ret: ^VisualShaderNodeCompare_Condition)
   },
 };
 VisualShaderNodeCompare_Init_ :: proc (VisualShaderNodeCompare_methods: ^VisualShaderNodeCompare_MethodBind_List, loc := #caller_location) {

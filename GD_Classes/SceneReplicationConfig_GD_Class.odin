@@ -16,7 +16,7 @@ SceneReplicationConfig_ReplicationMode :: enum i64 {
 SceneReplicationConfig_MethodBind_List :: struct {
   get_properties: struct{
     using _get_properties: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneReplicationConfig, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneReplicationConfig, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_property: struct{
     using _add_property: ^GDW.MethodBind,

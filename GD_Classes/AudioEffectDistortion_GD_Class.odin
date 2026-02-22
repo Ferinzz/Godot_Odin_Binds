@@ -22,7 +22,7 @@ AudioEffectDistortion_MethodBind_List :: struct {
   },
     get_mode: struct{
     using _get_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, #by_ptr args: i64 = 0, r_ret: ^AudioEffectDistortion_Mode)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, args: rawptr = nil, r_ret: ^AudioEffectDistortion_Mode)
   },
   set_pre_gain: struct{
     using _set_pre_gain: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioEffectDistortion_MethodBind_List :: struct {
   },
     get_pre_gain: struct{
     using _get_pre_gain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_keep_hf_hz: struct{
     using _set_keep_hf_hz: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AudioEffectDistortion_MethodBind_List :: struct {
   },
     get_keep_hf_hz: struct{
     using _get_keep_hf_hz: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_drive: struct{
     using _set_drive: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ AudioEffectDistortion_MethodBind_List :: struct {
   },
     get_drive: struct{
     using _get_drive: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_post_gain: struct{
     using _set_post_gain: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ AudioEffectDistortion_MethodBind_List :: struct {
   },
     get_post_gain: struct{
     using _get_post_gain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDistortion, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectDistortion_Init_ :: proc (AudioEffectDistortion_methods: ^AudioEffectDistortion_MethodBind_List, loc := #caller_location) {

@@ -165,7 +165,7 @@ XRFaceTracker_MethodBind_List :: struct {
   },
     get_blend_shapes: struct{
     using _get_blend_shapes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRFaceTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: XRFaceTracker, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   set_blend_shapes: struct{
     using _set_blend_shapes: ^GDW.MethodBind,

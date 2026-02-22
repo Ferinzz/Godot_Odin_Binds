@@ -22,27 +22,27 @@ TLSOptions_MethodBind_List :: struct {
   },
   is_server: struct{
     using _is_server: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_unsafe_client: struct{
     using _is_unsafe_client: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_common_name_override: struct{
     using _get_common_name_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_trusted_ca_chain: struct{
     using _get_trusted_ca_chain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, #by_ptr args: i64 = 0, r_ret: ^X509Certificate)
+    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, args: rawptr = nil, r_ret: ^X509Certificate)
   },
   get_private_key: struct{
     using _get_private_key: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, #by_ptr args: i64 = 0, r_ret: ^CryptoKey)
+    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, args: rawptr = nil, r_ret: ^CryptoKey)
   },
   get_own_certificate: struct{
     using _get_own_certificate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, #by_ptr args: i64 = 0, r_ret: ^X509Certificate)
+    m_call: proc(_:^GDW.MethodBind, obj: TLSOptions, args: rawptr = nil, r_ret: ^X509Certificate)
   },
 };
 TLSOptions_Init_ :: proc (TLSOptions_methods: ^TLSOptions_MethodBind_List, loc := #caller_location) {

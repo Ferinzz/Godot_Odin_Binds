@@ -19,7 +19,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_max_concavity: struct{
     using _get_max_concavity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_symmetry_planes_clipping_bias: struct{
     using _set_symmetry_planes_clipping_bias: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_symmetry_planes_clipping_bias: struct{
     using _get_symmetry_planes_clipping_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_revolution_axes_clipping_bias: struct{
     using _set_revolution_axes_clipping_bias: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_revolution_axes_clipping_bias: struct{
     using _get_revolution_axes_clipping_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_min_volume_per_convex_hull: struct{
     using _set_min_volume_per_convex_hull: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_min_volume_per_convex_hull: struct{
     using _get_min_volume_per_convex_hull: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_resolution: struct{
     using _set_resolution: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_resolution: struct{
     using _get_resolution: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_num_vertices_per_convex_hull: struct{
     using _set_max_num_vertices_per_convex_hull: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_max_num_vertices_per_convex_hull: struct{
     using _get_max_num_vertices_per_convex_hull: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_plane_downsampling: struct{
     using _set_plane_downsampling: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_plane_downsampling: struct{
     using _get_plane_downsampling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_convex_hull_downsampling: struct{
     using _set_convex_hull_downsampling: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_convex_hull_downsampling: struct{
     using _get_convex_hull_downsampling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_normalize_mesh: struct{
     using _set_normalize_mesh: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_normalize_mesh: struct{
     using _get_normalize_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_mode: struct{
     using _set_mode: ^GDW.MethodBind,
@@ -91,7 +91,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_mode: struct{
     using _get_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^MeshConvexDecompositionSettings_Mode)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^MeshConvexDecompositionSettings_Mode)
   },
   set_convex_hull_approximation: struct{
     using _set_convex_hull_approximation: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_convex_hull_approximation: struct{
     using _get_convex_hull_approximation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_max_convex_hulls: struct{
     using _set_max_convex_hulls: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_max_convex_hulls: struct{
     using _get_max_convex_hulls: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_project_hull_vertices: struct{
     using _set_project_hull_vertices: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ MeshConvexDecompositionSettings_MethodBind_List :: struct {
   },
     get_project_hull_vertices: struct{
     using _get_project_hull_vertices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshConvexDecompositionSettings, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 MeshConvexDecompositionSettings_Init_ :: proc (MeshConvexDecompositionSettings_methods: ^MeshConvexDecompositionSettings_MethodBind_List, loc := #caller_location) {

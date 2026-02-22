@@ -10,7 +10,7 @@ CharFXTransform :: ^GDW.Object
 CharFXTransform_MethodBind_List :: struct {
   get_transform: struct{
     using _get_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   set_transform: struct{
     using _set_transform: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_range: struct{
     using _get_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_range: struct{
     using _set_range: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_elapsed_time: struct{
     using _get_elapsed_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_elapsed_time: struct{
     using _set_elapsed_time: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     is_visible: struct{
     using _is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_visibility: struct{
     using _set_visibility: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     is_outline: struct{
     using _is_outline: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_outline: struct{
     using _set_outline: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_offset: struct{
     using _get_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_offset: struct{
     using _set_offset: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_color: struct{
     using _set_color: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_environment: struct{
     using _get_environment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_environment: struct{
     using _set_environment: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_glyph_index: struct{
     using _get_glyph_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_glyph_index: struct{
     using _set_glyph_index: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_relative_index: struct{
     using _get_relative_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_relative_index: struct{
     using _set_relative_index: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_glyph_count: struct{
     using _get_glyph_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_glyph_count: struct{
     using _set_glyph_count: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_glyph_flags: struct{
     using _get_glyph_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_glyph_flags: struct{
     using _set_glyph_flags: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ CharFXTransform_MethodBind_List :: struct {
   },
     get_font: struct{
     using _get_font: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: CharFXTransform, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_font: struct{
     using _set_font: ^GDW.MethodBind,

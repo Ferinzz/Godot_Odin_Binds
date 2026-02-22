@@ -18,15 +18,15 @@ EditorDebuggerSession_MethodBind_List :: struct {
   },
     is_breaked: struct{
     using _is_breaked: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDebuggerSession, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDebuggerSession, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_debuggable: struct{
     using _is_debuggable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDebuggerSession, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDebuggerSession, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_active: struct{
     using _is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorDebuggerSession, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorDebuggerSession, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_session_tab: struct{
     using _add_session_tab: ^GDW.MethodBind,

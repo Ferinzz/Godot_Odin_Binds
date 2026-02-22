@@ -14,7 +14,7 @@ RDTextureView_MethodBind_List :: struct {
   },
     get_format_override: struct{
     using _get_format_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_DataFormat)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, args: rawptr = nil, r_ret: ^RenderingDevice_DataFormat)
   },
   set_swizzle_r: struct{
     using _set_swizzle_r: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDTextureView_MethodBind_List :: struct {
   },
     get_swizzle_r: struct{
     using _get_swizzle_r: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureSwizzle)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, args: rawptr = nil, r_ret: ^RenderingDevice_TextureSwizzle)
   },
   set_swizzle_g: struct{
     using _set_swizzle_g: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RDTextureView_MethodBind_List :: struct {
   },
     get_swizzle_g: struct{
     using _get_swizzle_g: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureSwizzle)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, args: rawptr = nil, r_ret: ^RenderingDevice_TextureSwizzle)
   },
   set_swizzle_b: struct{
     using _set_swizzle_b: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RDTextureView_MethodBind_List :: struct {
   },
     get_swizzle_b: struct{
     using _get_swizzle_b: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureSwizzle)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, args: rawptr = nil, r_ret: ^RenderingDevice_TextureSwizzle)
   },
   set_swizzle_a: struct{
     using _set_swizzle_a: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ RDTextureView_MethodBind_List :: struct {
   },
     get_swizzle_a: struct{
     using _get_swizzle_a: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_TextureSwizzle)
+    m_call: proc(_:^GDW.MethodBind, obj: RDTextureView, args: rawptr = nil, r_ret: ^RenderingDevice_TextureSwizzle)
   },
 };
 RDTextureView_Init_ :: proc (RDTextureView_methods: ^RDTextureView_MethodBind_List, loc := #caller_location) {

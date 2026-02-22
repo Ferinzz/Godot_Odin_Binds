@@ -14,7 +14,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_action_set: struct{
     using _get_action_set: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^OpenXRActionSet)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^OpenXRActionSet)
   },
   set_input_path: struct{
     using _set_input_path: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_input_path: struct{
     using _get_input_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_threshold: struct{
     using _set_threshold: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_threshold: struct{
     using _get_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_threshold_released: struct{
     using _set_threshold_released: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_threshold_released: struct{
     using _get_threshold_released: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_center_region: struct{
     using _set_center_region: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_center_region: struct{
     using _get_center_region: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_wedge_angle: struct{
     using _set_wedge_angle: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_wedge_angle: struct{
     using _get_wedge_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_is_sticky: struct{
     using _set_is_sticky: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_is_sticky: struct{
     using _get_is_sticky: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_on_haptic: struct{
     using _set_on_haptic: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_on_haptic: struct{
     using _get_on_haptic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^OpenXRHapticBase)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^OpenXRHapticBase)
   },
   set_off_haptic: struct{
     using _set_off_haptic: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ OpenXRDpadBindingModifier_MethodBind_List :: struct {
   },
     get_off_haptic: struct{
     using _get_off_haptic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, #by_ptr args: i64 = 0, r_ret: ^OpenXRHapticBase)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRDpadBindingModifier, args: rawptr = nil, r_ret: ^OpenXRHapticBase)
   },
 };
 OpenXRDpadBindingModifier_Init_ :: proc (OpenXRDpadBindingModifier_methods: ^OpenXRDpadBindingModifier_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ AudioEffectReverb_MethodBind_List :: struct {
   },
     get_predelay_msec: struct{
     using _get_predelay_msec: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_predelay_feedback: struct{
     using _set_predelay_feedback: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AudioEffectReverb_MethodBind_List :: struct {
   },
     get_predelay_feedback: struct{
     using _get_predelay_feedback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_room_size: struct{
     using _set_room_size: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioEffectReverb_MethodBind_List :: struct {
   },
     get_room_size: struct{
     using _get_room_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_damping: struct{
     using _set_damping: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AudioEffectReverb_MethodBind_List :: struct {
   },
     get_damping: struct{
     using _get_damping: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_spread: struct{
     using _set_spread: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ AudioEffectReverb_MethodBind_List :: struct {
   },
     get_spread: struct{
     using _get_spread: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_dry: struct{
     using _set_dry: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ AudioEffectReverb_MethodBind_List :: struct {
   },
     get_dry: struct{
     using _get_dry: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_wet: struct{
     using _set_wet: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ AudioEffectReverb_MethodBind_List :: struct {
   },
     get_wet: struct{
     using _get_wet: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_hpf: struct{
     using _set_hpf: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ AudioEffectReverb_MethodBind_List :: struct {
   },
     get_hpf: struct{
     using _get_hpf: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectReverb, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectReverb_Init_ :: proc (AudioEffectReverb_methods: ^AudioEffectReverb_MethodBind_List, loc := #caller_location) {

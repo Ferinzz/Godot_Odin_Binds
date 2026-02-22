@@ -18,7 +18,7 @@ AudioStreamPlaybackInteractive_MethodBind_List :: struct {
   },
     get_current_clip_index: struct{
     using _get_current_clip_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaybackInteractive, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamPlaybackInteractive, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 AudioStreamPlaybackInteractive_Init_ :: proc (AudioStreamPlaybackInteractive_methods: ^AudioStreamPlaybackInteractive_MethodBind_List, loc := #caller_location) {

@@ -196,11 +196,11 @@ SpringBoneSimulator3D_MethodBind_List :: struct {
   },
     get_setting_count: struct{
     using _get_setting_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   clear_settings: struct{
     using _clear_settings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_individual_config: struct{
     using _set_individual_config: ^GDW.MethodBind,
@@ -332,7 +332,7 @@ SpringBoneSimulator3D_MethodBind_List :: struct {
   },
     get_external_force: struct{
     using _get_external_force: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_mutable_bone_axes: struct{
     using _set_mutable_bone_axes: ^GDW.MethodBind,
@@ -340,11 +340,11 @@ SpringBoneSimulator3D_MethodBind_List :: struct {
   },
     are_bone_axes_mutable: struct{
     using _are_bone_axes_mutable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   reset: struct{
     using _reset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneSimulator3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 SpringBoneSimulator3D_Init_ :: proc (SpringBoneSimulator3D_methods: ^SpringBoneSimulator3D_MethodBind_List, loc := #caller_location) {

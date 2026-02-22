@@ -17,15 +17,15 @@ SceneState_GenEditState :: enum i64 {
 SceneState_MethodBind_List :: struct {
   get_path: struct{
     using _get_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneState, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneState, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_base_scene_state: struct{
     using _get_base_scene_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneState, #by_ptr args: i64 = 0, r_ret: ^SceneState)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneState, args: rawptr = nil, r_ret: ^SceneState)
   },
   get_node_count: struct{
     using _get_node_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_node_type: struct{
     using _get_node_type: ^GDW.MethodBind,
@@ -77,7 +77,7 @@ SceneState_MethodBind_List :: struct {
   },
   get_connection_count: struct{
     using _get_connection_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneState, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneState, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_connection_source: struct{
     using _get_connection_source: ^GDW.MethodBind,

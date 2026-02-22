@@ -10,7 +10,7 @@ OpenXRSpatialCapabilityConfigurationQrCode :: ^GDW.Object
 OpenXRSpatialCapabilityConfigurationQrCode_MethodBind_List :: struct {
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationQrCode, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationQrCode, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
 };
 OpenXRSpatialCapabilityConfigurationQrCode_Init_ :: proc (OpenXRSpatialCapabilityConfigurationQrCode_methods: ^OpenXRSpatialCapabilityConfigurationQrCode_MethodBind_List, loc := #caller_location) {

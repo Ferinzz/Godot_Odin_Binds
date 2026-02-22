@@ -42,7 +42,7 @@ UPNP_UPNPResult :: enum i64 {
 UPNP_MethodBind_List :: struct {
   get_device_count: struct{
     using _get_device_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNP, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNP, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_device: struct{
     using _get_device: ^GDW.MethodBind,
@@ -62,11 +62,11 @@ UPNP_MethodBind_List :: struct {
   },
     clear_devices: struct{
     using _clear_devices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNP, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNP, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_gateway: struct{
     using _get_gateway: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNP, #by_ptr args: i64 = 0, r_ret: ^UPNPDevice)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNP, args: rawptr = nil, r_ret: ^UPNPDevice)
   },
   discover: struct{
     using _discover: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ UPNP_MethodBind_List :: struct {
   },
   query_external_address: struct{
     using _query_external_address: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNP, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNP, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   add_port_mapping: struct{
     using _add_port_mapping: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ UPNP_MethodBind_List :: struct {
   },
     get_discover_multicast_if: struct{
     using _get_discover_multicast_if: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNP, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNP, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_discover_local_port: struct{
     using _set_discover_local_port: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ UPNP_MethodBind_List :: struct {
   },
     get_discover_local_port: struct{
     using _get_discover_local_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNP, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNP, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_discover_ipv6: struct{
     using _set_discover_ipv6: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ UPNP_MethodBind_List :: struct {
   },
     is_discover_ipv6: struct{
     using _is_discover_ipv6: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNP, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNP, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 UPNP_Init_ :: proc (UPNP_methods: ^UPNP_MethodBind_List, loc := #caller_location) {

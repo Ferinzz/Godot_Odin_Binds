@@ -14,7 +14,7 @@ ConcavePolygonShape3D_MethodBind_List :: struct {
   },
     get_faces: struct{
     using _get_faces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConcavePolygonShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ConcavePolygonShape3D, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   set_backface_collision_enabled: struct{
     using _set_backface_collision_enabled: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ConcavePolygonShape3D_MethodBind_List :: struct {
   },
     is_backface_collision_enabled: struct{
     using _is_backface_collision_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConcavePolygonShape3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ConcavePolygonShape3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 ConcavePolygonShape3D_Init_ :: proc (ConcavePolygonShape3D_methods: ^ConcavePolygonShape3D_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ CSGMesh3D_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGMesh3D, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGMesh3D, args: rawptr = nil, r_ret: ^Mesh)
   },
   set_material: struct{
     using _set_material: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CSGMesh3D_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGMesh3D, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGMesh3D, args: rawptr = nil, r_ret: ^Material)
   },
 };
 CSGMesh3D_Init_ :: proc (CSGMesh3D_methods: ^CSGMesh3D_MethodBind_List, loc := #caller_location) {

@@ -15,11 +15,11 @@ FoldableContainer_TitlePosition :: enum i64 {
 FoldableContainer_MethodBind_List :: struct {
   fold: struct{
     using _fold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     expand: struct{
     using _expand: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_folded: struct{
     using _set_folded: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ FoldableContainer_MethodBind_List :: struct {
   },
     is_folded: struct{
     using _is_folded: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_foldable_group: struct{
     using _set_foldable_group: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ FoldableContainer_MethodBind_List :: struct {
   },
     get_foldable_group: struct{
     using _get_foldable_group: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: ^FoldableGroup)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: ^FoldableGroup)
   },
   set_title: struct{
     using _set_title: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ FoldableContainer_MethodBind_List :: struct {
   },
     get_title: struct{
     using _get_title: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_title_alignment: struct{
     using _set_title_alignment: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ FoldableContainer_MethodBind_List :: struct {
   },
     get_title_alignment: struct{
     using _get_title_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ FoldableContainer_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_title_text_direction: struct{
     using _set_title_text_direction: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ FoldableContainer_MethodBind_List :: struct {
   },
     get_title_text_direction: struct{
     using _get_title_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: ^Control_TextDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: ^Control_TextDirection)
   },
   set_title_text_overrun_behavior: struct{
     using _set_title_text_overrun_behavior: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ FoldableContainer_MethodBind_List :: struct {
   },
     get_title_text_overrun_behavior: struct{
     using _get_title_text_overrun_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: ^TextServer_OverrunBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: ^TextServer_OverrunBehavior)
   },
   set_title_position: struct{
     using _set_title_position: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ FoldableContainer_MethodBind_List :: struct {
   },
     get_title_position: struct{
     using _get_title_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, #by_ptr args: i64 = 0, r_ret: ^FoldableContainer_TitlePosition)
+    m_call: proc(_:^GDW.MethodBind, obj: FoldableContainer, args: rawptr = nil, r_ret: ^FoldableContainer_TitlePosition)
   },
   add_title_bar_control: struct{
     using _add_title_bar_control: ^GDW.MethodBind,

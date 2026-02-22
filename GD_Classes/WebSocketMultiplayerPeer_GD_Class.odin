@@ -30,7 +30,7 @@ WebSocketMultiplayerPeer_MethodBind_List :: struct {
   },
   get_supported_protocols: struct{
     using _get_supported_protocols: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_supported_protocols: struct{
     using _set_supported_protocols: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ WebSocketMultiplayerPeer_MethodBind_List :: struct {
   },
     get_handshake_headers: struct{
     using _get_handshake_headers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_handshake_headers: struct{
     using _set_handshake_headers: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ WebSocketMultiplayerPeer_MethodBind_List :: struct {
   },
     get_inbound_buffer_size: struct{
     using _get_inbound_buffer_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_inbound_buffer_size: struct{
     using _set_inbound_buffer_size: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ WebSocketMultiplayerPeer_MethodBind_List :: struct {
   },
     get_outbound_buffer_size: struct{
     using _get_outbound_buffer_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_outbound_buffer_size: struct{
     using _set_outbound_buffer_size: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ WebSocketMultiplayerPeer_MethodBind_List :: struct {
   },
     get_handshake_timeout: struct{
     using _get_handshake_timeout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_handshake_timeout: struct{
     using _set_handshake_timeout: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ WebSocketMultiplayerPeer_MethodBind_List :: struct {
   },
     get_max_queued_packets: struct{
     using _get_max_queued_packets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketMultiplayerPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 WebSocketMultiplayerPeer_Init_ :: proc (WebSocketMultiplayerPeer_methods: ^WebSocketMultiplayerPeer_MethodBind_List, loc := #caller_location) {

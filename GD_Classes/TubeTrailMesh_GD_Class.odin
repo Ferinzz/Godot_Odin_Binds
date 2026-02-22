@@ -14,7 +14,7 @@ TubeTrailMesh_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_radial_steps: struct{
     using _set_radial_steps: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ TubeTrailMesh_MethodBind_List :: struct {
   },
     get_radial_steps: struct{
     using _get_radial_steps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sections: struct{
     using _set_sections: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ TubeTrailMesh_MethodBind_List :: struct {
   },
     get_sections: struct{
     using _get_sections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_section_length: struct{
     using _set_section_length: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ TubeTrailMesh_MethodBind_List :: struct {
   },
     get_section_length: struct{
     using _get_section_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_section_rings: struct{
     using _set_section_rings: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ TubeTrailMesh_MethodBind_List :: struct {
   },
     get_section_rings: struct{
     using _get_section_rings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_cap_top: struct{
     using _set_cap_top: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ TubeTrailMesh_MethodBind_List :: struct {
   },
     is_cap_top: struct{
     using _is_cap_top: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_cap_bottom: struct{
     using _set_cap_bottom: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ TubeTrailMesh_MethodBind_List :: struct {
   },
     is_cap_bottom: struct{
     using _is_cap_bottom: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_curve: struct{
     using _set_curve: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ TubeTrailMesh_MethodBind_List :: struct {
   },
     get_curve: struct{
     using _get_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: TubeTrailMesh, args: rawptr = nil, r_ret: ^Curve)
   },
 };
 TubeTrailMesh_Init_ :: proc (TubeTrailMesh_methods: ^TubeTrailMesh_MethodBind_List, loc := #caller_location) {

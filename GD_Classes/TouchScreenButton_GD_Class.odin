@@ -19,7 +19,7 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     get_texture_normal: struct{
     using _get_texture_normal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_texture_pressed: struct{
     using _set_texture_pressed: ^GDW.MethodBind,
@@ -27,7 +27,7 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     get_texture_pressed: struct{
     using _get_texture_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_bitmask: struct{
     using _set_bitmask: ^GDW.MethodBind,
@@ -35,7 +35,7 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     get_bitmask: struct{
     using _get_bitmask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^BitMap)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^BitMap)
   },
   set_shape: struct{
     using _set_shape: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     get_shape: struct{
     using _get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^Shape2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^Shape2D)
   },
   set_shape_centered: struct{
     using _set_shape_centered: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     is_shape_centered: struct{
     using _is_shape_centered: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shape_visible: struct{
     using _set_shape_visible: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     is_shape_visible: struct{
     using _is_shape_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_action: struct{
     using _set_action: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     get_action: struct{
     using _get_action: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_visibility_mode: struct{
     using _set_visibility_mode: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     get_visibility_mode: struct{
     using _get_visibility_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^TouchScreenButton_VisibilityMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^TouchScreenButton_VisibilityMode)
   },
   set_passby_press: struct{
     using _set_passby_press: ^GDW.MethodBind,
@@ -83,11 +83,11 @@ TouchScreenButton_MethodBind_List :: struct {
   },
     is_passby_press_enabled: struct{
     using _is_passby_press_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_pressed: struct{
     using _is_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TouchScreenButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 TouchScreenButton_Init_ :: proc (TouchScreenButton_methods: ^TouchScreenButton_MethodBind_List, loc := #caller_location) {

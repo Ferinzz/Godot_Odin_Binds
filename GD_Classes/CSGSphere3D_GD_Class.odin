@@ -14,7 +14,7 @@ CSGSphere3D_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_radial_segments: struct{
     using _set_radial_segments: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CSGSphere3D_MethodBind_List :: struct {
   },
     get_radial_segments: struct{
     using _get_radial_segments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_rings: struct{
     using _set_rings: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CSGSphere3D_MethodBind_List :: struct {
   },
     get_rings: struct{
     using _get_rings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_smooth_faces: struct{
     using _set_smooth_faces: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CSGSphere3D_MethodBind_List :: struct {
   },
     get_smooth_faces: struct{
     using _get_smooth_faces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_material: struct{
     using _set_material: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CSGSphere3D_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGSphere3D, args: rawptr = nil, r_ret: ^Material)
   },
 };
 CSGSphere3D_Init_ :: proc (CSGSphere3D_methods: ^CSGSphere3D_MethodBind_List, loc := #caller_location) {

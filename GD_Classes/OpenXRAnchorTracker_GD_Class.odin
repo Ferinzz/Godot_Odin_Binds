@@ -10,7 +10,7 @@ OpenXRAnchorTracker :: ^GDW.Object
 OpenXRAnchorTracker_MethodBind_List :: struct {
   has_uuid: struct{
     using _has_uuid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnchorTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnchorTracker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_uuid: struct{
     using _set_uuid: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ OpenXRAnchorTracker_MethodBind_List :: struct {
   },
     get_uuid: struct{
     using _get_uuid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnchorTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAnchorTracker, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 OpenXRAnchorTracker_Init_ :: proc (OpenXRAnchorTracker_methods: ^OpenXRAnchorTracker_MethodBind_List, loc := #caller_location) {

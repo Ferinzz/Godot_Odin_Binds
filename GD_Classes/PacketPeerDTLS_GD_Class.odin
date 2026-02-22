@@ -18,7 +18,7 @@ PacketPeerDTLS_Status :: enum i64 {
 PacketPeerDTLS_MethodBind_List :: struct {
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerDTLS, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerDTLS, args: rawptr = nil, r_ret: rawptr = nil)
   },
     connect_to_peer: struct{
     using _connect_to_peer: ^GDW.MethodBind,
@@ -26,11 +26,11 @@ PacketPeerDTLS_MethodBind_List :: struct {
   },
   get_status: struct{
     using _get_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerDTLS, #by_ptr args: i64 = 0, r_ret: ^PacketPeerDTLS_Status)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerDTLS, args: rawptr = nil, r_ret: ^PacketPeerDTLS_Status)
   },
   disconnect_from_peer: struct{
     using _disconnect_from_peer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerDTLS, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeerDTLS, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 PacketPeerDTLS_Init_ :: proc (PacketPeerDTLS_methods: ^PacketPeerDTLS_MethodBind_List, loc := #caller_location) {

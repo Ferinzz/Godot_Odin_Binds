@@ -208,7 +208,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_albedo: struct{
     using _get_albedo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_transparency: struct{
     using _set_transparency: ^GDW.MethodBind,
@@ -216,7 +216,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_transparency: struct{
     using _get_transparency: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_Transparency)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_Transparency)
   },
   set_alpha_antialiasing: struct{
     using _set_alpha_antialiasing: ^GDW.MethodBind,
@@ -224,7 +224,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_alpha_antialiasing: struct{
     using _get_alpha_antialiasing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_AlphaAntiAliasing)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_AlphaAntiAliasing)
   },
   set_alpha_antialiasing_edge: struct{
     using _set_alpha_antialiasing_edge: ^GDW.MethodBind,
@@ -232,7 +232,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_alpha_antialiasing_edge: struct{
     using _get_alpha_antialiasing_edge: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_shading_mode: struct{
     using _set_shading_mode: ^GDW.MethodBind,
@@ -240,7 +240,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_shading_mode: struct{
     using _get_shading_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_ShadingMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_ShadingMode)
   },
   set_specular: struct{
     using _set_specular: ^GDW.MethodBind,
@@ -248,7 +248,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_specular: struct{
     using _get_specular: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_metallic: struct{
     using _set_metallic: ^GDW.MethodBind,
@@ -256,7 +256,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_metallic: struct{
     using _get_metallic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_roughness: struct{
     using _set_roughness: ^GDW.MethodBind,
@@ -264,7 +264,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_roughness: struct{
     using _get_roughness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission: struct{
     using _set_emission: ^GDW.MethodBind,
@@ -272,7 +272,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_emission: struct{
     using _get_emission: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_emission_energy_multiplier: struct{
     using _set_emission_energy_multiplier: ^GDW.MethodBind,
@@ -280,7 +280,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_emission_energy_multiplier: struct{
     using _get_emission_energy_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_intensity: struct{
     using _set_emission_intensity: ^GDW.MethodBind,
@@ -288,7 +288,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_emission_intensity: struct{
     using _get_emission_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_normal_scale: struct{
     using _set_normal_scale: ^GDW.MethodBind,
@@ -296,7 +296,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_normal_scale: struct{
     using _get_normal_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rim: struct{
     using _set_rim: ^GDW.MethodBind,
@@ -304,7 +304,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_rim: struct{
     using _get_rim: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rim_tint: struct{
     using _set_rim_tint: ^GDW.MethodBind,
@@ -312,7 +312,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_rim_tint: struct{
     using _get_rim_tint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_clearcoat: struct{
     using _set_clearcoat: ^GDW.MethodBind,
@@ -320,7 +320,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_clearcoat: struct{
     using _get_clearcoat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_clearcoat_roughness: struct{
     using _set_clearcoat_roughness: ^GDW.MethodBind,
@@ -328,7 +328,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_clearcoat_roughness: struct{
     using _get_clearcoat_roughness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_anisotropy: struct{
     using _set_anisotropy: ^GDW.MethodBind,
@@ -336,7 +336,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_anisotropy: struct{
     using _get_anisotropy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_heightmap_scale: struct{
     using _set_heightmap_scale: ^GDW.MethodBind,
@@ -344,7 +344,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_heightmap_scale: struct{
     using _get_heightmap_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_subsurface_scattering_strength: struct{
     using _set_subsurface_scattering_strength: ^GDW.MethodBind,
@@ -352,7 +352,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_subsurface_scattering_strength: struct{
     using _get_subsurface_scattering_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_transmittance_color: struct{
     using _set_transmittance_color: ^GDW.MethodBind,
@@ -360,7 +360,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_transmittance_color: struct{
     using _get_transmittance_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_transmittance_depth: struct{
     using _set_transmittance_depth: ^GDW.MethodBind,
@@ -368,7 +368,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_transmittance_depth: struct{
     using _get_transmittance_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_transmittance_boost: struct{
     using _set_transmittance_boost: ^GDW.MethodBind,
@@ -376,7 +376,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_transmittance_boost: struct{
     using _get_transmittance_boost: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_backlight: struct{
     using _set_backlight: ^GDW.MethodBind,
@@ -384,7 +384,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_backlight: struct{
     using _get_backlight: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_refraction: struct{
     using _set_refraction: ^GDW.MethodBind,
@@ -392,7 +392,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_refraction: struct{
     using _get_refraction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_point_size: struct{
     using _set_point_size: ^GDW.MethodBind,
@@ -400,7 +400,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_point_size: struct{
     using _get_point_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_detail_uv: struct{
     using _set_detail_uv: ^GDW.MethodBind,
@@ -408,7 +408,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_detail_uv: struct{
     using _get_detail_uv: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_DetailUV)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_DetailUV)
   },
   set_blend_mode: struct{
     using _set_blend_mode: ^GDW.MethodBind,
@@ -416,7 +416,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_blend_mode: struct{
     using _get_blend_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_BlendMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_BlendMode)
   },
   set_depth_draw_mode: struct{
     using _set_depth_draw_mode: ^GDW.MethodBind,
@@ -424,7 +424,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_depth_draw_mode: struct{
     using _get_depth_draw_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_DepthDrawMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_DepthDrawMode)
   },
   set_depth_test: struct{
     using _set_depth_test: ^GDW.MethodBind,
@@ -432,7 +432,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_depth_test: struct{
     using _get_depth_test: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_DepthTest)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_DepthTest)
   },
   set_cull_mode: struct{
     using _set_cull_mode: ^GDW.MethodBind,
@@ -440,7 +440,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_cull_mode: struct{
     using _get_cull_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_CullMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_CullMode)
   },
   set_diffuse_mode: struct{
     using _set_diffuse_mode: ^GDW.MethodBind,
@@ -448,7 +448,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_diffuse_mode: struct{
     using _get_diffuse_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_DiffuseMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_DiffuseMode)
   },
   set_specular_mode: struct{
     using _set_specular_mode: ^GDW.MethodBind,
@@ -456,7 +456,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_specular_mode: struct{
     using _get_specular_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_SpecularMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_SpecularMode)
   },
   set_flag: struct{
     using _set_flag: ^GDW.MethodBind,
@@ -472,7 +472,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_texture_filter: struct{
     using _get_texture_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_TextureFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_TextureFilter)
   },
   set_feature: struct{
     using _set_feature: ^GDW.MethodBind,
@@ -496,7 +496,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_detail_blend_mode: struct{
     using _get_detail_blend_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_BlendMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_BlendMode)
   },
   set_uv1_scale: struct{
     using _set_uv1_scale: ^GDW.MethodBind,
@@ -504,7 +504,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_uv1_scale: struct{
     using _get_uv1_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_uv1_offset: struct{
     using _set_uv1_offset: ^GDW.MethodBind,
@@ -512,7 +512,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_uv1_offset: struct{
     using _get_uv1_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_uv1_triplanar_blend_sharpness: struct{
     using _set_uv1_triplanar_blend_sharpness: ^GDW.MethodBind,
@@ -520,7 +520,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_uv1_triplanar_blend_sharpness: struct{
     using _get_uv1_triplanar_blend_sharpness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_uv2_scale: struct{
     using _set_uv2_scale: ^GDW.MethodBind,
@@ -528,7 +528,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_uv2_scale: struct{
     using _get_uv2_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_uv2_offset: struct{
     using _set_uv2_offset: ^GDW.MethodBind,
@@ -536,7 +536,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_uv2_offset: struct{
     using _get_uv2_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_uv2_triplanar_blend_sharpness: struct{
     using _set_uv2_triplanar_blend_sharpness: ^GDW.MethodBind,
@@ -544,7 +544,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_uv2_triplanar_blend_sharpness: struct{
     using _get_uv2_triplanar_blend_sharpness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_billboard_mode: struct{
     using _set_billboard_mode: ^GDW.MethodBind,
@@ -552,7 +552,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_billboard_mode: struct{
     using _get_billboard_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_BillboardMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_BillboardMode)
   },
   set_particles_anim_h_frames: struct{
     using _set_particles_anim_h_frames: ^GDW.MethodBind,
@@ -560,7 +560,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_particles_anim_h_frames: struct{
     using _get_particles_anim_h_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_particles_anim_v_frames: struct{
     using _set_particles_anim_v_frames: ^GDW.MethodBind,
@@ -568,7 +568,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_particles_anim_v_frames: struct{
     using _get_particles_anim_v_frames: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_particles_anim_loop: struct{
     using _set_particles_anim_loop: ^GDW.MethodBind,
@@ -576,7 +576,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_particles_anim_loop: struct{
     using _get_particles_anim_loop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_heightmap_deep_parallax: struct{
     using _set_heightmap_deep_parallax: ^GDW.MethodBind,
@@ -584,7 +584,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     is_heightmap_deep_parallax_enabled: struct{
     using _is_heightmap_deep_parallax_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_heightmap_deep_parallax_min_layers: struct{
     using _set_heightmap_deep_parallax_min_layers: ^GDW.MethodBind,
@@ -592,7 +592,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_heightmap_deep_parallax_min_layers: struct{
     using _get_heightmap_deep_parallax_min_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_heightmap_deep_parallax_max_layers: struct{
     using _set_heightmap_deep_parallax_max_layers: ^GDW.MethodBind,
@@ -600,7 +600,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_heightmap_deep_parallax_max_layers: struct{
     using _get_heightmap_deep_parallax_max_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_heightmap_deep_parallax_flip_tangent: struct{
     using _set_heightmap_deep_parallax_flip_tangent: ^GDW.MethodBind,
@@ -608,7 +608,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_heightmap_deep_parallax_flip_tangent: struct{
     using _get_heightmap_deep_parallax_flip_tangent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_heightmap_deep_parallax_flip_binormal: struct{
     using _set_heightmap_deep_parallax_flip_binormal: ^GDW.MethodBind,
@@ -616,7 +616,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_heightmap_deep_parallax_flip_binormal: struct{
     using _get_heightmap_deep_parallax_flip_binormal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_grow: struct{
     using _set_grow: ^GDW.MethodBind,
@@ -624,7 +624,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_grow: struct{
     using _get_grow: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_operator: struct{
     using _set_emission_operator: ^GDW.MethodBind,
@@ -632,7 +632,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_emission_operator: struct{
     using _get_emission_operator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_EmissionOperator)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_EmissionOperator)
   },
   set_ao_light_affect: struct{
     using _set_ao_light_affect: ^GDW.MethodBind,
@@ -640,7 +640,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_ao_light_affect: struct{
     using _get_ao_light_affect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_alpha_scissor_threshold: struct{
     using _set_alpha_scissor_threshold: ^GDW.MethodBind,
@@ -648,7 +648,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_alpha_scissor_threshold: struct{
     using _get_alpha_scissor_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_alpha_hash_scale: struct{
     using _set_alpha_hash_scale: ^GDW.MethodBind,
@@ -656,7 +656,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_alpha_hash_scale: struct{
     using _get_alpha_hash_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_grow_enabled: struct{
     using _set_grow_enabled: ^GDW.MethodBind,
@@ -664,7 +664,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     is_grow_enabled: struct{
     using _is_grow_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_metallic_texture_channel: struct{
     using _set_metallic_texture_channel: ^GDW.MethodBind,
@@ -672,7 +672,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_metallic_texture_channel: struct{
     using _get_metallic_texture_channel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_TextureChannel)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_TextureChannel)
   },
   set_roughness_texture_channel: struct{
     using _set_roughness_texture_channel: ^GDW.MethodBind,
@@ -680,7 +680,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_roughness_texture_channel: struct{
     using _get_roughness_texture_channel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_TextureChannel)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_TextureChannel)
   },
   set_ao_texture_channel: struct{
     using _set_ao_texture_channel: ^GDW.MethodBind,
@@ -688,7 +688,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_ao_texture_channel: struct{
     using _get_ao_texture_channel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_TextureChannel)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_TextureChannel)
   },
   set_refraction_texture_channel: struct{
     using _set_refraction_texture_channel: ^GDW.MethodBind,
@@ -696,7 +696,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_refraction_texture_channel: struct{
     using _get_refraction_texture_channel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_TextureChannel)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_TextureChannel)
   },
   set_proximity_fade_enabled: struct{
     using _set_proximity_fade_enabled: ^GDW.MethodBind,
@@ -704,7 +704,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     is_proximity_fade_enabled: struct{
     using _is_proximity_fade_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_proximity_fade_distance: struct{
     using _set_proximity_fade_distance: ^GDW.MethodBind,
@@ -712,7 +712,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_proximity_fade_distance: struct{
     using _get_proximity_fade_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_msdf_pixel_range: struct{
     using _set_msdf_pixel_range: ^GDW.MethodBind,
@@ -720,7 +720,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_msdf_pixel_range: struct{
     using _get_msdf_pixel_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_msdf_outline_size: struct{
     using _set_msdf_outline_size: ^GDW.MethodBind,
@@ -728,7 +728,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_msdf_outline_size: struct{
     using _get_msdf_outline_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_distance_fade: struct{
     using _set_distance_fade: ^GDW.MethodBind,
@@ -736,7 +736,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_distance_fade: struct{
     using _get_distance_fade: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_DistanceFadeMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_DistanceFadeMode)
   },
   set_distance_fade_max_distance: struct{
     using _set_distance_fade_max_distance: ^GDW.MethodBind,
@@ -744,7 +744,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_distance_fade_max_distance: struct{
     using _get_distance_fade_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_distance_fade_min_distance: struct{
     using _set_distance_fade_min_distance: ^GDW.MethodBind,
@@ -752,7 +752,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_distance_fade_min_distance: struct{
     using _get_distance_fade_min_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_z_clip_scale: struct{
     using _set_z_clip_scale: ^GDW.MethodBind,
@@ -760,7 +760,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_z_clip_scale: struct{
     using _get_z_clip_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fov_override: struct{
     using _set_fov_override: ^GDW.MethodBind,
@@ -768,7 +768,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_fov_override: struct{
     using _get_fov_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_stencil_mode: struct{
     using _set_stencil_mode: ^GDW.MethodBind,
@@ -776,7 +776,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_stencil_mode: struct{
     using _get_stencil_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_StencilMode)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_StencilMode)
   },
   set_stencil_flags: struct{
     using _set_stencil_flags: ^GDW.MethodBind,
@@ -784,7 +784,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_stencil_flags: struct{
     using _get_stencil_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_stencil_compare: struct{
     using _set_stencil_compare: ^GDW.MethodBind,
@@ -792,7 +792,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_stencil_compare: struct{
     using _get_stencil_compare: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^BaseMaterial3D_StencilCompare)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^BaseMaterial3D_StencilCompare)
   },
   set_stencil_reference: struct{
     using _set_stencil_reference: ^GDW.MethodBind,
@@ -800,7 +800,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_stencil_reference: struct{
     using _get_stencil_reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_stencil_effect_color: struct{
     using _set_stencil_effect_color: ^GDW.MethodBind,
@@ -808,7 +808,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_stencil_effect_color: struct{
     using _get_stencil_effect_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_stencil_effect_outline_thickness: struct{
     using _set_stencil_effect_outline_thickness: ^GDW.MethodBind,
@@ -816,7 +816,7 @@ BaseMaterial3D_MethodBind_List :: struct {
   },
     get_stencil_effect_outline_thickness: struct{
     using _get_stencil_effect_outline_thickness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: BaseMaterial3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 BaseMaterial3D_Init_ :: proc (BaseMaterial3D_methods: ^BaseMaterial3D_MethodBind_List, loc := #caller_location) {

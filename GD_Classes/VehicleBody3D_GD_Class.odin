@@ -14,7 +14,7 @@ VehicleBody3D_MethodBind_List :: struct {
   },
     get_engine_force: struct{
     using _get_engine_force: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_brake: struct{
     using _set_brake: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ VehicleBody3D_MethodBind_List :: struct {
   },
     get_brake: struct{
     using _get_brake: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_steering: struct{
     using _set_steering: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VehicleBody3D_MethodBind_List :: struct {
   },
     get_steering: struct{
     using _get_steering: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VehicleBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VehicleBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 VehicleBody3D_Init_ :: proc (VehicleBody3D_methods: ^VehicleBody3D_MethodBind_List, loc := #caller_location) {

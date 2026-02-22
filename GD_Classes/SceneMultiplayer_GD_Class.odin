@@ -14,11 +14,11 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
     get_root_path: struct{
     using _get_root_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     disconnect_peer: struct{
     using _disconnect_peer: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
     get_authenticating_peers: struct{
     using _get_authenticating_peers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   send_auth: struct{
     using _send_auth: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
     get_auth_callback: struct{
     using _get_auth_callback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Callable)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.Callable)
   },
   set_auth_timeout: struct{
     using _set_auth_timeout: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
     get_auth_timeout: struct{
     using _get_auth_timeout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_refuse_new_connections: struct{
     using _set_refuse_new_connections: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
     is_refusing_new_connections: struct{
     using _is_refusing_new_connections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_object_decoding: struct{
     using _set_allow_object_decoding: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
     is_object_decoding_allowed: struct{
     using _is_object_decoding_allowed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_server_relay_enabled: struct{
     using _set_server_relay_enabled: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
     is_server_relay_enabled: struct{
     using _is_server_relay_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   send_bytes: struct{
     using _send_bytes: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
   get_max_sync_packet_size: struct{
     using _get_max_sync_packet_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_sync_packet_size: struct{
     using _set_max_sync_packet_size: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ SceneMultiplayer_MethodBind_List :: struct {
   },
     get_max_delta_packet_size: struct{
     using _get_max_delta_packet_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneMultiplayer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_delta_packet_size: struct{
     using _set_max_delta_packet_size: ^GDW.MethodBind,

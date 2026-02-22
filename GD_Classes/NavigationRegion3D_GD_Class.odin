@@ -10,7 +10,7 @@ NavigationRegion3D :: ^GDW.Object
 NavigationRegion3D_MethodBind_List :: struct {
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_navigation_mesh: struct{
     using _set_navigation_mesh: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
     get_navigation_mesh: struct{
     using _get_navigation_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^NavigationMesh)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^NavigationMesh)
   },
   set_enabled: struct{
     using _set_enabled: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_navigation_map: struct{
     using _set_navigation_map: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
     get_navigation_map: struct{
     using _get_navigation_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_use_edge_connections: struct{
     using _set_use_edge_connections: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
     get_use_edge_connections: struct{
     using _get_use_edge_connections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_navigation_layers: struct{
     using _set_navigation_layers: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
     get_navigation_layers: struct{
     using _get_navigation_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_navigation_layer_value: struct{
     using _set_navigation_layer_value: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
   get_region_rid: struct{
     using _get_region_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_enter_cost: struct{
     using _set_enter_cost: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
     get_enter_cost: struct{
     using _get_enter_cost: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_travel_cost: struct{
     using _set_travel_cost: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
     get_travel_cost: struct{
     using _get_travel_cost: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   bake_navigation_mesh: struct{
     using _bake_navigation_mesh: ^GDW.MethodBind,
@@ -86,11 +86,11 @@ NavigationRegion3D_MethodBind_List :: struct {
   },
     is_baking: struct{
     using _is_baking: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_bounds: struct{
     using _get_bounds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationRegion3D, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
 };
 NavigationRegion3D_Init_ :: proc (NavigationRegion3D_methods: ^NavigationRegion3D_MethodBind_List, loc := #caller_location) {

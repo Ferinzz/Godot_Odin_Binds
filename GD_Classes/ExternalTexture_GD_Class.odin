@@ -14,7 +14,7 @@ ExternalTexture_MethodBind_List :: struct {
   },
     get_external_texture_id: struct{
     using _get_external_texture_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ExternalTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ExternalTexture, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_external_buffer_id: struct{
     using _set_external_buffer_id: ^GDW.MethodBind,

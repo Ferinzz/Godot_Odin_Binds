@@ -18,11 +18,11 @@ GraphNode_MethodBind_List :: struct {
   },
     get_title: struct{
     using _get_title: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_titlebar_hbox: struct{
     using _get_titlebar_hbox: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, #by_ptr args: i64 = 0, r_ret: ^HBoxContainer)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, args: rawptr = nil, r_ret: ^HBoxContainer)
   },
   set_slot: struct{
     using _set_slot: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GraphNode_MethodBind_List :: struct {
   },
     clear_all_slots: struct{
     using _clear_all_slots: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_slot_enabled_left: struct{
     using _is_slot_enabled_left: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ GraphNode_MethodBind_List :: struct {
   },
     is_ignoring_valid_connection_type: struct{
     using _is_ignoring_valid_connection_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_slots_focus_mode: struct{
     using _set_slots_focus_mode: ^GDW.MethodBind,
@@ -138,11 +138,11 @@ GraphNode_MethodBind_List :: struct {
   },
     get_slots_focus_mode: struct{
     using _get_slots_focus_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, #by_ptr args: i64 = 0, r_ret: ^Control_FocusMode)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, args: rawptr = nil, r_ret: ^Control_FocusMode)
   },
   get_input_port_count: struct{
     using _get_input_port_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_input_port_position: struct{
     using _get_input_port_position: ^GDW.MethodBind,
@@ -162,7 +162,7 @@ GraphNode_MethodBind_List :: struct {
   },
   get_output_port_count: struct{
     using _get_output_port_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphNode, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_output_port_position: struct{
     using _get_output_port_position: ^GDW.MethodBind,

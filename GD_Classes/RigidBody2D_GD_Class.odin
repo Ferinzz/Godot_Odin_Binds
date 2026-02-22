@@ -39,11 +39,11 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_mass: struct{
     using _get_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_inertia: struct{
     using _get_inertia: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_inertia: struct{
     using _set_inertia: ^GDW.MethodBind,
@@ -55,7 +55,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_center_of_mass_mode: struct{
     using _get_center_of_mass_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^RigidBody2D_CenterOfMassMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^RigidBody2D_CenterOfMassMode)
   },
   set_center_of_mass: struct{
     using _set_center_of_mass: ^GDW.MethodBind,
@@ -63,7 +63,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_center_of_mass: struct{
     using _get_center_of_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_physics_material_override: struct{
     using _set_physics_material_override: ^GDW.MethodBind,
@@ -71,7 +71,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_physics_material_override: struct{
     using _get_physics_material_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^PhysicsMaterial)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^PhysicsMaterial)
   },
   set_gravity_scale: struct{
     using _set_gravity_scale: ^GDW.MethodBind,
@@ -79,7 +79,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_gravity_scale: struct{
     using _get_gravity_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_linear_damp_mode: struct{
     using _set_linear_damp_mode: ^GDW.MethodBind,
@@ -87,7 +87,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_linear_damp_mode: struct{
     using _get_linear_damp_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^RigidBody2D_DampMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^RigidBody2D_DampMode)
   },
   set_angular_damp_mode: struct{
     using _set_angular_damp_mode: ^GDW.MethodBind,
@@ -95,7 +95,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_angular_damp_mode: struct{
     using _get_angular_damp_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^RigidBody2D_DampMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^RigidBody2D_DampMode)
   },
   set_linear_damp: struct{
     using _set_linear_damp: ^GDW.MethodBind,
@@ -103,7 +103,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_linear_damp: struct{
     using _get_linear_damp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_angular_damp: struct{
     using _set_angular_damp: ^GDW.MethodBind,
@@ -111,7 +111,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_angular_damp: struct{
     using _get_angular_damp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_linear_velocity: struct{
     using _set_linear_velocity: ^GDW.MethodBind,
@@ -119,7 +119,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_linear_velocity: struct{
     using _get_linear_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_angular_velocity: struct{
     using _set_angular_velocity: ^GDW.MethodBind,
@@ -127,7 +127,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_angular_velocity: struct{
     using _get_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_contacts_reported: struct{
     using _set_max_contacts_reported: ^GDW.MethodBind,
@@ -135,11 +135,11 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_max_contacts_reported: struct{
     using _get_max_contacts_reported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_contact_count: struct{
     using _get_contact_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_use_custom_integrator: struct{
     using _set_use_custom_integrator: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     is_using_custom_integrator: struct{
     using _is_using_custom_integrator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_contact_monitor: struct{
     using _set_contact_monitor: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     is_contact_monitor_enabled: struct{
     using _is_contact_monitor_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_continuous_collision_detection_mode: struct{
     using _set_continuous_collision_detection_mode: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_continuous_collision_detection_mode: struct{
     using _get_continuous_collision_detection_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^RigidBody2D_CCDMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^RigidBody2D_CCDMode)
   },
   set_axis_velocity: struct{
     using _set_axis_velocity: ^GDW.MethodBind,
@@ -211,7 +211,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_constant_force: struct{
     using _get_constant_force: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_constant_torque: struct{
     using _set_constant_torque: ^GDW.MethodBind,
@@ -219,7 +219,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_constant_torque: struct{
     using _get_constant_torque: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sleeping: struct{
     using _set_sleeping: ^GDW.MethodBind,
@@ -227,7 +227,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     is_sleeping: struct{
     using _is_sleeping: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_can_sleep: struct{
     using _set_can_sleep: ^GDW.MethodBind,
@@ -235,7 +235,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     is_able_to_sleep: struct{
     using _is_able_to_sleep: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_lock_rotation_enabled: struct{
     using _set_lock_rotation_enabled: ^GDW.MethodBind,
@@ -243,7 +243,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     is_lock_rotation_enabled: struct{
     using _is_lock_rotation_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_freeze_enabled: struct{
     using _set_freeze_enabled: ^GDW.MethodBind,
@@ -251,7 +251,7 @@ RigidBody2D_MethodBind_List :: struct {
   },
     is_freeze_enabled: struct{
     using _is_freeze_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_freeze_mode: struct{
     using _set_freeze_mode: ^GDW.MethodBind,
@@ -259,11 +259,11 @@ RigidBody2D_MethodBind_List :: struct {
   },
     get_freeze_mode: struct{
     using _get_freeze_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^RigidBody2D_FreezeMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^RigidBody2D_FreezeMode)
   },
   get_colliding_bodies: struct{
     using _get_colliding_bodies: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RigidBody2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 RigidBody2D_Init_ :: proc (RigidBody2D_methods: ^RigidBody2D_MethodBind_List, loc := #caller_location) {

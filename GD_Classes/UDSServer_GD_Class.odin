@@ -14,7 +14,7 @@ UDSServer_MethodBind_List :: struct {
   },
   take_connection: struct{
     using _take_connection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UDSServer, #by_ptr args: i64 = 0, r_ret: ^StreamPeerUDS)
+    m_call: proc(_:^GDW.MethodBind, obj: UDSServer, args: rawptr = nil, r_ret: ^StreamPeerUDS)
   },
 };
 UDSServer_Init_ :: proc (UDSServer_methods: ^UDSServer_MethodBind_List, loc := #caller_location) {

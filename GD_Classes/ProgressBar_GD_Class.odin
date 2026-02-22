@@ -21,7 +21,7 @@ ProgressBar_MethodBind_List :: struct {
   },
     get_fill_mode: struct{
     using _get_fill_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ProgressBar, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_show_percentage: struct{
     using _set_show_percentage: ^GDW.MethodBind,
@@ -29,7 +29,7 @@ ProgressBar_MethodBind_List :: struct {
   },
     is_percentage_shown: struct{
     using _is_percentage_shown: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ProgressBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_indeterminate: struct{
     using _set_indeterminate: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ ProgressBar_MethodBind_List :: struct {
   },
     is_indeterminate: struct{
     using _is_indeterminate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ProgressBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_editor_preview_indeterminate: struct{
     using _set_editor_preview_indeterminate: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ ProgressBar_MethodBind_List :: struct {
   },
     is_editor_preview_indeterminate_enabled: struct{
     using _is_editor_preview_indeterminate_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProgressBar, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: ProgressBar, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 ProgressBar_Init_ :: proc (ProgressBar_methods: ^ProgressBar_MethodBind_List, loc := #caller_location) {

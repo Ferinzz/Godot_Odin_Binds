@@ -14,7 +14,7 @@ VisualShaderNodeVec3Constant_MethodBind_List :: struct {
   },
     get_constant: struct{
     using _get_constant: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVec3Constant, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVec3Constant, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
 };
 VisualShaderNodeVec3Constant_Init_ :: proc (VisualShaderNodeVec3Constant_methods: ^VisualShaderNodeVec3Constant_MethodBind_List, loc := #caller_location) {

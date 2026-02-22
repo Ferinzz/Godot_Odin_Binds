@@ -10,7 +10,7 @@ MeshDataTool :: ^GDW.Object
 MeshDataTool_MethodBind_List :: struct {
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, args: rawptr = nil, r_ret: rawptr = nil)
   },
     create_from_surface: struct{
     using _create_from_surface: ^GDW.MethodBind,
@@ -22,19 +22,19 @@ MeshDataTool_MethodBind_List :: struct {
   },
   get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_vertex_count: struct{
     using _get_vertex_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_edge_count: struct{
     using _get_edge_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_face_count: struct{
     using _get_face_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_vertex: struct{
     using _set_vertex: ^GDW.MethodBind,
@@ -158,7 +158,7 @@ MeshDataTool_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: MeshDataTool, args: rawptr = nil, r_ret: ^Material)
   },
 };
 MeshDataTool_Init_ :: proc (MeshDataTool_methods: ^MeshDataTool_MethodBind_List, loc := #caller_location) {

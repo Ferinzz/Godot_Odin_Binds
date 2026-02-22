@@ -10,7 +10,7 @@ SpringBoneCollision3D :: ^GDW.Object
 SpringBoneCollision3D_MethodBind_List :: struct {
   get_skeleton: struct{
     using _get_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, #by_ptr args: i64 = 0, r_ret: ^Skeleton3D)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, args: rawptr = nil, r_ret: ^Skeleton3D)
   },
   set_bone_name: struct{
     using _set_bone_name: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ SpringBoneCollision3D_MethodBind_List :: struct {
   },
     get_bone_name: struct{
     using _get_bone_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_bone: struct{
     using _set_bone: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ SpringBoneCollision3D_MethodBind_List :: struct {
   },
     get_bone: struct{
     using _get_bone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_position_offset: struct{
     using _set_position_offset: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ SpringBoneCollision3D_MethodBind_List :: struct {
   },
     get_position_offset: struct{
     using _get_position_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_rotation_offset: struct{
     using _set_rotation_offset: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ SpringBoneCollision3D_MethodBind_List :: struct {
   },
     get_rotation_offset: struct{
     using _get_rotation_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Quaternion)
+    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollision3D, args: rawptr = nil, r_ret: ^GDW.Quaternion)
   },
 };
 SpringBoneCollision3D_Init_ :: proc (SpringBoneCollision3D_methods: ^SpringBoneCollision3D_MethodBind_List, loc := #caller_location) {

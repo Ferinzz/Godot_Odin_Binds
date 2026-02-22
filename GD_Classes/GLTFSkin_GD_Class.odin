@@ -10,7 +10,7 @@ GLTFSkin :: ^GDW.Object
 GLTFSkin_MethodBind_List :: struct {
   get_skin_root: struct{
     using _get_skin_root: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_skin_root: struct{
     using _set_skin_root: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_joints_original: struct{
     using _get_joints_original: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_joints_original: struct{
     using _set_joints_original: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_inverse_binds: struct{
     using _get_inverse_binds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_inverse_binds: struct{
     using _set_inverse_binds: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_joints: struct{
     using _get_joints: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_joints: struct{
     using _set_joints: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_non_joints: struct{
     using _get_non_joints: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_non_joints: struct{
     using _set_non_joints: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_roots: struct{
     using _get_roots: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_roots: struct{
     using _set_roots: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_skeleton: struct{
     using _get_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_skeleton: struct{
     using _set_skeleton: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_joint_i_to_bone_i: struct{
     using _get_joint_i_to_bone_i: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_joint_i_to_bone_i: struct{
     using _set_joint_i_to_bone_i: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_joint_i_to_name: struct{
     using _get_joint_i_to_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   set_joint_i_to_name: struct{
     using _set_joint_i_to_name: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ GLTFSkin_MethodBind_List :: struct {
   },
     get_godot_skin: struct{
     using _get_godot_skin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, #by_ptr args: i64 = 0, r_ret: ^Skin)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFSkin, args: rawptr = nil, r_ret: ^Skin)
   },
   set_godot_skin: struct{
     using _set_godot_skin: ^GDW.MethodBind,

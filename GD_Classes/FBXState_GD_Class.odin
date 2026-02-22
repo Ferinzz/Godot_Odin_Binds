@@ -10,7 +10,7 @@ FBXState :: ^GDW.Object
 FBXState_MethodBind_List :: struct {
   get_allow_geometry_helper_nodes: struct{
     using _get_allow_geometry_helper_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FBXState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: FBXState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_geometry_helper_nodes: struct{
     using _set_allow_geometry_helper_nodes: ^GDW.MethodBind,

@@ -10,19 +10,19 @@ SocketServer :: ^GDW.Object
 SocketServer_MethodBind_List :: struct {
   is_connection_available: struct{
     using _is_connection_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SocketServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SocketServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_listening: struct{
     using _is_listening: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SocketServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SocketServer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   stop: struct{
     using _stop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SocketServer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SocketServer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     take_socket_connection: struct{
     using _take_socket_connection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SocketServer, #by_ptr args: i64 = 0, r_ret: ^StreamPeerSocket)
+    m_call: proc(_:^GDW.MethodBind, obj: SocketServer, args: rawptr = nil, r_ret: ^StreamPeerSocket)
   },
 };
 SocketServer_Init_ :: proc (SocketServer_methods: ^SocketServer_MethodBind_List, loc := #caller_location) {

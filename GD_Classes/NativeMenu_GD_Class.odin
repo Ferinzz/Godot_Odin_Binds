@@ -51,7 +51,7 @@ NativeMenu_MethodBind_List :: struct {
   },
     create_menu: struct{
     using _create_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NativeMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NativeMenu, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   has_menu: struct{
     using _has_menu: ^GDW.MethodBind,

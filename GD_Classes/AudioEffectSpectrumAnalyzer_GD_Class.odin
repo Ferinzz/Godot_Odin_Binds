@@ -23,7 +23,7 @@ AudioEffectSpectrumAnalyzer_MethodBind_List :: struct {
   },
     get_buffer_length: struct{
     using _get_buffer_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectSpectrumAnalyzer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectSpectrumAnalyzer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tap_back_pos: struct{
     using _set_tap_back_pos: ^GDW.MethodBind,
@@ -31,7 +31,7 @@ AudioEffectSpectrumAnalyzer_MethodBind_List :: struct {
   },
     get_tap_back_pos: struct{
     using _get_tap_back_pos: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectSpectrumAnalyzer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectSpectrumAnalyzer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fft_size: struct{
     using _set_fft_size: ^GDW.MethodBind,
@@ -39,7 +39,7 @@ AudioEffectSpectrumAnalyzer_MethodBind_List :: struct {
   },
     get_fft_size: struct{
     using _get_fft_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectSpectrumAnalyzer, #by_ptr args: i64 = 0, r_ret: ^AudioEffectSpectrumAnalyzer_FFTSize)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectSpectrumAnalyzer, args: rawptr = nil, r_ret: ^AudioEffectSpectrumAnalyzer_FFTSize)
   },
 };
 AudioEffectSpectrumAnalyzer_Init_ :: proc (AudioEffectSpectrumAnalyzer_methods: ^AudioEffectSpectrumAnalyzer_MethodBind_List, loc := #caller_location) {

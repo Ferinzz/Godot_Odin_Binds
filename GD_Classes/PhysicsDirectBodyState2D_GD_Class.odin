@@ -10,31 +10,31 @@ PhysicsDirectBodyState2D :: ^GDW.Object
 PhysicsDirectBodyState2D_MethodBind_List :: struct {
   get_total_gravity: struct{
     using _get_total_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_total_linear_damp: struct{
     using _get_total_linear_damp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_total_angular_damp: struct{
     using _get_total_angular_damp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_center_of_mass: struct{
     using _get_center_of_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_center_of_mass_local: struct{
     using _get_center_of_mass_local: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_inverse_mass: struct{
     using _get_inverse_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_inverse_inertia: struct{
     using _get_inverse_inertia: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_linear_velocity: struct{
     using _set_linear_velocity: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
     get_linear_velocity: struct{
     using _get_linear_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_angular_velocity: struct{
     using _set_angular_velocity: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
     get_angular_velocity: struct{
     using _get_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_transform: struct{
     using _set_transform: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
     get_transform: struct{
     using _get_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   get_velocity_at_local_position: struct{
     using _get_velocity_at_local_position: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
     get_constant_force: struct{
     using _get_constant_force: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_constant_torque: struct{
     using _set_constant_torque: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
     get_constant_torque: struct{
     using _get_constant_torque: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sleep_state: struct{
     using _set_sleep_state: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
     is_sleeping: struct{
     using _is_sleeping: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collision_layer: struct{
     using _set_collision_layer: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
     get_collision_layer: struct{
     using _get_collision_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -138,11 +138,11 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_contact_count: struct{
     using _get_contact_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_contact_local_position: struct{
     using _get_contact_local_position: ^GDW.MethodBind,
@@ -190,15 +190,15 @@ PhysicsDirectBodyState2D_MethodBind_List :: struct {
   },
   get_step: struct{
     using _get_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   integrate_forces: struct{
     using _integrate_forces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_space_state: struct{
     using _get_space_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, #by_ptr args: i64 = 0, r_ret: ^PhysicsDirectSpaceState2D)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsDirectBodyState2D, args: rawptr = nil, r_ret: ^PhysicsDirectSpaceState2D)
   },
 };
 PhysicsDirectBodyState2D_Init_ :: proc (PhysicsDirectBodyState2D_methods: ^PhysicsDirectBodyState2D_MethodBind_List, loc := #caller_location) {

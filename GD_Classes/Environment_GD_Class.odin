@@ -64,7 +64,7 @@ Environment_MethodBind_List :: struct {
   },
     get_background: struct{
     using _get_background: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Environment_BGMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Environment_BGMode)
   },
   set_sky: struct{
     using _set_sky: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sky: struct{
     using _get_sky: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Sky)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Sky)
   },
   set_sky_custom_fov: struct{
     using _set_sky_custom_fov: ^GDW.MethodBind,
@@ -80,7 +80,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sky_custom_fov: struct{
     using _get_sky_custom_fov: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sky_rotation: struct{
     using _set_sky_rotation: ^GDW.MethodBind,
@@ -88,7 +88,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sky_rotation: struct{
     using _get_sky_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_bg_color: struct{
     using _set_bg_color: ^GDW.MethodBind,
@@ -96,7 +96,7 @@ Environment_MethodBind_List :: struct {
   },
     get_bg_color: struct{
     using _get_bg_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_bg_energy_multiplier: struct{
     using _set_bg_energy_multiplier: ^GDW.MethodBind,
@@ -104,7 +104,7 @@ Environment_MethodBind_List :: struct {
   },
     get_bg_energy_multiplier: struct{
     using _get_bg_energy_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bg_intensity: struct{
     using _set_bg_intensity: ^GDW.MethodBind,
@@ -112,7 +112,7 @@ Environment_MethodBind_List :: struct {
   },
     get_bg_intensity: struct{
     using _get_bg_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_canvas_max_layer: struct{
     using _set_canvas_max_layer: ^GDW.MethodBind,
@@ -120,7 +120,7 @@ Environment_MethodBind_List :: struct {
   },
     get_canvas_max_layer: struct{
     using _get_canvas_max_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_camera_feed_id: struct{
     using _set_camera_feed_id: ^GDW.MethodBind,
@@ -128,7 +128,7 @@ Environment_MethodBind_List :: struct {
   },
     get_camera_feed_id: struct{
     using _get_camera_feed_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_ambient_light_color: struct{
     using _set_ambient_light_color: ^GDW.MethodBind,
@@ -136,7 +136,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ambient_light_color: struct{
     using _get_ambient_light_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_ambient_source: struct{
     using _set_ambient_source: ^GDW.MethodBind,
@@ -144,7 +144,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ambient_source: struct{
     using _get_ambient_source: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Environment_AmbientSource)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Environment_AmbientSource)
   },
   set_ambient_light_energy: struct{
     using _set_ambient_light_energy: ^GDW.MethodBind,
@@ -152,7 +152,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ambient_light_energy: struct{
     using _get_ambient_light_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ambient_light_sky_contribution: struct{
     using _set_ambient_light_sky_contribution: ^GDW.MethodBind,
@@ -160,7 +160,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ambient_light_sky_contribution: struct{
     using _get_ambient_light_sky_contribution: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_reflection_source: struct{
     using _set_reflection_source: ^GDW.MethodBind,
@@ -168,7 +168,7 @@ Environment_MethodBind_List :: struct {
   },
     get_reflection_source: struct{
     using _get_reflection_source: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Environment_ReflectionSource)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Environment_ReflectionSource)
   },
   set_tonemapper: struct{
     using _set_tonemapper: ^GDW.MethodBind,
@@ -176,7 +176,7 @@ Environment_MethodBind_List :: struct {
   },
     get_tonemapper: struct{
     using _get_tonemapper: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Environment_ToneMapper)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Environment_ToneMapper)
   },
   set_tonemap_exposure: struct{
     using _set_tonemap_exposure: ^GDW.MethodBind,
@@ -184,7 +184,7 @@ Environment_MethodBind_List :: struct {
   },
     get_tonemap_exposure: struct{
     using _get_tonemap_exposure: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tonemap_white: struct{
     using _set_tonemap_white: ^GDW.MethodBind,
@@ -192,7 +192,7 @@ Environment_MethodBind_List :: struct {
   },
     get_tonemap_white: struct{
     using _get_tonemap_white: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tonemap_agx_white: struct{
     using _set_tonemap_agx_white: ^GDW.MethodBind,
@@ -200,7 +200,7 @@ Environment_MethodBind_List :: struct {
   },
     get_tonemap_agx_white: struct{
     using _get_tonemap_agx_white: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tonemap_agx_contrast: struct{
     using _set_tonemap_agx_contrast: ^GDW.MethodBind,
@@ -208,7 +208,7 @@ Environment_MethodBind_List :: struct {
   },
     get_tonemap_agx_contrast: struct{
     using _get_tonemap_agx_contrast: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssr_enabled: struct{
     using _set_ssr_enabled: ^GDW.MethodBind,
@@ -216,7 +216,7 @@ Environment_MethodBind_List :: struct {
   },
     is_ssr_enabled: struct{
     using _is_ssr_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_ssr_max_steps: struct{
     using _set_ssr_max_steps: ^GDW.MethodBind,
@@ -224,7 +224,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssr_max_steps: struct{
     using _get_ssr_max_steps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_ssr_fade_in: struct{
     using _set_ssr_fade_in: ^GDW.MethodBind,
@@ -232,7 +232,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssr_fade_in: struct{
     using _get_ssr_fade_in: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssr_fade_out: struct{
     using _set_ssr_fade_out: ^GDW.MethodBind,
@@ -240,7 +240,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssr_fade_out: struct{
     using _get_ssr_fade_out: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssr_depth_tolerance: struct{
     using _set_ssr_depth_tolerance: ^GDW.MethodBind,
@@ -248,7 +248,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssr_depth_tolerance: struct{
     using _get_ssr_depth_tolerance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssao_enabled: struct{
     using _set_ssao_enabled: ^GDW.MethodBind,
@@ -256,7 +256,7 @@ Environment_MethodBind_List :: struct {
   },
     is_ssao_enabled: struct{
     using _is_ssao_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_ssao_radius: struct{
     using _set_ssao_radius: ^GDW.MethodBind,
@@ -264,7 +264,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssao_radius: struct{
     using _get_ssao_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssao_intensity: struct{
     using _set_ssao_intensity: ^GDW.MethodBind,
@@ -272,7 +272,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssao_intensity: struct{
     using _get_ssao_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssao_power: struct{
     using _set_ssao_power: ^GDW.MethodBind,
@@ -280,7 +280,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssao_power: struct{
     using _get_ssao_power: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssao_detail: struct{
     using _set_ssao_detail: ^GDW.MethodBind,
@@ -288,7 +288,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssao_detail: struct{
     using _get_ssao_detail: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssao_horizon: struct{
     using _set_ssao_horizon: ^GDW.MethodBind,
@@ -296,7 +296,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssao_horizon: struct{
     using _get_ssao_horizon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssao_sharpness: struct{
     using _set_ssao_sharpness: ^GDW.MethodBind,
@@ -304,7 +304,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssao_sharpness: struct{
     using _get_ssao_sharpness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssao_direct_light_affect: struct{
     using _set_ssao_direct_light_affect: ^GDW.MethodBind,
@@ -312,7 +312,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssao_direct_light_affect: struct{
     using _get_ssao_direct_light_affect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssao_ao_channel_affect: struct{
     using _set_ssao_ao_channel_affect: ^GDW.MethodBind,
@@ -320,7 +320,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssao_ao_channel_affect: struct{
     using _get_ssao_ao_channel_affect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssil_enabled: struct{
     using _set_ssil_enabled: ^GDW.MethodBind,
@@ -328,7 +328,7 @@ Environment_MethodBind_List :: struct {
   },
     is_ssil_enabled: struct{
     using _is_ssil_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_ssil_radius: struct{
     using _set_ssil_radius: ^GDW.MethodBind,
@@ -336,7 +336,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssil_radius: struct{
     using _get_ssil_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssil_intensity: struct{
     using _set_ssil_intensity: ^GDW.MethodBind,
@@ -344,7 +344,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssil_intensity: struct{
     using _get_ssil_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssil_sharpness: struct{
     using _set_ssil_sharpness: ^GDW.MethodBind,
@@ -352,7 +352,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssil_sharpness: struct{
     using _get_ssil_sharpness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_ssil_normal_rejection: struct{
     using _set_ssil_normal_rejection: ^GDW.MethodBind,
@@ -360,7 +360,7 @@ Environment_MethodBind_List :: struct {
   },
     get_ssil_normal_rejection: struct{
     using _get_ssil_normal_rejection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sdfgi_enabled: struct{
     using _set_sdfgi_enabled: ^GDW.MethodBind,
@@ -368,7 +368,7 @@ Environment_MethodBind_List :: struct {
   },
     is_sdfgi_enabled: struct{
     using _is_sdfgi_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sdfgi_cascades: struct{
     using _set_sdfgi_cascades: ^GDW.MethodBind,
@@ -376,7 +376,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_cascades: struct{
     using _get_sdfgi_cascades: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_sdfgi_min_cell_size: struct{
     using _set_sdfgi_min_cell_size: ^GDW.MethodBind,
@@ -384,7 +384,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_min_cell_size: struct{
     using _get_sdfgi_min_cell_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sdfgi_max_distance: struct{
     using _set_sdfgi_max_distance: ^GDW.MethodBind,
@@ -392,7 +392,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_max_distance: struct{
     using _get_sdfgi_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sdfgi_cascade0_distance: struct{
     using _set_sdfgi_cascade0_distance: ^GDW.MethodBind,
@@ -400,7 +400,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_cascade0_distance: struct{
     using _get_sdfgi_cascade0_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sdfgi_y_scale: struct{
     using _set_sdfgi_y_scale: ^GDW.MethodBind,
@@ -408,7 +408,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_y_scale: struct{
     using _get_sdfgi_y_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Environment_SDFGIYScale)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Environment_SDFGIYScale)
   },
   set_sdfgi_use_occlusion: struct{
     using _set_sdfgi_use_occlusion: ^GDW.MethodBind,
@@ -416,7 +416,7 @@ Environment_MethodBind_List :: struct {
   },
     is_sdfgi_using_occlusion: struct{
     using _is_sdfgi_using_occlusion: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sdfgi_bounce_feedback: struct{
     using _set_sdfgi_bounce_feedback: ^GDW.MethodBind,
@@ -424,7 +424,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_bounce_feedback: struct{
     using _get_sdfgi_bounce_feedback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sdfgi_read_sky_light: struct{
     using _set_sdfgi_read_sky_light: ^GDW.MethodBind,
@@ -432,7 +432,7 @@ Environment_MethodBind_List :: struct {
   },
     is_sdfgi_reading_sky_light: struct{
     using _is_sdfgi_reading_sky_light: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_sdfgi_energy: struct{
     using _set_sdfgi_energy: ^GDW.MethodBind,
@@ -440,7 +440,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_energy: struct{
     using _get_sdfgi_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sdfgi_normal_bias: struct{
     using _set_sdfgi_normal_bias: ^GDW.MethodBind,
@@ -448,7 +448,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_normal_bias: struct{
     using _get_sdfgi_normal_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sdfgi_probe_bias: struct{
     using _set_sdfgi_probe_bias: ^GDW.MethodBind,
@@ -456,7 +456,7 @@ Environment_MethodBind_List :: struct {
   },
     get_sdfgi_probe_bias: struct{
     using _get_sdfgi_probe_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_enabled: struct{
     using _set_glow_enabled: ^GDW.MethodBind,
@@ -464,7 +464,7 @@ Environment_MethodBind_List :: struct {
   },
     is_glow_enabled: struct{
     using _is_glow_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_glow_level: struct{
     using _set_glow_level: ^GDW.MethodBind,
@@ -480,7 +480,7 @@ Environment_MethodBind_List :: struct {
   },
     is_glow_normalized: struct{
     using _is_glow_normalized: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_glow_intensity: struct{
     using _set_glow_intensity: ^GDW.MethodBind,
@@ -488,7 +488,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_intensity: struct{
     using _get_glow_intensity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_strength: struct{
     using _set_glow_strength: ^GDW.MethodBind,
@@ -496,7 +496,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_strength: struct{
     using _get_glow_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_mix: struct{
     using _set_glow_mix: ^GDW.MethodBind,
@@ -504,7 +504,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_mix: struct{
     using _get_glow_mix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_bloom: struct{
     using _set_glow_bloom: ^GDW.MethodBind,
@@ -512,7 +512,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_bloom: struct{
     using _get_glow_bloom: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_blend_mode: struct{
     using _set_glow_blend_mode: ^GDW.MethodBind,
@@ -520,7 +520,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_blend_mode: struct{
     using _get_glow_blend_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Environment_GlowBlendMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Environment_GlowBlendMode)
   },
   set_glow_hdr_bleed_threshold: struct{
     using _set_glow_hdr_bleed_threshold: ^GDW.MethodBind,
@@ -528,7 +528,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_hdr_bleed_threshold: struct{
     using _get_glow_hdr_bleed_threshold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_hdr_bleed_scale: struct{
     using _set_glow_hdr_bleed_scale: ^GDW.MethodBind,
@@ -536,7 +536,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_hdr_bleed_scale: struct{
     using _get_glow_hdr_bleed_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_hdr_luminance_cap: struct{
     using _set_glow_hdr_luminance_cap: ^GDW.MethodBind,
@@ -544,7 +544,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_hdr_luminance_cap: struct{
     using _get_glow_hdr_luminance_cap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_map_strength: struct{
     using _set_glow_map_strength: ^GDW.MethodBind,
@@ -552,7 +552,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_map_strength: struct{
     using _get_glow_map_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_glow_map: struct{
     using _set_glow_map: ^GDW.MethodBind,
@@ -560,7 +560,7 @@ Environment_MethodBind_List :: struct {
   },
     get_glow_map: struct{
     using _get_glow_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Texture)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Texture)
   },
   set_fog_enabled: struct{
     using _set_fog_enabled: ^GDW.MethodBind,
@@ -568,7 +568,7 @@ Environment_MethodBind_List :: struct {
   },
     is_fog_enabled: struct{
     using _is_fog_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_fog_mode: struct{
     using _set_fog_mode: ^GDW.MethodBind,
@@ -576,7 +576,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_mode: struct{
     using _get_fog_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Environment_FogMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Environment_FogMode)
   },
   set_fog_light_color: struct{
     using _set_fog_light_color: ^GDW.MethodBind,
@@ -584,7 +584,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_light_color: struct{
     using _get_fog_light_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_fog_light_energy: struct{
     using _set_fog_light_energy: ^GDW.MethodBind,
@@ -592,7 +592,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_light_energy: struct{
     using _get_fog_light_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_sun_scatter: struct{
     using _set_fog_sun_scatter: ^GDW.MethodBind,
@@ -600,7 +600,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_sun_scatter: struct{
     using _get_fog_sun_scatter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_density: struct{
     using _set_fog_density: ^GDW.MethodBind,
@@ -608,7 +608,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_density: struct{
     using _get_fog_density: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_height: struct{
     using _set_fog_height: ^GDW.MethodBind,
@@ -616,7 +616,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_height: struct{
     using _get_fog_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_height_density: struct{
     using _set_fog_height_density: ^GDW.MethodBind,
@@ -624,7 +624,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_height_density: struct{
     using _get_fog_height_density: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_aerial_perspective: struct{
     using _set_fog_aerial_perspective: ^GDW.MethodBind,
@@ -632,7 +632,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_aerial_perspective: struct{
     using _get_fog_aerial_perspective: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_sky_affect: struct{
     using _set_fog_sky_affect: ^GDW.MethodBind,
@@ -640,7 +640,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_sky_affect: struct{
     using _get_fog_sky_affect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_depth_curve: struct{
     using _set_fog_depth_curve: ^GDW.MethodBind,
@@ -648,7 +648,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_depth_curve: struct{
     using _get_fog_depth_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_depth_begin: struct{
     using _set_fog_depth_begin: ^GDW.MethodBind,
@@ -656,7 +656,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_depth_begin: struct{
     using _get_fog_depth_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fog_depth_end: struct{
     using _set_fog_depth_end: ^GDW.MethodBind,
@@ -664,7 +664,7 @@ Environment_MethodBind_List :: struct {
   },
     get_fog_depth_end: struct{
     using _get_fog_depth_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_enabled: struct{
     using _set_volumetric_fog_enabled: ^GDW.MethodBind,
@@ -672,7 +672,7 @@ Environment_MethodBind_List :: struct {
   },
     is_volumetric_fog_enabled: struct{
     using _is_volumetric_fog_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_volumetric_fog_emission: struct{
     using _set_volumetric_fog_emission: ^GDW.MethodBind,
@@ -680,7 +680,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_emission: struct{
     using _get_volumetric_fog_emission: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_volumetric_fog_albedo: struct{
     using _set_volumetric_fog_albedo: ^GDW.MethodBind,
@@ -688,7 +688,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_albedo: struct{
     using _get_volumetric_fog_albedo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_volumetric_fog_density: struct{
     using _set_volumetric_fog_density: ^GDW.MethodBind,
@@ -696,7 +696,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_density: struct{
     using _get_volumetric_fog_density: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_emission_energy: struct{
     using _set_volumetric_fog_emission_energy: ^GDW.MethodBind,
@@ -704,7 +704,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_emission_energy: struct{
     using _get_volumetric_fog_emission_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_anisotropy: struct{
     using _set_volumetric_fog_anisotropy: ^GDW.MethodBind,
@@ -712,7 +712,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_anisotropy: struct{
     using _get_volumetric_fog_anisotropy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_length: struct{
     using _set_volumetric_fog_length: ^GDW.MethodBind,
@@ -720,7 +720,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_length: struct{
     using _get_volumetric_fog_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_detail_spread: struct{
     using _set_volumetric_fog_detail_spread: ^GDW.MethodBind,
@@ -728,7 +728,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_detail_spread: struct{
     using _get_volumetric_fog_detail_spread: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_gi_inject: struct{
     using _set_volumetric_fog_gi_inject: ^GDW.MethodBind,
@@ -736,7 +736,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_gi_inject: struct{
     using _get_volumetric_fog_gi_inject: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_ambient_inject: struct{
     using _set_volumetric_fog_ambient_inject: ^GDW.MethodBind,
@@ -744,7 +744,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_ambient_inject: struct{
     using _get_volumetric_fog_ambient_inject: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_sky_affect: struct{
     using _set_volumetric_fog_sky_affect: ^GDW.MethodBind,
@@ -752,7 +752,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_sky_affect: struct{
     using _get_volumetric_fog_sky_affect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volumetric_fog_temporal_reprojection_enabled: struct{
     using _set_volumetric_fog_temporal_reprojection_enabled: ^GDW.MethodBind,
@@ -760,7 +760,7 @@ Environment_MethodBind_List :: struct {
   },
     is_volumetric_fog_temporal_reprojection_enabled: struct{
     using _is_volumetric_fog_temporal_reprojection_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_volumetric_fog_temporal_reprojection_amount: struct{
     using _set_volumetric_fog_temporal_reprojection_amount: ^GDW.MethodBind,
@@ -768,7 +768,7 @@ Environment_MethodBind_List :: struct {
   },
     get_volumetric_fog_temporal_reprojection_amount: struct{
     using _get_volumetric_fog_temporal_reprojection_amount: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_adjustment_enabled: struct{
     using _set_adjustment_enabled: ^GDW.MethodBind,
@@ -776,7 +776,7 @@ Environment_MethodBind_List :: struct {
   },
     is_adjustment_enabled: struct{
     using _is_adjustment_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_adjustment_brightness: struct{
     using _set_adjustment_brightness: ^GDW.MethodBind,
@@ -784,7 +784,7 @@ Environment_MethodBind_List :: struct {
   },
     get_adjustment_brightness: struct{
     using _get_adjustment_brightness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_adjustment_contrast: struct{
     using _set_adjustment_contrast: ^GDW.MethodBind,
@@ -792,7 +792,7 @@ Environment_MethodBind_List :: struct {
   },
     get_adjustment_contrast: struct{
     using _get_adjustment_contrast: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_adjustment_saturation: struct{
     using _set_adjustment_saturation: ^GDW.MethodBind,
@@ -800,7 +800,7 @@ Environment_MethodBind_List :: struct {
   },
     get_adjustment_saturation: struct{
     using _get_adjustment_saturation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_adjustment_color_correction: struct{
     using _set_adjustment_color_correction: ^GDW.MethodBind,
@@ -808,7 +808,7 @@ Environment_MethodBind_List :: struct {
   },
     get_adjustment_color_correction: struct{
     using _get_adjustment_color_correction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Environment, #by_ptr args: i64 = 0, r_ret: ^Texture)
+    m_call: proc(_:^GDW.MethodBind, obj: Environment, args: rawptr = nil, r_ret: ^Texture)
   },
 };
 Environment_Init_ :: proc (Environment_methods: ^Environment_MethodBind_List, loc := #caller_location) {

@@ -99,67 +99,67 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     is_emitting: struct{
     using _is_emitting: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_amount: struct{
     using _get_amount: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_lifetime: struct{
     using _get_lifetime: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_one_shot: struct{
     using _get_one_shot: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_pre_process_time: struct{
     using _get_pre_process_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_explosiveness_ratio: struct{
     using _get_explosiveness_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_randomness_ratio: struct{
     using _get_randomness_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_visibility_aabb: struct{
     using _get_visibility_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   get_use_local_coordinates: struct{
     using _get_use_local_coordinates: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_fixed_fps: struct{
     using _get_fixed_fps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_fractional_delta: struct{
     using _get_fractional_delta: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_interpolate: struct{
     using _get_interpolate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_process_material: struct{
     using _get_process_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^Material)
   },
   get_speed_scale: struct{
     using _get_speed_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_collision_base_size: struct{
     using _get_collision_base_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_interp_to_end: struct{
     using _get_interp_to_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_fixed_seed: struct{
     using _set_use_fixed_seed: ^GDW.MethodBind,
@@ -167,7 +167,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     get_use_fixed_seed: struct{
     using _get_use_fixed_seed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_seed: struct{
     using _set_seed: ^GDW.MethodBind,
@@ -175,7 +175,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     get_seed: struct{
     using _get_seed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_draw_order: struct{
     using _set_draw_order: ^GDW.MethodBind,
@@ -183,7 +183,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     get_draw_order: struct{
     using _get_draw_order: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GPUParticles3D_DrawOrder)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GPUParticles3D_DrawOrder)
   },
   set_draw_passes: struct{
     using _set_draw_passes: ^GDW.MethodBind,
@@ -195,7 +195,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     get_draw_passes: struct{
     using _get_draw_passes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_draw_pass_mesh: struct{
     using _get_draw_pass_mesh: ^GDW.MethodBind,
@@ -207,7 +207,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     get_skin: struct{
     using _get_skin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Skin)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^Skin)
   },
   restart: struct{
     using _restart: ^GDW.MethodBind,
@@ -215,7 +215,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     capture_aabb: struct{
     using _capture_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   set_sub_emitter: struct{
     using _set_sub_emitter: ^GDW.MethodBind,
@@ -223,7 +223,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     get_sub_emitter: struct{
     using _get_sub_emitter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   emit_particle: struct{
     using _emit_particle: ^GDW.MethodBind,
@@ -239,11 +239,11 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     is_trail_enabled: struct{
     using _is_trail_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_trail_lifetime: struct{
     using _get_trail_lifetime: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_transform_align: struct{
     using _set_transform_align: ^GDW.MethodBind,
@@ -251,7 +251,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     get_transform_align: struct{
     using _get_transform_align: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GPUParticles3D_TransformAlign)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GPUParticles3D_TransformAlign)
   },
   convert_from_particles: struct{
     using _convert_from_particles: ^GDW.MethodBind,
@@ -263,7 +263,7 @@ GPUParticles3D_MethodBind_List :: struct {
   },
     get_amount_ratio: struct{
     using _get_amount_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   request_particles_process: struct{
     using _request_particles_process: ^GDW.MethodBind,

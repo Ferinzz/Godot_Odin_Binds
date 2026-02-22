@@ -41,7 +41,7 @@ RichTextLabel_ImageUpdateMask :: enum i64 {
 RichTextLabel_MethodBind_List :: struct {
   get_parsed_text: struct{
     using _get_parsed_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   add_text: struct{
     using _add_text: ^GDW.MethodBind,
@@ -65,7 +65,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     newline: struct{
     using _newline: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     remove_paragraph: struct{
     using _remove_paragraph: ^GDW.MethodBind,
@@ -85,23 +85,23 @@ RichTextLabel_MethodBind_List :: struct {
   },
     push_normal: struct{
     using _push_normal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     push_bold: struct{
     using _push_bold: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     push_bold_italics: struct{
     using _push_bold_italics: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     push_italics: struct{
     using _push_italics: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     push_mono: struct{
     using _push_mono: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     push_color: struct{
     using _push_color: ^GDW.MethodBind,
@@ -181,7 +181,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     push_cell: struct{
     using _push_cell: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     push_fgcolor: struct{
     using _push_fgcolor: ^GDW.MethodBind,
@@ -197,23 +197,23 @@ RichTextLabel_MethodBind_List :: struct {
   },
     push_context: struct{
     using _push_context: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     pop_context: struct{
     using _pop_context: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     pop: struct{
     using _pop: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     pop_all: struct{
     using _pop_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_structured_text_bidi_override: struct{
     using _set_structured_text_bidi_override: ^GDW.MethodBind,
@@ -221,7 +221,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override: struct{
     using _get_structured_text_bidi_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^TextServer_StructuredTextParser)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^TextServer_StructuredTextParser)
   },
   set_structured_text_bidi_override_options: struct{
     using _set_structured_text_bidi_override_options: ^GDW.MethodBind,
@@ -229,7 +229,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_structured_text_bidi_override_options: struct{
     using _get_structured_text_bidi_override_options: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_text_direction: struct{
     using _set_text_direction: ^GDW.MethodBind,
@@ -237,7 +237,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^Control_TextDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^Control_TextDirection)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -245,7 +245,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_horizontal_alignment: struct{
     using _set_horizontal_alignment: ^GDW.MethodBind,
@@ -253,7 +253,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_horizontal_alignment: struct{
     using _get_horizontal_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   set_vertical_alignment: struct{
     using _set_vertical_alignment: ^GDW.MethodBind,
@@ -261,7 +261,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_vertical_alignment: struct{
     using _get_vertical_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.VerticalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.VerticalAlignment)
   },
   set_justification_flags: struct{
     using _set_justification_flags: ^GDW.MethodBind,
@@ -269,7 +269,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_justification_flags: struct{
     using _get_justification_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^TextServer_JustificationFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^TextServer_JustificationFlag)
   },
   set_tab_stops: struct{
     using _set_tab_stops: ^GDW.MethodBind,
@@ -277,7 +277,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_tab_stops: struct{
     using _get_tab_stops: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   set_autowrap_mode: struct{
     using _set_autowrap_mode: ^GDW.MethodBind,
@@ -285,7 +285,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_autowrap_mode: struct{
     using _get_autowrap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^TextServer_AutowrapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^TextServer_AutowrapMode)
   },
   set_autowrap_trim_flags: struct{
     using _set_autowrap_trim_flags: ^GDW.MethodBind,
@@ -293,7 +293,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_autowrap_trim_flags: struct{
     using _get_autowrap_trim_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^TextServer_LineBreakFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^TextServer_LineBreakFlag)
   },
   set_meta_underline: struct{
     using _set_meta_underline: ^GDW.MethodBind,
@@ -301,7 +301,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_meta_underlined: struct{
     using _is_meta_underlined: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hint_underline: struct{
     using _set_hint_underline: ^GDW.MethodBind,
@@ -309,7 +309,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_hint_underlined: struct{
     using _is_hint_underlined: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_scroll_active: struct{
     using _set_scroll_active: ^GDW.MethodBind,
@@ -317,7 +317,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_scroll_active: struct{
     using _is_scroll_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_scroll_follow_visible_characters: struct{
     using _set_scroll_follow_visible_characters: ^GDW.MethodBind,
@@ -325,7 +325,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_scroll_following_visible_characters: struct{
     using _is_scroll_following_visible_characters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_scroll_follow: struct{
     using _set_scroll_follow: ^GDW.MethodBind,
@@ -333,11 +333,11 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_scroll_following: struct{
     using _is_scroll_following: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_v_scroll_bar: struct{
     using _get_v_scroll_bar: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^VScrollBar)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^VScrollBar)
   },
   scroll_to_line: struct{
     using _scroll_to_line: ^GDW.MethodBind,
@@ -349,7 +349,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     scroll_to_selection: struct{
     using _scroll_to_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_tab_size: struct{
     using _set_tab_size: ^GDW.MethodBind,
@@ -357,7 +357,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_tab_size: struct{
     using _get_tab_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_fit_content: struct{
     using _set_fit_content: ^GDW.MethodBind,
@@ -365,7 +365,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_fit_content_enabled: struct{
     using _is_fit_content_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_selection_enabled: struct{
     using _set_selection_enabled: ^GDW.MethodBind,
@@ -373,7 +373,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_selection_enabled: struct{
     using _is_selection_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_context_menu_enabled: struct{
     using _set_context_menu_enabled: ^GDW.MethodBind,
@@ -381,7 +381,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_context_menu_enabled: struct{
     using _is_context_menu_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shortcut_keys_enabled: struct{
     using _set_shortcut_keys_enabled: ^GDW.MethodBind,
@@ -389,7 +389,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_shortcut_keys_enabled: struct{
     using _is_shortcut_keys_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_deselect_on_focus_loss_enabled: struct{
     using _set_deselect_on_focus_loss_enabled: ^GDW.MethodBind,
@@ -397,7 +397,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_deselect_on_focus_loss_enabled: struct{
     using _is_deselect_on_focus_loss_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drag_and_drop_selection_enabled: struct{
     using _set_drag_and_drop_selection_enabled: ^GDW.MethodBind,
@@ -405,31 +405,31 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_drag_and_drop_selection_enabled: struct{
     using _is_drag_and_drop_selection_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_selection_from: struct{
     using _get_selection_from: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_selection_to: struct{
     using _get_selection_to: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_selection_line_offset: struct{
     using _get_selection_line_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.float)
   },
   select_all: struct{
     using _select_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_selected_text: struct{
     using _get_selected_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   deselect: struct{
     using _deselect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     parse_bbcode: struct{
     using _parse_bbcode: ^GDW.MethodBind,
@@ -441,15 +441,15 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_ready: struct{
     using _is_ready: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_finished: struct{
     using _is_finished: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_threaded: struct{
     using _set_threaded: ^GDW.MethodBind,
@@ -457,7 +457,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_threaded: struct{
     using _is_threaded: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_progress_bar_delay: struct{
     using _set_progress_bar_delay: ^GDW.MethodBind,
@@ -465,7 +465,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_progress_bar_delay: struct{
     using _get_progress_bar_delay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_visible_characters: struct{
     using _set_visible_characters: ^GDW.MethodBind,
@@ -473,11 +473,11 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_visible_characters: struct{
     using _get_visible_characters: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_visible_characters_behavior: struct{
     using _get_visible_characters_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^TextServer_VisibleCharactersBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^TextServer_VisibleCharactersBehavior)
   },
   set_visible_characters_behavior: struct{
     using _set_visible_characters_behavior: ^GDW.MethodBind,
@@ -489,7 +489,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_visible_ratio: struct{
     using _get_visible_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_character_line: struct{
     using _get_character_line: ^GDW.MethodBind,
@@ -501,7 +501,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
   get_total_character_count: struct{
     using _get_total_character_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_use_bbcode: struct{
     using _set_use_bbcode: ^GDW.MethodBind,
@@ -509,11 +509,11 @@ RichTextLabel_MethodBind_List :: struct {
   },
     is_using_bbcode: struct{
     using _is_using_bbcode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_line_count: struct{
     using _get_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_line_range: struct{
     using _get_line_range: ^GDW.MethodBind,
@@ -521,23 +521,23 @@ RichTextLabel_MethodBind_List :: struct {
   },
   get_visible_line_count: struct{
     using _get_visible_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_paragraph_count: struct{
     using _get_paragraph_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_visible_paragraph_count: struct{
     using _get_visible_paragraph_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_content_height: struct{
     using _get_content_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_content_width: struct{
     using _get_content_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_line_height: struct{
     using _get_line_height: ^GDW.MethodBind,
@@ -549,7 +549,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
   get_visible_content_rect: struct{
     using _get_visible_content_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2i)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Rect2i)
   },
   get_line_offset: struct{
     using _get_line_offset: ^GDW.MethodBind,
@@ -569,7 +569,7 @@ RichTextLabel_MethodBind_List :: struct {
   },
     get_effects: struct{
     using _get_effects: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   install_effect: struct{
     using _install_effect: ^GDW.MethodBind,
@@ -577,15 +577,15 @@ RichTextLabel_MethodBind_List :: struct {
   },
     reload_effects: struct{
     using _reload_effects: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_menu: struct{
     using _get_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^PopupMenu)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^PopupMenu)
   },
   is_menu_visible: struct{
     using _is_menu_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RichTextLabel, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   menu_option: struct{
     using _menu_option: ^GDW.MethodBind,

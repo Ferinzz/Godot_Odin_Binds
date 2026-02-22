@@ -16,19 +16,19 @@ OpenXRAPIExtension_OpenXRAlphaBlendModeSupport :: enum i64 {
 OpenXRAPIExtension_MethodBind_List :: struct {
   get_openxr_version: struct{
     using _get_openxr_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_instance: struct{
     using _get_instance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_system_id: struct{
     using _get_system_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_session: struct{
     using _get_session: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   transform_from_pose: struct{
     using _transform_from_pose: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ OpenXRAPIExtension_MethodBind_List :: struct {
   },
     end_debug_label_region: struct{
     using _end_debug_label_region: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: rawptr = nil)
   },
     insert_debug_label: struct{
     using _insert_debug_label: ^GDW.MethodBind,
@@ -72,11 +72,11 @@ OpenXRAPIExtension_MethodBind_List :: struct {
   },
     is_initialized: struct{
     using _is_initialized: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_running: struct{
     using _is_running: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_custom_play_space: struct{
     using _set_custom_play_space: ^GDW.MethodBind,
@@ -84,19 +84,19 @@ OpenXRAPIExtension_MethodBind_List :: struct {
   },
     get_play_space: struct{
     using _get_play_space: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_predicted_display_time: struct{
     using _get_predicted_display_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_next_frame_time: struct{
     using _get_next_frame_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   can_render: struct{
     using _can_render: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   find_action: struct{
     using _find_action: ^GDW.MethodBind,
@@ -136,11 +136,11 @@ OpenXRAPIExtension_MethodBind_List :: struct {
   },
     get_render_state_z_near: struct{
     using _get_render_state_z_near: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_render_state_z_far: struct{
     using _get_render_state_z_far: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_velocity_texture: struct{
     using _set_velocity_texture: ^GDW.MethodBind,
@@ -156,7 +156,7 @@ OpenXRAPIExtension_MethodBind_List :: struct {
   },
     get_supported_swapchain_formats: struct{
     using _get_supported_swapchain_formats: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
   openxr_swapchain_create: struct{
     using _openxr_swapchain_create: ^GDW.MethodBind,
@@ -184,7 +184,7 @@ OpenXRAPIExtension_MethodBind_List :: struct {
   },
     get_projection_layer: struct{
     using _get_projection_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_render_region: struct{
     using _set_render_region: ^GDW.MethodBind,
@@ -196,11 +196,11 @@ OpenXRAPIExtension_MethodBind_List :: struct {
   },
     is_environment_blend_mode_alpha_supported: struct{
     using _is_environment_blend_mode_alpha_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: ^OpenXRAPIExtension_OpenXRAlphaBlendModeSupport)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: ^OpenXRAPIExtension_OpenXRAlphaBlendModeSupport)
   },
   update_main_swapchain_size: struct{
     using _update_main_swapchain_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRAPIExtension, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 OpenXRAPIExtension_Init_ :: proc (OpenXRAPIExtension_methods: ^OpenXRAPIExtension_MethodBind_List, loc := #caller_location) {

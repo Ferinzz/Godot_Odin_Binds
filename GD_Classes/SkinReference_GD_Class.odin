@@ -10,11 +10,11 @@ SkinReference :: ^GDW.Object
 SkinReference_MethodBind_List :: struct {
   get_skeleton: struct{
     using _get_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkinReference, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: SkinReference, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_skin: struct{
     using _get_skin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkinReference, #by_ptr args: i64 = 0, r_ret: ^Skin)
+    m_call: proc(_:^GDW.MethodBind, obj: SkinReference, args: rawptr = nil, r_ret: ^Skin)
   },
 };
 SkinReference_Init_ :: proc (SkinReference_methods: ^SkinReference_MethodBind_List, loc := #caller_location) {

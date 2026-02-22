@@ -10,7 +10,7 @@ TileSetSource :: ^GDW.Object
 TileSetSource_MethodBind_List :: struct {
   get_tiles_count: struct{
     using _get_tiles_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileSetSource, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TileSetSource, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_tile_id: struct{
     using _get_tile_id: ^GDW.MethodBind,

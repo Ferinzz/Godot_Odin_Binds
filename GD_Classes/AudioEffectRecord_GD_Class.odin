@@ -14,7 +14,7 @@ AudioEffectRecord_MethodBind_List :: struct {
   },
     is_recording_active: struct{
     using _is_recording_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectRecord, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectRecord, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_format: struct{
     using _set_format: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ AudioEffectRecord_MethodBind_List :: struct {
   },
     get_format: struct{
     using _get_format: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectRecord, #by_ptr args: i64 = 0, r_ret: ^AudioStreamWAV_Format)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectRecord, args: rawptr = nil, r_ret: ^AudioStreamWAV_Format)
   },
   get_recording: struct{
     using _get_recording: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectRecord, #by_ptr args: i64 = 0, r_ret: ^AudioStreamWAV)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectRecord, args: rawptr = nil, r_ret: ^AudioStreamWAV)
   },
 };
 AudioEffectRecord_Init_ :: proc (AudioEffectRecord_methods: ^AudioEffectRecord_MethodBind_List, loc := #caller_location) {

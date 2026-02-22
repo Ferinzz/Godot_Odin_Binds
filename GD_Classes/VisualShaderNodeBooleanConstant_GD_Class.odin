@@ -14,7 +14,7 @@ VisualShaderNodeBooleanConstant_MethodBind_List :: struct {
   },
     get_constant: struct{
     using _get_constant: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeBooleanConstant, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeBooleanConstant, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 VisualShaderNodeBooleanConstant_Init_ :: proc (VisualShaderNodeBooleanConstant_methods: ^VisualShaderNodeBooleanConstant_MethodBind_List, loc := #caller_location) {

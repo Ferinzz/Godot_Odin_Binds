@@ -51,7 +51,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
     get_concatenated_bone_names: struct{
     using _get_concatenated_bone_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   get_bone_parent: struct{
     using _get_bone_parent: ^GDW.MethodBind,
@@ -63,11 +63,11 @@ Skeleton3D_MethodBind_List :: struct {
   },
     get_bone_count: struct{
     using _get_bone_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_version: struct{
     using _get_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   unparent_bone_and_rest: struct{
     using _unparent_bone_and_rest: ^GDW.MethodBind,
@@ -79,7 +79,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
   get_parentless_bones: struct{
     using _get_parentless_bones: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   get_bone_rest: struct{
     using _get_bone_rest: ^GDW.MethodBind,
@@ -95,7 +95,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
   create_skin_from_rest_transforms: struct{
     using _create_skin_from_rest_transforms: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^Skin)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^Skin)
   },
   register_skin: struct{
     using _register_skin: ^GDW.MethodBind,
@@ -103,11 +103,11 @@ Skeleton3D_MethodBind_List :: struct {
   },
   localize_rests: struct{
     using _localize_rests: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear_bones: struct{
     using _clear_bones: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_bone_pose: struct{
     using _get_bone_pose: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
     reset_bone_poses: struct{
     using _reset_bone_poses: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     is_bone_enabled: struct{
     using _is_bone_enabled: ^GDW.MethodBind,
@@ -167,7 +167,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
     force_update_all_bone_transforms: struct{
     using _force_update_all_bone_transforms: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     force_update_bone_child_transform: struct{
     using _force_update_bone_child_transform: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
     get_motion_scale: struct{
     using _get_motion_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_show_rest_only: struct{
     using _set_show_rest_only: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
     is_show_rest_only: struct{
     using _is_show_rest_only: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_modifier_callback_mode_process: struct{
     using _set_modifier_callback_mode_process: ^GDW.MethodBind,
@@ -195,7 +195,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
     get_modifier_callback_mode_process: struct{
     using _get_modifier_callback_mode_process: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^Skeleton3D_ModifierCallbackModeProcess)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^Skeleton3D_ModifierCallbackModeProcess)
   },
   advance: struct{
     using _advance: ^GDW.MethodBind,
@@ -203,7 +203,7 @@ Skeleton3D_MethodBind_List :: struct {
   },
     clear_bones_global_pose_override: struct{
     using _clear_bones_global_pose_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_bone_global_pose_override: struct{
     using _set_bone_global_pose_override: ^GDW.MethodBind,
@@ -223,11 +223,11 @@ Skeleton3D_MethodBind_List :: struct {
   },
     get_animate_physical_bones: struct{
     using _get_animate_physical_bones: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   physical_bones_stop_simulation: struct{
     using _physical_bones_stop_simulation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     physical_bones_start_simulation: struct{
     using _physical_bones_start_simulation: ^GDW.MethodBind,

@@ -17,7 +17,7 @@ OpenXRRenderModelManager_RenderModelTracker :: enum i64 {
 OpenXRRenderModelManager_MethodBind_List :: struct {
   get_tracker: struct{
     using _get_tracker: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModelManager, #by_ptr args: i64 = 0, r_ret: ^OpenXRRenderModelManager_RenderModelTracker)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModelManager, args: rawptr = nil, r_ret: ^OpenXRRenderModelManager_RenderModelTracker)
   },
   set_tracker: struct{
     using _set_tracker: ^GDW.MethodBind,
@@ -25,7 +25,7 @@ OpenXRRenderModelManager_MethodBind_List :: struct {
   },
     get_make_local_to_pose: struct{
     using _get_make_local_to_pose: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModelManager, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModelManager, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_make_local_to_pose: struct{
     using _set_make_local_to_pose: ^GDW.MethodBind,

@@ -14,7 +14,7 @@ OpenXRHapticVibration_MethodBind_List :: struct {
   },
     get_duration: struct{
     using _get_duration: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHapticVibration, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHapticVibration, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_frequency: struct{
     using _set_frequency: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRHapticVibration_MethodBind_List :: struct {
   },
     get_frequency: struct{
     using _get_frequency: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHapticVibration, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHapticVibration, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_amplitude: struct{
     using _set_amplitude: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OpenXRHapticVibration_MethodBind_List :: struct {
   },
     get_amplitude: struct{
     using _get_amplitude: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHapticVibration, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRHapticVibration, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 OpenXRHapticVibration_Init_ :: proc (OpenXRHapticVibration_methods: ^OpenXRHapticVibration_MethodBind_List, loc := #caller_location) {

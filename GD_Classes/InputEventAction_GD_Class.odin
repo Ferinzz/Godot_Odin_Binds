@@ -14,7 +14,7 @@ InputEventAction_MethodBind_List :: struct {
   },
     get_action: struct{
     using _get_action: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventAction, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventAction, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_pressed: struct{
     using _set_pressed: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ InputEventAction_MethodBind_List :: struct {
   },
     get_strength: struct{
     using _get_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventAction, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventAction, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_event_index: struct{
     using _set_event_index: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ InputEventAction_MethodBind_List :: struct {
   },
     get_event_index: struct{
     using _get_event_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventAction, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventAction, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 InputEventAction_Init_ :: proc (InputEventAction_methods: ^InputEventAction_MethodBind_List, loc := #caller_location) {

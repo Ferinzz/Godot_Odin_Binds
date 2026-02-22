@@ -17,7 +17,7 @@ InputEvent_MethodBind_List :: struct {
   },
     get_device: struct{
     using _get_device: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_action: struct{
     using _is_action: ^GDW.MethodBind,
@@ -37,23 +37,23 @@ InputEvent_MethodBind_List :: struct {
   },
   is_canceled: struct{
     using _is_canceled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_pressed: struct{
     using _is_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_released: struct{
     using _is_released: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_echo: struct{
     using _is_echo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   as_text: struct{
     using _as_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_match: struct{
     using _is_match: ^GDW.MethodBind,
@@ -61,7 +61,7 @@ InputEvent_MethodBind_List :: struct {
   },
   is_action_type: struct{
     using _is_action_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEvent, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   accumulate: struct{
     using _accumulate: ^GDW.MethodBind,

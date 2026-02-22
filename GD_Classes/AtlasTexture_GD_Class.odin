@@ -14,7 +14,7 @@ AtlasTexture_MethodBind_List :: struct {
   },
     get_atlas: struct{
     using _get_atlas: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AtlasTexture, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: AtlasTexture, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_region: struct{
     using _set_region: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AtlasTexture_MethodBind_List :: struct {
   },
     get_region: struct{
     using _get_region: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AtlasTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: AtlasTexture, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_margin: struct{
     using _set_margin: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AtlasTexture_MethodBind_List :: struct {
   },
     get_margin: struct{
     using _get_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AtlasTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: AtlasTexture, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_filter_clip: struct{
     using _set_filter_clip: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AtlasTexture_MethodBind_List :: struct {
   },
     has_filter_clip: struct{
     using _has_filter_clip: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AtlasTexture, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AtlasTexture, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AtlasTexture_Init_ :: proc (AtlasTexture_methods: ^AtlasTexture_MethodBind_List, loc := #caller_location) {

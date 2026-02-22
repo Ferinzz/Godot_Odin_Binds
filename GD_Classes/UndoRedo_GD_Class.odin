@@ -24,7 +24,7 @@ UndoRedo_MethodBind_List :: struct {
   },
     is_committing_action: struct{
     using _is_committing_action: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_do_method: struct{
     using _add_do_method: ^GDW.MethodBind,
@@ -52,19 +52,19 @@ UndoRedo_MethodBind_List :: struct {
   },
     start_force_keep_in_merge_ends: struct{
     using _start_force_keep_in_merge_ends: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: rawptr = nil)
   },
     end_force_keep_in_merge_ends: struct{
     using _end_force_keep_in_merge_ends: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_history_count: struct{
     using _get_history_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_current_action: struct{
     using _get_current_action: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_action_name: struct{
     using _get_action_name: ^GDW.MethodBind,
@@ -76,19 +76,19 @@ UndoRedo_MethodBind_List :: struct {
   },
     get_current_action_name: struct{
     using _get_current_action_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   has_undo: struct{
     using _has_undo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   has_redo: struct{
     using _has_redo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_version: struct{
     using _get_version: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_steps: struct{
     using _set_max_steps: ^GDW.MethodBind,
@@ -96,15 +96,15 @@ UndoRedo_MethodBind_List :: struct {
   },
     get_max_steps: struct{
     using _get_max_steps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   redo: struct{
     using _redo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   undo: struct{
     using _undo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 UndoRedo_Init_ :: proc (UndoRedo_methods: ^UndoRedo_MethodBind_List, loc := #caller_location) {

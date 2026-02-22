@@ -14,7 +14,7 @@ AudioEffectAmplify_MethodBind_List :: struct {
   },
     get_volume_db: struct{
     using _get_volume_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectAmplify, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectAmplify, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_volume_linear: struct{
     using _set_volume_linear: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AudioEffectAmplify_MethodBind_List :: struct {
   },
     get_volume_linear: struct{
     using _get_volume_linear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectAmplify, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectAmplify, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectAmplify_Init_ :: proc (AudioEffectAmplify_methods: ^AudioEffectAmplify_MethodBind_List, loc := #caller_location) {

@@ -29,11 +29,11 @@ CameraFeed_FeedPosition :: enum i64 {
 CameraFeed_MethodBind_List :: struct {
   get_id: struct{
     using _get_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_active: struct{
     using _is_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_active: struct{
     using _set_active: ^GDW.MethodBind,
@@ -41,7 +41,7 @@ CameraFeed_MethodBind_List :: struct {
   },
     get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_name: struct{
     using _set_name: ^GDW.MethodBind,
@@ -49,7 +49,7 @@ CameraFeed_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, #by_ptr args: i64 = 0, r_ret: ^CameraFeed_FeedPosition)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, args: rawptr = nil, r_ret: ^CameraFeed_FeedPosition)
   },
   set_position: struct{
     using _set_position: ^GDW.MethodBind,
@@ -57,7 +57,7 @@ CameraFeed_MethodBind_List :: struct {
   },
     get_transform: struct{
     using _get_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   set_transform: struct{
     using _set_transform: ^GDW.MethodBind,
@@ -85,11 +85,11 @@ CameraFeed_MethodBind_List :: struct {
   },
   get_datatype: struct{
     using _get_datatype: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, #by_ptr args: i64 = 0, r_ret: ^CameraFeed_FeedDataType)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, args: rawptr = nil, r_ret: ^CameraFeed_FeedDataType)
   },
   get_formats: struct{
     using _get_formats: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraFeed, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_format: struct{
     using _set_format: ^GDW.MethodBind,

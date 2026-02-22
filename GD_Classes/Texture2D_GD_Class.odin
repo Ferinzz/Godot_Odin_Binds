@@ -20,19 +20,19 @@ Texture2D_Virtual_Info :: struct {
 Texture2D_MethodBind_List :: struct {
   get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   has_alpha: struct{
     using _has_alpha: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   draw: struct{
     using _draw: ^GDW.MethodBind,
@@ -48,11 +48,11 @@ Texture2D_MethodBind_List :: struct {
   },
     get_image: struct{
     using _get_image: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, #by_ptr args: i64 = 0, r_ret: ^Image)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, args: rawptr = nil, r_ret: ^Image)
   },
   create_placeholder: struct{
     using _create_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, #by_ptr args: i64 = 0, r_ret: ^Resource)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture2D, args: rawptr = nil, r_ret: ^Resource)
   },
 };
 Texture2D_Init_ :: proc (Texture2D_methods: ^Texture2D_MethodBind_List, loc := #caller_location) {

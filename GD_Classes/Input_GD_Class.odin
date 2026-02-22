@@ -39,7 +39,7 @@ Input_CursorShape :: enum i64 {
 Input_MethodBind_List :: struct {
   is_anything_pressed: struct{
     using _is_anything_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_key_pressed: struct{
     using _is_key_pressed: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ Input_MethodBind_List :: struct {
   },
   get_connected_joypads: struct{
     using _get_connected_joypads: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_joy_vibration_strength: struct{
     using _get_joy_vibration_strength: ^GDW.MethodBind,
@@ -155,19 +155,19 @@ Input_MethodBind_List :: struct {
   },
     get_gravity: struct{
     using _get_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_accelerometer: struct{
     using _get_accelerometer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_magnetometer: struct{
     using _get_magnetometer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_gyroscope: struct{
     using _get_gyroscope: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_gravity: struct{
     using _set_gravity: ^GDW.MethodBind,
@@ -195,15 +195,15 @@ Input_MethodBind_List :: struct {
   },
   get_last_mouse_velocity: struct{
     using _get_last_mouse_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_last_mouse_screen_velocity: struct{
     using _get_last_mouse_screen_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_mouse_button_mask: struct{
     using _get_mouse_button_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.MouseButtonMask)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.MouseButtonMask)
   },
   set_mouse_mode: struct{
     using _set_mouse_mode: ^GDW.MethodBind,
@@ -211,7 +211,7 @@ Input_MethodBind_List :: struct {
   },
     get_mouse_mode: struct{
     using _get_mouse_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^Input_MouseMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^Input_MouseMode)
   },
   warp_mouse: struct{
     using _warp_mouse: ^GDW.MethodBind,
@@ -231,7 +231,7 @@ Input_MethodBind_List :: struct {
   },
     get_current_cursor_shape: struct{
     using _get_current_cursor_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^Input_CursorShape)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^Input_CursorShape)
   },
   set_custom_mouse_cursor: struct{
     using _set_custom_mouse_cursor: ^GDW.MethodBind,
@@ -247,11 +247,11 @@ Input_MethodBind_List :: struct {
   },
     is_using_accumulated_input: struct{
     using _is_using_accumulated_input: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   flush_buffered_events: struct{
     using _flush_buffered_events: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_emulate_mouse_from_touch: struct{
     using _set_emulate_mouse_from_touch: ^GDW.MethodBind,
@@ -259,7 +259,7 @@ Input_MethodBind_List :: struct {
   },
     is_emulating_mouse_from_touch: struct{
     using _is_emulating_mouse_from_touch: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_emulate_touch_from_mouse: struct{
     using _set_emulate_touch_from_mouse: ^GDW.MethodBind,
@@ -267,7 +267,7 @@ Input_MethodBind_List :: struct {
   },
     is_emulating_touch_from_mouse: struct{
     using _is_emulating_touch_from_mouse: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Input, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Input, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Input_Init_ :: proc (Input_methods: ^Input_MethodBind_List, loc := #caller_location) {

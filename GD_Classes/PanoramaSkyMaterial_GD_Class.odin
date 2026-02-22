@@ -14,7 +14,7 @@ PanoramaSkyMaterial_MethodBind_List :: struct {
   },
     get_panorama: struct{
     using _get_panorama: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PanoramaSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: PanoramaSkyMaterial, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_filtering_enabled: struct{
     using _set_filtering_enabled: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ PanoramaSkyMaterial_MethodBind_List :: struct {
   },
     is_filtering_enabled: struct{
     using _is_filtering_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PanoramaSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PanoramaSkyMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_energy_multiplier: struct{
     using _set_energy_multiplier: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PanoramaSkyMaterial_MethodBind_List :: struct {
   },
     get_energy_multiplier: struct{
     using _get_energy_multiplier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PanoramaSkyMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PanoramaSkyMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 PanoramaSkyMaterial_Init_ :: proc (PanoramaSkyMaterial_methods: ^PanoramaSkyMaterial_MethodBind_List, loc := #caller_location) {

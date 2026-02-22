@@ -14,7 +14,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_dry: struct{
     using _get_dry: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tap1_active: struct{
     using _set_tap1_active: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     is_tap1_active: struct{
     using _is_tap1_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tap1_delay_ms: struct{
     using _set_tap1_delay_ms: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_tap1_delay_ms: struct{
     using _get_tap1_delay_ms: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tap1_level_db: struct{
     using _set_tap1_level_db: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_tap1_level_db: struct{
     using _get_tap1_level_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tap1_pan: struct{
     using _set_tap1_pan: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_tap1_pan: struct{
     using _get_tap1_pan: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tap2_active: struct{
     using _set_tap2_active: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     is_tap2_active: struct{
     using _is_tap2_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tap2_delay_ms: struct{
     using _set_tap2_delay_ms: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_tap2_delay_ms: struct{
     using _get_tap2_delay_ms: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tap2_level_db: struct{
     using _set_tap2_level_db: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_tap2_level_db: struct{
     using _get_tap2_level_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_tap2_pan: struct{
     using _set_tap2_pan: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_tap2_pan: struct{
     using _get_tap2_pan: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_feedback_active: struct{
     using _set_feedback_active: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     is_feedback_active: struct{
     using _is_feedback_active: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_feedback_delay_ms: struct{
     using _set_feedback_delay_ms: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_feedback_delay_ms: struct{
     using _get_feedback_delay_ms: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_feedback_level_db: struct{
     using _set_feedback_level_db: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_feedback_level_db: struct{
     using _get_feedback_level_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_feedback_lowpass: struct{
     using _set_feedback_lowpass: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ AudioEffectDelay_MethodBind_List :: struct {
   },
     get_feedback_lowpass: struct{
     using _get_feedback_lowpass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectDelay, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectDelay_Init_ :: proc (AudioEffectDelay_methods: ^AudioEffectDelay_MethodBind_List, loc := #caller_location) {

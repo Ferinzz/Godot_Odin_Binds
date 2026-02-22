@@ -55,7 +55,7 @@ VisualShaderNodeTextureParameter_MethodBind_List :: struct {
   },
     get_texture_type: struct{
     using _get_texture_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeTextureParameter_TextureType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, args: rawptr = nil, r_ret: ^VisualShaderNodeTextureParameter_TextureType)
   },
   set_color_default: struct{
     using _set_color_default: ^GDW.MethodBind,
@@ -63,7 +63,7 @@ VisualShaderNodeTextureParameter_MethodBind_List :: struct {
   },
     get_color_default: struct{
     using _get_color_default: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeTextureParameter_ColorDefault)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, args: rawptr = nil, r_ret: ^VisualShaderNodeTextureParameter_ColorDefault)
   },
   set_texture_filter: struct{
     using _set_texture_filter: ^GDW.MethodBind,
@@ -71,7 +71,7 @@ VisualShaderNodeTextureParameter_MethodBind_List :: struct {
   },
     get_texture_filter: struct{
     using _get_texture_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeTextureParameter_TextureFilter)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, args: rawptr = nil, r_ret: ^VisualShaderNodeTextureParameter_TextureFilter)
   },
   set_texture_repeat: struct{
     using _set_texture_repeat: ^GDW.MethodBind,
@@ -79,7 +79,7 @@ VisualShaderNodeTextureParameter_MethodBind_List :: struct {
   },
     get_texture_repeat: struct{
     using _get_texture_repeat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeTextureParameter_TextureRepeat)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, args: rawptr = nil, r_ret: ^VisualShaderNodeTextureParameter_TextureRepeat)
   },
   set_texture_source: struct{
     using _set_texture_source: ^GDW.MethodBind,
@@ -87,7 +87,7 @@ VisualShaderNodeTextureParameter_MethodBind_List :: struct {
   },
     get_texture_source: struct{
     using _get_texture_source: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeTextureParameter_TextureSource)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeTextureParameter, args: rawptr = nil, r_ret: ^VisualShaderNodeTextureParameter_TextureSource)
   },
 };
 VisualShaderNodeTextureParameter_Init_ :: proc (VisualShaderNodeTextureParameter_methods: ^VisualShaderNodeTextureParameter_MethodBind_List, loc := #caller_location) {

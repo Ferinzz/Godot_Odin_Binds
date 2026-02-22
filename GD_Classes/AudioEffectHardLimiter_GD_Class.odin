@@ -14,7 +14,7 @@ AudioEffectHardLimiter_MethodBind_List :: struct {
   },
     get_ceiling_db: struct{
     using _get_ceiling_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectHardLimiter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectHardLimiter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_pre_gain_db: struct{
     using _set_pre_gain_db: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AudioEffectHardLimiter_MethodBind_List :: struct {
   },
     get_pre_gain_db: struct{
     using _get_pre_gain_db: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectHardLimiter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectHardLimiter, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_release: struct{
     using _set_release: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioEffectHardLimiter_MethodBind_List :: struct {
   },
     get_release: struct{
     using _get_release: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectHardLimiter, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectHardLimiter, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectHardLimiter_Init_ :: proc (AudioEffectHardLimiter_methods: ^AudioEffectHardLimiter_MethodBind_List, loc := #caller_location) {

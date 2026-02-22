@@ -17,7 +17,7 @@ XRPositionalTracker_TrackerHand :: enum i64 {
 XRPositionalTracker_MethodBind_List :: struct {
   get_tracker_profile: struct{
     using _get_tracker_profile: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPositionalTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPositionalTracker, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_tracker_profile: struct{
     using _set_tracker_profile: ^GDW.MethodBind,
@@ -25,7 +25,7 @@ XRPositionalTracker_MethodBind_List :: struct {
   },
     get_tracker_hand: struct{
     using _get_tracker_hand: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRPositionalTracker, #by_ptr args: i64 = 0, r_ret: ^XRPositionalTracker_TrackerHand)
+    m_call: proc(_:^GDW.MethodBind, obj: XRPositionalTracker, args: rawptr = nil, r_ret: ^XRPositionalTracker_TrackerHand)
   },
   set_tracker_hand: struct{
     using _set_tracker_hand: ^GDW.MethodBind,

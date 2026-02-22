@@ -10,11 +10,11 @@ PhysicalBoneSimulator3D :: ^GDW.Object
 PhysicalBoneSimulator3D_MethodBind_List :: struct {
   is_simulating_physics: struct{
     using _is_simulating_physics: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBoneSimulator3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBoneSimulator3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   physical_bones_stop_simulation: struct{
     using _physical_bones_stop_simulation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBoneSimulator3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBoneSimulator3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     physical_bones_start_simulation: struct{
     using _physical_bones_start_simulation: ^GDW.MethodBind,

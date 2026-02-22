@@ -28,7 +28,7 @@ VisualShaderNodeFloatOp_MethodBind_List :: struct {
   },
     get_operator: struct{
     using _get_operator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatOp, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeFloatOp_Operator)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFloatOp, args: rawptr = nil, r_ret: ^VisualShaderNodeFloatOp_Operator)
   },
 };
 VisualShaderNodeFloatOp_Init_ :: proc (VisualShaderNodeFloatOp_methods: ^VisualShaderNodeFloatOp_MethodBind_List, loc := #caller_location) {

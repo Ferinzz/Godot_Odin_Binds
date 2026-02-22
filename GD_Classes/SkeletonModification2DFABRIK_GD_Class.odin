@@ -14,7 +14,7 @@ SkeletonModification2DFABRIK_MethodBind_List :: struct {
   },
     get_target_node: struct{
     using _get_target_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DFABRIK, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DFABRIK, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_fabrik_data_chain_length: struct{
     using _set_fabrik_data_chain_length: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SkeletonModification2DFABRIK_MethodBind_List :: struct {
   },
     get_fabrik_data_chain_length: struct{
     using _get_fabrik_data_chain_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DFABRIK, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DFABRIK, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_fabrik_joint_bone2d_node: struct{
     using _set_fabrik_joint_bone2d_node: ^GDW.MethodBind,

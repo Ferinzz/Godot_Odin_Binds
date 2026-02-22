@@ -32,7 +32,7 @@ Sky_MethodBind_List :: struct {
   },
     get_radiance_size: struct{
     using _get_radiance_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sky, #by_ptr args: i64 = 0, r_ret: ^Sky_RadianceSize)
+    m_call: proc(_:^GDW.MethodBind, obj: Sky, args: rawptr = nil, r_ret: ^Sky_RadianceSize)
   },
   set_process_mode: struct{
     using _set_process_mode: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ Sky_MethodBind_List :: struct {
   },
     get_process_mode: struct{
     using _get_process_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sky, #by_ptr args: i64 = 0, r_ret: ^Sky_ProcessMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Sky, args: rawptr = nil, r_ret: ^Sky_ProcessMode)
   },
   set_material: struct{
     using _set_material: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ Sky_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sky, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: Sky, args: rawptr = nil, r_ret: ^Material)
   },
 };
 Sky_Init_ :: proc (Sky_methods: ^Sky_MethodBind_List, loc := #caller_location) {

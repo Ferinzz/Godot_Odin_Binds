@@ -14,7 +14,7 @@ CollisionPolygon3D_MethodBind_List :: struct {
   },
     get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_polygon: struct{
     using _set_polygon: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CollisionPolygon3D_MethodBind_List :: struct {
   },
     get_polygon: struct{
     using _get_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
   set_disabled: struct{
     using _set_disabled: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CollisionPolygon3D_MethodBind_List :: struct {
   },
     is_disabled: struct{
     using _is_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_debug_color: struct{
     using _set_debug_color: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CollisionPolygon3D_MethodBind_List :: struct {
   },
     get_debug_color: struct{
     using _get_debug_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_enable_debug_fill: struct{
     using _set_enable_debug_fill: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CollisionPolygon3D_MethodBind_List :: struct {
   },
     get_enable_debug_fill: struct{
     using _get_enable_debug_fill: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_margin: struct{
     using _set_margin: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ CollisionPolygon3D_MethodBind_List :: struct {
   },
     get_margin: struct{
     using _get_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionPolygon3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 CollisionPolygon3D_Init_ :: proc (CollisionPolygon3D_methods: ^CollisionPolygon3D_MethodBind_List, loc := #caller_location) {

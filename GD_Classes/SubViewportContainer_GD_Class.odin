@@ -18,7 +18,7 @@ SubViewportContainer_MethodBind_List :: struct {
   },
     is_stretch_enabled: struct{
     using _is_stretch_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SubViewportContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SubViewportContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_stretch_shrink: struct{
     using _set_stretch_shrink: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ SubViewportContainer_MethodBind_List :: struct {
   },
     get_stretch_shrink: struct{
     using _get_stretch_shrink: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SubViewportContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SubViewportContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_mouse_target: struct{
     using _set_mouse_target: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ SubViewportContainer_MethodBind_List :: struct {
   },
     is_mouse_target_enabled: struct{
     using _is_mouse_target_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SubViewportContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SubViewportContainer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 SubViewportContainer_Init_ :: proc (SubViewportContainer_methods: ^SubViewportContainer_MethodBind_List, loc := #caller_location) {

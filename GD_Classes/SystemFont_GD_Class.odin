@@ -14,7 +14,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_antialiasing: struct{
     using _get_antialiasing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^TextServer_FontAntialiasing)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^TextServer_FontAntialiasing)
   },
   set_disable_embedded_bitmaps: struct{
     using _set_disable_embedded_bitmaps: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_disable_embedded_bitmaps: struct{
     using _get_disable_embedded_bitmaps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_generate_mipmaps: struct{
     using _set_generate_mipmaps: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_generate_mipmaps: struct{
     using _get_generate_mipmaps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_system_fallback: struct{
     using _set_allow_system_fallback: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ SystemFont_MethodBind_List :: struct {
   },
     is_allow_system_fallback: struct{
     using _is_allow_system_fallback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_force_autohinter: struct{
     using _set_force_autohinter: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ SystemFont_MethodBind_List :: struct {
   },
     is_force_autohinter: struct{
     using _is_force_autohinter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_modulate_color_glyphs: struct{
     using _set_modulate_color_glyphs: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ SystemFont_MethodBind_List :: struct {
   },
     is_modulate_color_glyphs: struct{
     using _is_modulate_color_glyphs: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hinting: struct{
     using _set_hinting: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_hinting: struct{
     using _get_hinting: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^TextServer_Hinting)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^TextServer_Hinting)
   },
   set_subpixel_positioning: struct{
     using _set_subpixel_positioning: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_subpixel_positioning: struct{
     using _get_subpixel_positioning: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^TextServer_SubpixelPositioning)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^TextServer_SubpixelPositioning)
   },
   set_keep_rounding_remainders: struct{
     using _set_keep_rounding_remainders: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_keep_rounding_remainders: struct{
     using _get_keep_rounding_remainders: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_multichannel_signed_distance_field: struct{
     using _set_multichannel_signed_distance_field: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ SystemFont_MethodBind_List :: struct {
   },
     is_multichannel_signed_distance_field: struct{
     using _is_multichannel_signed_distance_field: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_msdf_pixel_range: struct{
     using _set_msdf_pixel_range: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_msdf_pixel_range: struct{
     using _get_msdf_pixel_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_msdf_size: struct{
     using _set_msdf_size: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_msdf_size: struct{
     using _get_msdf_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_oversampling: struct{
     using _set_oversampling: ^GDW.MethodBind,
@@ -110,11 +110,11 @@ SystemFont_MethodBind_List :: struct {
   },
     get_oversampling: struct{
     using _get_oversampling: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_font_names: struct{
     using _get_font_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_font_names: struct{
     using _set_font_names: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ SystemFont_MethodBind_List :: struct {
   },
     get_font_italic: struct{
     using _get_font_italic: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SystemFont, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_font_italic: struct{
     using _set_font_italic: ^GDW.MethodBind,

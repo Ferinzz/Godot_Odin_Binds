@@ -47,7 +47,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_connection_list: struct{
     using _get_connection_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_connection_count: struct{
     using _get_connection_count: ^GDW.MethodBind,
@@ -67,15 +67,15 @@ GraphEdit_MethodBind_List :: struct {
   },
   clear_connections: struct{
     using _clear_connections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     force_connection_drag_end: struct{
     using _force_connection_drag_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_scroll_offset: struct{
     using _get_scroll_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_scroll_offset: struct{
     using _set_scroll_offset: ^GDW.MethodBind,
@@ -135,7 +135,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_panning_scheme: struct{
     using _get_panning_scheme: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GraphEdit_PanningScheme)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GraphEdit_PanningScheme)
   },
   set_zoom: struct{
     using _set_zoom: ^GDW.MethodBind,
@@ -143,7 +143,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_zoom: struct{
     using _get_zoom: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_zoom_min: struct{
     using _set_zoom_min: ^GDW.MethodBind,
@@ -151,7 +151,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_zoom_min: struct{
     using _get_zoom_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_zoom_max: struct{
     using _set_zoom_max: ^GDW.MethodBind,
@@ -159,7 +159,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_zoom_max: struct{
     using _get_zoom_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_zoom_step: struct{
     using _set_zoom_step: ^GDW.MethodBind,
@@ -167,7 +167,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_zoom_step: struct{
     using _get_zoom_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_show_grid: struct{
     using _set_show_grid: ^GDW.MethodBind,
@@ -175,7 +175,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_showing_grid: struct{
     using _is_showing_grid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_grid_pattern: struct{
     using _set_grid_pattern: ^GDW.MethodBind,
@@ -183,7 +183,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_grid_pattern: struct{
     using _get_grid_pattern: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GraphEdit_GridPattern)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GraphEdit_GridPattern)
   },
   set_snapping_enabled: struct{
     using _set_snapping_enabled: ^GDW.MethodBind,
@@ -191,7 +191,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_snapping_enabled: struct{
     using _is_snapping_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_snapping_distance: struct{
     using _set_snapping_distance: ^GDW.MethodBind,
@@ -199,7 +199,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_snapping_distance: struct{
     using _get_snapping_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_connection_lines_curvature: struct{
     using _set_connection_lines_curvature: ^GDW.MethodBind,
@@ -207,7 +207,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_connection_lines_curvature: struct{
     using _get_connection_lines_curvature: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_connection_lines_thickness: struct{
     using _set_connection_lines_thickness: ^GDW.MethodBind,
@@ -215,7 +215,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_connection_lines_thickness: struct{
     using _get_connection_lines_thickness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_connection_lines_antialiased: struct{
     using _set_connection_lines_antialiased: ^GDW.MethodBind,
@@ -223,7 +223,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_connection_lines_antialiased: struct{
     using _is_connection_lines_antialiased: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_minimap_size: struct{
     using _set_minimap_size: ^GDW.MethodBind,
@@ -231,7 +231,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_minimap_size: struct{
     using _get_minimap_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_minimap_opacity: struct{
     using _set_minimap_opacity: ^GDW.MethodBind,
@@ -239,7 +239,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_minimap_opacity: struct{
     using _get_minimap_opacity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_minimap_enabled: struct{
     using _set_minimap_enabled: ^GDW.MethodBind,
@@ -247,7 +247,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_minimap_enabled: struct{
     using _is_minimap_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_show_menu: struct{
     using _set_show_menu: ^GDW.MethodBind,
@@ -255,7 +255,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_showing_menu: struct{
     using _is_showing_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_show_zoom_label: struct{
     using _set_show_zoom_label: ^GDW.MethodBind,
@@ -263,7 +263,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_showing_zoom_label: struct{
     using _is_showing_zoom_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_show_grid_buttons: struct{
     using _set_show_grid_buttons: ^GDW.MethodBind,
@@ -271,7 +271,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_showing_grid_buttons: struct{
     using _is_showing_grid_buttons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_show_zoom_buttons: struct{
     using _set_show_zoom_buttons: ^GDW.MethodBind,
@@ -279,7 +279,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_showing_zoom_buttons: struct{
     using _is_showing_zoom_buttons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_show_minimap_button: struct{
     using _set_show_minimap_button: ^GDW.MethodBind,
@@ -287,7 +287,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_showing_minimap_button: struct{
     using _is_showing_minimap_button: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_show_arrange_button: struct{
     using _set_show_arrange_button: ^GDW.MethodBind,
@@ -295,7 +295,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_showing_arrange_button: struct{
     using _is_showing_arrange_button: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_right_disconnects: struct{
     using _set_right_disconnects: ^GDW.MethodBind,
@@ -303,7 +303,7 @@ GraphEdit_MethodBind_List :: struct {
   },
     is_right_disconnects_enabled: struct{
     using _is_right_disconnects_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_type_names: struct{
     using _set_type_names: ^GDW.MethodBind,
@@ -311,15 +311,15 @@ GraphEdit_MethodBind_List :: struct {
   },
     get_type_names: struct{
     using _get_type_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_menu_hbox: struct{
     using _get_menu_hbox: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: ^HBoxContainer)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: ^HBoxContainer)
   },
   arrange_nodes: struct{
     using _arrange_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphEdit, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_selected: struct{
     using _set_selected: ^GDW.MethodBind,

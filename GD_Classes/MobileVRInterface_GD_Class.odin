@@ -14,7 +14,7 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_eye_height: struct{
     using _get_eye_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_iod: struct{
     using _set_iod: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_iod: struct{
     using _get_iod: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_display_width: struct{
     using _set_display_width: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_display_width: struct{
     using _get_display_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_display_to_lens: struct{
     using _set_display_to_lens: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_display_to_lens: struct{
     using _get_display_to_lens: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_offset_rect: struct{
     using _set_offset_rect: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_offset_rect: struct{
     using _get_offset_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_oversample: struct{
     using _set_oversample: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_oversample: struct{
     using _get_oversample: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_k1: struct{
     using _set_k1: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_k1: struct{
     using _get_k1: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_k2: struct{
     using _set_k2: ^GDW.MethodBind,
@@ -70,11 +70,11 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_k2: struct{
     using _get_k2: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_vrs_min_radius: struct{
     using _get_vrs_min_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vrs_min_radius: struct{
     using _set_vrs_min_radius: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ MobileVRInterface_MethodBind_List :: struct {
   },
     get_vrs_strength: struct{
     using _get_vrs_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: MobileVRInterface, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_vrs_strength: struct{
     using _set_vrs_strength: ^GDW.MethodBind,

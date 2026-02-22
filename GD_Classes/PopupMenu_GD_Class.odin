@@ -18,11 +18,11 @@ PopupMenu_MethodBind_List :: struct {
   },
     is_prefer_native_menu: struct{
     using _is_prefer_native_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_native_menu: struct{
     using _is_native_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_item: struct{
     using _add_item: ^GDW.MethodBind,
@@ -286,7 +286,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     get_focused_item: struct{
     using _get_focused_item: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_item_count: struct{
     using _set_item_count: ^GDW.MethodBind,
@@ -294,7 +294,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     get_item_count: struct{
     using _get_item_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   scroll_to_item: struct{
     using _scroll_to_item: ^GDW.MethodBind,
@@ -318,7 +318,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     is_hide_on_item_selection: struct{
     using _is_hide_on_item_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hide_on_checkable_item_selection: struct{
     using _set_hide_on_checkable_item_selection: ^GDW.MethodBind,
@@ -326,7 +326,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     is_hide_on_checkable_item_selection: struct{
     using _is_hide_on_checkable_item_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hide_on_state_item_selection: struct{
     using _set_hide_on_state_item_selection: ^GDW.MethodBind,
@@ -334,7 +334,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     is_hide_on_state_item_selection: struct{
     using _is_hide_on_state_item_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_submenu_popup_delay: struct{
     using _set_submenu_popup_delay: ^GDW.MethodBind,
@@ -342,7 +342,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     get_submenu_popup_delay: struct{
     using _get_submenu_popup_delay: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_allow_search: struct{
     using _set_allow_search: ^GDW.MethodBind,
@@ -350,11 +350,11 @@ PopupMenu_MethodBind_List :: struct {
   },
     get_allow_search: struct{
     using _get_allow_search: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_system_menu: struct{
     using _is_system_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_system_menu: struct{
     using _set_system_menu: ^GDW.MethodBind,
@@ -362,7 +362,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     get_system_menu: struct{
     using _get_system_menu: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^NativeMenu_SystemMenus)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^NativeMenu_SystemMenus)
   },
   set_shrink_height: struct{
     using _set_shrink_height: ^GDW.MethodBind,
@@ -370,7 +370,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     get_shrink_height: struct{
     using _get_shrink_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shrink_width: struct{
     using _set_shrink_width: ^GDW.MethodBind,
@@ -378,7 +378,7 @@ PopupMenu_MethodBind_List :: struct {
   },
     get_shrink_width: struct{
     using _get_shrink_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PopupMenu, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PopupMenu_Init_ :: proc (PopupMenu_methods: ^PopupMenu_MethodBind_List, loc := #caller_location) {

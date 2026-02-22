@@ -15,7 +15,7 @@ SoftBody3D_DisableMode :: enum i64 {
 SoftBody3D_MethodBind_List :: struct {
   get_physics_rid: struct{
     using _get_physics_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -23,7 +23,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_layer: struct{
     using _set_collision_layer: ^GDW.MethodBind,
@@ -31,7 +31,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_collision_layer: struct{
     using _get_collision_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_collision_mask_value: struct{
     using _set_collision_mask_value: ^GDW.MethodBind,
@@ -55,7 +55,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_parent_collision_ignore: struct{
     using _get_parent_collision_ignore: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_disable_mode: struct{
     using _set_disable_mode: ^GDW.MethodBind,
@@ -63,11 +63,11 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_disable_mode: struct{
     using _get_disable_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^SoftBody3D_DisableMode)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^SoftBody3D_DisableMode)
   },
   get_collision_exceptions: struct{
     using _get_collision_exceptions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_collision_exception_with: struct{
     using _add_collision_exception_with: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_simulation_precision: struct{
     using _get_simulation_precision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_total_mass: struct{
     using _set_total_mass: ^GDW.MethodBind,
@@ -91,7 +91,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_total_mass: struct{
     using _get_total_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_linear_stiffness: struct{
     using _set_linear_stiffness: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_linear_stiffness: struct{
     using _get_linear_stiffness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_shrinking_factor: struct{
     using _set_shrinking_factor: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_shrinking_factor: struct{
     using _get_shrinking_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_pressure_coefficient: struct{
     using _set_pressure_coefficient: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_pressure_coefficient: struct{
     using _get_pressure_coefficient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_damping_coefficient: struct{
     using _set_damping_coefficient: ^GDW.MethodBind,
@@ -123,7 +123,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_damping_coefficient: struct{
     using _get_damping_coefficient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_drag_coefficient: struct{
     using _set_drag_coefficient: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     get_drag_coefficient: struct{
     using _get_drag_coefficient: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_point_transform: struct{
     using _get_point_transform: ^GDW.MethodBind,
@@ -167,7 +167,7 @@ SoftBody3D_MethodBind_List :: struct {
   },
     is_ray_pickable: struct{
     using _is_ray_pickable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SoftBody3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 SoftBody3D_Init_ :: proc (SoftBody3D_methods: ^SoftBody3D_MethodBind_List, loc := #caller_location) {

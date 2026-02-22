@@ -30,7 +30,7 @@ VisualShaderNodeUIntOp_MethodBind_List :: struct {
   },
     get_operator: struct{
     using _get_operator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUIntOp, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeUIntOp_Operator)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUIntOp, args: rawptr = nil, r_ret: ^VisualShaderNodeUIntOp_Operator)
   },
 };
 VisualShaderNodeUIntOp_Init_ :: proc (VisualShaderNodeUIntOp_methods: ^VisualShaderNodeUIntOp_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ SceneTreeTimer_MethodBind_List :: struct {
   },
     get_time_left: struct{
     using _get_time_left: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTreeTimer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTreeTimer, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 SceneTreeTimer_Init_ :: proc (SceneTreeTimer_methods: ^SceneTreeTimer_MethodBind_List, loc := #caller_location) {

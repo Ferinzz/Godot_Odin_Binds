@@ -51,7 +51,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_light_data: struct{
     using _get_light_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^LightmapGIData)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^LightmapGIData)
   },
   set_bake_quality: struct{
     using _set_bake_quality: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_bake_quality: struct{
     using _get_bake_quality: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^LightmapGI_BakeQuality)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^LightmapGI_BakeQuality)
   },
   set_bounces: struct{
     using _set_bounces: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_bounces: struct{
     using _get_bounces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bounce_indirect_energy: struct{
     using _set_bounce_indirect_energy: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_bounce_indirect_energy: struct{
     using _get_bounce_indirect_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_generate_probes: struct{
     using _set_generate_probes: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_generate_probes: struct{
     using _get_generate_probes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^LightmapGI_GenerateProbes)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^LightmapGI_GenerateProbes)
   },
   set_bias: struct{
     using _set_bias: ^GDW.MethodBind,
@@ -91,7 +91,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_bias: struct{
     using _get_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_environment_mode: struct{
     using _set_environment_mode: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_environment_mode: struct{
     using _get_environment_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^LightmapGI_EnvironmentMode)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^LightmapGI_EnvironmentMode)
   },
   set_environment_custom_sky: struct{
     using _set_environment_custom_sky: ^GDW.MethodBind,
@@ -107,7 +107,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_environment_custom_sky: struct{
     using _get_environment_custom_sky: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^Sky)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^Sky)
   },
   set_environment_custom_color: struct{
     using _set_environment_custom_color: ^GDW.MethodBind,
@@ -115,7 +115,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_environment_custom_color: struct{
     using _get_environment_custom_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_environment_custom_energy: struct{
     using _set_environment_custom_energy: ^GDW.MethodBind,
@@ -123,7 +123,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_environment_custom_energy: struct{
     using _get_environment_custom_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_texel_scale: struct{
     using _set_texel_scale: ^GDW.MethodBind,
@@ -131,7 +131,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_texel_scale: struct{
     using _get_texel_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_max_texture_size: struct{
     using _set_max_texture_size: ^GDW.MethodBind,
@@ -139,7 +139,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_max_texture_size: struct{
     using _get_max_texture_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_supersampling_enabled: struct{
     using _set_supersampling_enabled: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     is_supersampling_enabled: struct{
     using _is_supersampling_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_supersampling_factor: struct{
     using _set_supersampling_factor: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_supersampling_factor: struct{
     using _get_supersampling_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_denoiser: struct{
     using _set_use_denoiser: ^GDW.MethodBind,
@@ -163,7 +163,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     is_using_denoiser: struct{
     using _is_using_denoiser: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_denoiser_strength: struct{
     using _set_denoiser_strength: ^GDW.MethodBind,
@@ -171,7 +171,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_denoiser_strength: struct{
     using _get_denoiser_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_denoiser_range: struct{
     using _set_denoiser_range: ^GDW.MethodBind,
@@ -179,7 +179,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_denoiser_range: struct{
     using _get_denoiser_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_interior: struct{
     using _set_interior: ^GDW.MethodBind,
@@ -187,7 +187,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     is_interior: struct{
     using _is_interior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_directional: struct{
     using _set_directional: ^GDW.MethodBind,
@@ -195,7 +195,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     is_directional: struct{
     using _is_directional: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shadowmask_mode: struct{
     using _set_shadowmask_mode: ^GDW.MethodBind,
@@ -203,7 +203,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_shadowmask_mode: struct{
     using _get_shadowmask_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^LightmapGIData_ShadowmaskMode)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^LightmapGIData_ShadowmaskMode)
   },
   set_use_texture_for_bounces: struct{
     using _set_use_texture_for_bounces: ^GDW.MethodBind,
@@ -211,7 +211,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     is_using_texture_for_bounces: struct{
     using _is_using_texture_for_bounces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_camera_attributes: struct{
     using _set_camera_attributes: ^GDW.MethodBind,
@@ -219,7 +219,7 @@ LightmapGI_MethodBind_List :: struct {
   },
     get_camera_attributes: struct{
     using _get_camera_attributes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, #by_ptr args: i64 = 0, r_ret: ^CameraAttributes)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGI, args: rawptr = nil, r_ret: ^CameraAttributes)
   },
 };
 LightmapGI_Init_ :: proc (LightmapGI_methods: ^LightmapGI_MethodBind_List, loc := #caller_location) {

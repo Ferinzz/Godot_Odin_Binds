@@ -24,7 +24,7 @@ HashingContext_MethodBind_List :: struct {
   },
   finish: struct{
     using _finish: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HashingContext, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: HashingContext, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
 };
 HashingContext_Init_ :: proc (HashingContext_methods: ^HashingContext_MethodBind_List, loc := #caller_location) {

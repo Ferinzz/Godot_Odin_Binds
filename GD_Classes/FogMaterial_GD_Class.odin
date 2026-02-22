@@ -14,7 +14,7 @@ FogMaterial_MethodBind_List :: struct {
   },
     get_density: struct{
     using _get_density: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_albedo: struct{
     using _set_albedo: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ FogMaterial_MethodBind_List :: struct {
   },
     get_albedo: struct{
     using _get_albedo: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_emission: struct{
     using _set_emission: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ FogMaterial_MethodBind_List :: struct {
   },
     get_emission: struct{
     using _get_emission: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_height_falloff: struct{
     using _set_height_falloff: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ FogMaterial_MethodBind_List :: struct {
   },
     get_height_falloff: struct{
     using _get_height_falloff: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_edge_fade: struct{
     using _set_edge_fade: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ FogMaterial_MethodBind_List :: struct {
   },
     get_edge_fade: struct{
     using _get_edge_fade: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_density_texture: struct{
     using _set_density_texture: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ FogMaterial_MethodBind_List :: struct {
   },
     get_density_texture: struct{
     using _get_density_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, #by_ptr args: i64 = 0, r_ret: ^Texture3D)
+    m_call: proc(_:^GDW.MethodBind, obj: FogMaterial, args: rawptr = nil, r_ret: ^Texture3D)
   },
 };
 FogMaterial_Init_ :: proc (FogMaterial_methods: ^FogMaterial_MethodBind_List, loc := #caller_location) {

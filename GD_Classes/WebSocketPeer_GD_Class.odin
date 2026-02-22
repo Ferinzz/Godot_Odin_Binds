@@ -38,11 +38,11 @@ WebSocketPeer_MethodBind_List :: struct {
   },
   was_string_packet: struct{
     using _was_string_packet: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: rawptr = nil)
   },
     close: struct{
     using _close: ^GDW.MethodBind,
@@ -50,19 +50,19 @@ WebSocketPeer_MethodBind_List :: struct {
   },
     get_connected_host: struct{
     using _get_connected_host: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_connected_port: struct{
     using _get_connected_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_selected_protocol: struct{
     using _get_selected_protocol: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_requested_url: struct{
     using _get_requested_url: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_no_delay: struct{
     using _set_no_delay: ^GDW.MethodBind,
@@ -70,23 +70,23 @@ WebSocketPeer_MethodBind_List :: struct {
   },
     get_current_outbound_buffered_amount: struct{
     using _get_current_outbound_buffered_amount: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_ready_state: struct{
     using _get_ready_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^WebSocketPeer_State)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^WebSocketPeer_State)
   },
   get_close_code: struct{
     using _get_close_code: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_close_reason: struct{
     using _get_close_reason: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_supported_protocols: struct{
     using _get_supported_protocols: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_supported_protocols: struct{
     using _set_supported_protocols: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ WebSocketPeer_MethodBind_List :: struct {
   },
     get_handshake_headers: struct{
     using _get_handshake_headers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_handshake_headers: struct{
     using _set_handshake_headers: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ WebSocketPeer_MethodBind_List :: struct {
   },
     get_inbound_buffer_size: struct{
     using _get_inbound_buffer_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_inbound_buffer_size: struct{
     using _set_inbound_buffer_size: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ WebSocketPeer_MethodBind_List :: struct {
   },
     get_outbound_buffer_size: struct{
     using _get_outbound_buffer_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_outbound_buffer_size: struct{
     using _set_outbound_buffer_size: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ WebSocketPeer_MethodBind_List :: struct {
   },
     get_max_queued_packets: struct{
     using _get_max_queued_packets: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_heartbeat_interval: struct{
     using _set_heartbeat_interval: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ WebSocketPeer_MethodBind_List :: struct {
   },
     get_heartbeat_interval: struct{
     using _get_heartbeat_interval: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: WebSocketPeer, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 WebSocketPeer_Init_ :: proc (WebSocketPeer_methods: ^WebSocketPeer_MethodBind_List, loc := #caller_location) {

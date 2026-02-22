@@ -21,11 +21,11 @@ Slider_MethodBind_List :: struct {
   },
     get_ticks: struct{
     using _get_ticks: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Slider, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Slider, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_ticks_on_borders: struct{
     using _get_ticks_on_borders: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Slider, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Slider, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_ticks_on_borders: struct{
     using _set_ticks_on_borders: ^GDW.MethodBind,
@@ -33,7 +33,7 @@ Slider_MethodBind_List :: struct {
   },
     get_ticks_position: struct{
     using _get_ticks_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Slider, #by_ptr args: i64 = 0, r_ret: ^Slider_TickPosition)
+    m_call: proc(_:^GDW.MethodBind, obj: Slider, args: rawptr = nil, r_ret: ^Slider_TickPosition)
   },
   set_ticks_position: struct{
     using _set_ticks_position: ^GDW.MethodBind,
@@ -45,7 +45,7 @@ Slider_MethodBind_List :: struct {
   },
     is_editable: struct{
     using _is_editable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Slider, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Slider, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_scrollable: struct{
     using _set_scrollable: ^GDW.MethodBind,
@@ -53,7 +53,7 @@ Slider_MethodBind_List :: struct {
   },
     is_scrollable: struct{
     using _is_scrollable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Slider, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Slider, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Slider_Init_ :: proc (Slider_methods: ^Slider_MethodBind_List, loc := #caller_location) {

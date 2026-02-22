@@ -14,7 +14,7 @@ Path3D_MethodBind_List :: struct {
   },
     get_curve: struct{
     using _get_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Path3D, #by_ptr args: i64 = 0, r_ret: ^Curve3D)
+    m_call: proc(_:^GDW.MethodBind, obj: Path3D, args: rawptr = nil, r_ret: ^Curve3D)
   },
   set_debug_custom_color: struct{
     using _set_debug_custom_color: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Path3D_MethodBind_List :: struct {
   },
     get_debug_custom_color: struct{
     using _get_debug_custom_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Path3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Path3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
 };
 Path3D_Init_ :: proc (Path3D_methods: ^Path3D_MethodBind_List, loc := #caller_location) {

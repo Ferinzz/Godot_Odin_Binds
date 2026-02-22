@@ -14,7 +14,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_target_node: struct{
     using _get_target_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_jiggle_data_chain_length: struct{
     using _set_jiggle_data_chain_length: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_jiggle_data_chain_length: struct{
     using _get_jiggle_data_chain_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_stiffness: struct{
     using _set_stiffness: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_stiffness: struct{
     using _get_stiffness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_mass: struct{
     using _set_mass: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_mass: struct{
     using _get_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_damping: struct{
     using _set_damping: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_damping: struct{
     using _get_damping: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_use_gravity: struct{
     using _set_use_gravity: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_use_gravity: struct{
     using _get_use_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_gravity: struct{
     using _set_gravity: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_gravity: struct{
     using _get_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_use_colliders: struct{
     using _set_use_colliders: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_use_colliders: struct{
     using _get_use_colliders: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ SkeletonModification2DJiggle_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DJiggle, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_jiggle_joint_bone2d_node: struct{
     using _set_jiggle_joint_bone2d_node: ^GDW.MethodBind,

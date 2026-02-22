@@ -14,7 +14,7 @@ Marker2D_MethodBind_List :: struct {
   },
     get_gizmo_extents: struct{
     using _get_gizmo_extents: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Marker2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Marker2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 Marker2D_Init_ :: proc (Marker2D_methods: ^Marker2D_MethodBind_List, loc := #caller_location) {

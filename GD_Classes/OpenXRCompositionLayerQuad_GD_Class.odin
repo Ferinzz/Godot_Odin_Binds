@@ -14,7 +14,7 @@ OpenXRCompositionLayerQuad_MethodBind_List :: struct {
   },
     get_quad_size: struct{
     using _get_quad_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerQuad, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerQuad, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 OpenXRCompositionLayerQuad_Init_ :: proc (OpenXRCompositionLayerQuad_methods: ^OpenXRCompositionLayerQuad_MethodBind_List, loc := #caller_location) {

@@ -10,7 +10,7 @@ PhysicsTestMotionParameters2D :: ^GDW.Object
 PhysicsTestMotionParameters2D_MethodBind_List :: struct {
   get_from: struct{
     using _get_from: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform2D)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, args: rawptr = nil, r_ret: ^GDW.Transform2D)
   },
   set_from: struct{
     using _set_from: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ PhysicsTestMotionParameters2D_MethodBind_List :: struct {
   },
     get_motion: struct{
     using _get_motion: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_motion: struct{
     using _set_motion: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ PhysicsTestMotionParameters2D_MethodBind_List :: struct {
   },
     get_margin: struct{
     using _get_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_margin: struct{
     using _set_margin: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ PhysicsTestMotionParameters2D_MethodBind_List :: struct {
   },
     is_collide_separation_ray_enabled: struct{
     using _is_collide_separation_ray_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_separation_ray_enabled: struct{
     using _set_collide_separation_ray_enabled: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ PhysicsTestMotionParameters2D_MethodBind_List :: struct {
   },
     get_exclude_bodies: struct{
     using _get_exclude_bodies: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_exclude_bodies: struct{
     using _set_exclude_bodies: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ PhysicsTestMotionParameters2D_MethodBind_List :: struct {
   },
     get_exclude_objects: struct{
     using _get_exclude_objects: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_exclude_objects: struct{
     using _set_exclude_objects: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ PhysicsTestMotionParameters2D_MethodBind_List :: struct {
   },
     is_recovery_as_collision_enabled: struct{
     using _is_recovery_as_collision_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsTestMotionParameters2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_recovery_as_collision_enabled: struct{
     using _set_recovery_as_collision_enabled: ^GDW.MethodBind,

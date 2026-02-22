@@ -19,7 +19,7 @@ OmniLight3D_MethodBind_List :: struct {
   },
     get_shadow_mode: struct{
     using _get_shadow_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OmniLight3D, #by_ptr args: i64 = 0, r_ret: ^OmniLight3D_ShadowMode)
+    m_call: proc(_:^GDW.MethodBind, obj: OmniLight3D, args: rawptr = nil, r_ret: ^OmniLight3D_ShadowMode)
   },
 };
 OmniLight3D_Init_ :: proc (OmniLight3D_methods: ^OmniLight3D_MethodBind_List, loc := #caller_location) {

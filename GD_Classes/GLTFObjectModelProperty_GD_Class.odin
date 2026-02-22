@@ -32,11 +32,11 @@ GLTFObjectModelProperty_MethodBind_List :: struct {
   },
     get_accessor_type: struct{
     using _get_accessor_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^GLTFAccessor_GLTFAccessorType)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^GLTFAccessor_GLTFAccessorType)
   },
   get_gltf_to_godot_expression: struct{
     using _get_gltf_to_godot_expression: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^Expression)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^Expression)
   },
   set_gltf_to_godot_expression: struct{
     using _set_gltf_to_godot_expression: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ GLTFObjectModelProperty_MethodBind_List :: struct {
   },
     get_godot_to_gltf_expression: struct{
     using _get_godot_to_gltf_expression: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^Expression)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^Expression)
   },
   set_godot_to_gltf_expression: struct{
     using _set_godot_to_gltf_expression: ^GDW.MethodBind,
@@ -52,11 +52,11 @@ GLTFObjectModelProperty_MethodBind_List :: struct {
   },
     get_node_paths: struct{
     using _get_node_paths: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   has_node_paths: struct{
     using _has_node_paths: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_node_paths: struct{
     using _set_node_paths: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ GLTFObjectModelProperty_MethodBind_List :: struct {
   },
     get_object_model_type: struct{
     using _get_object_model_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^GLTFObjectModelProperty_GLTFObjectModelType)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^GLTFObjectModelProperty_GLTFObjectModelType)
   },
   set_object_model_type: struct{
     using _set_object_model_type: ^GDW.MethodBind,
@@ -72,11 +72,11 @@ GLTFObjectModelProperty_MethodBind_List :: struct {
   },
     get_json_pointers: struct{
     using _get_json_pointers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   has_json_pointers: struct{
     using _has_json_pointers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_json_pointers: struct{
     using _set_json_pointers: ^GDW.MethodBind,
@@ -84,7 +84,7 @@ GLTFObjectModelProperty_MethodBind_List :: struct {
   },
     get_variant_type: struct{
     using _get_variant_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, #by_ptr args: i64 = 0, r_ret: ^GDE.VariantType)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFObjectModelProperty, args: rawptr = nil, r_ret: ^GDE.VariantType)
   },
   set_variant_type: struct{
     using _set_variant_type: ^GDW.MethodBind,

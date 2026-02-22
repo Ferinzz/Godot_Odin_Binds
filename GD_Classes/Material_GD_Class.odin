@@ -25,7 +25,7 @@ Material_MethodBind_List :: struct {
   },
     get_next_pass: struct{
     using _get_next_pass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Material, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: Material, args: rawptr = nil, r_ret: ^Material)
   },
   set_render_priority: struct{
     using _set_render_priority: ^GDW.MethodBind,
@@ -33,15 +33,15 @@ Material_MethodBind_List :: struct {
   },
     get_render_priority: struct{
     using _get_render_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Material, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Material, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   inspect_native_shader_code: struct{
     using _inspect_native_shader_code: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Material, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Material, args: rawptr = nil, r_ret: rawptr = nil)
   },
     create_placeholder: struct{
     using _create_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Material, #by_ptr args: i64 = 0, r_ret: ^Resource)
+    m_call: proc(_:^GDW.MethodBind, obj: Material, args: rawptr = nil, r_ret: ^Resource)
   },
 };
 Material_Init_ :: proc (Material_methods: ^Material_MethodBind_List, loc := #caller_location) {

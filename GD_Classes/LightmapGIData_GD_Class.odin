@@ -20,7 +20,7 @@ LightmapGIData_MethodBind_List :: struct {
   },
     get_lightmap_textures: struct{
     using _get_lightmap_textures: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_shadowmask_textures: struct{
     using _set_shadowmask_textures: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ LightmapGIData_MethodBind_List :: struct {
   },
     get_shadowmask_textures: struct{
     using _get_shadowmask_textures: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_uses_spherical_harmonics: struct{
     using _set_uses_spherical_harmonics: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ LightmapGIData_MethodBind_List :: struct {
   },
     is_using_spherical_harmonics: struct{
     using _is_using_spherical_harmonics: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_user: struct{
     using _add_user: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ LightmapGIData_MethodBind_List :: struct {
   },
     get_user_count: struct{
     using _get_user_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_user_path: struct{
     using _get_user_path: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ LightmapGIData_MethodBind_List :: struct {
   },
   clear_users: struct{
     using _clear_users: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_light_texture: struct{
     using _set_light_texture: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ LightmapGIData_MethodBind_List :: struct {
   },
     get_light_texture: struct{
     using _get_light_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, #by_ptr args: i64 = 0, r_ret: ^TextureLayered)
+    m_call: proc(_:^GDW.MethodBind, obj: LightmapGIData, args: rawptr = nil, r_ret: ^TextureLayered)
   },
 };
 LightmapGIData_Init_ :: proc (LightmapGIData_methods: ^LightmapGIData_MethodBind_List, loc := #caller_location) {

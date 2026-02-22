@@ -23,11 +23,11 @@ UPNPDevice_IGDStatus :: enum i64 {
 UPNPDevice_MethodBind_List :: struct {
   is_valid_gateway: struct{
     using _is_valid_gateway: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   query_external_address: struct{
     using _query_external_address: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   add_port_mapping: struct{
     using _add_port_mapping: ^GDW.MethodBind,
@@ -43,7 +43,7 @@ UPNPDevice_MethodBind_List :: struct {
   },
     get_description_url: struct{
     using _get_description_url: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_service_type: struct{
     using _set_service_type: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ UPNPDevice_MethodBind_List :: struct {
   },
     get_service_type: struct{
     using _get_service_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_igd_control_url: struct{
     using _set_igd_control_url: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ UPNPDevice_MethodBind_List :: struct {
   },
     get_igd_control_url: struct{
     using _get_igd_control_url: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_igd_service_type: struct{
     using _set_igd_service_type: ^GDW.MethodBind,
@@ -67,7 +67,7 @@ UPNPDevice_MethodBind_List :: struct {
   },
     get_igd_service_type: struct{
     using _get_igd_service_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_igd_our_addr: struct{
     using _set_igd_our_addr: ^GDW.MethodBind,
@@ -75,7 +75,7 @@ UPNPDevice_MethodBind_List :: struct {
   },
     get_igd_our_addr: struct{
     using _get_igd_our_addr: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_igd_status: struct{
     using _set_igd_status: ^GDW.MethodBind,
@@ -83,7 +83,7 @@ UPNPDevice_MethodBind_List :: struct {
   },
     get_igd_status: struct{
     using _get_igd_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, #by_ptr args: i64 = 0, r_ret: ^UPNPDevice_IGDStatus)
+    m_call: proc(_:^GDW.MethodBind, obj: UPNPDevice, args: rawptr = nil, r_ret: ^UPNPDevice_IGDStatus)
   },
 };
 UPNPDevice_Init_ :: proc (UPNPDevice_methods: ^UPNPDevice_MethodBind_List, loc := #caller_location) {

@@ -10,7 +10,7 @@ NavigationLink2D :: ^GDW.Object
 NavigationLink2D_MethodBind_List :: struct {
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_enabled: struct{
     using _set_enabled: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     is_enabled: struct{
     using _is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_navigation_map: struct{
     using _set_navigation_map: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     get_navigation_map: struct{
     using _get_navigation_map: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_bidirectional: struct{
     using _set_bidirectional: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     is_bidirectional: struct{
     using _is_bidirectional: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_navigation_layers: struct{
     using _set_navigation_layers: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     get_navigation_layers: struct{
     using _get_navigation_layers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_navigation_layer_value: struct{
     using _set_navigation_layer_value: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     get_start_position: struct{
     using _get_start_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_end_position: struct{
     using _set_end_position: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     get_end_position: struct{
     using _get_end_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_global_start_position: struct{
     using _set_global_start_position: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     get_global_start_position: struct{
     using _get_global_start_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_global_end_position: struct{
     using _set_global_end_position: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     get_global_end_position: struct{
     using _get_global_end_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_enter_cost: struct{
     using _set_enter_cost: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     get_enter_cost: struct{
     using _get_enter_cost: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_travel_cost: struct{
     using _set_travel_cost: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ NavigationLink2D_MethodBind_List :: struct {
   },
     get_travel_cost: struct{
     using _get_travel_cost: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationLink2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 NavigationLink2D_Init_ :: proc (NavigationLink2D_methods: ^NavigationLink2D_MethodBind_List, loc := #caller_location) {

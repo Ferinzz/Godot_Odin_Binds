@@ -26,7 +26,7 @@ StreamPeer_MethodBind_List :: struct {
   },
   get_available_bytes: struct{
     using _get_available_bytes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_big_endian: struct{
     using _set_big_endian: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ StreamPeer_MethodBind_List :: struct {
   },
     is_big_endian_enabled: struct{
     using _is_big_endian_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   put_8: struct{
     using _put_8: ^GDW.MethodBind,
@@ -94,47 +94,47 @@ StreamPeer_MethodBind_List :: struct {
   },
     get_8: struct{
     using _get_8: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_u8: struct{
     using _get_u8: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_16: struct{
     using _get_16: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_u16: struct{
     using _get_u16: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_32: struct{
     using _get_32: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_u32: struct{
     using _get_u32: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_64: struct{
     using _get_64: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_u64: struct{
     using _get_u64: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_half: struct{
     using _get_half: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_float: struct{
     using _get_float: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_double: struct{
     using _get_double: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeer, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_string: struct{
     using _get_string: ^GDW.MethodBind,

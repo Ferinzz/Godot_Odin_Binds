@@ -26,7 +26,7 @@ ProjectSettings_MethodBind_List :: struct {
   },
   get_global_class_list: struct{
     using _get_global_class_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProjectSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ProjectSettings, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_setting_with_override_and_custom_features: struct{
     using _get_setting_with_override_and_custom_features: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ ProjectSettings_MethodBind_List :: struct {
   },
   save: struct{
     using _save: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProjectSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: ProjectSettings, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   load_resource_pack: struct{
     using _load_resource_pack: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ ProjectSettings_MethodBind_List :: struct {
   },
   get_changed_settings: struct{
     using _get_changed_settings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ProjectSettings, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ProjectSettings, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   check_changed_settings_in_group: struct{
     using _check_changed_settings_in_group: ^GDW.MethodBind,

@@ -14,7 +14,7 @@ ParallaxLayer_MethodBind_List :: struct {
   },
     get_motion_scale: struct{
     using _get_motion_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxLayer, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_motion_offset: struct{
     using _set_motion_offset: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ ParallaxLayer_MethodBind_List :: struct {
   },
     get_motion_offset: struct{
     using _get_motion_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxLayer, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_mirroring: struct{
     using _set_mirroring: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ ParallaxLayer_MethodBind_List :: struct {
   },
     get_mirroring: struct{
     using _get_mirroring: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ParallaxLayer, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: ParallaxLayer, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 ParallaxLayer_Init_ :: proc (ParallaxLayer_methods: ^ParallaxLayer_MethodBind_List, loc := #caller_location) {

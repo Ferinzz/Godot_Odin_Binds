@@ -10,7 +10,7 @@ BoneMap :: ^GDW.Object
 BoneMap_MethodBind_List :: struct {
   get_profile: struct{
     using _get_profile: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BoneMap, #by_ptr args: i64 = 0, r_ret: ^SkeletonProfile)
+    m_call: proc(_:^GDW.MethodBind, obj: BoneMap, args: rawptr = nil, r_ret: ^SkeletonProfile)
   },
   set_profile: struct{
     using _set_profile: ^GDW.MethodBind,

@@ -14,7 +14,7 @@ RDPipelineColorBlendState_MethodBind_List :: struct {
   },
     get_enable_logic_op: struct{
     using _get_enable_logic_op: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineColorBlendState, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineColorBlendState, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_logic_op: struct{
     using _set_logic_op: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDPipelineColorBlendState_MethodBind_List :: struct {
   },
     get_logic_op: struct{
     using _get_logic_op: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineColorBlendState, #by_ptr args: i64 = 0, r_ret: ^RenderingDevice_LogicOperation)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineColorBlendState, args: rawptr = nil, r_ret: ^RenderingDevice_LogicOperation)
   },
   set_blend_constant: struct{
     using _set_blend_constant: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RDPipelineColorBlendState_MethodBind_List :: struct {
   },
     get_blend_constant: struct{
     using _get_blend_constant: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineColorBlendState, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineColorBlendState, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_attachments: struct{
     using _set_attachments: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ RDPipelineColorBlendState_MethodBind_List :: struct {
   },
     get_attachments: struct{
     using _get_attachments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineColorBlendState, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineColorBlendState, args: rawptr = nil, r_ret: ^GDW.Array)
   },
 };
 RDPipelineColorBlendState_Init_ :: proc (RDPipelineColorBlendState_methods: ^RDPipelineColorBlendState_MethodBind_List, loc := #caller_location) {

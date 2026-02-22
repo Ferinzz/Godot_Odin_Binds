@@ -14,11 +14,11 @@ TCPServer_MethodBind_List :: struct {
   },
   get_local_port: struct{
     using _get_local_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TCPServer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TCPServer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   take_connection: struct{
     using _take_connection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TCPServer, #by_ptr args: i64 = 0, r_ret: ^StreamPeerTCP)
+    m_call: proc(_:^GDW.MethodBind, obj: TCPServer, args: rawptr = nil, r_ret: ^StreamPeerTCP)
   },
 };
 TCPServer_Init_ :: proc (TCPServer_methods: ^TCPServer_MethodBind_List, loc := #caller_location) {

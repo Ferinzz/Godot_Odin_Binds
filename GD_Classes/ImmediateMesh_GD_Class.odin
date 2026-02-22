@@ -42,11 +42,11 @@ ImmediateMesh_MethodBind_List :: struct {
   },
     surface_end: struct{
     using _surface_end: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImmediateMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ImmediateMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
     clear_surfaces: struct{
     using _clear_surfaces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImmediateMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ImmediateMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 ImmediateMesh_Init_ :: proc (ImmediateMesh_methods: ^ImmediateMesh_MethodBind_List, loc := #caller_location) {

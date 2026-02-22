@@ -14,7 +14,7 @@ Shape2D_MethodBind_List :: struct {
   },
     get_custom_solver_bias: struct{
     using _get_custom_solver_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Shape2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   collide: struct{
     using _collide: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Shape2D_MethodBind_List :: struct {
   },
     get_rect: struct{
     using _get_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Shape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: Shape2D, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
 };
 Shape2D_Init_ :: proc (Shape2D_methods: ^Shape2D_MethodBind_List, loc := #caller_location) {

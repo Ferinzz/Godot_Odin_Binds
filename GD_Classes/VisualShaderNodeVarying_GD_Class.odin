@@ -14,7 +14,7 @@ VisualShaderNodeVarying_MethodBind_List :: struct {
   },
     get_varying_name: struct{
     using _get_varying_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVarying, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVarying, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_varying_type: struct{
     using _set_varying_type: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ VisualShaderNodeVarying_MethodBind_List :: struct {
   },
     get_varying_type: struct{
     using _get_varying_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVarying, #by_ptr args: i64 = 0, r_ret: ^VisualShader_VaryingType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeVarying, args: rawptr = nil, r_ret: ^VisualShader_VaryingType)
   },
 };
 VisualShaderNodeVarying_Init_ :: proc (VisualShaderNodeVarying_methods: ^VisualShaderNodeVarying_MethodBind_List, loc := #caller_location) {

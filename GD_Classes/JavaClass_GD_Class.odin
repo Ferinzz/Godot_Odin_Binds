@@ -10,15 +10,15 @@ JavaClass :: ^GDW.Object
 JavaClass_MethodBind_List :: struct {
   get_java_class_name: struct{
     using _get_java_class_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaClass, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaClass, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_java_method_list: struct{
     using _get_java_method_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaClass, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaClass, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_java_parent_class: struct{
     using _get_java_parent_class: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JavaClass, #by_ptr args: i64 = 0, r_ret: ^JavaClass)
+    m_call: proc(_:^GDW.MethodBind, obj: JavaClass, args: rawptr = nil, r_ret: ^JavaClass)
   },
   has_java_method: struct{
     using _has_java_method: ^GDW.MethodBind,

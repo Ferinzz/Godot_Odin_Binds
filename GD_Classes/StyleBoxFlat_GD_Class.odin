@@ -14,7 +14,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_bg_color: struct{
     using _get_bg_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_border_color: struct{
     using _set_border_color: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_border_color: struct{
     using _get_border_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_border_width_all: struct{
     using _set_border_width_all: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_border_width_min: struct{
     using _get_border_width_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_border_width: struct{
     using _set_border_width: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_border_blend: struct{
     using _get_border_blend: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_corner_radius_all: struct{
     using _set_corner_radius_all: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     is_draw_center_enabled: struct{
     using _is_draw_center_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_skew: struct{
     using _set_skew: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_skew: struct{
     using _get_skew: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_shadow_color: struct{
     using _set_shadow_color: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_shadow_color: struct{
     using _get_shadow_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_shadow_size: struct{
     using _set_shadow_size: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_shadow_size: struct{
     using _get_shadow_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_shadow_offset: struct{
     using _set_shadow_offset: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_shadow_offset: struct{
     using _get_shadow_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_anti_aliased: struct{
     using _set_anti_aliased: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     is_anti_aliased: struct{
     using _is_anti_aliased: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_aa_size: struct{
     using _set_aa_size: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_aa_size: struct{
     using _get_aa_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_corner_detail: struct{
     using _set_corner_detail: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ StyleBoxFlat_MethodBind_List :: struct {
   },
     get_corner_detail: struct{
     using _get_corner_detail: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StyleBoxFlat, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 StyleBoxFlat_Init_ :: proc (StyleBoxFlat_methods: ^StyleBoxFlat_MethodBind_List, loc := #caller_location) {

@@ -14,27 +14,27 @@ VoxelGIData_MethodBind_List :: struct {
   },
     get_bounds: struct{
     using _get_bounds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   get_octree_size: struct{
     using _get_octree_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_to_cell_xform: struct{
     using _get_to_cell_xform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   get_octree_cells: struct{
     using _get_octree_cells: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   get_data_cells: struct{
     using _get_data_cells: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   get_level_counts: struct{
     using _get_level_counts: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   set_dynamic_range: struct{
     using _set_dynamic_range: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ VoxelGIData_MethodBind_List :: struct {
   },
     get_dynamic_range: struct{
     using _get_dynamic_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_energy: struct{
     using _set_energy: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ VoxelGIData_MethodBind_List :: struct {
   },
     get_energy: struct{
     using _get_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bias: struct{
     using _set_bias: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ VoxelGIData_MethodBind_List :: struct {
   },
     get_bias: struct{
     using _get_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_normal_bias: struct{
     using _set_normal_bias: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ VoxelGIData_MethodBind_List :: struct {
   },
     get_normal_bias: struct{
     using _get_normal_bias: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_propagation: struct{
     using _set_propagation: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ VoxelGIData_MethodBind_List :: struct {
   },
     get_propagation: struct{
     using _get_propagation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_interior: struct{
     using _set_interior: ^GDW.MethodBind,
@@ -82,7 +82,7 @@ VoxelGIData_MethodBind_List :: struct {
   },
     is_interior: struct{
     using _is_interior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_use_two_bounces: struct{
     using _set_use_two_bounces: ^GDW.MethodBind,
@@ -90,7 +90,7 @@ VoxelGIData_MethodBind_List :: struct {
   },
     is_using_two_bounces: struct{
     using _is_using_two_bounces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VoxelGIData, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 VoxelGIData_Init_ :: proc (VoxelGIData_methods: ^VoxelGIData_MethodBind_List, loc := #caller_location) {

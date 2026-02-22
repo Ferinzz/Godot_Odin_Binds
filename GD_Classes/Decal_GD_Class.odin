@@ -22,7 +22,7 @@ Decal_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_texture: struct{
     using _set_texture: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Decal_MethodBind_List :: struct {
   },
     get_emission_energy: struct{
     using _get_emission_energy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_albedo_mix: struct{
     using _set_albedo_mix: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ Decal_MethodBind_List :: struct {
   },
     get_albedo_mix: struct{
     using _get_albedo_mix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_modulate: struct{
     using _set_modulate: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Decal_MethodBind_List :: struct {
   },
     get_modulate: struct{
     using _get_modulate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_upper_fade: struct{
     using _set_upper_fade: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ Decal_MethodBind_List :: struct {
   },
     get_upper_fade: struct{
     using _get_upper_fade: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_lower_fade: struct{
     using _set_lower_fade: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ Decal_MethodBind_List :: struct {
   },
     get_lower_fade: struct{
     using _get_lower_fade: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_normal_fade: struct{
     using _set_normal_fade: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Decal_MethodBind_List :: struct {
   },
     get_normal_fade: struct{
     using _get_normal_fade: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_enable_distance_fade: struct{
     using _set_enable_distance_fade: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ Decal_MethodBind_List :: struct {
   },
     is_distance_fade_enabled: struct{
     using _is_distance_fade_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_distance_fade_begin: struct{
     using _set_distance_fade_begin: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ Decal_MethodBind_List :: struct {
   },
     get_distance_fade_begin: struct{
     using _get_distance_fade_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_distance_fade_length: struct{
     using _set_distance_fade_length: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ Decal_MethodBind_List :: struct {
   },
     get_distance_fade_length: struct{
     using _get_distance_fade_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_cull_mask: struct{
     using _set_cull_mask: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ Decal_MethodBind_List :: struct {
   },
     get_cull_mask: struct{
     using _get_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Decal, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Decal, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 Decal_Init_ :: proc (Decal_methods: ^Decal_MethodBind_List, loc := #caller_location) {

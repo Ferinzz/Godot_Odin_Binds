@@ -23,7 +23,7 @@ Object_Constants :: enum i64 {
 Object_MethodBind_List :: struct {
   get_class: struct{
     using _get_class: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_class: struct{
     using _is_class: ^GDW.MethodBind,
@@ -47,11 +47,11 @@ Object_MethodBind_List :: struct {
   },
   get_property_list: struct{
     using _get_property_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_method_list: struct{
     using _get_method_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   property_can_revert: struct{
     using _property_can_revert: ^GDW.MethodBind,
@@ -67,11 +67,11 @@ Object_MethodBind_List :: struct {
   },
     to_string: struct{
     using _to_string: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_instance_id: struct{
     using _get_instance_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_script: struct{
     using _set_script: ^GDW.MethodBind,
@@ -79,7 +79,7 @@ Object_MethodBind_List :: struct {
   },
     get_script: struct{
     using _get_script: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
   set_meta: struct{
     using _set_meta: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ Object_MethodBind_List :: struct {
   },
   get_meta_list: struct{
     using _get_meta_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_user_signal: struct{
     using _add_user_signal: ^GDW.MethodBind,
@@ -115,15 +115,15 @@ Object_MethodBind_List :: struct {
   },
     emit_signal: struct{
     using _emit_signal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: struct{signal: ^GDW.StringName, }, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Error)
   },
   call: struct{
     using _call: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: struct{method: ^GDW.StringName, }, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Variant)
   },
   call_deferred: struct{
     using _call_deferred: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: struct{method: ^GDW.StringName, }, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: struct{ vararg: [^]^GDW.Variant, count: ^GDE.Int, call_err: ^GDE.CallError }, r_ret: ^GDW.Variant)
   },
   set_deferred: struct{
     using _set_deferred: ^GDW.MethodBind,
@@ -147,7 +147,7 @@ Object_MethodBind_List :: struct {
   },
   get_signal_list: struct{
     using _get_signal_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_signal_connection_list: struct{
     using _get_signal_connection_list: ^GDW.MethodBind,
@@ -155,7 +155,7 @@ Object_MethodBind_List :: struct {
   },
   get_incoming_connections: struct{
     using _get_incoming_connections: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   connect: struct{
     using _connect: ^GDW.MethodBind,
@@ -179,11 +179,11 @@ Object_MethodBind_List :: struct {
   },
     is_blocking_signals: struct{
     using _is_blocking_signals: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   notify_property_list_changed: struct{
     using _notify_property_list_changed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_message_translation: struct{
     using _set_message_translation: ^GDW.MethodBind,
@@ -191,7 +191,7 @@ Object_MethodBind_List :: struct {
   },
     can_translate_messages: struct{
     using _can_translate_messages: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   tr: struct{
     using _tr: ^GDW.MethodBind,
@@ -203,7 +203,7 @@ Object_MethodBind_List :: struct {
   },
   get_translation_domain: struct{
     using _get_translation_domain: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_translation_domain: struct{
     using _set_translation_domain: ^GDW.MethodBind,
@@ -211,11 +211,11 @@ Object_MethodBind_List :: struct {
   },
     is_queued_for_deletion: struct{
     using _is_queued_for_deletion: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   cancel_free: struct{
     using _cancel_free: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Object, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Object, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 Object_Init_ :: proc (Object_methods: ^Object_MethodBind_List, loc := #caller_location) {

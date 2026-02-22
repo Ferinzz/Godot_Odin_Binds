@@ -18,7 +18,7 @@ PacketPeer_MethodBind_List :: struct {
   },
   get_packet: struct{
     using _get_packet: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeer, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   put_packet: struct{
     using _put_packet: ^GDW.MethodBind,
@@ -26,15 +26,15 @@ PacketPeer_MethodBind_List :: struct {
   },
   get_packet_error: struct{
     using _get_packet_error: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeer, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   get_available_packet_count: struct{
     using _get_available_packet_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_encode_buffer_max_size: struct{
     using _get_encode_buffer_max_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PacketPeer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PacketPeer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_encode_buffer_max_size: struct{
     using _set_encode_buffer_max_size: ^GDW.MethodBind,

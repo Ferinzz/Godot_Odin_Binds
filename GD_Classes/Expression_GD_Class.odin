@@ -18,11 +18,11 @@ Expression_MethodBind_List :: struct {
   },
   has_execute_failed: struct{
     using _has_execute_failed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Expression, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Expression, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_error_text: struct{
     using _get_error_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Expression, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Expression, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 Expression_Init_ :: proc (Expression_methods: ^Expression_MethodBind_List, loc := #caller_location) {

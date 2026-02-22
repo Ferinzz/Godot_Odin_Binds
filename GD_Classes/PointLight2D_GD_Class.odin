@@ -14,7 +14,7 @@ PointLight2D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PointLight2D, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: PointLight2D, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_texture_offset: struct{
     using _set_texture_offset: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ PointLight2D_MethodBind_List :: struct {
   },
     get_texture_offset: struct{
     using _get_texture_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PointLight2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: PointLight2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_texture_scale: struct{
     using _set_texture_scale: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PointLight2D_MethodBind_List :: struct {
   },
     get_texture_scale: struct{
     using _get_texture_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PointLight2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PointLight2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 PointLight2D_Init_ :: proc (PointLight2D_methods: ^PointLight2D_MethodBind_List, loc := #caller_location) {

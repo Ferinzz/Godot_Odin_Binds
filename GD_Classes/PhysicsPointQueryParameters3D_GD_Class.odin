@@ -14,7 +14,7 @@ PhysicsPointQueryParameters3D_MethodBind_List :: struct {
   },
     get_position: struct{
     using _get_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_collision_mask: struct{
     using _set_collision_mask: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ PhysicsPointQueryParameters3D_MethodBind_List :: struct {
   },
     get_collision_mask: struct{
     using _get_collision_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_exclude: struct{
     using _set_exclude: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PhysicsPointQueryParameters3D_MethodBind_List :: struct {
   },
     get_exclude: struct{
     using _get_exclude: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_collide_with_bodies: struct{
     using _set_collide_with_bodies: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ PhysicsPointQueryParameters3D_MethodBind_List :: struct {
   },
     is_collide_with_bodies_enabled: struct{
     using _is_collide_with_bodies_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_collide_with_areas: struct{
     using _set_collide_with_areas: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ PhysicsPointQueryParameters3D_MethodBind_List :: struct {
   },
     is_collide_with_areas_enabled: struct{
     using _is_collide_with_areas_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsPointQueryParameters3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PhysicsPointQueryParameters3D_Init_ :: proc (PhysicsPointQueryParameters3D_methods: ^PhysicsPointQueryParameters3D_MethodBind_List, loc := #caller_location) {

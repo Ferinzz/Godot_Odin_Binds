@@ -102,55 +102,55 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     is_emitting: struct{
     using _is_emitting: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_amount: struct{
     using _get_amount: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_lifetime: struct{
     using _get_lifetime: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_one_shot: struct{
     using _get_one_shot: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_pre_process_time: struct{
     using _get_pre_process_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_explosiveness_ratio: struct{
     using _get_explosiveness_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_randomness_ratio: struct{
     using _get_randomness_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_visibility_aabb: struct{
     using _get_visibility_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   get_lifetime_randomness: struct{
     using _get_lifetime_randomness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_use_local_coordinates: struct{
     using _get_use_local_coordinates: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_fixed_fps: struct{
     using _get_fixed_fps: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_fractional_delta: struct{
     using _get_fractional_delta: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_speed_scale: struct{
     using _get_speed_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_draw_order: struct{
     using _set_draw_order: ^GDW.MethodBind,
@@ -158,7 +158,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_draw_order: struct{
     using _get_draw_order: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^CPUParticles3D_DrawOrder)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^CPUParticles3D_DrawOrder)
   },
   set_mesh: struct{
     using _set_mesh: ^GDW.MethodBind,
@@ -166,7 +166,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_mesh: struct{
     using _get_mesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Mesh)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^Mesh)
   },
   set_use_fixed_seed: struct{
     using _set_use_fixed_seed: ^GDW.MethodBind,
@@ -174,7 +174,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_use_fixed_seed: struct{
     using _get_use_fixed_seed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_seed: struct{
     using _set_seed: ^GDW.MethodBind,
@@ -182,7 +182,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_seed: struct{
     using _get_seed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   restart: struct{
     using _restart: ^GDW.MethodBind,
@@ -194,7 +194,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     capture_aabb: struct{
     using _capture_aabb: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
   set_direction: struct{
     using _set_direction: ^GDW.MethodBind,
@@ -202,7 +202,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_direction: struct{
     using _get_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_spread: struct{
     using _set_spread: ^GDW.MethodBind,
@@ -210,7 +210,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_spread: struct{
     using _get_spread: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_flatness: struct{
     using _set_flatness: ^GDW.MethodBind,
@@ -218,7 +218,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_flatness: struct{
     using _get_flatness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_param_min: struct{
     using _set_param_min: ^GDW.MethodBind,
@@ -250,7 +250,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_color_ramp: struct{
     using _set_color_ramp: ^GDW.MethodBind,
@@ -258,7 +258,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_color_ramp: struct{
     using _get_color_ramp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Gradient)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^Gradient)
   },
   set_color_initial_ramp: struct{
     using _set_color_initial_ramp: ^GDW.MethodBind,
@@ -266,7 +266,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_color_initial_ramp: struct{
     using _get_color_initial_ramp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Gradient)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^Gradient)
   },
   set_particle_flag: struct{
     using _set_particle_flag: ^GDW.MethodBind,
@@ -282,7 +282,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_shape: struct{
     using _get_emission_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^CPUParticles3D_EmissionShape)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^CPUParticles3D_EmissionShape)
   },
   set_emission_sphere_radius: struct{
     using _set_emission_sphere_radius: ^GDW.MethodBind,
@@ -290,7 +290,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_sphere_radius: struct{
     using _get_emission_sphere_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_box_extents: struct{
     using _set_emission_box_extents: ^GDW.MethodBind,
@@ -298,7 +298,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_box_extents: struct{
     using _get_emission_box_extents: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_emission_points: struct{
     using _set_emission_points: ^GDW.MethodBind,
@@ -306,7 +306,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_points: struct{
     using _get_emission_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   set_emission_normals: struct{
     using _set_emission_normals: ^GDW.MethodBind,
@@ -314,7 +314,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_normals: struct{
     using _get_emission_normals: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   set_emission_colors: struct{
     using _set_emission_colors: ^GDW.MethodBind,
@@ -322,7 +322,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_colors: struct{
     using _get_emission_colors: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedColorArray)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.PackedColorArray)
   },
   set_emission_ring_axis: struct{
     using _set_emission_ring_axis: ^GDW.MethodBind,
@@ -330,7 +330,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_ring_axis: struct{
     using _get_emission_ring_axis: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_emission_ring_height: struct{
     using _set_emission_ring_height: ^GDW.MethodBind,
@@ -338,7 +338,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_ring_height: struct{
     using _get_emission_ring_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_ring_radius: struct{
     using _set_emission_ring_radius: ^GDW.MethodBind,
@@ -346,7 +346,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_ring_radius: struct{
     using _get_emission_ring_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_ring_inner_radius: struct{
     using _set_emission_ring_inner_radius: ^GDW.MethodBind,
@@ -354,7 +354,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_ring_inner_radius: struct{
     using _get_emission_ring_inner_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_emission_ring_cone_angle: struct{
     using _set_emission_ring_cone_angle: ^GDW.MethodBind,
@@ -362,11 +362,11 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_emission_ring_cone_angle: struct{
     using _get_emission_ring_cone_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_gravity: struct{
     using _get_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_gravity: struct{
     using _set_gravity: ^GDW.MethodBind,
@@ -374,7 +374,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_split_scale: struct{
     using _get_split_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_split_scale: struct{
     using _set_split_scale: ^GDW.MethodBind,
@@ -382,7 +382,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_scale_curve_x: struct{
     using _get_scale_curve_x: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^Curve)
   },
   set_scale_curve_x: struct{
     using _set_scale_curve_x: ^GDW.MethodBind,
@@ -390,7 +390,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_scale_curve_y: struct{
     using _get_scale_curve_y: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^Curve)
   },
   set_scale_curve_y: struct{
     using _set_scale_curve_y: ^GDW.MethodBind,
@@ -398,7 +398,7 @@ CPUParticles3D_MethodBind_List :: struct {
   },
     get_scale_curve_z: struct{
     using _get_scale_curve_z: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, #by_ptr args: i64 = 0, r_ret: ^Curve)
+    m_call: proc(_:^GDW.MethodBind, obj: CPUParticles3D, args: rawptr = nil, r_ret: ^Curve)
   },
   set_scale_curve_z: struct{
     using _set_scale_curve_z: ^GDW.MethodBind,

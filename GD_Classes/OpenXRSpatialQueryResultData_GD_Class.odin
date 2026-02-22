@@ -10,7 +10,7 @@ OpenXRSpatialQueryResultData :: ^GDW.Object
 OpenXRSpatialQueryResultData_MethodBind_List :: struct {
   get_capacity: struct{
     using _get_capacity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialQueryResultData, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialQueryResultData, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_entity_id: struct{
     using _get_entity_id: ^GDW.MethodBind,

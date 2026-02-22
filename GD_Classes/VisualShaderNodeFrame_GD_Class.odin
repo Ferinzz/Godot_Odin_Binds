@@ -14,7 +14,7 @@ VisualShaderNodeFrame_MethodBind_List :: struct {
   },
     get_title: struct{
     using _get_title: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_tint_color_enabled: struct{
     using _set_tint_color_enabled: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ VisualShaderNodeFrame_MethodBind_List :: struct {
   },
     is_tint_color_enabled: struct{
     using _is_tint_color_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_tint_color: struct{
     using _set_tint_color: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VisualShaderNodeFrame_MethodBind_List :: struct {
   },
     get_tint_color: struct{
     using _get_tint_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_autoshrink_enabled: struct{
     using _set_autoshrink_enabled: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ VisualShaderNodeFrame_MethodBind_List :: struct {
   },
     is_autoshrink_enabled: struct{
     using _is_autoshrink_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_attached_node: struct{
     using _add_attached_node: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ VisualShaderNodeFrame_MethodBind_List :: struct {
   },
     get_attached_nodes: struct{
     using _get_attached_nodes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeFrame, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
 };
 VisualShaderNodeFrame_Init_ :: proc (VisualShaderNodeFrame_methods: ^VisualShaderNodeFrame_MethodBind_List, loc := #caller_location) {

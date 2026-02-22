@@ -10,7 +10,7 @@ GLTFTextureSampler :: ^GDW.Object
 GLTFTextureSampler_MethodBind_List :: struct {
   get_mag_filter: struct{
     using _get_mag_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFTextureSampler, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFTextureSampler, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_mag_filter: struct{
     using _set_mag_filter: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ GLTFTextureSampler_MethodBind_List :: struct {
   },
     get_min_filter: struct{
     using _get_min_filter: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFTextureSampler, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFTextureSampler, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_min_filter: struct{
     using _set_min_filter: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ GLTFTextureSampler_MethodBind_List :: struct {
   },
     get_wrap_s: struct{
     using _get_wrap_s: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFTextureSampler, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFTextureSampler, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_wrap_s: struct{
     using _set_wrap_s: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFTextureSampler_MethodBind_List :: struct {
   },
     get_wrap_t: struct{
     using _get_wrap_t: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFTextureSampler, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFTextureSampler, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_wrap_t: struct{
     using _set_wrap_t: ^GDW.MethodBind,

@@ -14,7 +14,7 @@ InputEventMagnifyGesture_MethodBind_List :: struct {
   },
     get_factor: struct{
     using _get_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMagnifyGesture, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMagnifyGesture, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 InputEventMagnifyGesture_Init_ :: proc (InputEventMagnifyGesture_methods: ^InputEventMagnifyGesture_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ VisibleOnScreenNotifier3D_MethodBind_List :: struct {
   },
     is_on_screen: struct{
     using _is_on_screen: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenNotifier3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisibleOnScreenNotifier3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 VisibleOnScreenNotifier3D_Init_ :: proc (VisibleOnScreenNotifier3D_methods: ^VisibleOnScreenNotifier3D_MethodBind_List, loc := #caller_location) {

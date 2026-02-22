@@ -22,7 +22,7 @@ VisualShaderNodeParticleEmit_MethodBind_List :: struct {
   },
     get_flags: struct{
     using _get_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleEmit, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeParticleEmit_EmitFlags)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleEmit, args: rawptr = nil, r_ret: ^VisualShaderNodeParticleEmit_EmitFlags)
   },
 };
 VisualShaderNodeParticleEmit_Init_ :: proc (VisualShaderNodeParticleEmit_methods: ^VisualShaderNodeParticleEmit_MethodBind_List, loc := #caller_location) {

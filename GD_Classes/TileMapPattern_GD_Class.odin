@@ -34,11 +34,11 @@ TileMapPattern_MethodBind_List :: struct {
   },
   get_used_cells: struct{
     using _get_used_cells: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapPattern, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapPattern, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapPattern, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapPattern, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_size: struct{
     using _set_size: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ TileMapPattern_MethodBind_List :: struct {
   },
     is_empty: struct{
     using _is_empty: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TileMapPattern, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TileMapPattern, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 TileMapPattern_Init_ :: proc (TileMapPattern_methods: ^TileMapPattern_MethodBind_List, loc := #caller_location) {

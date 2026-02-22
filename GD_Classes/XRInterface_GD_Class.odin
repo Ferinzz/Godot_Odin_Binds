@@ -49,15 +49,15 @@ XRInterface_VRSTextureFormat :: enum i64 {
 XRInterface_MethodBind_List :: struct {
   get_name: struct{
     using _get_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   get_capabilities: struct{
     using _get_capabilities: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_primary: struct{
     using _is_primary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_primary: struct{
     using _set_primary: ^GDW.MethodBind,
@@ -65,31 +65,31 @@ XRInterface_MethodBind_List :: struct {
   },
     is_initialized: struct{
     using _is_initialized: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   initialize: struct{
     using _initialize: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   uninitialize: struct{
     using _uninitialize: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_system_info: struct{
     using _get_system_info: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_tracking_status: struct{
     using _get_tracking_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^XRInterface_TrackingStatus)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^XRInterface_TrackingStatus)
   },
   get_render_target_size: struct{
     using _get_render_target_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_view_count: struct{
     using _get_view_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   trigger_haptic_pulse: struct{
     using _trigger_haptic_pulse: ^GDW.MethodBind,
@@ -101,7 +101,7 @@ XRInterface_MethodBind_List :: struct {
   },
   get_play_area_mode: struct{
     using _get_play_area_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^XRInterface_PlayAreaMode)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^XRInterface_PlayAreaMode)
   },
   set_play_area_mode: struct{
     using _set_play_area_mode: ^GDW.MethodBind,
@@ -109,11 +109,11 @@ XRInterface_MethodBind_List :: struct {
   },
   get_play_area: struct{
     using _get_play_area: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector3Array)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.PackedVector3Array)
   },
   get_anchor_detection_is_enabled: struct{
     using _get_anchor_detection_is_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_anchor_detection_is_enabled: struct{
     using _set_anchor_detection_is_enabled: ^GDW.MethodBind,
@@ -121,23 +121,23 @@ XRInterface_MethodBind_List :: struct {
   },
     get_camera_feed_id: struct{
     using _get_camera_feed_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   is_passthrough_supported: struct{
     using _is_passthrough_supported: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_passthrough_enabled: struct{
     using _is_passthrough_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   start_passthrough: struct{
     using _start_passthrough: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   stop_passthrough: struct{
     using _stop_passthrough: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: rawptr = nil)
   },
     get_transform_for_view: struct{
     using _get_transform_for_view: ^GDW.MethodBind,
@@ -149,7 +149,7 @@ XRInterface_MethodBind_List :: struct {
   },
   get_supported_environment_blend_modes: struct{
     using _get_supported_environment_blend_modes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_environment_blend_mode: struct{
     using _set_environment_blend_mode: ^GDW.MethodBind,
@@ -157,7 +157,7 @@ XRInterface_MethodBind_List :: struct {
   },
   get_environment_blend_mode: struct{
     using _get_environment_blend_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, #by_ptr args: i64 = 0, r_ret: ^XRInterface_EnvironmentBlendMode)
+    m_call: proc(_:^GDW.MethodBind, obj: XRInterface, args: rawptr = nil, r_ret: ^XRInterface_EnvironmentBlendMode)
   },
 };
 XRInterface_Init_ :: proc (XRInterface_methods: ^XRInterface_MethodBind_List, loc := #caller_location) {

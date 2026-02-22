@@ -215,43 +215,43 @@ PhysicsServer3D_BodyAxis :: enum i64 {
 PhysicsServer3D_MethodBind_List :: struct {
   world_boundary_shape_create: struct{
     using _world_boundary_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   separation_ray_shape_create: struct{
     using _separation_ray_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   sphere_shape_create: struct{
     using _sphere_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   box_shape_create: struct{
     using _box_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   capsule_shape_create: struct{
     using _capsule_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   cylinder_shape_create: struct{
     using _cylinder_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   convex_polygon_shape_create: struct{
     using _convex_polygon_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   concave_polygon_shape_create: struct{
     using _concave_polygon_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   heightmap_shape_create: struct{
     using _heightmap_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   custom_shape_create: struct{
     using _custom_shape_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   shape_set_data: struct{
     using _shape_set_data: ^GDW.MethodBind,
@@ -275,7 +275,7 @@ PhysicsServer3D_MethodBind_List :: struct {
   },
   space_create: struct{
     using _space_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   space_set_active: struct{
     using _space_set_active: ^GDW.MethodBind,
@@ -299,7 +299,7 @@ PhysicsServer3D_MethodBind_List :: struct {
   },
   area_create: struct{
     using _area_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   area_set_space: struct{
     using _area_set_space: ^GDW.MethodBind,
@@ -403,7 +403,7 @@ PhysicsServer3D_MethodBind_List :: struct {
   },
     body_create: struct{
     using _body_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   body_set_space: struct{
     using _body_set_space: ^GDW.MethodBind,
@@ -627,7 +627,7 @@ PhysicsServer3D_MethodBind_List :: struct {
   },
   soft_body_create: struct{
     using _soft_body_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   soft_body_update_rendering_server: struct{
     using _soft_body_update_rendering_server: ^GDW.MethodBind,
@@ -783,7 +783,7 @@ PhysicsServer3D_MethodBind_List :: struct {
   },
     joint_create: struct{
     using _joint_create: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsServer3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   joint_clear: struct{
     using _joint_clear: ^GDW.MethodBind,

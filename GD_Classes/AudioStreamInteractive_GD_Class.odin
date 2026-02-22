@@ -43,7 +43,7 @@ AudioStreamInteractive_MethodBind_List :: struct {
   },
     get_clip_count: struct{
     using _get_clip_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamInteractive, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamInteractive, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_initial_clip: struct{
     using _set_initial_clip: ^GDW.MethodBind,
@@ -51,7 +51,7 @@ AudioStreamInteractive_MethodBind_List :: struct {
   },
     get_initial_clip: struct{
     using _get_initial_clip: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamInteractive, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamInteractive, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_clip_name: struct{
     using _set_clip_name: ^GDW.MethodBind,
@@ -99,7 +99,7 @@ AudioStreamInteractive_MethodBind_List :: struct {
   },
     get_transition_list: struct{
     using _get_transition_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamInteractive, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamInteractive, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   get_transition_from_time: struct{
     using _get_transition_from_time: ^GDW.MethodBind,

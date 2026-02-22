@@ -10,7 +10,7 @@ ConfirmationDialog :: ^GDW.Object
 ConfirmationDialog_MethodBind_List :: struct {
   get_cancel_button: struct{
     using _get_cancel_button: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConfirmationDialog, #by_ptr args: i64 = 0, r_ret: ^Button)
+    m_call: proc(_:^GDW.MethodBind, obj: ConfirmationDialog, args: rawptr = nil, r_ret: ^Button)
   },
   set_cancel_button_text: struct{
     using _set_cancel_button_text: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ ConfirmationDialog_MethodBind_List :: struct {
   },
     get_cancel_button_text: struct{
     using _get_cancel_button_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConfirmationDialog, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: ConfirmationDialog, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 ConfirmationDialog_Init_ :: proc (ConfirmationDialog_methods: ^ConfirmationDialog_MethodBind_List, loc := #caller_location) {

@@ -40,7 +40,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_joint_type: struct{
     using _get_joint_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^PhysicalBone3D_JointType)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^PhysicalBone3D_JointType)
   },
   set_joint_offset: struct{
     using _set_joint_offset: ^GDW.MethodBind,
@@ -48,7 +48,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_joint_offset: struct{
     using _get_joint_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   set_joint_rotation: struct{
     using _set_joint_rotation: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_joint_rotation: struct{
     using _get_joint_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_body_offset: struct{
     using _set_body_offset: ^GDW.MethodBind,
@@ -64,19 +64,19 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_body_offset: struct{
     using _get_body_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   get_simulate_physics: struct{
     using _get_simulate_physics: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_simulating_physics: struct{
     using _is_simulating_physics: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_bone_id: struct{
     using _get_bone_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_mass: struct{
     using _set_mass: ^GDW.MethodBind,
@@ -84,7 +84,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_mass: struct{
     using _get_mass: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_friction: struct{
     using _set_friction: ^GDW.MethodBind,
@@ -92,7 +92,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_friction: struct{
     using _get_friction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_bounce: struct{
     using _set_bounce: ^GDW.MethodBind,
@@ -100,7 +100,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_bounce: struct{
     using _get_bounce: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_gravity_scale: struct{
     using _set_gravity_scale: ^GDW.MethodBind,
@@ -108,7 +108,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_gravity_scale: struct{
     using _get_gravity_scale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_linear_damp_mode: struct{
     using _set_linear_damp_mode: ^GDW.MethodBind,
@@ -116,7 +116,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_linear_damp_mode: struct{
     using _get_linear_damp_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^PhysicalBone3D_DampMode)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^PhysicalBone3D_DampMode)
   },
   set_angular_damp_mode: struct{
     using _set_angular_damp_mode: ^GDW.MethodBind,
@@ -124,7 +124,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_angular_damp_mode: struct{
     using _get_angular_damp_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^PhysicalBone3D_DampMode)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^PhysicalBone3D_DampMode)
   },
   set_linear_damp: struct{
     using _set_linear_damp: ^GDW.MethodBind,
@@ -132,7 +132,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_linear_damp: struct{
     using _get_linear_damp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_angular_damp: struct{
     using _set_angular_damp: ^GDW.MethodBind,
@@ -140,7 +140,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_angular_damp: struct{
     using _get_angular_damp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_linear_velocity: struct{
     using _set_linear_velocity: ^GDW.MethodBind,
@@ -148,7 +148,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_linear_velocity: struct{
     using _get_linear_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_angular_velocity: struct{
     using _set_angular_velocity: ^GDW.MethodBind,
@@ -156,7 +156,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     get_angular_velocity: struct{
     using _get_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_use_custom_integrator: struct{
     using _set_use_custom_integrator: ^GDW.MethodBind,
@@ -164,7 +164,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     is_using_custom_integrator: struct{
     using _is_using_custom_integrator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_can_sleep: struct{
     using _set_can_sleep: ^GDW.MethodBind,
@@ -172,7 +172,7 @@ PhysicalBone3D_MethodBind_List :: struct {
   },
     is_able_to_sleep: struct{
     using _is_able_to_sleep: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicalBone3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PhysicalBone3D_Init_ :: proc (PhysicalBone3D_methods: ^PhysicalBone3D_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ RDPipelineSpecializationConstant_MethodBind_List :: struct {
   },
     get_value: struct{
     using _get_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineSpecializationConstant, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineSpecializationConstant, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
   set_constant_id: struct{
     using _set_constant_id: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ RDPipelineSpecializationConstant_MethodBind_List :: struct {
   },
     get_constant_id: struct{
     using _get_constant_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineSpecializationConstant, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RDPipelineSpecializationConstant, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 RDPipelineSpecializationConstant_Init_ :: proc (RDPipelineSpecializationConstant_methods: ^RDPipelineSpecializationConstant_MethodBind_List, loc := #caller_location) {

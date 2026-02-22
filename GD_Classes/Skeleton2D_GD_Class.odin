@@ -10,7 +10,7 @@ Skeleton2D :: ^GDW.Object
 Skeleton2D_MethodBind_List :: struct {
   get_bone_count: struct{
     using _get_bone_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_bone: struct{
     using _get_bone: ^GDW.MethodBind,
@@ -18,7 +18,7 @@ Skeleton2D_MethodBind_List :: struct {
   },
   get_skeleton: struct{
     using _get_skeleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton2D, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton2D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_modification_stack: struct{
     using _set_modification_stack: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ Skeleton2D_MethodBind_List :: struct {
   },
     get_modification_stack: struct{
     using _get_modification_stack: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Skeleton2D, #by_ptr args: i64 = 0, r_ret: ^SkeletonModificationStack2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Skeleton2D, args: rawptr = nil, r_ret: ^SkeletonModificationStack2D)
   },
   execute_modifications: struct{
     using _execute_modifications: ^GDW.MethodBind,

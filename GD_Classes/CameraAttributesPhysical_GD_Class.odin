@@ -14,7 +14,7 @@ CameraAttributesPhysical_MethodBind_List :: struct {
   },
     get_aperture: struct{
     using _get_aperture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_shutter_speed: struct{
     using _set_shutter_speed: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CameraAttributesPhysical_MethodBind_List :: struct {
   },
     get_shutter_speed: struct{
     using _get_shutter_speed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_focal_length: struct{
     using _set_focal_length: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CameraAttributesPhysical_MethodBind_List :: struct {
   },
     get_focal_length: struct{
     using _get_focal_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_focus_distance: struct{
     using _set_focus_distance: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CameraAttributesPhysical_MethodBind_List :: struct {
   },
     get_focus_distance: struct{
     using _get_focus_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_near: struct{
     using _set_near: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CameraAttributesPhysical_MethodBind_List :: struct {
   },
     get_near: struct{
     using _get_near: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_far: struct{
     using _set_far: ^GDW.MethodBind,
@@ -54,11 +54,11 @@ CameraAttributesPhysical_MethodBind_List :: struct {
   },
     get_far: struct{
     using _get_far: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_fov: struct{
     using _get_fov: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_auto_exposure_max_exposure_value: struct{
     using _set_auto_exposure_max_exposure_value: ^GDW.MethodBind,
@@ -66,7 +66,7 @@ CameraAttributesPhysical_MethodBind_List :: struct {
   },
     get_auto_exposure_max_exposure_value: struct{
     using _get_auto_exposure_max_exposure_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_auto_exposure_min_exposure_value: struct{
     using _set_auto_exposure_min_exposure_value: ^GDW.MethodBind,
@@ -74,7 +74,7 @@ CameraAttributesPhysical_MethodBind_List :: struct {
   },
     get_auto_exposure_min_exposure_value: struct{
     using _get_auto_exposure_min_exposure_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CameraAttributesPhysical, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 CameraAttributesPhysical_Init_ :: proc (CameraAttributesPhysical_methods: ^CameraAttributesPhysical_MethodBind_List, loc := #caller_location) {

@@ -25,7 +25,7 @@ VisualShaderNodeMix_MethodBind_List :: struct {
   },
     get_op_type: struct{
     using _get_op_type: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeMix, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeMix_OpType)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeMix, args: rawptr = nil, r_ret: ^VisualShaderNodeMix_OpType)
   },
 };
 VisualShaderNodeMix_Init_ :: proc (VisualShaderNodeMix_methods: ^VisualShaderNodeMix_MethodBind_List, loc := #caller_location) {

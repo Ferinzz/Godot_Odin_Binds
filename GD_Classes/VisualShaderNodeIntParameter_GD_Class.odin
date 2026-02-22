@@ -22,7 +22,7 @@ VisualShaderNodeIntParameter_MethodBind_List :: struct {
   },
     get_hint: struct{
     using _get_hint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeIntParameter_Hint)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, args: rawptr = nil, r_ret: ^VisualShaderNodeIntParameter_Hint)
   },
   set_min: struct{
     using _set_min: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VisualShaderNodeIntParameter_MethodBind_List :: struct {
   },
     get_min: struct{
     using _get_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max: struct{
     using _set_max: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ VisualShaderNodeIntParameter_MethodBind_List :: struct {
   },
     get_max: struct{
     using _get_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_step: struct{
     using _set_step: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ VisualShaderNodeIntParameter_MethodBind_List :: struct {
   },
     get_step: struct{
     using _get_step: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_enum_names: struct{
     using _set_enum_names: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ VisualShaderNodeIntParameter_MethodBind_List :: struct {
   },
     get_enum_names: struct{
     using _get_enum_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   set_default_value_enabled: struct{
     using _set_default_value_enabled: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ VisualShaderNodeIntParameter_MethodBind_List :: struct {
   },
     is_default_value_enabled: struct{
     using _is_default_value_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_default_value: struct{
     using _set_default_value: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ VisualShaderNodeIntParameter_MethodBind_List :: struct {
   },
     get_default_value: struct{
     using _get_default_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeIntParameter, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 VisualShaderNodeIntParameter_Init_ :: proc (VisualShaderNodeIntParameter_methods: ^VisualShaderNodeIntParameter_MethodBind_List, loc := #caller_location) {

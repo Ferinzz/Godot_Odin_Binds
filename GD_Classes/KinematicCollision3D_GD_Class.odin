@@ -10,19 +10,19 @@ KinematicCollision3D :: ^GDW.Object
 KinematicCollision3D_MethodBind_List :: struct {
   get_travel: struct{
     using _get_travel: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_remainder: struct{
     using _get_remainder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   get_depth: struct{
     using _get_depth: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_collision_count: struct{
     using _get_collision_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: KinematicCollision3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_position: struct{
     using _get_position: ^GDW.MethodBind,

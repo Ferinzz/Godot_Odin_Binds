@@ -22,7 +22,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_gravity_space_override_mode: struct{
     using _get_gravity_space_override_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^Area3D_SpaceOverride)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^Area3D_SpaceOverride)
   },
   set_gravity_is_point: struct{
     using _set_gravity_is_point: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ Area3D_MethodBind_List :: struct {
   },
     is_gravity_a_point: struct{
     using _is_gravity_a_point: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_gravity_point_unit_distance: struct{
     using _set_gravity_point_unit_distance: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_gravity_point_unit_distance: struct{
     using _get_gravity_point_unit_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_gravity_point_center: struct{
     using _set_gravity_point_center: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_gravity_point_center: struct{
     using _get_gravity_point_center: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_gravity_direction: struct{
     using _set_gravity_direction: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_gravity_direction: struct{
     using _get_gravity_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_gravity: struct{
     using _set_gravity: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_gravity: struct{
     using _get_gravity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_linear_damp_space_override_mode: struct{
     using _set_linear_damp_space_override_mode: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_linear_damp_space_override_mode: struct{
     using _get_linear_damp_space_override_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^Area3D_SpaceOverride)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^Area3D_SpaceOverride)
   },
   set_angular_damp_space_override_mode: struct{
     using _set_angular_damp_space_override_mode: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_angular_damp_space_override_mode: struct{
     using _get_angular_damp_space_override_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^Area3D_SpaceOverride)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^Area3D_SpaceOverride)
   },
   set_angular_damp: struct{
     using _set_angular_damp: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_angular_damp: struct{
     using _get_angular_damp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_linear_damp: struct{
     using _set_linear_damp: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_linear_damp: struct{
     using _get_linear_damp: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_priority: struct{
     using _set_priority: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_priority: struct{
     using _get_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_wind_force_magnitude: struct{
     using _set_wind_force_magnitude: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_wind_force_magnitude: struct{
     using _get_wind_force_magnitude: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_wind_attenuation_factor: struct{
     using _set_wind_attenuation_factor: ^GDW.MethodBind,
@@ -118,7 +118,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_wind_attenuation_factor: struct{
     using _get_wind_attenuation_factor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_wind_source_path: struct{
     using _set_wind_source_path: ^GDW.MethodBind,
@@ -126,7 +126,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_wind_source_path: struct{
     using _get_wind_source_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_monitorable: struct{
     using _set_monitorable: ^GDW.MethodBind,
@@ -134,7 +134,7 @@ Area3D_MethodBind_List :: struct {
   },
     is_monitorable: struct{
     using _is_monitorable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_monitoring: struct{
     using _set_monitoring: ^GDW.MethodBind,
@@ -142,23 +142,23 @@ Area3D_MethodBind_List :: struct {
   },
     is_monitoring: struct{
     using _is_monitoring: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_overlapping_bodies: struct{
     using _get_overlapping_bodies: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_overlapping_areas: struct{
     using _get_overlapping_areas: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   has_overlapping_bodies: struct{
     using _has_overlapping_bodies: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   has_overlapping_areas: struct{
     using _has_overlapping_areas: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   overlaps_body: struct{
     using _overlaps_body: ^GDW.MethodBind,
@@ -174,7 +174,7 @@ Area3D_MethodBind_List :: struct {
   },
     is_overriding_audio_bus: struct{
     using _is_overriding_audio_bus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_audio_bus_name: struct{
     using _set_audio_bus_name: ^GDW.MethodBind,
@@ -182,7 +182,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_audio_bus_name: struct{
     using _get_audio_bus_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_use_reverb_bus: struct{
     using _set_use_reverb_bus: ^GDW.MethodBind,
@@ -190,7 +190,7 @@ Area3D_MethodBind_List :: struct {
   },
     is_using_reverb_bus: struct{
     using _is_using_reverb_bus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_reverb_bus_name: struct{
     using _set_reverb_bus_name: ^GDW.MethodBind,
@@ -198,7 +198,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_reverb_bus_name: struct{
     using _get_reverb_bus_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.StringName)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_reverb_amount: struct{
     using _set_reverb_amount: ^GDW.MethodBind,
@@ -206,7 +206,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_reverb_amount: struct{
     using _get_reverb_amount: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_reverb_uniformity: struct{
     using _set_reverb_uniformity: ^GDW.MethodBind,
@@ -214,7 +214,7 @@ Area3D_MethodBind_List :: struct {
   },
     get_reverb_uniformity: struct{
     using _get_reverb_uniformity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Area3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Area3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 Area3D_Init_ :: proc (Area3D_methods: ^Area3D_MethodBind_List, loc := #caller_location) {

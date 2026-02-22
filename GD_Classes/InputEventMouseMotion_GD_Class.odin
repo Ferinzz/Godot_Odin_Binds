@@ -14,7 +14,7 @@ InputEventMouseMotion_MethodBind_List :: struct {
   },
     get_tilt: struct{
     using _get_tilt: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_pressure: struct{
     using _set_pressure: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ InputEventMouseMotion_MethodBind_List :: struct {
   },
     get_pressure: struct{
     using _get_pressure: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_pen_inverted: struct{
     using _set_pen_inverted: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ InputEventMouseMotion_MethodBind_List :: struct {
   },
     get_pen_inverted: struct{
     using _get_pen_inverted: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_relative: struct{
     using _set_relative: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ InputEventMouseMotion_MethodBind_List :: struct {
   },
     get_relative: struct{
     using _get_relative: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_screen_relative: struct{
     using _set_screen_relative: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ InputEventMouseMotion_MethodBind_List :: struct {
   },
     get_screen_relative: struct{
     using _get_screen_relative: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_velocity: struct{
     using _set_velocity: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ InputEventMouseMotion_MethodBind_List :: struct {
   },
     get_velocity: struct{
     using _get_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_screen_velocity: struct{
     using _set_screen_velocity: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ InputEventMouseMotion_MethodBind_List :: struct {
   },
     get_screen_velocity: struct{
     using _get_screen_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventMouseMotion, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 InputEventMouseMotion_Init_ :: proc (InputEventMouseMotion_methods: ^InputEventMouseMotion_MethodBind_List, loc := #caller_location) {

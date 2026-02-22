@@ -14,7 +14,7 @@ EncodedObjectAsID_MethodBind_List :: struct {
   },
     get_object_id: struct{
     using _get_object_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EncodedObjectAsID, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EncodedObjectAsID, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 EncodedObjectAsID_Init_ :: proc (EncodedObjectAsID_methods: ^EncodedObjectAsID_MethodBind_List, loc := #caller_location) {

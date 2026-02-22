@@ -14,7 +14,7 @@ GraphElement_MethodBind_List :: struct {
   },
     is_resizable: struct{
     using _is_resizable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_draggable: struct{
     using _set_draggable: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ GraphElement_MethodBind_List :: struct {
   },
     is_draggable: struct{
     using _is_draggable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_selectable: struct{
     using _set_selectable: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ GraphElement_MethodBind_List :: struct {
   },
     is_selectable: struct{
     using _is_selectable: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_selected: struct{
     using _set_selected: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ GraphElement_MethodBind_List :: struct {
   },
     is_selected: struct{
     using _is_selected: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_scaling_menus: struct{
     using _set_scaling_menus: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ GraphElement_MethodBind_List :: struct {
   },
     is_scaling_menus: struct{
     using _is_scaling_menus: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_position_offset: struct{
     using _set_position_offset: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ GraphElement_MethodBind_List :: struct {
   },
     get_position_offset: struct{
     using _get_position_offset: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: GraphElement, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 GraphElement_Init_ :: proc (GraphElement_methods: ^GraphElement_MethodBind_List, loc := #caller_location) {

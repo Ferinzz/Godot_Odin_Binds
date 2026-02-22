@@ -14,7 +14,7 @@ SkeletonModification2DStackHolder_MethodBind_List :: struct {
   },
     get_held_modification_stack: struct{
     using _get_held_modification_stack: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DStackHolder, #by_ptr args: i64 = 0, r_ret: ^SkeletonModificationStack2D)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DStackHolder, args: rawptr = nil, r_ret: ^SkeletonModificationStack2D)
   },
 };
 SkeletonModification2DStackHolder_Init_ :: proc (SkeletonModification2DStackHolder_methods: ^SkeletonModification2DStackHolder_MethodBind_List, loc := #caller_location) {

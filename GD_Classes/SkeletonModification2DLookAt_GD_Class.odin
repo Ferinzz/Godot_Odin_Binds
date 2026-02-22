@@ -14,7 +14,7 @@ SkeletonModification2DLookAt_MethodBind_List :: struct {
   },
     get_bone2d_node: struct{
     using _get_bone2d_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_bone_index: struct{
     using _set_bone_index: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SkeletonModification2DLookAt_MethodBind_List :: struct {
   },
     get_bone_index: struct{
     using _get_bone_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_target_node: struct{
     using _set_target_node: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ SkeletonModification2DLookAt_MethodBind_List :: struct {
   },
     get_target_node: struct{
     using _get_target_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_additional_rotation: struct{
     using _set_additional_rotation: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ SkeletonModification2DLookAt_MethodBind_List :: struct {
   },
     get_additional_rotation: struct{
     using _get_additional_rotation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_enable_constraint: struct{
     using _set_enable_constraint: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ SkeletonModification2DLookAt_MethodBind_List :: struct {
   },
     get_enable_constraint: struct{
     using _get_enable_constraint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_constraint_angle_min: struct{
     using _set_constraint_angle_min: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ SkeletonModification2DLookAt_MethodBind_List :: struct {
   },
     get_constraint_angle_min: struct{
     using _get_constraint_angle_min: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_constraint_angle_max: struct{
     using _set_constraint_angle_max: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ SkeletonModification2DLookAt_MethodBind_List :: struct {
   },
     get_constraint_angle_max: struct{
     using _get_constraint_angle_max: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_constraint_angle_invert: struct{
     using _set_constraint_angle_invert: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ SkeletonModification2DLookAt_MethodBind_List :: struct {
   },
     get_constraint_angle_invert: struct{
     using _get_constraint_angle_invert: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DLookAt, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 SkeletonModification2DLookAt_Init_ :: proc (SkeletonModification2DLookAt_methods: ^SkeletonModification2DLookAt_MethodBind_List, loc := #caller_location) {

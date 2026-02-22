@@ -10,15 +10,15 @@ RenderSceneData :: ^GDW.Object
 RenderSceneData_MethodBind_List :: struct {
   get_cam_transform: struct{
     using _get_cam_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneData, #by_ptr args: i64 = 0, r_ret: ^GDW.Transform3D)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneData, args: rawptr = nil, r_ret: ^GDW.Transform3D)
   },
   get_cam_projection: struct{
     using _get_cam_projection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneData, #by_ptr args: i64 = 0, r_ret: ^GDW.Projection)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneData, args: rawptr = nil, r_ret: ^GDW.Projection)
   },
   get_view_count: struct{
     using _get_view_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneData, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneData, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_view_eye_offset: struct{
     using _get_view_eye_offset: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ RenderSceneData_MethodBind_List :: struct {
   },
   get_uniform_buffer: struct{
     using _get_uniform_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneData, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: RenderSceneData, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 RenderSceneData_Init_ :: proc (RenderSceneData_methods: ^RenderSceneData_MethodBind_List, loc := #caller_location) {

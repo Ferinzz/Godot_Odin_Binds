@@ -14,7 +14,7 @@ Texture2DRD_MethodBind_List :: struct {
   },
     get_texture_rd_rid: struct{
     using _get_texture_rd_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture2DRD, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture2DRD, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 Texture2DRD_Init_ :: proc (Texture2DRD_methods: ^Texture2DRD_MethodBind_List, loc := #caller_location) {

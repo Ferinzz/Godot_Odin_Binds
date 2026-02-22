@@ -14,7 +14,7 @@ OpenXRCompositionLayerCylinder_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerCylinder, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerCylinder, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_aspect_ratio: struct{
     using _set_aspect_ratio: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRCompositionLayerCylinder_MethodBind_List :: struct {
   },
     get_aspect_ratio: struct{
     using _get_aspect_ratio: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerCylinder, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerCylinder, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_central_angle: struct{
     using _set_central_angle: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OpenXRCompositionLayerCylinder_MethodBind_List :: struct {
   },
     get_central_angle: struct{
     using _get_central_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerCylinder, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerCylinder, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fallback_segments: struct{
     using _set_fallback_segments: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ OpenXRCompositionLayerCylinder_MethodBind_List :: struct {
   },
     get_fallback_segments: struct{
     using _get_fallback_segments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerCylinder, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerCylinder, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 OpenXRCompositionLayerCylinder_Init_ :: proc (OpenXRCompositionLayerCylinder_methods: ^OpenXRCompositionLayerCylinder_MethodBind_List, loc := #caller_location) {

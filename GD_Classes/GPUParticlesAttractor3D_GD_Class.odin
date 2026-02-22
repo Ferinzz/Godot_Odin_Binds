@@ -14,7 +14,7 @@ GPUParticlesAttractor3D_MethodBind_List :: struct {
   },
     get_cull_mask: struct{
     using _get_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractor3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractor3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_strength: struct{
     using _set_strength: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ GPUParticlesAttractor3D_MethodBind_List :: struct {
   },
     get_strength: struct{
     using _get_strength: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractor3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractor3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_attenuation: struct{
     using _set_attenuation: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ GPUParticlesAttractor3D_MethodBind_List :: struct {
   },
     get_attenuation: struct{
     using _get_attenuation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractor3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractor3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_directionality: struct{
     using _set_directionality: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ GPUParticlesAttractor3D_MethodBind_List :: struct {
   },
     get_directionality: struct{
     using _get_directionality: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractor3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractor3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 GPUParticlesAttractor3D_Init_ :: proc (GPUParticlesAttractor3D_methods: ^GPUParticlesAttractor3D_MethodBind_List, loc := #caller_location) {

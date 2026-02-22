@@ -20,7 +20,7 @@ AnimationTree_MethodBind_List :: struct {
   },
     get_tree_root: struct{
     using _get_tree_root: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationTree, #by_ptr args: i64 = 0, r_ret: ^AnimationRootNode)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationTree, args: rawptr = nil, r_ret: ^AnimationRootNode)
   },
   set_advance_expression_base_node: struct{
     using _set_advance_expression_base_node: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ AnimationTree_MethodBind_List :: struct {
   },
     get_advance_expression_base_node: struct{
     using _get_advance_expression_base_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationTree, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationTree, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_animation_player: struct{
     using _set_animation_player: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ AnimationTree_MethodBind_List :: struct {
   },
     get_animation_player: struct{
     using _get_animation_player: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationTree, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationTree, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_process_callback: struct{
     using _set_process_callback: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ AnimationTree_MethodBind_List :: struct {
   },
     get_process_callback: struct{
     using _get_process_callback: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationTree, #by_ptr args: i64 = 0, r_ret: ^AnimationTree_AnimationProcessCallback)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationTree, args: rawptr = nil, r_ret: ^AnimationTree_AnimationProcessCallback)
   },
 };
 AnimationTree_Init_ :: proc (AnimationTree_methods: ^AnimationTree_MethodBind_List, loc := #caller_location) {

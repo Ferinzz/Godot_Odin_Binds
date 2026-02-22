@@ -14,7 +14,7 @@ OpenXRCompositionLayerEquirect_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_central_horizontal_angle: struct{
     using _set_central_horizontal_angle: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ OpenXRCompositionLayerEquirect_MethodBind_List :: struct {
   },
     get_central_horizontal_angle: struct{
     using _get_central_horizontal_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_upper_vertical_angle: struct{
     using _set_upper_vertical_angle: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ OpenXRCompositionLayerEquirect_MethodBind_List :: struct {
   },
     get_upper_vertical_angle: struct{
     using _get_upper_vertical_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_lower_vertical_angle: struct{
     using _set_lower_vertical_angle: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ OpenXRCompositionLayerEquirect_MethodBind_List :: struct {
   },
     get_lower_vertical_angle: struct{
     using _get_lower_vertical_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fallback_segments: struct{
     using _set_fallback_segments: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ OpenXRCompositionLayerEquirect_MethodBind_List :: struct {
   },
     get_fallback_segments: struct{
     using _get_fallback_segments: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRCompositionLayerEquirect, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 OpenXRCompositionLayerEquirect_Init_ :: proc (OpenXRCompositionLayerEquirect_methods: ^OpenXRCompositionLayerEquirect_MethodBind_List, loc := #caller_location) {

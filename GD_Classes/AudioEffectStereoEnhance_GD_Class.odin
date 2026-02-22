@@ -14,7 +14,7 @@ AudioEffectStereoEnhance_MethodBind_List :: struct {
   },
     get_pan_pullout: struct{
     using _get_pan_pullout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectStereoEnhance, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectStereoEnhance, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_time_pullout: struct{
     using _set_time_pullout: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ AudioEffectStereoEnhance_MethodBind_List :: struct {
   },
     get_time_pullout: struct{
     using _get_time_pullout: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectStereoEnhance, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectStereoEnhance, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_surround: struct{
     using _set_surround: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ AudioEffectStereoEnhance_MethodBind_List :: struct {
   },
     get_surround: struct{
     using _get_surround: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectStereoEnhance, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioEffectStereoEnhance, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 AudioEffectStereoEnhance_Init_ :: proc (AudioEffectStereoEnhance_methods: ^AudioEffectStereoEnhance_MethodBind_List, loc := #caller_location) {

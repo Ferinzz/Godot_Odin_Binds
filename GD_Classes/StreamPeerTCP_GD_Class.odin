@@ -18,15 +18,15 @@ StreamPeerTCP_MethodBind_List :: struct {
   },
   get_connected_host: struct{
     using _get_connected_host: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTCP, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTCP, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_connected_port: struct{
     using _get_connected_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTCP, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTCP, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_local_port: struct{
     using _get_local_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTCP, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerTCP, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_no_delay: struct{
     using _set_no_delay: ^GDW.MethodBind,

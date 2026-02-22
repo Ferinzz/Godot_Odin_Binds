@@ -14,7 +14,7 @@ WorldBoundaryShape2D_MethodBind_List :: struct {
   },
     get_normal: struct{
     using _get_normal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WorldBoundaryShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: WorldBoundaryShape2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_distance: struct{
     using _set_distance: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ WorldBoundaryShape2D_MethodBind_List :: struct {
   },
     get_distance: struct{
     using _get_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: WorldBoundaryShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: WorldBoundaryShape2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 WorldBoundaryShape2D_Init_ :: proc (WorldBoundaryShape2D_methods: ^WorldBoundaryShape2D_MethodBind_List, loc := #caller_location) {

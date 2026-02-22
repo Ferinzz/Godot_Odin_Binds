@@ -14,7 +14,7 @@ EditorScriptPicker_MethodBind_List :: struct {
   },
     get_script_owner: struct{
     using _get_script_owner: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorScriptPicker, #by_ptr args: i64 = 0, r_ret: ^Node)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorScriptPicker, args: rawptr = nil, r_ret: ^Node)
   },
 };
 EditorScriptPicker_Init_ :: proc (EditorScriptPicker_methods: ^EditorScriptPicker_MethodBind_List, loc := #caller_location) {

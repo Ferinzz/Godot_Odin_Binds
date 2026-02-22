@@ -14,7 +14,7 @@ ImporterMesh_MethodBind_List :: struct {
   },
     get_blend_shape_count: struct{
     using _get_blend_shape_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_blend_shape_name: struct{
     using _get_blend_shape_name: ^GDW.MethodBind,
@@ -26,7 +26,7 @@ ImporterMesh_MethodBind_List :: struct {
   },
     get_blend_shape_mode: struct{
     using _get_blend_shape_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, #by_ptr args: i64 = 0, r_ret: ^Mesh_BlendShapeMode)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, args: rawptr = nil, r_ret: ^Mesh_BlendShapeMode)
   },
   add_surface: struct{
     using _add_surface: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ ImporterMesh_MethodBind_List :: struct {
   },
     get_surface_count: struct{
     using _get_surface_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_surface_primitive_type: struct{
     using _get_surface_primitive_type: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ ImporterMesh_MethodBind_List :: struct {
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_lightmap_size_hint: struct{
     using _set_lightmap_size_hint: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ ImporterMesh_MethodBind_List :: struct {
   },
     get_lightmap_size_hint: struct{
     using _get_lightmap_size_hint: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: ImporterMesh, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
 };
 ImporterMesh_Init_ :: proc (ImporterMesh_methods: ^ImporterMesh_MethodBind_List, loc := #caller_location) {

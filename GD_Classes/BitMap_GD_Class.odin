@@ -38,11 +38,11 @@ BitMap_MethodBind_List :: struct {
   },
     get_true_bit_count: struct{
     using _get_true_bit_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BitMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: BitMap, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BitMap, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: BitMap, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   resize: struct{
     using _resize: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ BitMap_MethodBind_List :: struct {
   },
     convert_to_image: struct{
     using _convert_to_image: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: BitMap, #by_ptr args: i64 = 0, r_ret: ^Image)
+    m_call: proc(_:^GDW.MethodBind, obj: BitMap, args: rawptr = nil, r_ret: ^Image)
   },
   opaque_to_polygons: struct{
     using _opaque_to_polygons: ^GDW.MethodBind,

@@ -10,23 +10,23 @@ EditorFileSystem :: ^GDW.Object
 EditorFileSystem_MethodBind_List :: struct {
   get_filesystem: struct{
     using _get_filesystem: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, #by_ptr args: i64 = 0, r_ret: ^EditorFileSystemDirectory)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, args: rawptr = nil, r_ret: ^EditorFileSystemDirectory)
   },
   is_scanning: struct{
     using _is_scanning: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_scanning_progress: struct{
     using _get_scanning_progress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, args: rawptr = nil, r_ret: ^GDW.float)
   },
   scan: struct{
     using _scan: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     scan_sources: struct{
     using _scan_sources: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorFileSystem, args: rawptr = nil, r_ret: rawptr = nil)
   },
     update_file: struct{
     using _update_file: ^GDW.MethodBind,

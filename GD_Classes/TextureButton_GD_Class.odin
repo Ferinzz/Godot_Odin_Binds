@@ -56,7 +56,7 @@ TextureButton_MethodBind_List :: struct {
   },
     is_flipped_h: struct{
     using _is_flipped_h: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_flip_v: struct{
     using _set_flip_v: ^GDW.MethodBind,
@@ -64,39 +64,39 @@ TextureButton_MethodBind_List :: struct {
   },
     is_flipped_v: struct{
     using _is_flipped_v: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_texture_normal: struct{
     using _get_texture_normal: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^Texture2D)
   },
   get_texture_pressed: struct{
     using _get_texture_pressed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^Texture2D)
   },
   get_texture_hover: struct{
     using _get_texture_hover: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^Texture2D)
   },
   get_texture_disabled: struct{
     using _get_texture_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^Texture2D)
   },
   get_texture_focused: struct{
     using _get_texture_focused: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^Texture2D)
   },
   get_click_mask: struct{
     using _get_click_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^BitMap)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^BitMap)
   },
   get_ignore_texture_size: struct{
     using _get_ignore_texture_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_stretch_mode: struct{
     using _get_stretch_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, #by_ptr args: i64 = 0, r_ret: ^TextureButton_StretchMode)
+    m_call: proc(_:^GDW.MethodBind, obj: TextureButton, args: rawptr = nil, r_ret: ^TextureButton_StretchMode)
   },
 };
 TextureButton_Init_ :: proc (TextureButton_methods: ^TextureButton_MethodBind_List, loc := #caller_location) {

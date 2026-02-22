@@ -14,7 +14,7 @@ SkeletonModification2DTwoBoneIK_MethodBind_List :: struct {
   },
     get_target_node: struct{
     using _get_target_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_target_minimum_distance: struct{
     using _set_target_minimum_distance: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SkeletonModification2DTwoBoneIK_MethodBind_List :: struct {
   },
     get_target_minimum_distance: struct{
     using _get_target_minimum_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_target_maximum_distance: struct{
     using _set_target_maximum_distance: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ SkeletonModification2DTwoBoneIK_MethodBind_List :: struct {
   },
     get_target_maximum_distance: struct{
     using _get_target_maximum_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_flip_bend_direction: struct{
     using _set_flip_bend_direction: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ SkeletonModification2DTwoBoneIK_MethodBind_List :: struct {
   },
     get_flip_bend_direction: struct{
     using _get_flip_bend_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_joint_one_bone2d_node: struct{
     using _set_joint_one_bone2d_node: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ SkeletonModification2DTwoBoneIK_MethodBind_List :: struct {
   },
     get_joint_one_bone2d_node: struct{
     using _get_joint_one_bone2d_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_joint_one_bone_idx: struct{
     using _set_joint_one_bone_idx: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ SkeletonModification2DTwoBoneIK_MethodBind_List :: struct {
   },
     get_joint_one_bone_idx: struct{
     using _get_joint_one_bone_idx: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_joint_two_bone2d_node: struct{
     using _set_joint_two_bone2d_node: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ SkeletonModification2DTwoBoneIK_MethodBind_List :: struct {
   },
     get_joint_two_bone2d_node: struct{
     using _get_joint_two_bone2d_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, #by_ptr args: i64 = 0, r_ret: ^GDW.NodePath)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_joint_two_bone_idx: struct{
     using _set_joint_two_bone_idx: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ SkeletonModification2DTwoBoneIK_MethodBind_List :: struct {
   },
     get_joint_two_bone_idx: struct{
     using _get_joint_two_bone_idx: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: SkeletonModification2DTwoBoneIK, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 SkeletonModification2DTwoBoneIK_Init_ :: proc (SkeletonModification2DTwoBoneIK_methods: ^SkeletonModification2DTwoBoneIK_MethodBind_List, loc := #caller_location) {

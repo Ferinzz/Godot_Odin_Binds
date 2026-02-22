@@ -41,7 +41,7 @@ ENetConnection_MethodBind_List :: struct {
   },
   destroy: struct{
     using _destroy: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, args: rawptr = nil, r_ret: rawptr = nil)
   },
     connect_to_host: struct{
     using _connect_to_host: ^GDW.MethodBind,
@@ -53,7 +53,7 @@ ENetConnection_MethodBind_List :: struct {
   },
   flush: struct{
     using _flush: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, args: rawptr = nil, r_ret: rawptr = nil)
   },
     bandwidth_limit: struct{
     using _bandwidth_limit: ^GDW.MethodBind,
@@ -89,15 +89,15 @@ ENetConnection_MethodBind_List :: struct {
   },
   get_max_channels: struct{
     using _get_max_channels: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_local_port: struct{
     using _get_local_port: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_peers: struct{
     using _get_peers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ENetConnection, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   socket_send: struct{
     using _socket_send: ^GDW.MethodBind,

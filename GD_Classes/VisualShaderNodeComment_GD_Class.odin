@@ -14,7 +14,7 @@ VisualShaderNodeComment_MethodBind_List :: struct {
   },
     get_description: struct{
     using _get_description: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeComment, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeComment, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 VisualShaderNodeComment_Init_ :: proc (VisualShaderNodeComment_methods: ^VisualShaderNodeComment_MethodBind_List, loc := #caller_location) {

@@ -14,7 +14,7 @@ NavigationMeshSourceGeometryData3D_MethodBind_List :: struct {
   },
     get_vertices: struct{
     using _get_vertices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedFloat32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, args: rawptr = nil, r_ret: ^GDW.PackedFloat32Array)
   },
   set_indices: struct{
     using _set_indices: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ NavigationMeshSourceGeometryData3D_MethodBind_List :: struct {
   },
     get_indices: struct{
     using _get_indices: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
   append_arrays: struct{
     using _append_arrays: ^GDW.MethodBind,
@@ -30,11 +30,11 @@ NavigationMeshSourceGeometryData3D_MethodBind_List :: struct {
   },
     clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     has_data: struct{
     using _has_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   add_mesh: struct{
     using _add_mesh: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ NavigationMeshSourceGeometryData3D_MethodBind_List :: struct {
   },
     clear_projected_obstructions: struct{
     using _clear_projected_obstructions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_projected_obstructions: struct{
     using _set_projected_obstructions: ^GDW.MethodBind,
@@ -66,11 +66,11 @@ NavigationMeshSourceGeometryData3D_MethodBind_List :: struct {
   },
     get_projected_obstructions: struct{
     using _get_projected_obstructions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_bounds: struct{
     using _get_bounds: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, #by_ptr args: i64 = 0, r_ret: ^GDW.AABB)
+    m_call: proc(_:^GDW.MethodBind, obj: NavigationMeshSourceGeometryData3D, args: rawptr = nil, r_ret: ^GDW.AABB)
   },
 };
 NavigationMeshSourceGeometryData3D_Init_ :: proc (NavigationMeshSourceGeometryData3D_methods: ^NavigationMeshSourceGeometryData3D_MethodBind_List, loc := #caller_location) {

@@ -10,7 +10,7 @@ Texture2DArray :: ^GDW.Object
 Texture2DArray_MethodBind_List :: struct {
   create_placeholder: struct{
     using _create_placeholder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Texture2DArray, #by_ptr args: i64 = 0, r_ret: ^Resource)
+    m_call: proc(_:^GDW.MethodBind, obj: Texture2DArray, args: rawptr = nil, r_ret: ^Resource)
   },
 };
 Texture2DArray_Init_ :: proc (Texture2DArray_methods: ^Texture2DArray_MethodBind_List, loc := #caller_location) {

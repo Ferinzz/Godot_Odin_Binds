@@ -18,7 +18,7 @@ ConvexPolygonShape2D_MethodBind_List :: struct {
   },
     get_points: struct{
     using _get_points: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ConvexPolygonShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: ConvexPolygonShape2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
 };
 ConvexPolygonShape2D_Init_ :: proc (ConvexPolygonShape2D_methods: ^ConvexPolygonShape2D_MethodBind_List, loc := #caller_location) {

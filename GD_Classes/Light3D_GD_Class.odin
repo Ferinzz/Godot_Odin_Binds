@@ -45,7 +45,7 @@ Light3D_MethodBind_List :: struct {
   },
     is_editor_only: struct{
     using _is_editor_only: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_param: struct{
     using _set_param: ^GDW.MethodBind,
@@ -61,7 +61,7 @@ Light3D_MethodBind_List :: struct {
   },
     has_shadow: struct{
     using _has_shadow: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_negative: struct{
     using _set_negative: ^GDW.MethodBind,
@@ -69,7 +69,7 @@ Light3D_MethodBind_List :: struct {
   },
     is_negative: struct{
     using _is_negative: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_cull_mask: struct{
     using _set_cull_mask: ^GDW.MethodBind,
@@ -77,7 +77,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_cull_mask: struct{
     using _get_cull_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_enable_distance_fade: struct{
     using _set_enable_distance_fade: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ Light3D_MethodBind_List :: struct {
   },
     is_distance_fade_enabled: struct{
     using _is_distance_fade_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_distance_fade_begin: struct{
     using _set_distance_fade_begin: ^GDW.MethodBind,
@@ -93,7 +93,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_distance_fade_begin: struct{
     using _get_distance_fade_begin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_distance_fade_shadow: struct{
     using _set_distance_fade_shadow: ^GDW.MethodBind,
@@ -101,7 +101,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_distance_fade_shadow: struct{
     using _get_distance_fade_shadow: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_distance_fade_length: struct{
     using _set_distance_fade_length: ^GDW.MethodBind,
@@ -109,7 +109,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_distance_fade_length: struct{
     using _get_distance_fade_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_color: struct{
     using _set_color: ^GDW.MethodBind,
@@ -117,7 +117,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
   set_shadow_reverse_cull_face: struct{
     using _set_shadow_reverse_cull_face: ^GDW.MethodBind,
@@ -125,7 +125,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_shadow_reverse_cull_face: struct{
     using _get_shadow_reverse_cull_face: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_shadow_caster_mask: struct{
     using _set_shadow_caster_mask: ^GDW.MethodBind,
@@ -133,7 +133,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_shadow_caster_mask: struct{
     using _get_shadow_caster_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bake_mode: struct{
     using _set_bake_mode: ^GDW.MethodBind,
@@ -141,7 +141,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_bake_mode: struct{
     using _get_bake_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^Light3D_BakeMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^Light3D_BakeMode)
   },
   set_projector: struct{
     using _set_projector: ^GDW.MethodBind,
@@ -149,7 +149,7 @@ Light3D_MethodBind_List :: struct {
   },
     get_projector: struct{
     using _get_projector: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_temperature: struct{
     using _set_temperature: ^GDW.MethodBind,
@@ -157,11 +157,11 @@ Light3D_MethodBind_List :: struct {
   },
     get_temperature: struct{
     using _get_temperature: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_correlated_color: struct{
     using _get_correlated_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Light3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: Light3D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
 };
 Light3D_Init_ :: proc (Light3D_methods: ^Light3D_MethodBind_List, loc := #caller_location) {

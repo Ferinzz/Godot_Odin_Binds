@@ -19,7 +19,7 @@ Translation_MethodBind_List :: struct {
   },
     get_locale: struct{
     using _get_locale: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Translation, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Translation, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   add_message: struct{
     using _add_message: ^GDW.MethodBind,
@@ -43,15 +43,15 @@ Translation_MethodBind_List :: struct {
   },
     get_message_list: struct{
     using _get_message_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Translation, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Translation, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_translated_message_list: struct{
     using _get_translated_message_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Translation, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: Translation, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_message_count: struct{
     using _get_message_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Translation, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Translation, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_plural_rules_override: struct{
     using _set_plural_rules_override: ^GDW.MethodBind,
@@ -59,7 +59,7 @@ Translation_MethodBind_List :: struct {
   },
     get_plural_rules_override: struct{
     using _get_plural_rules_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Translation, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Translation, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 Translation_Init_ :: proc (Translation_methods: ^Translation_MethodBind_List, loc := #caller_location) {

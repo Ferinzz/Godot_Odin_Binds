@@ -14,7 +14,7 @@ CSGCylinder3D_MethodBind_List :: struct {
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_height: struct{
     using _set_height: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CSGCylinder3D_MethodBind_List :: struct {
   },
     get_height: struct{
     using _get_height: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_sides: struct{
     using _set_sides: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CSGCylinder3D_MethodBind_List :: struct {
   },
     get_sides: struct{
     using _get_sides: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_cone: struct{
     using _set_cone: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CSGCylinder3D_MethodBind_List :: struct {
   },
     is_cone: struct{
     using _is_cone: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_material: struct{
     using _set_material: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CSGCylinder3D_MethodBind_List :: struct {
   },
     get_material: struct{
     using _get_material: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, #by_ptr args: i64 = 0, r_ret: ^Material)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, args: rawptr = nil, r_ret: ^Material)
   },
   set_smooth_faces: struct{
     using _set_smooth_faces: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ CSGCylinder3D_MethodBind_List :: struct {
   },
     get_smooth_faces: struct{
     using _get_smooth_faces: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CSGCylinder3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 CSGCylinder3D_Init_ :: proc (CSGCylinder3D_methods: ^CSGCylinder3D_MethodBind_List, loc := #caller_location) {

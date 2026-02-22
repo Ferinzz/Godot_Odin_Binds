@@ -22,15 +22,15 @@ AudioStreamGeneratorPlayback_MethodBind_List :: struct {
   },
   get_frames_available: struct{
     using _get_frames_available: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGeneratorPlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGeneratorPlayback, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_skips: struct{
     using _get_skips: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGeneratorPlayback, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGeneratorPlayback, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   clear_buffer: struct{
     using _clear_buffer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGeneratorPlayback, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: AudioStreamGeneratorPlayback, args: rawptr = nil, r_ret: rawptr = nil)
   },
   };
 AudioStreamGeneratorPlayback_Init_ :: proc (AudioStreamGeneratorPlayback_methods: ^AudioStreamGeneratorPlayback_MethodBind_List, loc := #caller_location) {

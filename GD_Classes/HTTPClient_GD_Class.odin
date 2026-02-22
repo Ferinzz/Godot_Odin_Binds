@@ -108,7 +108,7 @@ HTTPClient_MethodBind_List :: struct {
   },
     get_connection: struct{
     using _get_connection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^StreamPeer)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^StreamPeer)
   },
   request_raw: struct{
     using _request_raw: ^GDW.MethodBind,
@@ -120,35 +120,35 @@ HTTPClient_MethodBind_List :: struct {
   },
   close: struct{
     using _close: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: rawptr = nil)
   },
     has_response: struct{
     using _has_response: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_response_chunked: struct{
     using _is_response_chunked: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_response_code: struct{
     using _get_response_code: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_response_headers: struct{
     using _get_response_headers: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_response_headers_as_dictionary: struct{
     using _get_response_headers_as_dictionary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_response_body_length: struct{
     using _get_response_body_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   read_response_body_chunk: struct{
     using _read_response_body_chunk: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedByteArray)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.PackedByteArray)
   },
   set_read_chunk_size: struct{
     using _set_read_chunk_size: ^GDW.MethodBind,
@@ -156,7 +156,7 @@ HTTPClient_MethodBind_List :: struct {
   },
     get_read_chunk_size: struct{
     using _get_read_chunk_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_blocking_mode: struct{
     using _set_blocking_mode: ^GDW.MethodBind,
@@ -164,15 +164,15 @@ HTTPClient_MethodBind_List :: struct {
   },
     is_blocking_mode_enabled: struct{
     using _is_blocking_mode_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_status: struct{
     using _get_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^HTTPClient_Status)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^HTTPClient_Status)
   },
   poll: struct{
     using _poll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, #by_ptr args: i64 = 0, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: HTTPClient, args: rawptr = nil, r_ret: ^GDW.Error)
   },
   set_http_proxy: struct{
     using _set_http_proxy: ^GDW.MethodBind,

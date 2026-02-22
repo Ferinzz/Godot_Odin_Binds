@@ -14,7 +14,7 @@ PlaceholderTextureLayered_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PlaceholderTextureLayered, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: PlaceholderTextureLayered, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_layers: struct{
     using _set_layers: ^GDW.MethodBind,

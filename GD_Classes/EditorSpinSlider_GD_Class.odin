@@ -20,7 +20,7 @@ EditorSpinSlider_MethodBind_List :: struct {
   },
     get_label: struct{
     using _get_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_suffix: struct{
     using _set_suffix: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ EditorSpinSlider_MethodBind_List :: struct {
   },
     get_suffix: struct{
     using _get_suffix: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_read_only: struct{
     using _set_read_only: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ EditorSpinSlider_MethodBind_List :: struct {
   },
     is_read_only: struct{
     using _is_read_only: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_flat: struct{
     using _set_flat: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ EditorSpinSlider_MethodBind_List :: struct {
   },
     is_flat: struct{
     using _is_flat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_control_state: struct{
     using _set_control_state: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ EditorSpinSlider_MethodBind_List :: struct {
   },
     get_control_state: struct{
     using _get_control_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, #by_ptr args: i64 = 0, r_ret: ^EditorSpinSlider_ControlState)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, args: rawptr = nil, r_ret: ^EditorSpinSlider_ControlState)
   },
   set_hide_slider: struct{
     using _set_hide_slider: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ EditorSpinSlider_MethodBind_List :: struct {
   },
     is_hiding_slider: struct{
     using _is_hiding_slider: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_editing_integer: struct{
     using _set_editing_integer: ^GDW.MethodBind,
@@ -68,7 +68,7 @@ EditorSpinSlider_MethodBind_List :: struct {
   },
     is_editing_integer: struct{
     using _is_editing_integer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorSpinSlider, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 EditorSpinSlider_Init_ :: proc (EditorSpinSlider_methods: ^EditorSpinSlider_MethodBind_List, loc := #caller_location) {

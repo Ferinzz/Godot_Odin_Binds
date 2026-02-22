@@ -14,7 +14,7 @@ OpenXRActionSet_MethodBind_List :: struct {
   },
     get_localized_name: struct{
     using _get_localized_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionSet, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionSet, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_priority: struct{
     using _set_priority: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ OpenXRActionSet_MethodBind_List :: struct {
   },
     get_priority: struct{
     using _get_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_action_count: struct{
     using _get_action_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionSet, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_actions: struct{
     using _set_actions: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ OpenXRActionSet_MethodBind_List :: struct {
   },
     get_actions: struct{
     using _get_actions: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionSet, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRActionSet, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   add_action: struct{
     using _add_action: ^GDW.MethodBind,

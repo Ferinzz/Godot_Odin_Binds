@@ -10,11 +10,11 @@ TextParagraph :: ^GDW.Object
 TextParagraph_MethodBind_List :: struct {
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: rawptr = nil)
   },
     duplicate: struct{
     using _duplicate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^TextParagraph)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^TextParagraph)
   },
   set_direction: struct{
     using _set_direction: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_direction: struct{
     using _get_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^TextServer_Direction)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^TextServer_Direction)
   },
   get_inferred_direction: struct{
     using _get_inferred_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^TextServer_Direction)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^TextServer_Direction)
   },
   set_custom_punctuation: struct{
     using _set_custom_punctuation: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_custom_punctuation: struct{
     using _get_custom_punctuation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_orientation: struct{
     using _set_orientation: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_orientation: struct{
     using _get_orientation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^TextServer_Orientation)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^TextServer_Orientation)
   },
   set_preserve_invalid: struct{
     using _set_preserve_invalid: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_preserve_invalid: struct{
     using _get_preserve_invalid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_preserve_control: struct{
     using _set_preserve_control: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_preserve_control: struct{
     using _get_preserve_control: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_bidi_override: struct{
     using _set_bidi_override: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ TextParagraph_MethodBind_List :: struct {
   },
   clear_dropcap: struct{
     using _clear_dropcap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: rawptr = nil)
   },
     add_string: struct{
     using _add_string: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_alignment: struct{
     using _get_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   tab_align: struct{
     using _tab_align: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_break_flags: struct{
     using _get_break_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^TextServer_LineBreakFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^TextServer_LineBreakFlag)
   },
   set_justification_flags: struct{
     using _set_justification_flags: ^GDW.MethodBind,
@@ -114,7 +114,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_justification_flags: struct{
     using _get_justification_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^TextServer_JustificationFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^TextServer_JustificationFlag)
   },
   set_text_overrun_behavior: struct{
     using _set_text_overrun_behavior: ^GDW.MethodBind,
@@ -122,7 +122,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_text_overrun_behavior: struct{
     using _get_text_overrun_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^TextServer_OverrunBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^TextServer_OverrunBehavior)
   },
   set_ellipsis_char: struct{
     using _set_ellipsis_char: ^GDW.MethodBind,
@@ -130,7 +130,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_ellipsis_char: struct{
     using _get_ellipsis_char: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_width: struct{
     using _set_width: ^GDW.MethodBind,
@@ -138,19 +138,19 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_non_wrapped_size: struct{
     using _get_non_wrapped_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_line_rid: struct{
     using _get_line_rid: ^GDW.MethodBind,
@@ -158,15 +158,15 @@ TextParagraph_MethodBind_List :: struct {
   },
   get_dropcap_rid: struct{
     using _get_dropcap_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_range: struct{
     using _get_range: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   get_line_count: struct{
     using _get_line_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_max_lines_visible: struct{
     using _set_max_lines_visible: ^GDW.MethodBind,
@@ -174,7 +174,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_max_lines_visible: struct{
     using _get_max_lines_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_line_spacing: struct{
     using _set_line_spacing: ^GDW.MethodBind,
@@ -182,7 +182,7 @@ TextParagraph_MethodBind_List :: struct {
   },
     get_line_spacing: struct{
     using _get_line_spacing: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_line_objects: struct{
     using _get_line_objects: ^GDW.MethodBind,
@@ -222,11 +222,11 @@ TextParagraph_MethodBind_List :: struct {
   },
   get_dropcap_size: struct{
     using _get_dropcap_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_dropcap_lines: struct{
     using _get_dropcap_lines: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: TextParagraph, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   draw: struct{
     using _draw: ^GDW.MethodBind,

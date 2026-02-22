@@ -10,11 +10,11 @@ OpenXRRenderModel :: ^GDW.Object
 OpenXRRenderModel_MethodBind_List :: struct {
   get_top_level_path: struct{
     using _get_top_level_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModel, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModel, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_render_model: struct{
     using _get_render_model: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModel, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRRenderModel, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_render_model: struct{
     using _set_render_model: ^GDW.MethodBind,

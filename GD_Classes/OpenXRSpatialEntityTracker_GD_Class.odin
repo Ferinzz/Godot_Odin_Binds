@@ -20,7 +20,7 @@ OpenXRSpatialEntityTracker_MethodBind_List :: struct {
   },
     get_entity: struct{
     using _get_entity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialEntityTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialEntityTracker, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   set_spatial_tracking_state: struct{
     using _set_spatial_tracking_state: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ OpenXRSpatialEntityTracker_MethodBind_List :: struct {
   },
     get_spatial_tracking_state: struct{
     using _get_spatial_tracking_state: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialEntityTracker, #by_ptr args: i64 = 0, r_ret: ^OpenXRSpatialEntityTracker_EntityTrackingState)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialEntityTracker, args: rawptr = nil, r_ret: ^OpenXRSpatialEntityTracker_EntityTrackingState)
   },
 };
 OpenXRSpatialEntityTracker_Init_ :: proc (OpenXRSpatialEntityTracker_methods: ^OpenXRSpatialEntityTracker_MethodBind_List, loc := #caller_location) {

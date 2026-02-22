@@ -14,7 +14,7 @@ JointLimitationCone3D_MethodBind_List :: struct {
   },
     get_angle: struct{
     using _get_angle: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: JointLimitationCone3D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: JointLimitationCone3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 JointLimitationCone3D_Init_ :: proc (JointLimitationCone3D_methods: ^JointLimitationCone3D_MethodBind_List, loc := #caller_location) {

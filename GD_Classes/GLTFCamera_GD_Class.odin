@@ -14,7 +14,7 @@ GLTFCamera_MethodBind_List :: struct {
   },
   to_node: struct{
     using _to_node: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, #by_ptr args: i64 = 0, r_ret: ^Camera3D)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, args: rawptr = nil, r_ret: ^Camera3D)
   },
   from_dictionary: struct{
     using _from_dictionary: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ GLTFCamera_MethodBind_List :: struct {
   },
   to_dictionary: struct{
     using _to_dictionary: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_perspective: struct{
     using _get_perspective: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_perspective: struct{
     using _set_perspective: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ GLTFCamera_MethodBind_List :: struct {
   },
     get_fov: struct{
     using _get_fov: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_fov: struct{
     using _set_fov: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ GLTFCamera_MethodBind_List :: struct {
   },
     get_size_mag: struct{
     using _get_size_mag: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_size_mag: struct{
     using _set_size_mag: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ GLTFCamera_MethodBind_List :: struct {
   },
     get_depth_far: struct{
     using _get_depth_far: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_depth_far: struct{
     using _set_depth_far: ^GDW.MethodBind,
@@ -58,7 +58,7 @@ GLTFCamera_MethodBind_List :: struct {
   },
     get_depth_near: struct{
     using _get_depth_near: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: GLTFCamera, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_depth_near: struct{
     using _set_depth_near: ^GDW.MethodBind,

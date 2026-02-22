@@ -14,7 +14,7 @@ Button_MethodBind_List :: struct {
   },
     get_text: struct{
     using _get_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_text_overrun_behavior: struct{
     using _set_text_overrun_behavior: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Button_MethodBind_List :: struct {
   },
     get_text_overrun_behavior: struct{
     using _get_text_overrun_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^TextServer_OverrunBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^TextServer_OverrunBehavior)
   },
   set_autowrap_mode: struct{
     using _set_autowrap_mode: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ Button_MethodBind_List :: struct {
   },
     get_autowrap_mode: struct{
     using _get_autowrap_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^TextServer_AutowrapMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^TextServer_AutowrapMode)
   },
   set_autowrap_trim_flags: struct{
     using _set_autowrap_trim_flags: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Button_MethodBind_List :: struct {
   },
     get_autowrap_trim_flags: struct{
     using _get_autowrap_trim_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^TextServer_LineBreakFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^TextServer_LineBreakFlag)
   },
   set_text_direction: struct{
     using _set_text_direction: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ Button_MethodBind_List :: struct {
   },
     get_text_direction: struct{
     using _get_text_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^Control_TextDirection)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^Control_TextDirection)
   },
   set_language: struct{
     using _set_language: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Button_MethodBind_List :: struct {
   },
     get_language: struct{
     using _get_language: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_button_icon: struct{
     using _set_button_icon: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ Button_MethodBind_List :: struct {
   },
     get_button_icon: struct{
     using _get_button_icon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_flat: struct{
     using _set_flat: ^GDW.MethodBind,
@@ -70,7 +70,7 @@ Button_MethodBind_List :: struct {
   },
     is_flat: struct{
     using _is_flat: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_clip_text: struct{
     using _set_clip_text: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ Button_MethodBind_List :: struct {
   },
     get_clip_text: struct{
     using _get_clip_text: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_text_alignment: struct{
     using _set_text_alignment: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ Button_MethodBind_List :: struct {
   },
     get_text_alignment: struct{
     using _get_text_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   set_icon_alignment: struct{
     using _set_icon_alignment: ^GDW.MethodBind,
@@ -94,7 +94,7 @@ Button_MethodBind_List :: struct {
   },
     get_icon_alignment: struct{
     using _get_icon_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   set_vertical_icon_alignment: struct{
     using _set_vertical_icon_alignment: ^GDW.MethodBind,
@@ -102,7 +102,7 @@ Button_MethodBind_List :: struct {
   },
     get_vertical_icon_alignment: struct{
     using _get_vertical_icon_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^GDW.VerticalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^GDW.VerticalAlignment)
   },
   set_expand_icon: struct{
     using _set_expand_icon: ^GDW.MethodBind,
@@ -110,7 +110,7 @@ Button_MethodBind_List :: struct {
   },
     is_expand_icon: struct{
     using _is_expand_icon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Button, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Button, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Button_Init_ :: proc (Button_methods: ^Button_MethodBind_List, loc := #caller_location) {

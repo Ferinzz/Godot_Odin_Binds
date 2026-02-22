@@ -14,7 +14,7 @@ Sprite3D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, #by_ptr args: i64 = 0, r_ret: ^Texture2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, args: rawptr = nil, r_ret: ^Texture2D)
   },
   set_region_enabled: struct{
     using _set_region_enabled: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ Sprite3D_MethodBind_List :: struct {
   },
     is_region_enabled: struct{
     using _is_region_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_region_rect: struct{
     using _set_region_rect: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ Sprite3D_MethodBind_List :: struct {
   },
     get_region_rect: struct{
     using _get_region_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   set_frame: struct{
     using _set_frame: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ Sprite3D_MethodBind_List :: struct {
   },
     get_frame: struct{
     using _get_frame: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_frame_coords: struct{
     using _set_frame_coords: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ Sprite3D_MethodBind_List :: struct {
   },
     get_frame_coords: struct{
     using _get_frame_coords: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_vframes: struct{
     using _set_vframes: ^GDW.MethodBind,
@@ -54,7 +54,7 @@ Sprite3D_MethodBind_List :: struct {
   },
     get_vframes: struct{
     using _get_vframes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_hframes: struct{
     using _set_hframes: ^GDW.MethodBind,
@@ -62,7 +62,7 @@ Sprite3D_MethodBind_List :: struct {
   },
     get_hframes: struct{
     using _get_hframes: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Sprite3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 Sprite3D_Init_ :: proc (Sprite3D_methods: ^Sprite3D_MethodBind_List, loc := #caller_location) {

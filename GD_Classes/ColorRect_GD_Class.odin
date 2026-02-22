@@ -14,7 +14,7 @@ ColorRect_MethodBind_List :: struct {
   },
     get_color: struct{
     using _get_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ColorRect, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: ColorRect, args: rawptr = nil, r_ret: ^GDW.Color)
   },
 };
 ColorRect_Init_ :: proc (ColorRect_methods: ^ColorRect_MethodBind_List, loc := #caller_location) {

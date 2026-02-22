@@ -10,11 +10,11 @@ TextLine :: ^GDW.Object
 TextLine_MethodBind_List :: struct {
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: rawptr = nil)
   },
     duplicate: struct{
     using _duplicate: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^TextLine)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^TextLine)
   },
   set_direction: struct{
     using _set_direction: ^GDW.MethodBind,
@@ -22,11 +22,11 @@ TextLine_MethodBind_List :: struct {
   },
     get_direction: struct{
     using _get_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^TextServer_Direction)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^TextServer_Direction)
   },
   get_inferred_direction: struct{
     using _get_inferred_direction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^TextServer_Direction)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^TextServer_Direction)
   },
   set_orientation: struct{
     using _set_orientation: ^GDW.MethodBind,
@@ -34,7 +34,7 @@ TextLine_MethodBind_List :: struct {
   },
     get_orientation: struct{
     using _get_orientation: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^TextServer_Orientation)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^TextServer_Orientation)
   },
   set_preserve_invalid: struct{
     using _set_preserve_invalid: ^GDW.MethodBind,
@@ -42,7 +42,7 @@ TextLine_MethodBind_List :: struct {
   },
     get_preserve_invalid: struct{
     using _get_preserve_invalid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_preserve_control: struct{
     using _set_preserve_control: ^GDW.MethodBind,
@@ -50,7 +50,7 @@ TextLine_MethodBind_List :: struct {
   },
     get_preserve_control: struct{
     using _get_preserve_control: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_bidi_override: struct{
     using _set_bidi_override: ^GDW.MethodBind,
@@ -78,7 +78,7 @@ TextLine_MethodBind_List :: struct {
   },
     get_width: struct{
     using _get_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_horizontal_alignment: struct{
     using _set_horizontal_alignment: ^GDW.MethodBind,
@@ -86,7 +86,7 @@ TextLine_MethodBind_List :: struct {
   },
     get_horizontal_alignment: struct{
     using _get_horizontal_alignment: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.HorizontalAlignment)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.HorizontalAlignment)
   },
   tab_align: struct{
     using _tab_align: ^GDW.MethodBind,
@@ -98,7 +98,7 @@ TextLine_MethodBind_List :: struct {
   },
     get_flags: struct{
     using _get_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^TextServer_JustificationFlag)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^TextServer_JustificationFlag)
   },
   set_text_overrun_behavior: struct{
     using _set_text_overrun_behavior: ^GDW.MethodBind,
@@ -106,7 +106,7 @@ TextLine_MethodBind_List :: struct {
   },
     get_text_overrun_behavior: struct{
     using _get_text_overrun_behavior: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^TextServer_OverrunBehavior)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^TextServer_OverrunBehavior)
   },
   set_ellipsis_char: struct{
     using _set_ellipsis_char: ^GDW.MethodBind,
@@ -114,11 +114,11 @@ TextLine_MethodBind_List :: struct {
   },
     get_ellipsis_char: struct{
     using _get_ellipsis_char: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_objects: struct{
     using _get_objects: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.Array)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_object_rect: struct{
     using _get_object_rect: ^GDW.MethodBind,
@@ -126,31 +126,31 @@ TextLine_MethodBind_List :: struct {
   },
   get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.RID)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.RID)
   },
   get_line_ascent: struct{
     using _get_line_ascent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_line_descent: struct{
     using _get_line_descent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_line_width: struct{
     using _get_line_width: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_line_underline_position: struct{
     using _get_line_underline_position: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   get_line_underline_thickness: struct{
     using _get_line_underline_thickness: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TextLine, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: TextLine, args: rawptr = nil, r_ret: ^GDW.float)
   },
   draw: struct{
     using _draw: ^GDW.MethodBind,

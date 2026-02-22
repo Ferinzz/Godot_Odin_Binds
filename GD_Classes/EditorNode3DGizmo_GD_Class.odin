@@ -53,15 +53,15 @@ EditorNode3DGizmo_MethodBind_List :: struct {
   },
     get_node_3d: struct{
     using _get_node_3d: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorNode3DGizmo, #by_ptr args: i64 = 0, r_ret: ^Node3D)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorNode3DGizmo, args: rawptr = nil, r_ret: ^Node3D)
   },
   get_plugin: struct{
     using _get_plugin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorNode3DGizmo, #by_ptr args: i64 = 0, r_ret: ^EditorNode3DGizmoPlugin)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorNode3DGizmo, args: rawptr = nil, r_ret: ^EditorNode3DGizmoPlugin)
   },
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorNode3DGizmo, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorNode3DGizmo, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_hidden: struct{
     using _set_hidden: ^GDW.MethodBind,
@@ -73,7 +73,7 @@ EditorNode3DGizmo_MethodBind_List :: struct {
   },
   get_subgizmo_selection: struct{
     using _get_subgizmo_selection: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorNode3DGizmo, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorNode3DGizmo, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
 };
 EditorNode3DGizmo_Init_ :: proc (EditorNode3DGizmo_methods: ^EditorNode3DGizmo_MethodBind_List, loc := #caller_location) {

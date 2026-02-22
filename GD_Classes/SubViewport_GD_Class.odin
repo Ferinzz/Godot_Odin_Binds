@@ -28,7 +28,7 @@ SubViewport_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_size_2d_override: struct{
     using _set_size_2d_override: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ SubViewport_MethodBind_List :: struct {
   },
     get_size_2d_override: struct{
     using _get_size_2d_override: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2i)
+    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, args: rawptr = nil, r_ret: ^GDW.Vector2i)
   },
   set_size_2d_override_stretch: struct{
     using _set_size_2d_override_stretch: ^GDW.MethodBind,
@@ -44,7 +44,7 @@ SubViewport_MethodBind_List :: struct {
   },
     is_size_2d_override_stretch_enabled: struct{
     using _is_size_2d_override_stretch_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_update_mode: struct{
     using _set_update_mode: ^GDW.MethodBind,
@@ -52,7 +52,7 @@ SubViewport_MethodBind_List :: struct {
   },
     get_update_mode: struct{
     using _get_update_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, #by_ptr args: i64 = 0, r_ret: ^SubViewport_UpdateMode)
+    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, args: rawptr = nil, r_ret: ^SubViewport_UpdateMode)
   },
   set_clear_mode: struct{
     using _set_clear_mode: ^GDW.MethodBind,
@@ -60,7 +60,7 @@ SubViewport_MethodBind_List :: struct {
   },
     get_clear_mode: struct{
     using _get_clear_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, #by_ptr args: i64 = 0, r_ret: ^SubViewport_ClearMode)
+    m_call: proc(_:^GDW.MethodBind, obj: SubViewport, args: rawptr = nil, r_ret: ^SubViewport_ClearMode)
   },
 };
 SubViewport_Init_ :: proc (SubViewport_methods: ^SubViewport_MethodBind_List, loc := #caller_location) {

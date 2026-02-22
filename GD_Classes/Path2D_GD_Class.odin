@@ -14,7 +14,7 @@ Path2D_MethodBind_List :: struct {
   },
     get_curve: struct{
     using _get_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Path2D, #by_ptr args: i64 = 0, r_ret: ^Curve2D)
+    m_call: proc(_:^GDW.MethodBind, obj: Path2D, args: rawptr = nil, r_ret: ^Curve2D)
   },
 };
 Path2D_Init_ :: proc (Path2D_methods: ^Path2D_MethodBind_List, loc := #caller_location) {

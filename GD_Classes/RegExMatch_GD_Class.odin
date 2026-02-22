@@ -10,19 +10,19 @@ RegExMatch :: ^GDW.Object
 RegExMatch_MethodBind_List :: struct {
   get_subject: struct{
     using _get_subject: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegExMatch, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: RegExMatch, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   get_group_count: struct{
     using _get_group_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegExMatch, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: RegExMatch, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_names: struct{
     using _get_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegExMatch, #by_ptr args: i64 = 0, r_ret: ^GDW.Dictionary)
+    m_call: proc(_:^GDW.MethodBind, obj: RegExMatch, args: rawptr = nil, r_ret: ^GDW.Dictionary)
   },
   get_strings: struct{
     using _get_strings: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: RegExMatch, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: RegExMatch, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
   get_string: struct{
     using _get_string: ^GDW.MethodBind,

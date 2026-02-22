@@ -20,19 +20,19 @@ Thread_MethodBind_List :: struct {
   },
   get_id: struct{
     using _get_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Thread, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: Thread, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   is_started: struct{
     using _is_started: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Thread, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Thread, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   is_alive: struct{
     using _is_alive: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Thread, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Thread, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   wait_to_finish: struct{
     using _wait_to_finish: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Thread, #by_ptr args: i64 = 0, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Thread, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
   set_thread_safety_checks_enabled: struct{
     using _set_thread_safety_checks_enabled: ^GDW.MethodBind,
@@ -40,7 +40,7 @@ Thread_MethodBind_List :: struct {
   },
     is_main_thread: struct{
     using _is_main_thread: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Thread, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Thread, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Thread_Init_ :: proc (Thread_methods: ^Thread_MethodBind_List, loc := #caller_location) {

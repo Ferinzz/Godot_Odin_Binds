@@ -14,7 +14,7 @@ InputEventPanGesture_MethodBind_List :: struct {
   },
     get_delta: struct{
     using _get_delta: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: InputEventPanGesture, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: InputEventPanGesture, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
 };
 InputEventPanGesture_Init_ :: proc (InputEventPanGesture_methods: ^InputEventPanGesture_MethodBind_List, loc := #caller_location) {

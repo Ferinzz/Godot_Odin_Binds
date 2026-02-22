@@ -29,7 +29,7 @@ Tree_ScrollHintMode :: enum i64 {
 Tree_MethodBind_List :: struct {
   clear: struct{
     using _clear: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: rawptr = nil)
   },
     create_item: struct{
     using _create_item: ^GDW.MethodBind,
@@ -37,7 +37,7 @@ Tree_MethodBind_List :: struct {
   },
   get_root: struct{
     using _get_root: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^TreeItem)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^TreeItem)
   },
   set_column_custom_minimum_width: struct{
     using _set_column_custom_minimum_width: ^GDW.MethodBind,
@@ -77,7 +77,7 @@ Tree_MethodBind_List :: struct {
   },
     is_root_hidden: struct{
     using _is_root_hidden: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_next_selected: struct{
     using _get_next_selected: ^GDW.MethodBind,
@@ -85,7 +85,7 @@ Tree_MethodBind_List :: struct {
   },
   get_selected: struct{
     using _get_selected: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^TreeItem)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^TreeItem)
   },
   set_selected: struct{
     using _set_selected: ^GDW.MethodBind,
@@ -93,11 +93,11 @@ Tree_MethodBind_List :: struct {
   },
     get_selected_column: struct{
     using _get_selected_column: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_pressed_button: struct{
     using _get_pressed_button: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_select_mode: struct{
     using _set_select_mode: ^GDW.MethodBind,
@@ -105,11 +105,11 @@ Tree_MethodBind_List :: struct {
   },
     get_select_mode: struct{
     using _get_select_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^Tree_SelectMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^Tree_SelectMode)
   },
   deselect_all: struct{
     using _deselect_all: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_columns: struct{
     using _set_columns: ^GDW.MethodBind,
@@ -117,15 +117,15 @@ Tree_MethodBind_List :: struct {
   },
     get_columns: struct{
     using _get_columns: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_edited: struct{
     using _get_edited: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^TreeItem)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^TreeItem)
   },
   get_edited_column: struct{
     using _get_edited_column: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   edit_selected: struct{
     using _edit_selected: ^GDW.MethodBind,
@@ -133,7 +133,7 @@ Tree_MethodBind_List :: struct {
   },
   get_custom_popup_rect: struct{
     using _get_custom_popup_rect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Rect2)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Rect2)
   },
   get_item_area_rect: struct{
     using _get_item_area_rect: ^GDW.MethodBind,
@@ -157,7 +157,7 @@ Tree_MethodBind_List :: struct {
   },
   ensure_cursor_is_visible: struct{
     using _ensure_cursor_is_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_column_titles_visible: struct{
     using _set_column_titles_visible: ^GDW.MethodBind,
@@ -165,7 +165,7 @@ Tree_MethodBind_List :: struct {
   },
     are_column_titles_visible: struct{
     using _are_column_titles_visible: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_column_title: struct{
     using _set_column_title: ^GDW.MethodBind,
@@ -209,7 +209,7 @@ Tree_MethodBind_List :: struct {
   },
   get_scroll: struct{
     using _get_scroll: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   scroll_to_item: struct{
     using _scroll_to_item: ^GDW.MethodBind,
@@ -221,7 +221,7 @@ Tree_MethodBind_List :: struct {
   },
     is_h_scroll_enabled: struct{
     using _is_h_scroll_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_v_scroll_enabled: struct{
     using _set_v_scroll_enabled: ^GDW.MethodBind,
@@ -229,7 +229,7 @@ Tree_MethodBind_List :: struct {
   },
     is_v_scroll_enabled: struct{
     using _is_v_scroll_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_scroll_hint_mode: struct{
     using _set_scroll_hint_mode: ^GDW.MethodBind,
@@ -237,7 +237,7 @@ Tree_MethodBind_List :: struct {
   },
     get_scroll_hint_mode: struct{
     using _get_scroll_hint_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^Tree_ScrollHintMode)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^Tree_ScrollHintMode)
   },
   set_tile_scroll_hint: struct{
     using _set_tile_scroll_hint: ^GDW.MethodBind,
@@ -245,7 +245,7 @@ Tree_MethodBind_List :: struct {
   },
     is_scroll_hint_tiled: struct{
     using _is_scroll_hint_tiled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hide_folding: struct{
     using _set_hide_folding: ^GDW.MethodBind,
@@ -253,7 +253,7 @@ Tree_MethodBind_List :: struct {
   },
     is_folding_hidden: struct{
     using _is_folding_hidden: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enable_recursive_folding: struct{
     using _set_enable_recursive_folding: ^GDW.MethodBind,
@@ -261,7 +261,7 @@ Tree_MethodBind_List :: struct {
   },
     is_recursive_folding_enabled: struct{
     using _is_recursive_folding_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_enable_drag_unfolding: struct{
     using _set_enable_drag_unfolding: ^GDW.MethodBind,
@@ -269,7 +269,7 @@ Tree_MethodBind_List :: struct {
   },
     is_drag_unfolding_enabled: struct{
     using _is_drag_unfolding_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_drop_mode_flags: struct{
     using _set_drop_mode_flags: ^GDW.MethodBind,
@@ -277,7 +277,7 @@ Tree_MethodBind_List :: struct {
   },
     get_drop_mode_flags: struct{
     using _get_drop_mode_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_allow_rmb_select: struct{
     using _set_allow_rmb_select: ^GDW.MethodBind,
@@ -285,7 +285,7 @@ Tree_MethodBind_List :: struct {
   },
     get_allow_rmb_select: struct{
     using _get_allow_rmb_select: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_reselect: struct{
     using _set_allow_reselect: ^GDW.MethodBind,
@@ -293,7 +293,7 @@ Tree_MethodBind_List :: struct {
   },
     get_allow_reselect: struct{
     using _get_allow_reselect: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_allow_search: struct{
     using _set_allow_search: ^GDW.MethodBind,
@@ -301,7 +301,7 @@ Tree_MethodBind_List :: struct {
   },
     get_allow_search: struct{
     using _get_allow_search: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_auto_tooltip: struct{
     using _set_auto_tooltip: ^GDW.MethodBind,
@@ -309,7 +309,7 @@ Tree_MethodBind_List :: struct {
   },
     is_auto_tooltip_enabled: struct{
     using _is_auto_tooltip_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tree, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Tree, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 Tree_Init_ :: proc (Tree_methods: ^Tree_MethodBind_List, loc := #caller_location) {

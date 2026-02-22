@@ -22,7 +22,7 @@ VisualShaderNodeParameter_MethodBind_List :: struct {
   },
     get_parameter_name: struct{
     using _get_parameter_name: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParameter, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_qualifier: struct{
     using _set_qualifier: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ VisualShaderNodeParameter_MethodBind_List :: struct {
   },
     get_qualifier: struct{
     using _get_qualifier: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParameter, #by_ptr args: i64 = 0, r_ret: ^VisualShaderNodeParameter_Qualifier)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParameter, args: rawptr = nil, r_ret: ^VisualShaderNodeParameter_Qualifier)
   },
   set_instance_index: struct{
     using _set_instance_index: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ VisualShaderNodeParameter_MethodBind_List :: struct {
   },
     get_instance_index: struct{
     using _get_instance_index: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParameter, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParameter, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 VisualShaderNodeParameter_Init_ :: proc (VisualShaderNodeParameter_methods: ^VisualShaderNodeParameter_MethodBind_List, loc := #caller_location) {

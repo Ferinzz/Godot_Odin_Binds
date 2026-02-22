@@ -20,7 +20,7 @@ OccluderPolygon2D_MethodBind_List :: struct {
   },
     is_closed: struct{
     using _is_closed: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderPolygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: OccluderPolygon2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_cull_mode: struct{
     using _set_cull_mode: ^GDW.MethodBind,
@@ -28,7 +28,7 @@ OccluderPolygon2D_MethodBind_List :: struct {
   },
     get_cull_mode: struct{
     using _get_cull_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderPolygon2D, #by_ptr args: i64 = 0, r_ret: ^OccluderPolygon2D_CullMode)
+    m_call: proc(_:^GDW.MethodBind, obj: OccluderPolygon2D, args: rawptr = nil, r_ret: ^OccluderPolygon2D_CullMode)
   },
   set_polygon: struct{
     using _set_polygon: ^GDW.MethodBind,
@@ -36,7 +36,7 @@ OccluderPolygon2D_MethodBind_List :: struct {
   },
     get_polygon: struct{
     using _get_polygon: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderPolygon2D, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedVector2Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OccluderPolygon2D, args: rawptr = nil, r_ret: ^GDW.PackedVector2Array)
   },
 };
 OccluderPolygon2D_Init_ :: proc (OccluderPolygon2D_methods: ^OccluderPolygon2D_MethodBind_List, loc := #caller_location) {

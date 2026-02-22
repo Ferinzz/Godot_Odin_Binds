@@ -14,7 +14,7 @@ GridContainer_MethodBind_List :: struct {
   },
     get_columns: struct{
     using _get_columns: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GridContainer, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: GridContainer, args: rawptr = nil, r_ret: ^GDW.Int)
   },
 };
 GridContainer_Init_ :: proc (GridContainer_methods: ^GridContainer_MethodBind_List, loc := #caller_location) {

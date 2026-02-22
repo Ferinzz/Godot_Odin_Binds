@@ -14,7 +14,7 @@ PhysicsMaterial_MethodBind_List :: struct {
   },
     get_friction: struct{
     using _get_friction: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_rough: struct{
     using _set_rough: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ PhysicsMaterial_MethodBind_List :: struct {
   },
     is_rough: struct{
     using _is_rough: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_bounce: struct{
     using _set_bounce: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ PhysicsMaterial_MethodBind_List :: struct {
   },
     get_bounce: struct{
     using _get_bounce: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsMaterial, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_absorbent: struct{
     using _set_absorbent: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ PhysicsMaterial_MethodBind_List :: struct {
   },
     is_absorbent: struct{
     using _is_absorbent: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: PhysicsMaterial, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: PhysicsMaterial, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 PhysicsMaterial_Init_ :: proc (PhysicsMaterial_methods: ^PhysicsMaterial_MethodBind_List, loc := #caller_location) {

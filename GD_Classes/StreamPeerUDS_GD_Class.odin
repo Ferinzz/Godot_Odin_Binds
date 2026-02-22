@@ -18,7 +18,7 @@ StreamPeerUDS_MethodBind_List :: struct {
   },
   get_connected_path: struct{
     using _get_connected_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerUDS, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: StreamPeerUDS, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 StreamPeerUDS_Init_ :: proc (StreamPeerUDS_methods: ^StreamPeerUDS_MethodBind_List, loc := #caller_location) {

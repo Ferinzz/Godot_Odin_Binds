@@ -26,7 +26,7 @@ XRController3D_MethodBind_List :: struct {
   },
   get_tracker_hand: struct{
     using _get_tracker_hand: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRController3D, #by_ptr args: i64 = 0, r_ret: ^XRPositionalTracker_TrackerHand)
+    m_call: proc(_:^GDW.MethodBind, obj: XRController3D, args: rawptr = nil, r_ret: ^XRPositionalTracker_TrackerHand)
   },
 };
 XRController3D_Init_ :: proc (XRController3D_methods: ^XRController3D_MethodBind_List, loc := #caller_location) {

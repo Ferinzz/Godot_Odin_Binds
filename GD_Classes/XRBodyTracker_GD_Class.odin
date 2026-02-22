@@ -120,7 +120,7 @@ XRBodyTracker_MethodBind_List :: struct {
   },
     get_has_tracking_data: struct{
     using _get_has_tracking_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_body_flags: struct{
     using _set_body_flags: ^GDW.MethodBind,
@@ -128,7 +128,7 @@ XRBodyTracker_MethodBind_List :: struct {
   },
     get_body_flags: struct{
     using _get_body_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: i64 = 0, r_ret: ^XRBodyTracker_BodyFlags)
+    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, args: rawptr = nil, r_ret: ^XRBodyTracker_BodyFlags)
   },
   set_joint_flags: struct{
     using _set_joint_flags: ^GDW.MethodBind,

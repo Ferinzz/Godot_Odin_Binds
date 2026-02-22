@@ -14,7 +14,7 @@ GPUParticlesAttractorVectorField3D_MethodBind_List :: struct {
   },
     get_size: struct{
     using _get_size: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractorVectorField3D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector3)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractorVectorField3D, args: rawptr = nil, r_ret: ^GDW.Vector3)
   },
   set_texture: struct{
     using _set_texture: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ GPUParticlesAttractorVectorField3D_MethodBind_List :: struct {
   },
     get_texture: struct{
     using _get_texture: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractorVectorField3D, #by_ptr args: i64 = 0, r_ret: ^Texture3D)
+    m_call: proc(_:^GDW.MethodBind, obj: GPUParticlesAttractorVectorField3D, args: rawptr = nil, r_ret: ^Texture3D)
   },
 };
 GPUParticlesAttractorVectorField3D_Init_ :: proc (GPUParticlesAttractorVectorField3D_methods: ^GPUParticlesAttractorVectorField3D_MethodBind_List, loc := #caller_location) {

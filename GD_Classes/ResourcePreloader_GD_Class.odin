@@ -30,7 +30,7 @@ ResourcePreloader_MethodBind_List :: struct {
   },
   get_resource_list: struct{
     using _get_resource_list: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ResourcePreloader, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedStringArray)
+    m_call: proc(_:^GDW.MethodBind, obj: ResourcePreloader, args: rawptr = nil, r_ret: ^GDW.PackedStringArray)
   },
 };
 ResourcePreloader_Init_ :: proc (ResourcePreloader_methods: ^ResourcePreloader_MethodBind_List, loc := #caller_location) {

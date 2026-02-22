@@ -40,7 +40,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_blend_point_count: struct{
     using _get_blend_point_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   add_triangle: struct{
     using _add_triangle: ^GDW.MethodBind,
@@ -56,7 +56,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_triangle_count: struct{
     using _get_triangle_count: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_min_space: struct{
     using _set_min_space: ^GDW.MethodBind,
@@ -64,7 +64,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_min_space: struct{
     using _get_min_space: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_max_space: struct{
     using _set_max_space: ^GDW.MethodBind,
@@ -72,7 +72,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_max_space: struct{
     using _get_max_space: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_snap: struct{
     using _set_snap: ^GDW.MethodBind,
@@ -80,7 +80,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_snap: struct{
     using _get_snap: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Vector2)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.Vector2)
   },
   set_x_label: struct{
     using _set_x_label: ^GDW.MethodBind,
@@ -88,7 +88,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_x_label: struct{
     using _get_x_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_y_label: struct{
     using _set_y_label: ^GDW.MethodBind,
@@ -96,7 +96,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_y_label: struct{
     using _get_y_label: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.gdstring)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
   set_auto_triangles: struct{
     using _set_auto_triangles: ^GDW.MethodBind,
@@ -104,7 +104,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_auto_triangles: struct{
     using _get_auto_triangles: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_blend_mode: struct{
     using _set_blend_mode: ^GDW.MethodBind,
@@ -112,7 +112,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     get_blend_mode: struct{
     using _get_blend_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^AnimationNodeBlendSpace2D_BlendMode)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^AnimationNodeBlendSpace2D_BlendMode)
   },
   set_use_sync: struct{
     using _set_use_sync: ^GDW.MethodBind,
@@ -120,7 +120,7 @@ AnimationNodeBlendSpace2D_MethodBind_List :: struct {
   },
     is_using_sync: struct{
     using _is_using_sync: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeBlendSpace2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AnimationNodeBlendSpace2D_Init_ :: proc (AnimationNodeBlendSpace2D_methods: ^AnimationNodeBlendSpace2D_MethodBind_List, loc := #caller_location) {

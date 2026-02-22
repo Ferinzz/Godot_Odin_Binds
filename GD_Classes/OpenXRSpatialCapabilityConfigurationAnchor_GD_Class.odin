@@ -10,7 +10,7 @@ OpenXRSpatialCapabilityConfigurationAnchor :: ^GDW.Object
 OpenXRSpatialCapabilityConfigurationAnchor_MethodBind_List :: struct {
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAnchor, #by_ptr args: i64 = 0, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAnchor, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
 };
 OpenXRSpatialCapabilityConfigurationAnchor_Init_ :: proc (OpenXRSpatialCapabilityConfigurationAnchor_methods: ^OpenXRSpatialCapabilityConfigurationAnchor_MethodBind_List, loc := #caller_location) {

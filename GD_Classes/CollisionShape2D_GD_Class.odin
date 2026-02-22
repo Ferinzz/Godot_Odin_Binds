@@ -14,7 +14,7 @@ CollisionShape2D_MethodBind_List :: struct {
   },
     get_shape: struct{
     using _get_shape: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, #by_ptr args: i64 = 0, r_ret: ^Shape2D)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, args: rawptr = nil, r_ret: ^Shape2D)
   },
   set_disabled: struct{
     using _set_disabled: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ CollisionShape2D_MethodBind_List :: struct {
   },
     is_disabled: struct{
     using _is_disabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_one_way_collision: struct{
     using _set_one_way_collision: ^GDW.MethodBind,
@@ -30,7 +30,7 @@ CollisionShape2D_MethodBind_List :: struct {
   },
     is_one_way_collision_enabled: struct{
     using _is_one_way_collision_enabled: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_one_way_collision_margin: struct{
     using _set_one_way_collision_margin: ^GDW.MethodBind,
@@ -38,7 +38,7 @@ CollisionShape2D_MethodBind_List :: struct {
   },
     get_one_way_collision_margin: struct{
     using _get_one_way_collision_margin: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_debug_color: struct{
     using _set_debug_color: ^GDW.MethodBind,
@@ -46,7 +46,7 @@ CollisionShape2D_MethodBind_List :: struct {
   },
     get_debug_color: struct{
     using _get_debug_color: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Color)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionShape2D, args: rawptr = nil, r_ret: ^GDW.Color)
   },
 };
 CollisionShape2D_Init_ :: proc (CollisionShape2D_methods: ^CollisionShape2D_MethodBind_List, loc := #caller_location) {

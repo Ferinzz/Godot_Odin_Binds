@@ -14,7 +14,7 @@ SeparationRayShape2D_MethodBind_List :: struct {
   },
     get_length: struct{
     using _get_length: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SeparationRayShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.float)
+    m_call: proc(_:^GDW.MethodBind, obj: SeparationRayShape2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_slide_on_slope: struct{
     using _set_slide_on_slope: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ SeparationRayShape2D_MethodBind_List :: struct {
   },
     get_slide_on_slope: struct{
     using _get_slide_on_slope: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SeparationRayShape2D, #by_ptr args: i64 = 0, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: SeparationRayShape2D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 SeparationRayShape2D_Init_ :: proc (SeparationRayShape2D_methods: ^SeparationRayShape2D_MethodBind_List, loc := #caller_location) {
