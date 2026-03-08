@@ -1,0 +1,11 @@
+[configuration]
+
+entry_symbol = "godot_entry_init"
+compatibility_minimum = "4.5"
+
+[libraries]
+linux.debug = "Classes_init_test.so"
+windows.debug = "Classes_init_test.dll"
+windows.release = "Classes_init_test.dll" : "Content/Frameworks"
+macos.release = "Classes_init_test.dylib" : "Contents/Frameworks"
+macos.debug = "Classes_init_test.dylib" : "Contents/Frameworks"
