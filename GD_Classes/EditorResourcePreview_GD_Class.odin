@@ -10,11 +10,11 @@ EditorResourcePreview :: ^GDW.Object
 EditorResourcePreview_MethodBind_List :: struct {
   queue_resource_preview: struct{
     using _queue_resource_preview: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePreview, #by_ptr args: struct{path: ^GDW.gdstring, receiver: ^GDW.Object, receiver_func: ^GDW.StringName, userdata: ^GDW.Variant, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePreview, #by_ptr args: struct{path: ^GDW.gdstring, receiver: ^^GDW.Object, receiver_func: ^GDW.StringName, userdata: ^GDW.Variant, }, r_ret: rawptr = nil)
   },
     queue_edited_resource_preview: struct{
     using _queue_edited_resource_preview: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePreview, #by_ptr args: struct{resource: ^Resource, receiver: ^GDW.Object, receiver_func: ^GDW.StringName, userdata: ^GDW.Variant, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorResourcePreview, #by_ptr args: struct{resource: ^Resource, receiver: ^^GDW.Object, receiver_func: ^GDW.StringName, userdata: ^GDW.Variant, }, r_ret: rawptr = nil)
   },
     add_preview_generator: struct{
     using _add_preview_generator: ^GDW.MethodBind,

@@ -16,7 +16,7 @@ EditorUndoRedoManager_SpecialHistory :: enum i64 {
 EditorUndoRedoManager_MethodBind_List :: struct {
   create_action: struct{
     using _create_action: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{name: ^GDW.gdstring, merge_mode: ^UndoRedo_MergeMode, custom_context: ^GDW.Object, backward_undo_ops: ^GDW.Bool, mark_unsaved: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{name: ^GDW.gdstring, merge_mode: ^UndoRedo_MergeMode, custom_context: ^^GDW.Object, backward_undo_ops: ^GDW.Bool, mark_unsaved: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     commit_action: struct{
     using _commit_action: ^GDW.MethodBind,
@@ -40,23 +40,23 @@ EditorUndoRedoManager_MethodBind_List :: struct {
   },
     add_do_property: struct{
     using _add_do_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: rawptr = nil)
   },
     add_undo_property: struct{
     using _add_undo_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: rawptr = nil)
   },
     add_do_reference: struct{
     using _add_do_reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     add_undo_reference: struct{
     using _add_undo_reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     get_object_history_id: struct{
     using _get_object_history_id: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorUndoRedoManager, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: ^GDW.Int)
   },
   get_history_undo_redo: struct{
     using _get_history_undo_redo: ^GDW.MethodBind,

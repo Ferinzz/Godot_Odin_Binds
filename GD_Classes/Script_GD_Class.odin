@@ -14,7 +14,7 @@ Script_MethodBind_List :: struct {
   },
   instance_has: struct{
     using _instance_has: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: struct{base_object: ^GDW.Object, }, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: Script, #by_ptr args: struct{base_object: ^^GDW.Object, }, r_ret: ^GDW.Bool)
   },
   has_source_code: struct{
     using _has_source_code: ^GDW.MethodBind,

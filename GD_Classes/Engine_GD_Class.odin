@@ -114,7 +114,7 @@ Engine_MethodBind_List :: struct {
   },
   register_singleton: struct{
     using _register_singleton: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: struct{name: ^GDW.StringName, instance: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: Engine, #by_ptr args: struct{name: ^GDW.StringName, instance: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     unregister_singleton: struct{
     using _unregister_singleton: ^GDW.MethodBind,

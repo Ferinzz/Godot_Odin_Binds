@@ -36,19 +36,19 @@ UndoRedo_MethodBind_List :: struct {
   },
     add_do_property: struct{
     using _add_do_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: struct{object: ^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: struct{object: ^^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: rawptr = nil)
   },
     add_undo_property: struct{
     using _add_undo_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: struct{object: ^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: struct{object: ^^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: rawptr = nil)
   },
     add_do_reference: struct{
     using _add_do_reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     add_undo_reference: struct{
     using _add_undo_reference: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: UndoRedo, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     start_force_keep_in_merge_ends: struct{
     using _start_force_keep_in_merge_ends: ^GDW.MethodBind,

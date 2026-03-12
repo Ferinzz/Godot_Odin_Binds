@@ -43,7 +43,7 @@ Tween_EaseType :: enum i64 {
 Tween_MethodBind_List :: struct {
   tween_property: struct{
     using _tween_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: struct{object: ^GDW.Object, property: ^GDW.NodePath, final_val: ^GDW.Variant, duration: ^GDW.float, }, r_ret: ^PropertyTweener)
+    m_call: proc(_:^GDW.MethodBind, obj: Tween, #by_ptr args: struct{object: ^^GDW.Object, property: ^GDW.NodePath, final_val: ^GDW.Variant, duration: ^GDW.float, }, r_ret: ^PropertyTweener)
   },
   tween_interval: struct{
     using _tween_interval: ^GDW.MethodBind,

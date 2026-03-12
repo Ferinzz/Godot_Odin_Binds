@@ -14,7 +14,7 @@ Expression_MethodBind_List :: struct {
   },
   execute: struct{
     using _execute: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Expression, #by_ptr args: struct{inputs: ^GDW.Array, base_instance: ^GDW.Object, show_error: ^GDW.Bool, const_calls_only: ^GDW.Bool, }, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: Expression, #by_ptr args: struct{inputs: ^GDW.Array, base_instance: ^^GDW.Object, show_error: ^GDW.Bool, const_calls_only: ^GDW.Bool, }, r_ret: ^GDW.Variant)
   },
   has_execute_failed: struct{
     using _has_execute_failed: ^GDW.MethodBind,

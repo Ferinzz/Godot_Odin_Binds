@@ -74,11 +74,11 @@ ClassDB_MethodBind_List :: struct {
   },
   class_get_property: struct{
     using _class_get_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ClassDB, #by_ptr args: struct{object: ^GDW.Object, property: ^GDW.StringName, }, r_ret: ^GDW.Variant)
+    m_call: proc(_:^GDW.MethodBind, obj: ClassDB, #by_ptr args: struct{object: ^^GDW.Object, property: ^GDW.StringName, }, r_ret: ^GDW.Variant)
   },
   class_set_property: struct{
     using _class_set_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ClassDB, #by_ptr args: struct{object: ^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: ClassDB, #by_ptr args: struct{object: ^^GDW.Object, property: ^GDW.StringName, value: ^GDW.Variant, }, r_ret: ^GDW.Error)
   },
   class_get_property_default_value: struct{
     using _class_get_property_default_value: ^GDW.MethodBind,

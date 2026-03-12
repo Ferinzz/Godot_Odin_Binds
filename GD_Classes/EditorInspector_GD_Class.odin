@@ -10,7 +10,7 @@ EditorInspector :: ^GDW.Object
 EditorInspector_MethodBind_List :: struct {
   edit: struct{
     using _edit: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInspector, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInspector, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     get_selected_path: struct{
     using _get_selected_path: ^GDW.MethodBind,
@@ -22,7 +22,7 @@ EditorInspector_MethodBind_List :: struct {
   },
   instantiate_property_editor: struct{
     using _instantiate_property_editor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInspector, #by_ptr args: struct{object: ^GDW.Object, type: ^GDE.VariantType, path: ^GDW.gdstring, hint: ^GDW.PropertyHint, hint_text: ^GDW.gdstring, usage: ^GDW.Int, wide: ^GDW.Bool, }, r_ret: ^EditorProperty)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInspector, #by_ptr args: struct{object: ^^GDW.Object, type: ^GDE.VariantType, path: ^GDW.gdstring, hint: ^GDW.PropertyHint, hint_text: ^GDW.gdstring, usage: ^GDW.Int, wide: ^GDW.Bool, }, r_ret: ^EditorProperty)
   },
 };
 EditorInspector_Init_ :: proc (EditorInspector_methods: ^EditorInspector_MethodBind_List, loc := #caller_location) {

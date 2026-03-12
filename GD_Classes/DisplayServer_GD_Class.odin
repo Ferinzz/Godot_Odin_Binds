@@ -1367,11 +1367,11 @@ DisplayServer_MethodBind_List :: struct {
   },
   register_additional_output: struct{
     using _register_additional_output: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     unregister_additional_output: struct{
     using _unregister_additional_output: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: DisplayServer, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     has_additional_outputs: struct{
     using _has_additional_outputs: ^GDW.MethodBind,

@@ -44,15 +44,15 @@ MultiplayerAPI_MethodBind_List :: struct {
   },
   rpc: struct{
     using _rpc: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: struct{peer: ^GDW.Int, object: ^GDW.Object, method: ^GDW.StringName, arguments: ^GDW.Array, }, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: struct{peer: ^GDW.Int, object: ^^GDW.Object, method: ^GDW.StringName, arguments: ^GDW.Array, }, r_ret: ^GDW.Error)
   },
   object_configuration_add: struct{
     using _object_configuration_add: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: struct{object: ^GDW.Object, configuration: ^GDW.Variant, }, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: struct{object: ^^GDW.Object, configuration: ^GDW.Variant, }, r_ret: ^GDW.Error)
   },
   object_configuration_remove: struct{
     using _object_configuration_remove: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: struct{object: ^GDW.Object, configuration: ^GDW.Variant, }, r_ret: ^GDW.Error)
+    m_call: proc(_:^GDW.MethodBind, obj: MultiplayerAPI, #by_ptr args: struct{object: ^^GDW.Object, configuration: ^GDW.Variant, }, r_ret: ^GDW.Error)
   },
   get_peers: struct{
     using _get_peers: ^GDW.MethodBind,

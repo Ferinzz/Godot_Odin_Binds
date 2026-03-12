@@ -150,11 +150,11 @@ EditorInterface_MethodBind_List :: struct {
   },
     popup_property_selector: struct{
     using _popup_property_selector: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^GDW.Object, callback: ^GDW.Callable, type_filter: ^GDW.PackedInt32Array, current_value: ^GDW.gdstring, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^^GDW.Object, callback: ^GDW.Callable, type_filter: ^GDW.PackedInt32Array, current_value: ^GDW.gdstring, }, r_ret: rawptr = nil)
   },
     popup_method_selector: struct{
     using _popup_method_selector: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^GDW.Object, callback: ^GDW.Callable, current_value: ^GDW.gdstring, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^^GDW.Object, callback: ^GDW.Callable, current_value: ^GDW.gdstring, }, r_ret: rawptr = nil)
   },
     popup_quick_open: struct{
     using _popup_quick_open: ^GDW.MethodBind,
@@ -190,7 +190,7 @@ EditorInterface_MethodBind_List :: struct {
   },
   inspect_object: struct{
     using _inspect_object: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^GDW.Object, for_property: ^GDW.gdstring, inspector_only: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^^GDW.Object, for_property: ^GDW.gdstring, inspector_only: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     edit_resource: struct{
     using _edit_resource: ^GDW.MethodBind,
@@ -214,11 +214,11 @@ EditorInterface_MethodBind_List :: struct {
   },
     set_object_edited: struct{
     using _set_object_edited: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^GDW.Object, edited: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^^GDW.Object, edited: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     is_object_edited: struct{
     using _is_object_edited: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^GDW.Object, }, r_ret: ^GDW.Bool)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorInterface, #by_ptr args: struct{object: ^^GDW.Object, }, r_ret: ^GDW.Bool)
   },
   get_open_scenes: struct{
     using _get_open_scenes: ^GDW.MethodBind,

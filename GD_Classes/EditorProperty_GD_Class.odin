@@ -143,7 +143,7 @@ EditorProperty_MethodBind_List :: struct {
   },
     set_object_and_property: struct{
     using _set_object_and_property: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: struct{object: ^GDW.Object, property: ^GDW.StringName, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: EditorProperty, #by_ptr args: struct{object: ^^GDW.Object, property: ^GDW.StringName, }, r_ret: rawptr = nil)
   },
     set_label_reference: struct{
     using _set_label_reference: ^GDW.MethodBind,

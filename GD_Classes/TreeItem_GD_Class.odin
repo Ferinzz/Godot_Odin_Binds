@@ -198,7 +198,7 @@ TreeItem_MethodBind_List :: struct {
   },
   set_custom_draw: struct{
     using _set_custom_draw: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: struct{column: ^GDW.Int, object: ^GDW.Object, callback: ^GDW.StringName, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: TreeItem, #by_ptr args: struct{column: ^GDW.Int, object: ^^GDW.Object, callback: ^GDW.StringName, }, r_ret: rawptr = nil)
   },
     set_custom_draw_callback: struct{
     using _set_custom_draw_callback: ^GDW.MethodBind,

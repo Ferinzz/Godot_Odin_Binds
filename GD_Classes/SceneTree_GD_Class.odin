@@ -121,7 +121,7 @@ SceneTree_MethodBind_List :: struct {
   },
   queue_delete: struct{
     using _queue_delete: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: struct{obj: ^GDW.Object, }, r_ret: rawptr = nil)
+    m_call: proc(_:^GDW.MethodBind, obj: SceneTree, #by_ptr args: struct{obj: ^^GDW.Object, }, r_ret: rawptr = nil)
   },
     call_group_flags: struct{
     using _call_group_flags: ^GDW.MethodBind,

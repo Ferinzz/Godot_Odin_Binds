@@ -84,7 +84,7 @@ CollisionObject2D_MethodBind_List :: struct {
   },
   create_shape_owner: struct{
     using _create_shape_owner: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: struct{owner: ^GDW.Object, }, r_ret: ^GDW.Int)
+    m_call: proc(_:^GDW.MethodBind, obj: CollisionObject2D, #by_ptr args: struct{owner: ^^GDW.Object, }, r_ret: ^GDW.Int)
   },
   remove_shape_owner: struct{
     using _remove_shape_owner: ^GDW.MethodBind,
