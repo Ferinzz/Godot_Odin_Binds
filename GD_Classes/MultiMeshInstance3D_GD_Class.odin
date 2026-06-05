@@ -1,26 +1,27 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-MultiMeshInstance3D :: ^GDW.Object
 
 MultiMeshInstance3D_MethodBind_List :: struct {
   set_multimesh: struct{
     using _set_multimesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMeshInstance3D, #by_ptr args: struct{multimesh: ^MultiMesh, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: MultiMeshInstance3D, #by_ptr args: struct{multimesh: ^MultiMesh, }, r_ret: rawptr = nil)
   },
     get_multimesh: struct{
     using _get_multimesh: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: MultiMeshInstance3D, args: rawptr = nil, r_ret: ^MultiMesh)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: MultiMeshInstance3D, args: rawptr = nil, r_ret: ^MultiMesh)
   },
 };
 MultiMeshInstance3D_Init_ :: proc (MultiMeshInstance3D_methods: ^MultiMeshInstance3D_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  MultiMeshInstance3D_methods.set_multimesh._set_multimesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.MultiMeshInstance3D, "set_multimesh", 2246127404, loc))
+  MultiMeshInstance3D_methods.set_multimesh._set_multimesh = (cast(^GDW.MethodBind)classDBGetMethodBind3(.MultiMeshInstance3D, "set_multimesh", 2246127404, loc))
   MultiMeshInstance3D_methods.set_multimesh.m_call = cast(type_of(MultiMeshInstance3D_methods.set_multimesh.m_call))MB_ptr_call
-  MultiMeshInstance3D_methods.get_multimesh._get_multimesh = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.MultiMeshInstance3D, "get_multimesh", 1385450523, loc))
+  MultiMeshInstance3D_methods.get_multimesh._get_multimesh = (cast(^GDW.MethodBind)classDBGetMethodBind3(.MultiMeshInstance3D, "get_multimesh", 1385450523, loc))
   MultiMeshInstance3D_methods.get_multimesh.m_call = cast(type_of(MultiMeshInstance3D_methods.get_multimesh.m_call))MB_ptr_call
 };

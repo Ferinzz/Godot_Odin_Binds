@@ -1,62 +1,63 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-OccluderInstance3D :: ^GDW.Object
 
 OccluderInstance3D_MethodBind_List :: struct {
   set_bake_mask: struct{
     using _set_bake_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{mask: ^GDW.Int, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{mask: ^GDW.Int, }, r_ret: rawptr = nil)
   },
     get_bake_mask: struct{
     using _get_bake_mask: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^GDW.Int)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_bake_mask_value: struct{
     using _set_bake_mask_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{layer_number: ^GDW.Int, value: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{layer_number: ^GDW.Int, value: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     get_bake_mask_value: struct{
     using _get_bake_mask_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{layer_number: ^GDW.Int, }, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{layer_number: ^GDW.Int, }, r_ret: ^GDW.Bool)
   },
   set_bake_simplification_distance: struct{
     using _set_bake_simplification_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{simplification_distance: ^GDW.float, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{simplification_distance: ^GDW.float, }, r_ret: rawptr = nil)
   },
     get_bake_simplification_distance: struct{
     using _get_bake_simplification_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_occluder: struct{
     using _set_occluder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{occluder: ^Occluder3D, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OccluderInstance3D, #by_ptr args: struct{occluder: ^Occluder3D, }, r_ret: rawptr = nil)
   },
     get_occluder: struct{
     using _get_occluder: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^Occluder3D)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OccluderInstance3D, args: rawptr = nil, r_ret: ^Occluder3D)
   },
 };
 OccluderInstance3D_Init_ :: proc (OccluderInstance3D_methods: ^OccluderInstance3D_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  OccluderInstance3D_methods.set_bake_mask._set_bake_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OccluderInstance3D, "set_bake_mask", 1286410249, loc))
+  OccluderInstance3D_methods.set_bake_mask._set_bake_mask = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OccluderInstance3D, "set_bake_mask", 1286410249, loc))
   OccluderInstance3D_methods.set_bake_mask.m_call = cast(type_of(OccluderInstance3D_methods.set_bake_mask.m_call))MB_ptr_call
-  OccluderInstance3D_methods.get_bake_mask._get_bake_mask = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OccluderInstance3D, "get_bake_mask", 3905245786, loc))
+  OccluderInstance3D_methods.get_bake_mask._get_bake_mask = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OccluderInstance3D, "get_bake_mask", 3905245786, loc))
   OccluderInstance3D_methods.get_bake_mask.m_call = cast(type_of(OccluderInstance3D_methods.get_bake_mask.m_call))MB_ptr_call
-  OccluderInstance3D_methods.set_bake_mask_value._set_bake_mask_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OccluderInstance3D, "set_bake_mask_value", 300928843, loc))
+  OccluderInstance3D_methods.set_bake_mask_value._set_bake_mask_value = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OccluderInstance3D, "set_bake_mask_value", 300928843, loc))
   OccluderInstance3D_methods.set_bake_mask_value.m_call = cast(type_of(OccluderInstance3D_methods.set_bake_mask_value.m_call))MB_ptr_call
-  OccluderInstance3D_methods.get_bake_mask_value._get_bake_mask_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OccluderInstance3D, "get_bake_mask_value", 1116898809, loc))
+  OccluderInstance3D_methods.get_bake_mask_value._get_bake_mask_value = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OccluderInstance3D, "get_bake_mask_value", 1116898809, loc))
   OccluderInstance3D_methods.get_bake_mask_value.m_call = cast(type_of(OccluderInstance3D_methods.get_bake_mask_value.m_call))MB_ptr_call
-  OccluderInstance3D_methods.set_bake_simplification_distance._set_bake_simplification_distance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OccluderInstance3D, "set_bake_simplification_distance", 373806689, loc))
+  OccluderInstance3D_methods.set_bake_simplification_distance._set_bake_simplification_distance = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OccluderInstance3D, "set_bake_simplification_distance", 373806689, loc))
   OccluderInstance3D_methods.set_bake_simplification_distance.m_call = cast(type_of(OccluderInstance3D_methods.set_bake_simplification_distance.m_call))MB_ptr_call
-  OccluderInstance3D_methods.get_bake_simplification_distance._get_bake_simplification_distance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OccluderInstance3D, "get_bake_simplification_distance", 1740695150, loc))
+  OccluderInstance3D_methods.get_bake_simplification_distance._get_bake_simplification_distance = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OccluderInstance3D, "get_bake_simplification_distance", 1740695150, loc))
   OccluderInstance3D_methods.get_bake_simplification_distance.m_call = cast(type_of(OccluderInstance3D_methods.get_bake_simplification_distance.m_call))MB_ptr_call
-  OccluderInstance3D_methods.set_occluder._set_occluder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OccluderInstance3D, "set_occluder", 1664878165, loc))
+  OccluderInstance3D_methods.set_occluder._set_occluder = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OccluderInstance3D, "set_occluder", 1664878165, loc))
   OccluderInstance3D_methods.set_occluder.m_call = cast(type_of(OccluderInstance3D_methods.set_occluder.m_call))MB_ptr_call
-  OccluderInstance3D_methods.get_occluder._get_occluder = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OccluderInstance3D, "get_occluder", 1696836198, loc))
+  OccluderInstance3D_methods.get_occluder._get_occluder = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OccluderInstance3D, "get_occluder", 1696836198, loc))
   OccluderInstance3D_methods.get_occluder.m_call = cast(type_of(OccluderInstance3D_methods.get_occluder.m_call))MB_ptr_call
 };

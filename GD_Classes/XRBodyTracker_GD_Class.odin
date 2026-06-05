@@ -1,11 +1,12 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-XRBodyTracker :: ^GDW.Object
 
 
 XRBodyTracker_BodyFlags_Flags :: bit_set [XRBodyTracker_BodyFlags; i64]
@@ -116,53 +117,53 @@ XRBodyTracker_JointFlags :: enum i64 {
 XRBodyTracker_MethodBind_List :: struct {
   set_has_tracking_data: struct{
     using _set_has_tracking_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{has_data: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{has_data: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     get_has_tracking_data: struct{
     using _get_has_tracking_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, args: rawptr = nil, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRBodyTracker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_body_flags: struct{
     using _set_body_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{flags: ^XRBodyTracker_BodyFlags, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{flags: ^XRBodyTracker_BodyFlags, }, r_ret: rawptr = nil)
   },
     get_body_flags: struct{
     using _get_body_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, args: rawptr = nil, r_ret: ^XRBodyTracker_BodyFlags)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRBodyTracker, args: rawptr = nil, r_ret: ^XRBodyTracker_BodyFlags)
   },
   set_joint_flags: struct{
     using _set_joint_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{joint: ^XRBodyTracker_Joint, flags: ^XRBodyTracker_JointFlags, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{joint: ^XRBodyTracker_Joint, flags: ^XRBodyTracker_JointFlags, }, r_ret: rawptr = nil)
   },
     get_joint_flags: struct{
     using _get_joint_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{joint: ^XRBodyTracker_Joint, }, r_ret: ^XRBodyTracker_JointFlags)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{joint: ^XRBodyTracker_Joint, }, r_ret: ^XRBodyTracker_JointFlags)
   },
   set_joint_transform: struct{
     using _set_joint_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{joint: ^XRBodyTracker_Joint, transform: ^GDW.Transform3D, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{joint: ^XRBodyTracker_Joint, transform: ^GDW.Transform3D, }, r_ret: rawptr = nil)
   },
     get_joint_transform: struct{
     using _get_joint_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{joint: ^XRBodyTracker_Joint, }, r_ret: ^GDW.Transform3D)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRBodyTracker, #by_ptr args: struct{joint: ^XRBodyTracker_Joint, }, r_ret: ^GDW.Transform3D)
   },
 };
 XRBodyTracker_Init_ :: proc (XRBodyTracker_methods: ^XRBodyTracker_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  XRBodyTracker_methods.set_has_tracking_data._set_has_tracking_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRBodyTracker, "set_has_tracking_data", 2586408642, loc))
+  XRBodyTracker_methods.set_has_tracking_data._set_has_tracking_data = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRBodyTracker, "set_has_tracking_data", 2586408642, loc))
   XRBodyTracker_methods.set_has_tracking_data.m_call = cast(type_of(XRBodyTracker_methods.set_has_tracking_data.m_call))MB_ptr_call
-  XRBodyTracker_methods.get_has_tracking_data._get_has_tracking_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRBodyTracker, "get_has_tracking_data", 36873697, loc))
+  XRBodyTracker_methods.get_has_tracking_data._get_has_tracking_data = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRBodyTracker, "get_has_tracking_data", 36873697, loc))
   XRBodyTracker_methods.get_has_tracking_data.m_call = cast(type_of(XRBodyTracker_methods.get_has_tracking_data.m_call))MB_ptr_call
-  XRBodyTracker_methods.set_body_flags._set_body_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRBodyTracker, "set_body_flags", 2103235750, loc))
+  XRBodyTracker_methods.set_body_flags._set_body_flags = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRBodyTracker, "set_body_flags", 2103235750, loc))
   XRBodyTracker_methods.set_body_flags.m_call = cast(type_of(XRBodyTracker_methods.set_body_flags.m_call))MB_ptr_call
-  XRBodyTracker_methods.get_body_flags._get_body_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRBodyTracker, "get_body_flags", 3543166366, loc))
+  XRBodyTracker_methods.get_body_flags._get_body_flags = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRBodyTracker, "get_body_flags", 3543166366, loc))
   XRBodyTracker_methods.get_body_flags.m_call = cast(type_of(XRBodyTracker_methods.get_body_flags.m_call))MB_ptr_call
-  XRBodyTracker_methods.set_joint_flags._set_joint_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRBodyTracker, "set_joint_flags", 592144999, loc))
+  XRBodyTracker_methods.set_joint_flags._set_joint_flags = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRBodyTracker, "set_joint_flags", 592144999, loc))
   XRBodyTracker_methods.set_joint_flags.m_call = cast(type_of(XRBodyTracker_methods.set_joint_flags.m_call))MB_ptr_call
-  XRBodyTracker_methods.get_joint_flags._get_joint_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRBodyTracker, "get_joint_flags", 1030162609, loc))
+  XRBodyTracker_methods.get_joint_flags._get_joint_flags = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRBodyTracker, "get_joint_flags", 1030162609, loc))
   XRBodyTracker_methods.get_joint_flags.m_call = cast(type_of(XRBodyTracker_methods.get_joint_flags.m_call))MB_ptr_call
-  XRBodyTracker_methods.set_joint_transform._set_joint_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRBodyTracker, "set_joint_transform", 2635424328, loc))
+  XRBodyTracker_methods.set_joint_transform._set_joint_transform = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRBodyTracker, "set_joint_transform", 2635424328, loc))
   XRBodyTracker_methods.set_joint_transform.m_call = cast(type_of(XRBodyTracker_methods.set_joint_transform.m_call))MB_ptr_call
-  XRBodyTracker_methods.get_joint_transform._get_joint_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRBodyTracker, "get_joint_transform", 3474811534, loc))
+  XRBodyTracker_methods.get_joint_transform._get_joint_transform = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRBodyTracker, "get_joint_transform", 3474811534, loc))
   XRBodyTracker_methods.get_joint_transform.m_call = cast(type_of(XRBodyTracker_methods.get_joint_transform.m_call))MB_ptr_call
 };

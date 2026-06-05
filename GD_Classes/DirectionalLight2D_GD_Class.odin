@@ -1,26 +1,27 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-DirectionalLight2D :: ^GDW.Object
 
 DirectionalLight2D_MethodBind_List :: struct {
   set_max_distance: struct{
     using _set_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight2D, #by_ptr args: struct{pixels: ^GDW.float, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: DirectionalLight2D, #by_ptr args: struct{pixels: ^GDW.float, }, r_ret: rawptr = nil)
   },
     get_max_distance: struct{
     using _get_max_distance: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: DirectionalLight2D, args: rawptr = nil, r_ret: ^GDW.float)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: DirectionalLight2D, args: rawptr = nil, r_ret: ^GDW.float)
   },
 };
 DirectionalLight2D_Init_ :: proc (DirectionalLight2D_methods: ^DirectionalLight2D_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  DirectionalLight2D_methods.set_max_distance._set_max_distance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.DirectionalLight2D, "set_max_distance", 373806689, loc))
+  DirectionalLight2D_methods.set_max_distance._set_max_distance = (cast(^GDW.MethodBind)classDBGetMethodBind3(.DirectionalLight2D, "set_max_distance", 373806689, loc))
   DirectionalLight2D_methods.set_max_distance.m_call = cast(type_of(DirectionalLight2D_methods.set_max_distance.m_call))MB_ptr_call
-  DirectionalLight2D_methods.get_max_distance._get_max_distance = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.DirectionalLight2D, "get_max_distance", 1740695150, loc))
+  DirectionalLight2D_methods.get_max_distance._get_max_distance = (cast(^GDW.MethodBind)classDBGetMethodBind3(.DirectionalLight2D, "get_max_distance", 1740695150, loc))
   DirectionalLight2D_methods.get_max_distance.m_call = cast(type_of(DirectionalLight2D_methods.get_max_distance.m_call))MB_ptr_call
 };

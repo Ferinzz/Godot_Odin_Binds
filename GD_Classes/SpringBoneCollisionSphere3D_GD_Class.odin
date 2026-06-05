@@ -1,38 +1,39 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-SpringBoneCollisionSphere3D :: ^GDW.Object
 
 SpringBoneCollisionSphere3D_MethodBind_List :: struct {
   set_radius: struct{
     using _set_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollisionSphere3D, #by_ptr args: struct{radius: ^GDW.float, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: SpringBoneCollisionSphere3D, #by_ptr args: struct{radius: ^GDW.float, }, r_ret: rawptr = nil)
   },
     get_radius: struct{
     using _get_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollisionSphere3D, args: rawptr = nil, r_ret: ^GDW.float)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: SpringBoneCollisionSphere3D, args: rawptr = nil, r_ret: ^GDW.float)
   },
   set_inside: struct{
     using _set_inside: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollisionSphere3D, #by_ptr args: struct{enabled: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: SpringBoneCollisionSphere3D, #by_ptr args: struct{enabled: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     is_inside: struct{
     using _is_inside: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: SpringBoneCollisionSphere3D, args: rawptr = nil, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: SpringBoneCollisionSphere3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 SpringBoneCollisionSphere3D_Init_ :: proc (SpringBoneCollisionSphere3D_methods: ^SpringBoneCollisionSphere3D_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  SpringBoneCollisionSphere3D_methods.set_radius._set_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SpringBoneCollisionSphere3D, "set_radius", 373806689, loc))
+  SpringBoneCollisionSphere3D_methods.set_radius._set_radius = (cast(^GDW.MethodBind)classDBGetMethodBind3(.SpringBoneCollisionSphere3D, "set_radius", 373806689, loc))
   SpringBoneCollisionSphere3D_methods.set_radius.m_call = cast(type_of(SpringBoneCollisionSphere3D_methods.set_radius.m_call))MB_ptr_call
-  SpringBoneCollisionSphere3D_methods.get_radius._get_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SpringBoneCollisionSphere3D, "get_radius", 1740695150, loc))
+  SpringBoneCollisionSphere3D_methods.get_radius._get_radius = (cast(^GDW.MethodBind)classDBGetMethodBind3(.SpringBoneCollisionSphere3D, "get_radius", 1740695150, loc))
   SpringBoneCollisionSphere3D_methods.get_radius.m_call = cast(type_of(SpringBoneCollisionSphere3D_methods.get_radius.m_call))MB_ptr_call
-  SpringBoneCollisionSphere3D_methods.set_inside._set_inside = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SpringBoneCollisionSphere3D, "set_inside", 2586408642, loc))
+  SpringBoneCollisionSphere3D_methods.set_inside._set_inside = (cast(^GDW.MethodBind)classDBGetMethodBind3(.SpringBoneCollisionSphere3D, "set_inside", 2586408642, loc))
   SpringBoneCollisionSphere3D_methods.set_inside.m_call = cast(type_of(SpringBoneCollisionSphere3D_methods.set_inside.m_call))MB_ptr_call
-  SpringBoneCollisionSphere3D_methods.is_inside._is_inside = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.SpringBoneCollisionSphere3D, "is_inside", 36873697, loc))
+  SpringBoneCollisionSphere3D_methods.is_inside._is_inside = (cast(^GDW.MethodBind)classDBGetMethodBind3(.SpringBoneCollisionSphere3D, "is_inside", 36873697, loc))
   SpringBoneCollisionSphere3D_methods.is_inside.m_call = cast(type_of(SpringBoneCollisionSphere3D_methods.is_inside.m_call))MB_ptr_call
 };

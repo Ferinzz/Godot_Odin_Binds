@@ -1,26 +1,27 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-Path2D :: ^GDW.Object
 
 Path2D_MethodBind_List :: struct {
   set_curve: struct{
     using _set_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Path2D, #by_ptr args: struct{curve: ^Curve2D, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Path2D, #by_ptr args: struct{curve: ^Curve2D, }, r_ret: rawptr = nil)
   },
     get_curve: struct{
     using _get_curve: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Path2D, args: rawptr = nil, r_ret: ^Curve2D)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Path2D, args: rawptr = nil, r_ret: ^Curve2D)
   },
 };
 Path2D_Init_ :: proc (Path2D_methods: ^Path2D_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  Path2D_methods.set_curve._set_curve = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Path2D, "set_curve", 659985499, loc))
+  Path2D_methods.set_curve._set_curve = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Path2D, "set_curve", 659985499, loc))
   Path2D_methods.set_curve.m_call = cast(type_of(Path2D_methods.set_curve.m_call))MB_ptr_call
-  Path2D_methods.get_curve._get_curve = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Path2D, "get_curve", 660369445, loc))
+  Path2D_methods.get_curve._get_curve = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Path2D, "get_curve", 660369445, loc))
   Path2D_methods.get_curve.m_call = cast(type_of(Path2D_methods.get_curve.m_call))MB_ptr_call
 };

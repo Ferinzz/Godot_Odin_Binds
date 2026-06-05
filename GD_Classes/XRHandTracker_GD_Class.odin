@@ -1,11 +1,12 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-XRHandTracker :: ^GDW.Object
 
 
 XRHandTracker_HandTrackingSource :: enum i64 {
@@ -58,89 +59,89 @@ XRHandTracker_HandJointFlags :: enum i64 {
 XRHandTracker_MethodBind_List :: struct {
   set_has_tracking_data: struct{
     using _set_has_tracking_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{has_data: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{has_data: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     get_has_tracking_data: struct{
     using _get_has_tracking_data: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, args: rawptr = nil, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   set_hand_tracking_source: struct{
     using _set_hand_tracking_source: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{source: ^XRHandTracker_HandTrackingSource, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{source: ^XRHandTracker_HandTrackingSource, }, r_ret: rawptr = nil)
   },
     get_hand_tracking_source: struct{
     using _get_hand_tracking_source: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, args: rawptr = nil, r_ret: ^XRHandTracker_HandTrackingSource)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, args: rawptr = nil, r_ret: ^XRHandTracker_HandTrackingSource)
   },
   set_hand_joint_flags: struct{
     using _set_hand_joint_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, flags: ^XRHandTracker_HandJointFlags, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, flags: ^XRHandTracker_HandJointFlags, }, r_ret: rawptr = nil)
   },
     get_hand_joint_flags: struct{
     using _get_hand_joint_flags: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^XRHandTracker_HandJointFlags)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^XRHandTracker_HandJointFlags)
   },
   set_hand_joint_transform: struct{
     using _set_hand_joint_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, transform: ^GDW.Transform3D, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, transform: ^GDW.Transform3D, }, r_ret: rawptr = nil)
   },
     get_hand_joint_transform: struct{
     using _get_hand_joint_transform: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^GDW.Transform3D)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^GDW.Transform3D)
   },
   set_hand_joint_radius: struct{
     using _set_hand_joint_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, radius: ^GDW.float, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, radius: ^GDW.float, }, r_ret: rawptr = nil)
   },
     get_hand_joint_radius: struct{
     using _get_hand_joint_radius: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^GDW.float)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^GDW.float)
   },
   set_hand_joint_linear_velocity: struct{
     using _set_hand_joint_linear_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, linear_velocity: ^GDW.Vector3, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, linear_velocity: ^GDW.Vector3, }, r_ret: rawptr = nil)
   },
     get_hand_joint_linear_velocity: struct{
     using _get_hand_joint_linear_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^GDW.Vector3)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^GDW.Vector3)
   },
   set_hand_joint_angular_velocity: struct{
     using _set_hand_joint_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, angular_velocity: ^GDW.Vector3, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, angular_velocity: ^GDW.Vector3, }, r_ret: rawptr = nil)
   },
     get_hand_joint_angular_velocity: struct{
     using _get_hand_joint_angular_velocity: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^GDW.Vector3)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandTracker, #by_ptr args: struct{joint: ^XRHandTracker_HandJoint, }, r_ret: ^GDW.Vector3)
   },
 };
 XRHandTracker_Init_ :: proc (XRHandTracker_methods: ^XRHandTracker_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  XRHandTracker_methods.set_has_tracking_data._set_has_tracking_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "set_has_tracking_data", 2586408642, loc))
+  XRHandTracker_methods.set_has_tracking_data._set_has_tracking_data = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "set_has_tracking_data", 2586408642, loc))
   XRHandTracker_methods.set_has_tracking_data.m_call = cast(type_of(XRHandTracker_methods.set_has_tracking_data.m_call))MB_ptr_call
-  XRHandTracker_methods.get_has_tracking_data._get_has_tracking_data = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "get_has_tracking_data", 36873697, loc))
+  XRHandTracker_methods.get_has_tracking_data._get_has_tracking_data = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "get_has_tracking_data", 36873697, loc))
   XRHandTracker_methods.get_has_tracking_data.m_call = cast(type_of(XRHandTracker_methods.get_has_tracking_data.m_call))MB_ptr_call
-  XRHandTracker_methods.set_hand_tracking_source._set_hand_tracking_source = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "set_hand_tracking_source", 2958308861, loc))
+  XRHandTracker_methods.set_hand_tracking_source._set_hand_tracking_source = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "set_hand_tracking_source", 2958308861, loc))
   XRHandTracker_methods.set_hand_tracking_source.m_call = cast(type_of(XRHandTracker_methods.set_hand_tracking_source.m_call))MB_ptr_call
-  XRHandTracker_methods.get_hand_tracking_source._get_hand_tracking_source = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "get_hand_tracking_source", 2475045250, loc))
+  XRHandTracker_methods.get_hand_tracking_source._get_hand_tracking_source = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "get_hand_tracking_source", 2475045250, loc))
   XRHandTracker_methods.get_hand_tracking_source.m_call = cast(type_of(XRHandTracker_methods.get_hand_tracking_source.m_call))MB_ptr_call
-  XRHandTracker_methods.set_hand_joint_flags._set_hand_joint_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_flags", 3028437365, loc))
+  XRHandTracker_methods.set_hand_joint_flags._set_hand_joint_flags = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_flags", 3028437365, loc))
   XRHandTracker_methods.set_hand_joint_flags.m_call = cast(type_of(XRHandTracker_methods.set_hand_joint_flags.m_call))MB_ptr_call
-  XRHandTracker_methods.get_hand_joint_flags._get_hand_joint_flags = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_flags", 1730972401, loc))
+  XRHandTracker_methods.get_hand_joint_flags._get_hand_joint_flags = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_flags", 1730972401, loc))
   XRHandTracker_methods.get_hand_joint_flags.m_call = cast(type_of(XRHandTracker_methods.get_hand_joint_flags.m_call))MB_ptr_call
-  XRHandTracker_methods.set_hand_joint_transform._set_hand_joint_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_transform", 2529959613, loc))
+  XRHandTracker_methods.set_hand_joint_transform._set_hand_joint_transform = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_transform", 2529959613, loc))
   XRHandTracker_methods.set_hand_joint_transform.m_call = cast(type_of(XRHandTracker_methods.set_hand_joint_transform.m_call))MB_ptr_call
-  XRHandTracker_methods.get_hand_joint_transform._get_hand_joint_transform = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_transform", 1090840196, loc))
+  XRHandTracker_methods.get_hand_joint_transform._get_hand_joint_transform = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_transform", 1090840196, loc))
   XRHandTracker_methods.get_hand_joint_transform.m_call = cast(type_of(XRHandTracker_methods.get_hand_joint_transform.m_call))MB_ptr_call
-  XRHandTracker_methods.set_hand_joint_radius._set_hand_joint_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_radius", 2723659615, loc))
+  XRHandTracker_methods.set_hand_joint_radius._set_hand_joint_radius = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_radius", 2723659615, loc))
   XRHandTracker_methods.set_hand_joint_radius.m_call = cast(type_of(XRHandTracker_methods.set_hand_joint_radius.m_call))MB_ptr_call
-  XRHandTracker_methods.get_hand_joint_radius._get_hand_joint_radius = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_radius", 3400025734, loc))
+  XRHandTracker_methods.get_hand_joint_radius._get_hand_joint_radius = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_radius", 3400025734, loc))
   XRHandTracker_methods.get_hand_joint_radius.m_call = cast(type_of(XRHandTracker_methods.get_hand_joint_radius.m_call))MB_ptr_call
-  XRHandTracker_methods.set_hand_joint_linear_velocity._set_hand_joint_linear_velocity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_linear_velocity", 1978646737, loc))
+  XRHandTracker_methods.set_hand_joint_linear_velocity._set_hand_joint_linear_velocity = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_linear_velocity", 1978646737, loc))
   XRHandTracker_methods.set_hand_joint_linear_velocity.m_call = cast(type_of(XRHandTracker_methods.set_hand_joint_linear_velocity.m_call))MB_ptr_call
-  XRHandTracker_methods.get_hand_joint_linear_velocity._get_hand_joint_linear_velocity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_linear_velocity", 547240792, loc))
+  XRHandTracker_methods.get_hand_joint_linear_velocity._get_hand_joint_linear_velocity = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_linear_velocity", 547240792, loc))
   XRHandTracker_methods.get_hand_joint_linear_velocity.m_call = cast(type_of(XRHandTracker_methods.get_hand_joint_linear_velocity.m_call))MB_ptr_call
-  XRHandTracker_methods.set_hand_joint_angular_velocity._set_hand_joint_angular_velocity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_angular_velocity", 1978646737, loc))
+  XRHandTracker_methods.set_hand_joint_angular_velocity._set_hand_joint_angular_velocity = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "set_hand_joint_angular_velocity", 1978646737, loc))
   XRHandTracker_methods.set_hand_joint_angular_velocity.m_call = cast(type_of(XRHandTracker_methods.set_hand_joint_angular_velocity.m_call))MB_ptr_call
-  XRHandTracker_methods.get_hand_joint_angular_velocity._get_hand_joint_angular_velocity = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_angular_velocity", 547240792, loc))
+  XRHandTracker_methods.get_hand_joint_angular_velocity._get_hand_joint_angular_velocity = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandTracker, "get_hand_joint_angular_velocity", 547240792, loc))
   XRHandTracker_methods.get_hand_joint_angular_velocity.m_call = cast(type_of(XRHandTracker_methods.get_hand_joint_angular_velocity.m_call))MB_ptr_call
 };

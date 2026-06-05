@@ -1,26 +1,27 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-VisualShaderNodeParticleMultiplyByAxisAngle :: ^GDW.Object
 
 VisualShaderNodeParticleMultiplyByAxisAngle_MethodBind_List :: struct {
   set_degrees_mode: struct{
     using _set_degrees_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMultiplyByAxisAngle, #by_ptr args: struct{enabled: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: VisualShaderNodeParticleMultiplyByAxisAngle, #by_ptr args: struct{enabled: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     is_degrees_mode: struct{
     using _is_degrees_mode: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeParticleMultiplyByAxisAngle, args: rawptr = nil, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: VisualShaderNodeParticleMultiplyByAxisAngle, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 VisualShaderNodeParticleMultiplyByAxisAngle_Init_ :: proc (VisualShaderNodeParticleMultiplyByAxisAngle_methods: ^VisualShaderNodeParticleMultiplyByAxisAngle_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  VisualShaderNodeParticleMultiplyByAxisAngle_methods.set_degrees_mode._set_degrees_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeParticleMultiplyByAxisAngle, "set_degrees_mode", 2586408642, loc))
+  VisualShaderNodeParticleMultiplyByAxisAngle_methods.set_degrees_mode._set_degrees_mode = (cast(^GDW.MethodBind)classDBGetMethodBind3(.VisualShaderNodeParticleMultiplyByAxisAngle, "set_degrees_mode", 2586408642, loc))
   VisualShaderNodeParticleMultiplyByAxisAngle_methods.set_degrees_mode.m_call = cast(type_of(VisualShaderNodeParticleMultiplyByAxisAngle_methods.set_degrees_mode.m_call))MB_ptr_call
-  VisualShaderNodeParticleMultiplyByAxisAngle_methods.is_degrees_mode._is_degrees_mode = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeParticleMultiplyByAxisAngle, "is_degrees_mode", 36873697, loc))
+  VisualShaderNodeParticleMultiplyByAxisAngle_methods.is_degrees_mode._is_degrees_mode = (cast(^GDW.MethodBind)classDBGetMethodBind3(.VisualShaderNodeParticleMultiplyByAxisAngle, "is_degrees_mode", 36873697, loc))
   VisualShaderNodeParticleMultiplyByAxisAngle_methods.is_degrees_mode.m_call = cast(type_of(VisualShaderNodeParticleMultiplyByAxisAngle_methods.is_degrees_mode.m_call))MB_ptr_call
 };

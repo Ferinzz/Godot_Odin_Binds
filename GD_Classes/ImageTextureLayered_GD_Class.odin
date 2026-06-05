@@ -1,26 +1,27 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-ImageTextureLayered :: ^GDW.Object
 
 ImageTextureLayered_MethodBind_List :: struct {
   create_from_images: struct{
     using _create_from_images: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImageTextureLayered, #by_ptr args: struct{images: ^GDW.Array, }, r_ret: ^GDW.Error)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: ImageTextureLayered, #by_ptr args: struct{images: ^GDW.Array, }, r_ret: ^GDW.Error)
   },
   update_layer: struct{
     using _update_layer: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ImageTextureLayered, #by_ptr args: struct{image: ^Image, layer: ^GDW.Int, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: ImageTextureLayered, #by_ptr args: struct{image: ^Image, layer: ^GDW.Int, }, r_ret: rawptr = nil)
   },
   };
 ImageTextureLayered_Init_ :: proc (ImageTextureLayered_methods: ^ImageTextureLayered_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  ImageTextureLayered_methods.create_from_images._create_from_images = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ImageTextureLayered, "create_from_images", 2785773503, loc))
+  ImageTextureLayered_methods.create_from_images._create_from_images = (cast(^GDW.MethodBind)classDBGetMethodBind3(.ImageTextureLayered, "create_from_images", 2785773503, loc))
   ImageTextureLayered_methods.create_from_images.m_call = cast(type_of(ImageTextureLayered_methods.create_from_images.m_call))MB_ptr_call
-  ImageTextureLayered_methods.update_layer._update_layer = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ImageTextureLayered, "update_layer", 3331733361, loc))
+  ImageTextureLayered_methods.update_layer._update_layer = (cast(^GDW.MethodBind)classDBGetMethodBind3(.ImageTextureLayered, "update_layer", 3331733361, loc))
   ImageTextureLayered_methods.update_layer.m_call = cast(type_of(ImageTextureLayered_methods.update_layer.m_call))MB_ptr_call
 };

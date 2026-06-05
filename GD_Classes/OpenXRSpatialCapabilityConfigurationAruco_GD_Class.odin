@@ -1,11 +1,12 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-OpenXRSpatialCapabilityConfigurationAruco :: ^GDW.Object
 
 
 OpenXRSpatialCapabilityConfigurationAruco_ArucoDict :: enum i64 {
@@ -29,23 +30,23 @@ OpenXRSpatialCapabilityConfigurationAruco_ArucoDict :: enum i64 {
 OpenXRSpatialCapabilityConfigurationAruco_MethodBind_List :: struct {
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
   set_aruco_dict: struct{
     using _set_aruco_dict: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, #by_ptr args: struct{aruco_dict: ^OpenXRSpatialCapabilityConfigurationAruco_ArucoDict, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, #by_ptr args: struct{aruco_dict: ^OpenXRSpatialCapabilityConfigurationAruco_ArucoDict, }, r_ret: rawptr = nil)
   },
     get_aruco_dict: struct{
     using _get_aruco_dict: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, args: rawptr = nil, r_ret: ^OpenXRSpatialCapabilityConfigurationAruco_ArucoDict)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAruco, args: rawptr = nil, r_ret: ^OpenXRSpatialCapabilityConfigurationAruco_ArucoDict)
   },
 };
 OpenXRSpatialCapabilityConfigurationAruco_Init_ :: proc (OpenXRSpatialCapabilityConfigurationAruco_methods: ^OpenXRSpatialCapabilityConfigurationAruco_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components._get_enabled_components = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "get_enabled_components", 235988956, loc))
+  OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components._get_enabled_components = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "get_enabled_components", 235988956, loc))
   OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.get_enabled_components.m_call))MB_ptr_call
-  OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict._set_aruco_dict = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "set_aruco_dict", 2268055963, loc))
+  OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict._set_aruco_dict = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "set_aruco_dict", 2268055963, loc))
   OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.set_aruco_dict.m_call))MB_ptr_call
-  OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict._get_aruco_dict = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "get_aruco_dict", 1080386209, loc))
+  OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict._get_aruco_dict = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAruco, "get_aruco_dict", 1080386209, loc))
   OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAruco_methods.get_aruco_dict.m_call))MB_ptr_call
 };

@@ -1,11 +1,12 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-Performance :: ^GDW.Object
 
 
 Performance_Monitor :: enum i64 {
@@ -80,53 +81,53 @@ Performance_MonitorType :: enum i64 {
 Performance_MethodBind_List :: struct {
   get_monitor: struct{
     using _get_monitor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{monitor: ^Performance_Monitor, }, r_ret: ^GDW.float)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{monitor: ^Performance_Monitor, }, r_ret: ^GDW.float)
   },
   add_custom_monitor: struct{
     using _add_custom_monitor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{id: ^GDW.StringName, callable: ^GDW.Callable, arguments: ^GDW.Array, type: ^Performance_MonitorType, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{id: ^GDW.StringName, callable: ^GDW.Callable, arguments: ^GDW.Array, type: ^Performance_MonitorType, }, r_ret: rawptr = nil)
   },
     remove_custom_monitor: struct{
     using _remove_custom_monitor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{id: ^GDW.StringName, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{id: ^GDW.StringName, }, r_ret: rawptr = nil)
   },
     has_custom_monitor: struct{
     using _has_custom_monitor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{id: ^GDW.StringName, }, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{id: ^GDW.StringName, }, r_ret: ^GDW.Bool)
   },
   get_custom_monitor: struct{
     using _get_custom_monitor: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{id: ^GDW.StringName, }, r_ret: ^GDW.Variant)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Performance, #by_ptr args: struct{id: ^GDW.StringName, }, r_ret: ^GDW.Variant)
   },
   get_monitor_modification_time: struct{
     using _get_monitor_modification_time: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.Int)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   get_custom_monitor_names: struct{
     using _get_custom_monitor_names: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.Array)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   get_custom_monitor_types: struct{
     using _get_custom_monitor_types: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Performance, args: rawptr = nil, r_ret: ^GDW.PackedInt32Array)
   },
 };
 Performance_Init_ :: proc (Performance_methods: ^Performance_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  Performance_methods.get_monitor._get_monitor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Performance, "get_monitor", 1943275655, loc))
+  Performance_methods.get_monitor._get_monitor = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Performance, "get_monitor", 1943275655, loc))
   Performance_methods.get_monitor.m_call = cast(type_of(Performance_methods.get_monitor.m_call))MB_ptr_call
-  Performance_methods.add_custom_monitor._add_custom_monitor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Performance, "add_custom_monitor", 3655788610, loc))
+  Performance_methods.add_custom_monitor._add_custom_monitor = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Performance, "add_custom_monitor", 3655788610, loc))
   Performance_methods.add_custom_monitor.m_call = cast(type_of(Performance_methods.add_custom_monitor.m_call))MB_ptr_call
-  Performance_methods.remove_custom_monitor._remove_custom_monitor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Performance, "remove_custom_monitor", 3304788590, loc))
+  Performance_methods.remove_custom_monitor._remove_custom_monitor = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Performance, "remove_custom_monitor", 3304788590, loc))
   Performance_methods.remove_custom_monitor.m_call = cast(type_of(Performance_methods.remove_custom_monitor.m_call))MB_ptr_call
-  Performance_methods.has_custom_monitor._has_custom_monitor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Performance, "has_custom_monitor", 2041966384, loc))
+  Performance_methods.has_custom_monitor._has_custom_monitor = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Performance, "has_custom_monitor", 2041966384, loc))
   Performance_methods.has_custom_monitor.m_call = cast(type_of(Performance_methods.has_custom_monitor.m_call))MB_ptr_call
-  Performance_methods.get_custom_monitor._get_custom_monitor = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Performance, "get_custom_monitor", 2138907829, loc))
+  Performance_methods.get_custom_monitor._get_custom_monitor = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Performance, "get_custom_monitor", 2138907829, loc))
   Performance_methods.get_custom_monitor.m_call = cast(type_of(Performance_methods.get_custom_monitor.m_call))MB_ptr_call
-  Performance_methods.get_monitor_modification_time._get_monitor_modification_time = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Performance, "get_monitor_modification_time", 2455072627, loc))
+  Performance_methods.get_monitor_modification_time._get_monitor_modification_time = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Performance, "get_monitor_modification_time", 2455072627, loc))
   Performance_methods.get_monitor_modification_time.m_call = cast(type_of(Performance_methods.get_monitor_modification_time.m_call))MB_ptr_call
-  Performance_methods.get_custom_monitor_names._get_custom_monitor_names = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Performance, "get_custom_monitor_names", 2915620761, loc))
+  Performance_methods.get_custom_monitor_names._get_custom_monitor_names = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Performance, "get_custom_monitor_names", 2915620761, loc))
   Performance_methods.get_custom_monitor_names.m_call = cast(type_of(Performance_methods.get_custom_monitor_names.m_call))MB_ptr_call
-  Performance_methods.get_custom_monitor_types._get_custom_monitor_types = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Performance, "get_custom_monitor_types", 969006518, loc))
+  Performance_methods.get_custom_monitor_types._get_custom_monitor_types = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Performance, "get_custom_monitor_types", 969006518, loc))
   Performance_methods.get_custom_monitor_types.m_call = cast(type_of(Performance_methods.get_custom_monitor_types.m_call))MB_ptr_call
 };

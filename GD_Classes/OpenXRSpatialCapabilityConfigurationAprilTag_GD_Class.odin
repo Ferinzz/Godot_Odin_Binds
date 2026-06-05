@@ -1,11 +1,12 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-OpenXRSpatialCapabilityConfigurationAprilTag :: ^GDW.Object
 
 
 OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict :: enum i64 {
@@ -17,23 +18,23 @@ OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict :: enum i64 {
 OpenXRSpatialCapabilityConfigurationAprilTag_MethodBind_List :: struct {
   get_enabled_components: struct{
     using _get_enabled_components: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, args: rawptr = nil, r_ret: ^GDW.PackedInt64Array)
   },
   set_april_dict: struct{
     using _set_april_dict: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, #by_ptr args: struct{april_dict: ^OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, #by_ptr args: struct{april_dict: ^OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict, }, r_ret: rawptr = nil)
   },
     get_april_dict: struct{
     using _get_april_dict: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, args: rawptr = nil, r_ret: ^OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRSpatialCapabilityConfigurationAprilTag, args: rawptr = nil, r_ret: ^OpenXRSpatialCapabilityConfigurationAprilTag_AprilTagDict)
   },
 };
 OpenXRSpatialCapabilityConfigurationAprilTag_Init_ :: proc (OpenXRSpatialCapabilityConfigurationAprilTag_methods: ^OpenXRSpatialCapabilityConfigurationAprilTag_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  OpenXRSpatialCapabilityConfigurationAprilTag_methods.get_enabled_components._get_enabled_components = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAprilTag, "get_enabled_components", 235988956, loc))
+  OpenXRSpatialCapabilityConfigurationAprilTag_methods.get_enabled_components._get_enabled_components = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAprilTag, "get_enabled_components", 235988956, loc))
   OpenXRSpatialCapabilityConfigurationAprilTag_methods.get_enabled_components.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAprilTag_methods.get_enabled_components.m_call))MB_ptr_call
-  OpenXRSpatialCapabilityConfigurationAprilTag_methods.set_april_dict._set_april_dict = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAprilTag, "set_april_dict", 3902905799, loc))
+  OpenXRSpatialCapabilityConfigurationAprilTag_methods.set_april_dict._set_april_dict = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAprilTag, "set_april_dict", 3902905799, loc))
   OpenXRSpatialCapabilityConfigurationAprilTag_methods.set_april_dict.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAprilTag_methods.set_april_dict.m_call))MB_ptr_call
-  OpenXRSpatialCapabilityConfigurationAprilTag_methods.get_april_dict._get_april_dict = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAprilTag, "get_april_dict", 440273016, loc))
+  OpenXRSpatialCapabilityConfigurationAprilTag_methods.get_april_dict._get_april_dict = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRSpatialCapabilityConfigurationAprilTag, "get_april_dict", 440273016, loc))
   OpenXRSpatialCapabilityConfigurationAprilTag_methods.get_april_dict.m_call = cast(type_of(OpenXRSpatialCapabilityConfigurationAprilTag_methods.get_april_dict.m_call))MB_ptr_call
 };

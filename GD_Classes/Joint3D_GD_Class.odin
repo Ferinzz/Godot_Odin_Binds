@@ -1,68 +1,69 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-Joint3D :: ^GDW.Object
 
 Joint3D_MethodBind_List :: struct {
   set_node_a: struct{
     using _set_node_a: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, #by_ptr args: struct{node: ^GDW.NodePath, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, #by_ptr args: struct{node: ^GDW.NodePath, }, r_ret: rawptr = nil)
   },
     get_node_a: struct{
     using _get_node_a: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_node_b: struct{
     using _set_node_b: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, #by_ptr args: struct{node: ^GDW.NodePath, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, #by_ptr args: struct{node: ^GDW.NodePath, }, r_ret: rawptr = nil)
   },
     get_node_b: struct{
     using _get_node_b: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.NodePath)
   },
   set_solver_priority: struct{
     using _set_solver_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, #by_ptr args: struct{priority: ^GDW.Int, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, #by_ptr args: struct{priority: ^GDW.Int, }, r_ret: rawptr = nil)
   },
     get_solver_priority: struct{
     using _get_solver_priority: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.Int)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   set_exclude_nodes_from_collision: struct{
     using _set_exclude_nodes_from_collision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, #by_ptr args: struct{enable: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, #by_ptr args: struct{enable: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     get_exclude_nodes_from_collision: struct{
     using _get_exclude_nodes_from_collision: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
   get_rid: struct{
     using _get_rid: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.RID)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: Joint3D, args: rawptr = nil, r_ret: ^GDW.RID)
   },
 };
 Joint3D_Init_ :: proc (Joint3D_methods: ^Joint3D_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  Joint3D_methods.set_node_a._set_node_a = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "set_node_a", 1348162250, loc))
+  Joint3D_methods.set_node_a._set_node_a = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "set_node_a", 1348162250, loc))
   Joint3D_methods.set_node_a.m_call = cast(type_of(Joint3D_methods.set_node_a.m_call))MB_ptr_call
-  Joint3D_methods.get_node_a._get_node_a = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "get_node_a", 4075236667, loc))
+  Joint3D_methods.get_node_a._get_node_a = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "get_node_a", 4075236667, loc))
   Joint3D_methods.get_node_a.m_call = cast(type_of(Joint3D_methods.get_node_a.m_call))MB_ptr_call
-  Joint3D_methods.set_node_b._set_node_b = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "set_node_b", 1348162250, loc))
+  Joint3D_methods.set_node_b._set_node_b = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "set_node_b", 1348162250, loc))
   Joint3D_methods.set_node_b.m_call = cast(type_of(Joint3D_methods.set_node_b.m_call))MB_ptr_call
-  Joint3D_methods.get_node_b._get_node_b = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "get_node_b", 4075236667, loc))
+  Joint3D_methods.get_node_b._get_node_b = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "get_node_b", 4075236667, loc))
   Joint3D_methods.get_node_b.m_call = cast(type_of(Joint3D_methods.get_node_b.m_call))MB_ptr_call
-  Joint3D_methods.set_solver_priority._set_solver_priority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "set_solver_priority", 1286410249, loc))
+  Joint3D_methods.set_solver_priority._set_solver_priority = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "set_solver_priority", 1286410249, loc))
   Joint3D_methods.set_solver_priority.m_call = cast(type_of(Joint3D_methods.set_solver_priority.m_call))MB_ptr_call
-  Joint3D_methods.get_solver_priority._get_solver_priority = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "get_solver_priority", 3905245786, loc))
+  Joint3D_methods.get_solver_priority._get_solver_priority = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "get_solver_priority", 3905245786, loc))
   Joint3D_methods.get_solver_priority.m_call = cast(type_of(Joint3D_methods.get_solver_priority.m_call))MB_ptr_call
-  Joint3D_methods.set_exclude_nodes_from_collision._set_exclude_nodes_from_collision = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "set_exclude_nodes_from_collision", 2586408642, loc))
+  Joint3D_methods.set_exclude_nodes_from_collision._set_exclude_nodes_from_collision = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "set_exclude_nodes_from_collision", 2586408642, loc))
   Joint3D_methods.set_exclude_nodes_from_collision.m_call = cast(type_of(Joint3D_methods.set_exclude_nodes_from_collision.m_call))MB_ptr_call
-  Joint3D_methods.get_exclude_nodes_from_collision._get_exclude_nodes_from_collision = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "get_exclude_nodes_from_collision", 36873697, loc))
+  Joint3D_methods.get_exclude_nodes_from_collision._get_exclude_nodes_from_collision = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "get_exclude_nodes_from_collision", 36873697, loc))
   Joint3D_methods.get_exclude_nodes_from_collision.m_call = cast(type_of(Joint3D_methods.get_exclude_nodes_from_collision.m_call))MB_ptr_call
-  Joint3D_methods.get_rid._get_rid = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.Joint3D, "get_rid", 2944877500, loc))
+  Joint3D_methods.get_rid._get_rid = (cast(^GDW.MethodBind)classDBGetMethodBind3(.Joint3D, "get_rid", 2944877500, loc))
   Joint3D_methods.get_rid.m_call = cast(type_of(Joint3D_methods.get_rid.m_call))MB_ptr_call
 };

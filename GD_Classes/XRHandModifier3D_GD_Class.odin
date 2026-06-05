@@ -1,11 +1,12 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-XRHandModifier3D :: ^GDW.Object
 
 
 XRHandModifier3D_BoneUpdate :: enum i64 {
@@ -16,29 +17,29 @@ XRHandModifier3D_BoneUpdate :: enum i64 {
 XRHandModifier3D_MethodBind_List :: struct {
   set_hand_tracker: struct{
     using _set_hand_tracker: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandModifier3D, #by_ptr args: struct{tracker_name: ^GDW.StringName, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandModifier3D, #by_ptr args: struct{tracker_name: ^GDW.StringName, }, r_ret: rawptr = nil)
   },
     get_hand_tracker: struct{
     using _get_hand_tracker: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandModifier3D, args: rawptr = nil, r_ret: ^GDW.StringName)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandModifier3D, args: rawptr = nil, r_ret: ^GDW.StringName)
   },
   set_bone_update: struct{
     using _set_bone_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandModifier3D, #by_ptr args: struct{bone_update: ^XRHandModifier3D_BoneUpdate, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandModifier3D, #by_ptr args: struct{bone_update: ^XRHandModifier3D_BoneUpdate, }, r_ret: rawptr = nil)
   },
     get_bone_update: struct{
     using _get_bone_update: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: XRHandModifier3D, args: rawptr = nil, r_ret: ^XRHandModifier3D_BoneUpdate)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: XRHandModifier3D, args: rawptr = nil, r_ret: ^XRHandModifier3D_BoneUpdate)
   },
 };
 XRHandModifier3D_Init_ :: proc (XRHandModifier3D_methods: ^XRHandModifier3D_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  XRHandModifier3D_methods.set_hand_tracker._set_hand_tracker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandModifier3D, "set_hand_tracker", 3304788590, loc))
+  XRHandModifier3D_methods.set_hand_tracker._set_hand_tracker = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandModifier3D, "set_hand_tracker", 3304788590, loc))
   XRHandModifier3D_methods.set_hand_tracker.m_call = cast(type_of(XRHandModifier3D_methods.set_hand_tracker.m_call))MB_ptr_call
-  XRHandModifier3D_methods.get_hand_tracker._get_hand_tracker = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandModifier3D, "get_hand_tracker", 2002593661, loc))
+  XRHandModifier3D_methods.get_hand_tracker._get_hand_tracker = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandModifier3D, "get_hand_tracker", 2002593661, loc))
   XRHandModifier3D_methods.get_hand_tracker.m_call = cast(type_of(XRHandModifier3D_methods.get_hand_tracker.m_call))MB_ptr_call
-  XRHandModifier3D_methods.set_bone_update._set_bone_update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandModifier3D, "set_bone_update", 3635701455, loc))
+  XRHandModifier3D_methods.set_bone_update._set_bone_update = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandModifier3D, "set_bone_update", 3635701455, loc))
   XRHandModifier3D_methods.set_bone_update.m_call = cast(type_of(XRHandModifier3D_methods.set_bone_update.m_call))MB_ptr_call
-  XRHandModifier3D_methods.get_bone_update._get_bone_update = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.XRHandModifier3D, "get_bone_update", 2873665691, loc))
+  XRHandModifier3D_methods.get_bone_update._get_bone_update = (cast(^GDW.MethodBind)classDBGetMethodBind3(.XRHandModifier3D, "get_bone_update", 2873665691, loc))
   XRHandModifier3D_methods.get_bone_update.m_call = cast(type_of(XRHandModifier3D_methods.get_bone_update.m_call))MB_ptr_call
 };

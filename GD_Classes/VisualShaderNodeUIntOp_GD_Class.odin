@@ -1,11 +1,12 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-VisualShaderNodeUIntOp :: ^GDW.Object
 
 
 VisualShaderNodeUIntOp_Operator :: enum i64 {
@@ -26,17 +27,17 @@ VisualShaderNodeUIntOp_Operator :: enum i64 {
 VisualShaderNodeUIntOp_MethodBind_List :: struct {
   set_operator: struct{
     using _set_operator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUIntOp, #by_ptr args: struct{op: ^VisualShaderNodeUIntOp_Operator, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: VisualShaderNodeUIntOp, #by_ptr args: struct{op: ^VisualShaderNodeUIntOp_Operator, }, r_ret: rawptr = nil)
   },
     get_operator: struct{
     using _get_operator: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: VisualShaderNodeUIntOp, args: rawptr = nil, r_ret: ^VisualShaderNodeUIntOp_Operator)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: VisualShaderNodeUIntOp, args: rawptr = nil, r_ret: ^VisualShaderNodeUIntOp_Operator)
   },
 };
 VisualShaderNodeUIntOp_Init_ :: proc (VisualShaderNodeUIntOp_methods: ^VisualShaderNodeUIntOp_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  VisualShaderNodeUIntOp_methods.set_operator._set_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeUIntOp, "set_operator", 3463048345, loc))
+  VisualShaderNodeUIntOp_methods.set_operator._set_operator = (cast(^GDW.MethodBind)classDBGetMethodBind3(.VisualShaderNodeUIntOp, "set_operator", 3463048345, loc))
   VisualShaderNodeUIntOp_methods.set_operator.m_call = cast(type_of(VisualShaderNodeUIntOp_methods.set_operator.m_call))MB_ptr_call
-  VisualShaderNodeUIntOp_methods.get_operator._get_operator = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.VisualShaderNodeUIntOp, "get_operator", 256631461, loc))
+  VisualShaderNodeUIntOp_methods.get_operator._get_operator = (cast(^GDW.MethodBind)classDBGetMethodBind3(.VisualShaderNodeUIntOp, "get_operator", 256631461, loc))
   VisualShaderNodeUIntOp_methods.get_operator.m_call = cast(type_of(VisualShaderNodeUIntOp_methods.get_operator.m_call))MB_ptr_call
 };

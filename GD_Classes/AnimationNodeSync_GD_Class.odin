@@ -1,26 +1,27 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-AnimationNodeSync :: ^GDW.Object
 
 AnimationNodeSync_MethodBind_List :: struct {
   set_use_sync: struct{
     using _set_use_sync: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeSync, #by_ptr args: struct{enable: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: AnimationNodeSync, #by_ptr args: struct{enable: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     is_using_sync: struct{
     using _is_using_sync: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: AnimationNodeSync, args: rawptr = nil, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: AnimationNodeSync, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 AnimationNodeSync_Init_ :: proc (AnimationNodeSync_methods: ^AnimationNodeSync_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  AnimationNodeSync_methods.set_use_sync._set_use_sync = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeSync, "set_use_sync", 2586408642, loc))
+  AnimationNodeSync_methods.set_use_sync._set_use_sync = (cast(^GDW.MethodBind)classDBGetMethodBind3(.AnimationNodeSync, "set_use_sync", 2586408642, loc))
   AnimationNodeSync_methods.set_use_sync.m_call = cast(type_of(AnimationNodeSync_methods.set_use_sync.m_call))MB_ptr_call
-  AnimationNodeSync_methods.is_using_sync._is_using_sync = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.AnimationNodeSync, "is_using_sync", 36873697, loc))
+  AnimationNodeSync_methods.is_using_sync._is_using_sync = (cast(^GDW.MethodBind)classDBGetMethodBind3(.AnimationNodeSync, "is_using_sync", 36873697, loc))
   AnimationNodeSync_methods.is_using_sync.m_call = cast(type_of(AnimationNodeSync_methods.is_using_sync.m_call))MB_ptr_call
 };

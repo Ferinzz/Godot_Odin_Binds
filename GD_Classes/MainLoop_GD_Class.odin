@@ -1,19 +1,13 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
 
-MainLoop :: ^GDW.Object
-
-MainLoop_Virtual_Info :: struct {
-
-    _initialize: Method_Callback_Compare_Info,
-    _physics_process: Method_Callback_Compare_Info,
-    _process: Method_Callback_Compare_Info,
-    _finalize: Method_Callback_Compare_Info,
-};
 MainLoop_Constants :: enum i64 {
   NOTIFICATION_OS_MEMORY_WARNING= 2009,
   NOTIFICATION_TRANSLATION_CHANGED= 2010,
@@ -30,15 +24,4 @@ MainLoop_MethodBind_List :: struct {
 };
 MainLoop_Init_ :: proc (MainLoop_methods: ^MainLoop_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-};
-
-MainLoop_Init_Virtuals_Info :: proc(info: ^MainLoop_Virtual_Info) {
-    info._initialize.p_hash = 3218959716
-    info._initialize.name = GDW.StringConstruct("_initialize")
-    info._physics_process.p_hash = 330693286
-    info._physics_process.name = GDW.StringConstruct("_physics_process")
-    info._process.p_hash = 330693286
-    info._process.name = GDW.StringConstruct("_process")
-    info._finalize.p_hash = 3218959716
-    info._finalize.name = GDW.StringConstruct("_finalize")
 };

@@ -1,38 +1,39 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-ButtonGroup :: ^GDW.Object
 
 ButtonGroup_MethodBind_List :: struct {
   get_pressed_button: struct{
     using _get_pressed_button: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^BaseButton)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^BaseButton)
   },
   get_buttons: struct{
     using _get_buttons: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^GDW.Array)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^GDW.Array)
   },
   set_allow_unpress: struct{
     using _set_allow_unpress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, #by_ptr args: struct{enabled: ^GDW.Bool, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: ButtonGroup, #by_ptr args: struct{enabled: ^GDW.Bool, }, r_ret: rawptr = nil)
   },
     is_allow_unpress: struct{
     using _is_allow_unpress: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^GDW.Bool)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: ButtonGroup, args: rawptr = nil, r_ret: ^GDW.Bool)
   },
 };
 ButtonGroup_Init_ :: proc (ButtonGroup_methods: ^ButtonGroup_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  ButtonGroup_methods.get_pressed_button._get_pressed_button = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ButtonGroup, "get_pressed_button", 3886434893, loc))
+  ButtonGroup_methods.get_pressed_button._get_pressed_button = (cast(^GDW.MethodBind)classDBGetMethodBind3(.ButtonGroup, "get_pressed_button", 3886434893, loc))
   ButtonGroup_methods.get_pressed_button.m_call = cast(type_of(ButtonGroup_methods.get_pressed_button.m_call))MB_ptr_call
-  ButtonGroup_methods.get_buttons._get_buttons = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ButtonGroup, "get_buttons", 2915620761, loc))
+  ButtonGroup_methods.get_buttons._get_buttons = (cast(^GDW.MethodBind)classDBGetMethodBind3(.ButtonGroup, "get_buttons", 2915620761, loc))
   ButtonGroup_methods.get_buttons.m_call = cast(type_of(ButtonGroup_methods.get_buttons.m_call))MB_ptr_call
-  ButtonGroup_methods.set_allow_unpress._set_allow_unpress = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ButtonGroup, "set_allow_unpress", 2586408642, loc))
+  ButtonGroup_methods.set_allow_unpress._set_allow_unpress = (cast(^GDW.MethodBind)classDBGetMethodBind3(.ButtonGroup, "set_allow_unpress", 2586408642, loc))
   ButtonGroup_methods.set_allow_unpress.m_call = cast(type_of(ButtonGroup_methods.set_allow_unpress.m_call))MB_ptr_call
-  ButtonGroup_methods.is_allow_unpress._is_allow_unpress = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.ButtonGroup, "is_allow_unpress", 2240911060, loc))
+  ButtonGroup_methods.is_allow_unpress._is_allow_unpress = (cast(^GDW.MethodBind)classDBGetMethodBind3(.ButtonGroup, "is_allow_unpress", 2240911060, loc))
   ButtonGroup_methods.is_allow_unpress.m_call = cast(type_of(ButtonGroup_methods.is_allow_unpress.m_call))MB_ptr_call
 };

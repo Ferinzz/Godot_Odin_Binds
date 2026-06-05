@@ -1,11 +1,12 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-OpenXRFutureResult :: ^GDW.Object
 
 
 OpenXRFutureResult_ResultStatus :: enum i64 {
@@ -16,35 +17,35 @@ OpenXRFutureResult_ResultStatus :: enum i64 {
 OpenXRFutureResult_MethodBind_List :: struct {
   get_status: struct{
     using _get_status: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^OpenXRFutureResult_ResultStatus)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^OpenXRFutureResult_ResultStatus)
   },
   get_future: struct{
     using _get_future: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^GDW.Int)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^GDW.Int)
   },
   cancel_future: struct{
     using _cancel_future: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: rawptr = nil)
   },
     set_result_value: struct{
     using _set_result_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, #by_ptr args: struct{result_value: ^GDW.Variant, }, r_ret: rawptr = nil)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRFutureResult, #by_ptr args: struct{result_value: ^GDW.Variant, }, r_ret: rawptr = nil)
   },
     get_result_value: struct{
     using _get_result_value: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^GDW.Variant)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: OpenXRFutureResult, args: rawptr = nil, r_ret: ^GDW.Variant)
   },
 };
 OpenXRFutureResult_Init_ :: proc (OpenXRFutureResult_methods: ^OpenXRFutureResult_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  OpenXRFutureResult_methods.get_status._get_status = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "get_status", 2023607463, loc))
+  OpenXRFutureResult_methods.get_status._get_status = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRFutureResult, "get_status", 2023607463, loc))
   OpenXRFutureResult_methods.get_status.m_call = cast(type_of(OpenXRFutureResult_methods.get_status.m_call))MB_ptr_call
-  OpenXRFutureResult_methods.get_future._get_future = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "get_future", 3905245786, loc))
+  OpenXRFutureResult_methods.get_future._get_future = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRFutureResult, "get_future", 3905245786, loc))
   OpenXRFutureResult_methods.get_future.m_call = cast(type_of(OpenXRFutureResult_methods.get_future.m_call))MB_ptr_call
-  OpenXRFutureResult_methods.cancel_future._cancel_future = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "cancel_future", 3218959716, loc))
+  OpenXRFutureResult_methods.cancel_future._cancel_future = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRFutureResult, "cancel_future", 3218959716, loc))
   OpenXRFutureResult_methods.cancel_future.m_call = cast(type_of(OpenXRFutureResult_methods.cancel_future.m_call))MB_ptr_call
-  OpenXRFutureResult_methods.set_result_value._set_result_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "set_result_value", 1114965689, loc))
+  OpenXRFutureResult_methods.set_result_value._set_result_value = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRFutureResult, "set_result_value", 1114965689, loc))
   OpenXRFutureResult_methods.set_result_value.m_call = cast(type_of(OpenXRFutureResult_methods.set_result_value.m_call))MB_ptr_call
-  OpenXRFutureResult_methods.get_result_value._get_result_value = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.OpenXRFutureResult, "get_result_value", 1214101251, loc))
+  OpenXRFutureResult_methods.get_result_value._get_result_value = (cast(^GDW.MethodBind)classDBGetMethodBind3(.OpenXRFutureResult, "get_result_value", 1214101251, loc))
   OpenXRFutureResult_methods.get_result_value.m_call = cast(type_of(OpenXRFutureResult_methods.get_result_value.m_call))MB_ptr_call
 };

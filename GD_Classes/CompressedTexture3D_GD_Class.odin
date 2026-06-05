@@ -1,26 +1,27 @@
 package GD_Classes
 
-import GDW "shared:GDWrapper"
-import "shared:GDWrapper/gdAPI"
-import GDE "shared:GDWrapper/gdAPI/gdextension"
+import GDW "../GDWrapper"
+import "../GDWrapper/gdAPI"
+import GDE "../GDWrapper/gdAPI/gdextension"
+import "core:reflect"
+import "base:runtime"
+import sics "base:intrinsics"
 
-
-CompressedTexture3D :: ^GDW.Object
 
 CompressedTexture3D_MethodBind_List :: struct {
   load: struct{
     using _load: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompressedTexture3D, #by_ptr args: struct{path: ^GDW.gdstring, }, r_ret: ^GDW.Error)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: CompressedTexture3D, #by_ptr args: struct{path: ^GDW.gdstring, }, r_ret: ^GDW.Error)
   },
   get_load_path: struct{
     using _get_load_path: ^GDW.MethodBind,
-    m_call: proc(_:^GDW.MethodBind, obj: CompressedTexture3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
+    m_call: proc "c" (_:^GDW.MethodBind, obj: CompressedTexture3D, args: rawptr = nil, r_ret: ^GDW.gdstring)
   },
 };
 CompressedTexture3D_Init_ :: proc (CompressedTexture3D_methods: ^CompressedTexture3D_MethodBind_List, loc := #caller_location) {
   MB_ptr_call:=gdAPI.get_Interface_Address("object_method_bind_ptrcall")
-  CompressedTexture3D_methods.load._load = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CompressedTexture3D, "load", 166001499, loc))
+  CompressedTexture3D_methods.load._load = (cast(^GDW.MethodBind)classDBGetMethodBind3(.CompressedTexture3D, "load", 166001499, loc))
   CompressedTexture3D_methods.load.m_call = cast(type_of(CompressedTexture3D_methods.load.m_call))MB_ptr_call
-  CompressedTexture3D_methods.get_load_path._get_load_path = (cast(^GDW.MethodBind)GDW.classDBGetMethodBind3(.CompressedTexture3D, "get_load_path", 201670096, loc))
+  CompressedTexture3D_methods.get_load_path._get_load_path = (cast(^GDW.MethodBind)classDBGetMethodBind3(.CompressedTexture3D, "get_load_path", 201670096, loc))
   CompressedTexture3D_methods.get_load_path.m_call = cast(type_of(CompressedTexture3D_methods.get_load_path.m_call))MB_ptr_call
 };
